@@ -1,0 +1,7 @@
+{
+  "source": "user-prompt plus deep/folio/banner SKILL.md",
+  "walk": [2, 3, 4],
+  "kept": ["/summarize", "/deep", "/folio", "/banner", "article-clip-pdf", "Georgia 22 pt", "Literata 18pt", "4.35 in", "Web Development Corporation A", "Digital Marketing Company", "WCACopyrightYear", "2012"],
+  "dropped": ["invented research topic", "banner PNG generation from this prompt"],
+  "skill_created": "/home/workdir/.grok/skills/summarize"
+}

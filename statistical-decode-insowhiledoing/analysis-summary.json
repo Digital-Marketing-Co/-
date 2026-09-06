@@ -1,0 +1,9 @@
+{
+  "n_tokens": 1,
+  "v_types": 1,
+  "ttr": 1.0,
+  "hapax": ["insowhiledoing"],
+  "h1_bits": 0.0,
+  "perplexity": 1.0,
+  "null_decision": "H0 accepted as space-omitted English in+so+while+doing"
+}
