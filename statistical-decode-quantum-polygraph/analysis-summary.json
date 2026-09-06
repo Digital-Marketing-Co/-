@@ -1,0 +1,10 @@
+{
+  "n_tokens": 2,
+  "v_types": 2,
+  "ttr": 1.0,
+  "hapax": ["polygraph", "quantum"],
+  "h1_bits": 1.0,
+  "perplexity": 2.0,
+  "top_bigrams": ["quantum polygraph"],
+  "null_decision": "H0 accepted as ordinary English title phrase"
+}
