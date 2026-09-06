@@ -1,0 +1,1 @@
+var start = 2012;var y = (new Date()).getFullYear();var range = (y > start) ? (String(start) + "\u2013" + String(y)) : String(start);try { var f = this.getField('WCACopyrightYear'); if (f) f.value = "Copyright \u00a9 " + range + " Web Development Corporation. All rights reserved.";} catch (e) {}
