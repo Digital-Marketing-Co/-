@@ -1,0 +1,4 @@
+interface:
+  display_name: "List"
+  short_description: "Apply the list workflow to user requests"
+  default_prompt: "Use list for this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book"
+  short_description: "Apply the book workflow to user requests"
+  default_prompt: "Use book for this task."

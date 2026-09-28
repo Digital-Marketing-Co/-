@@ -1,0 +1,4 @@
+interface:
+  display_name: "Negative"
+  short_description: "Apply the negative workflow to user requests"
+  default_prompt: "Use negative for this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vector"
+  short_description: "Apply the vector workflow to user requests"
+  default_prompt: "Use vector for this task."

@@ -1,0 +1,13 @@
+interface:
+  display_name: Phd Ivy Monograph
+  short_description: Apply the phd-ivy-monograph workflow to user requests
+  default_prompt: Use phd-ivy-monograph for this task.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

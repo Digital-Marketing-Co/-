@@ -1,0 +1,4 @@
+interface:
+  display_name: "Corpus"
+  short_description: "Apply the corpus workflow to user requests"
+  default_prompt: "Use corpus for this task."

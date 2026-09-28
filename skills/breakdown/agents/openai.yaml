@@ -1,0 +1,13 @@
+interface:
+  display_name: Breakdown
+  short_description: Use the breakdown workflow
+  default_prompt: Use breakdown for this task.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract Dir"
+  short_description: "Apply the extract-dir workflow to user requests"
+  default_prompt: "Use extract-dir for this task."

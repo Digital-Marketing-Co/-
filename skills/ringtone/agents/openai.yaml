@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ringtone"
+  short_description: "Apply the ringtone workflow to user requests"
+  default_prompt: "Use ringtone for this task."

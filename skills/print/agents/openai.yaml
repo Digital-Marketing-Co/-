@@ -1,0 +1,4 @@
+interface:
+  display_name: "Print"
+  short_description: "Apply the print workflow to user requests"
+  default_prompt: "Use print for this task."

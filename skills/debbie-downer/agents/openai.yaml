@@ -1,0 +1,4 @@
+interface:
+  display_name: "Debbie Downer"
+  short_description: "Apply the debbie-downer workflow to user requests"
+  default_prompt: "Use debbie-downer for this task."

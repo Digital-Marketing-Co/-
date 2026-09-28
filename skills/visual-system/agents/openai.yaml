@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual System"
+  short_description: "Apply the visual-system workflow to user requests"
+  default_prompt: "Use visual-system for this task."

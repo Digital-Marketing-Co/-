@@ -1,0 +1,4 @@
+interface:
+  display_name: "Images"
+  short_description: "Apply the images workflow to user requests"
+  default_prompt: "Use images for this task."

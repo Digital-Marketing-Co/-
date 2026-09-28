@@ -1,0 +1,4 @@
+interface:
+  display_name: "Folio"
+  short_description: "Apply the folio workflow to user requests"
+  default_prompt: "Use folio for this task."

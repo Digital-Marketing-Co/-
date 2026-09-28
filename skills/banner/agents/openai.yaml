@@ -1,0 +1,4 @@
+interface:
+  display_name: "Banner"
+  short_description: "Apply the banner workflow to user requests"
+  default_prompt: "Use banner for this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deep"
+  short_description: "Apply the deep workflow to user requests"
+  default_prompt: "Use deep for this task."

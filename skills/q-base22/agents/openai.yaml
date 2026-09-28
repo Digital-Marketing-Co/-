@@ -1,0 +1,13 @@
+interface:
+  display_name: Q Base22
+  short_description: Apply the q-base22 workflow to user requests
+  default_prompt: Use q-base22 for this task.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
