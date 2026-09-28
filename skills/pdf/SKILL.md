@@ -26,6 +26,8 @@ Produce a finished PDF, not merely a prompt or draft. Use the user's requested s
 
 ## Copyright and ownership
 
+Inspect existing notices before export. Put exactly one notice in the true centered footer of every page; remove duplicate cover, body, or overlaid notices and verify the exported result. Do not leave hidden extractable duplicates.
+
 Use the owner and start year named by the user. Otherwise use Copyright © 2012–{current year} Web Development Corporation. All rights reserved. Do not claim a dynamic PDF footer unless it is implemented and verified.
 
 ## Skill integrity
