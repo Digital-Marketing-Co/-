@@ -17,6 +17,12 @@ The user designates this repository as the canonical source for the newest code 
 - Plugin supplied and built in skills may not be editable. Do not overwrite or claim to have updated them; report the boundary and apply the current repository copy as task guidance where permitted.
 - Report which skill paths and revisions were checked, which installations were updated, and which could not be changed. Never claim a full sync after only updating one file.
 
+## Single copyright notice in documents
+
+- Every paginated document emitted or modified by any skill must contain exactly one copyright notice per page, centered in the page footer. Do not duplicate it on the cover, in body text, in a second footer, or in an overlaid stamp. Preserve quoted source text and distinct legal discussion when they are substantively required.
+- Before applying /copyright or another stamp, inspect the existing body and footer. Reuse or replace the existing notice; remove obsolete notice instances and verify the exported pages. For native documents, use the actual page footer. For a static PDF, paint only the footer band and ensure old and new notices do not both remain visible or in extractable text.
+- Honor a user-specified owner and start year. Otherwise use the current house owner and 2012 start. A dynamic year may be claimed only if implemented and tested in the delivered file.
+
 ## Finish deliverables
 
 - Continue authorized work through the requested result. For documents, render, inspect, correct, save, and link the final file. A prompt, outline, or unrendered draft is not a completed PDF.
