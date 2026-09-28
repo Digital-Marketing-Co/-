@@ -11,6 +11,10 @@ metadata:
 
 # /copyright
 
+## One notice per page
+
+Inspect the source body, cover, and every existing footer before stamping. Remove or replace prior copyright notices so the delivered page contains one centered notice in its footer, visually and in extractable text. Do not leave an earlier notice under an opaque band or duplicate a body notice. Reuse an existing native document footer when available. After export, verify the notice appears exactly once per page and remains centered. Preserve substantive copyright discussion that is not a page notice.
+
 
 ## Visual stack
 
