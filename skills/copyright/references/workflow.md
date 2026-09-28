@@ -55,12 +55,13 @@ Use `--overwrite` only when the user said to replace the original.
 
 The script
 
-- paints a white band across the bottom of every page so the prior footer does not ghost
-- paints the fallback notice centered in Helvetica 8 pt
-- adds a read-only AcroForm field named `WCACopyrightYear` on every page
+- redacts prior standalone copyright notices from the PDF text layer, including notices outside the footer; preserves adjacent body text
+- paints a footer band across the bottom of every page so the prior footer does not ghost
+- adds one centered read-only AcroForm field named `WCACopyrightYear` on every page; its visible fallback carries the build year
 - embeds OpenAction JavaScript that rebuilds the full sentence from `Date.getFullYear()`
 - writes `/Copyright` into the Info dictionary
 - leaves every non-footer date in the file alone
+- verifies exactly one extractable copyright notice on every output page before writing the file; treat failure as a blocked delivery
 
 ## Confirm
 
