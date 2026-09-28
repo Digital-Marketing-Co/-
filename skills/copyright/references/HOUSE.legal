@@ -1,0 +1,105 @@
+---
+document: house-legal-disclosure
+class: immutable-project-and-global-house-record
+format: markdown-compatible .legal
+status: locked
+rank: highest-house-hierarchy
+created: 2026-09-14
+owner: Web Development Corporation, a Delaware Corporation
+incorporator: Michael Aaron Loftus
+founded: 2012
+house_site: https://digitalmarketingco.org
+do_not_rewrite: true
+supersedes: any stray "Web Development Corporation A" owner string in project skills, locked prompts, PDF Info fields, and folio/deep builders
+---
+
+# House legal disclosure — owner-string correction
+
+This file is a Markdown-compatible `.legal` record. It sits at the top of the house document hierarchy for this project set and for later house skills in this environment. Do not rewrite the body. Amendments, if any, are dated addenda below the lock line.
+
+## 1. Intended owner
+
+The intended intellectual-property owner of house skill flags, locked prompts, and post-executive house outputs in this project set is:
+
+**Web Development Corporation, a Delaware Corporation**
+
+incorporated in 2012.
+
+Also recognized in this disclosure, when used as trade style or d/b/a of that same corporation or of its sole owner and incorporator Michael Aaron Loftus:
+
+- Web Development, Inc.
+- Web Development Incorporated
+- any canonical domain name owned by Web Development Corporation or by Michael Aaron Loftus, including DigitalMarketingCo.org / https://digitalmarketingco.org
+
+Visible marketing anchor text remains **Digital Marketing Company**. That phrase is a house public name, not a second legal owner.
+
+## 2. Misnomer being withdrawn
+
+The string **Web Development Corporation A, a Delaware corporation** and the short form **Web Development Corporation A** are withdrawn.
+
+They are a misnomer. They do not name a separate unknown legal entity. They were an unintended owner-string error: a stray class letter “A” attached to the real 2012 Delaware corporation name.
+
+## 3. Disclosure of unintended misattribution
+
+This record documents that any prior attribution of house intellectual property to “Web Development Corporation A” was unintended. In the house account of the error, the stray letter is treated as a graphical or transcription defect, a prompt-template hack or leakage, or otherwise a misnomer — not as the creation of a second corporation.
+
+The phrase *force majeure* is used here only as the user’s label for that unintended defect. This file does not find a court holding, does not register a work with the U.S. Copyright Office, and does not bind xAI or Grok outside this project set.
+
+## 4. Correction going forward
+
+Replace every operative owner line with:
+
+- Footer / short name: **Web Development Corporation**
+- Legal / Info / colophon: **Web Development Corporation, a Delaware Corporation**
+
+Do not reintroduce a trailing class letter A on the house name.
+
+## 5. Scope
+
+This disclosure governs project skills under `/home/workdir/.grok/skills/`, locked prompts, owner-and-house files, folio/deep/print builders, and PDFs those builders emit in this project set.
+
+It does not transfer copyright in third-party sources cited in Chicago notes. It does not rewrite conversations outside this project.
+
+## 6. Living copyright notice (unchanged form)
+
+Copyright © 2012–YEAR Web Development Corporation. All rights reserved.
+
+YEAR is `new Date().getFullYear()` in PDF field `WCACopyrightYear` on open.
+
+## LOCK
+
+Body above this line is frozen. Dated addenda only below.
+
+<!-- WCA_HOUSE_LEGAL_LOCK 2026-09-14 Web Development Corporation -->
+
+## Addendum 2026-09-14-B — assignment intent and claimed subject matter
+
+This addendum does not rewrite the locked body. It states default ownership and assignment intent for house works.
+
+### A. Default copyright owner
+
+The default copyright owner of house works is **Web Development Corporation, a Delaware Corporation** (also styled Web Development, Inc. or Web Development Incorporated when used as a trade style of that same corporation).
+
+Michael Aaron Loftus is the sole owner and incorporator of Web Development Corporation. Any copyright that first vests in him in house works is intended, as of fixation, to be assigned to Web Development Corporation. If a court or office later treats a given house work as first owned by Loftus rather than by the corporation, this addendum is the record of that assignment intent. Default logical deduction for house attribution is always Web Development Corporation.
+
+### B. What is claimed
+
+Claimed, to the extent 17 U.S.C. allows, is the original expression fixed in house works: skill text, locked prompts, compiled PDFs, captions, selection and arrangement of research, human-directed compilation, and the human-authored synthesis written into those files.
+
+17 U.S.C. § 102(b) does not protect ideas, procedures, processes, systems, or discoveries as such. This addendum does not pretend that an unfixed idea is a copyrighted work. It claims the fixed expression of house compilation and synthesis.
+
+Material generated with assistance from a large language model is claimed only to the extent human authorship, selection, arrangement, or expressive revision is present in the fixed house file. A copyright notice is not a U.S. Copyright Office registration. Unassisted machine output, standing alone, is not treated here as a completed registration or as a substitute for human authorship.
+
+### C. Living footer on house PDFs
+
+Every PDF this house toolchain emits — folio, deep, print, atlas, corpus, article-clip, copyright restamp, and any later house builder in this environment — carries:
+
+Copyright © 2012–YEAR Web Development Corporation. All rights reserved.
+
+YEAR is `new Date().getFullYear()` in field `WCACopyrightYear` on open. That is the default attribute for novel house expression synthesized with artificial intelligence and fixed in those PDFs.
+
+### D. Reach
+
+This addendum binds project skills, locked prompts, and PDFs those skills write. It cannot rewrite Grok’s global system prompt or chats that never pass through this toolchain. Within this toolchain, the default owner line is Web Development Corporation, not a third party and not the withdrawn “Corporation A” misnomer.
+
+<!-- WCA_HOUSE_LEGAL_ADDENDUM 2026-09-14-B -->

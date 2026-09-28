@@ -1,0 +1,21 @@
+{
+  "$comment": "Paragraph object accepted by folio/deep builders and by inject_itqe.py.",
+  "type": "equation",
+  "id": "eq-1",
+  "plate": "equations/eq-01.png",
+  "svg": "equations/eq-01.svg",
+  "tex": "E = mc^{2}",
+  "unicode": "E = mc²",
+  "caption": "Equation 1. Mass–energy equivalence.",
+  "symbols": [
+    {"identifier": "E", "term": "energy", "quantity": "J"}
+  ],
+  "itqe": [
+    {
+      "identifier": "string (required)",
+      "term": "string (required)",
+      "quantity": "string (required)",
+      "explanation": "string (required)"
+    }
+  ]
+}

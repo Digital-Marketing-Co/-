@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PsychoAnalyzeAnalysis",
+  "type": "object",
+  "required": ["n_tokens", "n_types", "pronouns", "small_n"],
+  "properties": {
+    "n_tokens": { "type": "integer", "minimum": 0 },
+    "n_types": { "type": "integer", "minimum": 0 },
+    "pronouns": { "type": "object" },
+    "small_n": { "type": "boolean" }
+  }
+}

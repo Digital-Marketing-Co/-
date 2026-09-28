@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WCA Corpus Catalog",
+  "type": "object",
+  "required": [
+    "title",
+    "match",
+    "date",
+    "identity",
+    "house",
+    "owner",
+    "counts",
+    "works",
+    "notes"
+  ],
+  "properties": {
+    "title": { "type": "string" },
+    "subtitle": { "type": "string" },
+    "match": { "type": "string" },
+    "date": { "type": "string" },
+    "author": { "type": "string" },
+    "identity": {
+      "type": "object",
+      "required": ["heading", "variants", "confidence"],
+      "properties": {
+        "heading": { "type": "string" },
+        "variants": { "type": "array", "items": { "type": "string" } },
+        "orcid": { "type": ["string", "null"] },
+        "openalex_id": { "type": ["string", "null"] },
+        "s2_author_id": { "type": ["string", "null"] },
+        "affiliations": { "type": "array" },
+        "disambiguators": { "type": "array", "items": { "type": "string" } },
+        "confidence": { "enum": ["high", "medium", "blocked"] }
+      }
+    },
+    "house": {
+      "type": "object",
+      "required": ["anchor", "href", "domain_plain"],
+      "properties": {
+        "anchor": { "const": "Digital Marketing Company" },
+        "href": { "const": "https://digitalmarketingco.org" },
+        "domain_plain": { "const": "DigitalMarketingCo.org" }
+      }
+    },
+    "owner": {
+      "type": "object",
+      "properties": {
+        "legal": { "type": "string" },
+        "short": { "type": "string" },
+        "founded": { "type": "integer" }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "required": ["total"],
+      "properties": {
+        "total": { "type": "integer" },
+        "by_type": { "type": "object" },
+        "by_year": { "type": "object" },
+        "first_author": { "type": "integer" },
+        "coauthor": { "type": "integer" },
+        "open_access": { "type": "integer" },
+        "unverified": { "type": "integer" }
+      }
+    },
+    "preface": { "type": "string" },
+    "works": { "type": "array", "items": { "type": "object" } },
+    "notes": { "type": "array", "items": { "type": "object" } },
+    "gaps": { "type": "array", "items": { "type": "string" } }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WCA list catalog",
+  "type": "object",
+  "required": ["title", "predicate", "date", "sections", "items", "sources"],
+  "properties": {
+    "title": { "type": "string" },
+    "subtitle": { "type": "string" },
+    "predicate": { "type": "string" },
+    "unit_of_analysis": { "type": "string" },
+    "date": { "type": "string" },
+    "abstract": { "type": "string" },
+    "keywords": { "type": "array", "items": { "type": "string" } },
+    "keeper_count": { "type": "integer", "minimum": 0 },
+    "rounds_closed": { "type": "integer", "minimum": 0 },
+    "saturation": {
+      "type": "object",
+      "properties": {
+        "empty_pair": { "type": "boolean" },
+        "cap_hit": { "type": "boolean" },
+        "residual_registers": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "class": { "type": "string" },
+          "also_known_as": { "type": "array", "items": { "type": "string" } },
+          "identifiers": { "type": "object" },
+          "jurisdiction": { "type": "string" },
+          "year": { "type": ["string", "integer", "null"] },
+          "status": { "type": "string" },
+          "source_ids": { "type": "array", "items": { "type": "string" } },
+          "disambiguation": { "type": "string" }
+        }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "kind"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "kind": { "type": "string" },
+          "level": { "type": "integer", "minimum": 1 },
+          "parent_id": { "type": ["string", "null"] },
+          "paragraphs": { "type": "array" },
+          "banner": { "type": "object" },
+          "figures": { "type": "array" }
+        }
+      }
+    },
+    "sources": { "type": "array" }
+  }
+}

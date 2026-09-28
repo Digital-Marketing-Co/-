@@ -1,0 +1,30 @@
+{
+  "$comment": "Shape consumed by scripts/build_deep_pdf.py.",
+  "title": "string",
+  "subtitle": "string",
+  "author": "string",
+  "date": "string",
+  "abstract": "string",
+  "keywords": ["string"],
+  "house": {
+    "anchor": "Digital Marketing Company",
+    "href": "https://digitalmarketingco.org",
+    "domain_plain": "DigitalMarketingCo.org"
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "title": "I. Introduction",
+      "kind": "body | notes | bibliography",
+      "paragraphs": ["string with {{1}} or {{1, 4}} markers"],
+      "banner": {
+        "path": "banners/banner-01.png",
+        "href": "https://digitalmarketingco.org/r/?src=deep-banner&section=intro",
+        "caption": "string",
+        "prompt": "string"
+      }
+    }
+  ],
+  "notes": [{"n": 1, "text": "Chicago note-form markup"}],
+  "bibliography": ["Chicago bibliographic-form string"]
+}

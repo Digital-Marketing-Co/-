@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://digitalmarketingco.org/schema/global.schema.json",
+  "title": "WCA Global Intelligence Report",
+  "type": "object",
+  "required": ["title", "topic", "ranking", "countries", "sections"],
+  "properties": {
+    "title": { "type": "string" },
+    "subtitle": { "type": "string" },
+    "topic": { "type": "string" },
+    "ranking": {
+      "type": "object",
+      "required": ["variable", "unit", "year", "order"],
+      "properties": {
+        "variable": { "type": "string" },
+        "unit": { "type": "string" },
+        "year": { "type": "string" },
+        "order": { "type": "string", "const": "descending" },
+        "fx_date": { "type": "string" },
+        "fx_source": { "type": "string" },
+        "why": { "type": "string" }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "universe": { "type": "string" },
+        "ranked_count": { "type": "integer" },
+        "insufficient_count": { "type": "integer" }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "countries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rank", "name", "iso2", "value"],
+        "properties": {
+          "rank": { "type": "integer" },
+          "name": { "type": "string" },
+          "iso2": { "type": "string" },
+          "value": {},
+          "unit": { "type": "string" },
+          "year": { "type": "string" },
+          "source": { "type": "string" },
+          "estimate": { "type": "boolean" },
+          "flag_path": { "type": "string" },
+          "banner_path": { "type": "string" },
+          "chart_path": { "type": "string" },
+          "categories": { "type": "object" },
+          "series": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "period": { "type": "string" },
+                "value": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "sections": { "type": "array" }
+  }
+}

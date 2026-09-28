@@ -1,0 +1,101 @@
+{
+  "version": "1.0",
+  "defaults": {
+    "folio": "ivy-ink",
+    "phd-ivy-monograph": "ivy-ink",
+    "deep": "ivy-ink",
+    "iterate": "ivy-ink",
+    "wca-ivy-biblio": "ivy-ink",
+    "itqe": "ivy-ink",
+    "latex": "ivy-ink",
+    "atlas": "atlas-marine",
+    "global": "nation-dusk",
+    "list": "list-phosphor",
+    "decode": "list-phosphor",
+    "q-base22": "list-phosphor",
+    "book": "book-spine",
+    "print": "clip-paper",
+    "article-clip-pdf": "clip-paper",
+    "extract-dir": "clip-paper",
+    "psychoanalyze": "psyche-plum",
+    "corpus": "corpus-slate",
+    "banner": "inherit",
+    "images": "inherit",
+    "copyright": "inherit",
+    "summarize": "inherit"
+  },
+  "palettes": {
+    "ivy-ink": {
+      "ink": "#0B1F3A",
+      "gilt": "#C9A227",
+      "cream": "#F4EFE4",
+      "text": "#1A1A1A",
+      "accent": "#3E5C76",
+      "surface": "#E7E1D4",
+      "rule": "#8C6B1F"
+    },
+    "atlas-marine": {
+      "ink": "#0E4D5C",
+      "gilt": "#D4A017",
+      "cream": "#EDE6D6",
+      "text": "#1B2420",
+      "accent": "#2A9D8F",
+      "surface": "#D9E4E0",
+      "rule": "#B8860B"
+    },
+    "nation-dusk": {
+      "ink": "#101828",
+      "gilt": "#E8C547",
+      "cream": "#F3F1EA",
+      "text": "#161616",
+      "accent": "#4A5568",
+      "surface": "#E6EAF0",
+      "rule": "#4A5568"
+    },
+    "list-phosphor": {
+      "ink": "#0A0F0D",
+      "gilt": "#7CFF6B",
+      "cream": "#F2F4F1",
+      "text": "#121412",
+      "accent": "#1F6F4A",
+      "surface": "#DCE6DF",
+      "rule": "#2E8B57"
+    },
+    "book-spine": {
+      "ink": "#1B1430",
+      "gilt": "#C4A35A",
+      "cream": "#F6EFD9",
+      "text": "#1C1408",
+      "accent": "#4B3B78",
+      "surface": "#EAD9B0",
+      "rule": "#8B6914"
+    },
+    "clip-paper": {
+      "ink": "#111111",
+      "gilt": "#5B5B5B",
+      "cream": "#FFFFFF",
+      "text": "#111111",
+      "accent": "#1A365D",
+      "surface": "#F4F4F4",
+      "rule": "#222222"
+    },
+    "psyche-plum": {
+      "ink": "#2A1240",
+      "gilt": "#C9B037",
+      "cream": "#F7F1EA",
+      "text": "#1A1220",
+      "accent": "#6B3FA0",
+      "surface": "#E9DFF0",
+      "rule": "#5C4A00"
+    },
+    "corpus-slate": {
+      "ink": "#2C3338",
+      "gilt": "#B0A48A",
+      "cream": "#F5F3EE",
+      "text": "#1C1C1C",
+      "accent": "#8B2E2E",
+      "surface": "#E4E0D8",
+      "rule": "#6E6253"
+    }
+  }
+}

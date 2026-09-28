@@ -1,0 +1,735 @@
+# /negative blocklist
+
+Case-insensitive. Match whole tokens and hyphen/underscore compounds. Also match listed multi-word phrases.
+
+Document-jargon seed (2026-09-18) plus AI-tell family (same date). Generated prose must use none of these. This file may contain them.
+
+## Seed terms (document jargon)
+
+- house
+- houses
+- housed
+- housing
+- in-house
+- inhouse
+- house-style
+- housestyle
+- house style
+- plate
+- plates
+- plated
+- plating
+- nameplate
+- titleplate
+- title-plate
+- equation-plate
+- equation plate
+- figure-plate
+- figure plate
+- banner-plate
+- footer-plate
+
+## Banned section titles
+
+Never use these as a heading, running head, bookmark, TOC line, slide title, or filename stem. Prefer `Close`, `End`, `Last section`, or `Close-out`.
+
+- conclusion
+- conclusions
+- concluding
+- concluding remarks
+- concluding thoughts
+- concluding note
+- concluding notes
+- a conclusion
+- the conclusion
+- in conclusion
+- by way of conclusion
+- final conclusion
+- final conclusions
+- section conclusion
+- chapter conclusion
+
+## AI-tell single tokens
+
+- delve
+- delves
+- delved
+- delving
+- tapestry
+- tapestries
+- multifaceted
+- multi-faceted
+- multifarious
+- myriad
+- myriads
+- plethora
+- plethora of
+- cornucopia
+- smorgasbord
+- veritable
+- nestled
+- nestles
+- nestling
+- embark
+- embarks
+- embarked
+- embarking
+- odyssey
+- underscore
+- underscores
+- underscored
+- underscoring
+- showcase
+- showcases
+- showcased
+- showcasing
+- harness
+- harnesses
+- harnessed
+- harnessing
+- unleash
+- unleashes
+- unleashed
+- unleashing
+- unlock
+- unlocks
+- unlocked
+- unlocking
+- elevate
+- elevates
+- elevated
+- elevating
+- foster
+- fosters
+- fostered
+- fostering
+- spearhead
+- spearheads
+- spearheaded
+- spearheading
+- bolster
+- bolsters
+- bolstered
+- bolstering
+- reimagine
+- reimagines
+- reimagined
+- reimagining
+- redefine
+- redefines
+- redefined
+- redefining
+- reshape
+- reshapes
+- reshaped
+- reshaping
+- revolutionize
+- revolutionizes
+- revolutionized
+- revolutionizing
+- transformative
+- groundbreaking
+- game-changer
+- gamechanger
+- game-changing
+- cutting-edge
+- bleeding-edge
+- state-of-the-art
+- next-generation
+- next-gen
+- future-proof
+- futureproof
+- world-class
+- best-in-class
+- industry-leading
+- thought-provoking
+- meticulously
+- painstakingly
+- seamlessly
+- holistic
+- holistically
+- synergy
+- synergies
+- synergistic
+- paradigm
+- paradigms
+- ideate
+- ideation
+- learnings
+- actionable
+- utilize
+- utilizes
+- utilized
+- utilizing
+- utilization
+- commence
+- commences
+- commenced
+- commencing
+- aforementioned
+- heretofore
+- therein
+- thereof
+- whereby
+- herein
+- henceforth
+- ergo
+- albeit
+- amidst
+- amongst
+- whilst
+- indelible
+- unparalleled
+- unmatched
+- unrivaled
+- unrivalled
+- unprecedented
+- beacon
+- beacons
+- kaleidoscope
+- labyrinth
+- mosaic
+- symphony
+- captivating
+- enchanting
+- mesmerizing
+- breathtaking
+- awe-inspiring
+- testament
+- poised
+- usher
+- ushers
+- ushered
+- ushering
+- herald
+- heralds
+- heralded
+- heralding
+- pivotal
+- paramount
+- noteworthy
+- unpack
+- unpacks
+- unpacked
+- unpacking
+- nuanced
+- nuances
+- intricacies
+- interwoven
+- intertwined
+- inextricably
+- robust
+- streamline
+- streamlines
+- streamlined
+- streamlining
+- leverage
+- leverages
+- leveraged
+- leveraging
+- empower
+- empowers
+- empowered
+- empowering
+- empowerment
+
+## AI-tell phrases
+
+- as an ai
+- as an ai language model
+- as a language model
+- as a large language model
+- i'm just an ai
+- i am just an ai
+- i'm an ai assistant
+- i am an ai assistant
+- i don't have personal opinions
+- i don't have feelings
+- i don't have real-time
+- my knowledge cutoff
+- my training data
+- as of my last update
+- trained by openai
+- i aim to be helpful
+- i'm here to help
+- happy to help
+- glad i could help
+- happy to assist
+- i'd be happy to
+- i'd be glad to
+- is there anything else
+- would you like me to
+- let me know if you'd like
+- let me know if you need
+- feel free to ask
+- feel free to
+- don't hesitate to ask
+- don't hesitate
+- if you have any questions
+- if you have any further questions
+- i hope this helps
+- hope this helps
+- great question
+- excellent question
+- fantastic question
+- that's a great question
+- that's an excellent question
+- that's a fantastic question
+- that's a valid concern
+- that's a valid point
+- you raise a good point
+- that's a fair point
+- i understand your concern
+- let's break this down
+- let's break it down
+- let's dive in
+- let's dive deeper
+- let's delve
+- let's explore
+- let's unpack
+- we'll explore
+- take a deep dive
+- deep dive
+- deep-dive
+- dive deeper
+- take a closer look
+- let's take a look
+- in today's fast-paced
+- in today's world
+- in today's society
+- in the digital age
+- in an era of
+- in an ever-evolving
+- ever-evolving
+- ever-changing
+- rapidly evolving
+- rapidly changing
+- constantly evolving
+- dynamic landscape
+- evolving landscape
+- complex landscape
+- competitive landscape
+- digital landscape
+- media landscape
+- political landscape
+- the current landscape
+- navigate this landscape
+- navigate the complexities
+- navigate the challenges
+- navigate challenges
+- the landscape of
+- rich tapestry
+- intricate tapestry
+- tapestry of
+- a tapestry
+- the tapestry
+- woven into the fabric
+- the very fabric of
+- the fabric of
+- threads of
+- a beacon of
+- beacon of hope
+- ray of hope
+- glimmer of hope
+- stands as a testament
+- a testament to
+- testament to
+- shed light on
+- shed light
+- pave the way
+- paving the way
+- at the forefront
+- at the intersection of
+- where x meets y
+- harness the power
+- harness the potential
+- unlock the potential
+- unlock your potential
+- unleash the power
+- unleash your potential
+- reach your full potential
+- full potential
+- untapped potential
+- hidden potential
+- limitless potential
+- the possibilities are endless
+- sky's the limit
+- embark on a journey
+- embark on
+- journey of discovery
+- set sail
+- uncharted territory
+- uncharted waters
+- brave new world
+- new frontier
+- the dawn of
+- usher in
+- heralds a new
+- marks a turning point
+- watershed moment
+- sea change
+- inflection point
+- tipping point
+- quantum leap
+- giant leap
+- changing the game
+- changing the way we
+- transform the way
+- transforming the way
+- the way we live, work, and play
+- live, work, and play
+- it's not just
+- it is not just
+- this isn't just
+- this is not just
+- not just about
+- more than just
+- it's more than just
+- not only... but also
+- whether you're
+- whether you are
+- if you're looking for
+- if you want to
+- if you've ever
+- have you ever wondered
+- ever wondered
+- you're not alone
+- you're in the right place
+- you've come to the right place
+- look no further
+- search no more
+- we've got you covered
+- you get the idea
+- you get the picture
+- picture this
+- imagine this
+- imagine a world
+- imagine a future
+- what if i told you
+- here's the kicker
+- here's the thing
+- here's why
+- here's how
+- the good news is
+- the bad news is
+- on the flip side
+- that being said
+- with that said
+- having said that
+- with this in mind
+- against this backdrop
+- in this context
+- in light of the above
+- it goes without saying
+- needless to say
+- suffice it to say
+- it should be noted
+- it must be noted
+- it is worth noting
+- it's worth noting
+- it's worth mentioning
+- it's worth pointing out
+- it's worth considering
+- it is interesting to note
+- it is interesting to observe
+- it can be argued
+- it could be argued
+- it might be said
+- it is often said
+- it is no secret
+- no secret that
+- it comes as no surprise
+- one cannot overstate
+- cannot be overstated
+- cannot be understated
+- plays a crucial role
+- plays a vital role
+- plays an important role
+- play a crucial role
+- play a vital role
+- play an important role
+- a key role
+- a significant role
+- it is essential
+- it is crucial
+- it is vital
+- it is imperative
+- it is critical that
+- it is essential that
+- it is vital that
+- first and foremost
+- last but not least
+- in conclusion
+- in summary
+- to summarize
+- to wrap up
+- to recap
+- in closing
+- by way of conclusion
+- in the final analysis
+- when all is said and done
+- at the end of the day
+- all things considered
+- all in all
+- the bottom line
+- in a nutshell
+- long story short
+- to make a long story short
+- there you have it
+- and there you have it
+- key takeaways
+- key insights
+- actionable insights
+- actionable takeaways
+- tips and tricks
+- best practices
+- proven strategies
+- thought leadership
+- move the needle
+- circle back
+- touch base
+- low-hanging fruit
+- win-win situation
+- win-win
+- secret sauce
+- special sauce
+- north star
+- core competency
+- under the hood
+- behind the scenes
+- at its core
+- in essence
+- by and large
+- for all intents and purposes
+- the fact of the matter
+- the reality is
+- the truth is
+- make no mistake
+- let's be clear
+- to be clear
+- it's safe to say
+- it's fair to say
+- one might argue
+- some may argue
+- critics argue
+- proponents argue
+- skeptics argue
+- a double-edged sword
+- a two-edged sword
+- a slippery slope
+- walk a fine line
+- a fine line
+- strike a balance
+- finding the right balance
+- the best of both worlds
+- bridging the gap
+- bridge the gap
+- close the gap
+- fill the gap
+- tackle the challenge
+- meet the challenge
+- rise to the challenge
+- overcome obstacles
+- overcome challenges
+- in the face of adversity
+- despite the challenges
+- against all odds
+- at the heart of
+- the heart of the matter
+- the crux of
+- the gist of
+- the essence of
+- the soul of
+- inextricably linked
+- inextricably tied
+- deeply intertwined
+- deeply rooted
+- firmly rooted
+- time-honored
+- time-tested
+- tried and true
+- tried-and-true
+- age-old question
+- the age-old question
+- the million-dollar question
+- the billion-dollar question
+- the question remains
+- one thing is certain
+- one thing is clear
+- what is clear is
+- the jury is still out
+- time will tell
+- only time will tell
+- history will judge
+- for generations to come
+- future generations
+- leave a lasting legacy
+- lasting impact
+- lasting impression
+- indelible mark
+- leave an indelible
+- etched in
+- etched into
+- not set in stone
+- the writing on the wall
+- the elephant in the room
+- a perfect storm
+- on the horizon
+- just around the corner
+- looming large
+- cast a long shadow
+- light at the end of the tunnel
+- a new chapter
+- turn the page
+- close the chapter
+- open a new chapter
+- the next chapter
+- a new dawn
+- brighter tomorrow
+- looking ahead
+- as we look ahead
+- as we look to the future
+- as we move forward
+- moving forward
+- going forward
+- the road ahead
+- the path forward
+- in the years ahead
+- in the coming years
+- in the near future
+- in the not-too-distant
+- sooner rather than later
+- it's only a matter of time
+- a matter of time
+- not a matter of if but when
+- now more than ever
+- more important than ever
+- has become increasingly
+- increasingly important
+- in recent years
+- over the years
+- has gained traction
+- gained traction
+- garnered attention
+- has emerged as
+- has gained prominence
+- tailored to your needs
+- your unique needs
+- one-size-fits-all
+- no one-size-fits-all
+- from start to finish
+- each and every
+- each and every one
+- second to none
+- bar none
+- in a league of its own
+- in a class of its own
+- like never before
+- as never before
+- no stone unturned
+- leave no stone unturned
+- attention to detail
+- every last detail
+- meticulously crafted
+- carefully crafted
+- thoughtfully designed
+- designed to help you
+- built to help you
+- engineered to
+- a wealth of
+- a host of
+- an array of
+- a suite of
+- a plethora of
+- a myriad of
+- and so much more
+- and much more
+- the list goes on
+- and the list goes on
+- and beyond
+- from x to y and beyond
+- stay tuned
+- watch this space
+- food for thought
+- something to think about
+- a final thought
+- one last thing
+- as a final note
+- before we wrap up
+- this article will
+- in this blog post
+- of course!
+- absolutely!
+- definitely!
+- sure thing!
+- you got it!
+
+## Sentence-opener slop (prefer also / and / next / so)
+
+- additionally
+- furthermore
+- moreover
+- subsequently
+- consequently
+- accordingly
+- notably
+- importantly
+- significantly
+- interestingly
+- fascinatingly
+- curiously
+- strikingly
+- remarkably
+- surprisingly
+- unsurprisingly
+- predictably
+- shockingly
+- incredibly
+- undoubtedly
+- certainly
+- indeed
+
+## Replacement map (default)
+
+When rewriting generated text, swap as follows unless the user quoted the token on purpose:
+
+| Blocked | Default swap |
+|---|---|
+| house / House / HOUSE (style sense) | firm / locked / standing |
+| house-style | locked style |
+| in-house | internal |
+| plate / plates (document figure sense) | figure / figures |
+| equation plate | display equation |
+| figure plate | figure |
+| title plate | title block |
+| nameplate | title block |
+| delve / delving / deep dive | look at / go into |
+| tapestry / tapestry of | mix / spread / field |
+| landscape (figurative) | field / market / setting |
+| leverage | use |
+| utilize | use |
+| robust | solid / strong |
+| seamless / seamlessly | smooth / smoothly |
+| cutting-edge / state-of-the-art | current / new |
+| embark on a journey | start |
+| testament to | proof of / sign of |
+| multifaceted | many-sided / mixed |
+| holistic | whole / full |
+| actionable | usable / concrete |
+| furthermore / moreover / additionally | also / and |
+| in conclusion / in summary | so / to close |
+| conclusion / conclusions / concluding remarks (heading) | Close / End / Last section / Close-out |
+| i hope this helps / feel free to | (drop) |
+| great question | (drop) |
+| it's important to note / it is worth noting | (drop or state the fact) |
+| unlock / unleash / harness the power | use / apply |
+| paradigm | model / pattern |
+| synergy | joint gain / combined effect |
+
+## Do not block
+
+- The skill name `/negative` and this file
+- User-quoted source text the user asked to preserve verbatim
+- Legal addresses and program names the user typed
+- Ordinary uses of common stems when they are not the listed phrase (user talking about a real physical landscape, a real mosaic artwork, a court testament, a ship embarking)
+- The words in this blocklist file itself

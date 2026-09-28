@@ -1,0 +1,49 @@
+{
+  "$comment": "Shape consumed by scripts/build_folio_pdf.py. Extra keys are ignored.",
+  "title": "string (required)",
+  "subtitle": "string",
+  "author": "string (required)",
+  "date": "string (required)",
+  "abstract": "string",
+  "keywords": ["string"],
+  "running_title": "string",
+  "genre": "report | monograph | working-paper | paper | living-document | think-tank",
+  "edition": "string",
+  "version": "string",
+  "revised": "string",
+  "series": "string",
+  "status": "string",
+  "canonical_url": "string (optional override; builder writes {origin}/white-papers/{slug} when empty)",
+  "filename": "string (optional; builder computes YYYY-topic-slug-wca-folio.pdf when empty)",
+  "owner": {
+    "legal": "Web Development Corporation, a Delaware Corporation",
+    "short": "Web Development Corporation",
+    "founded": 2012
+  },
+  "house": {
+    "anchor": "Digital Marketing Company",
+    "href": "https://digitalmarketingco.org",
+    "domain_plain": "DigitalMarketingCo.org"
+  },
+  "sections": [
+    {
+      "id": "intro",
+      "title": "I. Introduction",
+      "kind": "body | notes | bibliography",
+      "paragraphs": ["string with optional {{1}} or {{1, 4, 9}} markers, or equation object with type, plate, caption, itqe"],
+      "figure": {
+        "path": "figures/fig-01.png",
+        "caption": "Figure 1. ...",
+        "prompt": "string",
+        "after_paragraphs": 2
+      }
+    }
+  ],
+  "notes": [
+    {"n": 1, "work_id": "optional-slug", "biblio": 0, "text": "Chicago note-form markup (i, em, b, a href)."}
+  ],
+  "bibliography": [
+    "Chicago bibliographic-form markup, first-appearance order (string or {work_id, text})."
+  ],
+  "citation_order": "first-appearance"
+}
