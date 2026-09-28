@@ -10,6 +10,7 @@ from datetime import date
 from io import BytesIO
 from pathlib import Path
 
+import fitz
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import (
     ArrayObject,
@@ -33,6 +34,48 @@ TEXT_Y = 24.0
 CREAM_HEX = "#FBF7F0"
 MUTED = Color(0.28, 0.28, 0.28)
 CREAM = HexColor(CREAM_HEX)
+NOTICE_LINE = re.compile(r"^\s*(?:Copyright\s*)?©\s*\d{4}(?:\s*[–-]\s*\d{4})?\s+.+?All rights reserved\.?\s*$", re.I)
+
+
+def remove_prior_notices(src: Path) -> bytes:
+    """Remove standalone prior notices from the text layer before painting new ones."""
+    doc = fitz.open(src)
+    try:
+        if doc.needs_pass:
+            raise ValueError("Encrypted PDF requires decryption before copyright stamping")
+        for page in doc:
+            found = 0
+            for block in page.get_text("dict")["blocks"]:
+                for line in block.get("lines", []):
+                    spans = line.get("spans", [])
+                    line_text = "".join(span["text"] for span in spans).strip()
+                    if NOTICE_LINE.fullmatch(line_text):
+                        rect = fitz.Rect(spans[0]["bbox"])
+                        for span in spans[1:]:
+                            rect |= fitz.Rect(span["bbox"])
+                        page.add_redact_annot(rect, fill=False)
+                        found += 1
+            if found:
+                page.apply_redactions(images=0, graphics=0, text=0)
+        return doc.tobytes(garbage=4, deflate=True)
+    finally:
+        doc.close()
+
+
+def verify_single_notice(pdf_bytes: bytes) -> None:
+    """Fail closed if a page contains a missing or repeated extractable notice."""
+    doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+    try:
+        for number, page in enumerate(doc, 1):
+            count = sum(
+                bool(NOTICE_LINE.fullmatch("".join(s["text"] for s in line.get("spans", [])).strip()))
+                for block in page.get_text("dict")["blocks"]
+                for line in block.get("lines", [])
+            )
+            if count != 1:
+                raise ValueError(f"Page {number}: expected one extractable copyright notice, found {count}")
+    finally:
+        doc.close()
 
 
 def en_dash_range(start: int, year: int) -> str:
@@ -79,9 +122,8 @@ def cover_and_paint(width: float, height: float, text: str) -> bytes:
     c = rl_canvas.Canvas(buf, pagesize=(width, height))
     c.setFillColor(CREAM)
     c.rect(0, 0, width, BAND_H, fill=1, stroke=0)
-    c.setFillColor(MUTED)
-    c.setFont("Helvetica", FOOTER_PT)
-    c.drawCentredString(width / 2.0, TEXT_Y, text)
+    # The field supplies both the fallback appearance and the living-year text.
+    # Painting text here as well would create two extractable notices.
     c.save()
     return buf.getvalue()
 
@@ -175,12 +217,7 @@ def stamp(src: Path, dest: Path, start: int, owner: str, legal: str) -> dict:
     owner = strip_class_a(owner) or DEFAULT_OWNER
     year = date.today().year
     text = notice_text(start, year, owner)
-    reader = PdfReader(str(src))
-    if reader.is_encrypted:
-        try:
-            reader.decrypt("")
-        except Exception as exc:
-            raise SystemExit(f"Encrypted PDF cannot be stamped: {exc}") from exc
+    reader = PdfReader(BytesIO(remove_prior_notices(src)))
     writer = PdfWriter()
     writer.append(reader)
     strip_old_copyright_widgets(writer)
@@ -223,9 +260,11 @@ def stamp(src: Path, dest: Path, start: int, owner: str, legal: str) -> dict:
         }
     )
 
+    output = BytesIO()
+    writer.write(output)
+    verify_single_notice(output.getvalue())
     dest.parent.mkdir(parents=True, exist_ok=True)
-    with dest.open("wb") as fh:
-        writer.write(fh)
+    dest.write_bytes(output.getvalue())
 
     return {
         "input": str(src),
@@ -239,7 +278,7 @@ def stamp(src: Path, dest: Path, start: int, owner: str, legal: str) -> dict:
 
 
 def default_out(src: Path) -> Path:
-    artifacts = Path("/home/workdir/artifacts")
+    artifacts = Path("./artifacts")
     name = src.stem
     if not name.endswith("-copyright"):
         name = f"{name}-copyright"
