@@ -30,3 +30,7 @@ The user designates this repository as the canonical source for the newest code 
 - If a required environment, tool, or credential is unavailable, preserve completed work and state the specific blocker. Do not promise unattended work after the turn ends.
 
 These are repository scoped instructions. This file does not modify ChatGPT account wide memory, custom instructions, or installed personal skills.
+
+## Skill auto-sync
+
+Follow SKILL-SYNC.md. On a skill edit, commit the skill directory to main and prepend a row in skills/ledger/latest.md. Grok and ChatGPT both read that ledger before using a cached skill.

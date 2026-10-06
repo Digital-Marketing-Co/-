@@ -1,0 +1,2625 @@
+{
+  "auditor": "https://digitalmarketingco.org/free-website-auditor",
+  "total": 521,
+  "dimensions": {
+    "SEO": 48,
+    "Performance": 42,
+    "Mobile": 36,
+    "Security": 50,
+    "Accessibility": 48,
+    "AI Readiness": 40,
+    "AIO": 42,
+    "GEO": 40,
+    "AEO": 40,
+    "Local SEO": 36,
+    "Schema.org": 47,
+    "WCAG": 52
+  },
+  "checks": [
+    {
+      "id": 1,
+      "dimension": "SEO",
+      "title": "Unique title tag 50-60 characters"
+    },
+    {
+      "id": 2,
+      "dimension": "SEO",
+      "title": "Title includes primary intent phrase"
+    },
+    {
+      "id": 3,
+      "dimension": "SEO",
+      "title": "Title is not duplicated across routes"
+    },
+    {
+      "id": 4,
+      "dimension": "SEO",
+      "title": "Meta description 150-160 characters"
+    },
+    {
+      "id": 5,
+      "dimension": "SEO",
+      "title": "Meta description unique per route"
+    },
+    {
+      "id": 6,
+      "dimension": "SEO",
+      "title": "Meta description contains a verb and an outcome"
+    },
+    {
+      "id": 7,
+      "dimension": "SEO",
+      "title": "Single H1 matching page intent"
+    },
+    {
+      "id": 8,
+      "dimension": "SEO",
+      "title": "H1 is not the same string as every other H1"
+    },
+    {
+      "id": 9,
+      "dimension": "SEO",
+      "title": "Heading outline is sequential H1-H2-H3"
+    },
+    {
+      "id": 10,
+      "dimension": "SEO",
+      "title": "No skipped heading levels"
+    },
+    {
+      "id": 11,
+      "dimension": "SEO",
+      "title": "Canonical link present and absolute"
+    },
+    {
+      "id": 12,
+      "dimension": "SEO",
+      "title": "Canonical is self-referential unless a true duplicate exists"
+    },
+    {
+      "id": 13,
+      "dimension": "SEO",
+      "title": "Robots meta allows indexing when the page is public"
+    },
+    {
+      "id": 14,
+      "dimension": "SEO",
+      "title": "X-Robots-Tag does not contradict robots meta"
+    },
+    {
+      "id": 15,
+      "dimension": "SEO",
+      "title": "Clean slug with hyphens not underscores"
+    },
+    {
+      "id": 16,
+      "dimension": "SEO",
+      "title": "Slug length under 75 characters"
+    },
+    {
+      "id": 17,
+      "dimension": "SEO",
+      "title": "No session IDs in public URLs"
+    },
+    {
+      "id": 18,
+      "dimension": "SEO",
+      "title": "HTTPS URL only in internal links"
+    },
+    {
+      "id": 19,
+      "dimension": "SEO",
+      "title": "Internal links use descriptive anchors"
+    },
+    {
+      "id": 20,
+      "dimension": "SEO",
+      "title": "No click-here only anchors"
+    },
+    {
+      "id": 21,
+      "dimension": "SEO",
+      "title": "Primary keyword appears in first 100 words"
+    },
+    {
+      "id": 22,
+      "dimension": "SEO",
+      "title": "Primary keyword appears in one H2"
+    },
+    {
+      "id": 23,
+      "dimension": "SEO",
+      "title": "Image filenames are descriptive slugs"
+    },
+    {
+      "id": 24,
+      "dimension": "SEO",
+      "title": "Every content image has alt text"
+    },
+    {
+      "id": 25,
+      "dimension": "SEO",
+      "title": "Decorative images use empty alt"
+    },
+    {
+      "id": 26,
+      "dimension": "SEO",
+      "title": "Pagination uses rel next prev when paged"
+    },
+    {
+      "id": 27,
+      "dimension": "SEO",
+      "title": "XML sitemap entry exists for the route"
+    },
+    {
+      "id": 28,
+      "dimension": "SEO",
+      "title": "Sitemap lastmod is ISO date"
+    },
+    {
+      "id": 29,
+      "dimension": "SEO",
+      "title": "Robots.txt allows the route"
+    },
+    {
+      "id": 30,
+      "dimension": "SEO",
+      "title": "Favicon link present"
+    },
+    {
+      "id": 31,
+      "dimension": "SEO",
+      "title": "Apple touch icon present"
+    },
+    {
+      "id": 32,
+      "dimension": "SEO",
+      "title": "Theme-color meta present"
+    },
+    {
+      "id": 33,
+      "dimension": "SEO",
+      "title": "Language attribute on html"
+    },
+    {
+      "id": 34,
+      "dimension": "SEO",
+      "title": "Hreflang only when locales exist and reciprocal"
+    },
+    {
+      "id": 35,
+      "dimension": "SEO",
+      "title": "No keyword stuffing in title"
+    },
+    {
+      "id": 36,
+      "dimension": "SEO",
+      "title": "No doorway-page parameter sets"
+    },
+    {
+      "id": 37,
+      "dimension": "SEO",
+      "title": "404 does not return 200"
+    },
+    {
+      "id": 38,
+      "dimension": "SEO",
+      "title": "Redirects are single-hop 301"
+    },
+    {
+      "id": 39,
+      "dimension": "SEO",
+      "title": "Trailing-slash policy is consistent"
+    },
+    {
+      "id": 40,
+      "dimension": "SEO",
+      "title": "WWW policy is consistent"
+    },
+    {
+      "id": 41,
+      "dimension": "SEO",
+      "title": "Breadcrumb visible when depth > 1"
+    },
+    {
+      "id": 42,
+      "dimension": "SEO",
+      "title": "BreadcrumbList JSON-LD matches visible crumbs"
+    },
+    {
+      "id": 43,
+      "dimension": "SEO",
+      "title": "Outbound links that leave the site are intentional"
+    },
+    {
+      "id": 44,
+      "dimension": "SEO",
+      "title": "Sponsored or UGC links use rel where required"
+    },
+    {
+      "id": 45,
+      "dimension": "SEO",
+      "title": "Print and screen content are the same intent"
+    },
+    {
+      "id": 46,
+      "dimension": "SEO",
+      "title": "No hidden text for ranking"
+    },
+    {
+      "id": 47,
+      "dimension": "SEO",
+      "title": "Primary CTA is crawlable as a link or button"
+    },
+    {
+      "id": 48,
+      "dimension": "SEO",
+      "title": "Page is reachable from nav or footer within two clicks"
+    },
+    {
+      "id": 49,
+      "dimension": "Performance",
+      "title": "LCP target under 2.5s on 4G mid-tier"
+    },
+    {
+      "id": 50,
+      "dimension": "Performance",
+      "title": "INP target under 200ms"
+    },
+    {
+      "id": 51,
+      "dimension": "Performance",
+      "title": "CLS target under 0.1"
+    },
+    {
+      "id": 52,
+      "dimension": "Performance",
+      "title": "TTFB target under 800ms"
+    },
+    {
+      "id": 53,
+      "dimension": "Performance",
+      "title": "Speed Index considered in hero choice"
+    },
+    {
+      "id": 54,
+      "dimension": "Performance",
+      "title": "Hero image has width and height attributes"
+    },
+    {
+      "id": 55,
+      "dimension": "Performance",
+      "title": "Hero image is modern format WebP or AVIF with fallback"
+    },
+    {
+      "id": 56,
+      "dimension": "Performance",
+      "title": "Hero fetchpriority high when it is LCP"
+    },
+    {
+      "id": 57,
+      "dimension": "Performance",
+      "title": "Below-fold images lazy-load"
+    },
+    {
+      "id": 58,
+      "dimension": "Performance",
+      "title": "Lazy-load is not applied to LCP image"
+    },
+    {
+      "id": 59,
+      "dimension": "Performance",
+      "title": "Background video not required for first paint"
+    },
+    {
+      "id": 60,
+      "dimension": "Performance",
+      "title": "CSS critical path is small or inlined with care"
+    },
+    {
+      "id": 61,
+      "dimension": "Performance",
+      "title": "No render-blocking unused CSS payload over budget"
+    },
+    {
+      "id": 62,
+      "dimension": "Performance",
+      "title": "Fonts use font-display swap or optional"
+    },
+    {
+      "id": 63,
+      "dimension": "Performance",
+      "title": "Font files subset to used glyphs when possible"
+    },
+    {
+      "id": 64,
+      "dimension": "Performance",
+      "title": "Preconnect for required origins only"
+    },
+    {
+      "id": 65,
+      "dimension": "Performance",
+      "title": "Preload only for true critical assets"
+    },
+    {
+      "id": 66,
+      "dimension": "Performance",
+      "title": "No more than one webfamily without reason"
+    },
+    {
+      "id": 67,
+      "dimension": "Performance",
+      "title": "JavaScript deferred or typed module"
+    },
+    {
+      "id": 68,
+      "dimension": "Performance",
+      "title": "No unused analytics tags on first paint"
+    },
+    {
+      "id": 69,
+      "dimension": "Performance",
+      "title": "Third-party scripts after interactive content"
+    },
+    {
+      "id": 70,
+      "dimension": "Performance",
+      "title": "Animation uses transform and opacity only"
+    },
+    {
+      "id": 71,
+      "dimension": "Performance",
+      "title": "No layout-thrashing hover on large trees"
+    },
+    {
+      "id": 72,
+      "dimension": "Performance",
+      "title": "Images compressed without visible banding"
+    },
+    {
+      "id": 73,
+      "dimension": "Performance",
+      "title": "SVG icons preferred for UI chrome"
+    },
+    {
+      "id": 74,
+      "dimension": "Performance",
+      "title": "Cache headers planned for static assets"
+    },
+    {
+      "id": 75,
+      "dimension": "Performance",
+      "title": "HTML is not a 2MB document"
+    },
+    {
+      "id": 76,
+      "dimension": "Performance",
+      "title": "JSON data for menus is cacheable"
+    },
+    {
+      "id": 77,
+      "dimension": "Performance",
+      "title": "No document.write"
+    },
+    {
+      "id": 78,
+      "dimension": "Performance",
+      "title": "No synchronous XHR on first load"
+    },
+    {
+      "id": 79,
+      "dimension": "Performance",
+      "title": "Mega menu is not a 200-node paint on load if closed"
+    },
+    {
+      "id": 80,
+      "dimension": "Performance",
+      "title": "Closed menu content can be deferred"
+    },
+    {
+      "id": 81,
+      "dimension": "Performance",
+      "title": "Reduced-motion path avoids continuous GPU work"
+    },
+    {
+      "id": 82,
+      "dimension": "Performance",
+      "title": "RequestAnimationFrame not polling when hidden"
+    },
+    {
+      "id": 83,
+      "dimension": "Performance",
+      "title": "404 page is static-fast"
+    },
+    {
+      "id": 84,
+      "dimension": "Performance",
+      "title": "Footer accordion JS is small"
+    },
+    {
+      "id": 85,
+      "dimension": "Performance",
+      "title": "No infinite animation when tab is backgrounded"
+    },
+    {
+      "id": 86,
+      "dimension": "Performance",
+      "title": "Responsive images use srcset when multiple densities exist"
+    },
+    {
+      "id": 87,
+      "dimension": "Performance",
+      "title": "Avoid layout shift from webfont swap on H1"
+    },
+    {
+      "id": 88,
+      "dimension": "Performance",
+      "title": "Avoid layout shift from mega menu open"
+    },
+    {
+      "id": 89,
+      "dimension": "Performance",
+      "title": "Avoid layout shift from accordion expand on first paint"
+    },
+    {
+      "id": 90,
+      "dimension": "Performance",
+      "title": "Total blocking time considered when adding motion libraries"
+    },
+    {
+      "id": 91,
+      "dimension": "Mobile",
+      "title": "Viewport meta width device-width initial-scale 1"
+    },
+    {
+      "id": 92,
+      "dimension": "Mobile",
+      "title": "No user-scalable no unless a map exception is documented"
+    },
+    {
+      "id": 93,
+      "dimension": "Mobile",
+      "title": "Tap targets at least 44x44 px"
+    },
+    {
+      "id": 94,
+      "dimension": "Mobile",
+      "title": "Spacing between adjacent targets at least 8 px"
+    },
+    {
+      "id": 95,
+      "dimension": "Mobile",
+      "title": "No horizontal scroll at 320 px"
+    },
+    {
+      "id": 96,
+      "dimension": "Mobile",
+      "title": "No horizontal scroll at 375 px"
+    },
+    {
+      "id": 97,
+      "dimension": "Mobile",
+      "title": "No horizontal scroll at 390 px"
+    },
+    {
+      "id": 98,
+      "dimension": "Mobile",
+      "title": "Readable type at 16 px minimum for inputs"
+    },
+    {
+      "id": 99,
+      "dimension": "Mobile",
+      "title": "Menu usable with one thumb on 390 px"
+    },
+    {
+      "id": 100,
+      "dimension": "Mobile",
+      "title": "Off-canvas menu covers and can be dismissed"
+    },
+    {
+      "id": 101,
+      "dimension": "Mobile",
+      "title": "Sticky header does not eat half the viewport"
+    },
+    {
+      "id": 102,
+      "dimension": "Mobile",
+      "title": "Forms do not zoom unexpectedly on iOS"
+    },
+    {
+      "id": 103,
+      "dimension": "Mobile",
+      "title": "Input types match data (email tel url)"
+    },
+    {
+      "id": 104,
+      "dimension": "Mobile",
+      "title": "Autocapitalize and autocomplete set where useful"
+    },
+    {
+      "id": 105,
+      "dimension": "Mobile",
+      "title": "Click-to-call uses tel links when a number is shown"
+    },
+    {
+      "id": 106,
+      "dimension": "Mobile",
+      "title": "Maps links open a native map when an address is shown"
+    },
+    {
+      "id": 107,
+      "dimension": "Mobile",
+      "title": "Images do not overflow the content well"
+    },
+    {
+      "id": 108,
+      "dimension": "Mobile",
+      "title": "Tables scroll inside a region if present"
+    },
+    {
+      "id": 109,
+      "dimension": "Mobile",
+      "title": "Mega menu becomes accordion under 768 px"
+    },
+    {
+      "id": 110,
+      "dimension": "Mobile",
+      "title": "Footer accordion is the mobile footer pattern"
+    },
+    {
+      "id": 111,
+      "dimension": "Mobile",
+      "title": "Focus is visible on iOS Safari"
+    },
+    {
+      "id": 112,
+      "dimension": "Mobile",
+      "title": "Hover-only actions have a tap equivalent"
+    },
+    {
+      "id": 113,
+      "dimension": "Mobile",
+      "title": "Safe-area insets respected on notched phones"
+    },
+    {
+      "id": 114,
+      "dimension": "Mobile",
+      "title": "Landscape phone still usable"
+    },
+    {
+      "id": 115,
+      "dimension": "Mobile",
+      "title": "768 px tablet layout is a real mid layout"
+    },
+    {
+      "id": 116,
+      "dimension": "Mobile",
+      "title": "Touch callout and selection do not break buttons"
+    },
+    {
+      "id": 117,
+      "dimension": "Mobile",
+      "title": "Disabled pinch only if a custom zoom control exists"
+    },
+    {
+      "id": 118,
+      "dimension": "Mobile",
+      "title": "App icons and tiles are not letterboxed"
+    },
+    {
+      "id": 119,
+      "dimension": "Mobile",
+      "title": "Theme color matches the header field"
+    },
+    {
+      "id": 120,
+      "dimension": "Mobile",
+      "title": "No Flash or plugin content"
+    },
+    {
+      "id": 121,
+      "dimension": "Mobile",
+      "title": "Fixed position elements do not collide with the home indicator"
+    },
+    {
+      "id": 122,
+      "dimension": "Mobile",
+      "title": "Virtual keyboard does not hide the submit control without scroll"
+    },
+    {
+      "id": 123,
+      "dimension": "Mobile",
+      "title": "Content reflows not shrink-to-fit text"
+    },
+    {
+      "id": 124,
+      "dimension": "Mobile",
+      "title": "Contrast holds in outdoor brightness (avoid hairline gray type)"
+    },
+    {
+      "id": 125,
+      "dimension": "Mobile",
+      "title": "Gestures are not the only way to open Apps"
+    },
+    {
+      "id": 126,
+      "dimension": "Mobile",
+      "title": "Pointer coarse media query used for hit targets when needed"
+    },
+    {
+      "id": 127,
+      "dimension": "Security",
+      "title": "All asset URLs are HTTPS"
+    },
+    {
+      "id": 128,
+      "dimension": "Security",
+      "title": "No mixed content"
+    },
+    {
+      "id": 129,
+      "dimension": "Security",
+      "title": "No inline API keys or tokens in JS"
+    },
+    {
+      "id": 130,
+      "dimension": "Security",
+      "title": "No secrets in HTML comments"
+    },
+    {
+      "id": 131,
+      "dimension": "Security",
+      "title": "No secrets in data-* attributes"
+    },
+    {
+      "id": 132,
+      "dimension": "Security",
+      "title": "External scripts use integrity when pinned"
+    },
+    {
+      "id": 133,
+      "dimension": "Security",
+      "title": "External scripts use crossorigin when needed"
+    },
+    {
+      "id": 134,
+      "dimension": "Security",
+      "title": "Target blank links include relnoopener noreferrer"
+    },
+    {
+      "id": 135,
+      "dimension": "Security",
+      "title": "Forms POST over HTTPS"
+    },
+    {
+      "id": 136,
+      "dimension": "Security",
+      "title": "Search fields do not reflect unsanitized HTML"
+    },
+    {
+      "id": 137,
+      "dimension": "Security",
+      "title": "InnerHTML not fed raw query strings"
+    },
+    {
+      "id": 138,
+      "dimension": "Security",
+      "title": "JSON parse of local data is trusted local only"
+    },
+    {
+      "id": 139,
+      "dimension": "Security",
+      "title": "CSP planned \u2014 default-src self plus documented extras"
+    },
+    {
+      "id": 140,
+      "dimension": "Security",
+      "title": "CSP does not rely on unsafe-eval unless documented"
+    },
+    {
+      "id": 141,
+      "dimension": "Security",
+      "title": "Referrer-Policy is set"
+    },
+    {
+      "id": 142,
+      "dimension": "Security",
+      "title": "X-Content-Type-Options nosniff planned"
+    },
+    {
+      "id": 143,
+      "dimension": "Security",
+      "title": "Frame ancestors deny or same origin unless embed is required"
+    },
+    {
+      "id": 144,
+      "dimension": "Security",
+      "title": "Permissions-Policy disables unused powerful APIs"
+    },
+    {
+      "id": 145,
+      "dimension": "Security",
+      "title": "No open redirect on next= parameters"
+    },
+    {
+      "id": 146,
+      "dimension": "Security",
+      "title": "404 does not echo raw path as HTML"
+    },
+    {
+      "id": 147,
+      "dimension": "Security",
+      "title": "User-generated names are escaped"
+    },
+    {
+      "id": 148,
+      "dimension": "Security",
+      "title": "SVG uploads not accepted without sanitize"
+    },
+    {
+      "id": 149,
+      "dimension": "Security",
+      "title": "CORS not set to star for credentialed routes"
+    },
+    {
+      "id": 150,
+      "dimension": "Security",
+      "title": "Cookies that exist are Secure and SameSite"
+    },
+    {
+      "id": 151,
+      "dimension": "Security",
+      "title": "Session cookies HttpOnly"
+    },
+    {
+      "id": 152,
+      "dimension": "Security",
+      "title": "No autocomplete on on secret fields if any"
+    },
+    {
+      "id": 153,
+      "dimension": "Security",
+      "title": "Admin routes not linked in public nav"
+    },
+    {
+      "id": 154,
+      "dimension": "Security",
+      "title": "Source maps not published on production if they leak internals"
+    },
+    {
+      "id": 155,
+      "dimension": "Security",
+      "title": "Directory listing disabled on static hosts"
+    },
+    {
+      "id": 156,
+      "dimension": "Security",
+      "title": "Well-known security.txt optional but not contradictory"
+    },
+    {
+      "id": 157,
+      "dimension": "Security",
+      "title": "Dependency URLs are known CDNs"
+    },
+    {
+      "id": 158,
+      "dimension": "Security",
+      "title": "Tailwind CDN noted as a build-time risk and replaced in production when possible"
+    },
+    {
+      "id": 159,
+      "dimension": "Security",
+      "title": "No eval"
+    },
+    {
+      "id": 160,
+      "dimension": "Security",
+      "title": "No new Function on user strings"
+    },
+    {
+      "id": 161,
+      "dimension": "Security",
+      "title": "PostMessage origins checked if used"
+    },
+    {
+      "id": 162,
+      "dimension": "Security",
+      "title": "WebSocket endpoints wss only if used"
+    },
+    {
+      "id": 163,
+      "dimension": "Security",
+      "title": "File download links have correct Content-Disposition when applicable"
+    },
+    {
+      "id": 164,
+      "dimension": "Security",
+      "title": "Rate-limit contact forms if present"
+    },
+    {
+      "id": 165,
+      "dimension": "Security",
+      "title": "Honeypot or time-trap on public forms"
+    },
+    {
+      "id": 166,
+      "dimension": "Security",
+      "title": "CSRF token on state-changing forms"
+    },
+    {
+      "id": 167,
+      "dimension": "Security",
+      "title": "Auth surfaces not exposed by the menu if they must stay private"
+    },
+    {
+      "id": 168,
+      "dimension": "Security",
+      "title": "Error text does not leak stack traces"
+    },
+    {
+      "id": 169,
+      "dimension": "Security",
+      "title": "Server version headers not advertised in copy"
+    },
+    {
+      "id": 170,
+      "dimension": "Security",
+      "title": "Subresource integrity documented in README when CDN is used"
+    },
+    {
+      "id": 171,
+      "dimension": "Security",
+      "title": "Third-party pixels listed in a privacy note"
+    },
+    {
+      "id": 172,
+      "dimension": "Security",
+      "title": "No password in query string ever"
+    },
+    {
+      "id": 173,
+      "dimension": "Security",
+      "title": "No token in hash unless the protocol requires it"
+    },
+    {
+      "id": 174,
+      "dimension": "Security",
+      "title": "Clickjacking considered for embeddable widgets"
+    },
+    {
+      "id": 175,
+      "dimension": "Security",
+      "title": "Supply-chain scripts inventoried"
+    },
+    {
+      "id": 176,
+      "dimension": "Security",
+      "title": "OWASP path \u2014 no obvious IDOR in demo IDs"
+    },
+    {
+      "id": 177,
+      "dimension": "Accessibility",
+      "title": "Skip link is first focusable control"
+    },
+    {
+      "id": 178,
+      "dimension": "Accessibility",
+      "title": "Landmarks header main footer nav present"
+    },
+    {
+      "id": 179,
+      "dimension": "Accessibility",
+      "title": "Only one banner landmark"
+    },
+    {
+      "id": 180,
+      "dimension": "Accessibility",
+      "title": "Nav labels distinguish primary and footer"
+    },
+    {
+      "id": 181,
+      "dimension": "Accessibility",
+      "title": "Main contains the H1"
+    },
+    {
+      "id": 182,
+      "dimension": "Accessibility",
+      "title": "Buttons are button elements"
+    },
+    {
+      "id": 183,
+      "dimension": "Accessibility",
+      "title": "Links are a elements with href"
+    },
+    {
+      "id": 184,
+      "dimension": "Accessibility",
+      "title": "Menu button has aria-expanded"
+    },
+    {
+      "id": 185,
+      "dimension": "Accessibility",
+      "title": "Menu button has aria-controls"
+    },
+    {
+      "id": 186,
+      "dimension": "Accessibility",
+      "title": "Open menu uses aria-modal when it is a dialog"
+    },
+    {
+      "id": 187,
+      "dimension": "Accessibility",
+      "title": "Escape closes the mega menu"
+    },
+    {
+      "id": 188,
+      "dimension": "Accessibility",
+      "title": "Focus returns to the Apps button on close"
+    },
+    {
+      "id": 189,
+      "dimension": "Accessibility",
+      "title": "Focus is trapped only while the mobile sheet is open"
+    },
+    {
+      "id": 190,
+      "dimension": "Accessibility",
+      "title": "Arrow keys move among top-level items where a menubar pattern is used"
+    },
+    {
+      "id": 191,
+      "dimension": "Accessibility",
+      "title": "If not a menubar, Tab order is documented and complete"
+    },
+    {
+      "id": 192,
+      "dimension": "Accessibility",
+      "title": "aria-current page on the active route"
+    },
+    {
+      "id": 193,
+      "dimension": "Accessibility",
+      "title": "Icons that convey meaning have accessible names"
+    },
+    {
+      "id": 194,
+      "dimension": "Accessibility",
+      "title": "Purely decorative icons are hidden from AT"
+    },
+    {
+      "id": 195,
+      "dimension": "Accessibility",
+      "title": "Form fields have labels"
+    },
+    {
+      "id": 196,
+      "dimension": "Accessibility",
+      "title": "Error messages are associated with fields"
+    },
+    {
+      "id": 197,
+      "dimension": "Accessibility",
+      "title": "Required fields announced"
+    },
+    {
+      "id": 198,
+      "dimension": "Accessibility",
+      "title": "Color is not the only error signal"
+    },
+    {
+      "id": 199,
+      "dimension": "Accessibility",
+      "title": "Focus visible 3:1 against adjacent colors"
+    },
+    {
+      "id": 200,
+      "dimension": "Accessibility",
+      "title": "Text contrast 4.5:1 for body"
+    },
+    {
+      "id": 201,
+      "dimension": "Accessibility",
+      "title": "Large text contrast 3:1"
+    },
+    {
+      "id": 202,
+      "dimension": "Accessibility",
+      "title": "UI component contrast 3:1"
+    },
+    {
+      "id": 203,
+      "dimension": "Accessibility",
+      "title": "Hit target 44 px"
+    },
+    {
+      "id": 204,
+      "dimension": "Accessibility",
+      "title": "No keyboard trap outside the intentional dialog trap"
+    },
+    {
+      "id": 205,
+      "dimension": "Accessibility",
+      "title": "Tabindex not greater than 0"
+    },
+    {
+      "id": 206,
+      "dimension": "Accessibility",
+      "title": "Positive tabindex avoided"
+    },
+    {
+      "id": 207,
+      "dimension": "Accessibility",
+      "title": "Heading text is unique enough to scan"
+    },
+    {
+      "id": 208,
+      "dimension": "Accessibility",
+      "title": "Lists are ul or ol not div soup"
+    },
+    {
+      "id": 209,
+      "dimension": "Accessibility",
+      "title": "Accordion headers are buttons"
+    },
+    {
+      "id": 210,
+      "dimension": "Accessibility",
+      "title": "Accordion aria-expanded reflects state"
+    },
+    {
+      "id": 211,
+      "dimension": "Accessibility",
+      "title": "Reduced motion honored"
+    },
+    {
+      "id": 212,
+      "dimension": "Accessibility",
+      "title": "Autoplay motion stops under reduced motion"
+    },
+    {
+      "id": 213,
+      "dimension": "Accessibility",
+      "title": "Language of passages marked if mixed"
+    },
+    {
+      "id": 214,
+      "dimension": "Accessibility",
+      "title": "Page language is English unless specified"
+    },
+    {
+      "id": 215,
+      "dimension": "Accessibility",
+      "title": "Charts if any have text equivalents"
+    },
+    {
+      "id": 216,
+      "dimension": "Accessibility",
+      "title": "Captions for any video"
+    },
+    {
+      "id": 217,
+      "dimension": "Accessibility",
+      "title": "Transcript or description for any audio"
+    },
+    {
+      "id": 218,
+      "dimension": "Accessibility",
+      "title": "Live regions used sparingly for menu state if needed"
+    },
+    {
+      "id": 219,
+      "dimension": "Accessibility",
+      "title": "Status messages are not toast-only"
+    },
+    {
+      "id": 220,
+      "dimension": "Accessibility",
+      "title": "Name role value works on custom controls"
+    },
+    {
+      "id": 221,
+      "dimension": "Accessibility",
+      "title": "Do not rely on title tooltips for essential info"
+    },
+    {
+      "id": 222,
+      "dimension": "Accessibility",
+      "title": "Touch and keyboard can reach every app link"
+    },
+    {
+      "id": 223,
+      "dimension": "Accessibility",
+      "title": "404 heading is announced as the page title too"
+    },
+    {
+      "id": 224,
+      "dimension": "Accessibility",
+      "title": "Footer accordion is operable with VoiceOver rotor"
+    },
+    {
+      "id": 225,
+      "dimension": "AI Readiness",
+      "title": "Machine-readable title distinct from brand-only strings"
+    },
+    {
+      "id": 226,
+      "dimension": "AI Readiness",
+      "title": "First paragraph answers what the page is"
+    },
+    {
+      "id": 227,
+      "dimension": "AI Readiness",
+      "title": "Entity of the organization is named in text"
+    },
+    {
+      "id": 228,
+      "dimension": "AI Readiness",
+      "title": "SameAs candidates exist for the brand"
+    },
+    {
+      "id": 229,
+      "dimension": "AI Readiness",
+      "title": "JSON-LD Organization or WebSite present on chrome pages"
+    },
+    {
+      "id": 230,
+      "dimension": "AI Readiness",
+      "title": "JSON-LD WebPage present on each route"
+    },
+    {
+      "id": 231,
+      "dimension": "AI Readiness",
+      "title": "Author or publisher named when content is editorial"
+    },
+    {
+      "id": 232,
+      "dimension": "AI Readiness",
+      "title": "Dates in ISO when dates exist"
+    },
+    {
+      "id": 233,
+      "dimension": "AI Readiness",
+      "title": "FAQ material uses question and answer prose not only headings"
+    },
+    {
+      "id": 234,
+      "dimension": "AI Readiness",
+      "title": "No contradictory claims between title and H1"
+    },
+    {
+      "id": 235,
+      "dimension": "AI Readiness",
+      "title": "Primary entity mentioned before decorative copy"
+    },
+    {
+      "id": 236,
+      "dimension": "AI Readiness",
+      "title": "App names are consistent strings across nav apps footer 404"
+    },
+    {
+      "id": 237,
+      "dimension": "AI Readiness",
+      "title": "Abbreviations expanded once"
+    },
+    {
+      "id": 238,
+      "dimension": "AI Readiness",
+      "title": "Units and numbers written plainly"
+    },
+    {
+      "id": 239,
+      "dimension": "AI Readiness",
+      "title": "Tables have headers if quantitative"
+    },
+    {
+      "id": 240,
+      "dimension": "AI Readiness",
+      "title": "Code samples not required on marketing chrome"
+    },
+    {
+      "id": 241,
+      "dimension": "AI Readiness",
+      "title": "Crawlable text not only canvas"
+    },
+    {
+      "id": 242,
+      "dimension": "AI Readiness",
+      "title": "Important links are in HTML not only JS click handlers"
+    },
+    {
+      "id": 243,
+      "dimension": "AI Readiness",
+      "title": "Hash routes not used as the only public URL"
+    },
+    {
+      "id": 244,
+      "dimension": "AI Readiness",
+      "title": "Canonical helps engines pick the app URL"
+    },
+    {
+      "id": 245,
+      "dimension": "AI Readiness",
+      "title": "llms.txt considered for the site root"
+    },
+    {
+      "id": 246,
+      "dimension": "AI Readiness",
+      "title": "robots allows GPTBot and Google-Extended unless policy forbids"
+    },
+    {
+      "id": 247,
+      "dimension": "AI Readiness",
+      "title": "Policy forbids recorded in robots if bots are blocked"
+    },
+    {
+      "id": 248,
+      "dimension": "AI Readiness",
+      "title": "OG tags give engines a clean card"
+    },
+    {
+      "id": 249,
+      "dimension": "AI Readiness",
+      "title": "Image alt is literal so multimodal models can ground"
+    },
+    {
+      "id": 250,
+      "dimension": "AI Readiness",
+      "title": "No text baked into OG that contradicts the title"
+    },
+    {
+      "id": 251,
+      "dimension": "AI Readiness",
+      "title": "Contact path is a real URL"
+    },
+    {
+      "id": 252,
+      "dimension": "AI Readiness",
+      "title": "About path is a real URL when claimed"
+    },
+    {
+      "id": 253,
+      "dimension": "AI Readiness",
+      "title": "Brand name Digital Marketing Company appears as that string"
+    },
+    {
+      "id": 254,
+      "dimension": "AI Readiness",
+      "title": "Domain string DigitalMarketingCo.org used when the domain is written"
+    },
+    {
+      "id": 255,
+      "dimension": "AI Readiness",
+      "title": "Auditor URL cited only when the page is about the auditor"
+    },
+    {
+      "id": 256,
+      "dimension": "AI Readiness",
+      "title": "No fake statistics in copy"
+    },
+    {
+      "id": 257,
+      "dimension": "AI Readiness",
+      "title": "No unsourced 100 scores claimed"
+    },
+    {
+      "id": 258,
+      "dimension": "AI Readiness",
+      "title": "Structured data validates as JSON"
+    },
+    {
+      "id": 259,
+      "dimension": "AI Readiness",
+      "title": "Structured data types match visible content"
+    },
+    {
+      "id": 260,
+      "dimension": "AI Readiness",
+      "title": "No JSON-LD for reviews that do not exist"
+    },
+    {
+      "id": 261,
+      "dimension": "AI Readiness",
+      "title": "No JSON-LD for prices that do not exist"
+    },
+    {
+      "id": 262,
+      "dimension": "AI Readiness",
+      "title": "Breadcrumb entities match visible labels"
+    },
+    {
+      "id": 263,
+      "dimension": "AI Readiness",
+      "title": "Speakable not claimed unless a true speakable block exists"
+    },
+    {
+      "id": 264,
+      "dimension": "AI Readiness",
+      "title": "Content is extractable without executing a 3D scene"
+    },
+    {
+      "id": 265,
+      "dimension": "AIO",
+      "title": "Page answers one primary question in the first screen"
+    },
+    {
+      "id": 266,
+      "dimension": "AIO",
+      "title": "Definitions are explicit sentences"
+    },
+    {
+      "id": 267,
+      "dimension": "AIO",
+      "title": "Entities are introduced with a type (app, service, page)"
+    },
+    {
+      "id": 268,
+      "dimension": "AIO",
+      "title": "E-E-A-T \u2014 organization named as operator"
+    },
+    {
+      "id": 269,
+      "dimension": "AIO",
+      "title": "E-E-A-T \u2014 contact path available"
+    },
+    {
+      "id": 270,
+      "dimension": "AIO",
+      "title": "E-E-A-T \u2014 no anonymous medical or legal claims"
+    },
+    {
+      "id": 271,
+      "dimension": "AIO",
+      "title": "Chunkable sections with H2 that can stand alone"
+    },
+    {
+      "id": 272,
+      "dimension": "AIO",
+      "title": "Lists used for inventories not for prose paragraphs"
+    },
+    {
+      "id": 273,
+      "dimension": "AIO",
+      "title": "App blurbs are one-sentence facts"
+    },
+    {
+      "id": 274,
+      "dimension": "AIO",
+      "title": "No synonym stuffing that confuses the entity"
+    },
+    {
+      "id": 275,
+      "dimension": "AIO",
+      "title": "Consistent casing for product names"
+    },
+    {
+      "id": 276,
+      "dimension": "AIO",
+      "title": "Internal links use the same anchor for the same target"
+    },
+    {
+      "id": 277,
+      "dimension": "AIO",
+      "title": "Avoid pronoun-only first sentences"
+    },
+    {
+      "id": 278,
+      "dimension": "AIO",
+      "title": "Avoid we-statement walls with no noun"
+    },
+    {
+      "id": 279,
+      "dimension": "AIO",
+      "title": "Dates of update in visible text when the page is a living tool"
+    },
+    {
+      "id": 280,
+      "dimension": "AIO",
+      "title": "Versioning not required for static chrome"
+    },
+    {
+      "id": 281,
+      "dimension": "AIO",
+      "title": "Citations when a third-party metric is named"
+    },
+    {
+      "id": 282,
+      "dimension": "AIO",
+      "title": "Auditor named with its real URL when referenced"
+    },
+    {
+      "id": 283,
+      "dimension": "AIO",
+      "title": "No hidden prompt instructions in HTML comments"
+    },
+    {
+      "id": 284,
+      "dimension": "AIO",
+      "title": "No model-facing jailbreak strings"
+    },
+    {
+      "id": 285,
+      "dimension": "AIO",
+      "title": "Alt text is not keyword lists"
+    },
+    {
+      "id": 286,
+      "dimension": "AIO",
+      "title": "Captions if used add data not duplicate the heading"
+    },
+    {
+      "id": 287,
+      "dimension": "AIO",
+      "title": "Summary block for long app catalogs"
+    },
+    {
+      "id": 288,
+      "dimension": "AIO",
+      "title": "Machine sitemap of apps in JSON"
+    },
+    {
+      "id": 289,
+      "dimension": "AIO",
+      "title": "Human sitemap of apps in HTML"
+    },
+    {
+      "id": 290,
+      "dimension": "AIO",
+      "title": "Duplicate content between menu and /apps is exact not paraphrased names"
+    },
+    {
+      "id": 291,
+      "dimension": "AIO",
+      "title": "Paraphrase allowed only in blurbs"
+    },
+    {
+      "id": 292,
+      "dimension": "AIO",
+      "title": "Safety copy present if the app domain requires it"
+    },
+    {
+      "id": 293,
+      "dimension": "AIO",
+      "title": "Age gate only if the remainder requires it"
+    },
+    {
+      "id": 294,
+      "dimension": "AIO",
+      "title": "Localization hooks documented if Spanish pages exist"
+    },
+    {
+      "id": 295,
+      "dimension": "AIO",
+      "title": "Do not invent Spanish copy unless asked"
+    },
+    {
+      "id": 296,
+      "dimension": "AIO",
+      "title": "Token budget \u2014 first 300 words contain the job of the page"
+    },
+    {
+      "id": 297,
+      "dimension": "AIO",
+      "title": "No decorative lorem"
+    },
+    {
+      "id": 298,
+      "dimension": "AIO",
+      "title": "No placeholder TBD in shipped HTML"
+    },
+    {
+      "id": 299,
+      "dimension": "AIO",
+      "title": "Error pages explain the miss then offer apps"
+    },
+    {
+      "id": 300,
+      "dimension": "AIO",
+      "title": "Success states named if forms exist"
+    },
+    {
+      "id": 301,
+      "dimension": "AIO",
+      "title": "Empty states named if grids can be empty"
+    },
+    {
+      "id": 302,
+      "dimension": "AIO",
+      "title": "Authoritative last line is the house link not a slogan pile"
+    },
+    {
+      "id": 303,
+      "dimension": "AIO",
+      "title": "AIO copy does not fight GEO claims"
+    },
+    {
+      "id": 304,
+      "dimension": "AIO",
+      "title": "AIO copy does not fight AEO snippet wording"
+    },
+    {
+      "id": 305,
+      "dimension": "AIO",
+      "title": "Entity IDs stable in data/apps.json"
+    },
+    {
+      "id": 306,
+      "dimension": "AIO",
+      "title": "Slugs stable across nav footer 404"
+    },
+    {
+      "id": 307,
+      "dimension": "GEO",
+      "title": "Page can be cited as a standalone source for its topic"
+    },
+    {
+      "id": 308,
+      "dimension": "GEO",
+      "title": "Brand + topic co-occur in the title or H1"
+    },
+    {
+      "id": 309,
+      "dimension": "GEO",
+      "title": "Factual sentence engines can quote without trimming junk"
+    },
+    {
+      "id": 310,
+      "dimension": "GEO",
+      "title": "No wall of adjectives before the first fact"
+    },
+    {
+      "id": 311,
+      "dimension": "GEO",
+      "title": "Apps inventory is complete so engines do not invent extras"
+    },
+    {
+      "id": 312,
+      "dimension": "GEO",
+      "title": "Order of apps is published so citations can match"
+    },
+    {
+      "id": 313,
+      "dimension": "GEO",
+      "title": "Disambiguation \u2014 Digital Marketing Company vs generic agency nouns"
+    },
+    {
+      "id": 314,
+      "dimension": "GEO",
+      "title": "Location of the firm only if local pages claim it"
+    },
+    {
+      "id": 315,
+      "dimension": "GEO",
+      "title": "Do not geo-spam cities the page is not about"
+    },
+    {
+      "id": 316,
+      "dimension": "GEO",
+      "title": "Generative engines see the same HTML as users"
+    },
+    {
+      "id": 317,
+      "dimension": "GEO",
+      "title": "Important facts not only inside images"
+    },
+    {
+      "id": 318,
+      "dimension": "GEO",
+      "title": "Important facts not only inside canvas"
+    },
+    {
+      "id": 319,
+      "dimension": "GEO",
+      "title": "Schema supports the same facts as prose"
+    },
+    {
+      "id": 320,
+      "dimension": "GEO",
+      "title": "No contradicting OG description"
+    },
+    {
+      "id": 321,
+      "dimension": "GEO",
+      "title": "No contradicting Twitter description"
+    },
+    {
+      "id": 322,
+      "dimension": "GEO",
+      "title": "Canonical prevents split citations"
+    },
+    {
+      "id": 323,
+      "dimension": "GEO",
+      "title": "404 does not become a cited product page"
+    },
+    {
+      "id": 324,
+      "dimension": "GEO",
+      "title": "Menu labels match page titles closely"
+    },
+    {
+      "id": 325,
+      "dimension": "GEO",
+      "title": "Short definition of each app under 25 words"
+    },
+    {
+      "id": 326,
+      "dimension": "GEO",
+      "title": "No unverifiable superlative as the only description"
+    },
+    {
+      "id": 327,
+      "dimension": "GEO",
+      "title": "When a superlative is used a measurable claim sits next to it"
+    },
+    {
+      "id": 328,
+      "dimension": "GEO",
+      "title": "SGE-style overview would find a clear entity card"
+    },
+    {
+      "id": 329,
+      "dimension": "GEO",
+      "title": "Perplexity-style citation would have a clean paragraph"
+    },
+    {
+      "id": 330,
+      "dimension": "GEO",
+      "title": "Grok-style answer would not need to guess the app list"
+    },
+    {
+      "id": 331,
+      "dimension": "GEO",
+      "title": "Gemini-style answer would see organization markup"
+    },
+    {
+      "id": 332,
+      "dimension": "GEO",
+      "title": "Bing Chat-style answer would see site name meta"
+    },
+    {
+      "id": 333,
+      "dimension": "GEO",
+      "title": "Avoid interstitials that hide the inventory"
+    },
+    {
+      "id": 334,
+      "dimension": "GEO",
+      "title": "Avoid pagination for a short app list"
+    },
+    {
+      "id": 335,
+      "dimension": "GEO",
+      "title": "Use a single inventory page plus chrome mirrors"
+    },
+    {
+      "id": 336,
+      "dimension": "GEO",
+      "title": "Cite the auditor as a tool URL not as this page's identity unless it is the auditor"
+    },
+    {
+      "id": 337,
+      "dimension": "GEO",
+      "title": "Do not claim a 521 score without running checks"
+    },
+    {
+      "id": 338,
+      "dimension": "GEO",
+      "title": "Do not claim partnership marks that are not on the page"
+    },
+    {
+      "id": 339,
+      "dimension": "GEO",
+      "title": "Authoritative outbound link to digitalmarketingco.org"
+    },
+    {
+      "id": 340,
+      "dimension": "GEO",
+      "title": "Visible anchor equals title attribute on that link"
+    },
+    {
+      "id": 341,
+      "dimension": "GEO",
+      "title": "Plain domain casing DigitalMarketingCo.org"
+    },
+    {
+      "id": 342,
+      "dimension": "GEO",
+      "title": "Topic cluster \u2014 apps nav footer 404 all point at the same slugs"
+    },
+    {
+      "id": 343,
+      "dimension": "GEO",
+      "title": "No orphan app route"
+    },
+    {
+      "id": 344,
+      "dimension": "GEO",
+      "title": "No phantom app in the menu missing a page"
+    },
+    {
+      "id": 345,
+      "dimension": "GEO",
+      "title": "Change frequency of the inventory documented in README"
+    },
+    {
+      "id": 346,
+      "dimension": "GEO",
+      "title": "GEO paragraph is human-readable not a keyword barge"
+    },
+    {
+      "id": 347,
+      "dimension": "AEO",
+      "title": "One featured-snippet candidate paragraph near the top on content pages"
+    },
+    {
+      "id": 348,
+      "dimension": "AEO",
+      "title": "Direct answer then context"
+    },
+    {
+      "id": 349,
+      "dimension": "AEO",
+      "title": "Question-style H2 only when a real question is answered"
+    },
+    {
+      "id": 350,
+      "dimension": "AEO",
+      "title": "People-Also-Ask items only when written as Q and A"
+    },
+    {
+      "id": 351,
+      "dimension": "AEO",
+      "title": "Voice-ready short answers under 30 words where a definition exists"
+    },
+    {
+      "id": 352,
+      "dimension": "AEO",
+      "title": "Numbers written as numerals when they are metrics"
+    },
+    {
+      "id": 353,
+      "dimension": "AEO",
+      "title": "Units named beside numbers"
+    },
+    {
+      "id": 354,
+      "dimension": "AEO",
+      "title": "How-to steps are numbered lists if a how-to exists"
+    },
+    {
+      "id": 355,
+      "dimension": "AEO",
+      "title": "Not a how-to page unless the remainder is a how-to"
+    },
+    {
+      "id": 356,
+      "dimension": "AEO",
+      "title": "FAQPage schema only when visible FAQs exist"
+    },
+    {
+      "id": 357,
+      "dimension": "AEO",
+      "title": "Each FAQ answer is self-contained"
+    },
+    {
+      "id": 358,
+      "dimension": "AEO",
+      "title": "No FAQ that only says click here"
+    },
+    {
+      "id": 359,
+      "dimension": "AEO",
+      "title": "Speakable content is short if marked"
+    },
+    {
+      "id": 360,
+      "dimension": "AEO",
+      "title": "Do not mark the whole article speakable"
+    },
+    {
+      "id": 361,
+      "dimension": "AEO",
+      "title": "Table of apps can answer which apps exist"
+    },
+    {
+      "id": 362,
+      "dimension": "AEO",
+      "title": "First cell or first item is the official name"
+    },
+    {
+      "id": 363,
+      "dimension": "AEO",
+      "title": "Synonyms of an app appear after the official name"
+    },
+    {
+      "id": 364,
+      "dimension": "AEO",
+      "title": "Local business questions deferred to Local SEO pages"
+    },
+    {
+      "id": 365,
+      "dimension": "AEO",
+      "title": "Price questions not answered if no price exists"
+    },
+    {
+      "id": 366,
+      "dimension": "AEO",
+      "title": "Hours questions not answered if no hours exist"
+    },
+    {
+      "id": 367,
+      "dimension": "AEO",
+      "title": "Contact questions link to a real contact route"
+    },
+    {
+      "id": 368,
+      "dimension": "AEO",
+      "title": "404 answers did this URL move with the app list"
+    },
+    {
+      "id": 369,
+      "dimension": "AEO",
+      "title": "Menu does not hide the only statement of what an app is"
+    },
+    {
+      "id": 370,
+      "dimension": "AEO",
+      "title": "Answer text is in the DOM as text nodes"
+    },
+    {
+      "id": 371,
+      "dimension": "AEO",
+      "title": "No essential answer only in aria-label"
+    },
+    {
+      "id": 372,
+      "dimension": "AEO",
+      "title": "Snippet-friendly 40-60 word blurb on /apps cards"
+    },
+    {
+      "id": 373,
+      "dimension": "AEO",
+      "title": "Consistent punctuation in blurbs"
+    },
+    {
+      "id": 374,
+      "dimension": "AEO",
+      "title": "No emoji-only answers"
+    },
+    {
+      "id": 375,
+      "dimension": "AEO",
+      "title": "No bait title that the paragraph does not support"
+    },
+    {
+      "id": 376,
+      "dimension": "AEO",
+      "title": "Meta description can stand as a spoken answer"
+    },
+    {
+      "id": 377,
+      "dimension": "AEO",
+      "title": "Title can stand as a spoken title"
+    },
+    {
+      "id": 378,
+      "dimension": "AEO",
+      "title": "Avoid rhyme-only slogans as the only description"
+    },
+    {
+      "id": 379,
+      "dimension": "AEO",
+      "title": "Name the operator in one AEO sentence"
+    },
+    {
+      "id": 380,
+      "dimension": "AEO",
+      "title": "Name the inventory in one AEO sentence"
+    },
+    {
+      "id": 381,
+      "dimension": "AEO",
+      "title": "Name the next action in one AEO sentence"
+    },
+    {
+      "id": 382,
+      "dimension": "AEO",
+      "title": "Do not stack three CTAs before one fact"
+    },
+    {
+      "id": 383,
+      "dimension": "AEO",
+      "title": "Use strong not span for a single key phrase at most once"
+    },
+    {
+      "id": 384,
+      "dimension": "AEO",
+      "title": "Time-to-answer for a voice user under ten seconds of reading"
+    },
+    {
+      "id": 385,
+      "dimension": "AEO",
+      "title": "Accented characters used correctly if names need them"
+    },
+    {
+      "id": 386,
+      "dimension": "AEO",
+      "title": "No ALL CAPS paragraphs"
+    },
+    {
+      "id": 387,
+      "dimension": "Local SEO",
+      "title": "NAP only on pages that are actually local"
+    },
+    {
+      "id": 388,
+      "dimension": "Local SEO",
+      "title": "NAP strings consistent when present"
+    },
+    {
+      "id": 389,
+      "dimension": "Local SEO",
+      "title": "LocalBusiness schema only when a real location is claimed"
+    },
+    {
+      "id": 390,
+      "dimension": "Local SEO",
+      "title": "Address matches the visible address"
+    },
+    {
+      "id": 391,
+      "dimension": "Local SEO",
+      "title": "Telephone matches the visible telephone"
+    },
+    {
+      "id": 392,
+      "dimension": "Local SEO",
+      "title": "Opening hours match visible hours when claimed"
+    },
+    {
+      "id": 393,
+      "dimension": "Local SEO",
+      "title": "Geo coordinates only when verified"
+    },
+    {
+      "id": 394,
+      "dimension": "Local SEO",
+      "title": "Google Maps link uses the same name string"
+    },
+    {
+      "id": 395,
+      "dimension": "Local SEO",
+      "title": "City names not stuffed into app titles"
+    },
+    {
+      "id": 396,
+      "dimension": "Local SEO",
+      "title": "Service-area copy only on service-area pages"
+    },
+    {
+      "id": 397,
+      "dimension": "Local SEO",
+      "title": "Do not attach a city to a calculator app unless it is local"
+    },
+    {
+      "id": 398,
+      "dimension": "Local SEO",
+      "title": "Organization schema can exist without LocalBusiness"
+    },
+    {
+      "id": 399,
+      "dimension": "Local SEO",
+      "title": "SameAs social profiles only if real"
+    },
+    {
+      "id": 400,
+      "dimension": "Local SEO",
+      "title": "Review schema only if reviews are visible and real"
+    },
+    {
+      "id": 401,
+      "dimension": "Local SEO",
+      "title": "Aggregate rating not invented"
+    },
+    {
+      "id": 402,
+      "dimension": "Local SEO",
+      "title": "Locale of the page matches the audience"
+    },
+    {
+      "id": 403,
+      "dimension": "Local SEO",
+      "title": "Imperial or metric units consistent with the audience"
+    },
+    {
+      "id": 404,
+      "dimension": "Local SEO",
+      "title": "Embedded map has a title and a text address fallback"
+    },
+    {
+      "id": 405,
+      "dimension": "Local SEO",
+      "title": "Click-to-call visible on local pages"
+    },
+    {
+      "id": 406,
+      "dimension": "Local SEO",
+      "title": "Directions CTA visible on local pages"
+    },
+    {
+      "id": 407,
+      "dimension": "Local SEO",
+      "title": "Local landing pages not thin copies of /apps"
+    },
+    {
+      "id": 408,
+      "dimension": "Local SEO",
+      "title": "Footer city list not a dump unless it is a real directory"
+    },
+    {
+      "id": 409,
+      "dimension": "Local SEO",
+      "title": "hCard or equivalent microdata not required if JSON-LD is complete"
+    },
+    {
+      "id": 410,
+      "dimension": "Local SEO",
+      "title": "Postal code formatted correctly when present"
+    },
+    {
+      "id": 411,
+      "dimension": "Local SEO",
+      "title": "Country named when the address is international"
+    },
+    {
+      "id": 412,
+      "dimension": "Local SEO",
+      "title": "Multi-location pages do not mix NAP blocks"
+    },
+    {
+      "id": 413,
+      "dimension": "Local SEO",
+      "title": "Geotagged images not required"
+    },
+    {
+      "id": 414,
+      "dimension": "Local SEO",
+      "title": "Local modifiers in title only when the page is local"
+    },
+    {
+      "id": 415,
+      "dimension": "Local SEO",
+      "title": "GBP name not contradicted"
+    },
+    {
+      "id": 416,
+      "dimension": "Local SEO",
+      "title": "Do not invent a GBP URL"
+    },
+    {
+      "id": 417,
+      "dimension": "Local SEO",
+      "title": "Emergency or after-hours notes only if true"
+    },
+    {
+      "id": 418,
+      "dimension": "Local SEO",
+      "title": "Parking or transit notes only if true"
+    },
+    {
+      "id": 419,
+      "dimension": "Local SEO",
+      "title": "Accessibility of the physical site described only if true"
+    },
+    {
+      "id": 420,
+      "dimension": "Local SEO",
+      "title": "Local page still passes the global 521 chrome checks"
+    },
+    {
+      "id": 421,
+      "dimension": "Local SEO",
+      "title": "Apps that are tools stay tools not fake local services"
+    },
+    {
+      "id": 422,
+      "dimension": "Local SEO",
+      "title": "404 does not claim a storefront"
+    },
+    {
+      "id": 423,
+      "dimension": "Schema.org",
+      "title": "JSON-LD is valid JSON"
+    },
+    {
+      "id": 424,
+      "dimension": "Schema.org",
+      "title": "JSON-LD is in a script type application/ld+json"
+    },
+    {
+      "id": 425,
+      "dimension": "Schema.org",
+      "title": "WebSite type on the home or chrome shell"
+    },
+    {
+      "id": 426,
+      "dimension": "Schema.org",
+      "title": "WebSite name matches visible brand"
+    },
+    {
+      "id": 427,
+      "dimension": "Schema.org",
+      "title": "WebSite url matches the site origin"
+    },
+    {
+      "id": 428,
+      "dimension": "Schema.org",
+      "title": "SearchAction only if a working search exists"
+    },
+    {
+      "id": 429,
+      "dimension": "Schema.org",
+      "title": "Organization type with name Digital Marketing Company when that is the operator"
+    },
+    {
+      "id": 430,
+      "dimension": "Schema.org",
+      "title": "Organization url https://digitalmarketingco.org"
+    },
+    {
+      "id": 431,
+      "dimension": "Schema.org",
+      "title": "Organization logo object with url width height when a logo file exists"
+    },
+    {
+      "id": 432,
+      "dimension": "Schema.org",
+      "title": "WebPage type on each route"
+    },
+    {
+      "id": 433,
+      "dimension": "Schema.org",
+      "title": "WebPage url equals canonical"
+    },
+    {
+      "id": 434,
+      "dimension": "Schema.org",
+      "title": "WebPage name equals title intent"
+    },
+    {
+      "id": 435,
+      "dimension": "Schema.org",
+      "title": "WebPage isPartOf points at WebSite"
+    },
+    {
+      "id": 436,
+      "dimension": "Schema.org",
+      "title": "BreadcrumbList on depth greater than one"
+    },
+    {
+      "id": 437,
+      "dimension": "Schema.org",
+      "title": "ItemList for the apps inventory on /apps"
+    },
+    {
+      "id": 438,
+      "dimension": "Schema.org",
+      "title": "ItemList order matches data/apps.json"
+    },
+    {
+      "id": 439,
+      "dimension": "Schema.org",
+      "title": "ListItem position is 1-indexed and contiguous"
+    },
+    {
+      "id": 440,
+      "dimension": "Schema.org",
+      "title": "ListItem name matches visible title"
+    },
+    {
+      "id": 441,
+      "dimension": "Schema.org",
+      "title": "ListItem url matches href"
+    },
+    {
+      "id": 442,
+      "dimension": "Schema.org",
+      "title": "SoftwareApplication type only for real apps that behave as software"
+    },
+    {
+      "id": 443,
+      "dimension": "Schema.org",
+      "title": "ApplicationCategory set when SoftwareApplication is used"
+    },
+    {
+      "id": 444,
+      "dimension": "Schema.org",
+      "title": "Offer type only when a real offer exists"
+    },
+    {
+      "id": 445,
+      "dimension": "Schema.org",
+      "title": "FAQPage only with visible FAQs"
+    },
+    {
+      "id": 446,
+      "dimension": "Schema.org",
+      "title": "QAPage only for true Q and A pages"
+    },
+    {
+      "id": 447,
+      "dimension": "Schema.org",
+      "title": "Article only for articles"
+    },
+    {
+      "id": 448,
+      "dimension": "Schema.org",
+      "title": "NewsArticle not used for tools"
+    },
+    {
+      "id": 449,
+      "dimension": "Schema.org",
+      "title": "ImageObject for OG image with url width height"
+    },
+    {
+      "id": 450,
+      "dimension": "Schema.org",
+      "title": "primaryImageOfPage when a still exists"
+    },
+    {
+      "id": 451,
+      "dimension": "Schema.org",
+      "title": "inLanguage set to en-US unless specified"
+    },
+    {
+      "id": 452,
+      "dimension": "Schema.org",
+      "title": "datePublished only when known"
+    },
+    {
+      "id": 453,
+      "dimension": "Schema.org",
+      "title": "dateModified only when known"
+    },
+    {
+      "id": 454,
+      "dimension": "Schema.org",
+      "title": "publisher Organization reference consistent"
+    },
+    {
+      "id": 455,
+      "dimension": "Schema.org",
+      "title": "No speakable without a real speakable block"
+    },
+    {
+      "id": 456,
+      "dimension": "Schema.org",
+      "title": "No review without visible reviews"
+    },
+    {
+      "id": 457,
+      "dimension": "Schema.org",
+      "title": "No aggregateRating without visible ratings"
+    },
+    {
+      "id": 458,
+      "dimension": "Schema.org",
+      "title": "No videoObject without a video"
+    },
+    {
+      "id": 459,
+      "dimension": "Schema.org",
+      "title": "No event without an event"
+    },
+    {
+      "id": 460,
+      "dimension": "Schema.org",
+      "title": "No jobPosting without a job"
+    },
+    {
+      "id": 461,
+      "dimension": "Schema.org",
+      "title": "About page uses AboutPage if it is an about page"
+    },
+    {
+      "id": 462,
+      "dimension": "Schema.org",
+      "title": "Contact page uses ContactPage if it is a contact page"
+    },
+    {
+      "id": 463,
+      "dimension": "Schema.org",
+      "title": "CollectionPage allowed for /apps"
+    },
+    {
+      "id": 464,
+      "dimension": "Schema.org",
+      "title": "ItemPage allowed for a single app"
+    },
+    {
+      "id": 465,
+      "dimension": "Schema.org",
+      "title": "404 uses no Product schema"
+    },
+    {
+      "id": 466,
+      "dimension": "Schema.org",
+      "title": "Mega menu is not marked as a fake SiteNavigationElement dump that lists hidden URLs"
+    },
+    {
+      "id": 467,
+      "dimension": "Schema.org",
+      "title": "SiteNavigationElement if used matches visible nav"
+    },
+    {
+      "id": 468,
+      "dimension": "Schema.org",
+      "title": "SameAs array only real profiles"
+    },
+    {
+      "id": 469,
+      "dimension": "Schema.org",
+      "title": "No duplicate identical JSON-LD blocks that conflict"
+    },
+    {
+      "id": 470,
+      "dimension": "WCAG",
+      "title": "WCAG 2.2 Level AA target for chrome"
+    },
+    {
+      "id": 471,
+      "dimension": "WCAG",
+      "title": "1.1.1 Non-text content \u2014 alts present"
+    },
+    {
+      "id": 472,
+      "dimension": "WCAG",
+      "title": "1.2.1 Audio-only and video-only \u2014 alternatives if media exists"
+    },
+    {
+      "id": 473,
+      "dimension": "WCAG",
+      "title": "1.2.2 Captions if live-action video exists"
+    },
+    {
+      "id": 474,
+      "dimension": "WCAG",
+      "title": "1.2.3 Audio description or media alternative if needed"
+    },
+    {
+      "id": 475,
+      "dimension": "WCAG",
+      "title": "1.3.1 Info and relationships \u2014 headings lists labels"
+    },
+    {
+      "id": 476,
+      "dimension": "WCAG",
+      "title": "1.3.2 Meaningful sequence \u2014 DOM order matches reading order"
+    },
+    {
+      "id": 477,
+      "dimension": "WCAG",
+      "title": "1.3.3 Sensory characteristics \u2014 instructions not color-only or shape-only"
+    },
+    {
+      "id": 478,
+      "dimension": "WCAG",
+      "title": "1.3.4 Orientation \u2014 page works portrait and landscape"
+    },
+    {
+      "id": 479,
+      "dimension": "WCAG",
+      "title": "1.3.5 Identify input purpose \u2014 autocomplete on common fields"
+    },
+    {
+      "id": 480,
+      "dimension": "WCAG",
+      "title": "1.4.1 Use of color \u2014 not the only indicator"
+    },
+    {
+      "id": 481,
+      "dimension": "WCAG",
+      "title": "1.4.2 Audio control \u2014 no autoplaying audio"
+    },
+    {
+      "id": 482,
+      "dimension": "WCAG",
+      "title": "1.4.3 Contrast minimum \u2014 body 4.5:1"
+    },
+    {
+      "id": 483,
+      "dimension": "WCAG",
+      "title": "1.4.4 Resize text \u2014 200 percent zoom without loss"
+    },
+    {
+      "id": 484,
+      "dimension": "WCAG",
+      "title": "1.4.5 Images of text \u2014 UI type is live text"
+    },
+    {
+      "id": 485,
+      "dimension": "WCAG",
+      "title": "1.4.10 Reflow \u2014 320 px without two-axis scroll"
+    },
+    {
+      "id": 486,
+      "dimension": "WCAG",
+      "title": "1.4.11 Non-text contrast \u2014 icons and focus 3:1"
+    },
+    {
+      "id": 487,
+      "dimension": "WCAG",
+      "title": "1.4.12 Text spacing \u2014 no clipping when spacing CSS is applied"
+    },
+    {
+      "id": 488,
+      "dimension": "WCAG",
+      "title": "1.4.13 Content on hover or focus \u2014 mega menu hoverable and dismissable"
+    },
+    {
+      "id": 489,
+      "dimension": "WCAG",
+      "title": "2.1.1 Keyboard \u2014 all actions reachable"
+    },
+    {
+      "id": 490,
+      "dimension": "WCAG",
+      "title": "2.1.2 No keyboard trap except intentional dialog"
+    },
+    {
+      "id": 491,
+      "dimension": "WCAG",
+      "title": "2.1.4 Character key shortcuts \u2014 none that block typing"
+    },
+    {
+      "id": 492,
+      "dimension": "WCAG",
+      "title": "2.2.1 Timing adjustable \u2014 no surprise timeouts on the menu"
+    },
+    {
+      "id": 493,
+      "dimension": "WCAG",
+      "title": "2.2.2 Pause stop hide \u2014 idle animations can stop"
+    },
+    {
+      "id": 494,
+      "dimension": "WCAG",
+      "title": "2.3.1 Three flashes \u2014 no flashing panels"
+    },
+    {
+      "id": 495,
+      "dimension": "WCAG",
+      "title": "2.4.1 Bypass blocks \u2014 skip link"
+    },
+    {
+      "id": 496,
+      "dimension": "WCAG",
+      "title": "2.4.2 Page titled \u2014 unique titles"
+    },
+    {
+      "id": 497,
+      "dimension": "WCAG",
+      "title": "2.4.3 Focus order \u2014 logical"
+    },
+    {
+      "id": 498,
+      "dimension": "WCAG",
+      "title": "2.4.4 Link purpose in context"
+    },
+    {
+      "id": 499,
+      "dimension": "WCAG",
+      "title": "2.4.5 Multiple ways \u2014 nav plus footer plus 404 list"
+    },
+    {
+      "id": 500,
+      "dimension": "WCAG",
+      "title": "2.4.6 Headings and labels describe topic"
+    },
+    {
+      "id": 501,
+      "dimension": "WCAG",
+      "title": "2.4.7 Focus visible"
+    },
+    {
+      "id": 502,
+      "dimension": "WCAG",
+      "title": "2.4.11 Focus not obscured \u2014 sticky header does not bury focus"
+    },
+    {
+      "id": 503,
+      "dimension": "WCAG",
+      "title": "2.5.1 Pointer gestures \u2014 tap works without a path gesture"
+    },
+    {
+      "id": 504,
+      "dimension": "WCAG",
+      "title": "2.5.2 Pointer cancellation \u2014 click on up"
+    },
+    {
+      "id": 505,
+      "dimension": "WCAG",
+      "title": "2.5.3 Label in name \u2014 visible label is in the accessible name"
+    },
+    {
+      "id": 506,
+      "dimension": "WCAG",
+      "title": "2.5.4 Motion actuation \u2014 shake not required"
+    },
+    {
+      "id": 507,
+      "dimension": "WCAG",
+      "title": "2.5.7 Dragging movements \u2014 drag not the only menu method"
+    },
+    {
+      "id": 508,
+      "dimension": "WCAG",
+      "title": "2.5.8 Target size minimum \u2014 24 px absolute floor, 44 px house floor"
+    },
+    {
+      "id": 509,
+      "dimension": "WCAG",
+      "title": "3.1.1 Language of page"
+    },
+    {
+      "id": 510,
+      "dimension": "WCAG",
+      "title": "3.1.2 Language of parts if mixed"
+    },
+    {
+      "id": 511,
+      "dimension": "WCAG",
+      "title": "3.2.1 On focus \u2014 focus does not open a new URL"
+    },
+    {
+      "id": 512,
+      "dimension": "WCAG",
+      "title": "3.2.2 On input \u2014 typing does not submit by surprise"
+    },
+    {
+      "id": 513,
+      "dimension": "WCAG",
+      "title": "3.2.3 Consistent navigation \u2014 Apps order identical everywhere"
+    },
+    {
+      "id": 514,
+      "dimension": "WCAG",
+      "title": "3.2.4 Consistent identification \u2014 same icon means the same app"
+    },
+    {
+      "id": 515,
+      "dimension": "WCAG",
+      "title": "3.2.6 Consistent help \u2014 contact in the same region when present"
+    },
+    {
+      "id": 516,
+      "dimension": "WCAG",
+      "title": "3.3.1 Error identification if forms exist"
+    },
+    {
+      "id": 517,
+      "dimension": "WCAG",
+      "title": "3.3.2 Labels or instructions if forms exist"
+    },
+    {
+      "id": 518,
+      "dimension": "WCAG",
+      "title": "3.3.3 Error suggestion if forms exist"
+    },
+    {
+      "id": 519,
+      "dimension": "WCAG",
+      "title": "4.1.1 Parsing \u2014 no duplicate ids"
+    },
+    {
+      "id": 520,
+      "dimension": "WCAG",
+      "title": "4.1.2 Name role value"
+    },
+    {
+      "id": 521,
+      "dimension": "WCAG",
+      "title": "4.1.3 Status messages \u2014 menu open state available to AT"
+    }
+  ]
+}

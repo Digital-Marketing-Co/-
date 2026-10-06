@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "transcribe transcript.json",
+  "type": "object",
+  "required": ["slug", "source", "raw", "passes", "stack"],
+  "properties": {
+    "slug": { "type": "string" },
+    "source": {
+      "type": "object",
+      "required": ["path", "kind"],
+      "properties": {
+        "path": { "type": "string" },
+        "kind": { "type": "string", "enum": ["raster", "pdf", "text", "audio", "video", "url"] },
+        "width": { "type": ["integer", "null"] },
+        "height": { "type": ["integer", "null"] },
+        "bytes": { "type": ["integer", "null"] },
+        "language": { "type": "string" }
+      }
+    },
+    "raw": {
+      "type": "object",
+      "required": ["path", "lock_path", "sha256"],
+      "properties": {
+        "path": { "type": "string" },
+        "lock_path": { "type": "string" },
+        "sha256": { "type": "string" },
+        "marks": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "readable_text": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "passes": {
+      "type": "object",
+      "required": ["summary", "expand_1", "expand_2"],
+      "properties": {
+        "summary": { "type": "string" },
+        "expand_1": { "type": "string" },
+        "expand_2": { "type": "string" }
+      }
+    },
+    "stack": {
+      "type": "object",
+      "properties": {
+        "folio": { "type": ["string", "null"] },
+        "book": { "type": ["string", "null"] },
+        "ran": { "type": "boolean" }
+      }
+    }
+  }
+}

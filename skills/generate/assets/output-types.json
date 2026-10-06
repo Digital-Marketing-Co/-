@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "default_studio": "https://gnitekram.org/",
+  "default_brand_for_video": "Aether Cinema",
+  "types": [
+    {"rank": 1, "slug": "web-app", "label": "Custom web application", "use": ["product", "marketing", "studio"]},
+    {"rank": 2, "slug": "video", "label": "Cinematic video prompt pack", "use": ["marketing", "studio"], "studio": "https://gnitekram.org/"},
+    {"rank": 3, "slug": "dashboard", "label": "Interactive data app", "use": ["academic", "product"]},
+    {"rank": 4, "slug": "coffee", "label": "Landscape coffee-table album", "use": ["marketing", "academic"]},
+    {"rank": 5, "slug": "book", "label": "Illustrated chaptered book", "use": ["academic", "marketing"]},
+    {"rank": 6, "slug": "folio", "label": "WCA Ivy academic report", "use": ["academic"]},
+    {"rank": 7, "slug": "deep", "label": "Exhaustive Georgia monograph", "use": ["academic"]},
+    {"rank": 8, "slug": "deck", "label": "Presentation deck", "use": ["academic", "pitch"]},
+    {"rank": 9, "slug": "global", "label": "Country-by-country intel", "use": ["academic"]},
+    {"rank": 10, "slug": "atlas", "label": "Figure-and-gazetteer atlas", "use": ["academic"]},
+    {"rank": 11, "slug": "list", "label": "Deduplicated instance catalog", "use": ["academic"]},
+    {"rank": 12, "slug": "site", "label": "Mirrored or original site", "use": ["marketing", "product"]},
+    {"rank": 13, "slug": "still", "label": "Hero still / campaign image", "use": ["marketing", "academic"]},
+    {"rank": 14, "slug": "banner", "label": "16-9 section banner", "use": ["academic", "marketing"]},
+    {"rank": 15, "slug": "vector", "label": "Sharp SVG identity mark", "use": ["marketing", "product"]},
+    {"rank": 16, "slug": "audio", "label": "Voice, bed, or ringtone", "use": ["marketing"]},
+    {"rank": 17, "slug": "sheet", "label": "Quantitative workbook", "use": ["academic", "product"]},
+    {"rank": 18, "slug": "letter", "label": "Formal letter or proposal", "use": ["pitch"]},
+    {"rank": 19, "slug": "copy", "label": "Short marketing or academic copy", "use": ["marketing", "academic"]}
+  ]
+}

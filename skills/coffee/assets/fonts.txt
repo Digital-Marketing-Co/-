@@ -1,0 +1,7 @@
+Cover title faces used by scripts/composite_cover.py
+
+/usr/share/fonts/SlidesCarnival/google/Cinzel/static/Cinzel-Bold.ttf
+/usr/share/fonts/SlidesCarnival/google/Playfair Display/static/PlayfairDisplay-Bold.ttf
+/usr/share/fonts/SlidesCarnival/google/Cormorant Garamond/static/CormorantGaramond-Italic.ttf
+/usr/share/fonts/SlidesCarnival/google/EB Garamond/static/EBGaramond-Italic.ttf
+/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf
