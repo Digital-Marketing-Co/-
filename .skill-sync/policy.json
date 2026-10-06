@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "canonical": {
+    "repository": "Digital-Marketing-Co/-",
+    "branch": "main",
+    "skill_root": "skills",
+    "ledger": "skills/ledger/latest.md"
+  },
+  "hosts": {
+    "chatgpt": {
+      "mode": "pull-before-use-push-after-edit",
+      "read_canonical_before_invocation": true,
+      "commit_after_skill_edit": true
+    },
+    "grok": {
+      "mode": "pull-before-use-push-after-edit",
+      "read_canonical_before_invocation": true,
+      "commit_after_skill_edit": true
+    }
+  },
+  "conflict_policy": {
+    "strategy": "github-canonical-no-last-writer-wins",
+    "require_base_revision": true,
+    "preserve_full_skill_directory": true,
+    "merge_verified_newer_behavior": true,
+    "never_resolve_by_file_size_alone": true
+  },
+  "provenance": {
+    "required_fields": ["timestamp_utc", "skill", "source_host", "base_commit", "result_commit", "summary"],
+    "sources": ["chatgpt", "grok", "codex", "human", "github"]
+  }
+}
