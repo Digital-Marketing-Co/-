@@ -1,5 +1,11 @@
 # Skill drift ledger
 
+## Sync log
+
+| Date | Skill | Direction | Short hash | Change |
+|---|---|---|---|---|
+| 2026-10-06 | hilarious | grok-to-repo | 0b7bd80 | Add science-of-humor.pdf referenced by SKILL.md and omitted from the package |
+
 Captured 2026-10-06 from the live Grok skill tree versus Digital-Marketing-Co/- main d925fcd.
 
 Direction rule: larger verified local SKILL.md is treated as the newer Grok copy until a commit message says otherwise.
@@ -14,9 +20,14 @@ Direction rule: larger verified local SKILL.md is treated as the newer Grok copy
 - prompt-engineer
 - transcribe
 
+These seven packages were committed in 868e7bd. hilarious was incomplete until 0b7bd80 added references/science-of-humor.pdf.
+
 ## Only in the repo
 
 - pdf
+- skill-sync
+
+skill-sync was installed on Grok from 5691a35. pdf stays a bundled host skill and was not overwritten.
 
 ## SKILL.md hash differs (local vs repo)
 
