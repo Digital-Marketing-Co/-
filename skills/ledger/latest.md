@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-06 | skill-sync | chatgpt-to-repo | 8d176c8 | Add cross-host canonical policy, CI sync guard, and pull-before-use/push-after-edit protocol |
 | 2026-10-06 | hilarious | grok-to-repo | 0b7bd80 | Add science-of-humor.pdf referenced by SKILL.md and omitted from the package |
 
 Captured 2026-10-06 from the live Grok skill tree versus Digital-Marketing-Co/- main d925fcd.
