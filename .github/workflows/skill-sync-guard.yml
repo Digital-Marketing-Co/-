@@ -1,0 +1,77 @@
+name: Skill Sync Guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "skills/**"
+      - "AGENTS.md"
+      - "SKILL-SYNC.md"
+      - ".skill-sync/**"
+  pull_request:
+    paths:
+      - "skills/**"
+      - "AGENTS.md"
+      - "SKILL-SYNC.md"
+      - ".skill-sync/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: skill-sync-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate canonical skill tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f SKILL-SYNC.md
+          test -f AGENTS.md
+          test -f .skill-sync/policy.json
+          test -f skills/ledger/latest.md
+
+          failures=0
+          count=0
+          while IFS= read -r -d '' file; do
+            count=$((count+1))
+            dir="$(dirname "$file")"
+            if ! grep -q '^---' "$file"; then
+              echo "::warning file=$file::SKILL.md has no YAML frontmatter delimiter."
+            fi
+            if ! grep -Eq '^name:[[:space:]]*[^[:space:]]+' "$file"; then
+              echo "::error file=$file::Missing canonical frontmatter name."
+              failures=$((failures+1))
+            fi
+          done < <(find skills -mindepth 2 -maxdepth 2 -name SKILL.md -print0 | sort -z)
+
+          echo "Validated $count canonical skills."
+          test "$count" -gt 0
+          test "$failures" -eq 0
+
+      - name: Detect unledgered skill changes
+        if: github.event_name == 'push' && github.event.before != '0000000000000000000000000000000000000000'
+        shell: bash
+        run: |
+          set -euo pipefail
+          changed="$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'skills/**' || true)"
+          echo "$changed"
+          if echo "$changed" | grep -qE '^skills/[^/]+/' && ! echo "$changed" | grep -qx 'skills/ledger/latest.md'; then
+            echo "::warning::Skill files changed without updating skills/ledger/latest.md. Add provenance on the next sync commit."
+          fi
+
+      - name: Emit canonical revision
+        shell: bash
+        run: |
+          echo "canonical_repository=Digital-Marketing-Co/-"
+          echo "canonical_branch=main"
+          echo "canonical_commit=$(git rev-parse HEAD)"
