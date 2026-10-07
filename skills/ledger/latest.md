@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-07 | proceed | grok-to-repo | 9b0513c | Keep repo completion gate and append the mandatory negative gate missing from 273e757 |
 | 2026-10-07 | pdf | repo-to-hosts | 273e757 | Bundled host skill; do not overwrite. ChatGPT and Grok use the repo copy only as a reference, Grok keeps the host pdf skill |
 | 2026-10-07 | proceed | repo-to-hosts | 273e757 | Repo SKILL.md is larger and keeps the completion gate; ChatGPT and Grok should use the repo copy |
 | 2026-10-07 | wca-ivy-biblio | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
