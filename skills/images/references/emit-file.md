@@ -6,7 +6,7 @@
 
 The public object is the rebuilt document, not a chat carousel.
 
-- PDF sources → one PDF under `./artifacts/` using the parent series filename (`…-wca-folio.pdf`, `…-wca-atlas.pdf`, the /deep slug, or the source stem plus nothing invented).
+- PDF sources → one PDF under `/home/workdir/artifacts/` using the parent series filename (`…-wca-folio.pdf`, `…-wca-atlas.pdf`, the /deep slug, or the source stem plus nothing invented).
 - DOCX / PPTX sources → restamp through those skills and emit that file.
 - Chat-only `Render Generated Image` stills with no file on disk are a defect.
 
@@ -28,8 +28,8 @@ Do not leave the only copy under `artifacts/imagine_images/`. Do not treat a str
 3. Rebuild
 
 ```bash
-python3 @images/scripts/rebuild_document.py \
-  ./artifacts/<slug>
+python3 /home/workdir/.grok/skills/images/scripts/rebuild_document.py \
+  /home/workdir/artifacts/<slug>
 ```
 
 That script runs `build_folio_pdf.py`, `build_deep_pdf.py`, `build_atlas_pdf.py`, `build_book_pdf.py`, or `build_list_pdf.py` when the matching JSON exists.
@@ -37,9 +37,9 @@ That script runs `build_folio_pdf.py`, `build_deep_pdf.py`, `build_atlas_pdf.py`
 4. Naked PDF with no JSON → write `<slug>/stamp-manifest.json` and run
 
 ```bash
-python3 @images/scripts/rebuild_document.py \
+python3 /home/workdir/.grok/skills/images/scripts/rebuild_document.py \
   /path/to/source.pdf \
-  --manifest ./artifacts/<slug>/stamp-manifest.json
+  --manifest /home/workdir/artifacts/<slug>/stamp-manifest.json
 ```
 
 `stamp_images_into_pdf.py` inserts one full-bleed letter page (`x = 0`, 16-9 height from page width) immediately after each `after_page`. Heading pages stay intact. The plate opens the next page.
@@ -49,7 +49,7 @@ python3 @images/scripts/rebuild_document.py \
 ```json
 {
   "source_pdf": "/home/workdir/attachments/source.pdf",
-  "output_pdf": "./artifacts/<slug>/<stem>.pdf",
+  "output_pdf": "/home/workdir/artifacts/<slug>/<stem>.pdf",
   "items": [
     {
       "kind": "banner",

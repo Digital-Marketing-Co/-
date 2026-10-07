@@ -24,20 +24,33 @@ Build the legend from identifiers that are not plain ASCII Latin.
 | α | alpha (lowercase) |
 | β | beta (lowercase) |
 | γ | gamma (lowercase) |
+| Γ | gamma (capital) |
 | δ | delta (lowercase) |
 | Δ | delta (capital) |
 | ε | epsilon (lowercase) |
+| ζ | zeta (lowercase) |
+| η | eta (lowercase) |
 | θ | theta (lowercase) |
+| κ | kappa (lowercase) |
 | λ | lambda (lowercase) |
+| Λ | lambda (capital) |
 | μ | mu (lowercase) |
+| ξ | xi (lowercase) |
 | π | pi (lowercase) |
+| ρ | rho (lowercase) |
 | σ | sigma (lowercase) |
 | Σ | sigma (capital) |
 | τ | tau (lowercase) |
 | φ | phi (lowercase) |
+| Φ | phi (capital) |
+| χ | chi (lowercase) |
+| ψ | psi (lowercase) |
 | ω | omega (lowercase) |
+| Ω | omega (capital) |
 | ℓ | script l |
 | ħ | h-bar |
+| ∂ | partial |
+| ∇ | nabla |
 
 Spoken form states the role on this plate, not a dictionary gloss of the letter.
 

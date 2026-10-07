@@ -149,8 +149,35 @@ atlas-,symbol,prefix,(omit),prompt concatenations,Trailing-hyphen stem
 _atlas,symbol,suffix,(omit),prompt concatenations,Snake prefix
 atlas_,symbol,prefix,(omit),prompt concatenations,Snake stem
 .atlas,symbol,suffix,(omit),prompt concatenations,Extension-like stem
+enhance,word,exact,raise,"prompts, captions, delivered prose",Wikipedia Signs of AI writing; Kobak excess cluster
+boasts,word,exact,has,"prompts, captions, delivered prose",AI boast-as-has
+interplay,word,exact,relation,"prompts, captions, delivered prose",AI vocabulary
+intricate,word,exact,detailed,"prompts, captions, delivered prose",AI vocabulary
+meticulous,word,exact,careful,"prompts, captions, delivered prose",AI vocabulary
+enduring,word,exact,lasting,"prompts, captions, delivered prose",AI vocabulary
+emphasizing,word,exact,naming,"prompts, captions, delivered prose",AI vocabulary
+facilitate,word,exact,allow,"prompts, captions, delivered prose",AI vocabulary
+optimize,word,exact,improve,"prompts, captions, delivered prose",AI vocabulary
+cultivate,word,exact,build,"prompts, captions, delivered prose",AI vocabulary
+impactful,word,exact,strong,"prompts, captions, delivered prose",AI vocabulary
+bespoke,word,exact,custom,"prompts, captions, delivered prose",AI vocabulary
+integral,word,exact,part of,"prompts, captions, delivered prose",AI vocabulary
+endeavor,word,exact,attempt,"prompts, captions, delivered prose",AI vocabulary
+expedite,word,exact,speed,"prompts, captions, delivered prose",AI vocabulary
+tapestry,word,exact,atlas,"prompts, captions, delivered prose",Contextual substitute is atlas
+landscape,word,exact,atlas,"prompts, captions, delivered prose",Figurative landscape swaps to atlas
+realm,word,exact,atlas,"prompts, captions, delivered prose",Contextual substitute is atlas
+mosaic,word,exact,plate,"prompts, captions, delivered prose",Contextual substitute is plate
+symphony,word,exact,gazette,"prompts, captions, delivered prose",Contextual substitute is gazette
+kaleidoscope,word,exact,atlas,"prompts, captions, delivered prose",Contextual substitute is atlas
+labyrinth,word,exact,gazette,"prompts, captions, delivered prose",Contextual substitute is gazette
+treasure trove,phrase,exact,plate,"prompts, captions, delivered prose",Contextual substitute is plate
+focal point,phrase,exact,plate,"prompts, captions, delivered prose",Contextual substitute is plate
+oaicite,token,exact,(omit),delivered prose,Chat paste artifact
+contentReference,token,exact,(omit),delivered prose,Chat paste artifact
+turn0search,token,exact,(omit),delivered prose,Chat paste artifact
 
 # source,Web Development Corporation negative-keyword array
-# updated,2026-09-17
-# rule,Never copy token into a concatenated generation prompt. Invocation flags that collide with a token stay slash-prefixed and never enter the prompt body.
+# updated,2026-10-06
+# rule,Never copy a banned AI-tell into a concatenated generation prompt. When delivered prose must replace a figurative AI noun, use atlas, gazette, or plate.
 # atlas_variants_added,87

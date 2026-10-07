@@ -1,6 +1,6 @@
 # Beauty and uniqueness lock
 
-See also `@visual-system/references/beauty-lock.md`.
+See also `/home/workdir/.grok/skills/visual-system/references/beauty-lock.md`.
 
 Every banner and mid-chapter plate in a /book run is a fresh house generate at 3300 x 1856. Editorial stock-photo sharpness. Futuristic cinematic still of the objects named in that chapter banner slot or that 500-word window. No reused path, bytes, crop, or near-duplicate.
 

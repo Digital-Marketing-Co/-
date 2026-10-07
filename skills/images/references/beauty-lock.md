@@ -1,6 +1,6 @@
 # Beauty and uniqueness lock
 
-See `@visual-system/references/beauty-lock.md` and `prompt-engineering.md`.
+See `/home/workdir/.grok/skills/visual-system/references/beauty-lock.md` and `prompt-engineering.md`.
 
 Section banners lock to the section. Mid-section stills lock to the surrounding 500-word window. Fresh house generate each slot. Awe-inspiring, stunningly perfected, futuristic cinematic still. No reused path, bytes, crop, recolor, or near-duplicate perceptual hash.
 

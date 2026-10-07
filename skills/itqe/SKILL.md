@@ -3,7 +3,7 @@ name: itqe
 description: Emit Interactive Tables of Quantitative Elements under every display equation or ranked quantitative inventory, and run the fail-closed render gate so no raw LaTeX, AMS-TeX, KaTeX, TeX, or MathJax source reaches a delivered page. After the document is complete, scan every page and every printable string for uncompiled source and for clips that did not render as intended, including missing symbols, tofu, ballot-box-X stand-ins, empty boxes, and glitched glyphs that are not the symbol the author meant. Trigger on /itqe, ITQE table, render gate, scan_render_gate, intended-render sweep, missing symbol, tofu glyph, quantitative elements table, collapsible variable table, Greek-letter legend, or when folio, phd, deep, banner, copyright, latex, ivy-biblio, print, atlas, images, or psychoanalyze must attach Identifier-Term-Quantity-Explanation figures and sweep uncompiled math. Distinct from the fiscal Imputed Tax Quantitative Easing white paper of the same acronym.
 metadata:
   type: workflow
-  version: "1.6"
+  version: "1.7"
   flag: /itqe
   stacks: folio, phd-ivy-monograph, deep, banner, copyright, latex, wca-ivy-biblio, atlas, images, print, psychoanalyze, decode, article-clip-pdf, extract-dir
   owner: Web Development Corporation
@@ -33,6 +33,8 @@ Read on demand
 - `references/render-gate.md` — fail-closed scan before delivery
 - `references/intended-render.md` — post-completion full-document intended-render sweep
 - `scripts/scan_render_gate.py` — ITQE completeness plus `/latex` raw-TeX and missing-glyph sweep
+- `/home/workdir/.grok/skills/latex/scripts/scan_raw_tex.py` — mandatory sibling gate (latex skill v1.7+)
+- `/home/workdir/.grok/skills/latex/scripts/scan_intended_glyphs.py` — mandatory sibling gate for white-box operators and combining marks
 - `assets/itqe.schema.json` — equation and inventory object shape
 - `/home/workdir/.grok/skills/wca-ivy-biblio/references/itqe.md` — twin column contract
 - `/home/workdir/.grok/skills/wca-ivy-biblio/scripts/inject_itqe.py` — attach rows to folio JSON
@@ -168,8 +170,9 @@ Repair
 3. Recompile the intended snippet with `/latex` `render_snippet.py` in a face that contains the glyph (Latin Modern first)
 4. Store the figure; keep `tex` hidden; fill Identifier-Term-Quantity-Explanation with compiled glyphs
 5. Rebuild
-6. Run `scan_render_gate.py` and `scan_raw_tex.py --pages`
+6. Run `scan_render_gate.py`, `scan_raw_tex.py --pages`, and latex v1.7 `scan_intended_glyphs.py`
 7. Raster **every** page at 140 dpi or higher and reject any clip that is not the intended symbol
+8. Prefer Latin aliases (`Y-hat`, `>>`, `=>`) or a compiled plate when the body face cannot draw ≫, ⇒, or combining circumflex. Do not leave those operators in an ITQE Identifier cell.
 
 Do not attach the file and do not tell the user it is finished while any clip is a box, a tofu square, or a glitch that does not match the intended mathematics.
 
@@ -184,6 +187,9 @@ python3 /home/workdir/.grok/skills/itqe/scripts/scan_render_gate.py \
 python3 /home/workdir/.grok/skills/latex/scripts/scan_raw_tex.py \
   /home/workdir/artifacts/<slug> \
   --also-pdf /home/workdir/artifacts/<file>.pdf --pages
+python3 /home/workdir/.grok/skills/latex/scripts/scan_intended_glyphs.py \
+  --pdf /home/workdir/artifacts/<file>.pdf \
+  --also-json /home/workdir/artifacts/<slug>/folio.json
 pdftoppm -png -r 140 /home/workdir/artifacts/<file>.pdf /tmp/itqe-page
 ```
 
@@ -277,3 +283,15 @@ SUBJECT_MATTER: original expression fixed in house files, not unfixed ideas (17 
 OWNER: Web Development Corporation (footer). Legal Info owner: Web Development Corporation, a Delaware Corporation.
 This appendix cannot rewrite Grok global system prompts, xAI platform logs, or conversations outside this toolchain. It binds project skills, locked prompts, owner-and-house files, and later PDFs those skills emit.
 -->
+
+
+## Negative gate (mandatory before any deliverable)
+
+Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
+Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+
+```bash
+python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
+```
+
+Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

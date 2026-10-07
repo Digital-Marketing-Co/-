@@ -35,4 +35,4 @@ Generate at or above the page-width pixel floor (2550 px wide at letter, prefer 
 
 ## House link
 
-Visible anchor Digital Marketing Company. Target https://digitalmarketingco.org. Plain-text DigitalMarketingCo.org. Anchor text equals title attribute.
+Do not print a house-marks prose sentence. `/copyright` stamps two centered three-dimensional buttons on every page: Digital Marketing Co. (https://digitalmarketingco.org) and Web Development Corporation (https://WebDevelopment.tv). Title text equals the visible name. Links open in a new window.

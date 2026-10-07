@@ -4,11 +4,12 @@
 
 Stack order when several flags appear in one turn
 
-1. Draft or locate the document (`/list`, `/deep`, `/atlas`, `/folio`).
-2. `/banner` writes one figure per section and one figure per subsection.
-3. `/images` inventories remaining word windows and writes 500-word figures at max sharp size.
-4. Rebuild through the document's own builder.
+1. Draft or locate the document (`/list`, `/deep`, `/atlas`, `/folio`, `/book`, `/ispy`).
+2. `/banner` writes one 16-9 figure per section and one per subsection, then runs `apply_tb_alpha_blend.py`.
+3. `/images` inventories remaining word windows and writes 500-word 16-9 figures with the same top-bottom alpha ramp.
+4. Rebuild through `scripts/rebuild_document.py` (parent JSON builder, or `stamp-manifest.json` on a naked PDF). Chat stills are not delivery.
 5. `/copyright` restamps the living footer if that flag is present.
+6. Hand the user the restamped file path.
 
 Do not use `/images` for an author harvest (`/corpus`) or for a website mirror (`/copysite`). Do not treat stock search hits as section evidence. NIH or journal stills may inform a prompt. The published file is a generated reconstruction and takes a Chicago caption.
 

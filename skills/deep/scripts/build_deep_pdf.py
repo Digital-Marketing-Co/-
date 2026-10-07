@@ -23,12 +23,15 @@ from reportlab.platypus import (
     Flowable,
     Frame,
     HRFlowable,
+    Image,
     KeepTogether,
     NextPageTemplate,
     PageBreak,
     PageTemplate,
     Paragraph,
     Spacer,
+    Table,
+    TableStyle,
 )
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]
@@ -87,6 +90,8 @@ EMOJI_RE = re.compile(
 
 def register_fonts() -> None:
     font_dir = SKILL_ROOT / "assets" / "fonts"
+    pdfmetrics.registerFont(TTFont("ITQEDejaVu", "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf"))
+    pdfmetrics.registerFont(TTFont("ITQEDejaVuBold", "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"))
     pdfmetrics.registerFont(TTFont(FONT_REGULAR, str(font_dir / "Gelasio-Regular.ttf")))
     pdfmetrics.registerFont(TTFont(FONT_BOLD, str(font_dir / "Gelasio-Bold.ttf")))
     pdfmetrics.registerFont(TTFont(FONT_ITALIC, str(font_dir / "Gelasio-Italic.ttf")))
@@ -278,6 +283,32 @@ def make_styles() -> dict[str, ParagraphStyle]:
             spaceBefore=4,
             spaceAfter=14,
         ),
+        "itqe_kicker": ParagraphStyle(
+            "ItqeKicker",
+            fontName="ITQEDejaVu",
+            fontSize=NOTE_PT,
+            leading=NOTE_LEADING,
+            alignment=TA_LEFT,
+            textColor=MUTED,
+            spaceBefore=8,
+            spaceAfter=2,
+        ),
+        "itqe_head": ParagraphStyle(
+            "ItqeHead",
+            fontName="ITQEDejaVuBold",
+            fontSize=NOTE_PT,
+            leading=NOTE_LEADING,
+            alignment=TA_LEFT,
+            textColor=INK,
+        ),
+        "itqe_cell": ParagraphStyle(
+            "ItqeCell",
+            fontName="ITQEDejaVu",
+            fontSize=NOTE_PT,
+            leading=NOTE_LEADING,
+            alignment=TA_LEFT,
+            textColor=INK,
+        ),
         "note": ParagraphStyle(
             "Note",
             fontName=FONT_REGULAR,
@@ -411,20 +442,6 @@ class DeepDoc(BaseDocTemplate):
         y = 0.82 * inch
         canvas.line(MARGIN_LEFT_IN * inch, y + 12, letter[0] - MARGIN_RIGHT_IN * inch, y + 12)
         canvas.setFillColor(MUTED)
-        canvas.setFont(FONT_REGULAR, FOOTER_PT)
-        anchor = self.house.get("anchor", "Digital Marketing Company")
-        href = self.house.get("href", "https://digitalmarketingco.org")
-        canvas.drawString(MARGIN_LEFT_IN * inch, y, anchor)
-        canvas.linkURL(
-            href,
-            (
-                MARGIN_LEFT_IN * inch,
-                y - 1,
-                MARGIN_LEFT_IN * inch + 240,
-                y + FOOTER_LEADING,
-            ),
-            relative=0,
-        )
         if doc.page > 1:
             canvas.setFont(FONT_REGULAR, PAGENUM_PT)
             canvas.drawRightString(letter[0] - MARGIN_RIGHT_IN * inch, y, str(doc.page))
@@ -483,15 +500,19 @@ def load_json(path: Path) -> dict:
     data.setdefault(
         "house",
         {
-            "anchor": "Digital Marketing Company",
+            "anchor": "Digital Marketing Co.",
             "href": "https://digitalmarketingco.org",
             "domain_plain": "DigitalMarketingCo.org",
+            "wdc_anchor": "Web Development Corporation",
+            "wdc_href": "https://WebDevelopment.tv",
         },
     )
     house = data["house"]
-    house["anchor"] = "Digital Marketing Company"
-    house["href"] = "https://digitalmarketingco.org"
-    house["domain_plain"] = "DigitalMarketingCo.org"
+    house.setdefault("anchor", "Digital Marketing Co.")
+    house.setdefault("href", "https://digitalmarketingco.org")
+    house.setdefault("domain_plain", "DigitalMarketingCo.org")
+    house.setdefault("wdc_anchor", "Web Development Corporation")
+    house.setdefault("wdc_href", "https://WebDevelopment.tv")
     return data
 
 
@@ -521,6 +542,88 @@ def banner_block(sec: dict, json_dir: Path, styles: dict):
     return KeepTogether(bits)
 
 
+def flow_equation(eq: dict, json_dir: Path, styles: dict):
+    bits = []
+    plate = eq.get("plate") or eq.get("path") or ""
+    if plate:
+        path = resolve_path(plate, json_dir)
+        if path.is_file():
+            im = PILImage.open(path)
+            max_w = 6.4 * inch
+            max_h = 1.6 * inch
+            w, h = im.size
+            scale = min(max_w / w, max_h / h)
+            bits.append(Image(str(path), width=w * scale, height=h * scale))
+    cap = eq.get("caption") or ""
+    if cap:
+        bits.append(Paragraph(xml_escape(cap), styles["caption"]))
+    rows = eq.get("itqe") or []
+    if rows:
+        bits.append(Paragraph("ITQE", styles["itqe_kicker"]))
+        data = [[
+            Paragraph("Identifier", styles["itqe_head"]),
+            Paragraph("Term", styles["itqe_head"]),
+            Paragraph("Quantity", styles["itqe_head"]),
+            Paragraph("Explanation", styles["itqe_head"]),
+        ]]
+        for row in rows:
+            data.append([
+                Paragraph(xml_escape(str(row.get("identifier") or "")), styles["itqe_cell"]),
+                Paragraph(xml_escape(str(row.get("term") or "")), styles["itqe_cell"]),
+                Paragraph(xml_escape(str(row.get("quantity") or "")), styles["itqe_cell"]),
+                Paragraph(xml_escape(str(row.get("explanation") or "")), styles["itqe_cell"]),
+            ])
+        max_w = 6.55 * inch
+        table = Table(data, colWidths=[max_w * x for x in (0.16, 0.22, 0.18, 0.44)], hAlign="LEFT")
+        table.setStyle(TableStyle([
+            ("BACKGROUND", (0, 0), (-1, 0), HexColor("#EFEAE2")),
+            ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ("LEFTPADDING", (0, 0), (-1, -1), 4),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 4),
+            ("TOPPADDING", (0, 0), (-1, -1), 3),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
+            ("LINEBELOW", (0, 0), (-1, 0), 0.4, RULE),
+            ("LINEBELOW", (0, 1), (-1, -1), 0.2, RULE_SOFT),
+            ("BOX", (0, 0), (-1, -1), 0.3, RULE_SOFT),
+        ]))
+        bits.append(table)
+    legend = eq.get("legend") or []
+    if legend:
+        bits.append(Paragraph("ITQE — glyphs", styles["itqe_kicker"]))
+        gdata = [[
+            Paragraph("Glyph", styles["itqe_head"]),
+            Paragraph("Name and case", styles["itqe_head"]),
+            Paragraph("Role in this equation", styles["itqe_head"]),
+            Paragraph("Operators on this figure", styles["itqe_head"]),
+        ]]
+        for item in legend:
+            name = str(item.get("name") or "")
+            case = str(item.get("case") or "")
+            name_case = f"{name} ({case})" if case and case.lower() not in name.lower() else name
+            gdata.append([
+                Paragraph(xml_escape(str(item.get("glyph") or "")), styles["itqe_cell"]),
+                Paragraph(xml_escape(name_case), styles["itqe_cell"]),
+                Paragraph(xml_escape(str(item.get("role") or "")), styles["itqe_cell"]),
+                Paragraph(xml_escape(str(item.get("operators") or "none on this figure")), styles["itqe_cell"]),
+            ])
+        max_w = 6.55 * inch
+        gtable = Table(gdata, colWidths=[max_w * x for x in (0.14, 0.24, 0.32, 0.30)], hAlign="LEFT")
+        gtable.setStyle(TableStyle([
+            ("BACKGROUND", (0, 0), (-1, 0), HexColor("#EFEAE2")),
+            ("VALIGN", (0, 0), (-1, -1), "TOP"),
+            ("LEFTPADDING", (0, 0), (-1, -1), 4),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 4),
+            ("TOPPADDING", (0, 0), (-1, -1), 3),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
+            ("LINEBELOW", (0, 0), (-1, 0), 0.4, RULE),
+            ("LINEBELOW", (0, 1), (-1, -1), 0.2, RULE_SOFT),
+            ("BOX", (0, 0), (-1, -1), 0.3, RULE_SOFT),
+        ]))
+        bits.append(gtable)
+        bits.append(Spacer(1, 8))
+    return KeepTogether(bits)
+
+
 def build(data: dict, json_dir: Path, out_path: Path) -> None:
     register_fonts()
     styles = make_styles()
@@ -541,11 +644,13 @@ def build(data: dict, json_dir: Path, out_path: Path) -> None:
     )
     href = house["href"]
     anchor = house["anchor"]
+    wdc_href = house.get("wdc_href") or "https://WebDevelopment.tv"
+    wdc_anchor = house.get("wdc_anchor") or "Web Development Corporation"
     story = []
 
     story.append(NextPageTemplate("cover"))
     story.append(Spacer(1, 0.6 * inch))
-    story.append(Paragraph("A /DEEP RESEARCH COMPENDIUM", styles["cover_kicker"]))
+    story.append(Paragraph("A HOUSE RESEARCH COMPENDIUM", styles["cover_kicker"]))
     story.append(
         HRFlowable(width="60%", thickness=0.6, color=RULE, spaceBefore=2, spaceAfter=16, hAlign="CENTER")
     )
@@ -554,17 +659,12 @@ def build(data: dict, json_dir: Path, out_path: Path) -> None:
         story.append(Paragraph(xml_escape(data["subtitle"]), styles["cover_sub"]))
     story.append(Spacer(1, 0.25 * inch))
     story.append(Paragraph(xml_escape(data["author"]), styles["cover_meta"]))
-    story.append(
-        Paragraph(f'<link href="{href}">{xml_escape(anchor)}</link>', styles["cover_meta"])
-    )
     story.append(Paragraph(xml_escape(data.get("date", "")), styles["cover_meta"]))
     story.append(Spacer(1, 0.35 * inch))
     story.append(
         Paragraph(
-            "Sourced Chicago notes-bibliography monograph. Section plates are generated "
-            "illustrations with one-inch alpha fades, not contemporaneous photographs. House site "
-            f'<link href="{href}">{xml_escape(anchor)}</link> '
-            f'({xml_escape(house["domain_plain"])}).',
+            "Sourced Chicago notes-bibliography monograph. Section stills are generated "
+            "illustrations with one-inch alpha fades, not contemporaneous photographs.",
             styles["abstract"],
         )
     )
@@ -612,9 +712,20 @@ def build(data: dict, json_dir: Path, out_path: Path) -> None:
         if block:
             story.append(block)
         paras = sec.get("paragraphs") or []
-        for i, para in enumerate(paras, start=1):
-            style = styles["body_first"] if i == 1 else styles["body"]
-            story.append(CitedParagraph(inject_notes(para), style, cited=extract_note_ns(para)))
+        string_i = 0
+        for para in paras:
+            if isinstance(para, dict) and (para.get("type") or "").lower() == "equation":
+                story.append(flow_equation(para, json_dir, styles))
+                continue
+            if isinstance(para, dict) and isinstance(para.get("text"), str):
+                text = para["text"]
+            elif isinstance(para, str):
+                text = para
+            else:
+                continue
+            string_i += 1
+            style = styles["body_first"] if string_i == 1 else styles["body"]
+            story.append(CitedParagraph(inject_notes(text), style, cited=extract_note_ns(text)))
 
     doc.build(story)
 

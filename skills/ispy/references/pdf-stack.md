@@ -2,8 +2,8 @@
 
 After `inventory.json` and the H0/H1 catalog exist, compile one public letter-size PDF. Do not emit four separate public books. One work folder. One deliverable PDF.
 
-Work folder stays `./artifacts/ispy-<slug>/`.
-Public PDF is `./artifacts/ispy-<slug>/<Title_Slug>.pdf`.
+Work folder stays `/home/workdir/artifacts/ispy-<slug>/`.
+Public PDF is `/home/workdir/artifacts/ispy-<slug>/<Title_Slug>.pdf`.
 
 ## Seed
 

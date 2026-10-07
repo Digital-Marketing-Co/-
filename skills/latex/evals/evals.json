@@ -1,0 +1,28 @@
+{
+  "skill": "latex",
+  "test_cases": [
+    {
+      "name": "orphan_heading_moves",
+      "input": "Section heading sits alone at the bottom of a PDF page with the paragraph on the next page",
+      "assertions": [
+        "scan_orphan_headings.py exits 1",
+        "heading is moved to the next page with at least two lines of the following paragraph"
+      ]
+    },
+    {
+      "name": "unrendered_subscript_and_slash",
+      "input": "Visible page contains I_tot and a/b instead of compiled glyphs",
+      "assertions": [
+        "scan_unrendered_ops.py exits 1",
+        "both tokens are recompiled to a plate or Unicode before delivery"
+      ]
+    },
+    {
+      "name": "url_solidus_allowed",
+      "input": "Page contains https://digitalmarketingco.org and the prose solidus and/or, and no math source",
+      "assertions": [
+        "scan_unrendered_ops.py does not flag the URL or and/or"
+      ]
+    }
+  ]
+}

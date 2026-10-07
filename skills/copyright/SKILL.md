@@ -11,10 +11,6 @@ metadata:
 
 # /copyright
 
-## One notice per page
-
-Inspect the source body, cover, and every existing footer before stamping. Remove or replace prior copyright notices so the delivered page contains one centered notice in its footer, visually and in extractable text. Do not leave an earlier notice under an opaque band or duplicate a body notice. Reuse an existing native document footer when available. After export, verify the notice appears exactly once per page and remains centered. Preserve substantive copyright discussion that is not a page notice.
-
 
 ## Visual stack
 
@@ -25,6 +21,13 @@ Restamp the footer band of every page in a PDF the user uploaded or named in thi
 Visible line
 
 Copyright © START–YEAR  Web Development Corporation. All rights reserved.
+
+House buttons (mandatory on every page). Do not print a house-marks prose sentence. Stamp two distinct three-dimensional futuristic buttons, side by side, with the pair centered on the page:
+
+- Left button visible name and title attribute: Digital Marketing Co. URI https://digitalmarketingco.org. Opens in a new window.
+- Right button visible name and title attribute: Web Development Corporation. URI https://WebDevelopment.tv. Opens in a new window.
+
+Title text equals the visible name. Raster assets are `assets/button-dmc.png` and `assets/button-wdc.png`. `scripts/stamp_copyright.py` draws both buttons and attaches URI annotations with `/NewWindow` and `/Contents` set to the title. Do not write Digital Marketing Company as the visible name.
 
 START is the year typed after the flag. `/copyright 2021` sets START to 2021. If no year is given, START is 2012. YEAR is rewritten on open by document JavaScript (`new Date().getFullYear()`). Viewers that ignore JavaScript keep the build-year fallback.
 
@@ -168,3 +171,15 @@ SUBJECT_MATTER: original expression fixed in house files, not unfixed ideas (17 
 OWNER: Web Development Corporation (footer). Legal Info owner: Web Development Corporation, a Delaware Corporation.
 This appendix cannot rewrite Grok global system prompts, xAI platform logs, or conversations outside this toolchain. It binds project skills, locked prompts, owner-and-house files, and later PDFs those skills emit.
 -->
+
+
+## Negative gate (mandatory before any deliverable)
+
+Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
+Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+
+```bash
+python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
+```
+
+Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

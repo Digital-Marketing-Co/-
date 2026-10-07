@@ -1,35 +1,41 @@
 ---
 name: ispy
-description: Exhaustive I-Spy object inventory of an attached or referenced image. Trigger on /ispy, /I-Spy, ispy this, identify every object, window inventory, hidden-object catalog, or a request to name placement color and meaning of every object in a photo. Enhance or crop only when a label or figurine is unreadable at source resolution. Output a pane-by-pane catalog plus a fail-closed hidden-message section that does not assert a code unless a second plaintext reconstructs.
+description: Exhaustive I-Spy object inventory of an attached or referenced image, then one stacked book-iterate-deep PDF with per-element breakdown, corpus decode, 16-9 full-bleed banners and figures, WCA Ivy notes, and a living copyright footer. Trigger on /ispy, /I-Spy, ispy this, identify every object, window inventory, hidden-object catalog, or a request to name placement color and meaning of every object in a photo.
 metadata:
   type: workflow
-  version: "1.0"
+  version: "1.1"
   flag: /ispy
   owner: Web Development Corporation
+  stacks: book, iterate, deep, breakdown, decode, banner, images, wca-ivy-biblio, copyright
+  visual_stack: visual-system
 ---
 
 # /ispy
 
-Treat one attached or referenced raster as a closed visual corpus. Name every distinguishable object. Record pane or grid cell, relative placement inside the cell, dominant color, material guess, and readable text. Then test whether the arrangement could encode a second message. Do not invent objects the pixels do not support. Do not claim a hidden code unless a concrete reconstruction exists.
+Treat one attached or referenced raster as a closed visual corpus. Name every distinguishable object. Record pane or grid cell, relative placement inside the cell, dominant color, material guess, and readable text. Then test whether the arrangement could encode a second message. After the catalog exists, compile one letter-size PDF by running the stack in `references/pdf-stack.md`. Do not invent objects the pixels do not support. Do not claim a hidden code unless a concrete reconstruction exists.
 
 Work in `/home/workdir/artifacts/ispy-<slug>/`.
 
-`<skill>` = `/home/workdir/.grok/skills/ispy`
+Skill root is `/home/workdir/.grok/skills/ispy`.
 
 Read on demand
 
 - `references/inventory-schema.md` — required fields per object
 - `references/hypotheses.md` — H0 vs H1 rules for meaning and codes
+- `references/pdf-stack.md` — book, iterate, deep, breakdown, decode, banner, images, ivy, copyright
+- `references/negative-vocabulary.md` — banned generate tokens
 - `scripts/crop_grid.py` — optional pane crops from a labeled window or grid
+
+If the user only asked to edit this skill and supplied no image, stop after the skill files exist. Do not invent a scene or a book.
 
 ## When this runs
 
 - User typed `/ispy` or `ispy this`
 - User asked to identify every object, figurine, vase, sign, or detail in a photo
 - User asked what a crowded window, shrine, shelf, or still-life could mean if it were a hidden message
-- User stacked `/ispy` with `/upscale`, `/decode`, `/Q`, `/folio`, or `/deep`
+- User stacked `/ispy` with `/upscale`, `/decode`, `/Q`, `/book`, `/iterate`, `/folio`, or `/deep`
 
-If no image is present, stop and ask for one. Do not invent a scene.
+If no image is present and this is not a skill-edit turn, stop and ask for one.
 
 ## Workflow
 
@@ -50,7 +56,7 @@ Enhance or crop only when a specific failure is present
 Allowed steps, in order
 
 1. Crop the display region (window sash, shelf, table) so the catalog is not diluted by siding, roof, or shrubs.
-2. Split a regular grid (3x3 window, bookcase bays, etc.) with `scripts/crop_grid.py` or ImageMagick.
+2. Split a regular grid with `scripts/crop_grid.py` or ImageMagick.
 3. Lanczos-upscale a crop at 1.5x or 2x only when the crop is under 1200 px on the long edge and a label is still unread. Cap destination at 80 MP and 12000 px. Prefer the `/upscale` skill when the whole frame must grow.
 4. Never bake a checkerboard into RGB. Never claim new detail that interpolation invented.
 
@@ -69,77 +75,72 @@ House numbers, street context, and neighbor identity are scene facts. Do not tur
 
 ### 4. Inventory every object
 
-Walk the grid in reading order. For each distinguishable item write one record that matches `references/inventory-schema.md`.
+Walk the grid in reading order. For each distinguishable item write one record that matches `references/inventory-schema.md`. Save `inventory.json`.
 
-Minimum fields
+Minimum fields — id, pane, placement, name, category, colors, material_guess, size_rel, readable_text, confidence, notes.
 
-- `id` — stable slug (`B2-cowboy-hat`)
-- `pane` — grid cell
-- `placement` — left / center / right and front / mid / back inside the pane
-- `name` — common English name
-- `category` — figurine, vessel, textile, text-plaque, animal, religious, patriotic, plant, fixture, unknown
-- `colors` — two to four dominant colors in ordinary words
-- `material_guess` — glass, glazed ceramic, painted plaster, metal, paper, fabric, unknown
-- `size_rel` — tiny / small / medium / large relative to the pane
-- `readable_text` — exact letters if any, else empty
-- `confidence` — high / medium / low
-- `notes` — pose, facing direction, grouped companions, glare caveats
-
-Count multiples. A row of six identical choir figures is six objects plus one group note. Reflections in the glass are not extra objects unless a second physical item is visible.
-
-If an item cannot be named, keep it as `unknown-<pane>-<n>` and describe shape, color, and pose. Low confidence is allowed. Fabricated brand names are not.
+Count multiples. Reflections in the glass are not extra objects unless a second physical item is visible. If an item cannot be named, keep it as `unknown-<pane>-<n>`. Fabricated brand names are not allowed.
 
 ### 5. Group and tally
 
-After the flat list, emit
-
-- count by category
-- count by color family
-- readable text corpus (every lettered object, in reading order)
-- repeated motifs (pairs of amber discs, paired purple vases, angel clusters, hats, flags)
-- empty or near-empty cells
+After the flat list, emit count by category, count by color family, readable text corpus in reading order, repeated motifs, and empty cells.
 
 ### 6. Meaning section — two hypotheses
 
 Follow `references/hypotheses.md`.
 
-H0 — ordinary display. Collector window, religious home shrine, seasonal tableau, yard-sale glass, or I-Spy decoration for passers-by.
+H0 — ordinary display. Write it first.
 
-H1 — intentional second message. Acrostic of labels, mapped grid cipher, heraldic color code, or planted arrangement that reconstructs a second plaintext.
-
-Write both. Accept H1 only when at least two independent observations reconstruct the same second text that is not a restatement of the surface scene (for example a sign that already says GOD DID IT). Color rhyme, religious density, and a house number are not a cipher.
-
-Always include a short list of plausible ordinary readings
-
-- folk-religious window shrine
-- glass-and-figurine collection shown to the street
-- patriotic or commemorative corner
-- playful I-Spy for neighborhood walkers
+H1 — intentional second message. Accept only when at least two independent observations reconstruct the same second text that is not already printed on a card.
 
 Do not diagnose the occupant. Do not claim military, assassination, or intelligence meaning from figurines alone.
 
-### 7. Optional stacks
+### 7. Chat catalog
 
-- `/upscale` — only when a crop is still unread
-- `/decode` — only on the extracted readable-text corpus, never on imagined labels
-- `/Q` — only on integers actually printed in the frame (address, dates on plaques)
-- `/folio` or `/deep` — only when the user asked for a monograph PDF of the inventory
+Print the pane catalog and the H0/H1 section in chat so the inventory is readable before the book build finishes.
 
-Default chat deliverable is the catalog plus the H0/H1 section. Do not build a PDF unless asked.
+### 8. Stacked PDF
 
-### 8. Chat mathematics
+Follow `references/pdf-stack.md` in this order
 
-If a count, ratio, or grid index is written as a formula, render it with KaTeX and name every symbol once. Example — pane index \(p = 3(r-1)+c\) for row \(r\) and column \(c\) in a 3-column sash.
+1. `/breakdown` on every inventory name token and every readable_text word
+2. `/decode` on the readable-text corpus only
+3. `/iterate` on the catalog plus those two products
+4. `/book` chapter plan
+5. `/deep` Georgia body emit
+6. `/banner` on every body section and subsection
+7. `/images` on the 500-word cadence
+8. `/wca-ivy-biblio` first-appearance notes and ITQE tables
+9. `/copyright` living footer
+
+One public PDF. Unique rasters. 16-9 full bleed left and right. Real alpha ramps on the top and bottom only after generate. No private-person portrait in a generated banner.
+
+### 9. Chat mathematics
+
+If a count, ratio, or grid index is written as a formula, render it with KaTeX and name every symbol once.
 
 ## Anti-patterns
 
-- Do not list the shrubs and siding as display objects unless the user asked for the whole photograph.
-- Do not treat JPEG artifacts, muntin bars, or window locks as figurines.
-- Do not use a generative edit to "clarify" a face.
+- Do not list shrubs and siding as display objects unless the user asked for the whole photograph.
+- Do not treat JPEG artifacts, muntins, or window locks as figurines.
+- Do not use a generative edit to clarify a face.
 - Do not assert a hidden political or religious code from motif density.
-- Do not paste copyrighted product manuals. Name the object class instead.
-
+- Do not paste copyrighted product manuals.
+- Do not skip the PDF stack on a live `/ispy` image run.
+- Do not invent a monograph when the turn is only a skill edit.
 
 ## Negative vocabulary
 
-Load `assets/negative-keywords.csv` and `assets/negative-keywords.xlsx` before any concatenated generate prompt. Do not write figure, gazette, atlas, folio, deep, exhaustive, AI, xAI, or ChatGPT into that prompt. Slash flags `/atlas`, `/folio`, `/deep`, `/itqe` stay routing tokens only. Do not apply top or bottom fades. Print banners and figures at full opacity.
+Load `assets/negative-keywords.csv` and `assets/negative-keywords.xlsx` before any concatenated generate prompt. Slash flags stay routing tokens only. Do not write fade phrases into generate prompts. Apply top-bottom alpha with `apply_tb_alpha_blend.py` after generate.
+
+
+## Negative gate (mandatory before any deliverable)
+
+Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
+Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+
+```bash
+python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
+```
+
+Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

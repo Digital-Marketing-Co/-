@@ -2,32 +2,105 @@
 
 Case-insensitive. Match whole tokens and hyphen/underscore compounds. Also match listed multi-word phrases.
 
-Document-jargon seed (2026-09-18) plus AI-tell family (same date). Generated prose must use none of these. This file may contain them.
+AI-tell family (2026-09-18, expanded 2026-09-23), maker-attribution family, and skill-process leaks. Generated prose must use none of these. This file may contain them.
 
-## Seed terms (document jargon)
+Watermark terms are the required contextual substitutes, not bans. When a banned AI-tell noun must be replaced so the sentence still carries the claim, use atlas, gazette, or plate (and gazetteer for a place index). house and the firm name-lines may also print. Do not ban those substitutes.
 
-- house
-- houses
-- housed
-- housing
-- in-house
-- inhouse
-- house-style
-- housestyle
-- house style
-- plate
-- plates
-- plated
-- plating
-- nameplate
-- titleplate
-- title-plate
-- equation-plate
-- equation plate
-- figure-plate
-- figure plate
-- banner-plate
-- footer-plate
+## AI-tell tokens added 2026-10-06
+
+Non-duplicates from the Wikipedia Signs of AI writing vocabulary list, the Kobak excess-vocabulary cluster, and published tell inventories. Ordinary copulas and academic connectors that are not tells (is, are, thus, hence) stay off this list.
+
+- enhance
+- enhances
+- enhanced
+- enhancing
+- boast
+- boasts
+- boasted
+- boasting
+- interplay
+- intricate
+- intricately
+- meticulous
+- enduring
+- emphasize
+- emphasizes
+- emphasized
+- emphasizing
+- align with
+- aligns with
+- aligned with
+- aligning with
+- serves as
+- stands as
+- functions as
+- operates as
+- facilitate
+- facilitates
+- facilitated
+- facilitating
+- optimize
+- optimizes
+- optimized
+- optimizing
+- optimisation
+- optimization
+- cultivate
+- cultivates
+- cultivated
+- cultivating
+- impactful
+- bespoke
+- integral
+- endeavor
+- endeavors
+- endeavored
+- endeavoring
+- endeavour
+- endeavours
+- expedite
+- expedites
+- expedited
+- expediting
+- treasure trove
+- focal point
+- renowned
+- profound
+- diverse array
+- in the heart of
+- future outlook
+- challenges and legacy
+- despite these challenges
+- despite its challenges
+- you're absolutely right
+- you are absolutely right
+- certainly!
+- of course!
+- in the realm of
+- in the realm
+- it's important to note
+- it is important to note
+- important to note
+- valuable insights
+- setting the stage
+- setting the stage for
+- reflects broader
+- indelible mark
+- deeply rooted
+- key turning point
+- not only but
+- not x, but y
+- resonates with
+- resonate with
+- oaicite
+- oai_citation
+- contentreference
+- contentReference
+- turn0search
+- utm_source=chatgpt.com
+- attributableindex
+- grok_card
+- grok_render_citation_card_json
 
 ## Banned section titles
 
@@ -689,25 +762,287 @@ Never use these as a heading, running head, bookmark, TOC line, slide title, or 
 - certainly
 - indeed
 
+## More AI-tell single tokens (2026-09-23)
+
+- resonate
+- resonates
+- resonated
+- resonating
+- resonance
+- vibrant
+- vibrancy
+- curated
+- curate
+- curates
+- curating
+- curation
+- supercharge
+- supercharges
+- supercharged
+- supercharging
+- disrupt
+- disrupts
+- disrupted
+- disrupting
+- disruptive
+- disruption
+- democratize
+- democratizes
+- democratized
+- democratizing
+- catalyze
+- catalyzes
+- catalyzed
+- catalyzing
+- catalyst
+- illuminate
+- illuminates
+- illuminated
+- illuminating
+- elucidate
+- elucidates
+- elucidated
+- elucidating
+- demystify
+- demystifies
+- demystified
+- demystifying
+- uncover
+- uncovers
+- uncovered
+- uncovering
+- rethink
+- rethinks
+- rethought
+- rethinking
+- innovative
+- innovation-driven
+- ecosystem
+- ecosystems
+- siloed
+- silos
+- cornerstone
+- linchpin
+- keystone
+- bedrock
+- backbone
+- realm
+- realms
+- bustling
+- stunning
+- breathtakingly
+- invaluable
+- invaluable insights
+- comprehensive
+- holistic approach
+- end-to-end
+- data-driven
+- customer-centric
+- human-centric
+- ai-powered
+- ai-driven
+- ai-enabled
+- genai
+- gen-ai
+- generative ai
+- large language model
+- language model
+- llm
+- llms
+- chatgpt
+- openai
+- anthropic
+- claude
+- gemini
+- copilot
+- microsoft copilot
+- google bard
+- bard
+- perplexity
+- midjourney
+- stable diffusion
+
+## More AI-tell phrases (2026-09-23)
+
+- dive into
+- diving into
+- a deep look
+- join us as
+- welcome to
+- dear reader
+- without further ado
+- let that sink in
+- rest assured
+- fear not
+- the beauty of
+- what sets this apart
+- what makes this unique
+- a must-have
+- a must-read
+- ultimate guide
+- comprehensive guide
+- in this comprehensive
+- in a world where
+- in a time when
+- as technology continues
+- as ai continues
+- artificial intelligence is
+- powered by ai
+- think outside the box
+- outside the box
+- the new normal
+- in these uncertain times
+- unprecedented times
+- only scratches the surface
+- scratch the surface
+- tip of the iceberg
+- peel back the layers
+- the devil is in the details
+- hit the ground running
+- boil the ocean
+- gold standard
+- the gold standard
+- not your father's
+- not your average
+- from beginners to experts
+- all walks of life
+- take it to the next level
+- next level
+- at scale
+- scalable solutions
+- designed with you in mind
+- built with you in mind
+- allows users to
+- enables users to
+- helps you
+- the wonderful world of
+- step into the
+- now let's
+- so let's
+- as we embark
+- as we explore
+- as we journey
+- journey of
+- the journey
+- our journey
+- your journey
+
+## Maker and skill-process leaks (never in a delivered file)
+
+Do not name the model, the lab, or the skill that wrote the file. Slash flags and "this skill" sentences are process, not content.
+
+- grok
+- grok 4
+- grok-4
+- grok 4.6
+- built by grok
+- generated by grok
+- written by grok
+- drafted by grok
+- xai
+- x.ai
+- xai grok
+- built by xai
+- generated by xai
+- elon's ai
+- this skill
+- this skill wrote
+- crafted by this skill
+- generated by this skill
+- produced by this skill
+- compiled by this skill
+- used the skill
+- using the skill
+- via the skill
+- /transcribe
+- /negative
+- /folio
+- /phd
+- /deep
+- /banner
+- /images
+- /book
+- /iterate
+- /itqe
+- /latex
+- /copyright
+- /ispy
+- /list
+- /atlas
+- /coffee
+- /print
+- /vector
+- /upscale
+- /decode
+- /summarize
+- /psychoanalyze
+- /wca-ivy
+- /ivy-biblio
+- /global
+- /corpus
+- /extract_dir
+- /copysite
+- /blink
+- /ringtone
+- /breakdown
+- /format
+- /plain-jane
+- /debbie-downer
+- /q-base22
+- /visual-system
+- /prompt-start
+- /proceed
+- folio skill
+- banner skill
+- images skill
+- book skill
+- deep skill
+- transcribe skill
+- negative skill
+- copyright skill
+- latex skill
+- itqe skill
+- generated with grok
+- generated with xai
+- powered by grok
+- powered by xai
+
 ## Replacement map (default)
 
 When rewriting generated text, swap as follows unless the user quoted the token on purpose:
 
 | Blocked | Default swap |
 |---|---|
-| house / House / HOUSE (style sense) | firm / locked / standing |
-| house-style | locked style |
-| in-house | internal |
-| plate / plates (document figure sense) | figure / figures |
-| equation plate | display equation |
-| figure plate | figure |
-| title plate | title block |
-| nameplate | title block |
 | delve / delving / deep dive | look at / go into |
-| tapestry / tapestry of | mix / spread / field |
-| landscape (figurative) | field / market / setting |
+| tapestry / tapestry of / mosaic / symphony / kaleidoscope / labyrinth | atlas / gazette / plate |
+| landscape (figurative) / realm / in the realm of | atlas |
+| treasure trove / focal point / indelible mark | plate |
+| cornerstone / linchpin / bedrock (figurative) | gazette |
 | leverage | use |
 | utilize | use |
+| enhance / enhancing | raise / raising |
+| boast / boasts | has / have |
+| facilitate | allow |
+| optimize / optimization | improve / improvement |
+| cultivate | build |
+| endeavor / endeavour | attempt |
+| expedite | speed |
+| intricate / meticulously / meticulous | detailed / carefully / careful |
+| interplay | relation |
+| serves as / stands as | is |
+| align with | match |
+| impactful | strong |
+| bespoke | custom |
+| integral | part of |
+| renowned | known |
+| profound | deep |
+| diverse array | set |
+| in the heart of | in |
+| future outlook | what is next |
+| despite these challenges | even so |
+| you're absolutely right / certainly! / of course! | (drop) |
+| it's important to note / it is important to note | (drop or state the fact) |
+| oaicite / contentReference / turn0search / utm_source=chatgpt.com | (drop the paste artifact) |
 | robust | solid / strong |
 | seamless / seamlessly | smooth / smoothly |
 | cutting-edge / state-of-the-art | current / new |
@@ -725,6 +1060,14 @@ When rewriting generated text, swap as follows unless the user quoted the token 
 | unlock / unleash / harness the power | use / apply |
 | paradigm | model / pattern |
 | synergy | joint gain / combined effect |
+| grok / xai / x.ai | (drop the maker line) |
+| this skill / folio skill / slash flags | (drop the process sentence) |
+| ai-powered / generated by | written / compiled / prepared |
+| resonate | fit / match |
+| curated | chosen / selected |
+| comprehensive guide | report / account |
+| dive into | look at |
+| in a world where | given that |
 
 ## Do not block
 
@@ -733,3 +1076,7 @@ When rewriting generated text, swap as follows unless the user quoted the token 
 - Legal addresses and program names the user typed
 - Ordinary uses of common stems when they are not the listed phrase (user talking about a real physical landscape, a real mosaic artwork, a court testament, a ship embarking)
 - The words in this blocklist file itself
+- Watermark terms printed on purpose in a delivered file — house, houses, housed, housing, in-house, house-style, house style, plate, plates, atlas, gazette, gazetteer
+- Firm name-lines — Digital Marketing Company, DigitalMarketingCo.org, Web Development Corporation
+- A WCA filename token such as `wca-folio` in the file name only
+- Chat that is only managing the list or running a skill, when the user typed the flag

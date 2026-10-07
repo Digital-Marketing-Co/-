@@ -19,6 +19,8 @@ Read on demand
 
 - `references/palettes.md` — genre keys, hex roles, contrast floors
 - `references/depth.md` — volumetric prompt language and print geometry
+- `references/beauty-lock.md` — awe-inspiring generate, context lock, no duplicates
+- `references/prompt-engineering.md` — PhD prompt order, three-axis differentiation, beauty rejection list
 - `assets/palettes.json` — machine palette table
 - `scripts/pick_palette.py` — choose a genre key from topic + skill flag
 
@@ -88,3 +90,15 @@ Document emitters load this skill after their own SKILL.md and before generate o
 ## After creating or editing this skill
 
 If the user only asked to install or revise the skill, stop. Do not invent a sample monograph.
+
+
+## Negative gate (mandatory before any deliverable)
+
+Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
+Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+
+```bash
+python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
+```
+
+Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

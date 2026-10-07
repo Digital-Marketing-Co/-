@@ -1,6 +1,6 @@
 # Beauty and uniqueness lock
 
-See `@visual-system/references/beauty-lock.md` and `prompt-engineering.md`.
+See `/home/workdir/.grok/skills/visual-system/references/beauty-lock.md` and `prompt-engineering.md`.
 
 One banner per body section and per subsection. Fresh house generate. Awe-inspiring, stunningly perfected, futuristic cinematic still of objects named in that node only. Parent banner never reused for a child heading. No shared path, bytes, crop, or perceptual hash with any other banner or mid-text still in the document.
 

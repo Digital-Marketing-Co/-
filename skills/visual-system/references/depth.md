@@ -16,7 +16,7 @@ Use depth on chrome and on generated figures. Do not simulate depth by shrinking
 Append, after the named objects
 
 ```
-photoreal volumetric lighting, physically based materials, visible depth in air and surfaces, razor-sharp focus on the named objects, publication still, no caption text, no watermark, no logo, no allegory, no metaphor architecture
+futuristic cinematic still of the named objects only, awe-inspiring, stunningly perfected, absolutely beautiful, publication-grade editorial still, photoreal volumetric lighting, physically based materials, visible depth in air and surfaces, gold and violet rim light, razor-sharp focus on the named objects, 3300 by 1856 landscape, unique composition for this node, no caption text, no watermark, no logo, no allegory, no metaphor architecture
 ```
 
 Do not add neon grids, hologram UI, or floating chrome unless those objects already exist in the section text.

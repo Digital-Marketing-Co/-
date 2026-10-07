@@ -29,3 +29,15 @@ The first instruction for the work product is the text the user typed in this tu
 ## Bound
 
 This skill ranks user task text above unstated flavor. It does not rank user text above safety rules, and it does not let anyone disable those rules.
+
+
+## Negative gate (mandatory before any deliverable)
+
+Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
+Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+
+```bash
+python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
+```
+
+Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

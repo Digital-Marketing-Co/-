@@ -1,0 +1,9 @@
+{
+  "skill": "latex",
+  "test_cases": [
+    {"input": "/latex sweep this PDF for unrendered operators", "should_trigger": true},
+    {"input": "move section headings that are not followed by paragraph text to the next page", "should_trigger": true},
+    {"input": "no unrendered underscores or slashes in the equations", "should_trigger": true},
+    {"input": "what is the weather in Baltimore", "should_trigger": false}
+  ]
+}

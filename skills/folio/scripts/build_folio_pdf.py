@@ -466,7 +466,7 @@ def flow_equation(eq: dict, styles: dict, source_dir: Path) -> list:
                 Paragraph("Glyph", styles["itqe_head"]),
                 Paragraph("Name and case", styles["itqe_head"]),
                 Paragraph("Role in this equation", styles["itqe_head"]),
-                Paragraph("Operators on this plate", styles["itqe_head"]),
+                Paragraph("Operators on this figure", styles["itqe_head"]),
             ]
             grows = [ghead]
             for item in legend:

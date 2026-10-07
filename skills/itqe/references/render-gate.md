@@ -14,6 +14,10 @@ python3 /home/workdir/.grok/skills/itqe/scripts/scan_render_gate.py \
 python3 /home/workdir/.grok/skills/latex/scripts/scan_raw_tex.py \
   /home/workdir/artifacts/<slug> \
   --also-pdf /home/workdir/artifacts/<file>.pdf --pages
+
+python3 /home/workdir/.grok/skills/latex/scripts/scan_intended_glyphs.py \
+  --pdf /home/workdir/artifacts/<file>.pdf \
+  --also-json /home/workdir/artifacts/<slug>/folio.json
 ```
 
 Exit code 1 blocks delivery. Raster every PDF page after a clean scan.

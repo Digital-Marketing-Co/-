@@ -77,3 +77,15 @@ If the script exits non-zero, print the stderr and stop. Do not silently fall ba
 `/format` only changes case. If the user also stacked `/summarize`, `/folio`, `/deep`, or another house flag, apply `/format` to the quoted payload first, then hand the reformatted string to the other skill only when that other skill was explicitly requested.
 
 Do not emit a PDF, banner, or monograph for a `/format` request alone.
+
+
+## Negative gate (mandatory before any deliverable)
+
+Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
+Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+
+```bash
+python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
+```
+
+Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

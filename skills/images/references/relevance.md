@@ -9,7 +9,7 @@ Build the prompt from
 1. the section title
 2. the proper nouns, molecules, devices, and product classes actually named in that section
 3. at most one spatial or institutional setting named there
-4. the house look for banners — full-bleed, literal, photoreal or textbook-accurate, high resolution
+4. the house look for banners — full-bleed, literal, futuristic cinematic still, stunning editorial stock-photo quality, photoreal volumetric lighting
 
 Forbidden in the prompt
 
@@ -22,7 +22,7 @@ Forbidden in the prompt
 
 ## Mid-section figure prompt
 
-Build the prompt from only the 500-word window that owns the slot.
+Build the prompt from only the 500-word window that owns the slot. The plate must remain readable as that window if the caption is covered. Surrounding paragraphs before and after the slot set the named objects. A banner from the same chapter is not a substitute.
 
 If that window is about absorbed versus bottle nicotine, the figure may show two measured vessels. If that window is about a UK sublingual tablet, the figure may show a small tablet. It may not show a vape device unless that window names one.
 

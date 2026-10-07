@@ -33,9 +33,11 @@ Those files must never be copied onto the page as body type.
 2. `render_snippet.py` for every display or stubborn inline hit
 3. Embed the plate or proven Unicode; attach ITQE under every display plate
 4. `scan_raw_tex.py --pages` on the built PDF (or the draft JSON if the PDF does not exist yet)
-5. `pdftoppm` every page, not a sample of math pages
-6. Rebuild until the scan is clean and no page shows tofu, a backslash command, a ballot-box-X stand-in, or any clip that is not the intended symbol
-7. Do not deliver, attach, or declare the document finished while step 4 or step 5 still fails, or while a rastered page shows a glitched stand-in instead of the intended mathematics
-8. After the document is complete, walk every page again under the `/itqe` intended-render contract (`/home/workdir/.grok/skills/itqe/references/intended-render.md`)
+5. `scan_unrendered_ops.py` on the same PDF and draft. Fail on visible `_`, `\`, fraction `/`, `^`, and other unrendered operators or operands
+6. `scan_orphan_headings.py --pdf`. A heading with no paragraph under it moves to the next page
+7. `pdftoppm` every page, not a sample of math pages
+8. Rebuild until the scans are clean and no page shows tofu, a backslash command, an underscore subscript, a fraction solidus, an orphan heading, a ballot-box-X stand-in, or any clip that is not the intended symbol
+9. Do not deliver, attach, or declare the document finished while step 4, 5, 6, or 7 still fails, or while a rastered page shows a glitched stand-in instead of the intended mathematics
+10. After the document is complete, walk every page again under the `/itqe` intended-render contract (`/root/.grok/server-skills/itqe/references/intended-render.md`)
 
 This order is the house compile gate. `/folio`, `/phd`, `/deep`, `/print`, `/images`, `/banner`, `/itqe`, and `/ivy-biblio` inherit it. See `gate.md`.

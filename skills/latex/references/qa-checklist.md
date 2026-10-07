@@ -5,7 +5,7 @@ Run after every build, and on the draft before the build, whenever math, units, 
 ## Harvest (draft or extract)
 
 ```
-python3 /home/workdir/.grok/skills/latex/scripts/harvest_raw_tex.py <dir-or-file> --out <slug>/latex-inventory.jsonl
+python3 /root/.grok/server-skills/latex/scripts/harvest_raw_tex.py <dir-or-file> --out <slug>/latex-inventory.jsonl
 ```
 
 Every printable hit must become a plate, proven Unicode, or a fenced listing that is supposed to teach TeX. JSON `tex` keys may remain as rebuild siblings only.
@@ -13,14 +13,18 @@ Every printable hit must become a plate, proven Unicode, or a fenced listing tha
 ## Text scan (every page)
 
 ```
-python3 /home/workdir/.grok/skills/latex/scripts/scan_raw_tex.py <dir-or-file> --also-pdf <pdf> --pages
+python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py <dir-or-file> --also-pdf <pdf> --pages
+python3 /root/.grok/server-skills/latex/scripts/scan_unrendered_ops.py <dir-or-file> --also-pdf <pdf>
+python3 /root/.grok/server-skills/latex/scripts/scan_orphan_headings.py --pdf <pdf>
 ```
 
-The scanner reads each PDF page and each printable JSON string. A non-zero exit is a hard stop. Do not deliver the file. Fail the build if the scan reports
+The scanners read each PDF page and each printable JSON string. A non-zero exit is a hard stop. Do not deliver the file. Fail the build if a scan reports
 
 - U+FFFD
 - a visible `$...$` or `\[` in extracted PDF text
 - `\frac`, `\sum`, `\int`, `\mathrm`, `\times`, Greek command names, or similar source on any page
+- a visible `_`, `\`, fraction `/`, `^`, `<=`, `->`, or `*` between operands
+- a heading that is the last content line on a page
 - raw TeX inside `folio.json` / `deep.json` paragraph, title, note, or caption strings
 
 ## Raster pass

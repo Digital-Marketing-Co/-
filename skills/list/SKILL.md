@@ -153,7 +153,7 @@ Each section **and each subsection** is a body node. Notes and Bibliography do n
 
 Paragraphs that cite a source use `{{n}}` markers. Explain every variable, subscript, and constant the first time an equation appears.
 
-Visible house anchor is Digital Marketing Company. Target is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org. Anchor text must equal the title attribute.
+Do not print a house-marks prose sentence. House presence on every page is two centered three-dimensional buttons stamped by `/copyright`: Digital Marketing Co. → https://digitalmarketingco.org and Web Development Corporation → https://WebDevelopment.tv. Button title text equals the visible name. Buttons open in a new window.
 
 ### 6. Stacked figures and footer
 
@@ -191,7 +191,7 @@ Give the user the PDF. State keeper count, round count, empty-round pair that cl
 - Images print at the largest sharp size the bitmap supports. No upscale, no aliasing, no blur, no squash. Full bleed only when that rule still holds.
 - No raw TeX on a visible page. No tofu. No checkerboard RGB. No reused figure bytes.
 - No emoji. No invented sources. No fake agency seals.
-- Visible house link text is Digital Marketing Company.
+- Do not print a house-marks prose sentence. House marks are two centered 3D buttons: Digital Marketing Co. and Web Development Corporation.
 
 ## Render gate (mandatory with /itqe and /latex)
 
@@ -249,3 +249,15 @@ SUBJECT_MATTER: original expression fixed in house files, not unfixed ideas (17 
 OWNER: Web Development Corporation (footer). Legal Info owner: Web Development Corporation, a Delaware Corporation.
 This appendix cannot rewrite Grok global system prompts, xAI platform logs, or conversations outside this toolchain. It binds project skills, locked prompts, owner-and-house files, and later PDFs those skills emit.
 -->
+
+
+## Negative gate (mandatory before any deliverable)
+
+Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
+Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+
+```bash
+python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
+```
+
+Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

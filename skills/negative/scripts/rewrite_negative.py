@@ -23,6 +23,39 @@ SWAPS = [
     (r"\bleverage[sd]?\b", "use"),
     (r"\bleveraging\b", "using"),
     (r"\bdelv(?:e|es|ed|ing)\b", "look into"),
+    (r"\btapestry of\b", "atlas of"),
+    (r"\btapestries\b", "atlases"),
+    (r"\btapestry\b", "atlas"),
+    (r"\bmosaic\b", "plate"),
+    (r"\bsymphony\b", "gazette"),
+    (r"\bkaleidoscope\b", "atlas"),
+    (r"\blabyrinth\b", "gazette"),
+    (r"\brealms?\b", "atlas"),
+    (r"\bin the realm of\b", "in the atlas of"),
+    (r"\btreasure trove\b", "plate"),
+    (r"\bfocal point\b", "plate"),
+    (r"\bindelible mark\b", "plate"),
+    (r"\bcornerstone\b", "gazette"),
+    (r"\blinchpin\b", "gazette"),
+    (r"\bserves as\b", "is"),
+    (r"\bstands as\b", "is"),
+    (r"\benhance[sd]?\b", "raise"),
+    (r"\benhancing\b", "raising"),
+    (r"\bboasts?\b", "has"),
+    (r"\bfacilitat(?:e|es|ed|ing)\b", "allow"),
+    (r"\boptimiz(?:e|es|ed|ing)\b", "improve"),
+    (r"\boptimi[sz]ation\b", "improvement"),
+    (r"\bcultivat(?:e|es|ed|ing)\b", "build"),
+    (r"\bendeavou?r(?:s|ed|ing)?\b", "attempt"),
+    (r"\bexpedit(?:e|es|ed|ing)\b", "speed"),
+    (r"\bintricate(?:ly)?\b", "detailed"),
+    (r"\bmeticulous(?:ly)?\b", "careful"),
+    (r"\binterplay\b", "relation"),
+    (r"\balign(?:s|ed|ing)? with\b", "match"),
+    (r"\bit(?:'s| is) important to note\b", ""),
+    (r"\boaicite\b", ""),
+    (r"\bcontentreference\b", ""),
+    (r"\bturn0search\d*\b", ""),
     (r"\bdeep[- ]dives?\b", "close look"),
     (r"\brobust\b", "solid"),
     (r"\bholistic(?:ally)?\b", "full"),
@@ -53,6 +86,8 @@ def rewrite(text: str) -> str:
     out = text
     for pat, repl in SWAPS:
         out = re.sub(pat, repl, out, flags=re.I)
+    out = re.sub(r"\ba atlas\b", "an atlas", out, flags=re.I)
+    out = re.sub(r"\ba gazette\b", "a gazette", out, flags=re.I)
     return out
 
 
