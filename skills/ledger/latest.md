@@ -4,8 +4,47 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-07 | pdf | repo-to-hosts | 273e757 | Bundled host skill; do not overwrite. ChatGPT and Grok use the repo copy only as a reference, Grok keeps the host pdf skill |
+| 2026-10-07 | proceed | repo-to-hosts | 273e757 | Repo SKILL.md is larger and keeps the completion gate; ChatGPT and Grok should use the repo copy |
+| 2026-10-07 | wca-ivy-biblio | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | visual-system | grok-to-repo | 273e757 | Expand depth reference and append mandatory negative gate |
+| 2026-10-07 | vector | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | upscale | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | summarize | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | ringtone | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | q-base22 | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | psychoanalyze | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | prompt-start | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | print | grok-to-repo | 273e757 | Append mandatory negative gate and refresh OFL notice lines |
+| 2026-10-07 | plain-jane | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | phd-ivy-monograph | grok-to-repo | 273e757 | Append mandatory negative gate and refresh OFL notice lines |
+| 2026-10-07 | negative | grok-to-repo | 273e757 | Add 2026-10-06 AI-tell tokens, rewrite map, and changelog |
+| 2026-10-07 | list | grok-to-repo | 273e757 | Append negative gate and emit-handoff note |
+| 2026-10-07 | latex | grok-to-repo | 273e757 | Add unrendered-op, orphan-heading, and file-inflation sweep scripts |
+| 2026-10-07 | itqe | grok-to-repo | 273e757 | Expand render-gate and column references; append negative gate |
+| 2026-10-07 | iterate | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | ispy | grok-to-repo | 273e757 | Tighten inventory fields and append negative gate |
+| 2026-10-07 | images | grok-to-repo | 273e757 | Expand uniqueness, relevance, handoff, and audit script; append negative gate |
+| 2026-10-07 | global | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | format | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | folio | grok-to-repo | 273e757 | Append mandatory negative gate and refresh OFL notice lines |
+| 2026-10-07 | extract-dir | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | deep | grok-to-repo | 273e757 | Append negative gate and ITQE font and table builder updates |
+| 2026-10-07 | decode | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | debbie-downer | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | corpus | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | copysite | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | copyright | grok-to-repo | 273e757 | Append negative gate; leave repo stamp script in place |
+| 2026-10-07 | breakdown | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | book | grok-to-repo | 273e757 | Restate image non-repetition rules and append negative gate |
+| 2026-10-07 | blink | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | banner | grok-to-repo | 273e757 | Bump to 16:9 restamp banners with top-bottom alpha ramp; keep repo host resolver |
+| 2026-10-07 | atlas | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
+| 2026-10-07 | article-clip-pdf | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
 | 2026-10-06 | skill-sync | chatgpt-to-repo | 8d176c8 | Add cross-host canonical policy, CI sync guard, and pull-before-use/push-after-edit protocol |
 | 2026-10-06 | hilarious | grok-to-repo | 0b7bd80 | Add science-of-humor.pdf referenced by SKILL.md and omitted from the package |
+
+Captured 2026-10-07 weekday gather. Direction from the 2026-10-06 ledger and commit time, not hash alone. Larger verified Grok SKILL.md was pushed. Repo-newer proceed stays. Bundled pdf was not overwritten. Binaries over 200KB and __pycache__ skipped. Repo-only agents/openai.yaml, icons, and workflow files were not deleted.
 
 Captured 2026-10-06 from the live Grok skill tree versus Digital-Marketing-Co/- main d925fcd.
 
