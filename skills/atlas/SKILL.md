@@ -225,3 +225,14 @@ Exit 1 blocks delivery. Rewrite every hit with the replacement map so the senten
 ## House interop
 
 Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
+
+
+## Final gate
+
+Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
+
+1. Read the blocklist at skills/negative/references/blocklist.md.
+2. Extract the visible text of the deliverable.
+3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
+5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

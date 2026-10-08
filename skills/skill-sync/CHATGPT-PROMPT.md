@@ -13,3 +13,8 @@ Before using or editing any user-maintained skill:
 7. Built-in/platform skills that cannot be installed from this repository remain host-managed; use repository copies only as task guidance where platform rules permit.
 
 Preferred lifecycle: PULL -> COMPARE -> MERGE -> VALIDATE -> COMMIT -> LEDGER -> VERIFY -> USE.
+
+
+## Negative word ban
+
+Every project instruction and every skill output must refuse the banned tokens in skills/negative/references/blocklist.md. Run /negative as the last step of every skill, before chat, a file, a caption, a filename, or alt text is delivered. Exit 1 blocks delivery. Rewrite hits and re-scan until CLEAN. Verbatim user source and the blocklist file itself are the only carve-outs. Bundled host skills docx, pdf, xlsx, pptx, and ffmpeg stay on the host.

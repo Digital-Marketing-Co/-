@@ -27,3 +27,8 @@ Shared by every skill in this tree. Read this file before a document, deck, page
 - Headings keep with the following paragraph. Orphan headings move to the next page.
 - Sweep the negative blocklist before delivery. Fail closed on a hit.
 - Verify the finished file opens and the house link is present on academic and print outputs.
+
+
+## Negative word ban
+
+Every project instruction and every skill output must refuse the banned tokens in skills/negative/references/blocklist.md. Run /negative as the last step of every skill, before chat, a file, a caption, a filename, or alt text is delivered. Exit 1 blocks delivery. Rewrite hits and re-scan until CLEAN. Verbatim user source and the blocklist file itself are the only carve-outs. Bundled host skills docx, pdf, xlsx, pptx, and ffmpeg stay on the host.

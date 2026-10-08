@@ -46,3 +46,8 @@ Optimal path:
 ## Installer alias
 
 Digital-Marketing-Co/agent-skills is the private installer name for hosts that expect an agent-skills repository. This hyphen repository remains the corpus the user named. When the two diverge, this repository wins until a commit copies the same tree into agent-skills.
+
+
+## Negative word ban
+
+Every project instruction and every skill output must refuse the banned tokens in skills/negative/references/blocklist.md. Run /negative as the last step of every skill, before chat, a file, a caption, a filename, or alt text is delivered. Exit 1 blocks delivery. Rewrite hits and re-scan until CLEAN. Verbatim user source and the blocklist file itself are the only carve-outs. Bundled host skills docx, pdf, xlsx, pptx, and ffmpeg stay on the host.

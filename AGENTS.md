@@ -34,3 +34,8 @@ These are repository scoped instructions. This file does not modify ChatGPT acco
 ## Skill auto-sync
 
 Follow SKILL-SYNC.md. On a skill edit, commit the skill directory to main and prepend a row in skills/ledger/latest.md. Grok and ChatGPT both read that ledger before using a cached skill.
+
+
+## Negative word ban
+
+Every project instruction and every skill output must refuse the banned tokens in skills/negative/references/blocklist.md. Run /negative as the last step of every skill, before chat, a file, a caption, a filename, or alt text is delivered. Exit 1 blocks delivery. Rewrite hits and re-scan until CLEAN. Verbatim user source and the blocklist file itself are the only carve-outs. Bundled host skills docx, pdf, xlsx, pptx, and ffmpeg stay on the host.
