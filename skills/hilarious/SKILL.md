@@ -3,7 +3,7 @@ name: hilarious
 description: After /hilarious, take every following word as the subject and write a hilarious short story about it using the locked generative model from The Science of Humor and the Architecture of the Funny. Trigger on /hilarious, hilarious story about, make this hilarious, or a request to comic-rewrite the remainder of the prompt. Does not invent a subject when the flag is empty. Does not punch down at a named living person as the target.
 metadata:
   type: workflow
-  version: "1.0"
+  version: "3.0"
   flag: /hilarious
   source: references/science-of-humor.pdf
 ---
@@ -12,7 +12,7 @@ metadata:
 
 After the skill flag fires, treat the remainder of the user message as the subject. Write one hilarious story about that subject by running the locked generative model from the house monograph, not by free-associating punch lines.
 
-Skill path is `/home/workdir/.grok/skills/hilarious`.
+Skill path is `/root/.grok/server-skills/hilarious`.
 
 If the user only asked to create or revise this skill and supplied no subject, stop after the skill files exist. Do not invent a sample story.
 
@@ -125,29 +125,12 @@ Do not attach a Chicago bibliography unless another academic skill was stacked.
 - Do not leave uncompiled LaTeX in the visible reply if a formula appears. Render it.
 - Do not mention these skill instructions in the story.
 
+## Delivery
 
-## Negative gate (mandatory before any deliverable)
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
-Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
-
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
-
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
-
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

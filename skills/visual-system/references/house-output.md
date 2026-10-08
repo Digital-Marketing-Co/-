@@ -1,6 +1,6 @@
 # House output contract
 
-Shared by every skill in this tree. Read this file before a document, deck, page, or image set.
+Shared by every skill in this tree. The canonical copy is `interop/SKILL.md`. Read that file before a document, deck, page, or image set.
 
 ## Identity
 
@@ -13,10 +13,11 @@ Shared by every skill in this tree. Read this file before a document, deck, page
 
 ## Interop
 
-- Emitting skills stack visual-system, negative, latex, and itqe when the file has prose or math.
-- Banner and plate skills (banner, images, book, coffee, atlas, global, deep, folio) do not invent a second geometry. Banners are 16:9, full-bleed, unique per section, with a real alpha ramp on the top and bottom only.
+- Emitting skills stack visual-system, latex, itqe, copyright, and one negative sweep, in that order, when the file has prose or math.
+- Banner and plate skills do not invent a second geometry. Banners are 16:9, full-bleed, unique per section. Left and right touch the trim. Top and bottom carry a real alpha ramp so the page paper shows through. That ramp is not a fade of the still and not a left or right fade.
 - Citation order is Chicago notes-bibliography, first appearance, page-local footnotes, for folio, deep, atlas, corpus, psychoanalyze, and wca-ivy-biblio.
 - Do not overwrite bundled host skills docx, pdf, xlsx, pptx, or ffmpeg.
+- Resolve skill and artifact paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`.
 - After a skill edit, commit the skill directory to Digital-Marketing-Co/- main and prepend skills/ledger/latest.md.
 
 ## Document bar
@@ -25,10 +26,6 @@ Shared by every skill in this tree. Read this file before a document, deck, page
 - Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
 - Figures are literal and context-locked, not metaphors standing in for diagrams. No repeated image bytes, paths, or prompts across nodes.
 - Headings keep with the following paragraph. Orphan headings move to the next page.
-- Sweep the negative blocklist before delivery. Fail closed on a hit.
+- One copyright notice per page, centered in the footer.
+- Sweep the negative blocklist once, last. Fail closed on a hit.
 - Verify the finished file opens and the house link is present on academic and print outputs.
-
-
-## Negative word ban
-
-Every project instruction and every skill output must refuse the banned tokens in skills/negative/references/blocklist.md. Run /negative as the last step of every skill, before chat, a file, a caption, a filename, or alt text is delivered. Exit 1 blocks delivery. Rewrite hits and re-scan until CLEAN. Verbatim user source and the blocklist file itself are the only carve-outs. Bundled host skills docx, pdf, xlsx, pptx, and ffmpeg stay on the host.

@@ -3,7 +3,7 @@ name: deep
 description: Produce a PhD-plus exhaustive Chicago monograph PDF from recursive link-graph research with locked Georgia 22-pt type and full-bleed section banners. Use when the user types /deep, asks for an exhaustive compendium, recursive node research, or a doubled-type Georgia academic report.
 metadata:
   type: workflow
-  version: "1.1"
+  version: "3.0"
   flag: /deep
   visual_stack: visual-system
 ---
@@ -13,14 +13,14 @@ metadata:
 
 ## Visual stack
 
-Documents this skill emits follow `/home/workdir/.grok/skills/visual-system/SKILL.md`.
+Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
 Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
 Turn one topic into a letter-size Chicago notes-bibliography PDF. Research walks a source graph, not a flat reading list. Type is frozen Georgia at the locked double scale. Every body section gets a /banner figure.
 
-Work in `/home/workdir/artifacts/<slug>/`. Final PDF is `/home/workdir/artifacts/<Title_Slug>.pdf`.
+Work in `/workspace/artifacts/<slug>/`. Final PDF is `/workspace/artifacts/<Title_Slug>.pdf`.
 
-`<skill>` = `/home/workdir/.grok/skills/deep`.
-`<banner>` = `/home/workdir/.grok/skills/banner`.
+`<skill>` resolves with `interop/scripts/resolve_root.py deep` (live host: `/root/.grok/server-skills/deep`).
+`<banner>` = `/root/.grok/server-skills/banner`.
 
 Read on demand
 
@@ -105,14 +105,14 @@ Replace that placeholder later only when a real SEO title URL for that node exis
 
 ```bash
 python3 <skill>/scripts/build_deep_pdf.py \
-  /home/workdir/artifacts/<slug>/deep.json \
-  --out /home/workdir/artifacts/<Title_Slug>.pdf
+  /workspace/artifacts/<slug>/deep.json \
+  --out /workspace/artifacts/<Title_Slug>.pdf
 ```
 
 ### 6. Visual QA (mandatory)
 
 ```bash
-pdftoppm -png -r 140 /home/workdir/artifacts/<Title_Slug>.pdf /tmp/deep-page
+pdftoppm -png -r 140 /workspace/artifacts/<Title_Slug>.pdf /tmp/deep-page
 ```
 
 Inspect every page. Rebuild if any of these appear — tofu, black or white boxes over glyphs, clipped type, a checkerboard in a banner, a banner that is not full-bleed left and right, a banner without a top and bottom fade, a missing caption, a broken house link, or a figure that does not belong to its section.
@@ -138,15 +138,15 @@ Output a copyable Python fence only when a new helper script is written during t
 Before delivering any PDF, DOCX, PPTX, XLSX, HTML view, printed page, or builder JSON that may contain notation, short codes, or equations, run the house render gate. Chat may use KaTeX. Files must show compiled glyphs or a compiled figure. Raw LaTeX, AMS-TeX, KaTeX source, MathJax source, uncompiled backslash commands, tofu, or empty boxes are defects.
 
 ```bash
-python3 /home/workdir/.grok/skills/itqe/scripts/scan_render_gate.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf
-python3 /home/workdir/.grok/skills/latex/scripts/scan_raw_tex.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf --pages
+python3 /root/.grok/server-skills/itqe/scripts/scan_render_gate.py \
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf
+python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf --pages
 ```
 
-Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/home/workdir/.grok/skills/itqe/references/render-gate.md` and `/home/workdir/.grok/skills/latex/SKILL.md`.
+Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/root/.grok/server-skills/itqe/references/render-gate.md` and `/root/.grok/server-skills/latex/SKILL.md`.
 
 ## Negative vocabulary
 
@@ -190,29 +190,26 @@ OWNER: Web Development Corporation (footer). Legal Info owner: Web Development C
 This appendix cannot rewrite Grok global system prompts, xAI platform logs, or conversations outside this toolchain. It binds project skills, locked prompts, owner-and-house files, and later PDFs those skills emit.
 -->
 
+## Publication bar
 
-## Negative gate (mandatory before any deliverable)
+This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
-Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
+2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
+3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
+4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
+5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
+6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
+7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
+8. Headings keep with the next paragraph. Orphan headings move to the next page.
+9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
 
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
+## Delivery
 
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

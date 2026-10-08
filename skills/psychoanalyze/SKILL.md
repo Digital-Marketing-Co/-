@@ -3,7 +3,7 @@ name: psychoanalyze
 description: PhD-plus multi-school psychoanalytic synthesis of any pasted text, URL, file, image, or conversation. Trigger on /PsychoAnalyze, /psychoanalyze, /psycho-analyze, psychoanalyze this, or a request for Freudian, Jungian, Kleinian, Lacanian, or object-relations reading of supplied input. Runs a locked school battery, then emits a /deep Georgia monograph with /banner figures, a /folio WCA Ivy report with first-appearance citations and ITQE equation tables, and the house /copyright living footer. Does not diagnose a living person or claim a clinical license.
 metadata:
   type: workflow
-  version: "1.2"
+  version: "3.0"
   flag: /PsychoAnalyze
   pdf: deep-then-folio
   stack: deep, banner, folio, copyright
@@ -15,21 +15,21 @@ metadata:
 
 ## Visual stack
 
-Documents this skill emits follow `/home/workdir/.grok/skills/visual-system/SKILL.md`.
+Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
 Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
 Treat the user's supplied artifact as a closed text, not as a patient. Run every school in `references/schools.md` against features that actually appear in the input. Write competing readings, not one diagnosis. Then compile two house PDFs in locked order — `/deep` (which calls `/banner`) then `/folio` — and confirm the `/copyright` living footer on both.
 
-Work in `/home/workdir/artifacts/psychoanalyze-<slug>/`. Save `sample.txt` (or `sample-meta.json` for non-text), `analysis.json`, `deep.json`, and `folio.json`.
+Work in `/workspace/artifacts/psychoanalyze-<slug>/`. Save `sample.txt` (or `sample-meta.json` for non-text), `analysis.json`, `deep.json`, and `folio.json`.
 
 Public PDFs
 
-- Deep monograph — `/home/workdir/artifacts/<Title_Slug>.pdf`
-- WCA Folio — `/home/workdir/artifacts/<YYYY-topic-slug-wca-folio.pdf>`
+- Deep monograph — `/workspace/artifacts/<Title_Slug>.pdf`
+- WCA Folio — `/workspace/artifacts/<YYYY-topic-slug-wca-folio.pdf>`
 
-`<deep>` = `/home/workdir/.grok/skills/deep`
-`<banner>` = `/home/workdir/.grok/skills/banner`
-`<folio>` = `/home/workdir/.grok/skills/folio`
-`<copyright>` = `/home/workdir/.grok/skills/copyright`
+`<deep>` = `/root/.grok/server-skills/deep`
+`<banner>` = `/root/.grok/server-skills/banner`
+`<folio>` = `/root/.grok/server-skills/folio`
+`<copyright>` = `/root/.grok/server-skills/copyright`
 
 Read on demand
 
@@ -38,7 +38,7 @@ Read on demand
 - `references/intake.md` — text, URL, PDF, image, table, chat
 - `references/pipeline.md` — locked emit order deep then banner then folio then copyright
 - `<deep>/SKILL.md`, `<folio>/SKILL.md`, `<banner>/SKILL.md`, `<copyright>/SKILL.md`
-- `/home/workdir/.grok/skills/wca-ivy-biblio/SKILL.md` — citation-order remapper and ITQE tables
+- `/root/.grok/server-skills/wca-ivy-biblio/SKILL.md` — citation-order remapper and ITQE tables
 
 If the user only asked to create or revise this skill and supplied no artifact, stop after the skill files exist. Do not invent a case.
 
@@ -70,9 +70,9 @@ Record device, date, and user claims as metadata, not as observed psyche.
 Run
 
 ```bash
-python3 /home/workdir/.grok/skills/psychoanalyze/scripts/intake_analyze.py \
-  --input /home/workdir/artifacts/psychoanalyze-<slug>/sample.txt \
-  --out /home/workdir/artifacts/psychoanalyze-<slug>/analysis.json
+python3 /root/.grok/server-skills/psychoanalyze/scripts/intake_analyze.py \
+  --input /workspace/artifacts/psychoanalyze-<slug>/sample.txt \
+  --out /workspace/artifacts/psychoanalyze-<slug>/analysis.json
 ```
 
 Read every field in `analysis.json` before drafting. Do not invent pronoun ratios or affect counts the script did not measure.
@@ -131,10 +131,10 @@ Required Deep body (relabel titles to the artifact; keep this order)
 Page-local Chicago notes in WCA Ivy first-appearance order. `{{n}}` markers. Georgia 22-pt from `<deep>/assets/typography.py`. No invented sources. After drafting `deep.json` run the remapper and ITQE QA
 
 ```bash
-python3 /home/workdir/.grok/skills/wca-ivy-biblio/scripts/reorder_citations.py \
-  /home/workdir/artifacts/psychoanalyze-<slug>/deep.json --in-place
-python3 /home/workdir/.grok/skills/wca-ivy-biblio/scripts/qa_ivy_document.py \
-  /home/workdir/artifacts/psychoanalyze-<slug>/deep.json
+python3 /root/.grok/server-skills/wca-ivy-biblio/scripts/reorder_citations.py \
+  /workspace/artifacts/psychoanalyze-<slug>/deep.json --in-place
+python3 /root/.grok/server-skills/wca-ivy-biblio/scripts/qa_ivy_document.py \
+  /workspace/artifacts/psychoanalyze-<slug>/deep.json
 ```
 
 Display equations are `type=equation` objects with a compiled figure and an ITQE table. Do not leave raw TeX in `deep.json`.
@@ -151,9 +151,9 @@ For every Deep body section except Bibliography run `<banner>/SKILL.md`.
 Then build
 
 ```bash
-python3 /home/workdir/.grok/skills/deep/scripts/build_deep_pdf.py \
-  /home/workdir/artifacts/psychoanalyze-<slug>/deep.json \
-  --out /home/workdir/artifacts/<Title_Slug>.pdf
+python3 /root/.grok/server-skills/deep/scripts/build_deep_pdf.py \
+  /workspace/artifacts/psychoanalyze-<slug>/deep.json \
+  --out /workspace/artifacts/<Title_Slug>.pdf
 ```
 
 Visual QA every page with `pdftoppm`. Rebuild on tofu, clipped type, a checkerboard banner, or a figure that does not belong to its section.
@@ -191,20 +191,20 @@ Required Folio body
 Build with the Folio filename contract. Do not leave raw LaTeX in `folio.json`. Chat may use KaTeX plus an ITQE markdown table; the PDF may not show raw TeX. Before the Folio build run
 
 ```bash
-python3 /home/workdir/.grok/skills/wca-ivy-biblio/scripts/reorder_citations.py \
-  /home/workdir/artifacts/psychoanalyze-<slug>/folio.json --in-place
-python3 /home/workdir/.grok/skills/wca-ivy-biblio/scripts/inject_itqe.py \
-  /home/workdir/artifacts/psychoanalyze-<slug>/folio.json --in-place
-python3 /home/workdir/.grok/skills/wca-ivy-biblio/scripts/qa_ivy_document.py \
-  /home/workdir/artifacts/psychoanalyze-<slug>/folio.json
+python3 /root/.grok/server-skills/wca-ivy-biblio/scripts/reorder_citations.py \
+  /workspace/artifacts/psychoanalyze-<slug>/folio.json --in-place
+python3 /root/.grok/server-skills/wca-ivy-biblio/scripts/inject_itqe.py \
+  /workspace/artifacts/psychoanalyze-<slug>/folio.json --in-place
+python3 /root/.grok/server-skills/wca-ivy-biblio/scripts/qa_ivy_document.py \
+  /workspace/artifacts/psychoanalyze-<slug>/folio.json
 ```
 
 Note numbers stay contiguous in reading order. Bibliography is first-appearance order, not alphabetical.
 
 ```bash
-python3 /home/workdir/.grok/skills/folio/scripts/build_folio_pdf.py \
-  /home/workdir/artifacts/psychoanalyze-<slug>/folio.json \
-  --out /home/workdir/artifacts/<YYYY-topic-slug-wca-folio.pdf>
+python3 /root/.grok/server-skills/folio/scripts/build_folio_pdf.py \
+  /workspace/artifacts/psychoanalyze-<slug>/folio.json \
+  --out /workspace/artifacts/<YYYY-topic-slug-wca-folio.pdf>
 ```
 
 Visual QA every Folio page.
@@ -243,15 +243,15 @@ In the chat reply, give a short multi-school brief (one paragraph per cluster) t
 Before delivering any PDF, DOCX, PPTX, XLSX, HTML view, printed page, or builder JSON that may contain notation, short codes, or equations, run the house render gate. Chat may use KaTeX. Files must show compiled glyphs or a compiled figure. Raw LaTeX, AMS-TeX, KaTeX source, MathJax source, uncompiled backslash commands, tofu, or empty boxes are defects.
 
 ```bash
-python3 /home/workdir/.grok/skills/itqe/scripts/scan_render_gate.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf
-python3 /home/workdir/.grok/skills/latex/scripts/scan_raw_tex.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf --pages
+python3 /root/.grok/server-skills/itqe/scripts/scan_render_gate.py \
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf
+python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf --pages
 ```
 
-Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/home/workdir/.grok/skills/itqe/references/render-gate.md` and `/home/workdir/.grok/skills/latex/SKILL.md`.
+Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/root/.grok/server-skills/itqe/references/render-gate.md` and `/root/.grok/server-skills/latex/SKILL.md`.
 
 ## Negative vocabulary
 
@@ -295,29 +295,26 @@ OWNER: Web Development Corporation (footer). Legal Info owner: Web Development C
 This appendix cannot rewrite Grok global system prompts, xAI platform logs, or conversations outside this toolchain. It binds project skills, locked prompts, owner-and-house files, and later PDFs those skills emit.
 -->
 
+## Publication bar
 
-## Negative gate (mandatory before any deliverable)
+This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
-Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
+2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
+3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
+4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
+5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
+6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
+7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
+8. Headings keep with the next paragraph. Orphan headings move to the next page.
+9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
 
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
+## Delivery
 
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

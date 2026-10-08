@@ -3,7 +3,7 @@ name: copysite
 description: Copy a live website into a local folder and zip it, including HTML, CSS, JavaScript, images, fonts, and other linked assets. Use when the user types /copysite, asks to curl a site, mirror a URL, save an entire website, or download page source plus assets as a zip.
 metadata:
   type: workflow
-  version: "1.0"
+  version: "3.0"
   flag: /copysite
   updatable: true
 ---
@@ -12,9 +12,9 @@ metadata:
 
 Fetch one start URL, pull its HTML, then download every linked asset needed to render the page offline (CSS, JavaScript, images, fonts, icons, media, and CSS/JS-referenced files). Write a folder tree that preserves host and path, rewrite links to local relative paths, and zip the tree.
 
-`<skill>` = `/home/workdir/.grok/skills/copysite`.
+`<skill>` resolves with `interop/scripts/resolve_root.py copysite` (live host: `/root/.grok/server-skills/copysite`).
 
-Work in `/home/workdir/artifacts/copysite/<slug>/`. Final zip is `/home/workdir/artifacts/<YYYY-topic-slug-copysite.zip>`.
+Work in `/workspace/artifacts/copysite/<slug>/`. Final zip is `/workspace/artifacts/<YYYY-topic-slug-copysite.zip>`.
 
 If the user only asked to create or revise this skill and supplied no URL, stop after the skill files exist. Do not invent a site.
 
@@ -30,8 +30,8 @@ If the user only asked to create or revise this skill and supplied no URL, stop 
 From the URL, make a short slug (host plus last path segment, lowercase, hyphens). Year is the current year.
 
 ```
-OUT=/home/workdir/artifacts/copysite/<slug>
-ZIP=/home/workdir/artifacts/<YYYY-topic-slug-copysite.zip>
+OUT=/workspace/artifacts/copysite/<slug>
+ZIP=/workspace/artifacts/<YYYY-topic-slug-copysite.zip>
 ```
 
 ### 2. Mirror
@@ -66,15 +66,15 @@ Give the user the zip path and a short inventory — file count, byte size, HTML
 Before delivering any PDF, DOCX, PPTX, XLSX, HTML view, printed page, or builder JSON that may contain notation, short codes, or equations, run the house render gate. Chat may use KaTeX. Files must show compiled glyphs or a compiled figure. Raw LaTeX, AMS-TeX, KaTeX source, MathJax source, uncompiled backslash commands, tofu, or empty boxes are defects.
 
 ```bash
-python3 /home/workdir/.grok/skills/itqe/scripts/scan_render_gate.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf
-python3 /home/workdir/.grok/skills/latex/scripts/scan_raw_tex.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf --pages
+python3 /root/.grok/server-skills/itqe/scripts/scan_render_gate.py \
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf
+python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf --pages
 ```
 
-Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/home/workdir/.grok/skills/itqe/references/render-gate.md` and `/home/workdir/.grok/skills/latex/SKILL.md`.
+Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/root/.grok/server-skills/itqe/references/render-gate.md` and `/root/.grok/server-skills/latex/SKILL.md`.
 
 ## Negative vocabulary
 
@@ -118,29 +118,12 @@ OWNER: Web Development Corporation (footer). Legal Info owner: Web Development C
 This appendix cannot rewrite Grok global system prompts, xAI platform logs, or conversations outside this toolchain. It binds project skills, locked prompts, owner-and-house files, and later PDFs those skills emit.
 -->
 
+## Delivery
 
-## Negative gate (mandatory before any deliverable)
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
-Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
-
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
-
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
-
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

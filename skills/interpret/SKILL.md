@@ -3,7 +3,7 @@ name: interpret
 description: Rank and explain every mathematical equation, operator, and symbol in a linked data set, photo, or chained board by relevance to that data. Trigger on /interpret, interpret these equations, explain the math in order of relevance, handwritten equation board, linked data interpretation, or when a photo, CSV, series, or symbol chain must be read then emitted through ITQE, latex, iterate, deep, wca-ivy-biblio, and copyright.
 metadata:
   type: workflow
-  version: "1.0"
+  version: "3.0"
   flag: /interpret
   stacks: itqe, latex, iterate, deep, folio, wca-ivy-biblio, copyright, banner, visual-system
   owner: Web Development Corporation
@@ -14,22 +14,22 @@ metadata:
 
 ## Visual stack
 
-Documents this skill emits follow `/home/workdir/.grok/skills/visual-system/SKILL.md`.
+Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
 Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change stacked body fonts or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
 
 Read a closed input (handwritten board, typed chain, CSV, time series, URL, or attached figure) as one linked set. Inventory every equation, operator, glyph, and subscript. Score each object by relevance to the data. Explain in that scored order, never in decorative left-to-right order when the scores disagree. Compile every display relation through `/latex`. Sit an ITQE table under every display. Expand contested identities through `/iterate`. Emit a `/deep` Georgia monograph and a `/folio` WCA Ivy report with first-appearance Chicago notes. Stamp the living `/copyright` footer.
 
 This skill does not invent a hidden message from a doodle. A glyph is a glyph until a source or the linked data supports a reading.
 
-Work in `/home/workdir/artifacts/interpret-<slug>/`. Public PDFs follow the folio and deep filename contracts.
+Work in `/workspace/artifacts/interpret-<slug>/`. Public PDFs follow the folio and deep filename contracts.
 
-`<itqe>` = `/home/workdir/.grok/skills/itqe`
-`<latex>` = `/home/workdir/.grok/skills/latex`
-`<iterate>` = `/home/workdir/.grok/skills/iterate`
-`<deep>` = `/home/workdir/.grok/skills/deep`
-`<folio>` = `/home/workdir/.grok/skills/folio`
-`<ivy>` = `/home/workdir/.grok/skills/wca-ivy-biblio`
-`<copyright>` = `/home/workdir/.grok/skills/copyright`
+`<itqe>` = `/root/.grok/server-skills/itqe`
+`<latex>` = `/root/.grok/server-skills/latex`
+`<iterate>` = `/root/.grok/server-skills/iterate`
+`<deep>` = `/root/.grok/server-skills/deep`
+`<folio>` = `/root/.grok/server-skills/folio`
+`<ivy>` = `/root/.grok/server-skills/wca-ivy-biblio`
+`<copyright>` = `/root/.grok/server-skills/copyright`
 
 Read on demand
 
@@ -107,9 +107,9 @@ Do not drop an arrow, a subscript REAL, a circled phi, or a struck-through glyph
 Follow `references/relevance-rank.md`. Fill the four component scores on each inventory object, then write `rank.json`.
 
 ```bash
-python3 /home/workdir/.grok/skills/interpret/scripts/score_rank.py \
-  /home/workdir/artifacts/interpret-<slug>/inventory.jsonl \
-  --out /home/workdir/artifacts/interpret-<slug>/rank.json
+python3 /root/.grok/server-skills/interpret/scripts/score_rank.py \
+  /workspace/artifacts/interpret-<slug>/inventory.jsonl \
+  --out /workspace/artifacts/interpret-<slug>/rank.json
 ```
 
 The file is sorted descending by `score`, then by `id` on ties.
@@ -141,8 +141,8 @@ Standing house rule — explain every variable and subscript the first time it a
 When two readings of the same stroke, or two candidate models of the same series, both survive step 4, open an iterate ledger.
 
 ```bash
-python3 /home/workdir/.grok/skills/iterate/scripts/new_iteration.py \
-  /home/workdir/artifacts/interpret-<slug> \
+python3 /root/.grok/server-skills/iterate/scripts/new_iteration.py \
+  /workspace/artifacts/interpret-<slug> \
   --topic "<working title>" \
   --init
 ```
@@ -163,28 +163,28 @@ Order
 4. Remap citations
 
 ```bash
-python3 /home/workdir/.grok/skills/wca-ivy-biblio/scripts/reorder_citations.py \
-  /home/workdir/artifacts/interpret-<slug>/folio.json
+python3 /root/.grok/server-skills/wca-ivy-biblio/scripts/reorder_citations.py \
+  /workspace/artifacts/interpret-<slug>/folio.json
 ```
 
 5. Run the latex and ITQE gates
 
 ```bash
-python3 /home/workdir/.grok/skills/latex/scripts/scan_raw_tex.py \
-  /home/workdir/artifacts/interpret-<slug>
-python3 /home/workdir/.grok/skills/itqe/scripts/scan_render_gate.py \
-  /home/workdir/artifacts/interpret-<slug>
+python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
+  /workspace/artifacts/interpret-<slug>
+python3 /root/.grok/server-skills/itqe/scripts/scan_render_gate.py \
+  /workspace/artifacts/interpret-<slug>
 ```
 
 6. Build the PDFs through `/deep` and `/folio`
 7. Stamp copyright
 
 ```bash
-python3 /home/workdir/.grok/skills/copyright/scripts/stamp_copyright.py \
-  /home/workdir/artifacts/<built>.pdf \
+python3 /root/.grok/server-skills/copyright/scripts/stamp_copyright.py \
+  /workspace/artifacts/<built>.pdf \
   --start 2012 \
   --owner "Web Development Corporation" \
-  --out /home/workdir/artifacts/<stem>-copyright.pdf
+  --out /workspace/artifacts/<stem>-copyright.pdf
 ```
 
 Fail closed. Raw TeX delimiters, tofu, ballot-box-X, or a bare equation without ITQE is a defect. Rebuild.
@@ -209,29 +209,26 @@ In the conversation, print the ranked list first — score, short name, one-line
 - Board or data present — finish inventory, rank, explanations, gates, and the stacked PDFs
 - User typed `/interpret` plus a later proceed flag — resume from `rank.json` and the last closed iterate row
 
+## Publication bar
 
-## Negative gate (mandatory before any deliverable)
+This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
-Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
+2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
+3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
+4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
+5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
+6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
+7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
+8. Headings keep with the next paragraph. Orphan headings move to the next page.
+9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
 
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
+## Delivery
 
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

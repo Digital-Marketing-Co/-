@@ -3,7 +3,7 @@ name: ringtone
 description: Build an iPhone-safe ringtone pack from a prompt, TTS line, or source audio. Trigger on /ringtone, custom ringtone, M4R, iPhone 16 Pro Max tone, iPhone 12 Pro Max tone, GarageBand export, Use as Ringtone, or convert audio to a 30-second AAC ringtone. Portable for Grok and other generative AI apps.
 metadata:
   type: workflow
-  version: "1.0"
+  version: "3.0"
   flag: /ringtone
   updatable: true
 ---
@@ -26,7 +26,7 @@ Hard product spec (do not relax):
 - Fade-in about 40 ms, fade-out about 120 ms, integrated loudness near -14 LUFS, true peak at most -1.5 dBTP.
 - High-pass 80 Hz, low-pass 15 kHz so the tone survives both the iPhone 12 Pro Max stereo speakers and the louder iPhone 16 Pro Max speakers.
 
-Skill root is /home/workdir/.grok/skills/ringtone.
+Skill root is /root/.grok/server-skills/ringtone.
 
 If the user only asked to create or revise this skill and supplied no prompt or file, stop after the skill files exist.
 
@@ -63,21 +63,21 @@ This environment does not ship a music-foundation model. Do not pretend a sine m
 ### 3. Encode
 
 ```bash
-python3 /home/workdir/.grok/skills/ringtone/scripts/make_ringtone.py \
+python3 /root/.grok/server-skills/ringtone/scripts/make_ringtone.py \
   --input /path/to/source.wav \
   --title "short-title" \
   --prompt "user prompt text" \
   --start 0 \
   --duration 30 \
-  --outdir /home/workdir/artifacts
+  --outdir /workspace/artifacts
 ```
 
 No source file, demo only:
 
 ```bash
-python3 /home/workdir/.grok/skills/ringtone/scripts/make_ringtone.py \
+python3 /root/.grok/server-skills/ringtone/scripts/make_ringtone.py \
   --generate-motif --title demo-motif --duration 12 \
-  --outdir /home/workdir/artifacts
+  --outdir /workspace/artifacts
 ```
 
 The script prints a JSON validation report. Exit code 1 means the pack is not iPhone-safe. Do not deliver a failing pack.
@@ -124,29 +124,12 @@ The product contract is the JSON report plus the three files. Do not invent a fo
 
 Load `assets/negative-keywords.csv` and `assets/negative-keywords.xlsx` before any concatenated generate prompt. Do not write plate, gazette, atlas, folio, deep, exhaustive, AI, xAI, or ChatGPT into that prompt. Slash flags `/atlas`, `/folio`, `/deep`, `/itqe` stay routing tokens only. Do not apply top or bottom fades. Print banners and figures at full opacity.
 
+## Delivery
 
-## Negative gate (mandatory before any deliverable)
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
-Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
-
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
-
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
-
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

@@ -3,7 +3,7 @@ name: transcribe
 description: Transcribe attached or referenced data into a locked raw verbatim text, then write a summary that is expanded twice into a research-ready manuscript and compiled through folio, images, banner, and book. Trigger on /transcribe, raw transcript, plaque or citation OCR, letter dump, framed-document readout, or expand this source into a WCA Folio illustrated book.
 metadata:
   type: workflow
-  version: "1.0"
+  version: "3.0"
   flag: /transcribe
   owner: Web Development Corporation
   stacks: negative, folio, images, banner, book, copyright, latex, itqe, wca-ivy-biblio, visual-system
@@ -16,9 +16,9 @@ Lock one source. Dump it as raw text. Summarize it. Expand that summary. Expand 
 
 Do not rewrite the raw layer. Do not invent glyphs the source does not support. Do not skip the two expansion passes and jump straight to a PDF.
 
-Work in `/home/workdir/artifacts/transcribe-<slug>/`.
+Work in `/workspace/artifacts/transcribe-<slug>/`.
 
-Skill root is `/home/workdir/.grok/skills/transcribe`.
+Skill root is `/root/.grok/server-skills/transcribe`.
 
 Read on demand
 
@@ -30,7 +30,7 @@ Read on demand
 - `scripts/init_workdir.py` — folder, lock copy, empty transcript.json
 - `scripts/qa_transcript.py` — fail closed if raw was edited after lock
 
-Documents this skill emits follow `/home/workdir/.grok/skills/visual-system/SKILL.md`.
+Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
 Pick a genre palette with the visual-system picker. Paint covers, banners, rules, table headers, and figure frames. Do not change folio or book locked body fonts or point sizes. Banner and plate prompts append the volumetric clause in `visual-system/references/depth.md`.
 
 If the user only asked to create or revise this skill and supplied no source, stop after the skill files exist. Do not invent a document or a book.
@@ -151,38 +151,26 @@ Chat deliverable order
 
 Do not dump builder JSON into chat.
 
-## Negative gate (mandatory before any deliverable)
+## Publication bar
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `references/blocklist.md`.
-Before chat, PDF, caption, filename, alt text, or footnote leaves this skill, extract visible text (skip `raw.txt` and `raw.lock.txt`) and run
+This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
 
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
+1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
+2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
+3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
+4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
+5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
+6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
+7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
+8. Headings keep with the next paragraph. Orphan headings move to the next page.
+9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
 
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim locked raw and the blocklist file itself are the only carve-outs.
+## Delivery
 
-## Hard rules
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-- Raw is sacred. `qa_transcript.py` must exit 0 before any PDF is delivered.
-- Expansion may add cited context. It may not alter `raw.txt`.
-- No photoreal generate of a living private person. Object, architecture, ribbon, and document stills are allowed.
-- No emoji. No unsupported symbols. No invented sources.
-- Math is compiled glyphs or a compiled figure.
-- Do not reprint builder source into chat.
-- Filename for the folio leaf is `YYYY-topic-slug-wca-folio.pdf`.
-
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

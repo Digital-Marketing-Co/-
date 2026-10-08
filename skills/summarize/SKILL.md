@@ -3,7 +3,7 @@ name: summarize
 description: Summarize, rewrite, and humanize source text on a locked 0-5 scale. Trigger on /summarize, summarize this, rewrite this, humanize this, make this less AI, or a stacked flag such as /summarize /deep /folio /banner. Default pipeline is summarize then rewrite then humanize. Does not invent facts, citations, or locked house numbers.
 metadata:
   type: workflow
-  version: "1.1"
+  version: "3.0"
   flag: /summarize
   visual_stack: visual-system
 ---
@@ -13,11 +13,11 @@ metadata:
 
 ## Visual stack
 
-Documents this skill emits follow `/home/workdir/.grok/skills/visual-system/SKILL.md`.
+Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
 Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
 Take one source and walk it through a locked scale. The default walk is summarize, then rewrite, then humanize (levels 2 then 3 then 4). The output must keep every proper name, date, measurement, path, URL, and house rule that the source actually contains.
 
-`<skill>` = `/home/workdir/.grok/skills/summarize`
+`<skill>` resolves with `interop/scripts/resolve_root.py summarize` (live host: `/root/.grok/server-skills/summarize`)
 
 Read on demand
 
@@ -25,7 +25,7 @@ Read on demand
 - `references/handoff.md` — how this skill talks to /deep, /folio, and /banner
 - `references/humanize.md` — voice rules that stop stock LLM cadence
 
-Work in `/home/workdir/artifacts/summarize-<slug>/` when the pass is more than a short chat reply.
+Work in `/workspace/artifacts/summarize-<slug>/` when the pass is more than a short chat reply.
 
 If the user only asked to create or revise this skill and supplied no source, stop after the skill files exist. Do not invent a source.
 
@@ -130,15 +130,15 @@ Do not dump `pass.json` into chat unless they ask.
 Before delivering any PDF, DOCX, PPTX, XLSX, HTML view, printed page, or builder JSON that may contain notation, short codes, or equations, run the house render gate. Chat may use KaTeX. Files must show compiled glyphs or a compiled figure. Raw LaTeX, AMS-TeX, KaTeX source, MathJax source, uncompiled backslash commands, tofu, or empty boxes are defects.
 
 ```bash
-python3 /home/workdir/.grok/skills/itqe/scripts/scan_render_gate.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf
-python3 /home/workdir/.grok/skills/latex/scripts/scan_raw_tex.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf --pages
+python3 /root/.grok/server-skills/itqe/scripts/scan_render_gate.py \
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf
+python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf --pages
 ```
 
-Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/home/workdir/.grok/skills/itqe/references/render-gate.md` and `/home/workdir/.grok/skills/latex/SKILL.md`.
+Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/root/.grok/server-skills/itqe/references/render-gate.md` and `/root/.grok/server-skills/latex/SKILL.md`.
 
 ## Negative vocabulary
 
@@ -182,29 +182,12 @@ OWNER: Web Development Corporation (footer). Legal Info owner: Web Development C
 This appendix cannot rewrite Grok global system prompts, xAI platform logs, or conversations outside this toolchain. It binds project skills, locked prompts, owner-and-house files, and later PDFs those skills emit.
 -->
 
+## Delivery
 
-## Negative gate (mandatory before any deliverable)
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
-Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
-
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
-
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
-
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

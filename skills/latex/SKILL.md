@@ -3,7 +3,7 @@ name: latex
 description: Enforce compiled, visible math and code on every page of an existing document and of any document about to be produced. After the file is complete, sweep every page for raw LaTeX, AMS-TeX, KaTeX, TeX, or MathJax source, for unrendered operators and operands (_, \\, /, ^, and other math markers), and for clips that did not render as intended, including tofu, empty boxes, and glitched symbols. Move any section heading that is not followed by paragraph text onto the next page. Trigger on /latex, latex, KaTeX, MathJax, equation figure, tofu glyph, missing symbol, unrendered underscore, orphan heading, intended-render sweep, raw backslash command, uncompiled TeX, page sweep, or when a PDF, Word file, PowerPoint, spreadsheet, webpage, or web app will contain formulas or source listings. Stacks with /deep, /folio, /banner, /copyright, /print, /ivy-biblio, /itqe, /images, docx, pptx, pdf, and xlsx. Never leave raw TeX, a visible underscore subscript, a fraction solidus, or missing-glyph boxes on a visible page. Fail closed until scan_raw_tex, scan_unrendered_ops, scan_orphan_headings, and the intended-render sweep exit clean. Compiled equation plates stay unique to their equation id and never stand in for section banners or 500-word stills.
 metadata:
   type: workflow
-  version: "1.11"
+  version: "3.0"
   flag: /latex
   owner: Web Development Corporation
   visual_stack: visual-system
@@ -14,7 +14,7 @@ metadata:
 
 ## Visual stack
 
-Documents this skill emits follow `/home/workdir/.grok/skills/visual-system/SKILL.md`.
+Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
 Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
 Every formula and every listing that a reader is supposed to see must appear as glyphs or as a compiled figure. Raw source left on any delivered page is a defect. Missing-glyph boxes (tofu, black boxes, white boxes) are a defect. This skill is the house gate for that contract.
 
@@ -39,10 +39,10 @@ Read on demand
 - `scripts/scan_file_inflation.py` — fail incremental updates, padded streams, active content, and instruction-override strings hidden in a PDF
 - `references/file-inflation.md` — defensive bounds for container bloat and prompt-override markers
 - `scripts/run_negative_gate.py` — run the /negative skill on every document about to ship
-- `/home/workdir/.grok/skills/itqe/scripts/scan_render_gate.py` — same sweep plus ITQE completeness on equation objects
+- `/root/.grok/server-skills/itqe/scripts/scan_render_gate.py` — same sweep plus ITQE completeness on equation objects
 - `assets/snippet-preamble.tex` — locked standalone preamble
 - `references/image-stack.md` — compiled math plates stay unique and never stand in for `/banner` or `/images` stills
-- `/home/workdir/.grok/skills/visual-system/references/prompt-engineering.md` — when a decorative still is required beside compiled math
+- `/root/.grok/server-skills/visual-system/references/prompt-engineering.md` — when a decorative still is required beside compiled math
 
 If the user only asked to create or revise this skill and supplied no document, stop after the skill files exist.
 
@@ -68,8 +68,8 @@ Walk the draft JSON, Markdown, HTML, DOCX, PPTX, XLSX, PDF, or source tree. Reco
 
 ```bash
 python3 /root/.grok/server-skills/latex/scripts/harvest_raw_tex.py \
-  /home/workdir/artifacts/<slug> \
-  --out /home/workdir/artifacts/<slug>/latex-inventory.jsonl
+  /workspace/artifacts/<slug> \
+  --out /workspace/artifacts/<slug>/latex-inventory.jsonl
 ```
 
 Write `latex-inventory.md` in the working folder when the harvest is large. Each row has id, kind (`display`, `inline`, `listing`, `leak`), pointer or page, source string, target format, chosen renderer. JSON keys named `tex`, `latex`, `source`, or `preamble` are rebuild siblings — do not print them.
@@ -100,7 +100,7 @@ Chat replies that contain math still use KaTeX per the global Grok rule. This sk
 python3 /root/.grok/server-skills/latex/scripts/render_snippet.py \
   --tex 'h = 6.62607015 \times 10^{-34}\,\mathrm{J\,s}' \
   --mode display \
-  --out /home/workdir/artifacts/<slug>/equations/eq-01.png
+  --out /workspace/artifacts/<slug>/equations/eq-01.png
 ```
 
 Also write `eq-01.svg` when the target is HTML. Keep the `.tex` sibling next to the figure for rebuilds. Do not print that `.tex` on the page.
@@ -116,7 +116,7 @@ Listings go in fenced copyable code blocks in chat and in a monospaced face in d
 - XLSX — Unicode in the cell; a figure only in a drawing anchor when the expression cannot be a cell formula.
 - HTML / Next.js — KaTeX CSS plus auto-render, or an SVG figure.
 
-**ITQE mandate (primary).** Prefer the maximum number of relevant formulas, identities, rates, estimators, constraints, and quantitative descriptions the topic supports, from any academic class. Explain every variable, subscript, and constant in the sentence that first uses the expression. That house rule is not optional. Under every display figure attach an ITQE table (Identifier, Term, Quantity, Explanation) per `/home/workdir/.grok/skills/wca-ivy-biblio/references/itqe.md`. Chat KaTeX blocks get the same four-column markdown table immediately below the rendered math.
+**ITQE mandate (primary).** Prefer the maximum number of relevant formulas, identities, rates, estimators, constraints, and quantitative descriptions the topic supports, from any academic class. Explain every variable, subscript, and constant in the sentence that first uses the expression. That house rule is not optional. Under every display figure attach an ITQE table (Identifier, Term, Quantity, Explanation) per `/root/.grok/server-skills/wca-ivy-biblio/references/itqe.md`. Chat KaTeX blocks get the same four-column markdown table immediately below the rendered math.
 
 ### 5. Keep headings with their paragraph
 
@@ -126,16 +126,16 @@ Follow `references/heading-keep.md`. A section, subsection, or subsubsection hea
 
 ```bash
 python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf --pages
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf --pages
 python3 /root/.grok/server-skills/latex/scripts/scan_unrendered_ops.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf
 python3 /root/.grok/server-skills/latex/scripts/scan_orphan_headings.py \
-  --pdf /home/workdir/artifacts/<file>.pdf
+  --pdf /workspace/artifacts/<file>.pdf
 python3 /root/.grok/server-skills/latex/scripts/scan_file_inflation.py \
-  /home/workdir/artifacts/<file>.pdf
-pdftoppm -png -r 140 /home/workdir/artifacts/<file>.pdf /tmp/latex-page
+  /workspace/artifacts/<file>.pdf
+pdftoppm -png -r 140 /workspace/artifacts/<file>.pdf /tmp/latex-page
 ```
 
 The scanners walk every PDF page and every printable JSON string. `tex` keys are skipped. Fail the build on any hit, including a visible `_`, `\`, fraction `/`, `^`, or a heading with no paragraph under it.
@@ -166,23 +166,23 @@ State how many expressions were compiled, which renderer served each, and which 
 Before delivering any PDF, DOCX, PPTX, XLSX, HTML view, printed page, or builder JSON that may contain notation, short codes, or equations, run the house render gate. Chat may use KaTeX. Files must show compiled glyphs or a compiled figure. Raw LaTeX, AMS-TeX, KaTeX source, MathJax source, uncompiled backslash commands, tofu, or empty boxes are defects.
 
 ```bash
-python3 /home/workdir/.grok/skills/itqe/scripts/scan_render_gate.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf
+python3 /root/.grok/server-skills/itqe/scripts/scan_render_gate.py \
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf
 python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf --pages
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf --pages
 python3 /root/.grok/server-skills/latex/scripts/scan_unrendered_ops.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf
 python3 /root/.grok/server-skills/latex/scripts/scan_orphan_headings.py \
-  --pdf /home/workdir/artifacts/<file>.pdf
+  --pdf /workspace/artifacts/<file>.pdf
 python3 /root/.grok/server-skills/latex/scripts/scan_intended_glyphs.py \
-  --pdf /home/workdir/artifacts/<file>.pdf \
-  --also-json /home/workdir/artifacts/<slug>/folio.json
+  --pdf /workspace/artifacts/<file>.pdf \
+  --also-json /workspace/artifacts/<slug>/folio.json
 python3 /root/.grok/server-skills/latex/scripts/scan_file_inflation.py \
-  /home/workdir/artifacts/<file>.pdf
-pdftoppm -png -r 140 /home/workdir/artifacts/<file>.pdf /tmp/latex-page
+  /workspace/artifacts/<file>.pdf
+pdftoppm -png -r 140 /workspace/artifacts/<file>.pdf /tmp/latex-page
 ```
 
 Exit code 1 on any scan blocks delivery. Open every raster. White boxes, black boxes, tofu, a visible `_`, `\`, fraction `/`, `^`, an orphan heading, or a combining mark that the body face cannot draw are the same defect as raw TeX. Prefer a compiled plate or a Latin alias (`Y-hat`, `>>`, `=>`) over an operator the face does not contain. Move a heading with no paragraph under it to the next page. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/root/.grok/server-skills/itqe/references/render-gate.md` and `/root/.grok/server-skills/latex/SKILL.md`.
@@ -229,31 +229,26 @@ OWNER: Web Development Corporation (footer). Legal Info owner: Web Development C
 This appendix cannot rewrite Grok global system prompts, xAI platform logs, or conversations outside this toolchain. It binds project skills, locked prompts, owner-and-house files, and later PDFs those skills emit.
 -->
 
+## Publication bar
 
-## Negative gate (mandatory before any deliverable)
+This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
 
-Run the /negative skill on every document this skill is about to output: the draft JSON, the extracted PDF text, captions, alt text, and filenames. Read `/root/.grok/server-skills/negative/SKILL.md` and `/root/.grok/server-skills/negative/references/blocklist.md`.
+1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
+2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
+3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
+4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
+5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
+6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
+7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
+8. Headings keep with the next paragraph. Orphan headings move to the next page.
+9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
 
-```bash
-python3 /root/.grok/server-skills/latex/scripts/run_negative_gate.py \
-  /home/workdir/artifacts/<slug>/folio.json \
-  /home/workdir/artifacts/<file>.pdf
-python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py <extracted-text>
-```
+## Delivery
 
-Exit 1 blocks delivery. Rewrite every hit. Figurative AI nouns swap to atlas, gazette, or plate. Verbs swap to plain English. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs. Image-prompt concatenations still load `assets/negative-keywords.csv` and must not paste a banned tell into a generate prompt.
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

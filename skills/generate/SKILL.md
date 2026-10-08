@@ -3,7 +3,7 @@ name: generate
 description: Emit PhD-level engineered prompts for every output type this agent can run, ranked by marketing and academic power, with customization keywords after the flag. Trigger on /generate, generate prompt, prompt pack, video prompt engineering, Aether Cinema prompts, gnitekram.org prompts, ranked output types, or when the user asks for beautiful futuristic awe-inspiring prompts including custom web apps, video, images, books, folios, decks, and sites.
 metadata:
   type: workflow
-  version: "1.0"
+  version: "3.0"
   flag: /generate
   stacks: list, banner, images, book, coffee, folio, deep, pptx, visual-system, negative, copyright
   owner: Web Development Corporation
@@ -19,9 +19,9 @@ This skill does not invent facts about a brand. It writes the prompt. Execution 
 
 If the user only asked to create or revise this skill and supplied no subject, stop after the skill files exist. Do not invent a campaign.
 
-`<skill>` = `/home/workdir/.grok/skills/generate`
-`<visual>` = `/home/workdir/.grok/skills/visual-system`
-`<negative>` = `/home/workdir/.grok/skills/negative`
+`<skill>` resolves with `interop/scripts/resolve_root.py generate` (live host: `/root/.grok/server-skills/generate`)
+`<visual>` = `/root/.grok/server-skills/visual-system`
+`<negative>` = `/root/.grok/server-skills/negative`
 
 Read on demand
 
@@ -32,10 +32,10 @@ Read on demand
 - `references/templates.md` — one finished template per output type
 - `assets/output-types.json` — machine catalog
 - `scripts/parse_generate.py` — parse flag remainder into a spec
-- `/home/workdir/.grok/skills/visual-system/references/prompt-engineering.md`
-- `/home/workdir/.grok/skills/visual-system/references/beauty-lock.md`
-- `/home/workdir/.grok/skills/visual-system/references/depth.md`
-- `/home/workdir/.grok/skills/negative/references/blocklist.md`
+- `/root/.grok/server-skills/visual-system/references/prompt-engineering.md`
+- `/root/.grok/server-skills/visual-system/references/beauty-lock.md`
+- `/root/.grok/server-skills/visual-system/references/depth.md`
+- `/root/.grok/server-skills/negative/references/blocklist.md`
 
 ## When this skill runs
 
@@ -74,7 +74,7 @@ Examples
 ### 1. Parse
 
 ```bash
-python3 /home/workdir/.grok/skills/generate/scripts/parse_generate.py \
+python3 /root/.grok/server-skills/generate/scripts/parse_generate.py \
   --remainder "{{input}}"
 ```
 
@@ -112,7 +112,7 @@ Only execute when the user also named a builder flag or said `run it`, `build it
 
 | Type | Execute with |
 |---|---|
-| web-app | write files under `/home/workdir/artifacts/<slug>/` and render the entry HTML |
+| web-app | write files under `/workspace/artifacts/<slug>/` and render the entry HTML |
 | video | emit the pack only, plus paste instructions for https://gnitekram.org/ |
 | coffee, book, folio, deep, list | the matching user skill |
 | still, banner | image generate tools or `/images` / `/banner` |
@@ -137,17 +137,26 @@ Only execute when the user also named a builder flag or said `run it`, `build it
 
 If the user only asked to install or extend the skill, stop. Do not invent a sample campaign.
 
-## House interop
+## Publication bar
 
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
+This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
 
+1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
+2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
+3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
+4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
+5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
+6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
+7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
+8. Headings keep with the next paragraph. Orphan headings move to the next page.
+9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
 
-## Final gate
+## Delivery
 
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

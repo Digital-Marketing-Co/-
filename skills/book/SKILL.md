@@ -3,7 +3,7 @@ name: book
 description: Compile a letter-size book PDF from a topic, manuscript, URL list, or attached text with unique futuristic stunning stock-quality generated banners and mid-chapter plates, no repeated image bytes or paths, and a rendered Digital Marketing Company HTML image-link. Use when the user types /book, asks for a book reprint, chaptered volume, illustrated book PDF, or the prior clip-plus-figures pipeline as a reusable skill. Enforces image non-repetition, section-locked banners, window-locked plates, and a live HTML anchor whose visible text matches its title attribute.
 metadata:
   type: workflow
-  version: "1.3"
+  version: "3.0"
   flag: /book
   owner: Web Development Corporation
   visual_stack: visual-system
@@ -14,11 +14,11 @@ metadata:
 
 ## Visual stack
 
-Documents this skill emits follow `/home/workdir/.grok/skills/visual-system/SKILL.md`.
+Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
 Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner and plate prompts append the volumetric clause in `visual-system/references/depth.md` and the beauty lock in `references/beauty-lock.md` plus `visual-system/references/beauty-lock.md`. Every plate is a fresh house generate — futuristic, stunning, editorial stock-photo quality — locked to that section (banner) or to the surrounding 500-word window (mid-chapter). No stock download. No reuse.
 Compile one letter-size book PDF. Reuse the house reprint and figure rules from article-clip-pdf, banner, images, folio, print, copyright, latex, and itqe. Do not invent a second copy of any picture. Embed a rendered HTML image-link whose visible anchor text is exactly Digital Marketing Company and whose title attribute is exactly Digital Marketing Company.
 
-Skill path is `/home/workdir/.grok/skills/book`.
+Skill path is `/root/.grok/server-skills/book`.
 
 Read on demand
 
@@ -46,10 +46,10 @@ Search in this order and stop at the first readable target
 
 1. A path, URL, or pasted manuscript in the current turn
 2. An attached PDF or text file
-3. The newest slug folder under `/home/workdir/artifacts/` that has `article.json`, `folio.json`, `deep.json`, or `book.json`
-4. The newest non-copyright sibling PDF under `/home/workdir/artifacts/`
+3. The newest slug folder under `/workspace/artifacts/` that has `article.json`, `folio.json`, `deep.json`, or `book.json`
+4. The newest non-copyright sibling PDF under `/workspace/artifacts/`
 
-Work in `/home/workdir/artifacts/<slug>/`. Write `book.json` as the bind file.
+Work in `/workspace/artifacts/<slug>/`. Write `book.json` as the bind file.
 
 ### 2. Chapter plan
 
@@ -64,8 +64,8 @@ Every published raster in the book must be unique by path and by bytes. A figure
 Before delivery run
 
 ```bash
-python3 /home/workdir/.grok/skills/book/scripts/audit_unique_images.py \
-  /home/workdir/artifacts/<slug>/book.json
+python3 /root/.grok/server-skills/book/scripts/audit_unique_images.py \
+  /workspace/artifacts/<slug>/book.json
 ```
 
 Exit code 1 blocks delivery. Replace each colliding figure with a new generate locked to that chapter's named objects, then audit again.
@@ -118,12 +118,12 @@ https://digitalmarketingco.org/r/?src=book&chapter={chapter_id}
 
 Prefer folio/print/clip builders already on disk. Letter page. Keep-with-next headings. Compiled math only. Living copyright footer via /copyright when the user asked for house stamp.
 
-Save the PDF as `/home/workdir/artifacts/<Title_Slug>_Book.pdf`.
+Save the PDF as `/workspace/artifacts/<Title_Slug>_Book.pdf`.
 
 ### 6. Visual QA
 
 ```bash
-pdftoppm -png -r 150 /home/workdir/artifacts/<Title_Slug>_Book.pdf /tmp/book-page
+pdftoppm -png -r 150 /workspace/artifacts/<Title_Slug>_Book.pdf /tmp/book-page
 ```
 
 Inspect every page. Rebuild if text is clipped, a picture repeats, a figure sits in a side gutter, glyphs are missing, raw TeX leaked, or U+FFFC / empty boxes appear.
@@ -149,29 +149,26 @@ Stop after skill files exist when the user only asked to create /book.
 
 Load `assets/negative-keywords.csv` and `assets/negative-keywords.xlsx` before any concatenated generate prompt. Do not write figure, gazette, atlas, folio, deep, exhaustive, AI, xAI, or ChatGPT into that prompt. Slash flags `/atlas`, `/folio`, `/deep`, `/itqe` stay routing tokens only. Do not apply top or bottom fades. Print banners and figures at full opacity.
 
+## Publication bar
 
-## Negative gate (mandatory before any deliverable)
+This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
-Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
+2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
+3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
+4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
+5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
+6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
+7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
+8. Headings keep with the next paragraph. Orphan headings move to the next page.
+9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
 
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
+## Delivery
 
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

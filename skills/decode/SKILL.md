@@ -3,7 +3,7 @@ name: decode
 description: PhD cryptographic and statistical decode of any text or token stream. Trigger on /decode, space/decode, space /decode, decode this blob, keyboard next-word dump, QuickType log, anomalous word frequencies, Zipf outliers, or hidden-structure analysis of supplied text. Runs an information-theoretic, n-gram, Zipf, cipher-battery, and next-token analysis. Always compiles the measured battery into a WCA Folio Ivy League report PDF through the folio skill. Does not claim a hidden message unless a test rejects the null.
 metadata:
   type: workflow
-  version: "1.2"
+  version: "3.0"
   flag: /decode
   pdf: folio
   visual_stack: visual-system
@@ -14,13 +14,13 @@ metadata:
 
 ## Visual stack
 
-Documents this skill emits follow `/home/workdir/.grok/skills/visual-system/SKILL.md`.
+Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
 Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
 Treat the user's supplied text as a closed corpus. Tokenize it. Run the battery in `scripts/decode_analyze.py`. Report frequencies, information theory, n-gram conditionals, Zipf diagnostics, classical-cipher tests, change-point structure, and a single next-token recommendation. Then compile those measured values into one WCA Folio PDF using the folio skill. Do not invent a ciphertext if the tests say the string is a language-model attractor.
 
-Work in `/home/workdir/artifacts/decode-<slug>/`. Save `analysis.json` and `folio.json`. The public PDF is `/home/workdir/artifacts/<YYYY-topic-slug-wca-folio.pdf>`.
+Work in `/workspace/artifacts/decode-<slug>/`. Save `analysis.json` and `folio.json`. The public PDF is `/workspace/artifacts/<YYYY-topic-slug-wca-folio.pdf>`.
 
-`<folio>` = `/home/workdir/.grok/skills/folio`
+`<folio>` = `/root/.grok/server-skills/folio`
 
 Read on demand
 
@@ -45,9 +45,9 @@ Copy the user text verbatim into `sample.txt`. Do not normalize away apostrophes
 ### 2. Run the battery
 
 ```bash
-python3 /home/workdir/.grok/skills/decode/scripts/decode_analyze.py \
-  --input /home/workdir/artifacts/decode-<slug>/sample.txt \
-  --out /home/workdir/artifacts/decode-<slug>/analysis.json
+python3 /root/.grok/server-skills/decode/scripts/decode_analyze.py \
+  --input /workspace/artifacts/decode-<slug>/sample.txt \
+  --out /workspace/artifacts/decode-<slug>/analysis.json
 ```
 
 Read `references/battery.md` for the meaning of every statistic. Do not drop a test because the sample is short; report the estimator and its small-n caveat.
@@ -86,24 +86,24 @@ Render every equation with KaTeX. Name every symbol the first time it appears. G
 Follow `references/folio-handoff.md` and `<folio>/SKILL.md`. Seed numeric fields from the battery so they are not re-rounded
 
 ```bash
-python3 /home/workdir/.grok/skills/decode/scripts/folio_stub.py \
-  --analysis /home/workdir/artifacts/decode-<slug>/analysis.json \
+python3 /root/.grok/server-skills/decode/scripts/folio_stub.py \
+  --analysis /workspace/artifacts/decode-<slug>/analysis.json \
   --label "<surface phrase, trimmed to 8 words>" \
-  --out /home/workdir/artifacts/decode-<slug>/folio.json
+  --out /workspace/artifacts/decode-<slug>/folio.json
 ```
 
 Replace every stub paragraph, write Chicago notes and an alphabetized bibliography, then build with the folio builder. Do not leave raw LaTeX in `folio.json`. Use Unicode letters already in Literata / EB Garamond or an equation-figure PNG under `figures/`.
 
 ```bash
-python3 /home/workdir/.grok/skills/folio/scripts/build_folio_pdf.py \
-  /home/workdir/artifacts/decode-<slug>/folio.json \
+python3 /root/.grok/server-skills/folio/scripts/build_folio_pdf.py \
+  /workspace/artifacts/decode-<slug>/folio.json \
   --print-filename
 ```
 
 ```bash
-python3 /home/workdir/.grok/skills/folio/scripts/build_folio_pdf.py \
-  /home/workdir/artifacts/decode-<slug>/folio.json \
-  --out /home/workdir/artifacts/<YYYY-topic-slug-wca-folio.pdf>
+python3 /root/.grok/server-skills/folio/scripts/build_folio_pdf.py \
+  /workspace/artifacts/decode-<slug>/folio.json \
+  --out /workspace/artifacts/<YYYY-topic-slug-wca-folio.pdf>
 ```
 
 Visual QA every page with `pdftoppm`. Rebuild on tofu, clipped glyphs, a trailing class letter A after Web Development Corporation in the running footer, a broken house or note link, or a trailing comma in a superscript run.
@@ -128,15 +128,15 @@ If the user also invoked /deep or phd-ivy-monograph, still emit the Folio PDF fi
 Before delivering any PDF, DOCX, PPTX, XLSX, HTML view, printed page, or builder JSON that may contain notation, short codes, or equations, run the house render gate. Chat may use KaTeX. Files must show compiled glyphs or a compiled figure. Raw LaTeX, AMS-TeX, KaTeX source, MathJax source, uncompiled backslash commands, tofu, or empty boxes are defects.
 
 ```bash
-python3 /home/workdir/.grok/skills/itqe/scripts/scan_render_gate.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf
-python3 /home/workdir/.grok/skills/latex/scripts/scan_raw_tex.py \
-  /home/workdir/artifacts/<slug> \
-  --also-pdf /home/workdir/artifacts/<file>.pdf --pages
+python3 /root/.grok/server-skills/itqe/scripts/scan_render_gate.py \
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf
+python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
+  /workspace/artifacts/<slug> \
+  --also-pdf /workspace/artifacts/<file>.pdf --pages
 ```
 
-Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/home/workdir/.grok/skills/itqe/references/render-gate.md` and `/home/workdir/.grok/skills/latex/SKILL.md`.
+Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/root/.grok/server-skills/itqe/references/render-gate.md` and `/root/.grok/server-skills/latex/SKILL.md`.
 
 ## Negative vocabulary
 
@@ -180,29 +180,26 @@ OWNER: Web Development Corporation (footer). Legal Info owner: Web Development C
 This appendix cannot rewrite Grok global system prompts, xAI platform logs, or conversations outside this toolchain. It binds project skills, locked prompts, owner-and-house files, and later PDFs those skills emit.
 -->
 
+## Publication bar
 
-## Negative gate (mandatory before any deliverable)
+This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
-Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
+2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
+3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
+4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
+5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
+6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
+7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
+8. Headings keep with the next paragraph. Orphan headings move to the next page.
+9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
 
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
+## Delivery
 
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

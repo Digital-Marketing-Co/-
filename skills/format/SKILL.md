@@ -3,7 +3,7 @@ name: format
 description: Reformat quoted text after the /format flag into Proper Case, UPPERCASE, lowercase, or Small Caps using case-insensitive acronyms PC, UC, AC, LC, and SC. Use when the user types /format, asks for Proper Case email subjects, All Caps, lowercase, or small-caps restyling of a quoted string.
 metadata:
   type: workflow
-  version: "1.0"
+  version: "3.0"
   flag: /format
   updatable: true
 ---
@@ -12,7 +12,7 @@ metadata:
 
 Take the quoted string after `/format` and rewrite only its letters into the case the acronym names. Do not invent text. Do not edit unquoted instructions.
 
-`<skill>` = `/home/workdir/.grok/skills/format`
+`<skill>` resolves with `interop/scripts/resolve_root.py format` (live host: `/root/.grok/server-skills/format`)
 
 If the user only asked to create or revise this skill and supplied no quoted payload, stop after the skill files exist. Do not invent a subject line.
 
@@ -46,7 +46,7 @@ Several quoted spans in one prompt are several jobs. Run each span through the s
 Always run the locked script. Do not hand-case the letters.
 
 ```bash
-python3 /home/workdir/.grok/skills/format/scripts/format_case.py --mode MODE --json -- "PAYLOAD"
+python3 /root/.grok/server-skills/format/scripts/format_case.py --mode MODE --json -- "PAYLOAD"
 ```
 
 `MODE` is the raw alias the user typed (`PC`, `All Caps`, `sc`, …). The script normalizes it.
@@ -78,29 +78,12 @@ If the script exits non-zero, print the stderr and stop. Do not silently fall ba
 
 Do not emit a PDF, banner, or monograph for a `/format` request alone.
 
+## Delivery
 
-## Negative gate (mandatory before any deliverable)
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
-Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
-
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
-
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
-
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

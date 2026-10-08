@@ -3,7 +3,7 @@ name: prompt-engineer
 description: Expand the text after /PromptEngineer into an Above-Genius PhD implementation of that pseudoprompt, then build it with holographic 3D glass gradient animated Tailwind, OG and Twitter cards, and the 521 auditor metrics. Trigger on /PromptEngineer, /prompt-engineer, PromptEngineer, PhD implementation of this prompt, expand this pseudoprompt, mega menu apps nav, Greg 521, or 521 metrics of the free website auditor.
 metadata:
   type: workflow
-  version: "1.0"
+  version: "3.0"
   flag: /PromptEngineer
   stacks: generate, visual-system, negative, images, banner
   owner: Web Development Corporation
@@ -19,10 +19,10 @@ This skill is not `/generate`. `/generate` writes a prompt for a later run. This
 
 If the user only asked to create or revise this skill and supplied no separate product remainder, stop after the skill files exist. Do not invent a campaign.
 
-`<skill>` = `/home/workdir/.grok/skills/prompt-engineer`
-`<visual>` = `/home/workdir/.grok/skills/visual-system`
-`<negative>` = `/home/workdir/.grok/skills/negative`
-`<generate>` = `/home/workdir/.grok/skills/generate`
+`<skill>` resolves with `interop/scripts/resolve_root.py prompt-engineer` (live host: `/root/.grok/server-skills/prompt-engineer`)
+`<visual>` = `/root/.grok/server-skills/visual-system`
+`<negative>` = `/root/.grok/server-skills/negative`
+`<generate>` = `/root/.grok/server-skills/generate`
 
 Read on demand
 
@@ -36,8 +36,8 @@ Read on demand
 - `assets/expansion-skeleton.md` — spec template
 - `assets/metrics-521.json` — machine checklist
 - `scripts/parse_prompt_engineer.py` — remainder parser
-- `/home/workdir/.grok/skills/visual-system/references/beauty-lock.md`
-- `/home/workdir/.grok/skills/negative/references/blocklist.md`
+- `/root/.grok/server-skills/visual-system/references/beauty-lock.md`
+- `/root/.grok/server-skills/negative/references/blocklist.md`
 
 ## When this skill runs
 
@@ -57,7 +57,7 @@ Read on demand
 `mode` is optional. Allowed slugs — `spec`, `build`, `audit`, `nav`. Default is `build`.
 
 - `spec` — expand only. Emit the PhD spec in a fenced block. Do not write app files.
-- `build` — expand, then write the product under `/home/workdir/artifacts/<slug>/`.
+- `build` — expand, then write the product under `/workspace/artifacts/<slug>/`.
 - `audit` — score an existing local page or URL against `references/metrics-521.md`.
 - `nav` — treat the remainder as an Apps-suite change. Force `references/ia-sync.md`.
 
@@ -85,7 +85,7 @@ Examples
 ### 1. Parse
 
 ```bash
-python3 /home/workdir/.grok/skills/prompt-engineer/scripts/parse_prompt_engineer.py \
+python3 /root/.grok/server-skills/prompt-engineer/scripts/parse_prompt_engineer.py \
   --remainder "{{input}}"
 ```
 
@@ -145,7 +145,7 @@ When the remainder names apps, mega menu, navigation, footer accordion, or 404 i
 
 `spec` mode stops after the fenced spec.
 
-`build` and default modes write files under `/home/workdir/artifacts/<slug>/`.
+`build` and default modes write files under `/workspace/artifacts/<slug>/`.
 
 Minimum file set for an HTML product
 
@@ -162,7 +162,7 @@ Generate route stills with the image tools when the user also wants pixels in th
 
 ### 7. Negative and house gates
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` before delivery. Sweep visible copy, alt text, captions, and filenames.
+Read `/root/.grok/server-skills/negative/SKILL.md` before delivery. Sweep visible copy, alt text, captions, and filenames.
 
 Do not leak skill flags, maker names, or process talk into user-facing UI copy.
 
@@ -195,17 +195,12 @@ Render local HTML with the file render component when a preview file exists.
 
 If the user only asked to install or extend the skill, stop. Do not invent a sample site.
 
-## House interop
+## Delivery
 
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

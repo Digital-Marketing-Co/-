@@ -3,7 +3,7 @@ name: coffee
 description: Compile a landscape coffee-table PDF of full-bleed generated stills after the user types /coffee plus a subject and a page count. Use when the user types /coffee, asks for a coffee table book, a full-bleed picture book, or a large-format image album with no page margins. Page one is a unifying cover still with an elegant readable title. Every later page is one unique full-bleed generate that fills the trim on top, right, left, and bottom.
 metadata:
   type: workflow
-  version: "1.0"
+  version: "3.0"
   flag: /coffee
   owner: Web Development Corporation
   visual_stack: visual-system
@@ -13,9 +13,9 @@ metadata:
 
 Compile one landscape coffee-table PDF. Every printed page is a single generated still drawn at x = 0, y = 0, width = page, height = page. No text inset. No side gutter. No letterbox. No top or bottom paper band. No alpha ramp on any edge.
 
-Skill path is `/home/workdir/.grok/skills/coffee`.
+Skill path is `/root/.grok/server-skills/coffee`.
 
-Documents this skill emits follow `/home/workdir/.grok/skills/visual-system/SKILL.md`. Pick a genre palette with `/home/workdir/.grok/skills/visual-system/scripts/pick_palette.py`. Do not change this skill's locked display faces. Generate prompts append the depth clause in `visual-system/references/depth.md` and the beauty lock in `references/prompts.md`. Every still is a fresh generate. No stock download. No reused path or hash.
+Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`. Pick a genre palette with `/root/.grok/server-skills/visual-system/scripts/pick_palette.py`. Do not change this skill's locked display faces. Generate prompts append the depth clause in `visual-system/references/depth.md` and the beauty lock in `references/prompts.md`. Every still is a fresh generate. No stock download. No reused path or hash.
 
 Read on demand
 
@@ -45,7 +45,7 @@ After `/coffee`, take the rest of the user text. The helper `scripts/parse_coffe
 4. If `subject` is empty, stop and ask.
 5. Clamp `page_count` to 2..40.
 
-Work in `/home/workdir/artifacts/<slug>/`. Write `coffee.json` as the bind file. Slug the subject in ASCII with underscores.
+Work in `/workspace/artifacts/<slug>/`. Write `coffee.json` as the bind file. Slug the subject in ASCII with underscores.
 
 Examples of a valid ask
 
@@ -91,7 +91,7 @@ Save raw files as
 - `stills/raw-01-cover.png`
 - `stills/raw-NN.png` for leaves
 
-Do not write AI, xAI, or ChatGPT into any prompt. Do not write tokens from `/home/workdir/.grok/skills/negative/references/blocklist.md` into prompts, titles, captions, filenames, or alt text.
+Do not write AI, xAI, or ChatGPT into any prompt. Do not write tokens from `/root/.grok/server-skills/negative/references/blocklist.md` into prompts, titles, captions, filenames, or alt text.
 
 After each generate, open the file with the image reader. Reject and regenerate up to three times when the still is soft, letterboxed, watermarked, full of baked caption type, off-subject, or a near-duplicate of an earlier page.
 
@@ -100,7 +100,7 @@ After each generate, open the file with the image reader. Reject and regenerate 
 Every still must cover the locked page with zero margin.
 
 ```bash
-python3 /home/workdir/.grok/skills/coffee/scripts/fit_still.py \
+python3 /root/.grok/server-skills/coffee/scripts/fit_still.py \
   stills/raw-NN.png \
   stills/page-NN.png
 ```
@@ -110,7 +110,7 @@ The script cover-crops to 3600 x 2700 with LANCZOS, then a light UnsharpMask. It
 Cover title is composited after the fit, never baked into the generate.
 
 ```bash
-python3 /home/workdir/.grok/skills/coffee/scripts/composite_cover.py \
+python3 /root/.grok/server-skills/coffee/scripts/composite_cover.py \
   stills/page-01.png \
   --title "THE TITLE" \
   --subtitle "optional line" \
@@ -124,9 +124,9 @@ Interior leaves stay pure stills. Do not composite running text on leaves. Do no
 ### 4. Build the PDF
 
 ```bash
-python3 /home/workdir/.grok/skills/coffee/scripts/build_coffee_pdf.py \
-  /home/workdir/artifacts/<slug>/coffee.json \
-  --out /home/workdir/artifacts/<Title_Slug>_Coffee.pdf
+python3 /root/.grok/server-skills/coffee/scripts/build_coffee_pdf.py \
+  /workspace/artifacts/<slug>/coffee.json \
+  --out /workspace/artifacts/<Title_Slug>_Coffee.pdf
 ```
 
 The builder draws each fitted still onto one 12 x 9 in page at (0, 0) with width 12 in and height 9 in. No crop box inset. No printer marks. MediaBox equals the image.
@@ -140,8 +140,8 @@ Put living copyright in XMP and document info. Default owner is Web Development 
 ### 5. Uniqueness audit
 
 ```bash
-python3 /home/workdir/.grok/skills/coffee/scripts/audit_unique_images.py \
-  /home/workdir/artifacts/<slug>/coffee.json
+python3 /root/.grok/server-skills/coffee/scripts/audit_unique_images.py \
+  /workspace/artifacts/<slug>/coffee.json
 ```
 
 Exit code 1 blocks delivery. Replace each colliding still and audit again.
@@ -149,7 +149,7 @@ Exit code 1 blocks delivery. Replace each colliding still and audit again.
 ### 6. Visual QA
 
 ```bash
-pdftoppm -png -r 120 /home/workdir/artifacts/<Title_Slug>_Coffee.pdf /tmp/coffee-page
+pdftoppm -png -r 120 /workspace/artifacts/<Title_Slug>_Coffee.pdf /tmp/coffee-page
 ```
 
 Inspect every page. Rebuild when any of these appear
@@ -188,31 +188,28 @@ Never mix sizes inside one book.
 
 ## Negative vocabulary
 
-Load `/home/workdir/.grok/skills/negative/references/blocklist.md` before concatenated generate prompts and before writing titles. Do not write blocked tokens into prompts, titles, filenames, alt text, or QA notes. Slash flags stay routing tokens only.
+Load `/root/.grok/server-skills/negative/references/blocklist.md` before concatenated generate prompts and before writing titles. Do not write blocked tokens into prompts, titles, filenames, alt text, or QA notes. Slash flags stay routing tokens only.
 
+## Publication bar
 
-## Negative gate (mandatory before any deliverable)
+This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
-Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
+1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
+2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
+3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
+4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
+5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
+6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
+7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
+8. Headings keep with the next paragraph. Orphan headings move to the next page.
+9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
 
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
+## Delivery
 
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

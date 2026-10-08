@@ -11,7 +11,7 @@ Turn the remainder after `/tpmorpedo` into two exhaustive public datasets and on
 
 This skill writes the prompt always. It mines and writes page files only when the remainder asks to run, mine, build, or upgrade pages. If the user only asked to install this skill and supplied no subject, stop after the skill files exist.
 
-`<skill>` = `/root/.grok/server-skills/tpmorpedo`
+`<skill>` resolves with `interop/scripts/resolve_root.py tpmorpedo` (live host: `/root/.grok/server-skills/tpmorpedo`)
 
 Read on demand
 
@@ -123,17 +123,12 @@ Read `/root/.grok/server-skills/negative/SKILL.md`. Sweep the filled prompt and 
 
 If the user only asked to install or extend the skill, stop. Do not invent a sample mine.
 
-## House interop
+## Delivery
 
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.

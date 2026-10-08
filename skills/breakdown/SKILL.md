@@ -3,7 +3,7 @@ name: breakdown
 description: After /breakdown, take every following word and split it into morphemes, prefixes, roots, suffixes, combining forms, and inflectional endings. Explain each piece, reassemble the sense, then give the current definition and the full etymology, history, and evolution of that word. Use when the user types /breakdown, breakdown the words, word-by-word morphology, morpheme split, or etymology of the list after the flag.
 metadata:
   type: workflow
-  version: "1.0"
+  version: "3.0"
   flag: /breakdown
   updatable: true
 ---
@@ -12,7 +12,7 @@ metadata:
 
 After the skill flag fires, treat the remainder of the user message as a word list. For each token, decompose the word itself into component parts, explain every part, put the parts back together, then output the definition and the full etymology, history, and evolution of that word.
 
-Skill path is /home/workdir/.grok/skills/breakdown
+Skill path is /root/.grok/server-skills/breakdown
 
 If the user only asked to create or revise this skill and supplied no word list, stop after the skill files exist. Do not invent sample words.
 
@@ -94,29 +94,12 @@ Keep each word's block self-contained so a reader can copy one word without the 
 
 /format does not restyle the interior of a breakdown block unless the user quoted a payload for /format separately.
 
+## Delivery
 
-## Negative gate (mandatory before any deliverable)
+Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
-Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
-
-```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
-```
-
-Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
-
-## House interop
-
-Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.
-
-
-## Final gate
-
-Run /negative as the last step of this skill, after every other section, before chat, a file, a caption, a filename, or alt text is delivered.
-
-1. Read the blocklist at skills/negative/references/blocklist.md.
-2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
+2. Extract visible text from chat, the file, captions, filenames, and alt text.
+3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
