@@ -31,3 +31,7 @@ Keep Digital-Marketing-Co/- as the shared skill source for Grok and ChatGPT.
 ## ChatGPT
 
 ChatGPT cannot install from this push by itself. Tell the user to run the prompt in CHATGPT-PROMPT.md, or to re-upload only the skills named in the latest ledger.
+
+## House interop
+
+Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.

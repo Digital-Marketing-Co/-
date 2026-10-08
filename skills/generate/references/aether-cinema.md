@@ -13,7 +13,7 @@ Default studio when type is video, when the remainder names gnitekram or Aether,
 - Tone in public copy — precision, control, determinism, privacy
 - Public entry — https://gnitekram.org/ and /gate
 
-Do not invent Year-of-studio lore unless the live page still shows it. Do not claim an affiliation with <a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a> unless the user asked to market Aether through that house.
+Do not invent Year-of-studio lore unless the live page still shows it. Do not claim an affiliation with Digital Marketing Company unless the user asked to market Aether through that house.
 
 ## Character and policy clauses (append to every Aether video prompt)
 

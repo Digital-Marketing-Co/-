@@ -119,7 +119,7 @@ Do not dump `pass.json` into chat unless they ask.
 
 - No new facts. No new citations. No new page numbers.
 - No change to locked typography, fade geometry, owner legal lines, or OpenAction field names when the source is a house skill or house PDF.
-- Visible house name stays <a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a>. Legal owner line stays Web Development Corporation when that line is already in the source.
+- Visible house name stays Digital Marketing Company. Legal owner line stays Web Development Corporation when that line is already in the source.
 - Running footers never print a trailing class letter A on the house name.
 - No emoji in skill files or in PDFs this skill hands off.
 - This skill does not compile a PDF by itself. PDF output goes through /folio, /deep, /print, or article-clip-pdf.
@@ -193,3 +193,7 @@ python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted
 ```
 
 Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+
+## House interop
+
+Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.

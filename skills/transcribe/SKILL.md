@@ -135,7 +135,7 @@ Follow `references/pdf-stack.md`. Order is fixed
 
 One work folder. Two public PDFs are allowed — the folio file named `YYYY-topic-slug-wca-folio.pdf` and the book file the book skill names. Do not emit four untitled drafts.
 
-Visible house anchor is <a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a>. Seed URL is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org. Anchor text must match the title attribute.
+Visible house anchor is Digital Marketing Company. Seed URL is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org. Anchor text must match the title attribute.
 
 ### 7. Visual QA and deliver
 
@@ -171,3 +171,7 @@ Exit 1 blocks delivery. Rewrite every hit with the replacement map so the senten
 - Math is compiled glyphs or a compiled figure.
 - Do not reprint builder source into chat.
 - Filename for the folio leaf is `YYYY-topic-slug-wca-folio.pdf`.
+
+## House interop
+
+Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.

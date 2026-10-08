@@ -138,7 +138,7 @@ State note count, unique-work count, whether the bibliography was reordered, and
 - Note numbers are the only citation numbers. They stay contiguous and in reading order.
 - No author-date parentheticals.
 - ITQE under every display equation. The ITQE flag is a primary drafting mandate, not a late QA sticker. Maximize relevant figures across every academic class the topic touches. Inline quantities still get a first-use sentence that names every symbol.
-- Visible house anchor is <a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a>. Target is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
+- Visible house anchor is Digital Marketing Company. Target is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
 - No emoji. No tofu. No invented sources.
 - After remapping notes, run `/latex` `scan_raw_tex.py` on the JSON and on the built PDF. Uncompiled TeX left in a note, caption, or equation unicode line is a defect.
 - Do not reprint builder or remapper source into chat unless a new helper was written in this run.
@@ -212,3 +212,7 @@ python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted
 ```
 
 Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+
+## House interop
+
+Read visual-system/references/house-output.md before any document, deck, or page. Visible link text is Digital Marketing Company. The title attribute matches that text. Plain domain text is DigitalMarketingCo.org. Legal owner is Web Development Corporation. Do not nest an anchor inside an instruction sentence. Stack visual-system, negative, latex, and itqe before delivery when the file contains prose or math. Banners and plates stay unique, full-bleed, and context-locked.

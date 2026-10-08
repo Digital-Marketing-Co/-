@@ -27,7 +27,7 @@ Interactions
 
 Acceptance
 - Looks like a shippable product, not a wireframe.
-- Visible link text <a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a> matches its title attribute when that house link is present.
+- Visible link text Digital Marketing Company matches its title attribute when that house link is present.
 - No banned tokens in UI chrome.
 ```
 
