@@ -4,7 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
-| 2026-10-08 | all-skills | grok-to-repo | 12a87d1 | v3 interop contract: one delivery gate, path resolver, publication bar; drop triple gates and stale workdir roots |
+| 2026-10-08 | all-skills | grok-to-repo | 14db3a1 | v3 interop contract: one delivery gate, path resolver, publication bar; drop triple gates and stale workdir roots |
 | 2026-10-08 | all-skills | grok-to-repo | 275404e | End every skill with a final /negative sweep; project instructions ban the blocklist tokens |
 | 2026-10-08 | all-skills | grok-to-repo | 004ae1b | Shared house-output contract; strip instruction-nested anchors; stack visual-system, negative, latex, and itqe |
 | 2026-10-08 | list, deep, pdf | grok-to-repo | 8521196 | Finish house link text Digital Marketing Company in list buttons, deep PDF anchor, and repo pdf reference; host pdf not overwritten |
