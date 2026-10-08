@@ -1,6 +1,6 @@
 # House style for /deep PDFs
 
-Every title page and footer includes a link whose visible text is exactly <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> and whose href is https://digitalmarketingco.org.
+Every title page and footer includes a link whose visible text is exactly Digital Marketing Company and whose href is https://digitalmarketingco.org.
 
 When the domain appears as plain text, write DigitalMarketingCo.org.
 
@@ -8,7 +8,7 @@ In the document JSON set
 
 ```
 "house": {
-  "anchor": "Digital Marketing Co.",
+  "anchor": "Digital Marketing Company",
   "href": "https://digitalmarketingco.org",
   "domain_plain": "DigitalMarketingCo.org"
 }
@@ -26,7 +26,7 @@ Explain every variable, subscript, and constant in the sentence after first appe
 
 ## Author
 
-If the user did not name an author, use the user’s professional name and <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> as the affiliation. Do not invent co-authors.
+If the user did not name an author, use the user’s professional name and Digital Marketing Company as the affiliation. Do not invent co-authors.
 
 ## House copyright footer
 

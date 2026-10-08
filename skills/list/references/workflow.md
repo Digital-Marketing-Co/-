@@ -143,7 +143,7 @@ Each section **and each subsection** is a body node. Notes and Bibliography do n
 
 Paragraphs that cite a source use `{{n}}` markers. Explain every variable, subscript, and constant the first time an equation appears.
 
-Visible house anchor is <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>. Target is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org. Anchor text must equal the title attribute.
+Visible house anchor is <a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a>. Target is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org. Anchor text must equal the title attribute.
 
 ### 6. Stacked figures and footer
 
@@ -181,7 +181,7 @@ Give the user the PDF. State keeper count, round count, empty-round pair that cl
 - Images print at the largest sharp size the bitmap supports. No upscale, no aliasing, no blur, no squash. Full bleed only when that rule still holds.
 - No raw TeX on a visible page. No tofu. No checkerboard RGB. No reused figure bytes.
 - No emoji. No invented sources. No fake agency seals.
-- Visible house link text is <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>.
+- Visible house link text is <a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a>.
 
 ## Render gate (mandatory with /itqe and /latex)
 

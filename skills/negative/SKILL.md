@@ -57,7 +57,7 @@ Re-scan until CLEAN. Block delivery on leftover hits.
 - Skill-process leaks (slash flags and "this skill" sentences inside a delivered file)
 - Banned section titles (`conclusion` family)
 
-Watermark terms are the contextual substitutes for banned figurative nouns — atlas, gazette, plate, gazetteer, house. They are not bans. <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>, DigitalMarketingCo.org, and Web Development Corporation may print.
+Watermark terms are the contextual substitutes for banned figurative nouns — atlas, gazette, plate, gazetteer, house. They are not bans. <a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a>, DigitalMarketingCo.org, and Web Development Corporation may print.
 
 Do not rewrite the user's own typed program names or street addresses when the user is talking about their life. That carve-out is only for user-supplied facts, not for generated slop.
 

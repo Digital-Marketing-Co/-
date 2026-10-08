@@ -1,6 +1,6 @@
 ---
 name: book
-description: Compile a letter-size book PDF from a topic, manuscript, URL list, or attached text with unique futuristic stunning stock-quality generated banners and mid-chapter plates, no repeated image bytes or paths, and a rendered <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> HTML image-link. Use when the user types /book, asks for a book reprint, chaptered volume, illustrated book PDF, or the prior clip-plus-figures pipeline as a reusable skill. Enforces image non-repetition, section-locked banners, window-locked plates, and a live HTML anchor whose visible text matches its title attribute.
+description: Compile a letter-size book PDF from a topic, manuscript, URL list, or attached text with unique futuristic stunning stock-quality generated banners and mid-chapter plates, no repeated image bytes or paths, and a rendered Digital Marketing Company HTML image-link. Use when the user types /book, asks for a book reprint, chaptered volume, illustrated book PDF, or the prior clip-plus-figures pipeline as a reusable skill. Enforces image non-repetition, section-locked banners, window-locked plates, and a live HTML anchor whose visible text matches its title attribute.
 metadata:
   type: workflow
   version: "1.3"
@@ -16,7 +16,7 @@ metadata:
 
 Documents this skill emits follow `/home/workdir/.grok/skills/visual-system/SKILL.md`.
 Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner and plate prompts append the volumetric clause in `visual-system/references/depth.md` and the beauty lock in `references/beauty-lock.md` plus `visual-system/references/beauty-lock.md`. Every plate is a fresh house generate — futuristic, stunning, editorial stock-photo quality — locked to that section (banner) or to the surrounding 500-word window (mid-chapter). No stock download. No reuse.
-Compile one letter-size book PDF. Reuse the house reprint and figure rules from article-clip-pdf, banner, images, folio, print, copyright, latex, and itqe. Do not invent a second copy of any picture. Embed a rendered HTML image-link whose visible anchor text is exactly <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> and whose title attribute is exactly <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>.
+Compile one letter-size book PDF. Reuse the house reprint and figure rules from article-clip-pdf, banner, images, folio, print, copyright, latex, and itqe. Do not invent a second copy of any picture. Embed a rendered HTML image-link whose visible anchor text is exactly Digital Marketing Company and whose title attribute is exactly Digital Marketing Company.
 
 Skill path is `/home/workdir/.grok/skills/book`.
 
@@ -103,8 +103,8 @@ The HTML must render as a live image-wrapped anchor, never as replacement charac
 
 Locked strings
 
-- Visible anchor text (when text is used instead of the mark) = <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>
-- title attribute = <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>
+- Visible anchor text (when text is used instead of the mark) = Digital Marketing Company
+- title attribute = Digital Marketing Company
 - href = https://digitalmarketingco.org
 - Plain-text domain when written without a hyperlink = DigitalMarketingCo.org
 

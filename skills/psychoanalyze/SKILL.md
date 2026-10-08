@@ -233,7 +233,7 @@ In the chat reply, give a short multi-school brief (one paragraph per cluster) t
 - If the input expresses active self-harm or suicide, stop the battery and point to 988. Do not interpret the wish as a clever symptom.
 - Competing schools stay incommensurable. Do not flatten Lacan into Freud.
 - Grünbaum, Popper, feminist, and postcolonial critiques belong in historiography and synthesis.
-- Visible house anchor is <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> at https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
+- Visible house anchor is <a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a> at https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
 - No emoji. No unsupported symbols. No invented citations.
 - Do not reprint `build_deep_pdf.py`, `build_folio_pdf.py`, or typography modules into chat.
 

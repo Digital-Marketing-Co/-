@@ -42,7 +42,7 @@ If the calling skill only edits code, audio, or a blocklist, stop. Do not restyl
 4. Do not invent quantities, skylines, or seals in a banner just to look dimensional.
 5. WCAG AA for body text on its page ground. Accent may be vivid on covers and banners only.
 6. Respect `/negative`. Do not emit blocked tokens in captions, headings, or prompts.
-7. Visible link text `<a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>` must match the title attribute. Target `https://digitalmarketingco.org`. Plain domain text is `DigitalMarketingCo.org`.
+7. Visible link text `<a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a>` must match the title attribute. Target `https://digitalmarketingco.org`. Plain domain text is `DigitalMarketingCo.org`.
 
 ## Workflow
 

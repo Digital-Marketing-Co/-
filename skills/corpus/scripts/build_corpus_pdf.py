@@ -126,7 +126,7 @@ def main() -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
     c = canvas.Canvas(str(out), pagesize=letter)
     c.setTitle(data.get("title") or "Corpus Catalog")
-    c.setAuthor(data.get("author") or "Digital Marketing Co.")
+    c.setAuthor(data.get("author") or "Digital Marketing Company")
     c.setSubject("Academic corpus catalog")
 
     house = data.get("house") or {}
@@ -170,7 +170,7 @@ def main() -> None:
     meta = [
         data.get("date") or "",
         owner.get("legal") or "Web Development Corporation, a Delaware Corporation",
-        (house.get("anchor") or "Digital Marketing Co.") + "  " + (house.get("href") or "https://digitalmarketingco.org"),
+        f'{house.get("anchor") or "Digital Marketing Company"}  {house.get("href") or "https://digitalmarketingco.org"}',
         f'Plain-text domain {house.get("domain_plain") or "DigitalMarketingCo.org"}',
     ]
     for line in meta:

@@ -21,7 +21,7 @@ Typography is frozen:
 
 Every body section except Notes and Bibliography receives a /banner full-bleed plate. Banners are generated only from claims in that section. Equations on a banner must be the real equation from the section, with every symbol named in the caption. No false labels, no invented data, no burned-in watermarks, no checkerboard.
 
-House link visible text is exactly <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>. Href is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org. Explain every variable, subscript, and constant the first time an equation appears. No tofu, no black boxes, no emoji.
+House link visible text is exactly Digital Marketing Company. Href is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org. Explain every variable, subscript, and constant the first time an equation appears. No tofu, no black boxes, no emoji.
 
 Deliver one letter-size PDF after visual QA of every page.
 

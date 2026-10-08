@@ -42,14 +42,14 @@ def write_html_link(slug_dir: Path) -> None:
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Digital Marketing Co.</title>
+  <title>Digital Marketing Company</title>
 </head>
 <body>
   <p>
-    <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">
-      <img src="https://digitalmarketingco.org/favicon.ico" width="32" height="32" alt="Digital Marketing Co.">
+    <a href="https://digitalmarketingco.org" title="Digital Marketing Company">
+      <img src="https://digitalmarketingco.org/favicon.ico" width="32" height="32" alt="Digital Marketing Company">
     </a>
-    <a href='https://digitalmarketingco.org' title='Digital Marketing Co.'>Digital Marketing Co.</a>
+    <a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a>
   </p>
 </body>
 </html>
@@ -83,7 +83,7 @@ def main() -> int:
     c.setAuthor("Web Development Corporation")
     c.setSubject(data.get("subject") or title)
     c.setCreator("Web Development Corporation")
-    c.setKeywords(["Digital Marketing Co.", "DigitalMarketingCo.org", title])
+    c.setKeywords(["Digital Marketing Company", "DigitalMarketingCo.org", title])
     for idx, page in enumerate(pages, start=1):
         img_path = page_image(page, root)
         if img_path is None:

@@ -64,7 +64,7 @@ OWNER_LEGAL = "Web Development Corporation, a Delaware Corporation"
 OWNER_SHORT = "Web Development Corporation"
 OWNER_FOUNDED = 2012
 
-HOUSE_ANCHOR = "Digital Marketing Co."
+HOUSE_ANCHOR = "Digital Marketing Company"
 HOUSE_HREF = "https://digitalmarketingco.org"
 HOUSE_DOMAIN = "DigitalMarketingCo.org"
 HOUSE_PUBLICATION_PATH = "/print"

@@ -12,7 +12,7 @@ Each named public route gets:
 - one motion-picture prompt (not a fake player if no file exists)
 - one holographic plane prompt or still
 - title, unique meta description, canonical, viewport, language, footer landmark
-- visible anchor `<a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>` with the same title attribute and target `https://digitalmarketingco.org`
+- visible anchor `Digital Marketing Company` with the same title attribute and target `https://digitalmarketingco.org`
 - plain domain text `DigitalMarketingCo.org` when the domain is written as text
 
 ## File set

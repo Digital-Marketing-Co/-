@@ -26,7 +26,7 @@ Do not add neon grids, hologram UI, or floating chrome unless those objects alre
 - Ground = palette `ink` with a slow gradient toward a darker neighbor or toward `accent` at 8–15 percent mix.
 - Title type stays the calling skill's display face (Georgia, Literata, Latin Modern). Color is `cream` or `gilt` on `ink`.
 - A thin `gilt` or `rule` line under the title, not a glowing bar.
-- Owner line and `<a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>` link sit on the cover in `cream` at the calling skill's small size.
+- Owner line and `<a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a>` link sit on the cover in `cream` at the calling skill's small size.
 
 ## Tables and ITQE frames
 

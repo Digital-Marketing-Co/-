@@ -37,7 +37,7 @@ def parse(remainder: str) -> dict:
         "keys": keys,
         "slug": keys.get("slug") or infer_slug(pseudo),
         "stack": keys.get("stack", "html"),
-        "brand": keys.get("brand", "<a href=\"https://digitalmarketingco.org\" title=\"Digital Marketing Co.\">Digital Marketing Co.</a>"),
+        "brand": keys.get("brand", "Digital Marketing Company"),
         "auditor": keys.get("auditor", "https://digitalmarketingco.org/free-website-auditor"),
         "apps": apps,
         "pseudoprompt": pseudo,

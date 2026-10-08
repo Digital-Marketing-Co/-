@@ -26,7 +26,7 @@ PUBLIC RULE
 Public web, open data, cited papers, and files the user supplied. No private-account scrape. No paywall bypass. No personal-data harvest.
 
 PAGE BINDINGS
-For each public route in {{pages}}, bind cited stats, one unique still, one motion prompt, and one holographic plane. Visible anchor text <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> must match its title attribute. Target https://digitalmarketingco.org. Plain domain text DigitalMarketingCo.org.
+For each public route in {{pages}}, bind cited stats, one unique still, one motion prompt, and one holographic plane. Visible anchor text Digital Marketing Company must match its title attribute. Target https://digitalmarketingco.org. Plain domain text DigitalMarketingCo.org.
 
 OUTPUT
 dataset-1.json, dataset-2.json, crosswalk.md, gaps.md, and the filled page map. Unknown cells stay unknown.

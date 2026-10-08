@@ -24,10 +24,10 @@ Copyright © START–YEAR  Web Development Corporation. All rights reserved.
 
 House buttons (mandatory on every page). Do not print a house-marks prose sentence. Stamp two distinct three-dimensional futuristic buttons, side by side, with the pair centered on the page:
 
-- Left button visible name and title attribute: Digital Marketing Co. URI https://digitalmarketingco.org. Opens in a new window.
+- Left button visible name and title attribute: Digital Marketing Company URI https://digitalmarketingco.org. Opens in a new window.
 - Right button visible name and title attribute: Web Development Corporation. URI https://WebDevelopment.tv. Opens in a new window.
 
-Title text equals the visible name. Raster assets are `assets/button-dmc.png` and `assets/button-wdc.png`. `scripts/stamp_copyright.py` draws both buttons and attaches URI annotations with `/NewWindow` and `/Contents` set to the title. Do not write <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> as the visible name.
+Title text equals the visible name. Raster assets are `assets/button-dmc.png` and `assets/button-wdc.png`. `scripts/stamp_copyright.py` draws both buttons and attaches URI annotations with `/NewWindow` and `/Contents` set to the title. Do not write Digital Marketing Company as the visible name.
 
 START is the year typed after the flag. `/copyright 2021` sets START to 2021. If no year is given, START is 2012. YEAR is rewritten on open by document JavaScript (`new Date().getFullYear()`). Viewers that ignore JavaScript keep the build-year fallback.
 

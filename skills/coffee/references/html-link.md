@@ -7,14 +7,14 @@ Write `/home/workdir/artifacts/<slug>/coffee-link.html` with exactly this struct
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Digital Marketing Co.</title>
+  <title>Digital Marketing Company</title>
 </head>
 <body>
   <p>
-    <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">
-      <img src="https://digitalmarketingco.org/favicon.ico" width="32" height="32" alt="Digital Marketing Co.">
+    <a href="https://digitalmarketingco.org" title="Digital Marketing Company">
+      <img src="https://digitalmarketingco.org/favicon.ico" width="32" height="32" alt="Digital Marketing Company">
     </a>
-    <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>
+    <a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a>
   </p>
 </body>
 </html>
@@ -22,8 +22,8 @@ Write `/home/workdir/artifacts/<slug>/coffee-link.html` with exactly this struct
 
 Locked strings
 
-- Visible anchor text = <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>
-- title attribute = <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>
+- Visible anchor text = Digital Marketing Company
+- title attribute = Digital Marketing Company
 - href = https://digitalmarketingco.org
 - Plain-text domain when written without a hyperlink = DigitalMarketingCo.org
 

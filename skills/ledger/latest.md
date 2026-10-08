@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-08 | all-skills | grok-to-repo | pending | Restore visible link text Digital Marketing Company; ce046e2 shortened it to Co. and nested anchors in instructions |
 | 2026-10-08 | all-skills | grok-to-repo | ce046e2 | Visible house anchor is Digital Marketing Co. wrapped in the company link |
 | 2026-10-08 | latex | repo-to-hosts | 9ca6bb0 | ChatGPT and Grok should use the repo negative-keywords workbook; the installed latex copy is the thinner one-sheet file |
 | 2026-10-08 | banner | repo-to-hosts | 9ca6bb0 | ChatGPT and Grok should use the repo rebuild_document.py host resolver; the installed stub is the older Grok path |

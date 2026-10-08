@@ -155,7 +155,7 @@ State how many expressions were compiled, which renderer served each, and which 
 - Sweep every page of an existing file and every printable string of a draft that is about to become a file. Fail closed. A dirty scan blocks delivery.
 - No tofu, no black boxes, no white boxes over glyphs.
 - Explain every symbol at first use. Display figures carry an ITQE table. Maximize relevant figures; do not leave a quantitative claim as prose-only when a figure is warranted.
-- Visible house anchor is <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>. Target is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
+- Visible house anchor is Digital Marketing Company. Target is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
 - Stacked PDFs still carry the living house footer from `/copyright`.
 - Do not invent numerical values inside an equation figure.
 - Do not reprint `render_snippet.py` into chat unless a new helper was written in this run.
