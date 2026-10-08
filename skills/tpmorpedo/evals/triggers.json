@@ -1,0 +1,12 @@
+{
+  "skill": "tpmorpedo",
+  "test_cases": [
+    {"input": "/tpmorpedo #1 housing starts #2 mortgage rate series", "should_trigger": true},
+    {"input": "dual dataset mine for catalog and market", "should_trigger": true},
+    {"input": "gather exhaustive complete dataset pair with virtual holography", "should_trigger": true},
+    {"input": "tp morpedo all types filtered view", "should_trigger": true},
+    {"input": "write a haiku about rain", "should_trigger": false},
+    {"input": "harvest every paper by one author", "should_trigger": false},
+    {"input": "make a coffee table book of deserts", "should_trigger": false}
+  ]
+}

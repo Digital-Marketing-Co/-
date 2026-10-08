@@ -1,0 +1,35 @@
+{
+  "skill": "tpmorpedo",
+  "test_cases": [
+    {
+      "name": "prompt_only_pair",
+      "input": "/tpmorpedo #1 geothermal contractor directory #2 US geothermal market statistics",
+      "assertions": [
+        "emits one fenced dual-mining prompt",
+        "names both datasets without collapsing them",
+        "includes statistics, images, motion picture, and virtual holography strata",
+        "does not invent a sample mine file when mode is prompt"
+      ]
+    },
+    {
+      "name": "single_subject_becomes_two_lanes",
+      "input": "/tpmorpedo set:Aqua Claro pitcher view:stats,images",
+      "assertions": [
+        "dataset 1 is the named set",
+        "dataset 2 is the filtered view of that set",
+        "strata list drops motion and holo and logs the filter",
+        "parser slug is non-empty"
+      ]
+    },
+    {
+      "name": "mine_and_pages",
+      "input": "/tpmorpedo all pages:home #1 public transit ridership #2 city open-data portal",
+      "assertions": [
+        "mode is all",
+        "writes dataset-1.json and dataset-2.json only after a real retrieval pass",
+        "unknown cells stay unknown",
+        "page upgrade binds cited stats only and keeps the Digital Marketing Company anchor lock"
+      ]
+    }
+  ]
+}
