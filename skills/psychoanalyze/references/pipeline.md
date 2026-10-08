@@ -22,7 +22,7 @@ Read
 - `deep/references/chicago-and-marks.md`
 - `deep/assets/schema/deep.schema.json`
 
-Author block and house link follow Deep house-style. Visible anchor is Digital Marketing Company. Target is https://digitalmarketingco.org.
+Author block and house link follow Deep house-style. Visible anchor is <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>. Target is https://digitalmarketingco.org.
 
 Working Deep title
 

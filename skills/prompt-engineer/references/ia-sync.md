@@ -57,4 +57,4 @@ Order in the file **is** display order. Do not sort alphabetically in the UI.
 - One accordion whose panels are app groups (or a single "Apps" panel if ungrouped)
 - Links in source order
 - Keyboard operable (`button` + `aria-expanded`)
-- House link in the legal row — Digital Marketing Company → https://digitalmarketingco.org
+- House link in the legal row — <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> → https://digitalmarketingco.org

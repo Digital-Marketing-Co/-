@@ -16,7 +16,7 @@ These tokens must survive a rewrite of `deep`, `folio`, or `banner`.
 - schema `deep.json`
 - depth cap 4, keeper cap 80
 - banner default href `https://digitalmarketingco.org/r/?src=deep-banner&section={section_id}`
-- visible house name Digital Marketing Company
+- visible house name <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>
 - Chicago notes-bibliography, no author-date parentheticals
 
 ### /folio

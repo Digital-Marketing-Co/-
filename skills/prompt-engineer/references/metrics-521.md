@@ -272,7 +272,7 @@ Total checks — 521.
 250. No text baked into OG that contradicts the title
 251. Contact path is a real URL
 252. About path is a real URL when claimed
-253. Brand name Digital Marketing Company appears as that string
+253. Brand name <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> appears as that string
 254. Domain string DigitalMarketingCo.org used when the domain is written
 255. Auditor URL cited only when the page is about the auditor
 256. No fake statistics in copy
@@ -336,7 +336,7 @@ Total checks — 521.
 310. No wall of adjectives before the first fact
 311. Apps inventory is complete so engines do not invent extras
 312. Order of apps is published so citations can match
-313. Disambiguation — Digital Marketing Company vs generic agency nouns
+313. Disambiguation — <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> vs generic agency nouns
 314. Location of the firm only if local pages claim it
 315. Do not geo-spam cities the page is not about
 316. Generative engines see the same HTML as users
@@ -458,7 +458,7 @@ Total checks — 521.
 426. WebSite name matches visible brand
 427. WebSite url matches the site origin
 428. SearchAction only if a working search exists
-429. Organization type with name Digital Marketing Company when that is the operator
+429. Organization type with name <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> when that is the operator
 430. Organization url https://digitalmarketingco.org
 431. Organization logo object with url width height when a logo file exists
 432. WebPage type on each route

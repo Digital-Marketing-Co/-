@@ -12,7 +12,7 @@ Legal owner string for title pages and PDF Info: Web Development Corporation, a 
 
 House site: https://digitalmarketingco.org  
 Plain-text domain: DigitalMarketingCo.org  
-Visible link text: Digital Marketing Company
+Visible link text: <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>
 
 ## Assignment intent
 

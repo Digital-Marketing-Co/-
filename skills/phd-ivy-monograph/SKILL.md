@@ -135,7 +135,7 @@ Give the user the PDF. State page count, note count, bibliography count, genre, 
 - Chicago notes plus bibliography, WCA superscript revision, page-local footnotes, first-appearance citation order. No author-date parentheticals. No alphabetized bibliography as the house sort.
 - Typography comes only from `assets/typography.py`. Body face is Literata 18pt optical **set at 10 pt**. Display face is EB Garamond. Chrome face is Libre Franklin.
 - Legal owner line is exactly Web Development Corporation, a Delaware Corporation.
-- Visible house anchor is Digital Marketing Company. Seed URL is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
+- Visible house anchor is <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>. Seed URL is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
 - Public filename is `YYYY-topic-slug-wca-folio.pdf`. Canonical record URL is `{origin}/white-papers/{slug}`.
 - Copyright form is © 2012–YEAR where YEAR is the access year (JS field) with a build-time fallback.
 - No emoji. No unsupported symbols. No invented sources.

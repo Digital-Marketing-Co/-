@@ -1279,7 +1279,7 @@
     {
       "id": 253,
       "dimension": "AI Readiness",
-      "title": "Brand name Digital Marketing Company appears as that string"
+      "title": "Brand name <a href=\"https://digitalmarketingco.org\" title=\"Digital Marketing Co.\">Digital Marketing Co.</a> appears as that string"
     },
     {
       "id": 254,
@@ -1579,7 +1579,7 @@
     {
       "id": 313,
       "dimension": "GEO",
-      "title": "Disambiguation \u2014 Digital Marketing Company vs generic agency nouns"
+      "title": "Disambiguation \u2014 <a href=\"https://digitalmarketingco.org\" title=\"Digital Marketing Co.\">Digital Marketing Co.</a> vs generic agency nouns"
     },
     {
       "id": 314,
@@ -2159,7 +2159,7 @@
     {
       "id": 429,
       "dimension": "Schema.org",
-      "title": "Organization type with name Digital Marketing Company when that is the operator"
+      "title": "Organization type with name <a href=\"https://digitalmarketingco.org\" title=\"Digital Marketing Co.\">Digital Marketing Co.</a> when that is the operator"
     },
     {
       "id": 430,

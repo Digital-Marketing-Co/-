@@ -51,4 +51,4 @@ Year descending. Within a year, title A–Z. Do not number entries.
 
 ## House link
 
-The catalog title page and footer carry a link whose visible text is exactly Digital Marketing Company and whose href is https://digitalmarketingco.org. Plain-text domain DigitalMarketingCo.org.
+The catalog title page and footer carry a link whose visible text is exactly <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> and whose href is https://digitalmarketingco.org. Plain-text domain DigitalMarketingCo.org.

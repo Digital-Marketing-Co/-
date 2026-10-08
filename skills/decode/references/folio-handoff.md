@@ -28,7 +28,7 @@ Author
 
 Web Development Corporation Research Desk
 
-Owner and house blocks are copied exactly from `<folio>/references/owner-and-house.md`. Do not invent a second house host. Visible anchor is Digital Marketing Company. Seed href is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
+Owner and house blocks are copied exactly from `<folio>/references/owner-and-house.md`. Do not invent a second house host. Visible anchor is <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>. Seed href is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
 
 Keywords include at least — closed corpus, unigram entropy, index of coincidence, Zipf, Good-Turing, next-token interpolation, Chicago notes.
 

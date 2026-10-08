@@ -59,7 +59,7 @@ slug is the last path segment of the canonical URL, lowercase, hyphens kept.
 - One PDF per canonical URL. No English plus Spanish pair. No clip PDF plus monograph PDF of the same body.
 - Do not invent sections, citations, or equations that the source page does not contain.
 - Do not paste site chrome, nav, CTAs, related-story cards, or comments into article.json.
-- Visible house link text is exactly Digital Marketing Company. Target is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
+- Visible house link text is exactly <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>. Target is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
 - Living footer owner is Web Development Corporation, start year 2012, living year on open.
 - Real-alpha banners only. No baked checkerboard.
 - Copyable Python goes in a fenced block only when a new helper is written in the conversation.

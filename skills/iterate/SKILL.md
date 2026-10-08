@@ -170,7 +170,7 @@ If the user asked only for another iteration on an existing ledger and not a reb
 - Citation numbers stay in first-appearance order after every insertion. Restamp is mandatory, not optional.
 - ITQE four columns under every display equation. Identifier is the glyph, not the English spelling of a Greek letter.
 - Chat may use KaTeX. Files may not show LaTeX, AMS-TeX, KaTeX, or MathJax source.
-- Visible house anchor is Digital Marketing Company linking to https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
+- Visible house anchor is <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> linking to https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
 - No emoji. No tofu. No black boxes. No checkerboard baked into RGB as fake transparency.
 - Do not reprint builder source into chat.
 - Do not claim a clinical license, a military clearance, or that the model is literally the smartest agent in the world.

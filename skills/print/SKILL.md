@@ -92,7 +92,7 @@ Give the user the PDF. State page count, block count, image count. Do not dump `
 - A heading must keep at least one following text or figure block on the same page. If it cannot, both move.
 - Copyright form is the copyright symbol then 2012–YEAR where YEAR is the access year (JS field WCACopyrightYear) with a build-time fallback. Same script as /folio.
 - Legal owner line is exactly Web Development Corporation, a Delaware Corporation.
-- Visible house anchor is Digital Marketing Company. Placeholder href is https://digitalmarketingco.org.
+- Visible house anchor is <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>. Placeholder href is https://digitalmarketingco.org.
 - Public filename is YYYY-topic-slug-wca-print.pdf.
 - Typography comes only from assets/typography.py.
 - No emoji. No invented captions. Do not reprint builder source into chat.

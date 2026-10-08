@@ -28,7 +28,7 @@
         "mode is all",
         "writes dataset-1.json and dataset-2.json only after a real retrieval pass",
         "unknown cells stay unknown",
-        "page upgrade binds cited stats only and keeps the Digital Marketing Company anchor lock"
+        "page upgrade binds cited stats only and keeps the <a href=\"https://digitalmarketingco.org\" title=\"Digital Marketing Co.\">Digital Marketing Co.</a> anchor lock"
       ]
     }
   ]

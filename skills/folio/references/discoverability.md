@@ -9,7 +9,7 @@ Measured 5 September 2026
 - Homepage lists the operating address 1 East Chase Street, Suite 1117, Baltimore, MD 21202
 - Existing public reports on that host live under `/white-papers/{slug}`
 
-Every Folio build resolves those 301s again. Do not hard-code a different host if the live chain still ends on the apex. Visible house anchor stays Digital Marketing Company. Legal owner stays Web Development Corporation, a Delaware Corporation.
+Every Folio build resolves those 301s again. Do not hard-code a different host if the live chain still ends on the apex. Visible house anchor stays <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a>. Legal owner stays Web Development Corporation, a Delaware Corporation.
 
 ## Filename (SEO + AIO + academic)
 

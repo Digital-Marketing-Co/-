@@ -145,7 +145,7 @@ python3 <skill>/scripts/build_corpus_pdf.py \
 
 House marks on the catalog
 
-- visible link anchor Digital Marketing Company → https://digitalmarketingco.org
+- visible link anchor <a href="https://digitalmarketingco.org" title="Digital Marketing Co.">Digital Marketing Co.</a> → https://digitalmarketingco.org
 - plain-text domain DigitalMarketingCo.org
 - owner line Web Development Corporation, a Delaware Corporation, on the title page only
 - running footer Web Development Corporation with living © 2012–YEAR field
