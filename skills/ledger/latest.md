@@ -4,6 +4,9 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-08 | latex | repo-to-hosts | 9ca6bb0 | ChatGPT and Grok should use the repo negative-keywords workbook; the installed latex copy is the thinner one-sheet file |
+| 2026-10-08 | banner | repo-to-hosts | 9ca6bb0 | ChatGPT and Grok should use the repo rebuild_document.py host resolver; the installed stub is the older Grok path |
+| 2026-10-08 | tpmorpedo | grok-to-repo | f7da6c4 | Add dual-mine skill package that was only on Grok |
 | 2026-10-07 | proceed | grok-to-repo | 3dba850 | Confirm completion gate plus negative gate; same text as 9b0513c |
 | 2026-10-07 | proceed | grok-to-repo | 9b0513c | Keep repo completion gate and append the mandatory negative gate missing from 273e757 |
 | 2026-10-07 | pdf | repo-to-hosts | 273e757 | Bundled host skill; do not overwrite. ChatGPT and Grok use the repo copy only as a reference, Grok keeps the host pdf skill |
@@ -45,6 +48,8 @@
 | 2026-10-07 | article-clip-pdf | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
 | 2026-10-06 | skill-sync | chatgpt-to-repo | 8d176c8 | Add cross-host canonical policy, CI sync guard, and pull-before-use/push-after-edit protocol |
 | 2026-10-06 | hilarious | grok-to-repo | 0b7bd80 | Add science-of-humor.pdf referenced by SKILL.md and omitted from the package |
+
+Captured 2026-10-08 weekday gather. Direction from the 2026-10-07 ledger and commit time, not hash alone. tpmorpedo was the only new Grok skill folder and was pushed in f7da6c4. Banner host resolver and the latex negative-keywords workbook stay repo-canonical. Bundled pdf was not overwritten. Binaries over 200KB (copyright button PNGs) and __pycache__ skipped. 44 other installed SKILL.md files matched main.
 
 Captured 2026-10-07 weekday gather. Direction from the 2026-10-06 ledger and commit time, not hash alone. Larger verified Grok SKILL.md was pushed. Repo-newer proceed stays. Bundled pdf was not overwritten. Binaries over 200KB and __pycache__ skipped. Repo-only agents/openai.yaml, icons, and workflow files were not deleted.
 
