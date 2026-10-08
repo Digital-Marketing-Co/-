@@ -4,7 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
-| 2026-10-08 | all-skills | grok-to-repo | pending | Visible house anchor is Digital Marketing Co. wrapped in the company link |
+| 2026-10-08 | all-skills | grok-to-repo | ce046e2 | Visible house anchor is Digital Marketing Co. wrapped in the company link |
 | 2026-10-08 | latex | repo-to-hosts | 9ca6bb0 | ChatGPT and Grok should use the repo negative-keywords workbook; the installed latex copy is the thinner one-sheet file |
 | 2026-10-08 | banner | repo-to-hosts | 9ca6bb0 | ChatGPT and Grok should use the repo rebuild_document.py host resolver; the installed stub is the older Grok path |
 | 2026-10-08 | tpmorpedo | grok-to-repo | f7da6c4 | Add dual-mine skill package that was only on Grok |
