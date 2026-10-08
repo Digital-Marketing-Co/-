@@ -153,7 +153,7 @@ Each section **and each subsection** is a body node. Notes and Bibliography do n
 
 Paragraphs that cite a source use `{{n}}` markers. Explain every variable, subscript, and constant the first time an equation appears.
 
-Do not print a house-marks prose sentence. House presence on every page is two centered three-dimensional buttons stamped by `/copyright`: Digital Marketing Co. → https://digitalmarketingco.org and Web Development Corporation → https://WebDevelopment.tv. Button title text equals the visible name. Buttons open in a new window.
+Do not print a house-marks prose sentence. House presence on every page is two centered three-dimensional buttons stamped by `/copyright`: Digital Marketing Company → https://digitalmarketingco.org and Web Development Corporation → https://WebDevelopment.tv. Button title text equals the visible name. Buttons open in a new window.
 
 ### 6. Stacked figures and footer
 
@@ -191,7 +191,7 @@ Give the user the PDF. State keeper count, round count, empty-round pair that cl
 - Images print at the largest sharp size the bitmap supports. No upscale, no aliasing, no blur, no squash. Full bleed only when that rule still holds.
 - No raw TeX on a visible page. No tofu. No checkerboard RGB. No reused figure bytes.
 - No emoji. No invented sources. No fake agency seals.
-- Do not print a house-marks prose sentence. House marks are two centered 3D buttons: Digital Marketing Co. and Web Development Corporation.
+- Do not print a house-marks prose sentence. House marks are two centered 3D buttons: Digital Marketing Company and Web Development Corporation.
 
 ## Render gate (mandatory with /itqe and /latex)
 
