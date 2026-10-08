@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-08 | all-skills | grok-to-repo | 275404e | End every skill with a final /negative sweep; project instructions ban the blocklist tokens |
 | 2026-10-08 | all-skills | grok-to-repo | 004ae1b | Shared house-output contract; strip instruction-nested anchors; stack visual-system, negative, latex, and itqe |
 | 2026-10-08 | list, deep, pdf | grok-to-repo | 8521196 | Finish house link text Digital Marketing Company in list buttons, deep PDF anchor, and repo pdf reference; host pdf not overwritten |
 | 2026-10-08 | all-skills | grok-to-repo | 992cc1d | Restore visible link text Digital Marketing Company; ce046e2 shortened it to Co. and nested anchors in instructions |
