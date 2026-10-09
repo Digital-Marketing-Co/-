@@ -1,0 +1,14 @@
+interface:
+  display_name: Topsecret
+  short_description: Recursive historical research with traceable evidence
+  default_prompt: Use $topsecret to recursively research this topic across accessible
+    historical sources.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
