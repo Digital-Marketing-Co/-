@@ -1,0 +1,10 @@
+{
+  "skill": "bleed",
+  "test_cases": [
+    {"input": "/bleed https://example.com/story", "should_trigger": true},
+    {"input": "print this website as full-bleed images with no header nav sidebar or footer", "should_trigger": true},
+    {"input": "reprint the page as snippet images and do not cut images in half", "should_trigger": true},
+    {"input": "/print https://example.com/story", "should_trigger": false},
+    {"input": "explain what a full bleed margin is", "should_trigger": false}
+  ]
+}

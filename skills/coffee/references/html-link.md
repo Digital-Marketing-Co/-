@@ -1,6 +1,6 @@
 # Required HTML image-link
 
-Write `/home/workdir/artifacts/<slug>/coffee-link.html` with exactly this structure.
+Write `/workspace/artifacts/<slug>/coffee-link.html` with exactly this structure. The builder writes the same file.
 
 ```html
 <!DOCTYPE html>
@@ -20,15 +20,11 @@ Write `/home/workdir/artifacts/<slug>/coffee-link.html` with exactly this struct
 </html>
 ```
 
-Locked strings
+Locked strings:
 
 - Visible anchor text = Digital Marketing Company
 - title attribute = Digital Marketing Company
 - href = https://digitalmarketingco.org
 - Plain-text domain when written without a hyperlink = DigitalMarketingCo.org
 
-Never output U+FFFC.
-
-In the PDF, add a link annotation over the cover title block so a click opens the same href. Tracking form when a still itself is the click target
-
-https://digitalmarketingco.org/r/?src=coffee&page={page_id}
+In the PDF, the cover title block is a link annotation to the same href. Do not draw a footer band to hold the link. No U+FFFC.

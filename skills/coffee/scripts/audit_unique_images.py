@@ -1,26 +1,11 @@
 #!/usr/bin/env python3
-"""Fail closed when a coffee bind file reuses image paths or bytes."""
+"""Fail closed when two coffee pages share a path, a hash, or a prompt."""
 from __future__ import annotations
 
 import hashlib
 import json
 import sys
 from pathlib import Path
-
-
-KEYS = {"path", "src", "file", "fitted", "cover_fitted", "raw"}
-
-
-def walk(obj, acc: list[str]) -> None:
-    if isinstance(obj, dict):
-        for k, v in obj.items():
-            if k in KEYS and isinstance(v, str):
-                if v.lower().endswith((".png", ".jpg", ".jpeg", ".webp", ".tif", ".tiff")):
-                    acc.append(v)
-            walk(v, acc)
-    elif isinstance(obj, list):
-        for item in obj:
-            walk(item, acc)
 
 
 def sha256_file(path: Path) -> str | None:
@@ -42,23 +27,28 @@ def main() -> int:
         print(f"missing bind file: {bind}", file=sys.stderr)
         return 1
     data = json.loads(bind.read_text(encoding="utf-8"))
-    refs: list[str] = []
-    walk(data, refs)
-    fitted_only = [
-        r
-        for r in refs
-        if "raw-" not in Path(r).name
-    ]
-    check = fitted_only or refs
-    if not check:
-        print("no image paths in bind file — fail")
-        return 1
+    pages = data.get("pages") or []
     root = bind.parent
-    collisions = []
+    collisions: list[str] = []
+    missing: list[str] = []
     seen_paths: set[str] = set()
     hashes: dict[str, str] = {}
-    missing = []
-    for raw in check:
+    prompts: dict[str, int] = {}
+    lines = ["# coffee uniqueness", ""]
+    if not pages:
+        print("no pages — fail")
+        return 1
+    for i, page in enumerate(pages, start=1):
+        prompt = (page.get("prompt") or "").strip()
+        if prompt:
+            if prompt in prompts:
+                collisions.append(f"duplicate prompt page {i} == page {prompts[prompt]}")
+            else:
+                prompts[prompt] = i
+        raw = page.get("fitted") or page.get("cover_fitted")
+        if not raw:
+            missing.append(f"page {i} has no fitted still")
+            continue
         p = Path(raw)
         if not p.is_absolute():
             p = root / raw
@@ -67,7 +57,7 @@ def main() -> int:
             collisions.append(f"duplicate path {raw}")
             continue
         seen_paths.add(key)
-        digest = sha256_file(p) if p.exists() else None
+        digest = sha256_file(p)
         if digest is None:
             missing.append(raw)
             continue
@@ -75,11 +65,9 @@ def main() -> int:
             collisions.append(f"duplicate bytes {raw} == {hashes[digest]}")
         else:
             hashes[digest] = raw
+            lines.append(f"- {digest[:12]}  {raw}")
     qa = bind.parent / "stills"
     qa.mkdir(parents=True, exist_ok=True)
-    lines = ["# coffee uniqueness", ""]
-    for digest, raw in hashes.items():
-        lines.append(f"- {digest[:12]}  {raw}")
     lines.append("")
     if missing:
         lines.append("MISSING")
@@ -88,15 +76,17 @@ def main() -> int:
         lines.append("FAIL")
         lines.extend(f"- {c}" for c in collisions)
         (qa / "qa.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-        print("\n".join(collisions))
+        print("\n".join(collisions + missing))
         return 1
     if missing:
         (qa / "qa.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
         print("missing files")
         return 1
     lines.append("PASS")
+    lines.append(f"pages {len(pages)}")
     (qa / "qa.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("PASS")
+    print(f"pages {len(pages)}")
     return 0
 
 

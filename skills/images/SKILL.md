@@ -16,7 +16,7 @@ metadata:
 
 Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
 Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner and mid-text prompts append the volumetric clause in `visual-system/references/depth.md` and the beauty lock in `references/beauty-lock.md`. Every published raster is a fresh house generate — awe-inspiring, stunningly perfected, futuristic cinematic still — never a downloaded stock file, never a reused path, prompt, SHA-256, or perceptual hash. Read `visual-system/references/prompt-engineering.md` before every generate.
-Put one context-locked `/banner` image at the start of every body section **and every subsection**, then generate additional figures about every 500 words after that node's opening blurb. Print each figure at the maximum size that stays sharp. Do not upscale, squash, letterbox, or otherwise alias or blur a bitmap to force full bleed. Generate 16-9 at or above the page-width pixel floor (2550 px wide on letter, prefer 3300 x 1856). If it does not meet the floor, regenerate rather than stretching. After generate, run `scripts/apply_tb_alpha_blend.py`. Left and right stay opaque. Top and bottom blend into the page.
+Put one context-locked `/banner` image at the start of every body section **and every subsection**, then generate additional figures about every 500 words after that node's opening blurb. Print each figure at the maximum size that stays sharp. Do not squash or letterbox. If the bitmap is narrower than the page-width floor, Lanczos-upscale and repeat until the width meets the floor. Keep the source aspect ratio. Generate 16-9 at or above the page-width pixel floor (2550 px wide on letter, prefer 3300 x 1856). If it does not meet the floor, regenerate rather than stretching. After generate, run `scripts/apply_tb_alpha_blend.py`. Left and right stay opaque. Top and bottom blend into the page.
 
 Work on an attached PDF, a path the user named, the newest project PDF under `/workspace/artifacts/`, or the `list.json` / `deep.json` / `atlas.json` / `folio.json` that built that PDF.
 
@@ -47,6 +47,12 @@ Read on demand
 - `scripts/stamp_images_into_pdf.py` — insert full-bleed plates into a naked PDF
 
 If the user only asked to create or edit this skill and supplied no document, stop after the skill files exist. Do not invent a report.
+
+
+## Image print contract
+
+Read `interop/references/image-print-contract.md`. Every raster this skill prints is full bleed on the left and on the right: x = 0, width = page width, zero left margin, zero right margin, zero side padding, no side letterbox, no side matte. Each file keeps its own aspect ratio. Do not squash or stretch. Height follows width divided by that source ratio. No path, byte, or average-hash duplicate in the same file. If the bitmap is narrower than 2550 px (prefer 3300), upscale with Lanczos and repeat, at most 2x per pass, until the width meets the floor. Script: `images/scripts/fit_full_bleed.py`. Top and bottom alpha, if used, is applied after the fit and does not change the ratio.
+
 
 ## Emit the file (mandatory)
 
@@ -134,7 +140,7 @@ Rules are locked in `references/cadence.md`. Prompt and inspect rules are locked
 - Notes, bibliography, equations-only pages, and gazetteer tables do not receive mid-section figures.
 - Place each figure immediately after the paragraph that closes the 500-word window so the image sits next to the claims it illustrates.
 
-Prompt each mid-section figure from only the surrounding 500-word window. Save under `figures/fig-{section}-{k}.png`. Generate 16-9 at least 2550 x 1434 (prefer 3300 x 1856). In the PDF the figure is 100 percent of page width — x = 0 to page width — with zero left or right margin and zero left or right padding, only when the bitmap already meets that pixel floor. Height follows 16-9. Do not letterbox. Do not inset to the text column. Do not squash height to invent a width. No checkerboard. After generate run `scripts/apply_tb_alpha_blend.py`. Real photographs of living private persons are forbidden. If a generate comes back narrower than the floor, regenerate. Never print a blurry or aliased stretch.
+Prompt each mid-section figure from only the surrounding 500-word window. Save under `figures/fig-{section}-{k}.png`. Generate 16-9 at least 2550 x 1434 (prefer 3300 x 1856). In the PDF the figure is 100 percent of page width — x = 0 to page width — with zero left or right margin and zero left or right padding, only when the bitmap already meets that pixel floor. Height follows 16-9. Do not letterbox. Do not inset to the text column. Do not squash height to invent a width. No checkerboard. After generate run `scripts/apply_tb_alpha_blend.py`. Real photographs of living private persons are forbidden. If a generate comes back narrower than the floor, regenerate. Do not squash. Upscale with Lanczos, repeating until page width, and keep the source aspect ratio.
 
 Caption form
 
@@ -181,7 +187,7 @@ Give the user the restamped file (render the PDF or the DOCX or PPTX). State pag
 - One banner per body section and one banner per subsection. Extra figures follow the 500-word cadence only. 16-9. Opaque left and right. Scripted alpha ramp on the top and bottom only.
 - Every published raster is unique. No shared path, no shared bytes, no crop of another figure in the same document. Audit with `scripts/audit_unique_images.py` and fail closed.
 - Every prompt is locked to the surrounding text. No generic science-lab figure on a legal chapter. No allegory on a chemistry chapter.
-- Banners and mid-section figures print at the maximum sharp size the file supports. Full bleed left and right (x = 0 to page width, zero side gutter) only when the source already meets the 2550 px page-width floor. Height follows 16-9. Never upscale a small preview to page width. Never introduce aliasing, blur, or aspect distortion to buy bleed. Apply `apply_tb_alpha_blend.py` after generate.
+- Banners and mid-section figures print at the maximum sharp size the file supports. Full bleed left and right (x = 0 to page width, zero side gutter) only when the source already meets the 2550 px page-width floor. Height follows 16-9. If a preview is narrower than the page-width floor, Lanczos-upscale and repeat until the width meets the floor. Do not squash. Never introduce aliasing, blur, or aspect distortion to buy bleed. Apply `apply_tb_alpha_blend.py` after generate.
 - Mid-section figures are captioned, generated, context-locked to the 500-word window, and source-cited in Chicago notes. They are not in-column insets.
 - Visible house anchor is Digital Marketing Company. Target is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
 - No emoji. No unsupported symbols. No invented sources. No fake agency seals.

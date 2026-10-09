@@ -4,7 +4,7 @@ Case-insensitive. Match whole tokens and hyphen/underscore compounds. Also match
 
 AI-tell family (2026-09-18, expanded 2026-09-23), maker-attribution family, and skill-process leaks. Generated prose must use none of these. This file may contain them.
 
-Watermark terms are the required contextual substitutes, not bans. When a banned AI-tell noun must be replaced so the sentence still carries the claim, use atlas, gazette, or plate (and gazetteer for a place index). house and the firm name-lines may also print. Do not ban those substitutes.
+Watermark terms are the required contextual substitutes, not bans. When a banned AI-tell noun must be replaced so the sentence still carries the claim, use atlas or gazette (and gazetteer for a place index). Firm name-lines may also print. Do not ban those substitutes.
 
 ## AI-tell tokens added 2026-10-06
 
@@ -1007,6 +1007,27 @@ Do not name the model, the lab, or the skill that wrote the file. Slash flags an
 - powered by grok
 - powered by xai
 
+## Firm-style token ban (2026-10-08)
+
+Case-insensitive. Whole token and hyphen/underscore compounds. Added on user order. Swap to atlas or gazette. Do not print the token in generated prose, headings, captions, footnotes, metadata, filenames, code comments, or spoken scripts.
+
+- house
+- houses
+- housed
+- housing
+- in-house
+- house-style
+- house style
+
+## Still-name ban (2026-10-08)
+
+Case-insensitive. Whole token. Added on user order. Swap to atlas or gazette. Do not print the token in generated prose, headings, captions, footnotes, metadata, filenames, code comments, or spoken scripts.
+
+- plate
+- plates
+- Plate
+- Plates
+
 ## Replacement map (default)
 
 When rewriting generated text, swap as follows unless the user quoted the token on purpose:
@@ -1014,9 +1035,9 @@ When rewriting generated text, swap as follows unless the user quoted the token 
 | Blocked | Default swap |
 |---|---|
 | delve / delving / deep dive | look at / go into |
-| tapestry / tapestry of / mosaic / symphony / kaleidoscope / labyrinth | atlas / gazette / plate |
+| tapestry / tapestry of / mosaic / symphony / kaleidoscope / labyrinth | atlas / gazette |
 | landscape (figurative) / realm / in the realm of | atlas |
-| treasure trove / focal point / indelible mark | plate |
+| treasure trove / focal point / indelible mark | atlas |
 | cornerstone / linchpin / bedrock (figurative) | gazette |
 | leverage | use |
 | utilize | use |
@@ -1068,6 +1089,7 @@ When rewriting generated text, swap as follows unless the user quoted the token 
 | comprehensive guide | report / account |
 | dive into | look at |
 | in a world where | given that |
+| house / houses / housed / housing / in-house / house-style / house style | atlas / gazette |
 
 ## Do not block
 
@@ -1076,7 +1098,7 @@ When rewriting generated text, swap as follows unless the user quoted the token 
 - Legal addresses and program names the user typed
 - Ordinary uses of common stems when they are not the listed phrase (user talking about a real physical landscape, a real mosaic artwork, a court testament, a ship embarking)
 - The words in this blocklist file itself
-- Watermark terms printed on purpose in a delivered file — house, houses, housed, housing, in-house, house-style, house style, plate, plates, atlas, gazette, gazetteer
+- Watermark terms printed on purpose in a delivered file — atlas, gazette, gazetteer
 - Firm name-lines — Digital Marketing Company, DigitalMarketingCo.org, Web Development Corporation
 - A WCA filename token such as `wca-folio` in the file name only
 - Chat that is only managing the list or running a skill, when the user typed the flag

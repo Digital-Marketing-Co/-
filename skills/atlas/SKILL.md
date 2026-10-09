@@ -28,6 +28,12 @@ Work in `/workspace/artifacts/<slug>/`. Default printed file is `/workspace/arti
 
 If the user only asked to create or edit this skill and supplied no atlas subject, stop after the skill files exist. Do not invent a region, network, or title.
 
+
+## Image print contract
+
+Read `interop/references/image-print-contract.md`. Every raster this skill prints is full bleed on the left and on the right: x = 0, width = page width, zero left margin, zero right margin, zero side padding, no side letterbox, no side matte. Each file keeps its own aspect ratio. Do not squash or stretch. Height follows width divided by that source ratio. No path, byte, or average-hash duplicate in the same file. If the bitmap is narrower than 2550 px (prefer 3300), upscale with Lanczos and repeat, at most 2x per pass, until the width meets the floor. Script: `images/scripts/fit_full_bleed.py`. Top and bottom alpha, if used, is applied after the fit and does not change the ratio.
+
+
 ## Read on demand
 
 - `references/locked-prompt.md` — frozen type, banner inches, house strings

@@ -30,6 +30,7 @@ from reportlab.platypus import (
     PageTemplate,
     Paragraph,
     Spacer,
+    Flowable,
     ListFlowable,
     Table,
     TableStyle,
@@ -372,6 +373,42 @@ def make_styles() -> dict[str, ParagraphStyle]:
             spaceAfter=2,
         ),
     }
+
+
+
+class BleedImage(Flowable):
+    """Page-width plate. Height follows the source ratio. No side gutter."""
+
+    def __init__(self, path: Path):
+        super().__init__()
+        self.path = path
+        self.page_w = letter[0]
+        with PILImage.open(path) as im:
+            iw, ih = im.size
+        ratio = (ih / float(iw)) if iw else 0.56
+        self.w = letter[0]
+        self.h = letter[0] * ratio
+
+    def wrap(self, availWidth, availHeight):
+        return (availWidth, self.h)
+
+    def draw(self):
+        canvas = self.canv
+        shift = -canvas.absolutePosition(0, 0)[0]
+        canvas.drawImage(
+            str(self.path),
+            shift,
+            0,
+            width=self.w,
+            height=self.h,
+            mask="auto",
+            preserveAspectRatio=True,
+            anchor="c",
+        )
+
+
+def bleed_image(path: Path) -> BleedImage:
+    return BleedImage(path)
 
 
 def fitted_image(path: Path, max_w: float, max_h: float) -> Image:
@@ -969,9 +1006,8 @@ def build(data: dict, out_path: Path, source_dir: Path) -> None:
                 story.append(CitedParagraph(inject_notes(para), style, cited=extract_note_ns(para)))
                 string_index += 1
             if fig_path is not None and after_n is not None and string_index == after_n:
-                max_w = letter[0] - (T.MARGIN_LEFT_IN + T.MARGIN_RIGHT_IN) * inch
                 story.append(Spacer(1, 6))
-                story.append(fitted_image(fig_path, max_w, 3.4 * inch))
+                story.append(bleed_image(fig_path))
                 cap = figure.get("caption") or ""
                 if cap:
                     story.append(Paragraph(allow_markup(cap), styles["caption"]))

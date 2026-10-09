@@ -1,0 +1,31 @@
+{
+  "skill": "bleed",
+  "test_cases": [
+    {
+      "name": "url_full_bleed_print",
+      "input": "/bleed https://example.com/article",
+      "assertions": [
+        "Skill loads and runs capture_bleed.mjs then build_bleed_pdf.py",
+        "PDF pages place each snippet at x=0 y=0 with page box equal to the image",
+        "Site header, nav, sidebar, floating button, and footer are absent"
+      ]
+    },
+    {
+      "name": "no_split_image_or_heading",
+      "input": "/bleed this page and do not cut images or leave a subsection heading at the bottom",
+      "assertions": [
+        "No image plate is sliced across two pages",
+        "A section or subsection heading shares its plate with the following paragraph",
+        "Builder exits non-zero if a plate is marked keep false"
+      ]
+    },
+    {
+      "name": "skill_only_no_invented_page",
+      "input": "Create new skill called /bleed that prints a full-bleed PDF of page snippets",
+      "assertions": [
+        "Skill files are written under the bleed skill directory",
+        "No sample webpage PDF is invented when the user did not supply a URL"
+      ]
+    }
+  ]
+}

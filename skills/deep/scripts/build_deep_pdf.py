@@ -351,8 +351,14 @@ class BleedBanner(Flowable):
         self.path = path
         self.href = href
         self.page_w = letter[0]
-        self.h = BANNER_TOTAL_HEIGHT_IN * inch
         self.w = BANNER_BLEED_WIDTH_IN * inch
+        try:
+            with PILImage.open(path) as im:
+                iw, ih = im.size
+            ratio = (ih / float(iw)) if iw else (9 / 16)
+        except Exception:
+            ratio = 9 / 16
+        self.h = self.w * ratio
 
     def wrap(self, availWidth, availHeight):
         # Report a width inside the frame so Platypus accepts the flowable,
@@ -372,7 +378,7 @@ class BleedBanner(Flowable):
                 width=self.w,
                 height=self.h,
                 mask="auto",
-                preserveAspectRatio=False,
+                preserveAspectRatio=True,
                 anchor="c",
             )
         except Exception:

@@ -1,7 +1,9 @@
-Cover title faces used by scripts/composite_cover.py
+Cover title faces, shipped with this skill (OFL). Do not point at /usr/share/fonts/SlidesCarnival — that tree is not on this host.
 
-/usr/share/fonts/SlidesCarnival/google/Cinzel/static/Cinzel-Bold.ttf
-/usr/share/fonts/SlidesCarnival/google/Playfair Display/static/PlayfairDisplay-Bold.ttf
-/usr/share/fonts/SlidesCarnival/google/Cormorant Garamond/static/CormorantGaramond-Italic.ttf
-/usr/share/fonts/SlidesCarnival/google/EB Garamond/static/EBGaramond-Italic.ttf
-/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf
+/root/.grok/server-skills/coffee/assets/fonts/Cinzel-Variable.ttf
+/root/.grok/server-skills/coffee/assets/fonts/PlayfairDisplay-Variable.ttf
+/root/.grok/server-skills/coffee/assets/fonts/CormorantGaramond-Italic-Variable.ttf
+
+Fallback only:
+/usr/share/fonts/truetype/liberation2/LiberationSerif-Bold.ttf
+/usr/share/fonts/truetype/liberation2/LiberationSerif-Italic.ttf
