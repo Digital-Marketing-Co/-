@@ -4,6 +4,24 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-09 | bleed | grok-to-repo | ea287b1 | New full-bleed page-print skill: hide site chrome, snippet plates, zero side margin |
+| 2026-10-09 | article-clip-pdf | grok-to-repo | ea287b1 | Image print contract: side bleed, source ratio, Lanczos width floor |
+| 2026-10-09 | atlas | grok-to-repo | ea287b1 | Image print contract: side bleed, source ratio, Lanczos width floor |
+| 2026-10-09 | banner | grok-to-repo | ea287b1 | Image print contract; alpha blend keeps ratio and upscales to width floor |
+| 2026-10-09 | book | grok-to-repo | ea287b1 | Image print contract: side bleed, source ratio, Lanczos width floor |
+| 2026-10-09 | coffee | grok-to-repo | ea287b1 | v4.1 optional page count and append-iteration; fonts over 200KB skipped |
+| 2026-10-09 | deep | grok-to-repo | ea287b1 | Image print contract; banner flowable keeps source ratio |
+| 2026-10-09 | extract-dir | grok-to-repo | ea287b1 | Image print contract: side bleed, source ratio, Lanczos width floor |
+| 2026-10-09 | folio | grok-to-repo | ea287b1 | Image print contract; folio builder keeps source ratio |
+| 2026-10-09 | global | grok-to-repo | ea287b1 | Image print contract: side bleed, source ratio, Lanczos width floor |
+| 2026-10-09 | images | grok-to-repo | ea287b1 | Image print contract, fit_full_bleed.py, width-floor alpha blend |
+| 2026-10-09 | interop | grok-to-repo | ea287b1 | Publication bar plus image-print-contract reference |
+| 2026-10-09 | list | grok-to-repo | ea287b1 | Image print contract: side bleed, source ratio, Lanczos width floor |
+| 2026-10-09 | negative | grok-to-repo | ea287b1 | v3.1 firm-style token ban, plural and compounds, dropped from watermark carve-out |
+| 2026-10-09 | phd-ivy-monograph | grok-to-repo | ea287b1 | Image print contract; builder keeps source ratio |
+| 2026-10-09 | print | grok-to-repo | ea287b1 | Image print contract: side bleed, source ratio, Lanczos width floor |
+| 2026-10-09 | skill-sync | grok-to-repo | ea287b1 | ChatGPT prompt notes the 2026-10-08 ban and that a commit does not refresh stored skills |
+| 2026-10-09 | pdf | repo-to-hosts | 5cca4ea | Bundled host skill; do not overwrite. ChatGPT and Grok keep the host pdf skill; repo copy is reference only |
 | 2026-10-08 | all-skills | grok-to-repo | 14db3a1 | v3 interop contract: one delivery gate, path resolver, publication bar; drop triple gates and stale workdir roots |
 | 2026-10-08 | all-skills | grok-to-repo | 275404e | End every skill with a final /negative sweep; project instructions ban the blocklist tokens |
 | 2026-10-08 | all-skills | grok-to-repo | 004ae1b | Shared house-output contract; strip instruction-nested anchors; stack visual-system, negative, latex, and itqe |
@@ -54,6 +72,9 @@
 | 2026-10-07 | article-clip-pdf | grok-to-repo | 273e757 | Append mandatory negative gate before deliverable |
 | 2026-10-06 | skill-sync | chatgpt-to-repo | 8d176c8 | Add cross-host canonical policy, CI sync guard, and pull-before-use/push-after-edit protocol |
 | 2026-10-06 | hilarious | grok-to-repo | 0b7bd80 | Add science-of-humor.pdf referenced by SKILL.md and omitted from the package |
+
+
+Captured 2026-10-09 weekday gather. Direction from the 2026-10-08 ledger and commit time, not hash alone. Installed Grok text was newer: image print contract, coffee 4.1, negative 3.1, and the bleed skill folder. Pushed those skill texts. Binaries over 200KB and __pycache__ skipped. Bundled pdf was not overwritten. 30 other installed SKILL.md files matched main.
 
 Captured 2026-10-08 weekday gather. Direction from the 2026-10-07 ledger and commit time, not hash alone. tpmorpedo was the only new Grok skill folder and was pushed in f7da6c4. Banner host resolver and the latex negative-keywords workbook stay repo-canonical. Bundled pdf was not overwritten. Binaries over 200KB (copyright button PNGs) and __pycache__ skipped. 44 other installed SKILL.md files matched main.
 
