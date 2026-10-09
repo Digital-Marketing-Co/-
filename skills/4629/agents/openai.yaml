@@ -1,0 +1,14 @@
+interface:
+  display_name: 4629 Futuristic Documents
+  short_description: Design futuristic documents before images and formatting
+  default_prompt: Use $4629 to establish a credible futuristic design system before
+    creating images, banners, or document styling.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
