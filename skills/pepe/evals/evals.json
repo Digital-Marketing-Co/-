@@ -1,0 +1,33 @@
+{
+  "skill": "pepe",
+  "test_cases": [
+    {
+      "name": "build_embed",
+      "input": "/pepe a promptform pulse deck I can drop into an existing dashboard",
+      "assertions": [
+        "writes PROMPT.md",
+        "writes pepe-promptform.js with Shadow DOM",
+        "runs qa_pepe.py until PASS",
+        "host index.html installs the custom element"
+      ]
+    },
+    {
+      "name": "prompt_only",
+      "input": "/pepe prompt slug:pulse-note a compact note promptform for a docs site",
+      "assertions": [
+        "mode is prompt",
+        "does not invent a second product",
+        "expansion includes mount API and reduced motion"
+      ]
+    },
+    {
+      "name": "qa_fix_loop",
+      "input": "/pepe qa slug:pepe-promptform",
+      "assertions": [
+        "runs scripts/qa_pepe.py",
+        "applies fixes for any failed id",
+        "does not weaken a check to force PASS"
+      ]
+    }
+  ]
+}

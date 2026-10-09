@@ -1,0 +1,10 @@
+{
+  "skill": "pepe",
+  "test_cases": [
+    {"input": "/pepe promptform command rail for a billing app", "should_trigger": true},
+    {"input": "create a skill called /pepe that codes a 3D promptform widget and QAs it", "should_trigger": true},
+    {"input": "install a promptform animated panel inside another web app", "should_trigger": true},
+    {"input": "summarize this article", "should_trigger": false},
+    {"input": "rotate this PDF", "should_trigger": false}
+  ]
+}
