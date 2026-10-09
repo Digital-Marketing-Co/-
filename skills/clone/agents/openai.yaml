@@ -1,0 +1,14 @@
+interface:
+  display_name: Clone Website to PDF
+  short_description: Capture whole sites as compact full-bleed PDFs
+  default_prompt: Clone this website into a full-bleed, compressed PDF with every
+    reachable HTML page in logical order.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
