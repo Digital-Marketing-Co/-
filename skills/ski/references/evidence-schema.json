@@ -1,0 +1,152 @@
+{
+  "type": "object",
+  "required": [
+    "source_id",
+    "authors",
+    "title",
+    "date",
+    "venue",
+    "stable_url",
+    "access_level",
+    "study_design",
+    "sample",
+    "methods",
+    "findings",
+    "limitations",
+    "relevance",
+    "locators"
+  ],
+  "properties": {
+    "source_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "venue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "doi": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stable_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pdf_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "access_level": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "study_design": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sample": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "methods": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "findings": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "limitations": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "relevance": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "access_date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retrieval_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "unknown_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "locators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "location",
+          "verified"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "verified": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

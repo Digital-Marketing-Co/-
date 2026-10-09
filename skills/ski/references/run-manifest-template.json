@@ -1,0 +1,13 @@
+{
+  "run_id": null,
+  "mode": null,
+  "search_date": null,
+  "cutoff": null,
+  "languages": [],
+  "artifacts": {},
+  "source_ids": [],
+  "pending_sources": [],
+  "stopping_reason": null,
+  "saturation_reached": false,
+  "completion": "incomplete"
+}

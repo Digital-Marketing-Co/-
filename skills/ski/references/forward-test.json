@@ -1,0 +1,150 @@
+{
+  "invocation": "/ski dog My eight-year-old dog freezes and growls when I touch his hips and I need a grooming plan.",
+  "mode": "dog",
+  "status": "preliminary_incomplete",
+  "scope": "Forward-test preliminary case triage and staged grooming plan; no literature search, images or monograph requested.",
+  "known_profile": {
+    "age_years": 8,
+    "observations": [
+      "freezes when hips are touched",
+      "growls when hips are touched"
+    ],
+    "goal": "grooming plan"
+  },
+  "interpretation": {
+    "observation": "Freezing and growling occur during hip contact.",
+    "possibilities": [
+      "pain or physical discomfort",
+      "fear or learned concern about handling",
+      "a combination of physical and emotional factors"
+    ],
+    "diagnosis": null,
+    "uncertainty": "The report does not distinguish these possibilities; age alone does not establish a diagnosis."
+  },
+  "preliminary_response": "Pause hip touching and grooming that triggers freezing or growling. Give him space to leave, and do not punish growling or keep handling him to test his tolerance. Arrange a veterinary assessment before practising contact with the hips; explain the response before the appointment so the team can plan handling. For grooming that cannot wait, ask the veterinary team for a safe care plan. After medical assessment, build voluntary participation in small, comfortable steps with rewards and stop at the first sign of tension or withdrawal. To tailor this, I need onset, mobility/health changes, bite history, what grooming is essential, and which tools, rewards and positions he tolerates.",
+  "required_inputs": [
+    {
+      "field": "onset_and_pattern",
+      "question": "When did this start, and does it happen only at the hips or with other touch, tools or people?"
+    },
+    {
+      "field": "health_mobility_sensory",
+      "question": "Any stiffness, difficulty rising/walking, health conditions, sensory changes, recent injury, veterinary findings or current treatment?"
+    },
+    {
+      "field": "bite_history",
+      "question": "Has he snapped, lunged, bitten or made tooth contact, and what happened immediately before and after? Do not recreate the event."
+    },
+    {
+      "field": "grooming_need",
+      "question": "What grooming is needed now, where are any mats or hygiene problems, and can those tasks safely wait?"
+    },
+    {
+      "field": "household_environment",
+      "question": "Who handles him, are children or other animals nearby, and where can he leave and rest undisturbed?"
+    },
+    {
+      "field": "baseline_equipment_rewards",
+      "question": "Which resting/standing positions, brushes, sounds and approaches does he already tolerate voluntarily, and what rewards does he enjoy?"
+    },
+    {
+      "field": "constraints",
+      "question": "What time, space, help and access to a veterinary team or qualified reward-based behavior professional are available?"
+    }
+  ],
+  "plan": {
+    "competency_id": "GROOM-01",
+    "category": "essential; professional support for pain or bite risk",
+    "purpose": "Meet grooming needs while protecting comfort, choice and warning signals.",
+    "prerequisites": [
+      "Veterinary assessment and individualized handling advice before hip-contact exercises.",
+      "Clarify bite history and urgent grooming needs.",
+      "Identify a comfortable position, escape route and suitable rewards."
+    ],
+    "observable_baseline": "Hip touch currently produces freezing and growling; other handling tolerance is unknown. Do not repeat the trigger to establish a baseline.",
+    "success_criteria": "Dog voluntarily participates with loose comfortable movement and can withdraw; grooming is completed only within the veterinary handling plan and observed tolerance. No fixed deadline.",
+    "environment": "Quiet, non-slip space with room to retreat; keep children and other animals away from practice.",
+    "equipment": [
+      "non-slip surface",
+      "owner-approved comfortable grooming tool once tolerance is established",
+      "reward delivery appropriate to veterinary advice"
+    ],
+    "preferred_reinforcers": null,
+    "sequential_steps": [
+      {
+        "stage": 0,
+        "action": "Pause triggering hip handling; arrange veterinary assessment and triage any grooming that cannot wait.",
+        "gate": "Medical and safety needs are addressed before contact training."
+      },
+      {
+        "stage": 1,
+        "action": "After veterinary guidance, reward voluntary approach to a comfortable grooming station or mat. Accept standing or lying as comfortable; do not require a sit.",
+        "gate": "Dog chooses to approach and can leave freely."
+      },
+      {
+        "stage": 2,
+        "action": "Introduce the stationary tool at a comfortable distance, pairing its presence with rewards; do not touch the sensitive area.",
+        "gate": "Dog remains comfortable and voluntarily re-engages."
+      },
+      {
+        "stage": 3,
+        "action": "With veterinary clearance, introduce one very small handling step at an already comfortable body area, then release and reward.",
+        "gate": "No freezing, growling, tension or withdrawal; participation remains voluntary."
+      },
+      {
+        "stage": 4,
+        "action": "Increase only one dimension at a time, such as duration, movement or body area. Work near hips only if explicitly compatible with veterinary advice and current comfort.",
+        "gate": "Repeat comfortable participation before advancing; regress or pause if comfort changes."
+      },
+      {
+        "stage": 5,
+        "action": "Gradually introduce the necessary grooming action, then other familiar tools, locations or people one at a time.",
+        "gate": "Comfort is maintained in each new context."
+      }
+    ],
+    "progression_regression": "Advance based on observed comfortable voluntary responses. Stop contact immediately for freezing, growling, flinching, escape attempts or increased tension; let him leave and review the medical/behavior plan. Do not treat accepting food as proof of comfort.",
+    "generalization": "Introduce a different tool, helper or location individually at easier criteria; communicate the stop signals to any groomer.",
+    "maintenance": "Use brief comfortable practice, breaks and voluntary participation before routine grooming.",
+    "troubleshooting": "If handling remains uncomfortable, do not increase pressure. Return to the veterinary team and seek qualified reward-based behavior support; medically necessary grooming may need a veterinary sedation/handling plan, not more rehearsal.",
+    "welfare_safeguards": [
+      "No punishment for growling.",
+      "No restraint, forced prolonged exposure or provocation to test tolerance.",
+      "Provide rest, water and an escape route.",
+      "Avoid painful positioning.",
+      "Do not prescribe diagnosis, medication or fixed recovery timeline."
+    ],
+    "design_choices": "The stage order and size of each step are practical adjustable examples, not experimentally proven thresholds. Session length and repetitions remain unset until the profile and response are known.",
+    "evidence_consensus_ids": [],
+    "traceability": "This preliminary safety plan follows SKILL.md and references/curriculum-contract.md. No verified empirical source registry was supplied or found in the skill directory, so clinical evidence IDs and claim locators remain unresolved."
+  },
+  "session_template": {
+    "date": null,
+    "handler": null,
+    "vet_guidance_current": null,
+    "step": null,
+    "position": null,
+    "tool": null,
+    "trigger_distance_intensity": null,
+    "response_latency": null,
+    "opportunities": null,
+    "comfortable_voluntary_responses": null,
+    "stress_observations": null,
+    "recovery": null,
+    "prompt_level": null,
+    "reward": null,
+    "change_decision": null
+  },
+  "execution_blockers": [
+    "No individual health, mobility, bite history, onset, urgent grooming needs, preferred rewards or practical constraints supplied.",
+    "No reusable verified general-evidence artifacts supplied; the skill bundle contains contracts but no source registry.",
+    "Veterinary assessment is needed before hip-contact training; a remote report cannot establish diagnosis or a safe hands-on procedure."
+  ],
+  "acceptance": {
+    "forward_test": "pass: mode parsed, known facts retained, missing inputs identified, pain/bite safeguards and staged plan included",
+    "source_traceability": "unresolved: no evidence registry available; no fabricated sources",
+    "full_curriculum": "not applicable to scoped preliminary case test",
+    "research_search": "not applicable: no new research run requested",
+    "images_pdf": "not applicable: explicitly excluded",
+    "delivery": "preliminary JSON produced; not represented as a completed monograph or individualized clinical plan"
+  }
+}

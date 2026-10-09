@@ -1,0 +1,711 @@
+[
+  {
+    "id": "T01",
+    "name": "Name response",
+    "category": "essential",
+    "purpose": "Orient when addressed.",
+    "prerequisites": "Comfortable hearing or adapted visual cue.",
+    "success_criteria": "Turns toward handler after one cue.",
+    "environment": "Quiet room.",
+    "equipment": "Reward pouch.",
+    "reinforcement": "Food or play.",
+    "steps": [
+      "Say name once; reward orientation.",
+      "Repeat from varied positions; avoid rapid repetitions.",
+      "Add mild distractions gradually."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Different rooms and household handlers.",
+    "maintenance": "Brief everyday opportunities.",
+    "troubleshooting": "Reduce distraction; check cue accessibility.",
+    "welfare": "Do not require direct eye contact.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T02",
+    "name": "Attention and check-ins",
+    "category": "essential",
+    "purpose": "Voluntary orientation supports safe guidance.",
+    "prerequisites": "Accessible rewards.",
+    "success_criteria": "Offers brief check-in without prolonged staring.",
+    "environment": "Quiet area, then calm outdoors.",
+    "equipment": "Harness/leash outdoors.",
+    "reinforcement": "Food, sniff access.",
+    "steps": [
+      "Capture spontaneous orientation.",
+      "Add an optional cue after predictability.",
+      "Reward check-ins before distractions dominate."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Different safe settings.",
+    "maintenance": "Reinforce during walks.",
+    "troubleshooting": "Increase distance from distractions.",
+    "welfare": "Allow exploration; no forced gaze.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T03",
+    "name": "Recall",
+    "category": "essential",
+    "purpose": "Return safely when called.",
+    "prerequisites": "Name response; protected area.",
+    "success_criteria": "Approaches and allows comfortable securing after one cue.",
+    "environment": "Enclosed room or yard.",
+    "equipment": "Long line on harness outside.",
+    "reinforcement": "High-value food/play.",
+    "steps": [
+      "Cue at short distance; move invitingly.",
+      "Reward arrival and gentle harness touch.",
+      "Release back to safe activity sometimes."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Gradually vary distance, people and mild distractions.",
+    "maintenance": "Reward regularly throughout life.",
+    "troubleshooting": "Shorten distance; avoid calling to punish or end every pleasure.",
+    "welfare": "Prevent long-line entanglement; no unsafe off-leash tests.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T04",
+    "name": "Emergency recall",
+    "category": "essential",
+    "purpose": "Create a distinctive return cue for urgent situations.",
+    "prerequisites": "Safe recall foundation.",
+    "success_criteria": "Rapid return under rehearsed manageable distractions.",
+    "environment": "Secure space.",
+    "equipment": "Harness and long line.",
+    "reinforcement": "Exceptional reward sequence.",
+    "steps": [
+      "Pair a unique cue with exceptional rewards at close range.",
+      "Rehearse short returns with the same generous outcome.",
+      "Increase challenge cautiously."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Several protected environments.",
+    "maintenance": "Occasional easy rewarded rehearsals.",
+    "troubleshooting": "Use management when cue reliability is uncertain.",
+    "welfare": "Never test beside traffic or wildlife; no guarantee under emergency arousal.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T05",
+    "name": "Settling",
+    "category": "essential",
+    "purpose": "Rest comfortably near ordinary activity.",
+    "prerequisites": "Suitable resting surface.",
+    "success_criteria": "Remains voluntarily resting with loose posture.",
+    "environment": "Quiet home area.",
+    "equipment": "Comfortable mat.",
+    "reinforcement": "Calm food delivery.",
+    "steps": [
+      "Reward voluntary mat visits.",
+      "Capture lying/resting without demanding rigid posture.",
+      "Add tiny amounts of household movement."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Rooms with similar comfort.",
+    "maintenance": "Reward occasional natural settling.",
+    "troubleshooting": "Reduce noise/activity; assess pain if rest is difficult.",
+    "welfare": "Immobility alone is not relaxation.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T06",
+    "name": "Relaxation and appropriate rest",
+    "category": "essential",
+    "purpose": "Protect sleep and recovery.",
+    "prerequisites": "Health and activity needs addressed.",
+    "success_criteria": "Uses rest opportunities and resumes normal activity comfortably.",
+    "environment": "Protected low-disturbance space.",
+    "equipment": "Bed, barriers if needed.",
+    "reinforcement": "Rest access; occasional food.",
+    "steps": [
+      "Identify comfortable rest conditions.",
+      "Arrange predictable quiet periods.",
+      "Reinforce calm behavior without repeatedly waking the dog."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Travel with familiar bedding when feasible.",
+    "maintenance": "Daily protected rest opportunities.",
+    "troubleshooting": "Review noise, exercise, discomfort and household interruptions.",
+    "welfare": "Do not impose sleep quotas or force stillness.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T07",
+    "name": "Stationing",
+    "category": "essential",
+    "purpose": "Move to a safe location during events.",
+    "prerequisites": "Mat engagement.",
+    "success_criteria": "Goes to station and stays for a brief agreed interval.",
+    "environment": "Low-distraction room.",
+    "equipment": "Mat and rewards.",
+    "reinforcement": "Food delivered on station.",
+    "steps": [
+      "Shape approach and placement.",
+      "Add cue after reliable movement.",
+      "Introduce a release cue; increase duration or distance separately."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Different mats, rooms and door events.",
+    "maintenance": "Use in easy household situations.",
+    "troubleshooting": "Lower duration and increase reward rate.",
+    "welfare": "Keep a comfortable exit; station is not forced restraint.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T08",
+    "name": "House training",
+    "category": "essential",
+    "purpose": "Support elimination at suitable locations.",
+    "prerequisites": "Veterinary review for abnormal elimination.",
+    "success_criteria": "Eliminates in designated area when provided appropriate opportunity.",
+    "environment": "Accessible toilet area.",
+    "equipment": "Cleaning supplies; leash if safe.",
+    "reinforcement": "Immediate outdoor reward.",
+    "steps": [
+      "Offer opportunities after relevant activities and signs.",
+      "Reward promptly after elimination.",
+      "Supervise or manage access and clean accidents."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Different safe surfaces and locations gradually.",
+    "maintenance": "Continue suitable opportunities.",
+    "troubleshooting": "Review access frequency and possible disease.",
+    "welfare": "Never punish accidents or restrict essential water.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T09",
+    "name": "Comfortable confinement",
+    "category": "essential",
+    "purpose": "Enable safe brief confinement when necessary.",
+    "prerequisites": "No untreated confinement panic.",
+    "success_criteria": "Enters voluntarily and remains comfortable at practiced duration.",
+    "environment": "Quiet ventilated area.",
+    "equipment": "Appropriate pen/crate with safe bedding.",
+    "reinforcement": "Food, suitable chew.",
+    "steps": [
+      "Reward exploring open enclosure.",
+      "Introduce momentary door movement while remaining near.",
+      "Increase duration and distance separately below distress."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Necessary locations with familiar setup.",
+    "maintenance": "Occasional easy voluntary sessions.",
+    "troubleshooting": "Use a larger safe area or alternate arrangement if distressed.",
+    "welfare": "Not a treatment for panic; no prolonged forced confinement.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T10",
+    "name": "Loose-leash walking",
+    "category": "essential",
+    "purpose": "Travel with comfortable slack.",
+    "prerequisites": "Harness comfort and cue access.",
+    "success_criteria": "Leash slack over a short chosen route.",
+    "environment": "Quiet path.",
+    "equipment": "Fitted harness and ordinary leash.",
+    "reinforcement": "Food; permission to sniff.",
+    "steps": [
+      "Reward slack beside or near handler.",
+      "Take a few steps and reward.",
+      "Change direction gently before tension; add distractions gradually."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Routes and handlers with lowered criteria.",
+    "maintenance": "Frequent rewards at difficult transitions.",
+    "troubleshooting": "Shorten route, improve reward or increase distance.",
+    "welfare": "No leash jerks; accommodate mobility and sniffing.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T11",
+    "name": "Doors and gates",
+    "category": "essential",
+    "purpose": "Prevent uncontrolled exits.",
+    "prerequisites": "Station or brief wait.",
+    "success_criteria": "Pauses while barrier opens and moves on release.",
+    "environment": "Secure double-barrier practice area.",
+    "equipment": "Leash/harness; safety gate.",
+    "reinforcement": "Food and permitted passage.",
+    "steps": [
+      "Reward pause away from opening.",
+      "Open slightly, close calmly if movement begins.",
+      "Release through at manageable opening."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Each household exit independently.",
+    "maintenance": "Rehearse routine safe entries/exits.",
+    "troubleshooting": "Reduce opening and add a secondary barrier.",
+    "welfare": "Never rely on a trained wait as the only traffic safeguard.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T12",
+    "name": "Leave it",
+    "category": "essential",
+    "purpose": "Disengage from inaccessible or unsuitable items.",
+    "prerequisites": "Rewarded orientation.",
+    "success_criteria": "Turns away from safe practice item after one cue.",
+    "environment": "Quiet room.",
+    "equipment": "Safe item behind barrier.",
+    "reinforcement": "Better food elsewhere.",
+    "steps": [
+      "Reward voluntary turn from inaccessible item.",
+      "Add cue when disengagement becomes predictable.",
+      "Practice different harmless items at safe distance."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Protected outdoor setups.",
+    "maintenance": "Reward routine disengagement.",
+    "troubleshooting": "Increase distance; avoid repeating cue under fixation.",
+    "welfare": "Do not rehearse with toxins or deliberately provoke guarding.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T13",
+    "name": "Drop it",
+    "category": "essential",
+    "purpose": "Voluntarily release an item.",
+    "prerequisites": "Safe non-guarded toy.",
+    "success_criteria": "Releases on cue for exchange.",
+    "environment": "Quiet room.",
+    "equipment": "Two toys or food.",
+    "reinforcement": "Food/trade and often return of toy.",
+    "steps": [
+      "Offer exchange for a low-value toy.",
+      "Mark release; deliver reward.",
+      "Add cue and vary safe items gradually."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Different toys and settings.",
+    "maintenance": "Frequent pleasant trades.",
+    "troubleshooting": "Use higher-value exchange; consult support for guarding.",
+    "welfare": "Do not pry jaws or remove valued objects by confrontation.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T14",
+    "name": "Waiting",
+    "category": "essential",
+    "purpose": "Pause briefly before access.",
+    "prerequisites": "Comfortable stance.",
+    "success_criteria": "Brief pause without physical restraint.",
+    "environment": "Quiet home.",
+    "equipment": "Food bowl or toy.",
+    "reinforcement": "Access to desired safe activity.",
+    "steps": [
+      "Reinforce a momentary pause.",
+      "Add cue and release.",
+      "Increase duration in small increments."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Meals, games and safe transitions separately.",
+    "maintenance": "Use brief everyday pauses.",
+    "troubleshooting": "Shorten wait; avoid frustration escalation.",
+    "welfare": "Do not delay urgent elimination or withhold essential needs.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T15",
+    "name": "Safe disengagement",
+    "category": "essential",
+    "purpose": "Turn away from manageable triggers.",
+    "prerequisites": "Orientation and walking foundations.",
+    "success_criteria": "Moves with handler to greater distance before escalation.",
+    "environment": "Open area with retreat route.",
+    "equipment": "Harness and leash.",
+    "reinforcement": "Food, distance, sniff access.",
+    "steps": [
+      "Practice a turn cue without triggers.",
+      "Reinforce walking away.",
+      "Use at low trigger intensity, before fixation."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Different distant triggers cautiously.",
+    "maintenance": "Easy rehearsals between real uses.",
+    "troubleshooting": "Increase distance; seek support if reactions persist.",
+    "welfare": "Do not lure toward feared triggers or trap escape.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T16",
+    "name": "Cooperative grooming",
+    "category": "essential",
+    "purpose": "Participate in tolerable grooming.",
+    "prerequisites": "Health/pain assessment where indicated.",
+    "success_criteria": "Voluntarily presents for a brief tool contact.",
+    "environment": "Quiet nonslip area.",
+    "equipment": "Suitable grooming tool and mat.",
+    "reinforcement": "Preferred food.",
+    "steps": [
+      "Reward voluntary approach to tool.",
+      "Pair tiny nonpainful contacts with reward.",
+      "Use a start behavior; stop when participation breaks."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Different safe body areas separately.",
+    "maintenance": "Short comfortable rehearsals.",
+    "troubleshooting": "Split brush sound, proximity and contact.",
+    "welfare": "No painful detangling practice; urgent care needs a veterinary plan.",
+    "evidence_ids": [
+      "S21",
+      "S08"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T17",
+    "name": "Cooperative handling",
+    "category": "essential",
+    "purpose": "Enable gentle examination contact.",
+    "prerequisites": "Medical clearance for sensitive areas.",
+    "success_criteria": "Offers participation and can withdraw.",
+    "environment": "Quiet nonslip area.",
+    "equipment": "Mat; reward supply.",
+    "reinforcement": "Food or preferred interaction.",
+    "steps": [
+      "Teach voluntary chin rest or station.",
+      "Add brief touch to comfortable area.",
+      "Vary location/duration one at a time; honor withdrawal."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Trusted handlers then clinical setting.",
+    "maintenance": "Regular very brief practice.",
+    "troubleshooting": "Return to approach-only; investigate discomfort.",
+    "welfare": "Never restrain to force continuation.",
+    "evidence_ids": [
+      "S21",
+      "S08"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T18",
+    "name": "Veterinary care preparation",
+    "category": "essential",
+    "purpose": "Reduce preventable clinical stress.",
+    "prerequisites": "Cooperative handling and veterinary coordination.",
+    "success_criteria": "Comfortable participation in chosen rehearsal task.",
+    "environment": "Home then planned clinic visit.",
+    "equipment": "Carrier/harness, mat, clinic-approved items.",
+    "reinforcement": "High-value safe reward.",
+    "steps": [
+      "Identify procedure components with clinic.",
+      "Practice safe approximations below distress.",
+      "Arrange quiet visits and a care plan."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Clinic surfaces and staff when feasible.",
+    "maintenance": "Rehearse between visits.",
+    "troubleshooting": "Discuss clinical anxiolysis/sedation options with veterinarian.",
+    "welfare": "Do not delay urgent medical care for training.",
+    "evidence_ids": [
+      "S21"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T19",
+    "name": "Basket-muzzle conditioning",
+    "category": "essential",
+    "purpose": "Provide a comfortable additional safety tool.",
+    "prerequisites": "Correct fit; voluntary approach.",
+    "success_criteria": "Places nose voluntarily and tolerates brief wear.",
+    "environment": "Quiet room.",
+    "equipment": "Properly fitted basket muzzle allowing panting.",
+    "reinforcement": "Food through basket.",
+    "steps": [
+      "Reward approach and voluntary nose insertion.",
+      "Build comfortable duration before strap handling.",
+      "Fasten briefly, then add movement gradually."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Different rooms and necessary contexts.",
+    "maintenance": "Pleasant short rehearsals.",
+    "troubleshooting": "Back up to voluntary insertion; check rubbing/fit.",
+    "welfare": "Not permission for risky contact; never leave unattended.",
+    "evidence_ids": [
+      "S21"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T20",
+    "name": "Greetings with people",
+    "category": "essential",
+    "purpose": "Support calm voluntary interaction.",
+    "prerequisites": "Manageable arousal; opt-out space.",
+    "success_criteria": "Approaches calmly or chooses disengagement.",
+    "environment": "Quiet area with cooperative adult.",
+    "equipment": "Leash or barrier where needed.",
+    "reinforcement": "Food and desired social contact.",
+    "steps": [
+      "Reward four paws on floor at distance.",
+      "Permit brief voluntary greeting.",
+      "Pause and reward disengagement; reduce distance cautiously."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Different willing adults gradually.",
+    "maintenance": "Reinforce routine calm approaches.",
+    "troubleshooting": "Use distance/barriers rather than correcting jumping.",
+    "welfare": "No forced touch; supervise children and separate when necessary.",
+    "evidence_ids": [
+      "S02",
+      "S26"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T21",
+    "name": "Interactions with dogs",
+    "category": "essential",
+    "purpose": "Enable appropriate distance and safe choices.",
+    "prerequisites": "Known compatible partner and handler support.",
+    "success_criteria": "Comfortable parallel activity with voluntary disengagement.",
+    "environment": "Spacious neutral safe area.",
+    "equipment": "Harnesses/leashes or protected barriers.",
+    "reinforcement": "Food if safe; access to exploration.",
+    "steps": [
+      "Start parallel at comfortable distance.",
+      "Reward check-ins and distance adjustments.",
+      "Allow brief optional interaction only when both are comfortable."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Compatible partners one at a time.",
+    "maintenance": "Maintain comfortable social opportunities.",
+    "troubleshooting": "Increase distance or avoid unsuitable partners.",
+    "welfare": "Dog sociability is not mandatory; no forced face-to-face meeting.",
+    "evidence_ids": [
+      "S02",
+      "S05"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T22",
+    "name": "Gradual independence",
+    "category": "essential",
+    "purpose": "Build comfortable short separations.",
+    "prerequisites": "No unresolved separation panic.",
+    "success_criteria": "Normal comfortable behavior during observed brief absence.",
+    "environment": "Safe familiar space.",
+    "equipment": "Camera; comfortable rest setup.",
+    "reinforcement": "Appropriate enrichment if voluntarily used.",
+    "steps": [
+      "Observe current tolerable distance/duration.",
+      "Rehearse very small separations and return before distress.",
+      "Vary one absence component at a time."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Departure cues and rooms carefully.",
+    "maintenance": "Regular manageable opportunities.",
+    "troubleshooting": "Reduce duration; arrange support to prevent overwhelming absences.",
+    "welfare": "No cry-it-out; eating does not alone establish comfort.",
+    "evidence_ids": [
+      "S20"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T23",
+    "name": "Separation distress management",
+    "category": "essential",
+    "purpose": "Coordinate treatment and reduce suffering.",
+    "prerequisites": "Veterinary/behavior assessment; video history.",
+    "success_criteria": "Reduced distress at individually assessed absences.",
+    "environment": "Safe familiar environment.",
+    "equipment": "Camera; arranged human support.",
+    "reinforcement": "Individualized positive predictions.",
+    "steps": [
+      "Document absence pattern without provocative long tests.",
+      "Arrange management to avoid unmanageable absences.",
+      "Follow clinical subthreshold plan; reassess after setbacks."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Only after stability; change context slowly.",
+    "maintenance": "Monitor natural routine changes.",
+    "troubleshooting": "Consider medical contributors and clinician-guided treatment.",
+    "welfare": "This is a clinical support framework, not an owner-only cure.",
+    "evidence_ids": [
+      "S20",
+      "S22"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T24",
+    "name": "Safe play",
+    "category": "essential",
+    "purpose": "Enjoy games with pauses and release.",
+    "prerequisites": "Safe toy and no guarding concerns.",
+    "success_criteria": "Engages, pauses and releases without escalation.",
+    "environment": "Safe nonslip space.",
+    "equipment": "Appropriate toy.",
+    "reinforcement": "Play itself; exchange reward.",
+    "steps": [
+      "Start brief gentle game.",
+      "Teach rewarded release and pause.",
+      "Resume after comfortable reengagement."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Toys/partners while preserving safety.",
+    "maintenance": "Use short games and rest.",
+    "troubleshooting": "Reduce intensity; remove unsafe competitive setup.",
+    "welfare": "Avoid painful pulling and forced social play.",
+    "evidence_ids": [
+      "S02",
+      "S05"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T25",
+    "name": "Puppy bite inhibition and alternatives",
+    "category": "essential",
+    "purpose": "Guide developmentally appropriate mouth use.",
+    "prerequisites": "Puppy health and rest needs addressed.",
+    "success_criteria": "Increasing gentle interaction and use of suitable chew toys.",
+    "environment": "Quiet safe puppy area.",
+    "equipment": "Appropriate chew/toy, barrier.",
+    "reinforcement": "Chew/play access.",
+    "steps": [
+      "Provide suitable toy before excitement rises.",
+      "Reinforce gentle engagement.",
+      "Pause safely after hard contact; offer rest or alternate activity."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Different adult handlers and appropriate toys.",
+    "maintenance": "Consistent responses during development.",
+    "troubleshooting": "Review fatigue, discomfort and overstimulation.",
+    "welfare": "Do not frighten, pin or hold mouth shut; injury risk needs support.",
+    "evidence_ids": [
+      "S02",
+      "S19"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T26",
+    "name": "Enrichment and species-typical outlets",
+    "category": "essential",
+    "purpose": "Provide safe exploration, sniffing and activity.",
+    "prerequisites": "Health-appropriate activity.",
+    "success_criteria": "Voluntary engagement and comfortable recovery.",
+    "environment": "Safe varied spaces.",
+    "equipment": "Puzzle/foraging materials suitable for dog.",
+    "reinforcement": "The chosen activity.",
+    "steps": [
+      "Offer easy safe foraging or sniffing.",
+      "Observe preference and frustration.",
+      "Increase complexity only when comfortable."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Several safe activity types.",
+    "maintenance": "Regular opportunities adjusted to health.",
+    "troubleshooting": "Simplify or change activity when unused.",
+    "welfare": "Supervise ingestion hazards; avoid excessive exertion.",
+    "evidence_ids": [
+      "S16",
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T27",
+    "name": "Optional scent games and tricks",
+    "category": "optional",
+    "purpose": "Develop enjoyable voluntary skills.",
+    "prerequisites": "Essential safety and health foundations.",
+    "success_criteria": "Completes a chosen easy task willingly.",
+    "environment": "Quiet safe room.",
+    "equipment": "Safe scent container or target.",
+    "reinforcement": "Food/play.",
+    "steps": [
+      "Select a simple target response.",
+      "Shape small steps with clear consequences.",
+      "Add cue and change context gradually."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Other rooms with easier starting task.",
+    "maintenance": "Enjoyable occasional practice.",
+    "troubleshooting": "Reduce complexity rather than force repetitions.",
+    "welfare": "Avoid dangerous scents, strenuous poses or deprivation.",
+    "evidence_ids": [
+      "S02",
+      "S16"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  },
+  {
+    "id": "T28",
+    "name": "Specialist tasks and sport",
+    "category": "specialist",
+    "purpose": "Assess suitability for structured advanced work.",
+    "prerequisites": "Qualified instructor; veterinary suitability review.",
+    "success_criteria": "Meets task-specific validated standards where applicable.",
+    "environment": "Professionally managed venue.",
+    "equipment": "Task-appropriate safe equipment.",
+    "reinforcement": "Individualized reward.",
+    "steps": [
+      "Define real task and welfare limits.",
+      "Teach foundation components under qualified supervision.",
+      "Assess performance and recovery before certification claims."
+    ],
+    "progression": "Advance one difficulty only after repeated comfortable successes. Return to an easier step after avoidance or repeated failure; all criteria are adjustable design examples.",
+    "generalization": "Controlled task-relevant environments.",
+    "maintenance": "Professionally specified schedule.",
+    "troubleshooting": "Reassess suitability after fear, pain or performance changes.",
+    "welfare": "No certification promise; omit tasks outside handler competence.",
+    "evidence_ids": [
+      "S02"
+    ],
+    "recommendation_type": "Curriculum design under cited professional consensus; not an individually trial-validated protocol"
+  }
+]
