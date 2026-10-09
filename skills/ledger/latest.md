@@ -4,6 +4,62 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-09 | 4629 | host-to-repo | 4733afd | Add complete installed directory absent from main; other host must re-read or upload folder ZIP |
+| 2026-10-09 | clone | host-to-repo | 7dc54ba | Add complete installed directory absent from main; other host must re-read or upload folder ZIP |
+| 2026-10-09 | ski | host-to-repo | 085256d | Add complete installed directory absent from main; other host must re-read or upload folder ZIP |
+| 2026-10-09 | topsecret | host-to-repo | 5dff14b | Add complete installed directory absent from main; other host must re-read or upload folder ZIP |
+| 2026-10-09 | brkdwn | host-to-repo | ded2389 | Add complete installed directory absent from main; other host must re-read or upload folder ZIP |
+| 2026-10-09 | generate-prompt | host-to-repo | 24657d8 | Add complete installed directory absent from main; other host must re-read or upload folder ZIP |
+| 2026-10-09 | output | host-to-repo | 112dc96 | Add complete installed directory absent from main; other host must re-read or upload folder ZIP |
+| 2026-10-09 | profound | host-to-repo | 9f2c4d6 | Add complete installed directory absent from main; other host must re-read or upload folder ZIP |
+| 2026-10-09 | wa | host-to-repo | 367c42b | Add complete installed directory absent from main; other host must re-read or upload folder ZIP |
+| 2026-10-09 | article-clip-pdf | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | atlas | repo-to-hosts | 7dec2a3 | Repo newer; seven named local dependencies missing; execution remains blocked |
+| 2026-10-09 | banner | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | bleed | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | blink | repo-to-hosts | 7dec2a3 | Repo newer; blink.py and bitly.md missing from both copies |
+| 2026-10-09 | book | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | breakdown | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | coffee | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | compression | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | copyright | repo-to-hosts | 7dec2a3 | Repo newer; two named PNG assets absent; no asset reconstruction claimed |
+| 2026-10-09 | copysite | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | corpus | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | debbie-downer | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | decode | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | deep | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | extract-dir | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | folio | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | format | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | generate | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | global | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | hilarious | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | images | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | interop | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | interpret | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | ispy | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | iterate | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | itqe | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | latex | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | list | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | negative | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | phd-ivy-monograph | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | plain-jane | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | print | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | proceed | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | prompt-engineer | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | prompt-start | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | psychoanalyze | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | q-base22 | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | ringtone | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | skill-sync | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | summarize | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | tpmorpedo | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | transcribe | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | upscale | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | vector | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | visual-system | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
+| 2026-10-09 | wca-ivy-biblio | repo-to-hosts | 7dec2a3 | Canonical folder reviewed; cached installations are not refreshed by this commit |
 | 2026-10-09 | bleed | grok-to-repo | ea287b1 | New full-bleed page-print skill: hide site chrome, snippet plates, zero side margin |
 | 2026-10-09 | article-clip-pdf | grok-to-repo | ea287b1 | Image print contract: side bleed, source ratio, Lanczos width floor |
 | 2026-10-09 | atlas | grok-to-repo | ea287b1 | Image print contract: side bleed, source ratio, Lanczos width floor |
@@ -143,3 +199,5 @@ skill-sync was installed on Grok from 5691a35. pdf stays a bundled host skill an
 | vector | 88ea07d9907b | a3c9b97b247b | 3546 | 4240 |
 | visual-system | b56eeb63b061 | 8c4e374e8a06 | 4472 | 5361 |
 | wca-ivy-biblio | deda95cea4ed | 14f9c36e4b34 | 13288 | 13982 |
+
+Sync audit 2026-10-09: authenticated login Digital-Marketing-Co. Base main 7dec2a33bb41ae059466387835efa7136ec19574, commit time 2026-10-09T13:26:44Z. Read policy, contract, ledger and all 48 starting skill folders from that revision; compared 53 installed folders / 52 distinct names. Nine absent names committed independently (56 files). For duplicate ski, selected the complete later package dated 2026-10-09T04:14:06Z rather than the 03:54:56Z package; preserved its scripts, references, seeds, icon and agent metadata together. 42 shared editable names are repo-newer by commit times and ledger; no older installed text overwrote them. Five starting repo-only names retained. Locked host tools untouched; repository pdf reference untouched. Skipped __pycache__ and binary files over 200 KB. No deletions, secrets or credentials pushed. Existing atlas, blink and copyright missing-resource limits are recorded above. Optional banner literal-figures reference is absent. Shared pick_palette.py resolves under visual-system, not every individual folder. Added folders passed frontmatter, named-file, Python syntax, JSON/YAML and credential-pattern checks. ski initializer ran; its validator correctly rejected the incomplete seed run. Full execution of clone is blocked here by missing requests; no live crawl or research run was claimed. Host account skill installations require separate re-reading or folder ZIP uploads; filesystem inspection is not proof of an account installation. All changed directories must be re-read by the other host, in addition to the 17 previously identified 2026-10-09 folders. source_host=codex; timestamp_utc=2026-10-09; base_commit=7dec2a33bb41ae059466387835efa7136ec19574; result_commit values are the nine per-skill hashes above. Repository-only files retained.
