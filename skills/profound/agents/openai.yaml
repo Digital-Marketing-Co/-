@@ -1,0 +1,14 @@
+interface:
+  display_name: Profound
+  short_description: Deep research with an evidence-linked research holograph
+  default_prompt: Use $profound to produce a deeply researched evidence-linked holograph
+    for this topic.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
