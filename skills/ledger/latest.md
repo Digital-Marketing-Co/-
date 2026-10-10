@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-10 | textbook | host-to-repo | 4825207 | Add doctoral textbook production workflow, semantic styles, measured contrast and QA gates |
 | 2026-10-09 | pepe | grok-to-repo | 14ec307 | Replace stub SKILL.md with complete installed promptform embed skill including references, scripts, assets, and evals |
 | 2026-10-09 | 4629 | host-to-repo | 4733afd | Add complete installed directory absent from main; other host must re-read or upload folder ZIP |
 | 2026-10-09 | clone | host-to-repo | 7dc54ba | Add complete installed directory absent from main; other host must re-read or upload folder ZIP |
@@ -195,3 +196,5 @@ skill-sync was installed on Grok from 5691a35. pdf stays a bundled host skill an
 | psychoanalyze | fdedae00b3fd | 77ddefef3790 | 16006 | 16700 |
 
 9 folders. source_host=codex; timestamp_utc=2026-10-09; base_commit=7dec2a33bb41ae059466387835efa7136ec19574; result_commit values are the nine per-skill hashes above. Repository-only files retained.
+
+textbook provenance: timestamp_utc=2026-10-10; source_host=codex; base_commit=dc74cfc23195955f7dc57802a9ff81d44a5b247f; result_commit=482520732b87843c21a816f7aca2126a0ff7e205; summary=New textbook package with tested contrast script and structural validation.
