@@ -14,7 +14,7 @@
     {
       "name": "document_upgrade",
       "input": "upgrade this PDF so links have radiant aura",
-      "assertions": ["processes PDF or emits rebuild instructions", "preserves body type", "company link text is Digital Marketing Co."]
+      "assertions": ["processes PDF or emits rebuild instructions", "preserves body type", "company link text is Digital Marketing Company"]
     }
   ]
 }
