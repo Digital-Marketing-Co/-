@@ -205,11 +205,13 @@ def reorder(data: dict, keep_unused: bool = False) -> dict[int, int]:
     for i, entry in enumerate(new_biblio):
         if isinstance(entry, dict) and entry.get("work_id"):
             index_by_id[str(entry["work_id"])] = i
-        index_by_id[f"biblio-text:{re.sub(r'\s+', ' ', biblio_text(entry)).strip().lower()}"] = i
+        normalized_text = re.sub(r'\s+', ' ', biblio_text(entry)).strip().lower()
+        index_by_id[f"biblio-text:{normalized_text}"] = i
 
     old_to_new_biblio = {}
     for old_i, entry in enumerate(biblio):
-        text_key = f"biblio-text:{re.sub(r'\s+', ' ', biblio_text(entry)).strip().lower()}"
+        normalized_text = re.sub(r'\s+', ' ', biblio_text(entry)).strip().lower()
+        text_key = f"biblio-text:{normalized_text}"
         if text_key in index_by_id:
             old_to_new_biblio[old_i] = index_by_id[text_key]
         elif isinstance(entry, dict) and entry.get("work_id") and str(entry["work_id"]) in index_by_id:

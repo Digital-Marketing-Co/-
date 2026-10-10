@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-10 | wca-ivy-biblio | codex-to-repo | compatibility-fix | Move regex normalization outside f-string expressions for Python 3.11 compatibility; citation fixture passes |
 | 2026-10-10 | 4629 | codex-to-repo | e5fdb92 | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
 | 2026-10-10 | article-clip-pdf | codex-to-repo | e5fdb92 | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
 | 2026-10-10 | atlas | codex-to-repo | e5fdb92 | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
@@ -63,7 +64,6 @@
 | 2026-10-10 | visual-system | codex-to-repo | e5fdb92 | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
 | 2026-10-10 | wa | codex-to-repo | e5fdb92 | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
 | 2026-10-10 | wca-ivy-biblio | codex-to-repo | e5fdb92 | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
-|---|---|---|---|---|
 | 2026-10-10 | deep | host-to-repo | 66c3ac1 | Enforce iterative doctoral evidence, verified academic PDFs, WCA, ITQE, LaTeX and unique all-section banners; retain canonical renderer and fonts |
 | 2026-10-10 | textbook | host-to-repo | 4825207 | Add doctoral textbook production workflow, semantic styles, measured contrast and QA gates |
 | 2026-10-09 | pepe | grok-to-repo | 14ec307 | Replace stub SKILL.md with complete installed promptform embed skill including references, scripts, assets, and evals |
