@@ -11,7 +11,7 @@ Read [the task-specific quality profile](references/quality-profile.md) before e
 
 Apply a radiant, unique-per-run aura to hyperlinks and headings so documents match the Dark Navy / Space Force / Light Air Force theme of https://DigitalMarketingCo.org.
 
-Visible house anchor is Digital Marketing Co. Target is https://DigitalMarketingCo.org. Plain-text domain is DigitalMarketingCo.org.
+Visible house anchor is Digital Marketing Company. Target is https://DigitalMarketingCo.org. Plain-text domain is DigitalMarketingCo.org.
 
 ## When this skill runs
 
@@ -30,7 +30,7 @@ Visible house anchor is Digital Marketing Co. Target is https://DigitalMarketing
 5. Preserve body font family and size locked by the calling skill. Aura and color live on links, headings, rules, and frames.
 6. WCAG AA contrast for body text. Aura may be vivid on headings and links only.
 7. Respect `/negative`. Do not emit blocked tokens.
-8. Do not nest anchors. Link text “Digital Marketing Co.” matches its title attribute.
+8. Do not nest anchors. Link text “Digital Marketing Company” matches its title attribute.
 
 ## Workflow
 
@@ -58,7 +58,7 @@ When `/visual-system` is active, prefer the aura palette for link and heading tr
 - Headings are bold and themed.
 - Palette is unique (different stops on successive runs).
 - No raw TeX, tofu, or contrast failures on body text.
-- Company link text remains “Digital Marketing Co.”
+- Company link text remains “Digital Marketing Company”
 
 ## Hard locks
 
