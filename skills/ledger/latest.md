@@ -130,4 +130,38 @@
 
 ## Provenance notes
 
-[truncated for brevity in this call; full original retained in practice]
+article-clip-pdf | c28167868ddd | 05a8c3bcb2fc | 9072 | 9766 |
+| atlas | b62b0f8dc785 | b7fce0834fe8 | 12125 | 12819 |
+| banner | c9c1d8a6ff1e | e214a9162aa3 | 11381 | 15120 |
+| blink | 6f0fb251f467 | 38869d92d910 | 6406 | 7100 |
+| book | 962f6673c963 | d4c81484000f | 6519 | 8804 |
+| breakdown | eafe82ce8297 | c315b87a9410 | 5502 | 6196 |
+| copyright | 0025a43a4e4d | 4841dc374972 | 11233 | 12146 |
+| copysite | 2c380f33ea6a | 16e2b1edbc1f | 6840 | 7534 |
+| corpus | f9ec5a11c8f7 | 348deba80ff3 | 11502 | 12196 |
+| debbie-downer | ff5267e1c008 | 42ba24dc1171 | 8171 | 8865 |
+| decode | 00c2348f69c1 | 140a0ddd95cf | 11093 | 11787 |
+| deep | 9555518c5148 | 012cb07e846d | 10422 | 11116 |
+| extract-dir | ea8bb34f7c41 | 5936b58ec3a2 | 8260 | 8954 |
+| folio | ad22e934f645 | 64052d45ca06 | 13045 | 13739 |
+| format | 115b6cafa563 | e95eac5fb3dc | 3668 | 4362 |
+| global | 14cd4b595898 | 4f8214eb08e9 | 14817 | 15511 |
+| images | 26b2bfd2e6b7 | af294e21f924 | 16441 | 20207 |
+| ispy | 9259bdabf0e2 | 631a5d8534b2 | 7266 | 7307 |
+| iterate | e76461112236 | b08165906c1a | 9930 | 10624 |
+| itqe | 658ee32c2fa7 | cc0c7714afd4 | 20296 | 21642 |
+| latex | c02378718db1 | d304369fd9d6 | 13833 | 18857 |
+| list | 0d74ee75f811 | 4fa106c32f62 | 14641 | 15570 |
+| negative | a5af14ed9614 | ffffb01d832c | 3030 | 4385 |
+| phd-ivy-monograph | d9f1a1fc5ed3 | b425cee88b16 | 13042 | 13736 |
+| plain-jane | 7ae29646830c | b9f34cf0b76b | 10306 | 11000 |
+| print | c1d878f12894 | cf55a44cd747 | 10047 | 10741 |
+| proceed | 09945fcf7901 | 6835408d914e | 3110 | 2613 |
+| prompt-start | 0c51b9a3bfd9 | e55cd4658cbc | 1431 | 2125 |
+| psychoanalyze | fdedae00b3fd | 77ddefef3790 | 16006 | 16700 |
+
+9 folders. source_host=codex; timestamp_utc=2026-10-09; base_commit=7dec2a33bb41ae059466387835efa7136ec19574; result_commit values are the nine per-skill hashes above. Repository-only files retained.
+
+textbook provenance: timestamp_utc=2026-10-10; source_host=codex; base_commit=dc74cfc23195955f7dc57802a9ff81d44a5b247f; result_commit=482520732b87843c21a816f7aca2126a0ff7e205; summary=New textbook package with tested contrast script and structural validation.
+
+deep provenance: timestamp_utc=2026-10-10; skill=deep; source_host=codex; base_commit=8c9198a19cfaf391671b52dbada2809e231e8810; result_commit=66c3ac1b7532d04951bf7a0100ba927aaa915ffc; summary=Merge validated doctoral research update and complete canonical assets. Skills-page save rejected by its safety scan; installation is unconfirmed.
