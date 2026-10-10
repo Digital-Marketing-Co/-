@@ -2,7 +2,7 @@
   "timestamp_utc": "2026-10-10",
   "source_host": "codex",
   "base_commit": "a654c044e75059a49b2920861a7ab9911f85741b",
-  "result_commit": "Resolve with git log -1 -- skills/<name>/SKILL.md",
+  "result_commit": "e5fdb9280a3a0e0bca354bdbf922a6f8cb3ecac0",
   "summary": "59 skill profiles and scenarios; 32 offline tests; 99 compiled Python files; host push HTTP 422",
   "skills": [
     {
