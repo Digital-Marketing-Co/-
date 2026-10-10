@@ -3,6 +3,7 @@
 ## Sync log
 
 | Date | Skill | Direction | Short hash | Change |
+| 2026-10-10 | all-skills | grok-to-repo | 9b80419 | Company link text is Digital Marketing Co.; plain domain DigitalMarketingCo.org; URL https://DigitalMarketingCo.org |
 |---|---|---|---|---|
 | 2026-10-10 | wca-ivy-biblio | codex-to-repo | compatibility-fix | Move regex normalization outside f-string expressions for Python 3.11 compatibility; citation fixture passes |
 | 2026-10-10 | 4629 | codex-to-repo | e5fdb92 | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
