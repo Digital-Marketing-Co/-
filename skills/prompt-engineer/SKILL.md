@@ -63,8 +63,8 @@ Keyword keys
 - `slug` — folder and route stem
 - `stack` — `next`, `html`, `react` (default `html` unless the remainder names Next.js)
 - `apps` — comma list when `/apps` cannot be fetched
-- `brand` — default Digital Marketing Company
-- `auditor` — default https://digitalmarketingco.org/free-website-auditor
+- `brand` — default Digital Marketing Co.
+- `auditor` — default https://DigitalMarketingCo.org/free-website-auditor
 
 Unknown keys stay inside the pseudoprompt bag.
 
@@ -74,7 +74,7 @@ Examples
 /PromptEngineer Make a beautiful and futuristic mega menu drop down for all apps
 /PromptEngineer spec glass pricing table with holographic tiers
 /PromptEngineer build slug:apps stack:html mega menu in /apps order
-/PromptEngineer audit https://digitalmarketingco.org/apps
+/PromptEngineer audit https://DigitalMarketingCo.org/apps
 ```
 
 ## Workflow
@@ -102,7 +102,7 @@ The expansion must add, without being asked again
 6. Image plan — unique AI still, OG image, and Twitter card per route (`references/og-social.md`)
 7. Inclusive design — keyboard, screen reader, hit targets, contrast, `prefers-reduced-motion`
 8. 521-metric mandate — every HTML route must be built to pass `references/metrics-521.md`
-9. House link lock — visible anchor Digital Marketing Company, matching title attribute, target https://digitalmarketingco.org. Plain domain text DigitalMarketingCo.org
+9. House link lock — visible anchor Digital Marketing Co., matching title attribute, target https://DigitalMarketingCo.org. Plain domain text DigitalMarketingCo.org
 10. Acceptance checks
 
 The founding quality floor is `references/exemplar-mega-menu.md`. New work must meet or exceed that density. Do not paste the exemplar when the remainder is a different product.
@@ -123,7 +123,7 @@ Hard visual floor
 
 ### 4. Auditor lock
 
-Every page this skill writes is scored against the twelve dimensions on https://digitalmarketingco.org/free-website-auditor and the 521 checks in `references/metrics-521.md`.
+Every page this skill writes is scored against the twelve dimensions on https://DigitalMarketingCo.org/free-website-auditor and the 521 checks in `references/metrics-521.md`.
 
 Dimensions — SEO, Performance, Mobile, Security, Accessibility, AI Readiness, AIO, GEO, AEO, Local SEO, Schema.org, WCAG.
 
@@ -133,7 +133,7 @@ Do not ship a route that is missing title, unique meta description, canonical, r
 
 When the remainder names apps, mega menu, navigation, footer accordion, or 404 inventory, read `references/ia-sync.md`.
 
-- Fetch live `/apps` order when the network can reach https://digitalmarketingco.org/apps
+- Fetch live `/apps` order when the network can reach https://DigitalMarketingCo.org/apps
 - One source-of-truth array. Nav mega menu, `/apps` grid, footer accordion, and 404 list consume that array in the same order
 - Every app card gets its own still, OG, and Twitter image
 - Do not invent a second sort
@@ -185,7 +185,7 @@ Render local HTML with the file render component when a preview file exists.
 5. Inclusive floor — keyboard path, visible focus, labels, contrast, touch targets, reduced motion, semantic landmarks.
 6. Image floor — unique still + OG + Twitter per route. No reused bytes across routes.
 7. Order floor — Apps lists stay in `/apps` order everywhere.
-8. Link floor — Digital Marketing Company / DigitalMarketingCo.org lock above.
+8. Link floor — Digital Marketing Co. / DigitalMarketingCo.org lock above.
 9. After skill-only install — stop. Do not invent a mega menu unless the remainder asked for one.
 
 ## After creating or editing this skill

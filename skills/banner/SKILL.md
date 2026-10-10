@@ -117,7 +117,7 @@ Caption form
 
 Default href
 
-`https://digitalmarketingco.org/r/?src=deep-banner&section={section_id}`
+`https://DigitalMarketingCo.org/r/?src=deep-banner&section={section_id}`
 
 Never print the URL on the banner.
 

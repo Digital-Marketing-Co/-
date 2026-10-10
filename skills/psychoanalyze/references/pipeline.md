@@ -22,7 +22,7 @@ Read
 - `deep/references/chicago-and-marks.md`
 - `deep/assets/schema/deep.schema.json`
 
-Author block and house link follow Deep house-style. Visible anchor is Digital Marketing Company. Target is https://digitalmarketingco.org.
+Author block and house link follow Deep house-style. Visible anchor is Digital Marketing Co. Target is https://DigitalMarketingCo.org.
 
 Working Deep title
 
@@ -38,7 +38,7 @@ Prompts must be section-true. No couches-as-stock-photo. No faces of private per
 
 Href seed
 
-`https://digitalmarketingco.org/r/?src=psychoanalyze-banner&section={section_id}`
+`https://DigitalMarketingCo.org/r/?src=psychoanalyze-banner&section={section_id}`
 
 ## Folio handoff
 

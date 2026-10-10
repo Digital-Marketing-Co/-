@@ -1099,6 +1099,6 @@ When rewriting generated text, swap as follows unless the user quoted the token 
 - Ordinary uses of common stems when they are not the listed phrase (user talking about a real physical landscape, a real mosaic artwork, a court testament, a ship embarking)
 - The words in this blocklist file itself
 - Watermark terms printed on purpose in a delivered file — atlas, gazette, gazetteer
-- Firm name-lines — Digital Marketing Company, DigitalMarketingCo.org, Web Development Corporation
+- Firm name-lines — Digital Marketing Co., DigitalMarketingCo.org, Web Development Corporation
 - A WCA filename token such as `wca-folio` in the file name only
 - Chat that is only managing the list or running a skill, when the user typed the flag

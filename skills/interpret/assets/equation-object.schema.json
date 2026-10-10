@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://digitalmarketingco.org/skills/interpret/equation-object.schema.json",
+  "$id": "https://DigitalMarketingCo.org/skills/interpret/equation-object.schema.json",
   "title": "Interpret equation object",
   "type": "object",
   "required": [

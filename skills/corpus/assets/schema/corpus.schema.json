@@ -37,8 +37,8 @@
       "type": "object",
       "required": ["anchor", "href", "domain_plain"],
       "properties": {
-        "anchor": { "const": "Digital Marketing Company" },
-        "href": { "const": "https://digitalmarketingco.org" },
+        "anchor": { "const": "Digital Marketing Co." },
+        "href": { "const": "https://DigitalMarketingCo.org" },
         "domain_plain": { "const": "DigitalMarketingCo.org" }
       }
     },

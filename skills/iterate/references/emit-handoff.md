@@ -49,7 +49,7 @@ Exit 1 blocks delivery. Compile leaks with `/latex` `render_snippet.py`, store p
 
 ## House chrome
 
-- Visible anchor Digital Marketing Company → https://digitalmarketingco.org
+- Visible anchor Digital Marketing Co. → https://DigitalMarketingCo.org
 - Plain-text domain DigitalMarketingCo.org
 - Living copyright footer through `/copyright`
 - No emoji

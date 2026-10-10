@@ -19,7 +19,7 @@
     },
     {
       "name": "url_solidus_allowed",
-      "input": "Page contains https://digitalmarketingco.org and the prose solidus and/or, and no math source",
+      "input": "Page contains https://DigitalMarketingCo.org and the prose solidus and/or, and no math source",
       "assertions": [
         "scan_unrendered_ops.py does not flag the URL or and/or"
       ]

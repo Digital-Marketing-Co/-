@@ -110,7 +110,7 @@ For each body section except Notes and Bibliography run the /banner skill. Follo
 
 Default href
 
-`https://digitalmarketingco.org/r/?src=atlas-banner&section={section_id}`
+`https://DigitalMarketingCo.org/r/?src=atlas-banner&section={section_id}`
 
 Do not print the URL on the figure. Banners are generated illustrations, never presented as historical photographs or official map reproductions.
 
@@ -152,7 +152,7 @@ Output a copyable Python fence only when a new helper script is written during a
 - Chicago notes plus bibliography. No author-date parentheticals.
 - Typography comes only from `<deep>/assets/typography.py`. BODY_PT is 22. Face is Georgia (bundled Gelasio registered as Georgia).
 - Banner geometry comes only from `<banner>/references/banner-spec.md` (8.5 in wide, 4.35 in tall, full-opacity edges).
-- Visible house anchor is exactly Digital Marketing Company. Target is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
+- Visible house anchor is exactly Digital Marketing Co. Target is https://DigitalMarketingCo.org. Plain-text domain is DigitalMarketingCo.org.
 - Public filename is `YYYY-topic-slug-wca-atlas.pdf`.
 - No emoji. No unsupported symbols. No invented sources. No invented latitudes or longitudes.
 - Coordinates, when printed, must cite the gazetteer or survey sheet they came from.

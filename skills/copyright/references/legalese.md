@@ -10,9 +10,9 @@ YEAR is `new Date().getFullYear()` written into PDF field `WCACopyrightYear` whe
 
 Legal owner string for title pages and PDF Info: Web Development Corporation, a Delaware Corporation.
 
-House site: https://digitalmarketingco.org  
+House site: https://DigitalMarketingCo.org  
 Plain-text domain: DigitalMarketingCo.org  
-Visible link text: Digital Marketing Company
+Visible link text: Digital Marketing Co.
 
 ## Assignment intent
 

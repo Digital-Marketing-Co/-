@@ -16,7 +16,7 @@ Twitter may reuse the OG composition only when the file is a separate write with
 
 ```html
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Digital Marketing Company">
+<meta property="og:site_name" content="Digital Marketing Co.">
 <meta property="og:title" content="UNIQUE PAGE TITLE">
 <meta property="og:description" content="UNIQUE 150-160 CHAR DESCRIPTION">
 <meta property="og:url" content="CANONICAL URL">

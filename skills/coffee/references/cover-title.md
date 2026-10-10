@@ -11,7 +11,7 @@ Faces live in the skill tree. The old SlidesCarnival paths are not on this host 
 
 The title is 3 to 8 words. Subtitle is optional, at most 12 words. Do not ask the generate step to paint the title.
 
-Veil only the lower third so the still still touches the top trim. Company line on the cover is Digital Marketing Company, which matches the link title. No running footer on later pages.
+Veil only the lower third so the still still touches the top trim. Company line on the cover is Digital Marketing Co., which matches the link title. No running footer on later pages.
 
 Command:
 

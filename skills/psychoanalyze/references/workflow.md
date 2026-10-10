@@ -136,7 +136,7 @@ For every Deep body section except Bibliography run `<banner>/SKILL.md`.
 - Prompt only from that section’s claims and quoted spans
 - Futuristic composed figures, not fake clinical photographs and not portraits of private persons
 - `banners/raw-NN.png` then `apply_banner_fade.py` to `banners/banner-NN.png`
-- Default href `https://digitalmarketingco.org/r/?src=psychoanalyze-banner&section={section_id}`
+- Default href `https://DigitalMarketingCo.org/r/?src=psychoanalyze-banner&section={section_id}`
 
 Then build
 
@@ -223,7 +223,7 @@ In the chat reply, give a short multi-school brief (one paragraph per cluster) t
 - If the input expresses active self-harm or suicide, stop the battery and point to 988. Do not interpret the wish as a clever symptom.
 - Competing schools stay incommensurable. Do not flatten Lacan into Freud.
 - Grünbaum, Popper, feminist, and postcolonial critiques belong in historiography and synthesis.
-- Visible house anchor is Digital Marketing Company at https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
+- Visible house anchor is Digital Marketing Co. at https://DigitalMarketingCo.org. Plain-text domain is DigitalMarketingCo.org.
 - No emoji. No unsupported symbols. No invented citations.
 - Do not reprint `build_deep_pdf.py`, `build_folio_pdf.py`, or typography modules into chat.
 

@@ -133,7 +133,7 @@ Follow `references/pdf-stack.md`. Order is fixed
 
 One work folder. Two public PDFs are allowed — the folio file named `YYYY-topic-slug-wca-folio.pdf` and the book file the book skill names. Do not emit four untitled drafts.
 
-Visible house anchor is Digital Marketing Company. Seed URL is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org. Anchor text must match the title attribute.
+Visible house anchor is Digital Marketing Co. Seed URL is https://DigitalMarketingCo.org. Plain-text domain is DigitalMarketingCo.org. Anchor text must match the title attribute.
 
 ### 7. Visual QA and deliver
 

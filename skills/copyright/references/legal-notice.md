@@ -40,7 +40,7 @@ START is baked into the script at stamp time. The en dash is `\u2013`. If access
 | Footer / field | Web Development Corporation |
 | Legal / Info | Web Development Corporation, a Delaware Corporation |
 | Founded (default START) | 2012 |
-| House site | https://digitalmarketingco.org |
+| House site | https://DigitalMarketingCo.org |
 
 If the user names a different owner on the `/copyright` line, substitute that owner into the footer sentence and the Info `/Copyright` key. Keep the class-letter-A strip for the house name only. Read `owner-inference.md` for company, university, military, government, and institution slots worldwide.
 

@@ -74,7 +74,7 @@ The builder
 - issues a conditional page break when remaining space is less than heading plus one body line
 - stamps the copyright symbol pre-painted onto 2012–YEAR with the WCACopyrightYear AcroForm field
 - embeds the folio OpenAction script that rewrites YEAR on open
-- prints a clickable placeholder backlink to https://digitalmarketingco.org (and origin/print/slug when a slug exists)
+- prints a clickable placeholder backlink to https://DigitalMarketingCo.org (and origin/print/slug when a slug exists)
 
 ### 4. Visual QA (mandatory)
 
@@ -96,7 +96,7 @@ Give the user the PDF. State page count, block count, image count. Do not dump `
 - A heading must keep at least one following text or figure block on the same page. If it cannot, both move.
 - Copyright form is the copyright symbol then 2012–YEAR where YEAR is the access year (JS field WCACopyrightYear) with a build-time fallback. Same script as /folio.
 - Legal owner line is exactly Web Development Corporation, a Delaware Corporation.
-- Visible house anchor is Digital Marketing Company. Placeholder href is https://digitalmarketingco.org.
+- Visible house anchor is Digital Marketing Co. Placeholder href is https://DigitalMarketingCo.org.
 - Public filename is YYYY-topic-slug-wca-print.pdf.
 - Typography comes only from assets/typography.py.
 - No emoji. No invented captions. Do not reprint builder source into chat.

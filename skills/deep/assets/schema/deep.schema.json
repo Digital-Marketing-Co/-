@@ -7,8 +7,8 @@
   "abstract": "string",
   "keywords": ["string"],
   "house": {
-    "anchor": "Digital Marketing Company",
-    "href": "https://digitalmarketingco.org",
+    "anchor": "Digital Marketing Co.",
+    "href": "https://DigitalMarketingCo.org",
     "domain_plain": "DigitalMarketingCo.org"
   },
   "sections": [
@@ -19,7 +19,7 @@
       "paragraphs": ["string with {{1}} or {{1, 4}} markers"],
       "banner": {
         "path": "banners/banner-01.png",
-        "href": "https://digitalmarketingco.org/r/?src=deep-banner&section=intro",
+        "href": "https://DigitalMarketingCo.org/r/?src=deep-banner&section=intro",
         "caption": "string",
         "prompt": "string"
       }

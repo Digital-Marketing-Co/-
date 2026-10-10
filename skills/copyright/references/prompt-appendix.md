@@ -28,7 +28,7 @@ DEFAULT_OWNER_LEGAL: Web Development Corporation, a Delaware Corporation
 FIELD: WCACopyrightYear
 SEPARATOR: en dash U+2013
 JS: Date.getFullYear on OpenAction; no alerts; no network; no app UI
-HOUSE_SITE: https://digitalmarketingco.org
+HOUSE_SITE: https://DigitalMarketingCo.org
 
 OWNER_INFERENCE:
 If the current user turn names a different rightsholder, substitute OWNER_FOOTER and OWNER_LEGAL from that name. Do not invent a Delaware class letter A for a non-house owner.

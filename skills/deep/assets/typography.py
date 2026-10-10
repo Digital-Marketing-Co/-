@@ -58,5 +58,5 @@ BANNER_TOTAL_HEIGHT_IN = 4.35        # 1.0 + 2.35 + 1.0
 # Placeholder tracking URL pattern. Replace later with the SEO title URL
 # of the matching synthesis node. {section_id} is required.
 BANNER_HREF_TEMPLATE = (
-    "https://digitalmarketingco.org/r/?src=deep-banner&section={section_id}"
+    "https://DigitalMarketingCo.org/r/?src=deep-banner&section={section_id}"
 )

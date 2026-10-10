@@ -1,7 +1,7 @@
 # 521 auditor metrics
 
 Lock these checks to every HTML route `/PromptEngineer` writes.
-They implement the twelve dimensions of https://digitalmarketingco.org/free-website-auditor.
+They implement the twelve dimensions of https://DigitalMarketingCo.org/free-website-auditor.
 Do not claim a live 100 score unless an external run exists. Self-score honestly.
 
 Dimensions — SEO, Performance, Mobile, Security, Accessibility, AI Readiness, AIO, GEO, AEO, Local SEO, Schema.org, WCAG.
@@ -272,7 +272,7 @@ Total checks — 521.
 250. No text baked into OG that contradicts the title
 251. Contact path is a real URL
 252. About path is a real URL when claimed
-253. Brand name Digital Marketing Company appears as that string
+253. Brand name Digital Marketing Co. appears as that string
 254. Domain string DigitalMarketingCo.org used when the domain is written
 255. Auditor URL cited only when the page is about the auditor
 256. No fake statistics in copy
@@ -336,7 +336,7 @@ Total checks — 521.
 310. No wall of adjectives before the first fact
 311. Apps inventory is complete so engines do not invent extras
 312. Order of apps is published so citations can match
-313. Disambiguation — Digital Marketing Company vs generic agency nouns
+313. Disambiguation — Digital Marketing Co. vs generic agency nouns
 314. Location of the firm only if local pages claim it
 315. Do not geo-spam cities the page is not about
 316. Generative engines see the same HTML as users
@@ -458,8 +458,8 @@ Total checks — 521.
 426. WebSite name matches visible brand
 427. WebSite url matches the site origin
 428. SearchAction only if a working search exists
-429. Organization type with name Digital Marketing Company when that is the operator
-430. Organization url https://digitalmarketingco.org
+429. Organization type with name Digital Marketing Co. when that is the operator
+430. Organization url https://DigitalMarketingCo.org
 431. Organization logo object with url width height when a logo file exists
 432. WebPage type on each route
 433. WebPage url equals canonical

@@ -33,7 +33,7 @@ Order in the file **is** display order. Do not sort alphabetically in the UI.
 
 ## Live scrape
 
-1. Open https://digitalmarketingco.org/apps
+1. Open https://DigitalMarketingCo.org/apps
 2. Collect cards or list items in DOM order
 3. Write `data/apps.json`
 4. If the scrape fails, use the `apps:` flag list or keep an existing local file. Never invent a second catalog.
@@ -57,4 +57,4 @@ Order in the file **is** display order. Do not sort alphabetically in the UI.
 - One accordion whose panels are app groups (or a single "Apps" panel if ungrouped)
 - Links in source order
 - Keyboard operable (`button` + `aria-expanded`)
-- House link in the legal row — Digital Marketing Company → https://digitalmarketingco.org
+- House link in the legal row — Digital Marketing Co. → https://DigitalMarketingCo.org

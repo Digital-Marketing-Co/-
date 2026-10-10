@@ -21,7 +21,7 @@ Typography is frozen:
 
 Every printed section and subsection of every type, including Notes, Bibliography, and appendices, receives one unique full-opacity 16:9 full-width banner. Invoke /images and /banner; accept /banners as an alias. Do not reuse images. Compile mathematics separately with /latex and put an /itqe table directly below every display equation. Banners are generated only from claims in that section. Equations on a banner must be the real equation from the section, with every symbol named in the caption. No false labels, no invented data, no burned-in watermarks, no checkerboard.
 
-House link visible text is exactly Digital Marketing Company. Href is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org. Explain every variable, subscript, and constant the first time an equation appears. No tofu, no black boxes, no emoji.
+House link visible text is exactly Digital Marketing Co. Href is https://DigitalMarketingCo.org. Plain-text domain is DigitalMarketingCo.org. Explain every variable, subscript, and constant the first time an equation appears. No tofu, no black boxes, no emoji.
 
 Deliver one letter-size PDF after visual QA of every page.
 

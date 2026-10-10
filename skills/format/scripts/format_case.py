@@ -10,7 +10,7 @@ Modes (aliases are case-insensitive):
 
 Usage:
   python3 format_case.py --mode PC "hello world"
-  python3 format_case.py --mode SC --json "Digital Marketing Company"
+  python3 format_case.py --mode SC --json "Digital Marketing Co."
   python3 format_case.py --self-test
 """
 
@@ -181,7 +181,7 @@ def self_test() -> int:
         ("ac", "Hello World", "HELLO WORLD"),
         ("lc", "Hello World", "hello world"),
         ("sc", "Hello", "Hᴇʟʟᴏ"),
-        ("sc", "Digital Marketing Company", "Dɪɢɪᴛᴀʟ Mᴀʀᴋᴇᴛɪɴɢ Cᴏᴍᴘᴀɴʏ"),
+        ("sc", "Digital Marketing Co.", "Dɪɢɪᴛᴀʟ Mᴀʀᴋᴇᴛɪɴɢ Cᴏᴍᴘᴀɴʏ"),
         ("ProperCase", "a b", "A B"),
         ("ALL CAPS", "mix", "MIX"),
         ("small caps", "Qa", "Qᴀ"),

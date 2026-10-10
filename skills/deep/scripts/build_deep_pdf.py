@@ -526,16 +526,16 @@ def load_json(path: Path) -> dict:
     data.setdefault(
         "house",
         {
-            "anchor": "Digital Marketing Company",
-            "href": "https://digitalmarketingco.org",
+            "anchor": "Digital Marketing Co.",
+            "href": "https://DigitalMarketingCo.org",
             "domain_plain": "DigitalMarketingCo.org",
             "wdc_anchor": "Web Development Corporation",
             "wdc_href": "https://WebDevelopment.tv",
         },
     )
     house = data["house"]
-    house.setdefault("anchor", "Digital Marketing Company")
-    house.setdefault("href", "https://digitalmarketingco.org")
+    house.setdefault("anchor", "Digital Marketing Co.")
+    house.setdefault("href", "https://DigitalMarketingCo.org")
     house.setdefault("domain_plain", "DigitalMarketingCo.org")
     house.setdefault("wdc_anchor", "Web Development Corporation")
     house.setdefault("wdc_href", "https://WebDevelopment.tv")

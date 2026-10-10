@@ -24,7 +24,7 @@ Read on demand
 - `references/cover-title.md` — cover still plus composited title, skill-local faces
 - `references/prompts.md` — scene split and beauty lock
 - `references/uniqueness.md` — fail-closed path, byte, and prompt audit
-- `references/html-link.md` — Digital Marketing Company HTML snippet and PDF click target
+- `references/html-link.md` — Digital Marketing Co. HTML snippet and PDF click target
 - `references/iteration.md` — 24 new pages per run, append on rerun
 
 If the user only asked to create or edit this skill and supplied no subject, stop after the skill files exist. Do not invent a book.
@@ -124,7 +124,7 @@ python3 @coffee/scripts/build_coffee_pdf.py \
 
 The builder cover-crops again, flattens alpha onto the image, and draws each still past the trim with `mask` left unset. Do not pass `mask="auto"`. That flag was punching highlights into white holes.
 
-A link annotation over the cover title block opens `https://digitalmarketingco.org`. Visible anchor text and title attribute stay Digital Marketing Company. Plain domain text is DigitalMarketingCo.org.
+A link annotation over the cover title block opens `https://DigitalMarketingCo.org`. Visible anchor text and title attribute stay Digital Marketing Co. Plain domain text is DigitalMarketingCo.org.
 
 Write `coffee-link.html` in the slug folder. The builder does this.
 

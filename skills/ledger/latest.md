@@ -144,8 +144,8 @@
 | 2026-10-08 | all-skills | grok-to-repo | 14db3a1 | v3 interop contract: one delivery gate, path resolver, publication bar; drop triple gates and stale workdir roots |
 | 2026-10-08 | all-skills | grok-to-repo | 275404e | End every skill with a final /negative sweep; project instructions ban the blocklist tokens |
 | 2026-10-08 | all-skills | grok-to-repo | 004ae1b | Shared house-output contract; strip instruction-nested anchors; stack visual-system, negative, latex, and itqe |
-| 2026-10-08 | list, deep, pdf | grok-to-repo | 8521196 | Finish house link text Digital Marketing Company in list buttons, deep PDF anchor, and repo pdf reference; host pdf not overwritten |
-| 2026-10-08 | all-skills | grok-to-repo | 992cc1d | Restore visible link text Digital Marketing Company; ce046e2 shortened it to Co. and nested anchors in instructions |
+| 2026-10-08 | list, deep, pdf | grok-to-repo | 8521196 | Finish house link text Digital Marketing Co. in list buttons, deep PDF anchor, and repo pdf reference; host pdf not overwritten |
+| 2026-10-08 | all-skills | grok-to-repo | 992cc1d | Restore visible link text Digital Marketing Co.; ce046e2 shortened it to Co. and nested anchors in instructions |
 | 2026-10-08 | all-skills | grok-to-repo | ce046e2 | Visible house anchor is Digital Marketing Co. wrapped in the company link |
 | 2026-10-08 | latex | repo-to-hosts | 9ca6bb0 | ChatGPT and Grok should use the repo negative-keywords workbook; the installed latex copy is the thinner one-sheet file |
 | 2026-10-08 | banner | repo-to-hosts | 9ca6bb0 | ChatGPT and Grok should use the repo rebuild_document.py host resolver; the installed stub is the older Grok path |

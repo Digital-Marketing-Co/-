@@ -60,7 +60,7 @@ def remove_prior_notices(src: Path) -> bytes:
                 for line in block.get("lines", []):
                     spans = line.get("spans", [])
                     line_text = "".join(span["text"] for span in spans).strip()
-                    footer_label = line_text in ('Digital Marketing Co.', 'Digital Marketing Company', 'Web Development, Inc.') and line.get('bbox', (0,0,0,0))[1] >= page.rect.height-BAND_H
+                    footer_label = line_text in ('Digital Marketing Co.', 'Digital Marketing Co.', 'Web Development, Inc.') and line.get('bbox', (0,0,0,0))[1] >= page.rect.height-BAND_H
                     if NOTICE_LINE.fullmatch(line_text) or footer_label:
                         rect = fitz.Rect(spans[0]["bbox"])
                         for span in spans[1:]:

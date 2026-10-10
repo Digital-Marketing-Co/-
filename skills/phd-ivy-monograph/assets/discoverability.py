@@ -1,10 +1,10 @@
 """SEO / GEO / AIO filename and hidden-metadata contract for /folio.
 
 Do not invent a second house host. Resolve the live 301 from
-https://www.digitalmarketingco.org and https://digitalmarketingco.org
+https://www.DigitalMarketingCo.org and https://DigitalMarketingCo.org
 at build time. The measured apex in September 2026 is
 
-    https://digitalmarketingco.org
+    https://DigitalMarketingCo.org
 
 Publication path on that host is /white-papers/{slug}, matching the
 existing white-paper URLs on the site.
@@ -18,10 +18,10 @@ from datetime import date, datetime, timezone
 from urllib.parse import urlparse
 
 SEED_URLS = (
-    "https://www.digitalmarketingco.org/",
-    "https://digitalmarketingco.org/",
+    "https://www.DigitalMarketingCo.org/",
+    "https://DigitalMarketingCo.org/",
 )
-FALLBACK_ORIGIN = "https://digitalmarketingco.org"
+FALLBACK_ORIGIN = "https://DigitalMarketingCo.org"
 PUBLICATION_PATH = "/white-papers"
 DOC_TYPE_TOKEN = "wca-folio"
 

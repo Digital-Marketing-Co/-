@@ -12,7 +12,7 @@ Fail closed. A prompt, an outline, or an unopened file is not a delivery.
 6. SHA-256 and average-hash audit shows no reuse. A duplicated path, byte hash, or average hash fails the file.
 7. Math pages show compiled glyphs. Scan finds no raw backslash commands, no tofu, no empty boxes.
 8. Footer has exactly one copyright notice, centered.
-9. House link text is Digital Marketing Company and matches the title attribute.
+9. House link text is Digital Marketing Co. and matches the title attribute.
 10. Negative sweep prints CLEAN.
 
 A failed check is rewritten and re-scanned. It is not waived.

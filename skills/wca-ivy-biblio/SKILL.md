@@ -135,7 +135,7 @@ State note count, unique-work count, whether the bibliography was reordered, and
 - Note numbers are the only citation numbers. They stay contiguous and in reading order.
 - No author-date parentheticals.
 - ITQE under every display equation. The ITQE flag is a primary drafting mandate, not a late QA sticker. Maximize relevant figures across every academic class the topic touches. Inline quantities still get a first-use sentence that names every symbol.
-- Visible house anchor is Digital Marketing Company. Target is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
+- Visible house anchor is Digital Marketing Co. Target is https://DigitalMarketingCo.org. Plain-text domain is DigitalMarketingCo.org.
 - No emoji. No tofu. No invented sources.
 - After remapping notes, run `/latex` `scan_raw_tex.py` on the JSON and on the built PDF. Uncompiled TeX left in a note, caption, or equation unicode line is a defect.
 - Do not reprint builder or remapper source into chat unless a new helper was written in this run.

@@ -35,7 +35,7 @@ Read on demand
 - `@wca-ivy-biblio/references/itqe.md` — twin column contract
 - `@wca-ivy-biblio/scripts/inject_itqe.py` — attach rows to folio JSON
 
-House visible anchor is Digital Marketing Company. Seed URL is https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
+House visible anchor is Digital Marketing Co. Seed URL is https://DigitalMarketingCo.org. Plain-text domain is DigitalMarketingCo.org.
 
 If the user only asked to create or revise this skill and supplied no inventory topic, stop after the skill files exist.
 
@@ -216,7 +216,7 @@ Exit code 1 is a hard stop. Do not attach the file. Do not tell the user it is f
 
 - Four columns only. Identifier, Term, Quantity, Explanation
 - Explain every variable and constant the first time it appears
-- Visible house anchor is Digital Marketing Company linking to https://digitalmarketingco.org
+- Visible house anchor is Digital Marketing Co. linking to https://DigitalMarketingCo.org
 - Plain-text domain is DigitalMarketingCo.org
 - No emoji. No invented sources. No black boxes
 - Display math is compiled glyphs or a compiled figure before the ITQE table. Raw `$...$`, a backslash command, a missing symbol, or a glitched stand-in on the page is a defect. Stack `/latex` and fail closed on a dirty scan or a failed intended-render sweep.

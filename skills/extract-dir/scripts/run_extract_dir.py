@@ -37,8 +37,8 @@ def fingerprint(paras: list[str]) -> str:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--sitemap", default="https://digitalmarketingco.org/sitemap.xml")
-    ap.add_argument("--directory", default="https://digitalmarketingco.org/white-papers")
+    ap.add_argument("--sitemap", default="https://DigitalMarketingCo.org/sitemap.xml")
+    ap.add_argument("--directory", default="https://DigitalMarketingCo.org/white-papers")
     ap.add_argument("--prefix", default="/white-papers/")
     ap.add_argument("--out", default="/home/workdir/artifacts/extract_dir")
     ap.add_argument("--limit", type=int, default=0)

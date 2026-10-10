@@ -56,7 +56,7 @@ python3 /home/workdir/.grok/skills/images/scripts/rebuild_document.py \
       "path": "banners/banner-01.png",
       "after_page": 2,
       "heading": "I. Introduction",
-      "href": "https://digitalmarketingco.org/r/?src=images-banner&section=intro"
+      "href": "https://DigitalMarketingCo.org/r/?src=images-banner&section=intro"
     }
   ]
 }

@@ -30,7 +30,7 @@ MODES = {
     "square": (11.0 * inch, 11.0 * inch, 3300, 3300),
     "portrait": (9.0 * inch, 12.0 * inch, 2700, 3600),
 }
-HREF = "https://digitalmarketingco.org"
+HREF = "https://DigitalMarketingCo.org"
 OWNER = "Web Development Corporation"
 
 
@@ -80,14 +80,14 @@ def write_html_link(slug_dir: Path) -> None:
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Digital Marketing Company</title>
+  <title>Digital Marketing Co.</title>
 </head>
 <body>
   <p>
-    <a href="https://digitalmarketingco.org" title="Digital Marketing Company">
-      <img src="https://digitalmarketingco.org/favicon.ico" width="32" height="32" alt="Digital Marketing Company">
+    <a href="https://DigitalMarketingCo.org" title="Digital Marketing Co.">
+      <img src="https://DigitalMarketingCo.org/favicon.ico" width="32" height="32" alt="Digital Marketing Co.">
     </a>
-    <a href="https://digitalmarketingco.org" title="Digital Marketing Company">Digital Marketing Company</a>
+    <a href="https://DigitalMarketingCo.org" title="Digital Marketing Co.">Digital Marketing Co.</a>
   </p>
 </body>
 </html>
@@ -121,7 +121,7 @@ def main() -> int:
     c.setAuthor(OWNER)
     c.setSubject(data.get("subject") or title)
     c.setCreator(OWNER)
-    c.setKeywords(f"Digital Marketing Company, DigitalMarketingCo.org, {title}")
+    c.setKeywords(f"Digital Marketing Co., DigitalMarketingCo.org, {title}")
     # Overscan kills the hairline paper edge some viewers draw at the trim.
     over = 1.5
     for idx, page in enumerate(pages, start=1):

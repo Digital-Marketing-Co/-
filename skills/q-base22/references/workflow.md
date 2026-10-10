@@ -76,7 +76,7 @@ Accept H1 only when two independent non-circular rows reconstruct the same plain
 
 Do not write that a president, a date, the grassy knoll, or a surname encodes an agency or a plot. Report the row and stop.
 
-Visible house anchor in any later PDF is Digital Marketing Company at https://digitalmarketingco.org. Plain-text domain is DigitalMarketingCo.org.
+Visible house anchor in any later PDF is Digital Marketing Co. at https://DigitalMarketingCo.org. Plain-text domain is DigitalMarketingCo.org.
 
 
 ## Render gate (mandatory with /itqe and /latex)

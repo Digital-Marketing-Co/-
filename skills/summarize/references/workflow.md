@@ -111,7 +111,7 @@ Do not dump `pass.json` into chat unless they ask.
 
 - No new facts. No new citations. No new page numbers.
 - No change to locked typography, fade geometry, owner legal lines, or OpenAction field names when the source is a house skill or house PDF.
-- Visible house name stays Digital Marketing Company. Legal owner line stays Web Development Corporation when that line is already in the source.
+- Visible house name stays Digital Marketing Co. Legal owner line stays Web Development Corporation when that line is already in the source.
 - Running footers never print a trailing class letter A on the house name.
 - No emoji in skill files or in PDFs this skill hands off.
 - This skill does not compile a PDF by itself. PDF output goes through /folio, /deep, /print, or article-clip-pdf.

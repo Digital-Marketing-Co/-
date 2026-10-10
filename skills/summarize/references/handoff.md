@@ -15,8 +15,8 @@ These tokens must survive a rewrite of `deep`, `folio`, or `banner`.
 - builder `build_deep_pdf.py`
 - schema `deep.json`
 - depth cap 4, keeper cap 80
-- banner default href `https://digitalmarketingco.org/r/?src=deep-banner&section={section_id}`
-- visible house name Digital Marketing Company
+- banner default href `https://DigitalMarketingCo.org/r/?src=deep-banner&section={section_id}`
+- visible house name Digital Marketing Co.
 - Chicago notes-bibliography, no author-date parentheticals
 
 ### /folio
@@ -26,7 +26,7 @@ These tokens must survive a rewrite of `deep`, `folio`, or `banner`.
 - type stack EB Garamond display, Literata 18pt body, Libre Franklin chrome
 - filename `YYYY-topic-slug-wca-folio.pdf`
 - canonical `{origin}/white-papers/{slug}`
-- seed `https://digitalmarketingco.org`
+- seed `https://DigitalMarketingCo.org`
 - field `WCACopyrightYear`
 - builder `build_folio_pdf.py`
 - schema `folio.json`

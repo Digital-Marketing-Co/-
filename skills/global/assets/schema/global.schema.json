@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://digitalmarketingco.org/schema/global.schema.json",
+  "$id": "https://DigitalMarketingCo.org/schema/global.schema.json",
   "title": "WCA Global Intelligence Report",
   "type": "object",
   "required": ["title", "topic", "ranking", "countries", "sections"],

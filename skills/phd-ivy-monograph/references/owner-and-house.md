@@ -39,9 +39,9 @@ Keep the script exactly that small. No alerts, no network calls, no `app` UI.
 
 Public site of record remains the existing house link.
 
-- Visible anchor text Digital Marketing Company
-- Seed href https://digitalmarketingco.org
-- Live 301: https://www.digitalmarketingco.org/ → https://digitalmarketingco.org/ (apex, 200)
+- Visible anchor text Digital Marketing Co.
+- Seed href https://DigitalMarketingCo.org
+- Live 301: https://www.DigitalMarketingCo.org/ → https://DigitalMarketingCo.org/ (apex, 200)
 - Plain-text domain DigitalMarketingCo.org
 - Publication path on the resolved origin `/white-papers/{slug}`
 - Operating address published on the house homepage 1 East Chase Street, Suite 1117, Baltimore, MD 21202
@@ -58,8 +58,8 @@ In `folio.json`
   "founded": 2012
 }
 "house": {
-  "anchor": "Digital Marketing Company",
-  "href": "https://digitalmarketingco.org",
+  "anchor": "Digital Marketing Co.",
+  "href": "https://DigitalMarketingCo.org",
   "domain_plain": "DigitalMarketingCo.org"
 }
 ```

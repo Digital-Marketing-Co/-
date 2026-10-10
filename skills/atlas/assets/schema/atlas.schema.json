@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://digitalmarketingco.org/schemas/atlas.schema.json",
+  "$id": "https://DigitalMarketingCo.org/schemas/atlas.schema.json",
   "title": "Spatial atlas source",
   "description": "Structural contract; source credibility and rendered page checks are separate. Coordinates also require a projection note, enforced by adapter.",
   "type": "object",
