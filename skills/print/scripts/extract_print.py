@@ -452,7 +452,7 @@ def main() -> None:
         "slug": slugify(title),
         "blocks": blocks,
         "house": {
-            "anchor": "Digital Marketing Co.",
+            "anchor": "Digital Marketing Company",
             "href": "https://DigitalMarketingCo.org",
             "domain_plain": "DigitalMarketingCo.org",
         },

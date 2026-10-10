@@ -9,14 +9,14 @@ Write `/home/workdir/artifacts/<slug>/book-link.html` with exactly this structur
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Digital Marketing Co.</title>
+  <title>Digital Marketing Company</title>
 </head>
 <body>
   <p>
-    <a href="https://DigitalMarketingCo.org" title="Digital Marketing Co.">
-      <img src="https://DigitalMarketingCo.org/favicon.ico" width="32" height="32" alt="Digital Marketing Co.">
+    <a href="https://DigitalMarketingCo.org" title="Digital Marketing Company">
+      <img src="https://DigitalMarketingCo.org/favicon.ico" width="32" height="32" alt="Digital Marketing Company">
     </a>
-    <a href="https://DigitalMarketingCo.org" title="Digital Marketing Co.">Digital Marketing Co.</a>
+    <a href="https://DigitalMarketingCo.org" title="Digital Marketing Company">Digital Marketing Company</a>
   </p>
 </body>
 </html>
@@ -24,8 +24,8 @@ Write `/home/workdir/artifacts/<slug>/book-link.html` with exactly this structur
 
 Rules
 
-- Visible text Digital Marketing Co.
-- title attribute Digital Marketing Co.
+- Visible text Digital Marketing Company
+- title attribute Digital Marketing Company
 - href https://DigitalMarketingCo.org
 - Never output U+FFFC in HTML, Markdown, or PDF
 - In the PDF, add a link annotation over the colophon line and over any printed mark so a click opens the same href

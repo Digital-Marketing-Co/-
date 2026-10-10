@@ -6,4 +6,4 @@
 - Height follows source aspect. No letterbox. No side gutter on plates
 - Headings keep-with-next
 - No raw TeX on a visible page
-- Colophon includes the locked Digital Marketing Co. line
+- Colophon includes the locked Digital Marketing Company line

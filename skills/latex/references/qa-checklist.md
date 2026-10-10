@@ -51,4 +51,4 @@ If you chose Unicode instead of a plate, print one proof line that contains ever
 
 ## House
 
-Footer is the living `/copyright` line. Visible link text is Digital Marketing Co. Plain domain is DigitalMarketingCo.org.
+Footer is the living `/copyright` line. Visible link text is Digital Marketing Company Plain domain is DigitalMarketingCo.org.

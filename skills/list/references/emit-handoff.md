@@ -35,4 +35,4 @@ Generate at or above the page-width pixel floor (2550 px wide at letter, prefer 
 
 ## House link
 
-Do not print a house-marks prose sentence. `/copyright` stamps two centered three-dimensional buttons on every page: Digital Marketing Co. (https://DigitalMarketingCo.org) and Web Development Corporation (https://WebDevelopment.tv). Title text equals the visible name. Links open in a new window.
+Do not print a house-marks prose sentence. `/copyright` stamps two centered three-dimensional buttons on every page: Digital Marketing Company (https://DigitalMarketingCo.org) and Web Development Corporation (https://WebDevelopment.tv). Title text equals the visible name. Links open in a new window.

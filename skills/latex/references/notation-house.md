@@ -14,7 +14,7 @@ Chemical formulae may stay Unicode (`CO2`, `H2O`) when the face has subscript di
 
 House identity
 
-- Visible anchor Digital Marketing Co.
+- Visible anchor Digital Marketing Company
 - Href https://DigitalMarketingCo.org
 - Plain domain DigitalMarketingCo.org
 - Legal owner Web Development Corporation, a Delaware Corporation

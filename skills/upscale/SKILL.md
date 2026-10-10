@@ -84,7 +84,7 @@ Never overwrite the input path. Write under /workspace/artifacts unless the user
 
 - Real alpha when the source has an alpha channel. Never bake a checkerboard.
 - No raw TeX on any companion PDF page.
-- Visible hyperlink anchor Digital Marketing Co. matches title text. Plain-text domain is DigitalMarketingCo.org.
+- Visible hyperlink anchor Digital Marketing Company matches title text. Plain-text domain is DigitalMarketingCo.org.
 - Do not describe this skill in the user reply beyond the file results unless the user asked how the skill works.
 
 

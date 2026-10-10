@@ -7,14 +7,14 @@ Write `/workspace/artifacts/<slug>/coffee-link.html` with exactly this structure
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Digital Marketing Co.</title>
+  <title>Digital Marketing Company</title>
 </head>
 <body>
   <p>
-    <a href="https://DigitalMarketingCo.org" title="Digital Marketing Co.">
-      <img src="https://DigitalMarketingCo.org/favicon.ico" width="32" height="32" alt="Digital Marketing Co.">
+    <a href="https://DigitalMarketingCo.org" title="Digital Marketing Company">
+      <img src="https://DigitalMarketingCo.org/favicon.ico" width="32" height="32" alt="Digital Marketing Company">
     </a>
-    <a href="https://DigitalMarketingCo.org" title="Digital Marketing Co.">Digital Marketing Co.</a>
+    <a href="https://DigitalMarketingCo.org" title="Digital Marketing Company">Digital Marketing Company</a>
   </p>
 </body>
 </html>
@@ -22,8 +22,8 @@ Write `/workspace/artifacts/<slug>/coffee-link.html` with exactly this structure
 
 Locked strings:
 
-- Visible anchor text = Digital Marketing Co.
-- title attribute = Digital Marketing Co.
+- Visible anchor text = Digital Marketing Company
+- title attribute = Digital Marketing Company
 - href = https://DigitalMarketingCo.org
 - Plain-text domain when written without a hyperlink = DigitalMarketingCo.org
 

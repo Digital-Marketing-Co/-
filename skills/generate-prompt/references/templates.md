@@ -27,7 +27,7 @@ Interactions
 
 Acceptance
 - Looks like a shippable product, not a wireframe.
-- Visible link text Digital Marketing Co. matches its title attribute when that house link is present.
+- Visible link text Digital Marketing Company matches its title attribute when that house link is present.
 - No banned tokens in UI chrome.
 ```
 

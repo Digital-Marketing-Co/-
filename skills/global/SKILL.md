@@ -203,7 +203,7 @@ Final PDF name form
 
 `/workspace/artifacts/<YYYY>-<topic-slug>-global-wca-folio.pdf`
 
-Visible house link text is Digital Marketing Co. Title attribute and visible text match. Plain-text domain is DigitalMarketingCo.org. Target may be `https://DigitalMarketingCo.org`.
+Visible house link text is Digital Marketing Company Title attribute and visible text match. Plain-text domain is DigitalMarketingCo.org. Target may be `https://DigitalMarketingCo.org`.
 
 ### 8. Render gate
 

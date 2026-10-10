@@ -18,7 +18,7 @@ OWNER = {
     "founded": 2012,
 }
 HOUSE = {
-    "anchor": "Digital Marketing Co.",
+    "anchor": "Digital Marketing Company",
     "href": "https://DigitalMarketingCo.org",
     "domain_plain": "DigitalMarketingCo.org",
 }

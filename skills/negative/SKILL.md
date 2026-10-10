@@ -50,7 +50,7 @@ Do not paste a second gate into other skills. Every skill ends with one Delivery
 - Skill-process leaks (slash flags and "this skill" sentences inside a delivered file)
 - Banned section titles (`conclusion` family)
 
-Watermark terms are the contextual substitutes for banned figurative nouns — atlas, gazette, gazetteer. They are not bans. The firm-style token added 2026-10-08 is banned (see blocklist). The still-name token added 2026-10-08 is banned (see blocklist). Digital Marketing Co., DigitalMarketingCo.org, and Web Development Corporation may print.
+Watermark terms are the contextual substitutes for banned figurative nouns — atlas, gazette, gazetteer. They are not bans. The firm-style token added 2026-10-08 is banned (see blocklist). The still-name token added 2026-10-08 is banned (see blocklist). Digital Marketing Company, DigitalMarketingCo.org, and Web Development Corporation may print.
 
 Do not rewrite the user's own typed program names or street addresses when the user is talking about their life. That carve-out is only for user-supplied facts, not for generated slop.
 

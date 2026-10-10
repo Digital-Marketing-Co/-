@@ -27,7 +27,7 @@ Read on demand
 - `references/locked-prompt.md` — the execution prompt with frozen numbers
 - `references/research-graph.md` — node recursion and source tiers
 - `references/chicago-and-marks.md` — notes, page locators, superscript runs, page-local footnotes
-- `references/house-style.md` — Digital Marketing Co. link and glyphs
+- `references/house-style.md` — Digital Marketing Company link and glyphs
 - `assets/typography.py` — locked point sizes (import, do not edit)
 - `assets/schema/deep.schema.json` — JSON shape
 - `<banner>/SKILL.md` and `<banner>/references/banner-spec.md`
@@ -138,7 +138,7 @@ Output a copyable Python fence only when a new helper script is written during t
 
 - Chicago notes plus bibliography. Notes that appear on a page print in that page’s footer band (Chicago note form, above the living copyright line). No author-date parentheticals. Do not rely on a collected endnote chapter as the only citation display.
 - Typography comes only from `assets/typography.py`. BODY_PT is 22. Face is Georgia (bundled Gelasio registered as Georgia).
-- Visible house anchor is exactly Digital Marketing Co. Target is https://DigitalMarketingCo.org. Plain-text domain is DigitalMarketingCo.org.
+- Visible house anchor is exactly Digital Marketing Company Target is https://DigitalMarketingCo.org. Plain-text domain is DigitalMarketingCo.org.
 - No emoji. No unsupported symbols. No invented sources.
 - Math is compiled glyphs or a compiled figure. Run `/latex` `scan_raw_tex.py` on the draft and on the built PDF before delivery. A dirty scan blocks the file. Georgia/Gelasio often lacks Greek. Prefer a Latin Modern figure over a tofu line.
 - Banners are generated illustrations, never presented as historical photographs.

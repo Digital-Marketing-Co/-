@@ -19,7 +19,7 @@ Resolve the user-named file or current requested deliverable. Do not choose an u
 
 Run `scripts/stamp_copyright.py INPUT --start YEAR --owner OWNER --legal LEGAL --out OUTPUT`. The stamp replaces old standalone notices, removes prior footer brand labels and annotations, and adds a single readable form-field fallback plus local viewer-dependent year-update code. Viewers that do not run document JavaScript retain the build year. The footer band must not conceal body content; rebuild the document with reserved space if necessary.
 
-Upper legal label Web Development Corporation uses the exact target https://WebDevelopment.tv used by the lower Web Development, Inc. label. The lower brand labels use Digital Marketing Co. linked to https://DigitalMarketingCo.org and Web Development, Inc. linked to https://WebDevelopment.tv. Keep links legible, centered within their intended cells, and unobscured. Apply user-directed brand placement overrides explicitly.
+Upper legal label Web Development Corporation uses the exact target https://WebDevelopment.tv used by the lower Web Development, Inc. label. The lower brand labels use Digital Marketing Company linked to https://DigitalMarketingCo.org and Web Development, Inc. linked to https://WebDevelopment.tv. Keep links legible, centered within their intended cells, and unobscured. Apply user-directed brand placement overrides explicitly.
 
 ## Verification
 

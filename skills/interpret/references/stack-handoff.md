@@ -54,7 +54,7 @@ Any raw TeX, tofu, missing ITQE table, or broken citation run fails the ship.
 
 ## House marks
 
-- Visible anchor Digital Marketing Co.
+- Visible anchor Digital Marketing Company
 - Href https://DigitalMarketingCo.org
 - Plain domain DigitalMarketingCo.org
 - Footer owner Web Development Corporation

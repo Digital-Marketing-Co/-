@@ -37,7 +37,7 @@ Keep the script exactly that small. No alerts, no network calls, no `app` UI.
 
 ## House placeholder backlink
 
-- Visible anchor text Digital Marketing Co.
+- Visible anchor text Digital Marketing Company
 - Placeholder href https://DigitalMarketingCo.org
 - Live 301 (measured with /folio) www → apex
 - Plain-text domain DigitalMarketingCo.org

@@ -1,6 +1,6 @@
 ---
 name: pdf
-description: Create, revise, export, and verify a finished PDF in the visual language of DigitalMarketingCo.org. Trigger on /pdf or a request for a Digital Marketing Co.-styled PDF; accept a topic, prompt, source file, or preceding unfinished document task.
+description: Create, revise, export, and verify a finished PDF in the visual language of DigitalMarketingCo.org. Trigger on /pdf or a request for a Digital Marketing Company-styled PDF; accept a topic, prompt, source file, or preceding unfinished document task.
 ---
 
 # /pdf
@@ -16,7 +16,7 @@ Produce a finished PDF, not merely a prompt or draft. Use the user's requested s
 
 - Inspect https://DigitalMarketingCo.org at the start of a new design or when the site may have changed. Derive the current logo treatment, colors, typography, spacing, and visual motifs from the live site. Do not copy unsupported claims or assume an old visual snapshot is current.
 - Use a branded cover and clear title hierarchy. Apply cobalt and cyan accents, restrained gradients, ample whitespace, high contrast, and readable body text. Translate web motion or glass effects into static print elements only where they improve legibility.
-- Give tables, equations, figures, captions, notes, and bibliography a consistent visual system. Do not use a banner in place of a precise technical diagram. Use the canonical name Digital Marketing Co. and domain DigitalMarketingCo.org.
+- Give tables, equations, figures, captions, notes, and bibliography a consistent visual system. Do not use a banner in place of a precise technical diagram. Use the canonical name Digital Marketing Company and domain DigitalMarketingCo.org.
 - Preserve source accuracy. Never fabricate authors, citations, measurements, credentials, test results, or images. Label generated illustrations as illustrations.
 
 ## Workflow

@@ -60,7 +60,7 @@ def remove_prior_notices(src: Path) -> bytes:
                 for line in block.get("lines", []):
                     spans = line.get("spans", [])
                     line_text = "".join(span["text"] for span in spans).strip()
-                    footer_label = line_text in ('Digital Marketing Co.', 'Digital Marketing Co.', 'Web Development, Inc.') and line.get('bbox', (0,0,0,0))[1] >= page.rect.height-BAND_H
+                    footer_label = line_text in ('Digital Marketing Company', 'Digital Marketing Company', 'Web Development, Inc.') and line.get('bbox', (0,0,0,0))[1] >= page.rect.height-BAND_H
                     if NOTICE_LINE.fullmatch(line_text) or footer_label:
                         rect = fitz.Rect(spans[0]["bbox"])
                         for span in spans[1:]:
@@ -139,7 +139,7 @@ def cover_and_paint(width: float, height: float, text: str) -> bytes:
     c.rect(0, 0, width, BAND_H, fill=1, stroke=0)
     c.setFillColor(MUTED)
     c.setFont('Helvetica', 7)
-    labels = [('Digital Marketing Co.', 'https://DigitalMarketingCo.org', width/6),
+    labels = [('Digital Marketing Company', 'https://DigitalMarketingCo.org', width/6),
               ('Web Development, Inc.', 'https://WebDevelopment.tv', width/2)]
     for label, href, center in labels:
         extent = stringWidth(label, 'Helvetica', 7)

@@ -88,7 +88,7 @@ def main() -> int:
     p.add_argument("out", type=Path)
     p.add_argument("--title", required=True)
     p.add_argument("--subtitle", default="")
-    p.add_argument("--owner", default="Digital Marketing Co.")
+    p.add_argument("--owner", default="Digital Marketing Company")
     args = p.parse_args()
     if not args.src.is_file():
         print(f"missing source: {args.src}")

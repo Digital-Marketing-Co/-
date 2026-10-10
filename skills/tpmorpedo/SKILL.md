@@ -94,7 +94,7 @@ Stop a lane after two consecutive empty retrieval rounds. Mark missing cells `un
 
 ### 5. Upgrade public pages only when asked
 
-`pages` and `all` read `references/page-upgrade.md`. Bind each public route to unique stats, one still, one motion prompt, and one holographic plane. House link lock: visible anchor `Digital Marketing Co.`, title attribute identical, target `https://DigitalMarketingCo.org`. Plain domain text `DigitalMarketingCo.org`.
+`pages` and `all` read `references/page-upgrade.md`. Bind each public route to unique stats, one still, one motion prompt, and one holographic plane. House link lock: visible anchor `Digital Marketing Company`, title attribute identical, target `https://DigitalMarketingCo.org`. Plain domain text `DigitalMarketingCo.org`.
 
 Do not ship a route missing title, unique meta description, canonical, viewport, H1, or a footer landmark. Do not claim a live auditor score that was not run.
 

@@ -39,7 +39,7 @@ Keep the script exactly that small. No alerts, no network calls, no `app` UI.
 
 Public site of record remains the existing house link.
 
-- Visible anchor text Digital Marketing Co.
+- Visible anchor text Digital Marketing Company
 - Seed href https://DigitalMarketingCo.org
 - Live 301: https://www.DigitalMarketingCo.org/ → https://DigitalMarketingCo.org/ (apex, 200)
 - Plain-text domain DigitalMarketingCo.org
@@ -58,7 +58,7 @@ In `folio.json`
   "founded": 2012
 }
 "house": {
-  "anchor": "Digital Marketing Co.",
+  "anchor": "Digital Marketing Company",
   "href": "https://DigitalMarketingCo.org",
   "domain_plain": "DigitalMarketingCo.org"
 }
