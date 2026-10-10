@@ -1,0 +1,20 @@
+{
+  "skill": "aura",
+  "test_cases": [
+    {
+      "name": "basic_aura_request",
+      "input": "/aura make hyperlinks bold navy with electric blue aura",
+      "assertions": ["generates unique palette", "links styled #000080 bold", "aura includes electric blue"]
+    },
+    {
+      "name": "heading_theme",
+      "input": "apply Dark Navy Space Force theme to headings with 3D aura",
+      "assertions": ["headings bold", "theme uses navy and air-force accents", "unique gradient"]
+    },
+    {
+      "name": "document_upgrade",
+      "input": "upgrade this PDF so links have radiant aura",
+      "assertions": ["processes PDF or emits rebuild instructions", "preserves body type", "company link text is Digital Marketing Co."]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "skill": "aura",
+  "test_cases": [
+    {"input": "/aura", "should_trigger": true},
+    {"input": "add electric blue aura to all hyperlinks", "should_trigger": true},
+    {"input": "make headings bold with space force theme", "should_trigger": true},
+    {"input": "just summarize this text", "should_trigger": false}
+  ]
+}
