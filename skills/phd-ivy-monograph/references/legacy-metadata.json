@@ -1,0 +1,8 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/phd",
+  "twin": "folio",
+  "owner": "Web Development Corporation",
+  "visual_stack": "visual-system"
+}

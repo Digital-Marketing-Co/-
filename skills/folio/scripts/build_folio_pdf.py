@@ -10,6 +10,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from publication_notice import notice_for
+
 from PIL import Image as PILImage
 from reportlab.lib.colors import HexColor, Color
 from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY, TA_LEFT, TA_RIGHT
@@ -152,6 +154,24 @@ class CitedParagraph(Paragraph):
     def __init__(self, text, style: ParagraphStyle, cited: list[int] | None = None, **kwargs):
         super().__init__(text if text is not None else "", style, **kwargs)
         self.cited = list(cited or [])
+
+    def split(self, availWidth, availHeight):
+        pieces = super().split(availWidth, availHeight)
+
+        def superscripts(fragments):
+            for fragment in fragments:
+                if isinstance(fragment, tuple) and len(fragment) == 2 and hasattr(fragment[0], "rise"):
+                    if fragment[0].rise > 0:
+                        yield str(fragment[1])
+                elif isinstance(fragment, (list, tuple)):
+                    yield from superscripts(fragment)
+                elif getattr(fragment, "rise", 0) > 0:
+                    yield str(getattr(fragment, "text", ""))
+
+        for piece in pieces:
+            numbers = {int(n) for text in superscripts(piece.frags) for n in re.findall(r"\b\d+\b", text)}
+            piece.cited = [n for n in self.cited if n in numbers]
+        return pieces
 
 
 def inject_notes(text: str) -> str:
@@ -558,7 +578,6 @@ class FolioDoc(BaseDocTemplate):
         self.year = year
         self.notes_by_n = notes_by_n or {}
         self.notes_on_page: dict[int, list[int]] = {}
-        self._copyright_field_drawn = False
         self._fn_style = make_styles()["fn"]
         ml = T.MARGIN_LEFT_IN * inch
         mr = T.MARGIN_RIGHT_IN * inch
@@ -618,7 +637,6 @@ class FolioDoc(BaseDocTemplate):
         canvas.saveState()
         self._header_rule(canvas, running=False)
         self._footer(canvas, doc, page_number=False, live_year=True)
-        self._attach_openaction_js(canvas)
         canvas.restoreState()
 
     def _draw_body_page(self, canvas: Canvas, doc) -> None:
@@ -704,63 +722,10 @@ class FolioDoc(BaseDocTemplate):
             (T.MARGIN_LEFT_IN * inch, y - 1, T.MARGIN_LEFT_IN * inch + w, y + 9),
             relative=0,
         )
-        # Footer chrome: house name + copyright range + FOOTER_OWNER.
-        # Never append a trailing class letter (" A"). That glyph was
-        # leaking from OWNER_SHORT ("Web Development Corporation").
-        owner_short = getattr(T, "FOOTER_OWNER", None) or self.meta["owner"]["short"]
-        owner_short = re.sub(r"\s+A$", "", str(owner_short)).strip()
-        if owner_short.endswith(" A"):
-            owner_short = owner_short[:-2].rstrip()
-        prefix = f"© {T.OWNER_FOUNDED}–"
-        suffix = f"  {owner_short}"
-        mid_w = (
-            pdfmetrics.stringWidth(prefix, T.CHROME, T.FOOTER_PT)
-            + 22
-            + pdfmetrics.stringWidth(suffix, T.CHROME, T.FOOTER_PT)
-        )
-        mid_x = (letter[0] - mid_w) / 2
-        canvas.drawString(mid_x, y, prefix)
-        year_x = mid_x + pdfmetrics.stringWidth(prefix, T.CHROME, T.FOOTER_PT)
-        if live_year and not self._copyright_field_drawn:
-            self._copyright_field_drawn = True
-            try:
-                canvas.acroForm.textfield(
-                    name=T.COPYRIGHT_FIELD,
-                    tooltip="Copyright end year (updates on open)",
-                    x=year_x,
-                    y=y - 2,
-                    width=24,
-                    height=11,
-                    value=str(self.year),
-                    fontName="Helvetica",
-                    fontSize=7,
-                    textColor=MUTED,
-                    fillColor=CREAM,
-                    borderWidth=0,
-                    borderStyle="underlined",
-                    forceBorder=False,
-                    fieldFlags="readOnly",
-                )
-            except Exception as exc:
-                canvas.drawString(year_x, y, str(self.year))
-                print("acroform field failed:", exc)
-        else:
-            canvas.drawString(year_x, y, str(self.year))
-        canvas.drawString(year_x + 22, y, suffix)
+        canvas.setFont(T.CHROME, 7)
+        canvas.drawCentredString(letter[0] / 2, 0.25 * inch, notice_for(self.meta))
         if page_number and doc.page > 1:
             canvas.drawRightString(letter[0] - T.MARGIN_RIGHT_IN * inch, y, str(doc.page))
-
-    def _attach_openaction_js(self, canvas: Canvas) -> None:
-        try:
-            from reportlab.pdfbase.pdfdoc import PDFDictionary, PDFName, PDFString
-
-            action = PDFDictionary()
-            action["Type"] = PDFName("Action")
-            action["S"] = PDFName("JavaScript")
-            action["JS"] = PDFString(OPEN_JS)
-            canvas._doc.Catalog.OpenAction = action
-        except Exception:
-            pass
 
 
 def load_json(path: Path) -> dict:
@@ -786,9 +751,6 @@ def load_json(path: Path) -> dict:
             "founded": T.OWNER_FOUNDED,
         },
     )
-    data["owner"]["legal"] = T.OWNER_LEGAL
-    data["owner"]["short"] = T.OWNER_SHORT
-    data["owner"]["founded"] = T.OWNER_FOUNDED
     origin = D.resolve_canonical_origin()
     data["house"]["href"] = origin
     data["house"]["origin"] = origin
@@ -817,11 +779,6 @@ def finalize_pdf(pdf_path: Path, data: dict, year: int) -> None:
     except Exception:
         writer.append(reader)
     root = writer.root_object
-    if root.get("/OpenAction") is None:
-        try:
-            writer.add_js(OPEN_JS)
-        except Exception:
-            pass
     info = D.info_dictionary(
         title=data["title"],
         author=data.get("author") or T.OWNER_SHORT,
@@ -872,6 +829,7 @@ def build(data: dict, out_path: Path, source_dir: Path) -> None:
         "running_title": data.get("running_title") or data["title"],
         "house": data["house"],
         "owner": data["owner"],
+        "copyright_start": data.get("copyright_start", data["owner"].get("founded", 2012)),
         "genre": data.get("genre") or data.get("status") or "report",
     }
     kicker_map = {
@@ -918,7 +876,7 @@ def build(data: dict, out_path: Path, source_dir: Path) -> None:
     story.append(Paragraph(T.OWNER_LEGAL, styles["owner"]))
     story.append(
         Paragraph(
-            f"Founded {T.OWNER_FOUNDED}.  © {T.OWNER_FOUNDED}–{year}.",
+            f"Founded {T.OWNER_FOUNDED}.",
             styles["owner"],
         )
     )
@@ -1044,8 +1002,7 @@ def build(data: dict, out_path: Path, source_dir: Path) -> None:
     record = data.get("canonical_url") or data["house"]["href"]
     story.append(
         Paragraph(
-            f"© {T.OWNER_FOUNDED}–{year}  {T.OWNER_LEGAL}. "
-            "The end year is a live field and refreshes on open in a JavaScript-capable viewer.",
+            "The copyright end year is set when this PDF is built.",
             styles["colophon"],
         )
     )

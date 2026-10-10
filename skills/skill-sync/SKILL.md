@@ -1,43 +1,18 @@
 ---
 name: skill-sync
-description: Sync custom skills with the Digital-Marketing-Co/- GitHub repository so Grok and ChatGPT use the same committed skill tree. Use when the user types /skill-sync, asks to sync skills, update a skill on GitHub, or keep ChatGPT and Grok on the same skill revision.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /skill-sync
-  owner: Web Development Corporation
+description: Reconcile custom skill directories with Digital-Marketing-Co/- main, preserve verified newer behavior, validate changes, and record separate GitHub and editable-host save results. Use for /skill-sync or requests to save and sync skills.
 ---
 
-# /skill-sync
+# Skill synchronization
 
-Keep Digital-Marketing-Co/- as the shared skill source for Grok and ChatGPT.
+Read [the quality profile](references/quality-profile.md) and `evals/quality-cases.json`. Read repository AGENTS.md, SKILL-SYNC.md, .skill-sync/policy.json, and skills/ledger/latest.md from the same base commit before edits.
 
-## When this skill runs
+1. Verify repository access and account identity. Record the complete base SHA and commit time.
+2. Inventory complete canonical and relevant installed directories, including references, scripts, assets, evaluations, and agent metadata. Decide direction from commit history, ledger and verified behavior, never byte size or file timestamp alone.
+3. Merge intended newer improvements, preserving unrelated files and local work. Skip generated caches. Preserve binaries regardless of an arbitrary size threshold. Do not replace bundled host tools.
+4. Validate frontmatter, resource paths, Python compilation, schemas, and changed-script fixtures. Record unrun network, provider, UI, or device checks as NOT TESTED or BLOCKED.
+5. Create one reviewed commit with the changed directories and prepend ledger provenance. Check the branch head before publishing; reject a changed lease, inspect new changes, and reconcile without force overwriting another writer.
+6. Save editable personal installations through their host's actual installation workflow. Where the Skills workspace is a git repository, commit the intended directories and push its current branch. A successful canonical GitHub write is not installation proof.
+7. Verify the remote commit, per-skill hashes, and host save outcome. Report exact revisions, checked and saved counts, unresolved installation boundaries, and tests.
 
-- User typed /skill-sync.
-- User asked to update the GitHub skill repo after a skill change.
-- User asked Grok and ChatGPT to stay on the same skill revision.
-
-## Steps
-
-1. Read SKILL-SYNC.md and skills/ledger/latest.md on main.
-2. List skills/<name>/SKILL.md on main.
-3. Compare each with the installed copy. Decide direction from commit time and the ledger, not from a hash alone.
-4. If the installed copy is the newer verified version, commit that skill directory to main and prepend a ledger row: date, skill, direction, short hash, one-line change.
-5. If the repository copy is newer, use that copy for the current task and say which path was read.
-6. Do not overwrite bundled host skills.
-7. Report the commit URL, the skills checked, and the skills ChatGPT still has to re-upload.
-
-## ChatGPT
-
-ChatGPT cannot install from this push by itself. Tell the user to run the prompt in CHATGPT-PROMPT.md, or to re-upload only the skills named in the latest ledger.
-
-## Delivery
-
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Use `interop/SKILL.md` for the single delivery gate. Do not invent cross-host access or imply unattended synchronization continues after the turn.

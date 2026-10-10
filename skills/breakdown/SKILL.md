@@ -1,18 +1,18 @@
 ---
 name: breakdown
 description: After /breakdown, take every following word and split it into morphemes, prefixes, roots, suffixes, combining forms, and inflectional endings. Explain each piece, reassemble the sense, then give the current definition and the full etymology, history, and evolution of that word. Use when the user types /breakdown, breakdown the words, word-by-word morphology, morpheme split, or etymology of the list after the flag.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /breakdown
-  updatable: true
 ---
 
 # /breakdown
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 After the skill flag fires, treat the remainder of the user message as a word list. For each token, decompose the word itself into component parts, explain every part, put the parts back together, then output the definition and the full etymology, history, and evolution of that word.
 
-Skill path is /root/.grok/server-skills/breakdown
+Skill path is @breakdown
 
 If the user only asked to create or revise this skill and supplied no word list, stop after the skill files exist. Do not invent sample words.
 
@@ -96,10 +96,4 @@ Keep each word's block self-contained so a reader can copy one word without the 
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

@@ -2,7 +2,13 @@
 name: clone
 description: Clone a public website into a logically ordered, full-bleed, highly compressed PDF. Use for /clone URL, printing a whole site, or archiving all sitemap pages in one PDF.
 ---
+
 # Clone website to PDF
+
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
 
 Run `scripts/clone.py URL --output FILE --manifest FILE`. Start with the canonical sitemap and any sitemap indexes; filter image and other asset URLs, query variants, duplicates, external hosts, and non-HTML responses. Preserve sitemap order within sections, with the homepage first. Follow internal HTML links to discover pages omitted from the sitemap. Record every attempted URL and failure in a JSON manifest.
 
@@ -13,3 +19,7 @@ Compression: retain vector text; deduplicate repeated assets where practical; do
 Check robots and server behavior, rate-limit requests, and stop/retry on 429 or 5xx rather than overwhelming the origin. Do not send form submissions or crawl account-specific content. For very large sites, continue in resumable batches, and state any scope limit rather than silently presenting a partial result as complete.
 
 Save deliverables in the user's persistent file collection using the Library skill. Validate representative pages across sections visually and confirm text can be extracted.
+
+## Delivery
+
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

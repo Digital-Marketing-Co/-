@@ -23,7 +23,7 @@ STAMP = IMAGES / "scripts" / "stamp_images_into_pdf.py"
 
 BUILDERS = [
     ("folio.json", SKILLS / "folio" / "scripts" / "build_folio_pdf.py"),
-    ("monograph.json", SKILLS / "folio" / "scripts" / "build_folio_pdf.py"),
+    ("monograph.json", SKILLS / "folio" / "scripts" / "build_monograph_pdf.py"),
     ("deep.json", SKILLS / "deep" / "scripts" / "build_deep_pdf.py"),
     ("atlas.json", SKILLS / "atlas" / "scripts" / "build_atlas_pdf.py"),
     ("book.json", SKILLS / "book" / "scripts" / "build_book_pdf.py"),
@@ -61,7 +61,11 @@ def main() -> None:
     hit = find_builder(root)
     if hit:
         js, script = hit
-        cmd = ["python3", str(script), str(js)]
+        cmd = [sys.executable, str(script), str(js)]
+        if args.out:
+            cmd.extend(["--out", str(Path(args.out).expanduser().resolve())])
+        elif js.name == "deep.json":
+            cmd.extend(["--out", str(target if target.suffix.lower() == ".pdf" else root / "deep.pdf")])
         run(cmd)
         return
     manifest = Path(args.manifest).expanduser() if args.manifest else root / "stamp-manifest.json"
@@ -70,7 +74,9 @@ def main() -> None:
             "No parent JSON builder and no stamp-manifest.json. "
             "Write the manifest, then rerun with --manifest."
         )
-    cmd = ["python3", str(STAMP), str(manifest)]
+    cmd = [sys.executable, str(STAMP), str(manifest)]
+    if args.out:
+        cmd.extend(["--out", str(Path(args.out).expanduser().resolve())])
     run(cmd)
 
 

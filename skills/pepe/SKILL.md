@@ -1,22 +1,20 @@
 ---
 name: pepe
-description: "Expand a remainder into an above-PhD embed prompt, code a promptform 3D JavaScript widget that installs inside another web app, then run automatic QA and apply every fix. Use when the user types /pepe, asks for a drop-in promptform 3D web component, or wants prompt-then-code-then-QA for an embeddable panel."
-type: workflow
-lifecycle: active
-metadata:
-  flag: /pepe
-  version: "1.0"
-  stacks: prompt-engineer, visual-system, negative, interop
-  owner: Web Development Corporation
+description: Expand a remainder into an above-PhD embed prompt, code a promptform 3D JavaScript widget that installs inside another web app, then run automatic QA and apply every fix. Use when the user types /pepe, asks for a drop-in promptform 3D web component, or wants prompt-then-code-then-QA for an embeddable panel.
 ---
 
 # /pepe — prompt, code, QA, embed
+
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
 
 Take every word after `/pepe` as the product remainder. Expand it into a full implementation prompt, code a drop-in promptform 3D JavaScript widget that another web app can install, then run the QA checklist and apply every defect fix before delivery.
 
 This skill writes the product. A prompt alone does not finish the job.
 
-`<skill>` resolves with `interop/scripts/resolve_root.py pepe` (live host: `/root/.grok/server-skills/pepe`).
+`<skill>` resolves with `interop/scripts/resolve_root.py pepe` (live host: `@pepe`).
 
 Read on demand
 
@@ -91,7 +89,7 @@ Isolation rules
 Read `references/qa-checklist.md`. Run:
 
 ```bash
-python3 /root/.grok/server-skills/pepe/scripts/qa_pepe.py /workspace/artifacts/<slug>
+python3 @pepe/scripts/qa_pepe.py /workspace/artifacts/<slug>
 ```
 
 Exit 1 means defects remain. Fix the widget, re-run, until the script prints PASS. Do not weaken a check to force a pass. Record the report in `QA.md`.
@@ -102,10 +100,4 @@ Sweep widget copy, alt text, README, and PROMPT before delivery. Skill flags may
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

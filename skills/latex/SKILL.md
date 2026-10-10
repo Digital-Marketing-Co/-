@@ -1,26 +1,25 @@
 ---
 name: latex
-description: Enforce compiled, visible math and code on every page of an existing document and of any document about to be produced. After the file is complete, sweep every page for raw LaTeX, AMS-TeX, KaTeX, TeX, or MathJax source, for unrendered operators and operands (_, \\, /, ^, and other math markers), and for clips that did not render as intended, including tofu, empty boxes, and glitched symbols. Move any section heading that is not followed by paragraph text onto the next page. Trigger on /latex, latex, KaTeX, MathJax, equation figure, tofu glyph, missing symbol, unrendered underscore, orphan heading, intended-render sweep, raw backslash command, uncompiled TeX, page sweep, or when a PDF, Word file, PowerPoint, spreadsheet, webpage, or web app will contain formulas or source listings. Stacks with /deep, /folio, /banner, /copyright, /print, /ivy-biblio, /itqe, /images, docx, pptx, pdf, and xlsx. Never leave raw TeX, a visible underscore subscript, a fraction solidus, or missing-glyph boxes on a visible page. Fail closed until scan_raw_tex, scan_unrendered_ops, scan_orphan_headings, and the intended-render sweep exit clean. Compiled equation plates stay unique to their equation id and never stand in for section banners or 500-word stills.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /latex
-  owner: Web Development Corporation
-  visual_stack: visual-system
+description: Enforce compiled, visible math and code on every page of an existing document and of any document about to be produced. After the file is complete, sweep every page for raw LaTeX, AMS-TeX, KaTeX, TeX, or MathJax source, for unrendered operators and operands (_, \\, /, ^, and other math markers), and for clips that did not render as intended, including tofu, empty boxes, and glitched symbols. Move any section heading that is not followed by paragraph text onto the next page. Trigger on /latex, latex, KaTeX, MathJax, equation figure, tofu glyph, missing symbol, unrendered underscore, orphan heading, intended-render sweep, raw backslash command, uncompiled TeX, page sweep, or when a PDF, Word file, PowerPoint, spreadsheet, webpage, or web app will contain formulas or source listings.
 ---
 
 # /latex — compiled math and visible code
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 
 ## Visual stack
 
-Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
-Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
+Documents this skill emits follow `@visual-system/SKILL.md`.
+Pick a genre palette with `@visual-system/scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
 Every formula and every listing that a reader is supposed to see must appear as glyphs or as a compiled figure. Raw source left on any delivered page is a defect. Missing-glyph boxes (tofu, black boxes, white boxes) are a defect. This skill is the house gate for that contract.
 
 The gate covers **every page**, not a sample of math pages, and it covers the draft that will become those pages. An existing PDF and a `folio.json` that has not been built yet are the same problem.
 
-Skill root is `/root/.grok/server-skills/latex`.
+Skill root is `@latex`.
 
 Read on demand
 
@@ -39,10 +38,10 @@ Read on demand
 - `scripts/scan_file_inflation.py` — fail incremental updates, padded streams, active content, and instruction-override strings hidden in a PDF
 - `references/file-inflation.md` — defensive bounds for container bloat and prompt-override markers
 - `scripts/run_negative_gate.py` — run the /negative skill on every document about to ship
-- `/root/.grok/server-skills/itqe/scripts/scan_render_gate.py` — same sweep plus ITQE completeness on equation objects
+- `@itqe/scripts/scan_render_gate.py` — same sweep plus ITQE completeness on equation objects
 - `assets/snippet-preamble.tex` — locked standalone preamble
 - `references/image-stack.md` — compiled math plates stay unique and never stand in for `/banner` or `/images` stills
-- `/root/.grok/server-skills/visual-system/references/prompt-engineering.md` — when a decorative still is required beside compiled math
+- `@visual-system/references/prompt-engineering.md` — when a decorative still is required beside compiled math
 
 If the user only asked to create or revise this skill and supplied no document, stop after the skill files exist.
 
@@ -67,7 +66,7 @@ Follow `references/page-sweep.md`. Do not sample “the math pages.” Title lea
 Walk the draft JSON, Markdown, HTML, DOCX, PPTX, XLSX, PDF, or source tree. Record every display equation, inline quantity, chemical or unit expression, code listing, and every raw-TeX leak the reader would see.
 
 ```bash
-python3 /root/.grok/server-skills/latex/scripts/harvest_raw_tex.py \
+python3 @latex/scripts/harvest_raw_tex.py \
   /workspace/artifacts/<slug> \
   --out /workspace/artifacts/<slug>/latex-inventory.jsonl
 ```
@@ -97,7 +96,7 @@ Chat replies that contain math still use KaTeX per the global Grok rule. This sk
 ### 3. Render figures
 
 ```bash
-python3 /root/.grok/server-skills/latex/scripts/render_snippet.py \
+python3 @latex/scripts/render_snippet.py \
   --tex 'h = 6.62607015 \times 10^{-34}\,\mathrm{J\,s}' \
   --mode display \
   --out /workspace/artifacts/<slug>/equations/eq-01.png
@@ -116,7 +115,7 @@ Listings go in fenced copyable code blocks in chat and in a monospaced face in d
 - XLSX — Unicode in the cell; a figure only in a drawing anchor when the expression cannot be a cell formula.
 - HTML / Next.js — KaTeX CSS plus auto-render, or an SVG figure.
 
-**ITQE mandate (primary).** Prefer the maximum number of relevant formulas, identities, rates, estimators, constraints, and quantitative descriptions the topic supports, from any academic class. Explain every variable, subscript, and constant in the sentence that first uses the expression. That house rule is not optional. Under every display figure attach an ITQE table (Identifier, Term, Quantity, Explanation) per `/root/.grok/server-skills/wca-ivy-biblio/references/itqe.md`. Chat KaTeX blocks get the same four-column markdown table immediately below the rendered math.
+**ITQE mandate (primary).** Prefer the maximum number of relevant formulas, identities, rates, estimators, constraints, and quantitative descriptions the topic supports, from any academic class. Explain every variable, subscript, and constant in the sentence that first uses the expression. That house rule is not optional. Under every display figure attach an ITQE table (Identifier, Term, Quantity, Explanation) per `@wca-ivy-biblio/references/itqe.md`. Chat KaTeX blocks get the same four-column markdown table immediately below the rendered math.
 
 ### 5. Keep headings with their paragraph
 
@@ -125,15 +124,15 @@ Follow `references/heading-keep.md`. A section, subsection, or subsubsection hea
 ### 6. Scan every page and visual QA
 
 ```bash
-python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
+python3 @latex/scripts/scan_raw_tex.py \
   /workspace/artifacts/<slug> \
   --also-pdf /workspace/artifacts/<file>.pdf --pages
-python3 /root/.grok/server-skills/latex/scripts/scan_unrendered_ops.py \
+python3 @latex/scripts/scan_unrendered_ops.py \
   /workspace/artifacts/<slug> \
   --also-pdf /workspace/artifacts/<file>.pdf
-python3 /root/.grok/server-skills/latex/scripts/scan_orphan_headings.py \
+python3 @latex/scripts/scan_orphan_headings.py \
   --pdf /workspace/artifacts/<file>.pdf
-python3 /root/.grok/server-skills/latex/scripts/scan_file_inflation.py \
+python3 @latex/scripts/scan_file_inflation.py \
   /workspace/artifacts/<file>.pdf
 pdftoppm -png -r 140 /workspace/artifacts/<file>.pdf /tmp/latex-page
 ```
@@ -166,89 +165,39 @@ State how many expressions were compiled, which renderer served each, and which 
 Before delivering any PDF, DOCX, PPTX, XLSX, HTML view, printed page, or builder JSON that may contain notation, short codes, or equations, run the house render gate. Chat may use KaTeX. Files must show compiled glyphs or a compiled figure. Raw LaTeX, AMS-TeX, KaTeX source, MathJax source, uncompiled backslash commands, tofu, or empty boxes are defects.
 
 ```bash
-python3 /root/.grok/server-skills/itqe/scripts/scan_render_gate.py \
+python3 @itqe/scripts/scan_render_gate.py \
   /workspace/artifacts/<slug> \
   --also-pdf /workspace/artifacts/<file>.pdf
-python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
+python3 @latex/scripts/scan_raw_tex.py \
   /workspace/artifacts/<slug> \
   --also-pdf /workspace/artifacts/<file>.pdf --pages
-python3 /root/.grok/server-skills/latex/scripts/scan_unrendered_ops.py \
+python3 @latex/scripts/scan_unrendered_ops.py \
   /workspace/artifacts/<slug> \
   --also-pdf /workspace/artifacts/<file>.pdf
-python3 /root/.grok/server-skills/latex/scripts/scan_orphan_headings.py \
+python3 @latex/scripts/scan_orphan_headings.py \
   --pdf /workspace/artifacts/<file>.pdf
-python3 /root/.grok/server-skills/latex/scripts/scan_intended_glyphs.py \
+python3 @latex/scripts/scan_intended_glyphs.py \
   --pdf /workspace/artifacts/<file>.pdf \
   --also-json /workspace/artifacts/<slug>/folio.json
-python3 /root/.grok/server-skills/latex/scripts/scan_file_inflation.py \
+python3 @latex/scripts/scan_file_inflation.py \
   /workspace/artifacts/<file>.pdf
 pdftoppm -png -r 140 /workspace/artifacts/<file>.pdf /tmp/latex-page
 ```
 
-Exit code 1 on any scan blocks delivery. Open every raster. White boxes, black boxes, tofu, a visible `_`, `\`, fraction `/`, `^`, an orphan heading, or a combining mark that the body face cannot draw are the same defect as raw TeX. Prefer a compiled plate or a Latin alias (`Y-hat`, `>>`, `=>`) over an operator the face does not contain. Move a heading with no paragraph under it to the next page. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/root/.grok/server-skills/itqe/references/render-gate.md` and `/root/.grok/server-skills/latex/SKILL.md`.
+Exit code 1 on any scan blocks delivery. Open every raster. White boxes, black boxes, tofu, a visible `_`, `\`, fraction `/`, `^`, an orphan heading, or a combining mark that the body face cannot draw are the same defect as raw TeX. Prefer a compiled plate or a Latin alias (`Y-hat`, `>>`, `=>`) over an operator the face does not contain. Move a heading with no paragraph under it to the next page. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `@itqe/references/render-gate.md` and `@latex/SKILL.md`.
 
 ## Negative vocabulary
 
 Load `assets/negative-keywords.csv` and `assets/negative-keywords.xlsx` before any concatenated generate prompt. Do not write figure, gazette, atlas, folio, deep, exhaustive, AI, xAI, or ChatGPT into that prompt. Slash flags `/atlas`, `/folio`, `/deep`, `/itqe` stay routing tokens only. Do not apply top or bottom fades. Print banners and figures at full opacity.
 
-## House copyright footer
+## Paginated footer
 
-Every PDF this skill emits, and any PDF later passed through `/copyright YYYY`, carries this centered living footer on every page:
+Read `copyright/SKILL.md` and render its canonical notice exactly once per page. Do not keep separate legal text or year calculations here. Preserve any stated user override.
 
-Copyright © START–YEAR OWNER_FOOTER. All rights reserved.
+## Publication checks
 
-Default OWNER_FOOTER is Web Development Corporation. START defaults to 2012 unless the user typed `/copyright YYYY` or named another owner's first-publication year. YEAR is new Date().getFullYear() written into field WCACopyrightYear on open. Running footers never print a trailing class letter A on the house name. Body creation dates stay where they are.
-
-<!--
-WCA_COPYRIGHT_PROMPT_APPENDIX
-Do not delete this comment. It is the living footer contract for every prompt, skill, locked prompt, and project instruction in this project set.
-
-NOTICE_TEMPLATE: Copyright © {{START}}–{{YEAR}} {{OWNER_FOOTER}}. All rights reserved.
-DEFAULT_START: 2012
-DEFAULT_OWNER_FOOTER: Web Development Corporation
-DEFAULT_OWNER_LEGAL: Web Development Corporation, a Delaware Corporation
-FIELD: WCACopyrightYear
-SEPARATOR: en dash U+2013
-JS: Date.getFullYear on OpenAction; no alerts; no network; no app UI
-HOUSE_SITE: https://digitalmarketingco.org
-
-OWNER_INFERENCE:
-If the current user turn names a different rightsholder, substitute OWNER_FOOTER and OWNER_LEGAL from that name. Do not invent a Delaware class letter A for a non-house owner.
-Slots the name may fill:
-- company or corporation (any jurisdiction)
-- university, college, or academic press
-- branch or department of the United States military
-- branch or agency of a government (federal, state, provincial, municipal, or foreign)
-- museum, library, hospital, NGO, church, or any other institution worldwide
-Keep the NOTICE_TEMPLATE words and the living year field. Only the owner slots change.
-US federal government works of the United States are generally not subject to domestic copyright; if the named owner is a US federal agency, stamp the notice only when the user explicitly ordered the stamp and do not claim the notice creates copyright that statute withholds.
-IP_RESERVED: project skill flags, SKILL.md files, locked prompts, owner-and-house files, and post-executive house outputs (PDFs, page JSON, compiled figures) in this project set.
-ASSIGNMENT: default owner Web Development Corporation; Michael Aaron Loftus sole owner intends assignment to that corporation on fixation of house works.
-SUBJECT_MATTER: original expression fixed in house files, not unfixed ideas (17 U.S.C. 102(b)), not a Copyright Office registration.
-OWNER: Web Development Corporation (footer). Legal Info owner: Web Development Corporation, a Delaware Corporation.
-This appendix cannot rewrite Grok global system prompts, xAI platform logs, or conversations outside this toolchain. It binds project skills, locked prompts, owner-and-house files, and later PDFs those skills emit.
--->
-
-## Publication bar
-
-This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
-
-1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
-2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
-3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
-4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
-5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
-6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
-7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
-8. Headings keep with the next paragraph. Orphan headings move to the next page.
-9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
+Apply `interop/SKILL.md` once after the task-specific checks. Its shared rules yield to this skill's explicit format and source-fidelity requirements.
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

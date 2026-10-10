@@ -1,0 +1,9 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/ivy-biblio",
+  "itqe_flag": "/itqe",
+  "stacks": "folio, phd-ivy-monograph, psychoanalyze, latex, deep",
+  "owner": "Web Development Corporation",
+  "visual_stack": "visual-system"
+}

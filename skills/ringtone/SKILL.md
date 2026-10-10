@@ -1,14 +1,14 @@
 ---
 name: ringtone
 description: Build an iPhone-safe ringtone pack from a prompt, TTS line, or source audio. Trigger on /ringtone, custom ringtone, M4R, iPhone 16 Pro Max tone, iPhone 12 Pro Max tone, GarageBand export, Use as Ringtone, or convert audio to a 30-second AAC ringtone. Portable for Grok and other generative AI apps.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /ringtone
-  updatable: true
 ---
 
 # /ringtone — iPhone-safe tone from a prompt or file
+
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
 
 Turn a text prompt, a spoken line, or any DRM-free audio into a dual-path ringtone pack that installs on both iPhone 16 Pro Max and iPhone 12 Pro Max.
 
@@ -26,7 +26,7 @@ Hard product spec (do not relax):
 - Fade-in about 40 ms, fade-out about 120 ms, integrated loudness near -14 LUFS, true peak at most -1.5 dBTP.
 - High-pass 80 Hz, low-pass 15 kHz so the tone survives both the iPhone 12 Pro Max stereo speakers and the louder iPhone 16 Pro Max speakers.
 
-Skill root is /root/.grok/server-skills/ringtone.
+Skill root is @ringtone.
 
 If the user only asked to create or revise this skill and supplied no prompt or file, stop after the skill files exist.
 
@@ -63,7 +63,7 @@ This environment does not ship a music-foundation model. Do not pretend a sine m
 ### 3. Encode
 
 ```bash
-python3 /root/.grok/server-skills/ringtone/scripts/make_ringtone.py \
+python3 @ringtone/scripts/make_ringtone.py \
   --input /path/to/source.wav \
   --title "short-title" \
   --prompt "user prompt text" \
@@ -75,7 +75,7 @@ python3 /root/.grok/server-skills/ringtone/scripts/make_ringtone.py \
 No source file, demo only:
 
 ```bash
-python3 /root/.grok/server-skills/ringtone/scripts/make_ringtone.py \
+python3 @ringtone/scripts/make_ringtone.py \
   --generate-motif --title demo-motif --duration 12 \
   --outdir /workspace/artifacts
 ```
@@ -126,10 +126,4 @@ Load `assets/negative-keywords.csv` and `assets/negative-keywords.xlsx` before a
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

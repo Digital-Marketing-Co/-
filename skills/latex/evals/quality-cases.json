@@ -1,0 +1,34 @@
+{
+  "skill": "latex",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use latex for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Preserve original equation source, renderer version, required macros, and compiled vector or high-resolution assets.",
+        "Test stacked fractions, radicals, matrices, delimiters, scripts, and multiline expressions; inspect final rendered pages."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use latex with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use latex with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use genuine mathematical typography with restrained framing; preserve executable code syntax and legitimate URLs.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

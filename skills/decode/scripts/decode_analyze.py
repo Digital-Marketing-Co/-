@@ -201,8 +201,8 @@ def analyze(text: str) -> dict[str, Any]:
         "missing_letters": missing_letters,
         "chi_square_vs_english": chi,
         "index_of_coincidence": ic,
-        "zipf_alpha_ols_f_ge_2": alpha_hat,
-        "zipf_log_intercept": intercept,
+        "zipf_alpha_ols_f_ge_2": alpha_hat if math.isfinite(alpha_hat) else None,
+        "zipf_log_intercept": intercept if math.isfinite(intercept) else None,
         "zipf_outliers": zipf_outliers,
         "change_point_index": best_t,
         "change_point_token": toks[best_t] if n > best_t else None,
@@ -241,7 +241,7 @@ def main() -> None:
         text = f.read()
     result = analyze(text)
     with open(args.out, "w", encoding="utf-8") as f:
-        json.dump(result, f, indent=2)
+        json.dump(result, f, indent=2, allow_nan=False)
     print(json.dumps({k: result[k] for k in [
         "n_tokens", "v_types", "ttr", "h1_bits", "redundancy",
         "recommended_first_bar", "hypothesis", "change_point_index",

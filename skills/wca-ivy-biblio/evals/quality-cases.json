@@ -1,0 +1,34 @@
+{
+  "skill": "wca-ivy-biblio",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use wca-ivy-biblio for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Keep work identity, edition, locator, DOI, source URL, and house first-appearance order independent from note numbering.",
+        "Test inserting, deleting, and repeating citations; verify every cited claim has source support and a valid locator."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use wca-ivy-biblio with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use wca-ivy-biblio with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use readable linked bibliography entries and consistent note typography with clear scholarly structure.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

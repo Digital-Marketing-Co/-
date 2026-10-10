@@ -1,0 +1,34 @@
+{
+  "skill": "prompt-engineer",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use prompt-engineer for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Convert requirements into dependencies, contracts, concrete outputs, resource controls, and observable acceptance criteria.",
+        "Check that auditor counts come from an actual registry and required integrations are available."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use prompt-engineer with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use prompt-engineer with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Specify contextual futuristic UI with accessible controls, efficient assets, and a print fallback.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

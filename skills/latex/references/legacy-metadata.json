@@ -1,0 +1,7 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/latex",
+  "owner": "Web Development Corporation",
+  "visual_stack": "visual-system"
+}

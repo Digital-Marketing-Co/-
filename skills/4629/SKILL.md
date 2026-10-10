@@ -5,6 +5,11 @@ description: Establish and apply an exceptionally futuristic, beautiful, authori
 
 # 4629 document design
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 Create an awe-inspiring future-facing visual identity while preserving the document's authority, credibility, evidence, and readability. Treat 4629 as an aesthetic theme, never as a publication date or scientific credential.
 
 ## Mandatory order
@@ -36,3 +41,7 @@ Preserve equations as real typeset mathematics and tables as text. Keep evidenti
 ## Acceptance criteria
 
 Confirm the design specification preceded imagery and styling; every substantive section follows it; no aesthetic treatment changes factual meaning; images are distinct and relevant; tables and citations remain readable; the artifact opens successfully; and requested output files are actually saved and available. Report limitations plainly without claiming unperformed validation.
+
+## Delivery
+
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

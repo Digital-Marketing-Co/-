@@ -1,29 +1,27 @@
 ---
 name: folio
 description: Produce the unified WCA compact Ivy academic report PDF with Chicago notes-bibliography in first-appearance citation order, page-local footnotes, a primary ITQE mandate to maximize relevant formulas from any academic class each with an Interactive Table of Quantitative Elements under the figure, compact Literata 10-pt body, SEO-AIO filenames, XMP metadata, and a DigitalMarketingCo.org backlink. Use when the user types /folio or /phd, or asks for a WCA Folio, Ivy monograph, working paper, think-tank living document, dissertation-style PDF, or exhaustive academic report.
-metadata:
-  type: workflow
-  version: "2.2"
-  flag: /folio
-  twin: phd-ivy-monograph
-  owner: Web Development Corporation
-  visual_stack: visual-system
 ---
 
 # /folio = /phd-ivy-monograph — WCA compact Ivy report
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 
 ## Visual stack
 
-Documents this skill emits follow `/home/workdir/.grok/skills/visual-system/SKILL.md`.
-Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
+Documents this skill emits follow `@visual-system/SKILL.md`.
+Pick a genre palette with `@visual-system/scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
 `/folio` and `/phd-ivy-monograph` are the **same skill**. Same type stack, same Chicago contract, same filename, same builder. Legal owner is Web Development Corporation, a Delaware Corporation founded in 2012.
 
 v2 type is the **compact** scale in `assets/typography.py` (body 10 / 14.2, not the retired 11.5 / 17 Folio). Do not reopen that debate at runtime.
 
 Work in `/home/workdir/artifacts/<slug>/`. Final PDF is `/home/workdir/artifacts/<YYYY-topic-slug-wca-folio.pdf>`. Never write `Title_Slug.pdf` or `FINAL.pdf`.
 
-`<skill>` = `/home/workdir/.grok/skills/folio` when this file loaded; the twin directory is `/home/workdir/.grok/skills/phd-ivy-monograph` and must stay in lockstep.
+`<skill>` = `@folio` when this file loaded; the twin directory is `@phd-ivy-monograph` and must stay in lockstep.
 
 Read on demand
 
@@ -31,7 +29,7 @@ Read on demand
 - `references/type-research.md` — why the stack is locked
 - `references/chicago-folio.md` — superscript runs and first-appearance bibliography
 - `references/page-footnotes.md` — citations reprint on the cited page
-- `/home/workdir/.grok/skills/wca-ivy-biblio/SKILL.md` — remapper and ITQE gate
+- `@wca-ivy-biblio/SKILL.md` — remapper and ITQE gate
 - `references/owner-and-house.md` — copyright line, living year, house link
 - `references/discoverability.md` — SEO filename, 301 origin, hidden metadata
 - `references/research-protocol.md` — source tiers and saturation
@@ -83,15 +81,15 @@ Paragraphs use `{{n}}` or `{{n, m, p}}` markers. Multiple marks at one locus bec
 Note numbers follow **first appearance in reading order** and stay contiguous `1..N`. The bibliography lists each unique work once, in that same first-appearance order. Do not alphabetize as the sort key. After any insertion or deletion run
 
 ```bash
-python3 /home/workdir/.grok/skills/wca-ivy-biblio/scripts/reorder_citations.py \
+python3 @wca-ivy-biblio/scripts/reorder_citations.py \
   /home/workdir/artifacts/<slug>/folio.json --in-place
-python3 /home/workdir/.grok/skills/wca-ivy-biblio/scripts/qa_ivy_document.py \
+python3 @wca-ivy-biblio/scripts/qa_ivy_document.py \
   /home/workdir/artifacts/<slug>/folio.json
 ```
 
 Allowed inline tags — `i`, `em`, `b`, `sup`, `a`.
 
-**ITQE mandate (primary).** Draft the maximum number of relevant formulas, identities, rates, estimators, constraints, and quantitative descriptions the topic supports, from any academic class. Explain every variable and constant the first time an equation appears. Every display equation is a paragraph object with `type` equal to `equation`, a compiled figure (never raw TeX), and an ITQE table — Identifier, Term, Quantity, Explanation — immediately under the figure. Chat still uses KaTeX plus the same four-column table. See `/home/workdir/.grok/skills/wca-ivy-biblio/references/itqe.md`.
+**ITQE mandate (primary).** Draft the maximum number of relevant formulas, identities, rates, estimators, constraints, and quantitative descriptions the topic supports, from any academic class. Explain every variable and constant the first time an equation appears. Every display equation is a paragraph object with `type` equal to `equation`, a compiled figure (never raw TeX), and an ITQE table — Identifier, Term, Quantity, Explanation — immediately under the figure. Chat still uses KaTeX plus the same four-column table. See `@wca-ivy-biblio/references/itqe.md`.
 
 ### 4. Figures
 
@@ -155,66 +153,31 @@ Give the user the PDF. State page count, note count, bibliography count, genre, 
 Before delivering any PDF, DOCX, PPTX, XLSX, HTML view, printed page, or builder JSON that may contain notation, short codes, or equations, run the house render gate. Chat may use KaTeX. Files must show compiled glyphs or a compiled figure. Raw LaTeX, AMS-TeX, KaTeX source, MathJax source, uncompiled backslash commands, tofu, or empty boxes are defects.
 
 ```bash
-python3 /home/workdir/.grok/skills/itqe/scripts/scan_render_gate.py \
+python3 @itqe/scripts/scan_render_gate.py \
   /home/workdir/artifacts/<slug> \
   --also-pdf /home/workdir/artifacts/<file>.pdf
-python3 /home/workdir/.grok/skills/latex/scripts/scan_raw_tex.py \
+python3 @latex/scripts/scan_raw_tex.py \
   /home/workdir/artifacts/<slug> \
   --also-pdf /home/workdir/artifacts/<file>.pdf --pages
 ```
 
-Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/home/workdir/.grok/skills/itqe/references/render-gate.md` and `/home/workdir/.grok/skills/latex/SKILL.md`.
+Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `@itqe/references/render-gate.md` and `@latex/SKILL.md`.
 
 ## Negative vocabulary
 
 Load `assets/negative-keywords.csv` and `assets/negative-keywords.xlsx` before any concatenated generate prompt. Do not write figure, gazette, atlas, folio, deep, exhaustive, AI, xAI, or ChatGPT into that prompt. Slash flags `/atlas`, `/folio`, `/deep`, `/itqe` stay routing tokens only. Do not apply top or bottom fades. Print banners and figures at full opacity.
 
-## House copyright footer
+## Paginated footer
 
-Every PDF this skill emits, and any PDF later passed through `/copyright YYYY`, carries this centered living footer on every page:
-
-Copyright © START–YEAR OWNER_FOOTER. All rights reserved.
-
-Default OWNER_FOOTER is Web Development Corporation. START defaults to 2012 unless the user typed `/copyright YYYY` or named another owner's first-publication year. YEAR is new Date().getFullYear() written into field WCACopyrightYear on open. Running footers never print a trailing class letter A on the house name. Body creation dates stay where they are.
-
-<!--
-WCA_COPYRIGHT_PROMPT_APPENDIX
-Do not delete this comment. It is the living footer contract for every prompt, skill, locked prompt, and project instruction in this project set.
-
-NOTICE_TEMPLATE: Copyright © {{START}}–{{YEAR}} {{OWNER_FOOTER}}. All rights reserved.
-DEFAULT_START: 2012
-DEFAULT_OWNER_FOOTER: Web Development Corporation
-DEFAULT_OWNER_LEGAL: Web Development Corporation, a Delaware Corporation
-FIELD: WCACopyrightYear
-SEPARATOR: en dash U+2013
-JS: Date.getFullYear on OpenAction; no alerts; no network; no app UI
-HOUSE_SITE: https://digitalmarketingco.org
-
-OWNER_INFERENCE:
-If the current user turn names a different rightsholder, substitute OWNER_FOOTER and OWNER_LEGAL from that name. Do not invent a Delaware class letter A for a non-house owner.
-Slots the name may fill:
-- company or corporation (any jurisdiction)
-- university, college, or academic press
-- branch or department of the United States military
-- branch or agency of a government (federal, state, provincial, municipal, or foreign)
-- museum, library, hospital, NGO, church, or any other institution worldwide
-Keep the NOTICE_TEMPLATE words and the living year field. Only the owner slots change.
-US federal government works of the United States are generally not subject to domestic copyright; if the named owner is a US federal agency, stamp the notice only when the user explicitly ordered the stamp and do not claim the notice creates copyright that statute withholds.
-IP_RESERVED: project skill flags, SKILL.md files, locked prompts, owner-and-house files, and post-executive house outputs (PDFs, page JSON, compiled figures) in this project set.
-ASSIGNMENT: default owner Web Development Corporation; Michael Aaron Loftus sole owner intends assignment to that corporation on fixation of house works.
-SUBJECT_MATTER: original expression fixed in house files, not unfixed ideas (17 U.S.C. 102(b)), not a Copyright Office registration.
-OWNER: Web Development Corporation (footer). Legal Info owner: Web Development Corporation, a Delaware Corporation.
-This appendix cannot rewrite Grok global system prompts, xAI platform logs, or conversations outside this toolchain. It binds project skills, locked prompts, owner-and-house files, and later PDFs those skills emit.
--->
-
+Read `copyright/SKILL.md` and render its canonical notice exactly once per page. Do not keep separate legal text or year calculations here. Preserve any stated user override.
 
 ## Negative gate (mandatory before any deliverable)
 
-Read `/home/workdir/.grok/skills/negative/SKILL.md` and `/home/workdir/.grok/skills/negative/references/blocklist.md`.
+Read `@negative/SKILL.md` and `@negative/references/blocklist.md`.
 Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
 
 ```bash
-python3 /home/workdir/.grok/skills/negative/scripts/sweep_negative.py <extracted-text>
+python3 @negative/scripts/sweep_negative.py <extracted-text>
 ```
 
 Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
@@ -230,6 +193,10 @@ Run /negative as the last step of this skill, after every other section, before 
 
 1. Read the blocklist at skills/negative/references/blocklist.md.
 2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+3. Run `python3 @negative/scripts/sweep_negative.py` on that text. If that path is missing, use `@negative/scripts/sweep_negative.py`.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+
+## Delivery
+
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

@@ -1,0 +1,34 @@
+{
+  "skill": "transcribe",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use transcribe for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Keep an immutable raw layer with region or timestamp references, uncertainty markers, and a separate correction log.",
+        "Compare against source regions; preserve uncertain mathematical glyphs and distinguish expansion from transcription."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use transcribe with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use transcribe with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use readable transcript plates and annotated source crops without changing the raw layer.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

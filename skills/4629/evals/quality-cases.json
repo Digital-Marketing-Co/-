@@ -1,0 +1,34 @@
+{
+  "skill": "4629",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use 4629 for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Create semantic typography tokens, a depth budget, distinct section compositions, and a print variant before rendering.",
+        "Compare actual gradient samples for contrast; inspect long captions and grayscale legibility."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use 4629 with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use 4629 with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use luminous architectural framing and precise information hierarchy while keeping body text quiet.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

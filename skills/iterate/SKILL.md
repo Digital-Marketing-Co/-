@@ -1,33 +1,31 @@
 ---
 name: iterate
 description: Iteratively expand a topic or topic set into an exhaustive PhD-plus monograph by successive research passes that add claims, primary PDF sources, and remapped Chicago notes until saturation, then emit through folio or deep with ITQE figures and a fail-closed LaTeX render gate. Trigger on /iterate, iterate this, expand and expound, iterative expansion, saturation research, or when the user asks to keep enlarging a document until it is higher than PhD level.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /iterate
-  stacks: folio, phd-ivy-monograph, deep, wca-ivy-biblio, itqe, latex, banner, copyright, images
-  owner: Web Development Corporation
-  visual_stack: visual-system
 ---
 
 # /iterate — exhaustive expansion until saturation
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 
 ## Visual stack
 
-Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
-Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
+Documents this skill emits follow `@visual-system/SKILL.md`.
+Pick a genre palette with `@visual-system/scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
 Turn one topic or a closed set of topics into a living research ledger that grows by discrete iterations. Each iteration adds new claims, new primary sources, and new note events. After every insertion, citation numbers, page footnotes, and the bibliography are remapped so they stay contiguous in first-appearance reading order. When the saturation gate closes, emit a WCA compact Ivy Folio (default) or a /deep Georgia monograph. Finish on the latest /itqe contract and the /latex render gate.
 
 This skill does not invent omniscience. Above-genius here is an operational posture — more rounds, rival-school pressure, quantitative figures on every relation the topic supports, and a written stop rule. It is not a claim that the model is the smartest person or computer.
 
 Work in `/workspace/artifacts/iterate-<slug>/`.
 
-`<folio>` = `/root/.grok/server-skills/folio`
-`<deep>` = `/root/.grok/server-skills/deep`
-`<ivy>` = `/root/.grok/server-skills/wca-ivy-biblio`
-`<itqe>` = `/root/.grok/server-skills/itqe`
-`<latex>` = `/root/.grok/server-skills/latex`
+`<folio>` = `@folio`
+`<deep>` = `@deep`
+`<ivy>` = `@wca-ivy-biblio`
+`<itqe>` = `@itqe`
+`<latex>` = `@latex`
 
 Read on demand
 
@@ -73,7 +71,7 @@ Slug the folder `iterate-<short-topic>`.
 If `ledger.json` exists, resume from the last closed iteration. If not, seed
 
 ```bash
-python3 /root/.grok/server-skills/iterate/scripts/new_iteration.py \
+python3 @iterate/scripts/new_iteration.py \
   /workspace/artifacts/iterate-<slug> \
   --topic "<working title>" \
   --init
@@ -108,10 +106,10 @@ Default caps (raise only when the user names a harder stop)
 Inserting a source in the middle of page one must renumber every later note, every page footnote, and the ending bibliography.
 
 ```bash
-python3 /root/.grok/server-skills/wca-ivy-biblio/scripts/reorder_citations.py \
+python3 @wca-ivy-biblio/scripts/reorder_citations.py \
   /workspace/artifacts/iterate-<slug>/folio.json \
   --in-place
-python3 /root/.grok/server-skills/wca-ivy-biblio/scripts/qa_ivy_document.py \
+python3 @wca-ivy-biblio/scripts/qa_ivy_document.py \
   /workspace/artifacts/iterate-<slug>/folio.json
 ```
 
@@ -136,7 +134,7 @@ When the stop gate closes, follow `references/emit-handoff.md`.
 Required stack order
 
 1. Finish the working JSON body (intro, historiography, method, one chapter per surviving research question, synthesis, open problems, bibliography).
-2. `/itqe` — fill every equation object and every ranked inventory. Maximize relevant formulas from any academic class the topic supports. Latest ITQE version is the skill at `/root/.grok/server-skills/itqe`. Re-read that SKILL.md at emit time so a newer patch wins.
+2. `/itqe` — fill every equation object and every ranked inventory. Maximize relevant formulas from any academic class the topic supports. Latest ITQE version is the skill at `@itqe`. Re-read that SKILL.md at emit time so a newer patch wins.
 3. `/latex` — compile figures. No raw TeX on a delivered page.
 4. `/ivy-biblio` — remap once more and QA.
 5. `/banner` only when emit target is `/deep` or the user typed `/banner`.
@@ -145,10 +143,10 @@ Required stack order
 8. Render gate, then raster every page.
 
 ```bash
-python3 /root/.grok/server-skills/itqe/scripts/scan_render_gate.py \
+python3 @itqe/scripts/scan_render_gate.py \
   /workspace/artifacts/iterate-<slug> \
   --also-pdf /workspace/artifacts/<file>.pdf
-python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
+python3 @latex/scripts/scan_raw_tex.py \
   /workspace/artifacts/iterate-<slug> \
   --also-pdf /workspace/artifacts/<file>.pdf --pages
 pdftoppm -png -r 140 /workspace/artifacts/<file>.pdf /tmp/iterate-page
@@ -180,26 +178,10 @@ If the user asked only for another iteration on an existing ledger and not a reb
 
 Load `assets/negative-keywords.csv` and `assets/negative-keywords.xlsx` before any concatenated generate prompt. Do not write figure, gazette, atlas, folio, deep, exhaustive, AI, xAI, or ChatGPT into that prompt. Slash flags `/atlas`, `/folio`, `/deep`, `/itqe` stay routing tokens only. Do not apply top or bottom fades. Print banners and figures at full opacity.
 
-## Publication bar
+## Publication checks
 
-This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
-
-1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
-2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
-3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
-4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
-5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
-6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
-7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
-8. Headings keep with the next paragraph. Orphan headings move to the next page.
-9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
+Apply `interop/SKILL.md` once after the task-specific checks. Its shared rules yield to this skill's explicit format and source-fidelity requirements.
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

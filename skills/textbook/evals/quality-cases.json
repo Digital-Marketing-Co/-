@@ -1,0 +1,34 @@
+{
+  "skill": "textbook",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use textbook for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Map learning objectives to prerequisites, worked examples, exercises, solutions, glossary, and cited evidence.",
+        "Check example calculations, symbol definitions, exercise solvability, accessibility, and reference traceability."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use textbook with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use textbook with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use distinctive chapter openings, luminous diagrams, readable math, and consistent semantic typography.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

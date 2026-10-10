@@ -1,0 +1,9 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/generate",
+  "stacks": "list, banner, images, book, coffee, folio, deep, pptx, visual-system, negative, copyright",
+  "owner": "Web Development Corporation",
+  "default_studio": "https://gnitekram.org/",
+  "default_brand": "Aether Cinema"
+}

@@ -1,19 +1,19 @@
 ---
 name: vector
 description: Turn an attached or referenced raster or document page into an SVG vector graphic whose letterforms stay sharp at any zoom. Use when the user types /vector, asks to vectorize an image, wants live or outlined text from a poster, or needs an SVG/PDF of a chart so every label stays legible. Stacks after /upscale when a larger baseline exists.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /vector
-  owner: Web Development Corporation
 ---
 
 # /vector
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 Convert one image or one document page into an SVG whose shapes and letterforms are real vector paths, plus live text nodes when OCR is confident. Do not overwrite the source.
 
-`<skill>` resolves with `interop/scripts/resolve_root.py vector` (live host: `/root/.grok/server-skills/vector`).
-`<upscale>` = `/root/.grok/server-skills/upscale`.
+`<skill>` resolves with `interop/scripts/resolve_root.py vector` (live host: `@vector`).
+`<upscale>` = `@upscale`.
 
 ## When this skill runs
 
@@ -52,7 +52,7 @@ Tesseract `eng` is required for the live-text pass.
 ## Method
 
 ```bash
-python3 /root/.grok/server-skills/vector/scripts/vectorize.py \
+python3 @vector/scripts/vectorize.py \
   --input "/path/to/source.png" \
   --outdir /workspace/artifacts \
   --formats svg,png,pdf
@@ -86,10 +86,4 @@ Load `assets/negative-keywords.csv` and `assets/negative-keywords.xlsx` before a
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

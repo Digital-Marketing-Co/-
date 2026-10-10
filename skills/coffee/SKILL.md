@@ -1,21 +1,20 @@
 ---
 name: coffee
 description: Compile a landscape coffee-table PDF of full-bleed generated stills after the user types /coffee plus a subject and an optional page count. Use when the user types /coffee, asks for a coffee table book, a full-bleed picture book, or a large-format image album with no page margins. Page one is a unifying cover still with an elegant readable title. Every page is one unique full-bleed generate that fills the trim on top, right, left, and bottom. A rerun appends another full iteration of stills to the same book.
-metadata:
-  type: workflow
-  version: "4.1"
-  flag: /coffee
-  owner: Web Development Corporation
-  visual_stack: visual-system
 ---
 
 # /coffee
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 Compile one landscape coffee-table PDF. Every printed page is a single generated still drawn at x = 0, y = 0, width = page, height = page, with a 1.5 pt overscan so no viewer hairline shows paper. No text inset. No side gutter. No letterbox. No top or bottom paper band. No alpha ramp on any edge. No visible footer.
 
-Skill path is `/root/.grok/server-skills/coffee`.
+Skill path is `@coffee`.
 
-Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md` for palette and depth only. Coffee pages override the publication bar where that bar would corrupt bleed: do not stamp a footer, do not add an alpha ramp, do not inset the still. Copyright stays in document info. The cover company line is the only printed company text.
+Documents this skill emits follow `@visual-system/SKILL.md` for palette and depth only. Coffee pages override the publication bar where that bar would corrupt bleed: do not stamp a footer, do not add an alpha ramp, do not inset the still. Copyright stays in document info. The cover company line is the only printed company text.
 
 Generate prompts append the beauty lock in `references/prompts.md`. Every still is a fresh generate. No stock download. No reused path, hash, or prompt.
 
@@ -42,7 +41,7 @@ If there is no subject and no existing book, ask what they want to see. Do not i
 ## Parse the command
 
 ```bash
-python3 /root/.grok/server-skills/coffee/scripts/parse_coffee_request.py \
+python3 @coffee/scripts/parse_coffee_request.py \
   "/coffee SUBJECT" \
   --existing /workspace/artifacts/<slug>/coffee.json
 ```
@@ -89,7 +88,7 @@ Leaves
 Append with:
 
 ```bash
-python3 /root/.grok/server-skills/coffee/scripts/extend_book.py \
+python3 @coffee/scripts/extend_book.py \
   /workspace/artifacts/<slug>/coffee.json \
   --add /tmp/coffee-add.json
 ```
@@ -103,7 +102,7 @@ One generate call per new page. Orientation is landscape unless the user asked f
 Save raw files as `stills/raw-NN.png`. Fit each one:
 
 ```bash
-python3 /root/.grok/server-skills/coffee/scripts/fit_still.py \
+python3 @coffee/scripts/fit_still.py \
   stills/raw-NN.png stills/fit-NN.png --mode landscape
 ```
 
@@ -118,7 +117,7 @@ First run only. Faces and the command are in `references/cover-title.md`. The ti
 ### 4. Build the PDF
 
 ```bash
-python3 /root/.grok/server-skills/coffee/scripts/build_coffee_pdf.py \
+python3 @coffee/scripts/build_coffee_pdf.py \
   /workspace/artifacts/<slug>/coffee.json \
   --out /workspace/artifacts/<Title_Slug>_Coffee.pdf
 ```
@@ -134,7 +133,7 @@ Living copyright goes in document info only. Owner is Web Development Corporatio
 ### 5. Uniqueness audit
 
 ```bash
-python3 /root/.grok/server-skills/coffee/scripts/audit_unique_images.py \
+python3 @coffee/scripts/audit_unique_images.py \
   /workspace/artifacts/<slug>/coffee.json
 ```
 
@@ -191,8 +190,12 @@ Fail closed on a missing still, a shared hash, a shared prompt, a paper bar, or 
 
 Run this once, last, after every other section.
 
-1. Resolve the negative skill at `/root/.grok/server-skills/negative`.
+1. Resolve the negative skill at `@negative`.
 2. Extract visible text from chat, the PDF info, captions, and filenames.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text.
+3. Run `python3 @negative/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit so the sentence still reads as English. Re-scan until CLEAN.
 5. Verbatim user source and the blocklist file itself are the only carve-outs.
+
+## Delivery
+
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

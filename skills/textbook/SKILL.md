@@ -2,7 +2,13 @@
 name: textbook
 description: Write and visually verify a doctoral-level textbook PDF about the subject following /textbook or $textbook. Produce scholarly teaching, compiled mathematics, ITQE tables, verified academic PDF citations, futuristic full-bleed artwork, semantic typography, section and subsection banners, distinct inline illustrations, canonical copyright, and documented preflight and final QA.
 ---
+
 # Textbook
+
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
 
 ## Invocation and delivery
 Treat all text after `/textbook` as the subject and constraints. Example: `/textbook differential geometry and tensor calculus`. Use supplied source material when present. If no subject is supplied, ask for the subject; creating or editing this package does not itself request a textbook. Default to English, doctoral depth with a prerequisite bridge, US Letter portrait, and author credit Michael Aaron Loftus. Respect explicit author instructions and distinguish author credit from institutional affiliation or credentials.
@@ -26,3 +32,7 @@ Use `/copyright` as the sole source of legal text, year calculation, company lin
 
 ## Completion criteria
 Require complete agreed content, verified claim-to-source mappings, real academic PDF links or explicit source exceptions, one banner per body section/subsection, distinct inline illustrations at the specified interval, compiled equations with ITQE tables, semantic styles for every text role, passing stylesheet proof, documented contrast readings, every-page visual inspection, canonical footer application, functional links and numbering, and persistent delivery. Never promise absolute visual perfection; report observed QA evidence.
+
+## Delivery
+
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

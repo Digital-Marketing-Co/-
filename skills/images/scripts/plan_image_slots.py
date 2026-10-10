@@ -83,11 +83,11 @@ def plan_section(section: dict) -> dict:
         slots = 1
     anchors = []
     running = 0
-    needed = 500
+    needed = min(500, n_after)
     k = 1
     for i, c in enumerate(counts):
         running += c
-        if k <= slots and running >= needed:
+        while k <= slots and running >= needed:
             anchors.append(
                 {
                     "slot": k,

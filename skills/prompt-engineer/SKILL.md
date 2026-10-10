@@ -1,17 +1,14 @@
 ---
 name: prompt-engineer
 description: Expand the text after /PromptEngineer into an Above-Genius PhD implementation of that pseudoprompt, then build it with holographic 3D glass gradient animated Tailwind, OG and Twitter cards, and the 521 auditor metrics. Trigger on /PromptEngineer, /prompt-engineer, PromptEngineer, PhD implementation of this prompt, expand this pseudoprompt, mega menu apps nav, Greg 521, or 521 metrics of the free website auditor.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /PromptEngineer
-  stacks: generate, visual-system, negative, images, banner
-  owner: Web Development Corporation
-  auditor: https://digitalmarketingco.org/free-website-auditor
-  brand_link: https://digitalmarketingco.org
 ---
 
 # /PromptEngineer — pseudo to PhD implementation
+
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
 
 Take every word after the flag as a **pseudoprompt**. Do not treat it as finished copy. Expand it into an Above-Genius PhD product spec, then implement that spec in working files.
 
@@ -19,10 +16,10 @@ This skill is not `/generate`. `/generate` writes a prompt for a later run. This
 
 If the user only asked to create or revise this skill and supplied no separate product remainder, stop after the skill files exist. Do not invent a campaign.
 
-`<skill>` resolves with `interop/scripts/resolve_root.py prompt-engineer` (live host: `/root/.grok/server-skills/prompt-engineer`)
-`<visual>` = `/root/.grok/server-skills/visual-system`
-`<negative>` = `/root/.grok/server-skills/negative`
-`<generate>` = `/root/.grok/server-skills/generate`
+`<skill>` resolves with `interop/scripts/resolve_root.py prompt-engineer` (live host: `@prompt-engineer`)
+`<visual>` = `@visual-system`
+`<negative>` = `@negative`
+`<generate>` = `@generate`
 
 Read on demand
 
@@ -36,8 +33,8 @@ Read on demand
 - `assets/expansion-skeleton.md` — spec template
 - `assets/metrics-521.json` — machine checklist
 - `scripts/parse_prompt_engineer.py` — remainder parser
-- `/root/.grok/server-skills/visual-system/references/beauty-lock.md`
-- `/root/.grok/server-skills/negative/references/blocklist.md`
+- `@visual-system/references/beauty-lock.md`
+- `@negative/references/blocklist.md`
 
 ## When this skill runs
 
@@ -85,7 +82,7 @@ Examples
 ### 1. Parse
 
 ```bash
-python3 /root/.grok/server-skills/prompt-engineer/scripts/parse_prompt_engineer.py \
+python3 @prompt-engineer/scripts/parse_prompt_engineer.py \
   --remainder "{{input}}"
 ```
 
@@ -162,7 +159,7 @@ Generate route stills with the image tools when the user also wants pixels in th
 
 ### 7. Negative and house gates
 
-Read `/root/.grok/server-skills/negative/SKILL.md` before delivery. Sweep visible copy, alt text, captions, and filenames.
+Read `@negative/SKILL.md` before delivery. Sweep visible copy, alt text, captions, and filenames.
 
 Do not leak skill flags, maker names, or process talk into user-facing UI copy.
 
@@ -197,10 +194,4 @@ If the user only asked to install or extend the skill, stop. Do not invent a sam
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

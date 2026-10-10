@@ -1,0 +1,8 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/ispy",
+  "owner": "Web Development Corporation",
+  "stacks": "book, iterate, deep, breakdown, decode, banner, images, wca-ivy-biblio, copyright",
+  "visual_stack": "visual-system"
+}

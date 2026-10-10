@@ -1,0 +1,9 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/PromptEngineer",
+  "stacks": "generate, visual-system, negative, images, banner",
+  "owner": "Web Development Corporation",
+  "auditor": "https://digitalmarketingco.org/free-website-auditor",
+  "brand_link": "https://digitalmarketingco.org"
+}

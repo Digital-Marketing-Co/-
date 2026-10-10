@@ -1,0 +1,7 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/decode",
+  "pdf": "folio",
+  "visual_stack": "visual-system"
+}

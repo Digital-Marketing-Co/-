@@ -1,0 +1,10 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/itqe",
+  "stacks": "folio, phd-ivy-monograph, deep, banner, copyright, latex, wca-ivy-biblio, atlas, images, print, psychoanalyze, decode, article-clip-pdf, extract-dir",
+  "owner": "Web Development Corporation",
+  "house_acronym": "Interactive Table of Quantitative Elements",
+  "fiscal_homonym": "Imputed Tax Quantitative Easing",
+  "visual_stack": "visual-system"
+}

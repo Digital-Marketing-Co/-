@@ -1,0 +1,6 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/hilarious",
+  "source": "references/science-of-humor.pdf"
+}

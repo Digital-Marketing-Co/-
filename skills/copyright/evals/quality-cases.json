@@ -1,0 +1,34 @@
+{
+  "skill": "copyright",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use copyright for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Keep one notice source, resolve the year at build time, and implement viewer updates only with a verified fallback appearance.",
+        "Stamp twice and compare notice counts, original body text, links, page geometry, and owner names."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use copyright with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use copyright with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use quiet dimensional footer rules and exact clickable legal and brand labels.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

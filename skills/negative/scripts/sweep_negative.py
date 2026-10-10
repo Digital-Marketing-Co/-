@@ -40,10 +40,10 @@ def find_hits(text: str) -> list[tuple[int, str]]:
     for term in terms_from_file():
         if not term:
             continue
-        if " " in term or "-" in term:
-            pat = re.compile(re.escape(term), re.I)
-        else:
-            pat = re.compile(rf"(?<![A-Za-z0-9']){re.escape(term)}(?![A-Za-z0-9'])", re.I)
+        # Match complete phrases with flexible whitespace, not substrings in words.
+        # Unicode alphanumerics bound tokens; compounds remain separate tokens.
+        escaped = r"\s+".join(re.escape(part) for part in term.split())
+        pat = re.compile(rf"(?<![^\W_]){escaped}(?![^\W_])", re.I)
         for m in pat.finditer(text):
             span = (m.start(), m.end())
             if span in seen:

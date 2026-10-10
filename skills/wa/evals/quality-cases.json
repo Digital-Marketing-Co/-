@@ -1,0 +1,34 @@
+{
+  "skill": "wa",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use wa for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Build a feature-to-test matrix with isolated fixtures, role ownership checks, failure recovery, and observable deployment evidence.",
+        "Exercise authorization denial, idempotency, queues, uploads, UI states, accessibility, and provider-disabled mode."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use wa with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use wa with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Improve contextual banners and spatial UI with mobile, keyboard, contrast, and performance checks.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

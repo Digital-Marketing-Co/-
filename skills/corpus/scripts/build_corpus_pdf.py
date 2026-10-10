@@ -6,6 +6,9 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
+from datetime import date
+
+from publication_notice import notice_for
 
 from reportlab.lib.colors import HexColor, black, white
 from reportlab.lib.pagesizes import letter
@@ -107,10 +110,10 @@ def chicago_line(work: dict) -> str:
     return line
 
 
-def draw_footer(c, page: int, year: int, short_owner: str) -> None:
+def draw_footer(c, page: int, data: dict) -> None:
     c.setFillColor(INK)
     c.setFont("CorpusSerif" if "CorpusSerif" in pdfmetrics.getRegisteredFontNames() else "Times-Roman", 8)
-    text = f"Copyright © 2012–{year}  {short_owner}. All rights reserved."
+    text = notice_for(data)
     c.drawCentredString(letter[0] / 2, 0.45 * inch, text)
     c.drawCentredString(letter[0] / 2, 0.32 * inch, str(page))
 
@@ -131,7 +134,7 @@ def main() -> None:
 
     house = data.get("house") or {}
     owner = data.get("owner") or {}
-    year = int(str(data.get("date") or "2026")[:4])
+    year = date.today().year
     page = 1
     left = 0.85 * inch
     right = letter[0] - 0.85 * inch
@@ -143,7 +146,7 @@ def main() -> None:
         nonlocal page
         if page > 1:
             c.showPage()
-        draw_footer(c, page, year, owner.get("short") or "Web Development Corporation")
+        draw_footer(c, page, data)
         page += 1
         return top
 

@@ -5,6 +5,11 @@ description: Recursive, iterative, deep historical research across accessible so
 
 # Topsecret
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 Treat “topsecret” as the user's workflow name, not a classification marking or a claim of privileged access. Interpret “all histories, corpora, binary code and large language models throughout time” as an ambitious research scope to operationalize into an explicit, verifiable coverage plan.
 
 ## Input and access
@@ -32,3 +37,7 @@ For supplied binaries or code, record provenance, hashes where feasible, format,
 ## Output and QA
 
 Deliver the answer, scoped coverage inventory, dated chronology where relevant, claim-to-source evidence table, competing explanations, confidence with reasons, unresolved gaps and research-pass log. Distinguish direct evidence, inference and speculation. Cite material claims at their point of use. Verify quotations, dates, arithmetic, denominators and citation targets. Describe “exhaustive” only relative to an enumerated, actually inspected scope. Do not manufacture institutional affiliations, secrecy, intelligence authority, or certainty. Invoke profound only when the user requests its research-holograph output; do not recursively invoke skills in a loop.
+
+## Delivery
+
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

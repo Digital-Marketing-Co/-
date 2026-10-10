@@ -1,0 +1,6 @@
+{
+  "type": "workflow",
+  "version": "3.1",
+  "flag": "/negative",
+  "always_apply": true
+}

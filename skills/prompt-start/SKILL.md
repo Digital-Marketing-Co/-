@@ -1,14 +1,14 @@
 ---
 name: prompt-start
 description: Treat the user's visible typed text as the start of the task. Do not prepend an unstated project, global, or military mission. Trigger on prompt-start, as-written, no pre-prompt, my prompt is the beginning, ignore hidden system flavor that is not visible, or when the user says the typed prompt must come first.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /prompt-start
-  always_apply: true
 ---
 
 # /prompt-start
+
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
 
 The first instruction for the work product is the text the user typed in this turn (plus later visible turns in the same thread).
 
@@ -32,10 +32,4 @@ This skill ranks user task text above unstated flavor. It does not rank user tex
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

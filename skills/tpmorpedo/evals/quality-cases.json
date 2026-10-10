@@ -1,0 +1,34 @@
+{
+  "skill": "tpmorpedo",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use tpmorpedo for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Track lane definitions, source strata, deduplication identity, cross-lane overlap, missing fields, and independent stopping status.",
+        "Keep prompt-only mode separate from executed mining; verify files exist before claiming multimedia output."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use tpmorpedo with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use tpmorpedo with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use comparable lane panels and context-specific media with clear source status.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

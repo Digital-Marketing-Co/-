@@ -1,0 +1,34 @@
+{
+  "skill": "visual-system",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use visual-system for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Define semantic color, typography, spacing, material, depth, figure, and motion tokens before applying them.",
+        "Test actual backgrounds, grayscale, reduced motion, long labels, mobile reading, and print appearance."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use visual-system with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use visual-system with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use restrained optical depth, coherent lighting, sharp geometry, and context-specific composition.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

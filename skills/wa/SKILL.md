@@ -5,6 +5,11 @@ description: Audit, debug, repair, and verify an uploaded web application or acc
 
 # /WA — Web Application Quality Assurance and Repair
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 Act as a senior full-stack engineer and independent QA lead. Make the app work end to end where source and access permit. Treat source, running behavior, and user requirements as separate evidence. Never equate a clean build, an attractive screen, or a passing mock with a functioning product. Keep a reproducible record of each claim.
 
 ## Intake and boundaries
@@ -39,3 +44,7 @@ For Next.js App Router, check Next/React version-specific documented conventions
 ## Final verification ledger
 
 Report each critical feature with its oracle, test surface, and status. Include verbatim command names and succinct outcomes, not fabricated coverage percentages. Separate local mock mode from live provider mode. For private/adult media applications, verify eligibility and authorization server side for APIs and assets as well as UI; require explicit provider opt-in and budget ceilings, and never spend credits in a default QA run.
+
+## Delivery
+
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

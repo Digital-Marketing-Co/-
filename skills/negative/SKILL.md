@@ -1,18 +1,18 @@
 ---
 name: negative
 description: Maintain and enforce a persistent blocklist of banned AI-tell tokens, maker names, and skill-process leaks so they never appear in generated chat, PDFs, docs, slides, code comments, filenames, alt text, or figure captions. Trigger on /negative, /negative add, /negative list, /negative sweep, blocklist, banned words, or never use this word again. When a banned noun must be replaced, use atlas or gazette. Apply on every user-visible output after the list exists.
-metadata:
-  type: workflow
-  version: "3.1"
-  flag: /negative
-  always_apply: true
 ---
 
 # /negative
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 Persistent blocklist. After this skill exists, every user-visible string you emit must pass it. Do not wait for the user to type the flag on later turns.
 
-`<skill>` resolves with `interop/scripts/resolve_root.py negative` (live host: `/root/.grok/server-skills/negative`)
+`<skill>` resolves with `interop/scripts/resolve_root.py negative` (live host: `@negative`)
 
 ## Files
 
@@ -28,8 +28,8 @@ Every other skill must run this gate before any user-visible output. Do not wait
 3. The blocklist file itself may contain the tokens. User-quoted verbatim source may contain them. Chat that only manages the list may name a token once, in a fenced inventory, when adding or confirming it.
 4. On a hit, rewrite the whole sentence (not a mechanical one-for-one paste if that yields broken English). Use the replacement map. Figurative AI nouns (tapestry, landscape, realm, mosaic, symphony, kaleidoscope, labyrinth, treasure trove, focal point) swap to atlas or gazette. Verbs swap to plain English. The new sentence must still carry the same claim and must read cleaner than the draft.
 5. Re-scan. Repeat until `sweep_negative.py` prints CLEAN. Never delete a claim to hide a token. Never leave a blank where a word was.
-6. Before delivering a PDF or other binary, extract visible text and run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py <file-or-extracted-txt>`. Fail closed on hits.
-7. Then run `python3 /root/.grok/server-skills/negative/scripts/rewrite_negative.py --check <file>` only after the prose pass. The check does not invent new bans.
+6. Before delivering a PDF or other binary, extract visible text and run `python3 @negative/scripts/sweep_negative.py <file-or-extracted-txt>`. Fail closed on hits.
+7. Then run `python3 @negative/scripts/rewrite_negative.py --check <file>` only after the prose pass. The check does not invent new bans.
 
 ## Pre-output contract
 
@@ -64,10 +64,4 @@ If the user only asked to install or extend the skill, stop. Do not emit a sampl
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

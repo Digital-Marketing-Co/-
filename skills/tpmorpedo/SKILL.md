@@ -1,17 +1,20 @@
 ---
 name: tpmorpedo
-description: "Dual-mine two exhaustive public datasets (specified set plus all types or a filtered view) across statistics, stills, motion picture, and virtual holography, then emit an above-PhD dual-mining prompt and page-upgrade spec for public web apps. Trigger on /tpmorpedo, tp morpedo, dual dataset mine, exhaustive complete dataset pair, virtual holography data gather, or a request to procure all public data for dataset 1 and dataset 2."
-type: workflow
-lifecycle: active
+description: Dual-mine two exhaustive public datasets (specified set plus all types or a filtered view) across statistics, stills, motion picture, and virtual holography, then emit an above-PhD dual-mining prompt and page-upgrade spec for public web apps. Trigger on /tpmorpedo, tp morpedo, dual dataset mine, exhaustive complete dataset pair, virtual holography data gather, or a request to procure all public data for dataset 1 and dataset 2.
 ---
 
 # /tpmorpedo — dual exhaustive dataset procurement
+
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
 
 Turn the remainder after `/tpmorpedo` into two exhaustive public datasets and one copy-ready dual-mining prompt. Dataset #1 is the specified set. Dataset #2 is the exhaustive counterpart: all types, or the filtered view the user named. Both lanes collect known statistics, stills, motion-picture records, and virtual-holography planes. Public web-app pages that consume the pair are upgraded from that inventory.
 
 This skill writes the prompt always. It mines and writes page files only when the remainder asks to run, mine, build, or upgrade pages. If the user only asked to install this skill and supplied no subject, stop after the skill files exist.
 
-`<skill>` resolves with `interop/scripts/resolve_root.py tpmorpedo` (live host: `/root/.grok/server-skills/tpmorpedo`)
+`<skill>` resolves with `interop/scripts/resolve_root.py tpmorpedo` (live host: `@tpmorpedo`)
 
 Read on demand
 
@@ -21,8 +24,8 @@ Read on demand
 - `references/flag-grammar.md` — modes, filters, `#1` / `#2` split
 - `assets/record-skeleton.json` — one record shape for both lanes
 - `scripts/parse_tpmorpedo.py` — remainder parser
-- `/root/.grok/server-skills/negative/SKILL.md` before any user-visible emit
-- `/root/.grok/server-skills/negative/references/blocklist.md` before writing the filled prompt
+- `@negative/SKILL.md` before any user-visible emit
+- `@negative/references/blocklist.md` before writing the filled prompt
 
 ## When this skill runs
 
@@ -53,7 +56,7 @@ Full grammar is in `references/flag-grammar.md`.
 ### 1. Parse
 
 ```bash
-python3 /root/.grok/server-skills/tpmorpedo/scripts/parse_tpmorpedo.py \
+python3 @tpmorpedo/scripts/parse_tpmorpedo.py \
   --remainder "{{input}}"
 ```
 
@@ -97,7 +100,7 @@ Do not ship a route missing title, unique meta description, canonical, viewport,
 
 ### 6. Negative gate
 
-Read `/root/.grok/server-skills/negative/SKILL.md`. Sweep the filled prompt and any written files with `scripts/sweep_negative.py`. Rewrite hits. Re-scan until clean. Block delivery on leftover hits.
+Read `@negative/SKILL.md`. Sweep the filled prompt and any written files with `@negative/scripts/sweep_negative.py`. Rewrite hits. Re-scan until clean. Block delivery on leftover hits.
 
 ## Return to the user
 
@@ -125,10 +128,4 @@ If the user only asked to install or extend the skill, stop. Do not invent a sam
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

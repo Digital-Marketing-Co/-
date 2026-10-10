@@ -1,0 +1,34 @@
+{
+  "skill": "deep",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use deep for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Maintain a claim-to-source matrix, counterevidence log, source graph, research frontier, and reproducible retrieval ledger.",
+        "Require inspected source support and page locators; separate saturated branches from resource-limited branches."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use deep with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use deep with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Keep distinct all-section banners, compiled equations, readable notes, and full-opacity overrides.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

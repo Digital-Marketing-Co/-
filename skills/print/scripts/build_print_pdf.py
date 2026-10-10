@@ -10,6 +10,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from publication_notice import notice_for
+
 from PIL import Image as PILImage
 from reportlab.lib.colors import HexColor
 from reportlab.lib.enums import TA_JUSTIFY, TA_LEFT, TA_RIGHT
@@ -267,7 +269,6 @@ class PrintDoc(BaseDocTemplate):
     def __init__(self, out_path: str, meta: dict, year: int):
         self.meta = meta
         self.year = year
-        self._copyright_field_drawn = False
         super().__init__(
             out_path,
             pagesize=letter,
@@ -303,58 +304,8 @@ class PrintDoc(BaseDocTemplate):
         canvas.setFont(T.CHROME, T.FOOTER_PT)
         canvas.drawString(T.TEXT_INSET_IN * inch, y, T.OWNER_SHORT)
         canvas.drawRightString(letter[0] - T.TEXT_INSET_IN * inch, y, str(doc.page))
-        if not self._copyright_field_drawn:
-            self._draw_copyright_field(canvas)
-            self._attach_openaction_js(canvas)
-
-    def _draw_copyright_field(self, canvas: Canvas) -> None:
-        # Field lives on page 1 footer band so OpenAction has a target.
-        prefix = "© 2012–"
-        suffix = f"  {T.OWNER_SHORT}"
-        x = T.TEXT_INSET_IN * inch
-        y = 0.28 * inch
-        canvas.setFillColor(MUTED)
-        canvas.setFont(T.CHROME, T.FOOTER_PT)
-        # Only stamp the year field once (page 1). Later pages use owner + page.
-        if canvas.getPageNumber() != 1:
-            return
-        canvas.drawString(x, y, prefix)
-        year_x = x + pdfmetrics.stringWidth(prefix, T.CHROME, T.FOOTER_PT)
-        try:
-            canvas.acroForm.textfield(
-                name=T.COPYRIGHT_FIELD,
-                tooltip="Copyright end year (updates on open)",
-                x=year_x,
-                y=y - 2,
-                width=24,
-                height=11,
-                value=str(self.year),
-                fontName="Helvetica",
-                fontSize=7,
-                textColor=MUTED,
-                fillColor=CREAM,
-                borderWidth=0,
-                borderStyle="underlined",
-                forceBorder=False,
-                fieldFlags="readOnly",
-            )
-            self._copyright_field_drawn = True
-        except Exception:
-            canvas.drawString(year_x, y, str(self.year))
-            self._copyright_field_drawn = True
-        canvas.drawString(year_x + 22, y, suffix)
-
-    def _attach_openaction_js(self, canvas: Canvas) -> None:
-        try:
-            from reportlab.pdfbase.pdfdoc import PDFDictionary, PDFName, PDFString
-
-            action = PDFDictionary()
-            action["Type"] = PDFName("Action")
-            action["S"] = PDFName("JavaScript")
-            action["JS"] = PDFString(OPEN_JS)
-            canvas._doc.Catalog.OpenAction = action
-        except Exception:
-            pass
+        canvas.setFont(T.CHROME, 7)
+        canvas.drawCentredString(letter[0] / 2, 0.22 * inch, notice_for(self.meta))
 
 
 def fitted_height(path: Path, page_w: float, max_h: float) -> float:
@@ -439,7 +390,6 @@ def build_story(data: dict, work: Path) -> list:
     slug = data.get("slug") or slugify_title(data.get("title") or "print")
     record = f"{href.rstrip('/')}/print/{slug}"
     colo = (
-        f"© 2012–{year}  {escape(T.OWNER_LEGAL)}. "
         f'Reprint of {escape(data.get("source_url") or "")}. '
         f'Placeholder house backlink: <link href="{href}">{escape(anchor)}</link> '
         f'({escape(T.HOUSE_DOMAIN)}). Record path {escape(record)}.'
@@ -489,11 +439,6 @@ def finalize_pdf(pdf_path: Path, data: dict, year: int) -> None:
     except Exception:
         writer.append(reader)
     root = writer.root_object
-    if root.get("/OpenAction") is None:
-        try:
-            writer.add_js(OPEN_JS)
-        except Exception:
-            pass
     href = (data.get("house") or {}).get("href") or T.HOUSE_HREF
     title = data.get("title") or "Print"
     try:

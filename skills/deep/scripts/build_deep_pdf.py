@@ -9,6 +9,8 @@ import re
 import sys
 from pathlib import Path
 
+from publication_notice import notice_for
+
 from PIL import Image as PILImage
 from reportlab.lib.colors import HexColor, Color
 from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY, TA_LEFT
@@ -175,6 +177,24 @@ class CitedParagraph(Paragraph):
     def __init__(self, text, style, cited=None, **kwargs):
         super().__init__(text, style, **kwargs)
         self.cited = list(cited or [])
+
+    def split(self, availWidth, availHeight):
+        pieces = super().split(availWidth, availHeight)
+
+        def superscripts(fragments):
+            for fragment in fragments:
+                if isinstance(fragment, tuple) and len(fragment) == 2 and hasattr(fragment[0], "rise"):
+                    if fragment[0].rise > 0:
+                        yield str(fragment[1])
+                elif isinstance(fragment, (list, tuple)):
+                    yield from superscripts(fragment)
+                elif getattr(fragment, "rise", 0) > 0:
+                    yield str(getattr(fragment, "text", ""))
+
+        for piece in pieces:
+            numbers = {int(n) for text in superscripts(piece.frags) for n in re.findall(r"\b\d+\b", text)}
+            piece.cited = [n for n in self.cited if n in numbers]
+        return pieces
 
 
 def make_styles() -> dict[str, ParagraphStyle]:
@@ -455,7 +475,7 @@ class DeepDoc(BaseDocTemplate):
         canvas.drawCentredString(
             letter[0] / 2.0,
             0.22 * inch,
-            "Copyright \u00a9 2012\u20132026 Web Development Corporation. All rights reserved.",
+            self.copyright_notice,
         )
         canvas.restoreState()
 
@@ -560,6 +580,8 @@ def flow_equation(eq: dict, json_dir: Path, styles: dict):
             w, h = im.size
             scale = min(max_w / w, max_h / h)
             bits.append(Image(str(path), width=w * scale, height=h * scale))
+    elif eq.get("unicode"):
+        bits.append(Paragraph(allow_markup(eq["unicode"]), styles["body"]))
     cap = eq.get("caption") or ""
     if cap:
         bits.append(Paragraph(xml_escape(cap), styles["caption"]))
@@ -580,7 +602,7 @@ def flow_equation(eq: dict, json_dir: Path, styles: dict):
                 Paragraph(xml_escape(str(row.get("explanation") or "")), styles["itqe_cell"]),
             ])
         max_w = 6.55 * inch
-        table = Table(data, colWidths=[max_w * x for x in (0.16, 0.22, 0.18, 0.44)], hAlign="LEFT")
+        table = Table(data, colWidths=[max_w * x for x in (0.16, 0.22, 0.18, 0.44)], hAlign="LEFT", repeatRows=1)
         table.setStyle(TableStyle([
             ("BACKGROUND", (0, 0), (-1, 0), HexColor("#EFEAE2")),
             ("VALIGN", (0, 0), (-1, -1), "TOP"),
@@ -613,7 +635,7 @@ def flow_equation(eq: dict, json_dir: Path, styles: dict):
                 Paragraph(xml_escape(str(item.get("operators") or "none on this figure")), styles["itqe_cell"]),
             ])
         max_w = 6.55 * inch
-        gtable = Table(gdata, colWidths=[max_w * x for x in (0.14, 0.24, 0.32, 0.30)], hAlign="LEFT")
+        gtable = Table(gdata, colWidths=[max_w * x for x in (0.14, 0.24, 0.32, 0.30)], hAlign="LEFT", repeatRows=1)
         gtable.setStyle(TableStyle([
             ("BACKGROUND", (0, 0), (-1, 0), HexColor("#EFEAE2")),
             ("VALIGN", (0, 0), (-1, -1), "TOP"),
@@ -648,6 +670,7 @@ def build(data: dict, json_dir: Path, out_path: Path) -> None:
         title=data["title"],
         author=data["author"],
     )
+    doc.copyright_notice = notice_for(data)
     href = house["href"]
     anchor = house["anchor"]
     wdc_href = house.get("wdc_href") or "https://WebDevelopment.tv"
@@ -669,8 +692,8 @@ def build(data: dict, json_dir: Path, out_path: Path) -> None:
     story.append(Spacer(1, 0.35 * inch))
     story.append(
         Paragraph(
-            "Sourced Chicago notes-bibliography monograph. Section stills are generated "
-            "illustrations with one-inch alpha fades, not contemporaneous photographs.",
+            "Sourced notes-bibliography monograph with house citation order. "
+            "Generated illustrations are identified separately from documentary evidence.",
             styles["abstract"],
         )
     )
@@ -712,11 +735,15 @@ def build(data: dict, json_dir: Path, out_path: Path) -> None:
                 story.append(Paragraph(allow_markup(entry), styles["bib"]))
             continue
 
-        story.append(Paragraph(xml_escape(title), styles["h1"]))
-        story.append(HRFlowable(width="100%", thickness=0.4, color=RULE, spaceBefore=0, spaceAfter=8))
+        heading = Paragraph(xml_escape(title), styles["h1"])
+        rule = HRFlowable(width="100%", thickness=0.4, color=RULE, spaceBefore=0, spaceAfter=8)
         block = banner_block(sec, json_dir, styles)
         if block:
-            story.append(block)
+            story.append(KeepTogether([heading, rule, block]))
+        else:
+            heading.keepWithNext = 1
+            rule.keepWithNext = 1
+            story.extend([heading, rule])
         paras = sec.get("paragraphs") or []
         string_i = 0
         for para in paras:

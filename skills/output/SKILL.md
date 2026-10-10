@@ -5,6 +5,11 @@ description: Re-present requested files from this conversation or the user's Lib
 
 # Output
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 Use the words after `/output` to identify the requested existing deliverable or deliverables. If the user does not name one, use the most recent deliverables in the active task. Resolve ambiguous names against the conversation and Library; do not guess a file identity when several plausible files remain.
 
 1. Locate the existing file. Use its known absolute path when still available. For a Library item, resolve its current version and materialize it only if the file is not already accessible locally. Preserve the existing Library identity and filename.
@@ -14,3 +19,7 @@ Use the words after `/output` to identify the requested existing deliverable or 
 5. Keep the response short. State any missing file or incomplete conversion plainly. Do not imply that a sandbox link itself saves a file to Library.
 
 Never substitute a similarly titled draft without checking the requested version. Respect user access to private files and do not expose a file outside the user's requested scope.
+
+## Delivery
+
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

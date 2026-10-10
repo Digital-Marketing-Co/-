@@ -1,0 +1,34 @@
+{
+  "skill": "brkdwn",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use brkdwn for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Compose dependencies in one acyclic run plan and preserve the original subject through every research and rendering pass.",
+        "Check that every invoked dependency ran or has an explicit blocker; verify units and evidence at joins."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use brkdwn with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use brkdwn with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use section-specific explanatory figures with a consistent scholarly visual system.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

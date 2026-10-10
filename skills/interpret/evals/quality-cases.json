@@ -1,0 +1,34 @@
+{
+  "skill": "interpret",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use interpret for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Record every glyph, equation region, alternative reading, symbol definition, unit, and surrounding assumption.",
+        "Compare OCR against the image; mark ambiguous symbols and verify dimensional consistency."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use interpret with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use interpret with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use compiled notation plates with spatial callouts and readable element tables.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

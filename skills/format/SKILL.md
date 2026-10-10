@@ -1,18 +1,18 @@
 ---
 name: format
 description: Reformat quoted text after the /format flag into Proper Case, UPPERCASE, lowercase, or Small Caps using case-insensitive acronyms PC, UC, AC, LC, and SC. Use when the user types /format, asks for Proper Case email subjects, All Caps, lowercase, or small-caps restyling of a quoted string.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /format
-  updatable: true
 ---
 
 # /format
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 Take the quoted string after `/format` and rewrite only its letters into the case the acronym names. Do not invent text. Do not edit unquoted instructions.
 
-`<skill>` resolves with `interop/scripts/resolve_root.py format` (live host: `/root/.grok/server-skills/format`)
+`<skill>` resolves with `interop/scripts/resolve_root.py format` (live host: `@format`)
 
 If the user only asked to create or revise this skill and supplied no quoted payload, stop after the skill files exist. Do not invent a subject line.
 
@@ -46,7 +46,7 @@ Several quoted spans in one prompt are several jobs. Run each span through the s
 Always run the locked script. Do not hand-case the letters.
 
 ```bash
-python3 /root/.grok/server-skills/format/scripts/format_case.py --mode MODE --json -- "PAYLOAD"
+python3 @format/scripts/format_case.py --mode MODE --json -- "PAYLOAD"
 ```
 
 `MODE` is the raw alias the user typed (`PC`, `All Caps`, `sc`, …). The script normalizes it.
@@ -80,10 +80,4 @@ Do not emit a PDF, banner, or monograph for a `/format` request alone.
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

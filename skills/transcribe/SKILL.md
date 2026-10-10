@@ -1,16 +1,14 @@
 ---
 name: transcribe
 description: Transcribe attached or referenced data into a locked raw verbatim text, then write a summary that is expanded twice into a research-ready manuscript and compiled through folio, images, banner, and book. Trigger on /transcribe, raw transcript, plaque or citation OCR, letter dump, framed-document readout, or expand this source into a WCA Folio illustrated book.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /transcribe
-  owner: Web Development Corporation
-  stacks: negative, folio, images, banner, book, copyright, latex, itqe, wca-ivy-biblio, visual-system
-  visual_stack: visual-system
 ---
 
 # /transcribe
+
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
 
 Lock one source. Dump it as raw text. Summarize it. Expand that summary. Expand it again until it is a manuscript. Then compile one letter-size illustrated book through `/folio`, `/images`, `/banner`, and `/book`.
 
@@ -18,7 +16,7 @@ Do not rewrite the raw layer. Do not invent glyphs the source does not support. 
 
 Work in `/workspace/artifacts/transcribe-<slug>/`.
 
-Skill root is `/root/.grok/server-skills/transcribe`.
+Skill root is `@transcribe`.
 
 Read on demand
 
@@ -30,7 +28,7 @@ Read on demand
 - `scripts/init_workdir.py` — folder, lock copy, empty transcript.json
 - `scripts/qa_transcript.py` — fail closed if raw was edited after lock
 
-Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
+Documents this skill emits follow `@visual-system/SKILL.md`.
 Pick a genre palette with the visual-system picker. Paint covers, banners, rules, table headers, and figure frames. Do not change folio or book locked body fonts or point sizes. Banner and plate prompts append the volumetric clause in `visual-system/references/depth.md`.
 
 If the user only asked to create or revise this skill and supplied no source, stop after the skill files exist. Do not invent a document or a book.
@@ -151,26 +149,10 @@ Chat deliverable order
 
 Do not dump builder JSON into chat.
 
-## Publication bar
+## Publication checks
 
-This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
-
-1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
-2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
-3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
-4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
-5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
-6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
-7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
-8. Headings keep with the next paragraph. Orphan headings move to the next page.
-9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
+Apply `interop/SKILL.md` once after the task-specific checks. Its shared rules yield to this skill's explicit format and source-fidelity requirements.
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

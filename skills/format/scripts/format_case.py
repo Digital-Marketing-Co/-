@@ -181,7 +181,7 @@ def self_test() -> int:
         ("ac", "Hello World", "HELLO WORLD"),
         ("lc", "Hello World", "hello world"),
         ("sc", "Hello", "Hᴇʟʟᴏ"),
-        ("sc", "Digital Marketing Company", "Dɪɢɪᴛᴀʟ Mᴀʀᴋᴇᴛɪɴɢ Cᴏᴍᴘᴀɴʏ."),
+        ("sc", "Digital Marketing Company", "Dɪɢɪᴛᴀʟ Mᴀʀᴋᴇᴛɪɴɢ Cᴏᴍᴘᴀɴʏ"),
         ("ProperCase", "a b", "A B"),
         ("ALL CAPS", "mix", "MIX"),
         ("small caps", "Qa", "Qᴀ"),

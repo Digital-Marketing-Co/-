@@ -1,0 +1,8 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/interpret",
+  "stacks": "itqe, latex, iterate, deep, folio, wca-ivy-biblio, copyright, banner, visual-system",
+  "owner": "Web Development Corporation",
+  "visual_stack": "visual-system"
+}

@@ -5,11 +5,16 @@ description: Produce a doctoral research monograph from a topic or text blob usi
 
 # /deep
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 
 ## Visual stack
 
 Documents this skill emits follow `@visual-system/SKILL.md`.
-Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
+Pick a genre palette with `@visual-system/scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
 Turn one topic into a letter-size Chicago notes-bibliography PDF. Research walks a source graph, not a flat reading list. Type is frozen Georgia at the locked double scale. Every printed section and subsection of every type gets its own unique banner.
 
 Work in `./artifacts/<slug>/`. Final PDF is `./artifacts/<Title_Slug>.pdf`.
@@ -180,3 +185,7 @@ Resolve `@skill-name/path` by finding the installed personal skill whose SKILL.m
 ## Canonical repository and portability
 
 Before future use, read the current Digital-Marketing-Co/- main revision and its sync contract, policy, and ledger. Merge verified improvements without discarding repository-only assets or newer renderer code. Preserve the image print contract: native source aspect ratio, page-width placement, zero side inset, no stretching. Generate banners at 16:9; do not distort non-banner figures into that ratio. Use interop publication checks when installed, resolving paths for the actual host rather than assuming Grok paths. Deliverables follow this skill's stricter citation, compiled-math, all-section coverage, and canonical copyright gates.
+
+## Delivery
+
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

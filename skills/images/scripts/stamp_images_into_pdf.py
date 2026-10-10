@@ -59,10 +59,14 @@ def still_page(png: Path, href: str = "") -> bytes:
     return buf.getvalue()
 
 
-def stamp(manifest_path: Path) -> Path:
+def stamp(manifest_path: Path, output_path: Path | None = None) -> Path:
     spec = json.loads(manifest_path.read_text(encoding="utf-8"))
-    src = Path(spec["source_pdf"]).expanduser().resolve()
-    out = Path(spec["output_pdf"]).expanduser().resolve()
+    def resolve(raw: str | Path) -> Path:
+        path = Path(raw).expanduser()
+        return (path if path.is_absolute() else manifest_path.parent / path).resolve()
+
+    src = resolve(spec["source_pdf"])
+    out = output_path.expanduser().resolve() if output_path else resolve(spec["output_pdf"])
     items = spec.get("items") or []
     if not src.is_file():
         raise FileNotFoundError(src)
@@ -99,8 +103,9 @@ def stamp(manifest_path: Path) -> Path:
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("manifest")
+    p.add_argument("--out", type=Path)
     args = p.parse_args()
-    stamp(Path(args.manifest))
+    stamp(Path(args.manifest), args.out)
 
 
 if __name__ == "__main__":

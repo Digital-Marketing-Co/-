@@ -1,18 +1,18 @@
 ---
 name: hilarious
 description: After /hilarious, take every following word as the subject and write a hilarious short story about it using the locked generative model from The Science of Humor and the Architecture of the Funny. Trigger on /hilarious, hilarious story about, make this hilarious, or a request to comic-rewrite the remainder of the prompt. Does not invent a subject when the flag is empty. Does not punch down at a named living person as the target.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /hilarious
-  source: references/science-of-humor.pdf
 ---
 
 # /hilarious
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 After the skill flag fires, treat the remainder of the user message as the subject. Write one hilarious story about that subject by running the locked generative model from the house monograph, not by free-associating punch lines.
 
-Skill path is `/root/.grok/server-skills/hilarious`.
+Skill path is `@hilarious`.
 
 If the user only asked to create or revise this skill and supplied no subject, stop after the skill files exist. Do not invent a sample story.
 
@@ -127,10 +127,4 @@ Do not attach a Chicago bibliography unless another academic skill was stacked.
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

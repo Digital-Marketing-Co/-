@@ -1,21 +1,20 @@
 ---
 name: bleed
-description: "Print a webpage as a PDF of full-bleed snippet images with zero margin on every image and banner, site chrome removed, and no image or heading split. Use when the user types /bleed, asks for a full-bleed page print, or wants a site reprinted as images with no header, nav, sidebar, floating button, or footer."
-type: workflow
-lifecycle: active
-metadata:
-  version: "1.0"
-  flag: /bleed
-  owner: Web Development Corporation
+description: Print a webpage as a PDF of full-bleed snippet images with zero margin on every image and banner, site chrome removed, and no image or heading split. Use when the user types /bleed, asks for a full-bleed page print, or wants a site reprinted as images with no header, nav, sidebar, floating button, or footer.
 ---
 
 # /bleed — Full-bleed snippet print
+
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
 
 Print a URL as a PDF of painted page snippets. Each snippet is an image of the remaining content and the background under it. Images and banners sit at zero margin on the top, right, bottom, and left. Site header, navigation, sidebar, floating button, and footer are removed. The PDF draws none of those either.
 
 Use this skill when the user types `/bleed`, asks for a full-bleed webpage print, or wants the page reprinted as images without cutting a figure or leaving a section heading above a page break.
 
-`<skill>` resolves with `interop/scripts/resolve_root.py bleed` (live host: `/root/.grok/server-skills/bleed`).
+`<skill>` resolves with `interop/scripts/resolve_root.py bleed` (live host: `@bleed`).
 
 Work in `/workspace/artifacts/<slug>/`. Final PDF is `/workspace/artifacts/<YYYY-topic-slug-wca-bleed.pdf>`.
 
@@ -83,37 +82,27 @@ Revise in place. Do not create bleed-v2/.
 
 1. Edit SKILL.md, references/, or scripts/ at this path.
 2. Bump metadata.version.
-3. Run `python3 /usr/share/grok/bundled-skills/bundled__postmortem/scripts/validate-skill.py /root/.grok/server-skills/bleed`.
+3. Run `python3 /usr/share/grok/bundled-skills/bundled__postmortem/scripts/validate-skill.py @bleed`.
 
 ## Render gate
 
 Before delivering a PDF that may contain notation, run the house render gate. Chat may use KaTeX. Files must show compiled glyphs or a compiled figure.
 
 ```bash
-python3 /root/.grok/server-skills/itqe/scripts/scan_render_gate.py \
+python3 @itqe/scripts/scan_render_gate.py \
   /workspace/artifacts/<slug> \
   --also-pdf /workspace/artifacts/<file>.pdf
-python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
+python3 @latex/scripts/scan_raw_tex.py \
   /workspace/artifacts/<slug> \
   --also-pdf /workspace/artifacts/<file>.pdf --pages
 ```
 
-Exit code 1 blocks delivery. See `/root/.grok/server-skills/latex/SKILL.md`.
+Exit code 1 blocks delivery. See `@latex/SKILL.md`.
 
-## Publication bar
+## Publication checks
 
-Fail closed on `interop/references/publication-bar.md`, with these overrides:
-
-- Snippet pages have no alpha ramp and no running footer.
-- Visible link text is Digital Marketing Company only if a link is drawn. This skill does not draw one by default.
-- Plain domain text, when written, is DigitalMarketingCo.org.
+Apply `interop/SKILL.md` once after the task-specific checks. Its shared rules yield to this skill's explicit format and source-fidelity requirements.
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

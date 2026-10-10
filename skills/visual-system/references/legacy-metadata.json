@@ -1,0 +1,7 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/visual-system",
+  "owner": "Web Development Corporation",
+  "always_apply_on_documents": true
+}

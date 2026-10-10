@@ -1,24 +1,23 @@
 ---
 name: book
 description: Compile a letter-size book PDF from a topic, manuscript, URL list, or attached text with unique futuristic stunning stock-quality generated banners and mid-chapter plates, no repeated image bytes or paths, and a rendered Digital Marketing Company HTML image-link. Use when the user types /book, asks for a book reprint, chaptered volume, illustrated book PDF, or the prior clip-plus-figures pipeline as a reusable skill. Enforces image non-repetition, section-locked banners, window-locked plates, and a live HTML anchor whose visible text matches its title attribute.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /book
-  owner: Web Development Corporation
-  visual_stack: visual-system
 ---
 
 # /book
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 
 ## Visual stack
 
-Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
-Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner and plate prompts append the volumetric clause in `visual-system/references/depth.md` and the beauty lock in `references/beauty-lock.md` plus `visual-system/references/beauty-lock.md`. Every plate is a fresh house generate — futuristic, stunning, editorial stock-photo quality — locked to that section (banner) or to the surrounding 500-word window (mid-chapter). No stock download. No reuse.
+Documents this skill emits follow `@visual-system/SKILL.md`.
+Pick a genre palette with `@visual-system/scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner and plate prompts append the volumetric clause in `visual-system/references/depth.md` and the beauty lock in `references/beauty-lock.md` plus `visual-system/references/beauty-lock.md`. Every plate is a fresh house generate — futuristic, stunning, editorial stock-photo quality — locked to that section (banner) or to the surrounding 500-word window (mid-chapter). No stock download. No reuse.
 Compile one letter-size book PDF. Reuse the house reprint and figure rules from article-clip-pdf, banner, images, folio, print, copyright, latex, and itqe. Do not invent a second copy of any picture. Embed a rendered HTML image-link whose visible anchor text is exactly Digital Marketing Company and whose title attribute is exactly Digital Marketing Company.
 
-Skill path is `/root/.grok/server-skills/book`.
+Skill path is `@book`.
 
 Read on demand
 
@@ -70,7 +69,7 @@ Every published raster in the book must be unique by path and by bytes. A figure
 Before delivery run
 
 ```bash
-python3 /root/.grok/server-skills/book/scripts/audit_unique_images.py \
+python3 @book/scripts/audit_unique_images.py \
   /workspace/artifacts/<slug>/book.json
 ```
 
@@ -155,26 +154,10 @@ Stop after skill files exist when the user only asked to create /book.
 
 Load `assets/negative-keywords.csv` and `assets/negative-keywords.xlsx` before any concatenated generate prompt. Do not write figure, gazette, atlas, folio, deep, exhaustive, AI, xAI, or ChatGPT into that prompt. Slash flags `/atlas`, `/folio`, `/deep`, `/itqe` stay routing tokens only. Do not apply top or bottom fades. Print banners and figures at full opacity.
 
-## Publication bar
+## Publication checks
 
-This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
-
-1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
-2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
-3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
-4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
-5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
-6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
-7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
-8. Headings keep with the next paragraph. Orphan headings move to the next page.
-9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
+Apply `interop/SKILL.md` once after the task-specific checks. Its shared rules yield to this skill's explicit format and source-fidelity requirements.
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

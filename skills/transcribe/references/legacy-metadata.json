@@ -1,0 +1,8 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/transcribe",
+  "owner": "Web Development Corporation",
+  "stacks": "negative, folio, images, banner, book, copyright, latex, itqe, wca-ivy-biblio, visual-system",
+  "visual_stack": "visual-system"
+}

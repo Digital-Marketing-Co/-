@@ -1,0 +1,34 @@
+{
+  "skill": "pdf",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use pdf for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Preserve selectable text, vector math, image provenance, stable metadata, and a verified rendering pipeline.",
+        "Check page geometry, annotations, embedded fonts, text extraction, overflow, and opening in available viewers."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use pdf with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use pdf with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use layered covers and readable content panels; keep a white print view where appropriate.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

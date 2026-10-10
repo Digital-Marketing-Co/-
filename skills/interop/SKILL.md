@@ -1,89 +1,37 @@
 ---
 name: interop
-description: Shared delivery contract for every skill in this tree. Use when any skill emits a document, deck, page, image set, caption, or filename, or when skills must resolve paths, stack visual-system, latex, itqe, and negative, and stay compatible across hosts.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /interop
-  owner: Web Development Corporation
-  always_apply_on_documents: true
+description: Resolve skill dependencies and coordinate shared evidence, visual, mathematical, copyright, and delivery checks across repository and installed skill trees. Use when composing skills or delivering their artifacts.
 ---
 
-# /interop
+# Shared skill contract
 
-One contract for every skill under Digital-Marketing-Co/- and the live skill tree. Skills do not each invent a second gate, a second path, or a second house link.
+Read [the quality profile](references/quality-profile.md) before execution. Regression scenarios live in `evals/quality-cases.json`; they are criteria, not executed results.
 
-`<skill>` for this file resolves with `scripts/resolve_root.py interop`.
+## Resolve one reviewed revision
 
-## Path resolver
+Run this checkout's `scripts/resolve_root.py NAME`. It prefers adjacent canonical skill directories, then configured and installed roots, matching frontmatter identity even when the installed directory has a generated identifier. Set `SKILL_ROOT` or pass `--root` to select an explicit verified tree. Do not mix dependencies from different revisions. Reject invalid names, ambiguous identities, and missing dependencies. Resolve legacy command paths before running them.
 
-Run before any script path is trusted.
+Use `scripts/resolve_artifacts.py` for writable staging; `--path` or `SKILL_ARTIFACTS_DIR` controls its destination. Follow the host's persistence workflow for final artifacts. A staging path or preview link is not proof of successful persistent saving.
 
-```bash
-python3 /root/.grok/server-skills/interop/scripts/resolve_root.py <name>
-python3 /root/.grok/server-skills/interop/scripts/resolve_artifacts.py
-```
+## Composition and precedence
 
-If that path is missing, try `/home/workdir/.grok/skills/interop/scripts/resolve_root.py`.
+Apply user instructions and platform rules first, then the calling skill's explicit format and fidelity requirements, then shared defaults. Honor deep's all-section full-opacity banners, transparent product imagery, no-shadow requests, raw transcription, and archive fidelity. Do not force visual decoration onto code, audio, link shortening, or simple file retrieval.
 
-Order for a skill directory:
+Keep the calling procedure, visual design, substantive mathematics, quantitative element tables, paginated copyright, and final delivery checks in that order. Detect recursive dependencies and run each shared gate once. Read `references/evidence-method.md` for research and `visual-system/references/quality-design.md` for visual outputs. Use genuine math rendering for substantive equations; preserve legitimate code syntax, paths, URLs, and unit strings.
 
-1. `/root/.grok/server-skills/<name>`
-2. `/home/workdir/.grok/skills/<name>`
-3. `skills/<name>` in a checkout of Digital-Marketing-Co/-
+## Canonical identity and footer
 
-Order for deliverables:
+The house domain is DigitalMarketingCo.org. Preserve the requested brand label and existing verified target. The sole notice owner and year logic live in `copyright/SKILL.md` and `copyright/scripts/notice.py`. Other skills import or render that output; they do not maintain competing legal text. Inspect one notice per page, clickable labels, and original body preservation. A viewer-dependent year update requires a readable build-time fallback and explicit viewer limitations.
 
-1. `/workspace/artifacts`
-2. `/home/workdir/artifacts`
+Do not overwrite bundled host docx, pdf, xlsx, pptx, or ffmpeg skills. The custom repository pdf guidance can be read without replacing the host tool.
 
-Write the finished file in the resolved artifacts directory. Do not write `Title_Slug.pdf` or `FINAL.pdf` unless the calling skill locks a different stem.
+## Single delivery gate
 
-## Stack order
-
-When the output is a file a reader will open:
-
-1. Calling skill procedure
-2. `visual-system` for covers, rules, table headers, figure frames, and banner prompts
-3. `latex` and `itqe` when the file has formulas or quantitative claims
-4. `copyright` when the file is paginated
-5. `negative` once, last
-
-Do not overwrite bundled host skills docx, pdf, xlsx, pptx, or ffmpeg. Read the repository copy of pdf only as a reference.
-
-## Identity
-
-- Visible link text is Digital Marketing Company.
-- The title attribute is Digital Marketing Company. Visible text and title match.
-- Target is https://digitalmarketingco.org.
-- Plain domain text is DigitalMarketingCo.org.
-- Legal owner is Web Development Corporation, a Delaware corporation founded in 2012.
-- Do not nest an HTML anchor inside an instruction sentence. Real anchors belong only in rendered HTML, PDF link annotations, and colophon marks.
-
-## Publication bar
-
-Body face and point size stay the calling skill's lock. Color and depth live in covers, banners, rules, table headers, and figure frames.
-
-- Banners are 16:9, full-bleed, unique per section. Left and right touch the trim. Top and bottom carry a real alpha ramp so the page paper shows through. No second geometry.
-- Plates are literal and context-locked. One generate, one path. No repeated bytes, prompts, or perceptual hashes. Reject soft, muddy, toy-like, collage, or clip-art stills and regenerate up to three times.
-- Equations are compiled plates or supported Unicode in a Times or Liberation family. No raw TeX, no missing-glyph boxes, no tofu.
-- One copyright notice per page, centered in the footer. Do not stamp a second notice on the cover or in the body.
-- Headings keep with the next paragraph. An orphan heading moves to the next page.
-- Chicago notes-bibliography, first appearance, page-local footnotes, for folio, deep, atlas, corpus, psychoanalyze, and wca-ivy-biblio.
-- Open the finished file. Confirm the house link, the single footer, and clean glyphs before delivery.
-
-Read `references/publication-bar.md` for the fail-closed checklist.
-
-## Delivery
-
-Last step of every skill, once.
-
-1. Resolve `negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+1. Finish task-specific checks; open and inspect the actual final output. Check text, images, equations, notes, links, page geometry, and applicable accessibility requirements.
+2. Resolve `negative`; scan generated visible prose, captions, filenames, and alt text once. Preserve verified quotations, technical identifiers, executable source, source URLs, and actual proper names when changing them would falsify information. Report wording conflicts rather than corrupting data.
+3. Correct generated prose hits and repeat the scan. A failed or unrun required check must be reported. Do not label untested flows passed.
+4. Save using the host workflow, verify availability, and provide the final file or revision link with remaining limits. Never claim a GitHub push installed a skill on another host.
 
 ## After a skill edit
 
-Commit the skill directory to Digital-Marketing-Co/- main and prepend a row in `skills/ledger/latest.md`.
+Preserve complete directories, validate changed behavior, record the base revision and per-skill provenance, commit, and update GitHub with a checked branch head. Update editable installations separately and verify their saved revision. Report independent repository and installation results.

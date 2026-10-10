@@ -1,0 +1,34 @@
+{
+  "skill": "generate",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use generate for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Rank prompt types using declared criteria; include inputs, outputs, tools, resource bounds, and acceptance evidence.",
+        "Check that prompts are executable with available capabilities and cannot claim files or deployments without proof."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use generate with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use generate with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use clear prompt cards and visual hierarchy only when delivering a requested catalogue.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

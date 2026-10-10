@@ -177,9 +177,8 @@ def pack(tree: Path, dest: Path, container: str, profile: str) -> Path:
         return Path(str(dest))
     if container == "7z" and which("7z"):
         mx = "9" if profile == "maximum" else "7"
-        run(["7z", "a", f"-mx={mx}", str(dest), "."], timeout=300)
-        # 7z packs cwd; run from tree
-        run(["7z", "a", f"-mx={mx}", str(dest), str(tree)], timeout=300)
+        result = subprocess.run(["7z", "a", f"-mx={mx}", str(dest.resolve()), "."],
+                                cwd=tree, capture_output=True, timeout=300, check=True)
         return dest
     if container == "tar.zst" and which("tar") and which("zstd"):
         run(["tar", "--zstd", "-cf", str(dest), "-C", str(tree), "."], timeout=300)
@@ -204,8 +203,7 @@ def main() -> int:
         print(f"missing input {src}", file=sys.stderr)
         return 2
 
-    stamp = time.strftime("%Y%m%d-%H%M%S")
-    work = Path("/tmp") / f"compress-{stamp}"
+    work = Path(tempfile.mkdtemp(prefix="compress-"))
     originals = work / "input-originals"
     working = work / "working"
     out_tree = Path(args.out)

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from datetime import date
@@ -23,6 +24,16 @@ from pypdf.generic import (
 )
 from reportlab.lib.colors import Color, HexColor
 from reportlab.pdfgen import canvas as rl_canvas
+from reportlab.pdfbase.pdfmetrics import stringWidth
+
+try:
+    from notice import notice_text as canonical_notice
+except ImportError:
+    import importlib.util
+    _spec = importlib.util.spec_from_file_location('canonical_notice', Path(__file__).with_name('notice.py'))
+    _notice_module = importlib.util.module_from_spec(_spec)
+    _spec.loader.exec_module(_notice_module)
+    canonical_notice = _notice_module.notice_text
 
 FIELD_NAME = "WCACopyrightYear"
 DEFAULT_OWNER = "Web Development Corporation"
@@ -49,7 +60,8 @@ def remove_prior_notices(src: Path) -> bytes:
                 for line in block.get("lines", []):
                     spans = line.get("spans", [])
                     line_text = "".join(span["text"] for span in spans).strip()
-                    if NOTICE_LINE.fullmatch(line_text):
+                    footer_label = line_text in ('Digital Marketing Co.', 'Digital Marketing Company', 'Web Development, Inc.') and line.get('bbox', (0,0,0,0))[1] >= page.rect.height-BAND_H
+                    if NOTICE_LINE.fullmatch(line_text) or footer_label:
                         rect = fitz.Rect(spans[0]["bbox"])
                         for span in spans[1:]:
                             rect |= fitz.Rect(span["bbox"])
@@ -57,6 +69,9 @@ def remove_prior_notices(src: Path) -> bytes:
                         found += 1
             if found:
                 page.apply_redactions(images=0, graphics=0, text=0)
+            for link in page.get_links():
+                if link.get('from') and link['from'].y0 >= page.rect.height-BAND_H:
+                    page.delete_link(link)
         return doc.tobytes(garbage=4, deflate=True)
     finally:
         doc.close()
@@ -85,18 +100,18 @@ def en_dash_range(start: int, year: int) -> str:
 
 
 def notice_text(start: int, year: int, owner: str) -> str:
-    return f"Copyright \u00a9 {en_dash_range(start, year)} {owner}. All rights reserved."
+    return canonical_notice(start, year, owner)
 
 
 def open_js(start: int, owner: str) -> str:
-    owner_js = owner.replace("\\", "\\\\").replace('"', '\\"')
+    owner_js = json.dumps(owner, ensure_ascii=True)
     return (
         f"var start = {int(start)};"
         "var y = (new Date()).getFullYear();"
         'var range = (y > start) ? (String(start) + "\\u2013" + String(y)) : String(start);'
         "try {"
         f" var f = this.getField('{FIELD_NAME}');"
-        f' if (f) f.value = "Copyright \\u00a9 " + range + " {owner_js}. All rights reserved.";'
+        f' if (f) f.value = "\\u00a9 " + range + " " + {owner_js} + ". All rights reserved.";'
         "} catch (e) {}"
     )
 
@@ -122,6 +137,20 @@ def cover_and_paint(width: float, height: float, text: str) -> bytes:
     c = rl_canvas.Canvas(buf, pagesize=(width, height))
     c.setFillColor(CREAM)
     c.rect(0, 0, width, BAND_H, fill=1, stroke=0)
+    c.setFillColor(MUTED)
+    c.setFont('Helvetica', 7)
+    labels = [('Digital Marketing Co.', 'https://DigitalMarketingCo.org', width/6),
+              ('Web Development, Inc.', 'https://WebDevelopment.tv', width/2)]
+    for label, href, center in labels:
+        extent = stringWidth(label, 'Helvetica', 7)
+        c.drawCentredString(center, 7, label)
+        c.linkURL(href, (center-extent/2, 5, center+extent/2, 15), relative=0)
+    if DEFAULT_OWNER in text:
+        # Upper legal label uses the exact lower Web Development target.
+        prefix = text.split(DEFAULT_OWNER, 1)[0]
+        start_x = (width-stringWidth(text,'Helvetica',8))/2 + stringWidth(prefix,'Helvetica',8)
+        c.linkURL('https://WebDevelopment.tv',
+                  (start_x, 14, start_x+stringWidth(DEFAULT_OWNER,'Helvetica',8), 36), relative=0)
     # The field supplies both the fallback appearance and the living-year text.
     # Painting text here as well would create two extractable notices.
     c.save()
@@ -215,6 +244,8 @@ def stamp(src: Path, dest: Path, start: int, owner: str, legal: str) -> dict:
     if start < 1900 or start > 2200:
         raise SystemExit(f"Refusing start year {start}")
     owner = strip_class_a(owner) or DEFAULT_OWNER
+    if any(ord(char)<32 for char in owner):
+        raise ValueError('Owner must not contain control characters')
     year = date.today().year
     text = notice_text(start, year, owner)
     reader = PdfReader(BytesIO(remove_prior_notices(src)))
@@ -226,6 +257,8 @@ def stamp(src: Path, dest: Path, start: int, owner: str, legal: str) -> dict:
         box = page.mediabox
         width = float(box.width)
         height = float(box.height)
+        if stringWidth(text, 'Helvetica', FOOTER_PT)>width-72:
+            raise ValueError('Notice exceeds available footer width; use a wider page or shorter owner')
         overlay = PdfReader(BytesIO(cover_and_paint(width, height, text)))
         page.merge_page(overlay.pages[0])
         margin = max(36.0, width * 0.08)

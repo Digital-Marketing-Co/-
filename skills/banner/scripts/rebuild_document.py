@@ -1,20 +1,22 @@
 #!/usr/bin/env python3
-
-from pathlib import Path as _SkillPath
-def _resolve_skill(name):
-    base = _SkillPath('/root/.codex/skills/remote-skills')
-    for file in base.glob('skill-*/SKILL.md'):
-        head = file.read_text(encoding='utf-8', errors='replace').splitlines()[:6]
-        if any(line.strip() == f'name: {name}' for line in head):
-            return file.parent
-    raise FileNotFoundError(f'Personal skill not installed: {name}')
-"""Banner-side wrapper. Same rebuild as /images."""
+"""Banner-side wrapper using the reviewed adjacent images skill."""
 from __future__ import annotations
 
 import runpy
 from pathlib import Path
 
-runpy.run_path(
-    str((_resolve_skill("images") / "scripts/rebuild_document.py")),
-    run_name="__main__",
-)
+
+def resolve_images() -> Path:
+    adjacent = Path(__file__).resolve().parents[2] / "images"
+    if (adjacent / "scripts/rebuild_document.py").is_file():
+        return adjacent
+    base = Path('/root/.codex/skills/remote-skills')
+    for file in sorted(base.glob('*/SKILL.md')):
+        head = file.read_text(encoding='utf-8', errors='replace').splitlines()[:20]
+        if any(line.strip() == 'name: images' for line in head):
+            return file.parent
+    raise FileNotFoundError('Images skill rebuild script is unavailable')
+
+
+if __name__ == "__main__":
+    runpy.run_path(str(resolve_images() / 'scripts/rebuild_document.py'), run_name='__main__')

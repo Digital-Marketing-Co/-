@@ -1,0 +1,8 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/print",
+  "owner": "Web Development Corporation",
+  "updatable": true,
+  "visual_stack": "visual-system"
+}

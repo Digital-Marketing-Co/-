@@ -1,0 +1,34 @@
+{
+  "skill": "compression",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use compression for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Choose a format-specific preservation contract and keep the source until round-trip or semantic verification succeeds.",
+        "Compare decoded pixels or samples for lossless media, archive members and hashes, document text and page geometry."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use compression with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use compression with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Preserve existing design and sharpness; never restyle an artifact merely to reduce bytes.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

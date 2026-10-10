@@ -1,0 +1,308 @@
+{
+  "status": "PASS",
+  "skill_count": 59,
+  "python_files_compiled": 99,
+  "json_files_parsed": 139,
+  "errors": [],
+  "warnings": [],
+  "skills": [
+    {
+      "skill": "4629",
+      "files": 5,
+      "skill_sha256": "e7ff85861ca8370d3eeef4d64fe2c6df14bb4c2ec4feb8e3c63ee8bd573feef6"
+    },
+    {
+      "skill": "article-clip-pdf",
+      "files": 16,
+      "skill_sha256": "2031cb21161868c2273ce866e344dc392366bd5569d51de1d3dcb2d497b8622d"
+    },
+    {
+      "skill": "atlas",
+      "files": 15,
+      "skill_sha256": "1115dd8c6219d1e0f724821e77d7011db18aa409c2bfdb0c5c082ef72b7bb525"
+    },
+    {
+      "skill": "banner",
+      "files": 16,
+      "skill_sha256": "a2d47e9c185aa1eb8c21b26bc120b133cbe2b739067ea0275e0c9be40e7497f5"
+    },
+    {
+      "skill": "bleed",
+      "files": 10,
+      "skill_sha256": "2c3e0f394cf7313e56eca7dc1c65a27e602247a9d8ad9b91b1f07b9989de1cea"
+    },
+    {
+      "skill": "blink",
+      "files": 11,
+      "skill_sha256": "7a65a2a6cec126c7e897b3a186e9a87e936d33b77a6606b2a7f7579549fa4b9f"
+    },
+    {
+      "skill": "book",
+      "files": 14,
+      "skill_sha256": "4c1b547444a288dc2d4269235eba3549682dcf61beb215751763268a5089888d"
+    },
+    {
+      "skill": "breakdown",
+      "files": 7,
+      "skill_sha256": "39e9577a21f8a2458a9ee6c7e46067c93efa878c79cf5b0d91e8bf68aeffd5aa"
+    },
+    {
+      "skill": "brkdwn",
+      "files": 5,
+      "skill_sha256": "5f0067ea605096a48481424ed922d140d47cfdd292c574802afd65adfb0f6bdd"
+    },
+    {
+      "skill": "clone",
+      "files": 6,
+      "skill_sha256": "e33bce74cce034170b3d710c7c4601db8bb88385a82703b17a401710b1a87c86"
+    },
+    {
+      "skill": "coffee",
+      "files": 19,
+      "skill_sha256": "e2e8803b05d96d35d24f64fcdb57a453e4d6c3ef3b06e1b48c20ae2feba9c157"
+    },
+    {
+      "skill": "compression",
+      "files": 10,
+      "skill_sha256": "afc53eab7d4b3401649f6c7768c6e1a8c2a959f168c37e9ba96c0aaf72a06e76"
+    },
+    {
+      "skill": "copyright",
+      "files": 18,
+      "skill_sha256": "132301ef13f48d37b6371ea3eda1d6280e572da6c1dd943bfcc29056c2f277e3"
+    },
+    {
+      "skill": "copysite",
+      "files": 12,
+      "skill_sha256": "62c6c730f8e6dcabcae5c9d1ebf049b04927b33f0bb15664e99e47707a93be4d"
+    },
+    {
+      "skill": "corpus",
+      "files": 19,
+      "skill_sha256": "d19fe39b371577f34e0b2730cfa09e21c7ebf597cdfb29925b9520a13e1a0d46"
+    },
+    {
+      "skill": "debbie-downer",
+      "files": 9,
+      "skill_sha256": "b4b90c78c20efe93a4f0dd85cc186aec7b3b749507b7b37828f248cb3ae53271"
+    },
+    {
+      "skill": "decode",
+      "files": 12,
+      "skill_sha256": "e0658007778206479d7b7850528308fcc6efd8df95c7f5694af3eb2aa8ccae2c"
+    },
+    {
+      "skill": "deep",
+      "files": 22,
+      "skill_sha256": "5b42ffffd4f8f43ac42466cc32806289109259fe90e01edb7ad0e350262272a2"
+    },
+    {
+      "skill": "extract-dir",
+      "files": 14,
+      "skill_sha256": "d76f916981e9cc12ba34870f67d67642d7cae2b3438d412d5967bcae26df5be4"
+    },
+    {
+      "skill": "folio",
+      "files": 41,
+      "skill_sha256": "b61e2a1ed48cdc682ca1e3a465df3b2c7a86916014d3c1d127d135283b638f72"
+    },
+    {
+      "skill": "format",
+      "files": 8,
+      "skill_sha256": "d6efc708348d74bcc54abace3b8c60fcbe220df3f2a50169e82306104f8c20f6"
+    },
+    {
+      "skill": "generate",
+      "files": 11,
+      "skill_sha256": "909d26cbaeccb1ba986860ca203e1a6c04a6051a527c4378785cb27c5e4f881c"
+    },
+    {
+      "skill": "generate-prompt",
+      "files": 14,
+      "skill_sha256": "12195806d7da2f23c0568a32ab58f31fbe025b72e0158edc243368b01a594502"
+    },
+    {
+      "skill": "global",
+      "files": 14,
+      "skill_sha256": "94342117fdfabcc5ba1eefdbcaa29667dfac7d0939de08e9b2ba01dddf3a4e6e"
+    },
+    {
+      "skill": "hilarious",
+      "files": 11,
+      "skill_sha256": "a8c4013917b637733ef41ee4ebe6519b39cac1143b9e3f5e5ca22a87928fec45"
+    },
+    {
+      "skill": "images",
+      "files": 24,
+      "skill_sha256": "ddaeed39bcfcee82dddcc96eeae0ab7a137d31254625d58f91d47a57945483fd"
+    },
+    {
+      "skill": "interop",
+      "files": 9,
+      "skill_sha256": "8f194971cc6d8f682e793269f929f078b77e1c349c7fabe0c64a10b0299dda06"
+    },
+    {
+      "skill": "interpret",
+      "files": 11,
+      "skill_sha256": "024702b68ad7ccb0cc2040c8e462b74e217ed158be62bf9a712f65e26af8fc2f"
+    },
+    {
+      "skill": "ispy",
+      "files": 14,
+      "skill_sha256": "8e72fe67a5fe4874412fcf1e7c3465787523200abdfa632f48add93189400188"
+    },
+    {
+      "skill": "iterate",
+      "files": 16,
+      "skill_sha256": "18060a86e2009407489e4b42871e14c3ca3ddaf0c504b0233b25a6040f4d62be"
+    },
+    {
+      "skill": "itqe",
+      "files": 18,
+      "skill_sha256": "a9d52feef7f9a3f8ddd2362267288d836a110bfe8ac6b7bdcc9375a59680f180"
+    },
+    {
+      "skill": "latex",
+      "files": 31,
+      "skill_sha256": "e34dd0dbcdb84f3f448ddbbc5a01c3c8446d4381c65e57c76a5aea2b3a1d84fe"
+    },
+    {
+      "skill": "list",
+      "files": 15,
+      "skill_sha256": "0a44ce4738964a18d8f9474b05c3f168996751f76a31f6b9b6a1a9fb6addb128"
+    },
+    {
+      "skill": "negative",
+      "files": 9,
+      "skill_sha256": "b5447213b4a8c978565c55aa08c70bf189bbec0efec5c6f1c5474a0e2873a347"
+    },
+    {
+      "skill": "output",
+      "files": 5,
+      "skill_sha256": "a6c0bbe63fa832e5a19eeca035840e686672c1b8c61b0645c6146b96afa69baf"
+    },
+    {
+      "skill": "pdf",
+      "files": 3,
+      "skill_sha256": "389e36b2ea67cfa532eb959e2b3c4ded2eff11d2a5a3f7f489c63b530dd9a2ad"
+    },
+    {
+      "skill": "pepe",
+      "files": 13,
+      "skill_sha256": "5d53903e24e63bd48f1495cdd02a17c755eac6d8cf1df154abfb076b6031cb30"
+    },
+    {
+      "skill": "phd-ivy-monograph",
+      "files": 48,
+      "skill_sha256": "81d35a1858f7e96bcc4ab6c15b8342212ed968d27b4b95739c4b9591bc2829a9"
+    },
+    {
+      "skill": "plain-jane",
+      "files": 13,
+      "skill_sha256": "e659dcaba1e08f5cfb762e0e51bc7dcf33251e99e2b843241992d04d6cdef7bf"
+    },
+    {
+      "skill": "print",
+      "files": 32,
+      "skill_sha256": "66692ff00db2cce8343c29002c932b1eca885751e5577013dd5ae7236ff4f315"
+    },
+    {
+      "skill": "proceed",
+      "files": 3,
+      "skill_sha256": "bd81c5de89294067dee0f51087629713300fd3a34fefba9e58e4757e1a8be2c7"
+    },
+    {
+      "skill": "profound",
+      "files": 5,
+      "skill_sha256": "1c9cf901ed075abe7cf23c8cc3b28ccabb03e5d0ae8fdefaf7865a4c70cc40df"
+    },
+    {
+      "skill": "prompt-engineer",
+      "files": 15,
+      "skill_sha256": "41f882506709c75bdb4d10c4c13fcf2449c485a717e62aa2e4c9174655358212"
+    },
+    {
+      "skill": "prompt-start",
+      "files": 6,
+      "skill_sha256": "350d3382124fb9797509b29391a7150d133abc2a5492849617401980faeff2f1"
+    },
+    {
+      "skill": "psychoanalyze",
+      "files": 16,
+      "skill_sha256": "6160bce78a87b62fb808422c2d426c1fe876f5169e1c9746f484ec92d9e4ca0a"
+    },
+    {
+      "skill": "q-base22",
+      "files": 14,
+      "skill_sha256": "e1760fbf934857d306a6dac4c92019081ede3aa62634518a06a222dc773829cc"
+    },
+    {
+      "skill": "ringtone",
+      "files": 11,
+      "skill_sha256": "119f9cbafec0512b5401eeaf756565c93f441b09da5525dd0e850711137bba67"
+    },
+    {
+      "skill": "ski",
+      "files": 21,
+      "skill_sha256": "bbf194ec147d1c5cb84a285ba2c40ae8480c1dc40791902f0455a7be34718282"
+    },
+    {
+      "skill": "skill-sync",
+      "files": 5,
+      "skill_sha256": "c00e015e719e728711c0674a0d77599ae30bf350f70b5688d125a1c96223b329"
+    },
+    {
+      "skill": "summarize",
+      "files": 13,
+      "skill_sha256": "44170861ee64f6539fec3a7e749b2f249afaadee7baa23ecec3199b775145e4d"
+    },
+    {
+      "skill": "textbook",
+      "files": 8,
+      "skill_sha256": "ab7d4202f271a69728d4efb81975da19d3c9aa85f63d95853bd615d3d0c8639c"
+    },
+    {
+      "skill": "topsecret",
+      "files": 5,
+      "skill_sha256": "7e5c21e84c3bb573d65eadd3eedf04b507085f6332de6c79ad4100a14cc0a0ee"
+    },
+    {
+      "skill": "tpmorpedo",
+      "files": 12,
+      "skill_sha256": "8c4ca64a915083b66a525d8c13f690d7847e92a71b77e61d78280bb3c6920c0a"
+    },
+    {
+      "skill": "transcribe",
+      "files": 11,
+      "skill_sha256": "6546d9b2d82f79c0e3a4decf0fca707ec2654c0f04f53bdf4c63c8fe97b5cc90"
+    },
+    {
+      "skill": "upscale",
+      "files": 11,
+      "skill_sha256": "ad10c12ec8a380a515be4711baf1b1cae6b456f9b92e0eb46a15470d9cad829b"
+    },
+    {
+      "skill": "vector",
+      "files": 10,
+      "skill_sha256": "f788d519747c252da081cd7d58c18364cbf685ccb37cc1d3b686a9ea5ce1f79c"
+    },
+    {
+      "skill": "visual-system",
+      "files": 13,
+      "skill_sha256": "144dc36dcc27e5a20e0eae86308cb64a2e5a96b5c94ded6be85e08a685d62ed4"
+    },
+    {
+      "skill": "wa",
+      "files": 5,
+      "skill_sha256": "62fa56cc017ece09639f410d8362a451b6fce3a538ee9676c0a548318e051a41"
+    },
+    {
+      "skill": "wca-ivy-biblio",
+      "files": 17,
+      "skill_sha256": "2ebb91b968c20c1af53f9de1ea2f5cf7f0ffc598f2fb64dfb2a791455af287ea"
+    }
+  ],
+  "limitations": [
+    "Structural validation does not prove live integrations, rendered quality, or all scenario behavior."
+  ]
+}

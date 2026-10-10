@@ -14,6 +14,8 @@ import re
 import sys
 from pathlib import Path
 
+from publication_notice import notice_for
+
 from PIL import Image as PILImage
 from reportlab.lib.colors import HexColor
 from reportlab.lib.enums import TA_JUSTIFY, TA_LEFT, TA_CENTER
@@ -345,7 +347,7 @@ def build(article_json: Path, out_pdf: Path | None) -> Path:
         canvas.drawCentredString(
             PAGE_W / 2.0,
             0.32 * inch,
-            "Copyright \u00a9 2012\u20132026 Web Development Corporation. All rights reserved.",
+            notice_for(data),
         )
         canvas.restoreState()
 

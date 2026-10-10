@@ -5,6 +5,11 @@ description: Deep recursive academic and military/intelligence-topic research re
 
 # Profound
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 Accept the quoted or unquoted text, topic, files and resource links following invocation as the research subject. Use Spanish for /profundo unless the user specifies another language. Preserve the same analytical and citation standards in both languages.
 
 ## Research contract
@@ -33,3 +38,7 @@ Use compact rendered diagrams only when relationships or event order benefit fro
 ## Final gate
 
 Check every material claim against its cited source; verify quotation accuracy and page locators, dates, calculations and translation. Ensure diagrams agree with tables and prose. Disclose inaccessible sources, model comparisons not performed, incomplete coverage and the stopping condition. Never promise error-free output or exhaustive knowledge of all history.
+
+## Delivery
+
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

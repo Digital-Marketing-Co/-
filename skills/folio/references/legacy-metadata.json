@@ -1,0 +1,8 @@
+{
+  "type": "workflow",
+  "version": "2.2",
+  "flag": "/folio",
+  "twin": "phd-ivy-monograph",
+  "owner": "Web Development Corporation",
+  "visual_stack": "visual-system"
+}

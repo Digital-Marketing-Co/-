@@ -1,0 +1,34 @@
+{
+  "skill": "interop",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use interop for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Resolve dependencies from one revision, detect cycles, and share delivery gates without duplicate execution.",
+        "Test checkout and installed roots, absent dependencies, filename safety, and unresolved host assumptions."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use interop with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use interop with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Coordinate visual tokens across outputs while honoring source-fidelity and format-specific locks.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

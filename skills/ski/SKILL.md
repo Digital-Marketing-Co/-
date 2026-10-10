@@ -2,7 +2,13 @@
 name: ski
 description: Produce and update a doctoral-level canine communication research monograph and evidence-based humane dog-training curriculum. Invoke with /ski or $ski for fresh research, evidence updates, individual dog communication problems, training plans, or PDF regeneration.
 ---
+
 # SKI: canine communication and training
+
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
 
 ## Inputs and modes
 Parse `/ski [research|update|dog|render] [focus]`. Default to research. Accept supplied sources, prior output directory, cutoff date, languages, region, audience, and dog profile. In dog mode collect age, health, sensory/mobility status, household, observed behavior, antecedents, consequences, bite history, available equipment, preferred rewards, and practical constraints. Continue general research while material case details remain missing; never invent a dog profile.
@@ -30,3 +36,7 @@ Research: perform the full workflow. Update: search from the last verified cutof
 
 ## Completion
 Use acceptance.md as a blocking checklist for a full research execution. A scoped dog-mode preliminary plan may omit monograph/images when not requested, but must retain uncertainty, evidence IDs and referral boundaries; missing material profile fields remain explicit. Render mode does not rerun research. Select applicable gates by mode and never relabel an incomplete full research run as complete. Deliver a concise status, accessible PDF and companion outputs, actual search coverage, material gaps, and commands/examples `/ski update`, `/ski dog recall`, `/ski render`. If any requirement is unavailable, preserve progress and label the execution incomplete rather than lowering the contract silently.
+
+## Delivery
+
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

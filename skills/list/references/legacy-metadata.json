@@ -1,0 +1,8 @@
+{
+  "type": "workflow",
+  "version": "3.0",
+  "flag": "/list",
+  "stacks": "banner, images, copyright, folio, deep, iterate, itqe, latex",
+  "owner": "Web Development Corporation",
+  "visual_stack": "visual-system"
+}

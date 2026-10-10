@@ -1,0 +1,34 @@
+{
+  "skill": "extract-dir",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use extract-dir for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Persist attempted URLs and status codes; distinguish discovery completeness from successful article extraction.",
+        "Test sitemap cycles, duplicates, non-HTML resources, failed fetches, and output-to-URL mapping."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use extract-dir with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use extract-dir with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use consistent source labels and context-specific banners only for requested reconstructed editions.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

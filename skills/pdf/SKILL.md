@@ -5,6 +5,11 @@ description: Create, revise, export, and verify a finished PDF in the visual lan
 
 # /pdf
 
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
+
 Produce a finished PDF, not merely a prompt or draft. Use the user's requested subject and source hierarchy. When /pdf follows /p, resume the latest unfinished document request, preserve prior research, and deliver its completed file.
 
 ## Design
@@ -41,6 +46,10 @@ Run /negative as the last step of this skill, after every other section, before 
 
 1. Read the blocklist at skills/negative/references/blocklist.md.
 2. Extract the visible text of the deliverable.
-3. Run `python3 /root/.grok/server-skills/negative/scripts/sweep_negative.py` on that text. If that path is missing, use `/home/workdir/.grok/skills/negative/scripts/sweep_negative.py`.
+3. Run `python3 @negative/scripts/sweep_negative.py` on that text. If that path is missing, use `@negative/scripts/sweep_negative.py`.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+
+## Delivery
+
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

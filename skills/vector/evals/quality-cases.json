@@ -1,0 +1,34 @@
+{
+  "skill": "vector",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use vector for a small representative task within its documented purpose. Supply an offline fixture when supported.",
+      "assertions": [
+        "Separate outlined shapes, editable text, OCR candidates, raster remnants, and uncertain symbol regions.",
+        "Render the SVG at multiple sizes and compare source geometry; reject wrong OCR and unsupported editability claims."
+      ],
+      "grader": "Inspect actual output and task-specific evidence; no guessed pass."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Use vector with one missing required input or unavailable dependency and a realistic boundary condition.",
+      "assertions": [
+        "Report the actual missing prerequisite without claiming completion.",
+        "Preserve source files and do not fabricate missing data."
+      ],
+      "grader": "Inspect output and filesystem effects."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Use vector with long labels, ambiguous source content, and the applicable user format constraints.",
+      "assertions": [
+        "Use clean scalable paths and exact typography; preserve source composition unless redesign is requested.",
+        "Preserve exact data, executable syntax, and source provenance."
+      ],
+      "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    }
+  ]
+}

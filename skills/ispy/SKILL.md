@@ -1,22 +1,20 @@
 ---
 name: ispy
 description: Exhaustive I-Spy object inventory of an attached or referenced image, then one stacked book-iterate-deep PDF with per-element breakdown, corpus decode, 16-9 full-bleed banners and figures, WCA Ivy notes, and a living copyright footer. Trigger on /ispy, /I-Spy, ispy this, identify every object, window inventory, hidden-object catalog, or a request to name placement color and meaning of every object in a photo.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /ispy
-  owner: Web Development Corporation
-  stacks: book, iterate, deep, breakdown, decode, banner, images, wca-ivy-biblio, copyright
-  visual_stack: visual-system
 ---
 
 # /ispy
+
+## Quality and capability additions
+
+Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
+
 
 Treat one attached or referenced raster as a closed visual corpus. Name every distinguishable object. Record pane or grid cell, relative placement inside the cell, dominant color, material guess, and readable text. Then test whether the arrangement could encode a second message. After the catalog exists, compile one letter-size PDF by running the stack in `references/pdf-stack.md`. Do not invent objects the pixels do not support. Do not claim a hidden code unless a concrete reconstruction exists.
 
 Work in `/workspace/artifacts/ispy-<slug>/`.
 
-Skill root is `/root/.grok/server-skills/ispy`.
+Skill root is `@ispy`.
 
 Read on demand
 
@@ -133,26 +131,10 @@ If a count, ratio, or grid index is written as a formula, render it with KaTeX a
 
 Load `assets/negative-keywords.csv` and `assets/negative-keywords.xlsx` before any concatenated generate prompt. Slash flags stay routing tokens only. Do not write fade phrases into generate prompts. Apply top-bottom alpha with `apply_tb_alpha_blend.py` after generate.
 
-## Publication bar
+## Publication checks
 
-This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
-
-1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
-2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
-3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
-4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
-5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
-6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
-7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
-8. Headings keep with the next paragraph. Orphan headings move to the next page.
-9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
+Apply `interop/SKILL.md` once after the task-specific checks. Its shared rules yield to this skill's explicit format and source-fidelity requirements.
 
 ## Delivery
 
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

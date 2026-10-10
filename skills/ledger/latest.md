@@ -4,6 +4,66 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-10 | 4629 | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | article-clip-pdf | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | atlas | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | banner | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | bleed | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | blink | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | book | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | breakdown | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | brkdwn | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | clone | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | coffee | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | compression | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | copyright | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | copysite | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | corpus | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | debbie-downer | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | decode | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | deep | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | extract-dir | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | folio | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | format | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | generate | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | generate-prompt | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | global | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | hilarious | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | images | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | interop | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | interpret | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | ispy | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | iterate | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | itqe | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | latex | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | list | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | negative | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | output | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | pdf | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | pepe | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | phd-ivy-monograph | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | plain-jane | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | print | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | proceed | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | profound | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | prompt-engineer | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | prompt-start | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | psychoanalyze | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | q-base22 | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | ringtone | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | ski | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | skill-sync | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | summarize | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | textbook | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | topsecret | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | tpmorpedo | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | transcribe | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | upscale | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | vector | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | visual-system | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | wa | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+| 2026-10-10 | wca-ivy-biblio | codex-to-repo | this-commit | Task-specific quality profile, three scenario definitions, shared contract repairs and tested script fixes where applicable |
+|---|---|---|---|---|
 | 2026-10-10 | deep | host-to-repo | 66c3ac1 | Enforce iterative doctoral evidence, verified academic PDFs, WCA, ITQE, LaTeX and unique all-section banners; retain canonical renderer and fonts |
 | 2026-10-10 | textbook | host-to-repo | 4825207 | Add doctoral textbook production workflow, semantic styles, measured contrast and QA gates |
 | 2026-10-09 | pepe | grok-to-repo | 14ec307 | Replace stub SKILL.md with complete installed promptform embed skill including references, scripts, assets, and evals |
