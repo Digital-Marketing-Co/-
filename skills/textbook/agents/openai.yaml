@@ -1,0 +1,4 @@
+interface:
+  display_name: "Textbook"
+  short_description: "Scholarly futuristic textbooks with verified PDF QA"
+  default_prompt: "Use $textbook to produce a doctoral textbook PDF on the following subject."
