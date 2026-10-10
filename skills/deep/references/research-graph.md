@@ -15,8 +15,8 @@ Kinds: topic, person, institution, statute, instrument, dataset, school, controv
 1. Round-map the current node (survey + library guides + official chronologies).
 2. Open primary and Ivy PDFs. Record exact titles, authors, years, page or section locators, stable URLs, access date YYYY-MM-DD.
 3. Extract new child labels. Add only nodes that change an explanation of the root or of the parent.
-4. Recurse. Depth cap 4 from the root. Keeper cap 80 sources in `sources.jsonl`.
-5. Close a node when two consecutive targeted searches add no tier-1–4 item.
+4. Recurse. Use depth 4 and 80 keepers as review checkpoints; continue material branches in documented batches. Apply doctoral-protocol.md.
+5. Close a node only when two consecutive targeted rounds add neither material evidence nor explanatory branches; log resource-limited nodes as open.
 
 Write `rounds/round-N.md` and `graph.md` (Mermaid or outline of the node tree).
 

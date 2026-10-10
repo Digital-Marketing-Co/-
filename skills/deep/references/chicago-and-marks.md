@@ -1,6 +1,6 @@
 # Chicago notes and superscript marks
 
-Use CMOS notes-bibliography with the WCA Ivy first-appearance revision. Notes that are cited on a page print in that page’s footer band in Chicago note form. A collected Notes chapter is optional concordance only. Bibliography uses bibliographic form ordered by first appearance of each work. Run `/home/workdir/.grok/skills/wca-ivy-biblio/scripts/reorder_citations.py` after any insertion. Display equations carry an ITQE table.
+Use CMOS notes-bibliography with the WCA Ivy first-appearance revision. Notes that are cited on a page print in that page’s footer band in Chicago note form. A collected Notes chapter is optional concordance only. Bibliography uses bibliographic form ordered by first appearance of each work. Run `@wca-ivy-biblio/scripts/reorder_citations.py` after any insertion. Display equations carry an ITQE table.
 
 ## Body marks
 

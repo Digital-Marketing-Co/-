@@ -1,4 +1,4 @@
 interface:
   display_name: "Deep"
-  short_description: "Apply the deep workflow to user requests"
-  default_prompt: "Use deep for this task."
+  short_description: "Recursive doctoral research with verified citations"
+  default_prompt: "Use $deep to research this subject recursively with verified citations, compiled mathematics, and unique section banners."

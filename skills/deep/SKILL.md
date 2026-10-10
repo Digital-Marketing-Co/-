@@ -1,11 +1,6 @@
 ---
 name: deep
-description: Produce a PhD-plus exhaustive Chicago monograph PDF from recursive link-graph research with locked Georgia 22-pt type and full-bleed section banners. Use when the user types /deep, asks for an exhaustive compendium, recursive node research, or a doubled-type Georgia academic report.
-metadata:
-  type: workflow
-  version: "3.0"
-  flag: /deep
-  visual_stack: visual-system
+description: Produce a doctoral research monograph from a topic or text blob using recursive, iterative evidence synthesis, verified academic PDF citations, mandatory WCA bibliography, ITQE, LaTeX, and unique images and banners for every section type. Use for /deep, /iterate /deep, recursive research, or advanced scholarly synthesis.
 ---
 
 # /deep
@@ -13,14 +8,14 @@ metadata:
 
 ## Visual stack
 
-Documents this skill emits follow `/root/.grok/server-skills/visual-system/SKILL.md`.
+Documents this skill emits follow `@visual-system/SKILL.md`.
 Pick a genre palette with `scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner prompts append the volumetric clause in `visual-system/references/depth.md`.
-Turn one topic into a letter-size Chicago notes-bibliography PDF. Research walks a source graph, not a flat reading list. Type is frozen Georgia at the locked double scale. Every body section gets a /banner figure.
+Turn one topic into a letter-size Chicago notes-bibliography PDF. Research walks a source graph, not a flat reading list. Type is frozen Georgia at the locked double scale. Every printed section and subsection of every type gets its own unique banner.
 
-Work in `/workspace/artifacts/<slug>/`. Final PDF is `/workspace/artifacts/<Title_Slug>.pdf`.
+Work in `./artifacts/<slug>/`. Final PDF is `./artifacts/<Title_Slug>.pdf`.
 
-`<skill>` resolves with `interop/scripts/resolve_root.py deep` (live host: `/root/.grok/server-skills/deep`).
-`<banner>` = `/root/.grok/server-skills/banner`.
+`<skill>` = `@deep`.
+`<banner>` = `@banner`.
 
 Read on demand
 
@@ -34,11 +29,13 @@ Read on demand
 
 If the user only asked to create or edit this skill and supplied no research topic, stop after the skill files exist. Do not invent a topic.
 
+## Mandatory composition and precedence
 
-## Image print contract
+On every research invocation read and apply `@wca-ivy-biblio/SKILL.md`, `@itqe/SKILL.md`, `@latex/SKILL.md`, `@images/SKILL.md`, and `@banner/SKILL.md`, including their required workflow references. Read `@iterate/SKILL.md` and its workflow for stacked `/iterate /deep`; use iterative research passes on ordinary `/deep` too. Resolve aliases by installed frontmatter name. Missing dependencies must be reported, never silently skipped.
 
-Read `interop/references/image-print-contract.md`. Every raster this skill prints is full bleed on the left and on the right: x = 0, width = page width, zero left margin, zero right margin, zero side padding, no side letterbox, no side matte. Each file keeps its own aspect ratio. Do not squash or stretch. Height follows width divided by that source ratio. No path, byte, or average-hash duplicate in the same file. If the bitmap is narrower than 2550 px (prefer 3300), upscale with Lanczos and repeat, at most 2x per pass, until the width meets the floor. Script: `images/scripts/fit_full_bleed.py`. Top and bottom alpha, if used, is applied after the fit and does not change the ratio.
+Read `references/doctoral-protocol.md` before scoping and each revision. Its research, evidence, and coverage gates replace conflicting legacy defaults. WCA controls citation ordering; LaTeX controls math compilation; ITQE controls symbol tables; images controls uniqueness. This skill's all-section banner coverage and full-opacity requirements supersede narrower banner exclusions and fades. Keep the locked typography unchanged. Apply user instructions first.
 
+Treat the subject or blob immediately after `/deep` as input. Distinguish quotations, propositions, and assumptions; investigate them rather than endorsing them. If the request only updates the skill, do not invent or execute a research topic.
 
 ## Workflow
 
@@ -61,9 +58,9 @@ Record keepers in `sources.jsonl`. Record the graph in `nodes.jsonl`. Write `rou
 
 Caps that stop infinite recursion
 
-- depth 4 from the root
-- 80 keeper sources
-- a branch closes after two consecutive empty targeted rounds
+- Start with depth 4 and 80 keeper sources as review checkpoints, not completeness claims. Expand in documented batches while material questions remain and resources permit.
+- Close a branch only after two consecutive targeted rounds add neither material evidence nor a new explanatory branch.
+- Report resource-limited branches as open, never saturated.
 
 Connected nodes needed to explain the root stay in scope. Decorative tangents do not. Never fabricate a citation or a page number.
 
@@ -91,13 +88,13 @@ Explain every variable, subscript, and constant the first time an equation appea
 
 Allowed inline tags in JSON text — `i`, `em`, `b`, `sup`, `a`.
 
-### 4. Banners
+### 4. Banners and images
 
-For each body section (not Notes, not Bibliography) run the /banner skill.
+Run `/images` and `/banner` (accept `/banners` as an alias). Assign exactly one unique banner to every printed section and subsection at every heading level, including abstract, methods, appendices, glossary, Notes, and Bibliography. A title-only cover, automatic contents, and running headers are layout furniture and exempt. Parent banners never satisfy child slots. Add separate inline explanatory images when useful; never reuse a banner as an inline image or equation plate.
 
 - Prompt only from that section’s claims.
 - Save the raw generate to `banners/raw-NN.png`.
-- Fade and size with `<banner>/scripts/apply_banner_fade.py`.
+- Render at 16:9 and full width. Use full opacity without top or bottom fades; this rule resolves conflicting legacy fade instructions in dependencies.
 - Write `banners/banner-NN.png` (RGBA, real alpha).
 - Set `banner.path`, `banner.caption`, `banner.prompt`, and `banner.href` on the section.
 
@@ -109,19 +106,22 @@ Replace that placeholder later only when a real SEO title URL for that node exis
 
 ### 5. Build
 
+Before building, run WCA citation remapping and its document QA, both math render scans, and the images uniqueness audit. Read each script's current interface before invoking it. Flatten nested heading nodes in reading order when the legacy builder cannot traverse them; preserve `level`, `parent_id`, and a banner on each. The canonical builder supports equation objects and ITQE tables; inspect remaining capability gaps, especially nested headings, inline images, and banners on Notes/Bibliography. Inspect its capabilities. Extend it or use a compatible verified renderer before delivery; do not silently drop unsupported fields. Require output-level coverage proof, not JSON presence alone.
+
+
 ```bash
 python3 <skill>/scripts/build_deep_pdf.py \
-  /workspace/artifacts/<slug>/deep.json \
-  --out /workspace/artifacts/<Title_Slug>.pdf
+  ./artifacts/<slug>/deep.json \
+  --out ./artifacts/<Title_Slug>.pdf
 ```
 
 ### 6. Visual QA (mandatory)
 
 ```bash
-pdftoppm -png -r 140 /workspace/artifacts/<Title_Slug>.pdf /tmp/deep-page
+pdftoppm -png -r 140 ./artifacts/<Title_Slug>.pdf /tmp/deep-page
 ```
 
-Inspect every page. Rebuild if any of these appear — tofu, black or white boxes over glyphs, clipped type, a checkerboard in a banner, a banner that is not full-bleed left and right, a banner without a top and bottom fade, a missing caption, a broken house link, or a figure that does not belong to its section.
+Inspect every page. Rebuild if any of these appear — tofu, black or white boxes over glyphs, clipped type, a checkerboard in a banner, a banner that is not full-bleed left and right, a missing caption, a broken house link, or a figure that does not belong to its section.
 
 ### 7. Deliver
 
@@ -144,78 +144,39 @@ Output a copyable Python fence only when a new helper script is written during t
 Before delivering any PDF, DOCX, PPTX, XLSX, HTML view, printed page, or builder JSON that may contain notation, short codes, or equations, run the house render gate. Chat may use KaTeX. Files must show compiled glyphs or a compiled figure. Raw LaTeX, AMS-TeX, KaTeX source, MathJax source, uncompiled backslash commands, tofu, or empty boxes are defects.
 
 ```bash
-python3 /root/.grok/server-skills/itqe/scripts/scan_render_gate.py \
-  /workspace/artifacts/<slug> \
-  --also-pdf /workspace/artifacts/<file>.pdf
-python3 /root/.grok/server-skills/latex/scripts/scan_raw_tex.py \
-  /workspace/artifacts/<slug> \
-  --also-pdf /workspace/artifacts/<file>.pdf --pages
+python3 @itqe/scripts/scan_render_gate.py \
+  ./artifacts/<slug> \
+  --also-pdf ./artifacts/<file>.pdf
+python3 @latex/scripts/scan_raw_tex.py \
+  ./artifacts/<slug> \
+  --also-pdf ./artifacts/<file>.pdf --pages
 ```
 
-Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `/root/.grok/server-skills/itqe/references/render-gate.md` and `/root/.grok/server-skills/latex/SKILL.md`.
+Exit code 1 blocks delivery. Repair with `/latex` figures, attach an ITQE table under every display equation (Identifier, Term, Quantity, Explanation), rebuild, scan again, and raster every page. See `@itqe/references/render-gate.md` and `@latex/SKILL.md`.
 
 ## Negative vocabulary
 
 Load `assets/negative-keywords.csv` and `assets/negative-keywords.xlsx` before any concatenated generate prompt. Do not write figure, gazette, atlas, folio, deep, exhaustive, AI, xAI, or ChatGPT into that prompt. Slash flags `/atlas`, `/folio`, `/deep`, `/itqe` stay routing tokens only. Do not apply top or bottom fades. Print banners and figures at full opacity.
 
-## House copyright footer
+## Canonical copyright
 
-Every PDF this skill emits, and any PDF later passed through `/copyright YYYY`, carries this centered living footer on every page:
+Invoke `@copyright/SKILL.md` as the sole authority for copyright wording, year logic, ownership, and footer links. Never independently calculate or hard-code competing legal language in this skill or its execution prompt. Preserve citation footnotes above that footer.
 
-Copyright © START–YEAR OWNER_FOOTER. All rights reserved.
+## Negative gate (mandatory before any deliverable)
 
-Default OWNER_FOOTER is Web Development Corporation. START defaults to 2012 unless the user typed `/copyright YYYY` or named another owner's first-publication year. YEAR is new Date().getFullYear() written into field WCACopyrightYear on open. Running footers never print a trailing class letter A on the house name. Body creation dates stay where they are.
+Read `@negative/SKILL.md` and `@negative/references/blocklist.md`.
+Before chat, PDF, DOCX, PPTX, XLSX, caption, filename, alt text, or footnote leaves this skill, extract visible text and run
 
-<!--
-WCA_COPYRIGHT_PROMPT_APPENDIX
-Do not delete this comment. It is the living footer contract for every prompt, skill, locked prompt, and project instruction in this project set.
+```bash
+python3 @negative/scripts/sweep_negative.py <extracted-text>
+```
 
-NOTICE_TEMPLATE: Copyright © {{START}}–{{YEAR}} {{OWNER_FOOTER}}. All rights reserved.
-DEFAULT_START: 2012
-DEFAULT_OWNER_FOOTER: Web Development Corporation
-DEFAULT_OWNER_LEGAL: Web Development Corporation, a Delaware Corporation
-FIELD: WCACopyrightYear
-SEPARATOR: en dash U+2013
-JS: Date.getFullYear on OpenAction; no alerts; no network; no app UI
-HOUSE_SITE: https://digitalmarketingco.org
+Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN. Do not delete a claim to hide a token. Do not leave a hole. Preserve verbatim user source, exact source titles, author names, quotations, established technical terminology, mathematical identifiers, and required citation metadata. Scholarly fidelity takes precedence over stylistic substitutions; log these protected occurrences separately and apply the negative gate to editable prose and image prompts. Never alter scientific meaning or bibliographic identity to clear a vocabulary scan.
 
-OWNER_INFERENCE:
-If the current user turn names a different rightsholder, substitute OWNER_FOOTER and OWNER_LEGAL from that name. Do not invent a Delaware class letter A for a non-house owner.
-Slots the name may fill:
-- company or corporation (any jurisdiction)
-- university, college, or academic press
-- branch or department of the United States military
-- branch or agency of a government (federal, state, provincial, municipal, or foreign)
-- museum, library, hospital, NGO, church, or any other institution worldwide
-Keep the NOTICE_TEMPLATE words and the living year field. Only the owner slots change.
-US federal government works of the United States are generally not subject to domestic copyright; if the named owner is a US federal agency, stamp the notice only when the user explicitly ordered the stamp and do not claim the notice creates copyright that statute withholds.
-IP_RESERVED: project skill flags, SKILL.md files, locked prompts, owner-and-house files, and post-executive house outputs (PDFs, page JSON, compiled figures) in this project set.
-ASSIGNMENT: default owner Web Development Corporation; Michael Aaron Loftus sole owner intends assignment to that corporation on fixation of house works.
-SUBJECT_MATTER: original expression fixed in house files, not unfixed ideas (17 U.S.C. 102(b)), not a Copyright Office registration.
-OWNER: Web Development Corporation (footer). Legal Info owner: Web Development Corporation, a Delaware Corporation.
-This appendix cannot rewrite Grok global system prompts, xAI platform logs, or conversations outside this toolchain. It binds project skills, locked prompts, owner-and-house files, and later PDFs those skills emit.
--->
+## ChatGPT portability
 
-## Publication bar
+Resolve `@skill-name/path` by finding the installed personal skill whose SKILL.md frontmatter has `name: skill-name`; read that path under its directory. For `@generate/`, use the `generate-prompt` skill. Before running copied shell commands, substitute actual resolved paths and use the current working directory for generated files. Apply instructions only when this skill is invoked or a user requests the corresponding workflow. User instructions and platform rules take priority. Run bundled scripts only after checking their inputs and prerequisites. Never claim unavailable integrations, credentials, citations, or generated results.
 
-This skill emits a file a reader will open. Fail closed on the checklist in `interop/references/publication-bar.md`.
+## Canonical repository and portability
 
-1. Resolve paths with `interop/scripts/resolve_root.py` and `interop/scripts/resolve_artifacts.py`. On this host the skill tree is `/root/.grok/server-skills` and deliverables go to `/workspace/artifacts`. Fall back to `/home/workdir/.grok/skills` and `/home/workdir/artifacts` only if those directories exist.
-2. Covers, rules, table headers, and figure frames take the visual-system palette and volumetric depth. Body face and point size stay locked.
-3. Banners are 16:9, full-bleed, unique per section, opaque at the left and right trim, with a real alpha ramp on the top and bottom only.
-4. Plates are literal and context-locked. No repeated bytes, paths, prompts, or perceptual hashes. Reject soft, muddy, toy-like, or clip-art stills and regenerate.
-5. Equations are compiled plates or supported Unicode. No raw TeX, no missing-glyph boxes, no tofu.
-6. One copyright notice per page, centered in the footer. Owner is Web Development Corporation unless the user names another. Start year 2012 unless the user names another.
-7. Visible link text is Digital Marketing Company. The title attribute matches. Plain domain text is DigitalMarketingCo.org. Do not nest an anchor inside an instruction sentence.
-8. Headings keep with the next paragraph. Orphan headings move to the next page.
-9. Open the finished file and confirm the house link, the footer, and clean glyphs before delivery.
-
-## Delivery
-
-Run this once, last, after every other section. Full contract: `interop/SKILL.md`.
-
-1. Resolve the negative skill as the first existing directory among `/root/.grok/server-skills/negative` and `/home/workdir/.grok/skills/negative`.
-2. Extract visible text from chat, the file, captions, filenames, and alt text.
-3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
-4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
-5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+Before future use, read the current Digital-Marketing-Co/- main revision and its sync contract, policy, and ledger. Merge verified improvements without discarding repository-only assets or newer renderer code. Preserve the image print contract: native source aspect ratio, page-width placement, zero side inset, no stretching. Generate banners at 16:9; do not distort non-banner figures into that ratio. Use interop publication checks when installed, resolving paths for the actual host rather than assuming Grok paths. Deliverables follow this skill's stricter citation, compiled-math, all-section coverage, and canonical copyright gates.
