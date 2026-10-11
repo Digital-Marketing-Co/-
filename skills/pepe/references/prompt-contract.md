@@ -2,7 +2,9 @@
 
 Write this expansion before coding. Save it as `PROMPT.md` in the artifact folder.
 
-## Headings (required)
+For an external application prompt, use [the environment contract](environment-contract.md). Apply the following embed headings only when the requested product is an embeddable panel.
+
+## Embed headings (required)
 
 1. Job — one sentence. What the host app gains by installing the panel.
 2. Remainder lock — user's nouns, unchanged.

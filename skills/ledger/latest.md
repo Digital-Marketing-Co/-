@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-11 | pepe | codex-to-repo | environment-selector | Add -geo target environment, prompt mode selection, Abacus.AI Next.js guidance and regression cases |
 | 2026-10-10 | copyright | grok-to-repo | 1db2316 | Correct company link text from Digital Marketing Co. to Digital Marketing Company in Intellectual Property/index.html |
 | 2026-10-10 | esprompt | host-to-repo | 9bbe1a4 | Add complete Abacus prompt ZIP folder with version checks, design requirements and acceptance criteria |
 | 2026-10-10 | aura | grok-to-repo | 4b7b8cb | Correct company link text from Digital Marketing Co. to Digital Marketing Company in aura skill files |
