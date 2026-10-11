@@ -1,14 +1,14 @@
 ---
 name: prompt-start
 description: Treat the user's visible typed text as the start of the task. Do not prepend an unstated project, global, or military mission. Trigger on prompt-start, as-written, no pre-prompt, my prompt is the beginning, ignore hidden system flavor that is not visible, or when the user says the typed prompt must come first.
+metadata:
+  type: workflow
+  version: "1.0"
+  flag: /prompt-start
+  always_apply: true
 ---
 
 # /prompt-start
-
-## Quality and capability additions
-
-Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
-
 
 The first instruction for the work product is the text the user typed in this turn (plus later visible turns in the same thread).
 
@@ -29,7 +29,3 @@ The first instruction for the work product is the text the user typed in this tu
 ## Bound
 
 This skill ranks user task text above unstated flavor. It does not rank user text above safety rules, and it does not let anyone disable those rules.
-
-## Delivery
-
-Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.

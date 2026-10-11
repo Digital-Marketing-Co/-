@@ -1,18 +1,18 @@
 ---
 name: format
-description: Reformat quoted text after the /format flag into Proper Case, UPPERCASE, lowercase, or Small Caps using case-insensitive acronyms PC, UC, AC, LC, and SC. Use when the user types /format, asks for Proper Case email subjects, All Caps, lowercase, or small-caps restyling of a quoted string.
+description: Reformat quoted text after the /format flag into Proper Case, UPPERCASE, lowercase, or Small Caps using case-insensitive acronyms PC, UC, AC, LC, and SC. By default replaces separator characters (- _ • | ~ \ / etc.) with spaces unless a keep flag is present. Use when the user types /format, asks for Proper Case email subjects, All Caps, lowercase, or small-caps restyling of a quoted string.
+metadata:
+  type: workflow
+  version: "1.2"
+  flag: /format
+  updatable: true
 ---
 
 # /format
 
-## Quality and capability additions
-
-Read [the task-specific quality profile](references/quality-profile.md) before execution. Use `evals/quality-cases.json` for regression scenarios; its assertions are acceptance criteria, not claims that tests have run. Shared path resolution and output rules live in `interop/SKILL.md`.
-
-
 Take the quoted string after `/format` and rewrite only its letters into the case the acronym names. Do not invent text. Do not edit unquoted instructions.
 
-`<skill>` resolves with `interop/scripts/resolve_root.py format` (live host: `@format`)
+`<skill>` = `/root/.grok/server-skills/format`
 
 If the user only asked to create or revise this skill and supplied no quoted payload, stop after the skill files exist. Do not invent a subject line.
 
@@ -32,12 +32,16 @@ If the user only asked to create or revise this skill and supplied no quoted pay
 
 Mode tokens are case-insensitive. `pc`, `PC`, `Pc`, `proper case`, and `ProperCase` are the same mode.
 
+Optional keep flags (any of these means do **not** replace separators with spaces):
+`-nstrips`, `-strip`, `-rmsprtrs`, `-remove`, `-rmsprtr`, `--keep`, `--nstrips`, etc.
+
 ## Parse the prompt
 
 1. Strip the `/format` flag (any capitalization).
 2. Read the first mode token. A mode token is one of the aliases in `references/modes.md`, including multi-word names `Proper Case`, `All Caps`, `small caps`. Match case-insensitively.
-3. Take every single-quoted or double-quoted span after the mode as a payload. Also accept one fenced code block. Do not treat the wrapping quotes as part of the string.
-4. If there is a mode and no payload, ask for the quoted string. If there is a payload and no mode, ask which of `PC`, `UC`/`AC`, `LC`, `SC` to use. Do not guess.
+3. Detect any keep flag (`-nstrips`, `-strip`, `-rmsprtrs`, `-remove`, `-rmsprtr`, or `--keep` variants). If present, pass `--keep` to the script.
+4. Take every single-quoted or double-quoted span after the mode as a payload. Also accept one fenced code block. Do not treat the wrapping quotes as part of the string.
+5. If there is a mode and no payload, ask for the quoted string. If there is a payload and no mode, ask which of `PC`, `UC`/`AC`, `LC`, `SC` to use. Do not guess.
 
 Several quoted spans in one prompt are several jobs. Run each span through the same mode. Keep span order.
 
@@ -46,10 +50,12 @@ Several quoted spans in one prompt are several jobs. Run each span through the s
 Always run the locked script. Do not hand-case the letters.
 
 ```bash
-python3 @format/scripts/format_case.py --mode MODE --json -- "PAYLOAD"
+python3 /root/.grok/server-skills/format/scripts/format_case.py --mode MODE [--keep] --json -- "PAYLOAD"
 ```
 
 `MODE` is the raw alias the user typed (`PC`, `All Caps`, `sc`, …). The script normalizes it.
+
+Pass `--keep` (or any of the short aliases the script accepts) only when a keep flag was present in the prompt.
 
 Locked behavior
 
@@ -58,7 +64,9 @@ Locked behavior
 - `LC` — every letter lowercase
 - `SC` — first letter of each token a full capital; later letters Unicode small capitals (`Hᴇʟʟᴏ`)
 
-Whitespace, digits, emoji, and punctuation stay exactly where they were. Do not collapse spaces. Do not wrap lines. Do not "fix" spelling.
+**Default:** separator characters (`-`, `_`, `•`, `|`, `~`, `\`, `/`, `·`, dashes, and common punctuation) are replaced with a single space before casing. Letters, digits, existing whitespace, and emoji are preserved.
+
+**With keep flag:** separators and punctuation stay exactly where they were. Do not collapse spaces. Do not wrap lines. Do not "fix" spelling.
 
 ## Reply
 
@@ -74,10 +82,6 @@ If the script exits non-zero, print the stderr and stop. Do not silently fall ba
 
 ## Stacking
 
-`/format` only changes case. If the user also stacked `/summarize`, `/folio`, `/deep`, or another house flag, apply `/format` to the quoted payload first, then hand the reformatted string to the other skill only when that other skill was explicitly requested.
+`/format` only changes case (and optionally strips). If the user also stacked `/summarize`, `/folio`, `/deep`, or another house flag, apply `/format` to the quoted payload first, then hand the reformatted string to the other skill only when that other skill was explicitly requested.
 
 Do not emit a PDF, banner, or monograph for a `/format` request alone.
-
-## Delivery
-
-Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.
