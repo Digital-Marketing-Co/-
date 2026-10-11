@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-10 | esprompt | host-to-repo | 9bbe1a4 | Add complete Abacus prompt ZIP folder with version checks, design requirements and acceptance criteria |
 | 2026-10-10 | aura | grok-to-repo | 4b7b8cb | Correct company link text from Digital Marketing Co. to Digital Marketing Company in aura skill files |
 | 2026-10-10 | aura | grok-to-repo | efc7b62 | Add radiant aura skill: bold navy #000080 links with unique electric-blue/emerald 3D gradient aura; Dark Navy/Space Force/Light Air Force heading theme |
 | 2026-10-10 | all-skills | grok-to-repo | ecc3c93 | Correct company link text from Co. back to Digital Marketing Company; retain DigitalMarketingCo.org |
@@ -165,3 +166,5 @@ article-clip-pdf | c28167868ddd | 05a8c3bcb2fc | 9072 | 9766 |
 textbook provenance: timestamp_utc=2026-10-10; source_host=codex; base_commit=dc74cfc23195955f7dc57802a9ff81d44a5b247f; result_commit=482520732b87843c21a816f7aca2126a0ff7e205; summary=New textbook package with tested contrast script and structural validation.
 
 deep provenance: timestamp_utc=2026-10-10; skill=deep; source_host=codex; base_commit=8c9198a19cfaf391671b52dbada2809e231e8810; result_commit=66c3ac1b7532d04951bf7a0100ba927aaa915ffc; summary=Merge validated doctoral research update and complete canonical assets. Skills-page save rejected by its safety scan; installation is unconfirmed.
+
+esprompt provenance: timestamp_utc=2026-10-11T01:10:00Z; skill=esprompt; source_host=codex; base_commit=70fd90f78b7a7d35f4e665076120fe5bfdf7a804; result_commit=9bbe1a4ce30f7a2fc21e6aedeb1e9191f8e1ee42; summary=Sync complete installed ESPrompt folder, with vocabulary gate repairs.
