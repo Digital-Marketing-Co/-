@@ -24,7 +24,7 @@ Read on demand
 - `references/visual-floor.md` — promptform, depth, motion
 - `assets/mount-snippet.html` — host install sample
 
-## When this skill runs
+## Invocation
 
 - User typed `/pepe` plus a remainder.
 - User asked for a promptform panel, animated and 3D, to install inside another web application, and named this flag.
