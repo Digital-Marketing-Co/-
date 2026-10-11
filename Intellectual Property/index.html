@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intellectual Property</title>
+  <style>
+    html { background: #fff; color: #000; }
+    body { margin: 8px; min-height: calc(100vh - 16px); display: flex; flex-direction: column; }
+    main { flex: 1; }
+    footer { text-align: center; padding: 16px 8px; }
+    footer p { margin: 0 0 8px; }
+    .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    a:focus-visible { outline: 2px solid #000; outline-offset: 4px; }
+    @media print { footer { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+  <main aria-label="Intellectual Property"></main>
+  <footer aria-label="Copyright and company links">
+    <p>© <span id="copyright-years">2012–2026</span> <a class="company-link" href="https://WebDevelopment.tv" title="Web Development, Inc.">Web Development Corporation</a>. All rights reserved.</p>
+    <nav class="footer-links" aria-label="Company websites">
+      <a href="https://DigitalMarketingCo.org" title="Digital Marketing Co.">Digital Marketing Co.</a>
+      <a class="company-link" href="https://WebDevelopment.tv" title="Web Development, Inc.">Web Development, Inc.</a>
+    </nav>
+  </footer>
+  <script>
+    'use strict';
+    // Generated equivalent of the canonical notice year policy.
+    (() => {
+      const startYear = 2012;
+      const yearElement = document.getElementById('copyright-years');
+      function renderCopyrightYear() {
+        const currentYear = new Date().getFullYear();
+        yearElement.textContent = currentYear > startYear
+          ? startYear + '–' + currentYear
+          : String(startYear);
+      }
+      renderCopyrightYear();
+      window.addEventListener('pageshow', renderCopyrightYear);
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) renderCopyrightYear();
+      });
+      window.setInterval(renderCopyrightYear, 60000);
+    })();
+  </script>
+</body>
+</html>
