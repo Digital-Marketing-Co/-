@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-12 | negative | grok-to-repo | b42e68d | Restore complete expanded blocklist.md from installed Grok (full 2026 AI indicators; prior was placeholder) |
 | 2026-10-12 | negative | grok-to-repo | c7da005 | Restore full expanded blocklist and firm-style-ban from Grok installed copy (prior commit had dummy/placeholder) |
 | 2026-10-11 | negative | grok-to-repo | 04673c8 | Expand blocklist with exhaustive 2026 AI-generated content indicators (Graphite/GPTZero/Wikipedia tells; house already banned) |
 | 2026-10-11 | vector | grok-to-repo | 1e30f39 | Sync installed SKILL.md: outlined letterforms, live-text OCR gate, negative vocabulary and delivery contract |
