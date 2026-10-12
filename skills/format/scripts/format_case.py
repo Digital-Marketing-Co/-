@@ -8,9 +8,13 @@ Modes (aliases are case-insensitive):
   SC  smallcaps / SmallCaps        first letter of each word full capital,
                                    remaining letters of that word Unicode small caps
 
+By default, separator characters (- _ • | ~ \\ / · – — etc.) are replaced with a single space.
+Pass any of the keep flags to preserve them unchanged.
+
 Usage:
   python3 format_case.py --mode PC "hello world"
   python3 format_case.py --mode SC --json "Digital Marketing Company"
+  python3 format_case.py --mode SC --keep "e-mail subject"
   python3 format_case.py --self-test
 """
 
@@ -110,6 +114,41 @@ def is_letter(ch: str) -> bool:
     return unicodedata.category(ch).startswith("L")
 
 
+def is_emoji(ch: str) -> bool:
+    """Heuristic: Symbol, other (So) or common emoji ranges. Preserve these."""
+    cat = unicodedata.category(ch)
+    if cat == "So":
+        return True
+    # Common emoji blocks (rough but sufficient for preservation).
+    cp = ord(ch)
+    return (
+        0x1F300 <= cp <= 0x1F5FF
+        or 0x1F600 <= cp <= 0x1F64F
+        or 0x1F680 <= cp <= 0x1F6FF
+        or 0x1F900 <= cp <= 0x1F9FF
+        or 0x2600 <= cp <= 0x26FF
+        or 0x2700 <= cp <= 0x27BF
+    )
+
+
+def is_separator(ch: str) -> bool:
+    """Separator characters that should become spaces by default."""
+    if ch in "-_•|~\\/·–—−‐‑‒―|•·":
+        return True
+    # Common punctuation that often acts as a word separator.
+    if ch in ",.;:!?\"'`()[]{}":
+        return True
+    cat = unicodedata.category(ch)
+    if cat.startswith("P") or (cat.startswith("S") and not is_emoji(ch)):
+        return True
+    return False
+
+
+def replace_separators(text: str) -> str:
+    """Replace separator characters with a single space. Keep letters, digits, whitespace, emoji."""
+    return "".join(" " if is_separator(ch) else ch for ch in text)
+
+
 def to_small_cap(ch: str) -> str:
     folded = ch.casefold()
     if len(folded) == 1 and folded in SMALL_CAPS:
@@ -143,13 +182,16 @@ def transform_word(word: str, mode: str) -> str:
     return "".join(out)
 
 
-def transform_text(text: str, mode: str) -> str:
-    """Apply the mode while preserving whitespace runs and non-word gaps."""
+def transform_text(text: str, mode: str, keep_separators: bool = False) -> str:
+    """Apply the mode. By default replace separators with spaces first."""
     if mode not in MODE_LABELS:
         raise ValueError(f"unknown mode: {mode}")
+
+    if not keep_separators:
+        text = replace_separators(text)
+
     parts: list[str] = []
     buf: list[str] = []
-    in_word = False
 
     def flush_word() -> None:
         if buf:
@@ -157,42 +199,46 @@ def transform_text(text: str, mode: str) -> str:
             buf.clear()
 
     for ch in text:
-        # A "word" is a maximal run that is not whitespace. Punctuation
-        # stays glued to the adjacent letters so "hello," becomes "Hello,".
+        # A "word" is a maximal run that is not whitespace.
         if ch.isspace():
             flush_word()
             parts.append(ch)
-            in_word = False
         else:
             buf.append(ch)
-            in_word = True
     flush_word()
     return "".join(parts)
 
 
 def self_test() -> int:
     cases = [
-        ("pc", "hello world", "Hello World"),
-        ("pc", "HELLO WORLD", "Hello World"),
-        ("pc", "don't stop", "Don't Stop"),
-        ("pc", "e-mail subject", "E-mail Subject"),
-        ("pc", "  spaced   out  ", "  Spaced   Out  "),
-        ("uc", "Hello World", "HELLO WORLD"),
-        ("ac", "Hello World", "HELLO WORLD"),
-        ("lc", "Hello World", "hello world"),
-        ("sc", "Hello", "Hᴇʟʟᴏ"),
-        ("sc", "Digital Marketing Company", "Dɪɢɪᴛᴀʟ Mᴀʀᴋᴇᴛɪɴɢ Cᴏᴍᴘᴀɴʏ"),
-        ("ProperCase", "a b", "A B"),
-        ("ALL CAPS", "mix", "MIX"),
-        ("small caps", "Qa", "Qᴀ"),
+        # default: replace separators with space
+        ("pc", "hello world", False, "Hello World"),
+        ("pc", "HELLO WORLD", False, "Hello World"),
+        ("pc", "don't stop", False, "Don T Stop"),
+        ("pc", "e-mail subject", False, "E Mail Subject"),
+        ("pc", "  spaced   out  ", False, "  Spaced   Out  "),
+        ("uc", "Hello World", False, "HELLO WORLD"),
+        ("ac", "Hello World", False, "HELLO WORLD"),
+        ("lc", "Hello World", False, "hello world"),
+        ("sc", "Hello", False, "Hᴇʟʟᴏ"),
+        ("sc", "Digital Marketing Company", False, "Dɪɢɪᴛᴀʟ Mᴀʀᴋᴇᴛɪɴɢ Cᴏᴍᴘᴀɴʏ"),
+        ("ProperCase", "a b", False, "A B"),
+        ("ALL CAPS", "mix", False, "MIX"),
+        ("small caps", "Qa", False, "Qᴀ"),
+        ("sc", "2026-spatial-semiotics", False, "2026 Sᴘᴀᴛɪᴀʟ Sᴇᴍɪᴏᴛɪᴄꜱ"),
+        ("pc", "file_name-test|one", False, "File Name Test One"),
+        # keep behavior
+        ("pc", "e-mail subject", True, "E-mail Subject"),
+        ("pc", "don't stop", True, "Don't Stop"),
+        ("sc", "hello, world!", True, "Hᴇʟʟᴏ, Wᴏʀʟᴅ!"),
     ]
     failed = 0
-    for raw_mode, src, expected in cases:
+    for raw_mode, src, keep, expected in cases:
         mode = normalize_mode(raw_mode)
-        got = transform_text(src, mode)  # type: ignore[arg-type]
+        got = transform_text(src, mode, keep_separators=keep)  # type: ignore[arg-type]
         if got != expected:
             failed += 1
-            print(f"FAIL {raw_mode!r} {src!r}\n  got {got!r}\n  exp {expected!r}", file=sys.stderr)
+            print(f"FAIL {raw_mode!r} keep={keep} {src!r}\n  got {got!r}\n  exp {expected!r}", file=sys.stderr)
     if failed:
         print(f"{failed} failed", file=sys.stderr)
         return 1
@@ -205,6 +251,17 @@ def main() -> int:
     parser.add_argument("--mode", "-m", required=False, help="PC, UC, AC, LC, SC, or a long alias")
     parser.add_argument("--json", action="store_true", help="print a JSON object")
     parser.add_argument("--self-test", action="store_true")
+    parser.add_argument(
+        "--keep",
+        "--nstrips",
+        "--strip",
+        "--rmsprtrs",
+        "--remove",
+        "--rmsprtr",
+        action="store_true",
+        dest="keep",
+        help="Do not replace separators with spaces (preserve them).",
+    )
     parser.add_argument("text", nargs="*", help="text to reformat (joins with a single space)")
     args = parser.parse_args()
 
@@ -226,7 +283,7 @@ def main() -> int:
     else:
         raw = " ".join(args.text)
 
-    out = transform_text(raw, mode)
+    out = transform_text(raw, mode, keep_separators=args.keep)
     if args.json:
         print(
             json.dumps(
@@ -235,6 +292,7 @@ def main() -> int:
                     "label": MODE_LABELS[mode],
                     "source": raw,
                     "text": out,
+                    "kept_separators": args.keep,
                 },
                 ensure_ascii=False,
             )

@@ -1,6 +1,6 @@
 ---
 name: format
-description: Reformat quoted text after the /format flag into Proper Case, UPPERCASE, lowercase, or Small Caps using case-insensitive acronyms PC, UC, AC, LC, and SC. By default replaces separator characters (- _ • | ~ \ / etc.) with spaces unless a keep flag is present. Use when the user types /format, asks for Proper Case email subjects, All Caps, lowercase, or small-caps restyling of a quoted string.
+description: Reformat quoted text after the /format flag into Proper Case, UPPERCASE, lowercase, or Small Caps using case-insensitive acronyms PC, UC, AC, LC, and SC. By default replaces separator characters (- _ • | ~ \\ / etc.) with spaces unless a keep flag is present. Use when the user types /format, asks for Proper Case email subjects, All Caps, lowercase, or small-caps restyling of a quoted string.
 metadata:
   type: workflow
   version: "1.2"
