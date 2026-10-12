@@ -1,0 +1,10 @@
+{
+  "skill": "schemata",
+  "test_cases": [
+    {"input": "/schemata this paper.pdf", "should_trigger": true},
+    {"input": "$schemata consolidate these documents into JSON-LD", "should_trigger": true},
+    {"input": "enrich my documents with Schema.org structured data", "should_trigger": true},
+    {"input": "what is Schema.org", "should_trigger": false},
+    {"input": "write a blog post about JSON-LD", "should_trigger": false}
+  ]
+}

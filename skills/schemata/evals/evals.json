@@ -1,0 +1,20 @@
+{
+  "skill": "schemata",
+  "test_cases": [
+    {
+      "name": "single_markdown_document",
+      "input": "Run /schemata on a markdown paper with headings and references",
+      "assertions": ["produces corpus.jsonld", "uses CreativeWork", "preserves section order", "no fabricated authors"]
+    },
+    {
+      "name": "corpus_consolidation",
+      "input": "Consolidate two documents that mention the same organization",
+      "assertions": ["deduplicates shared entity by evidence", "keeps document-specific provenance", "emits single top-level @graph"]
+    },
+    {
+      "name": "safe_html_embedding",
+      "input": "Generate HTML script block for a document containing </script>",
+      "assertions": ["escapes less-than", "script remains valid", "parses back to same graph"]
+    }
+  ]
+}
