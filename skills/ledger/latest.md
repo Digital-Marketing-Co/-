@@ -4,6 +4,9 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-12 | ringtone | grok-to-repo | e64221d | Sync installed SKILL.md: metadata v3.0, delivery contract, and iPhone pack workflow |
+| 2026-10-12 | bleed | grok-to-repo | b4f65a7 | Sync installed SKILL.md: metadata, lifecycle active, refined capture and build workflow |
+| 2026-10-12 | format | grok-to-repo | 401f955 | Sync installed SKILL.md, modes.md, format_case.py, and CHANGELOG.md: separator handling and metadata |
 | 2026-10-12 | schemata | grok-to-repo | c183c2d | Initial skill: document-to-Schema.org JSON-LD extraction, graph construction, safe HTML embedding, CLI, fixtures, and vocabulary cache reference |
 | 2026-10-12 | negative | grok-to-repo | b42e68d | Restore complete expanded blocklist.md from installed Grok (full 2026 AI indicators; prior was placeholder) |
 | 2026-10-12 | negative | grok-to-repo | c7da005 | Restore full expanded blocklist and firm-style-ban from Grok installed copy (prior commit had dummy/placeholder) |
