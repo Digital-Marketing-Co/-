@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-13 | banner | repo-to-grok | 7801652 | Enhance SKILL.md with context-locked voxel visuals and accessible parallax for grammar atlas and long-form works |
 | 2026-10-13 | article-clip-pdf | grok-to-repo | 65bcd2b | Sync installed SKILL.md and text updates from Grok (metadata v3.0, workflows, scripts) |
 | 2026-10-13 | banner | grok-to-repo | 65bcd2b | Sync installed SKILL.md and text updates from Grok (metadata v3.0, workflows, scripts) |
 | 2026-10-13 | bleed | grok-to-repo | 65bcd2b | Sync installed SKILL.md and text updates from Grok (minor formatting) |
