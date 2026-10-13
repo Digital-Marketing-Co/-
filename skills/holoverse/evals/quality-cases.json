@@ -1,0 +1,18 @@
+{
+  "skill": "holoverse",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Use holoverse to build or audit the standalone HOLOVERSE app with six bilingual realms and voxel mode.",
+      "assertions": [
+        "All six realms are present with EN and ES titles.",
+        "tsc build is clean and vitest reports all tests passing.",
+        "Reduced-motion and no-WebGL fallbacks are honored.",
+        "No paid LLM or Abacus inference call occurs at runtime."
+      ],
+      "grader": "Inspect actual build output, test logs, and rendered pages; no guessed pass."
+    }
+  ]
+}
