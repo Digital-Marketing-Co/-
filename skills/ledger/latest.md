@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-13 | QAIR | repo-to-grok | f7ecf6d | Add QAIR v2 skill with adaptive help and futuristic QA master prompts |
 | 2026-10-12 | ringtone | grok-to-repo | e64221d | Sync installed SKILL.md: metadata v3.0, delivery contract, and iPhone pack workflow |
 | 2026-10-12 | bleed | grok-to-repo | b4f65a7 | Sync installed SKILL.md: metadata, lifecycle active, refined capture and build workflow |
 | 2026-10-12 | format | grok-to-repo | 401f955 | Sync installed SKILL.md, modes.md, format_case.py, and CHANGELOG.md: separator handling and metadata |
