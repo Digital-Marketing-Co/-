@@ -1,0 +1,10 @@
+{
+  "skill": "ski",
+  "test_cases": [
+    {"input": "/ski", "should_trigger": true},
+    {"input": "write a canine communication monograph and training curriculum", "should_trigger": true},
+    {"input": "update the dog communication evidence set", "should_trigger": true},
+    {"input": "book a ski trip", "should_trigger": false},
+    {"input": "explain classical conditioning in general with no dogs", "should_trigger": false}
+  ]
+}

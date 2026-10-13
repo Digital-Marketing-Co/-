@@ -1,0 +1,10 @@
+{
+  "skill": "textbook",
+  "test_cases": [
+    {"input": "/textbook", "should_trigger": true},
+    {"input": "write a PhD textbook on neural networks", "should_trigger": true},
+    {"input": "textbook PDF full bleed futuristic", "should_trigger": true},
+    {"input": "summarize this paper", "should_trigger": false},
+    {"input": "/folio climate change", "should_trigger": false}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "skill": "ski",
+  "test_cases": [
+    {"name": "flag_only", "input": "/ski", "assertions": ["loads ski skill", "starts protocol", "does not claim all literature was read"]},
+    {"name": "named_problem", "input": "/ski leash frustration", "assertions": ["focused chapter", "individual plan template filled", "reward-based methods only"]},
+    {"name": "update", "input": "/ski update ski-leash-frustration", "assertions": ["reuses evidence matrix", "searches gaps only"]}
+  ]
+}

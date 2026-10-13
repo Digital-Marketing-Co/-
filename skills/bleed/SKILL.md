@@ -82,8 +82,8 @@ Give the user the PDF. State page count and snippet count. Do not dump the manif
 Revise in place. Do not create bleed-v2/.
 
 1. Edit SKILL.md, references/, or scripts/ at this path.
-- Bump metadata.version.
-2. Run `python3 /usr/share/grok/bundled-skills/bundled__postmortem/scripts/validate-skill.py /root/.grok/server-skills/bleed`.
+2. Bump metadata.version.
+3. Run `python3 /usr/share/grok/bundled-skills/bundled__postmortem/scripts/validate-skill.py /root/.grok/server-skills/bleed`.
 
 ## Render gate
 

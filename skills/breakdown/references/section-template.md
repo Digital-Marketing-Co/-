@@ -27,22 +27,8 @@ One short paragraph on composition. Name opaque or fossilized pieces.
 Language path, first attestation when known, cognates that earn their space.
 
 **History and evolution.**
-Period-by-period sense change. Name broadening, narrowing, pejoration, amelioration, metaphor when they happened.
+Period-by-period sense change.
 
 **Notes.**
 Only if needed. Else write None.
 ```
-
-Kind vocabulary (use these labels, not synonyms)
-
-- prefix
-- root
-- combining form
-- suffix
-- inflection
-- linking vowel
-- compound member
-- borrowed stem
-- clipping
-- blend piece
-- reduplication

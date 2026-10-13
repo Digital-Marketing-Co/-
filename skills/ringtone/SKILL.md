@@ -84,13 +84,13 @@ The script prints a JSON validation report. Exit code 1 means the pack is not iP
 
 ### 4. Install instructions to give the user
 
- iPhone 12 Pro Max (and any iOS before the Files Use as Ringtone sheet):
+iPhone 12 Pro Max (and any iOS before the Files Use as Ringtone sheet):
 
 1. AirDrop or USB-copy the .m4r
 2. Open it, or import into GarageBand and Share, then Ringtone
 3. Settings, Sounds and Haptics, Ringtone, Custom
 
- iPhone 16 Pro Max on iOS 26+:
+iPhone 16 Pro Max on iOS 26+:
 
 1. Save the .m4a or .mp3 into On My iPhone in Files (not only iCloud)
 2. Share, then Use as Ringtone

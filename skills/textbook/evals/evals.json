@@ -1,0 +1,20 @@
+{
+  "skill": "textbook",
+  "test_cases": [
+    {
+      "name": "basic_textbook_trigger",
+      "input": "/textbook quantum computing foundations",
+      "assertions": ["Produces a PhD-level textbook PDF", "Includes full-bleed futuristic backgrounds", "Bibliography links real academic PDFs", "Equations compiled via itqe and latex"]
+    },
+    {
+      "name": "typography_and_contrast",
+      "input": "/textbook machine learning optimization",
+      "assertions": ["Distinct classes for headings, paragraphs, citations, captions, footers", "QA contrast scan performed", "Text color optimized against background"]
+    },
+    {
+      "name": "stack_order",
+      "input": "/textbook climate modeling equations",
+      "assertions": ["Runs banner for each section and subsection", "Applies images skill", "Stamps copyright", "Proceeds to validated file"]
+    }
+  ]
+}
