@@ -224,3 +224,12 @@ Apply `interop/SKILL.md` once after the task-specific checks. Its shared rules y
 ## Delivery
 
 Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.
+
+## Conversation-specific upgrade — grammar atlas and long-form scholarly works (2026-10-13)
+
+- Anchor every figure to the immediately preceding text window and its named grammatical rule, incorrect/correct contrast, or syntax construction. Generate a scene brief that explicitly describes what the image teaches; reject merely decorative or off-topic artwork.
+- Generate original, hyperrealistic, beautiful futuristic voxel-inspired visuals with at least three legible depth planes, credible lighting, occlusion, parallax-ready layer separation, and contextually appropriate holographic aesthetics. Ensure diagrams prioritize readable, accurate linguistic labels over spectacle.
+- Preserve one-to-one correspondence between figure slot and distinct asset; no reused images, prompts, perceptual near-duplicates, or recycled section banners. Audit a manifest of placement, prompt, SHA-256, perceptual hash, caption, alt text, and citation/provenance when applicable.
+- For browser editions, layer art can respond to pointer motion or permissioned device orientation; include reduced-motion and non-sensor fallback, clamp transforms, and avoid implying a physical holographic display. In PDF/DOCX/PPTX, deliver static layered-depth imagery rather than claiming live gyroscopic behavior.
+- Coordinate with /banner to ensure every section and subsection has a distinct full-bleed banner, while inline figures follow the preceding text and existing cadence rules. Audit exported pages for relevance, nonduplication, correct order, clipping, legibility, and bleed.
+- Follow /copyright as the sole source of legal footer text; do not independently calculate or duplicate copyright notices.
