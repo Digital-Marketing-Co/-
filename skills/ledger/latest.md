@@ -4,7 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
-| 2026-10-13 | banner | repo-to-grok | 6ddb58e | Upgrade SKILL.md to year-3629 voxel holographic gyro-parallax standard |
+| 2026-10-13 | images | repo-to-grok | 6b2d57a | Upgrade SKILL.md to year-3629 voxel holographic gyro-parallax standard |
 | 2026-10-13 | images | repo-to-grok | a67544a | Enhance SKILL.md with context-locked voxel visuals and accessible parallax for grammar atlas works |
 | 2026-10-13 | banner | repo-to-grok | 7801652 | Enhance SKILL.md with context-locked voxel visuals and accessible parallax for grammar atlas and long-form works |
 | 2026-10-13 | article-clip-pdf | grok-to-repo | 65bcd2b | Sync installed SKILL.md and text updates from Grok (metadata v3.0, workflows, scripts) |
