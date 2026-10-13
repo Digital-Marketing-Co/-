@@ -228,3 +228,13 @@ Run this once, last, after every other section. Full contract: `interop/SKILL.md
 3. Run `python3 <negative-root>/scripts/sweep_negative.py` on that text.
 4. Exit 1 blocks delivery. Rewrite every hit with the replacement map so the sentence still reads as English and is tighter than the draft. Re-scan until CLEAN.
 5. Do not delete a claim to hide a token. Do not leave a hole. Verbatim user source and the blocklist file itself are the only carve-outs.
+
+## Conversation-specific upgrade — grammar atlas and long-form scholarly works (2026-10-13)
+
+- Build a heading inventory before generation. Every section AND every subsection receives its own separately generated, context-specific banner; never reuse a parent image for a child node.
+- Enforce physical full bleed: rendered banner touches the left and right page trim, with zero horizontal padding or margins. Keep the existing top/bottom alpha treatment; do not fade left or right edges.
+- Construct a unique scene brief from the heading and its actual explanatory text, including the exact grammatical phenomenon and a demonstrative visual when practical. Reject generic libraries or unrelated futuristic scenery when they do not teach or illuminate the local topic.
+- Render hyperrealistic, luminous, aesthetically refined futuristic voxel-inspired depth: explicit foreground, middle-ground, background, occlusion, atmospheric perspective and multiple independent depth planes. Check perspective and typographic accuracy.
+- For interactive HTML, optional gyroscope-sensitive parallax may use device orientation only with required user permission, accessible fallback, reduced-motion support, and bounded transforms. A static PDF is NOT gyroscope-sensitive or truly holographic: present depth as an optical illustration, not a runtime capability.
+- Maintain per-document uniqueness ledger (section ID, image asset, prompt fingerprint, SHA-256, perceptual hash); fail on duplicate or near-duplicate scenes, and regenerate with a substantively different composition. Include alt text and provenance for every asset.
+- Validate all section/subsection banners in the final exported artifact, not only in source manifests. Record exceptions rather than claiming 100% coverage without checking.
