@@ -18,6 +18,11 @@ Keep Digital-Marketing-Co/- as the shared skill source for Grok and ChatGPT.
 - User asked to update the GitHub skill repo after a skill change.
 - User asked Grok and ChatGPT to stay on the same skill revision.
 
+
+## Mandated first priority on any skill update
+
+When an individual skill is updated on the repository, perform a complete improvement of everything that can be improved for that skill before the commit is considered finished. Raise the version marker if one exists.
+
 ## Steps
 
 1. Read SKILL-SYNC.md and skills/ledger/latest.md on main.

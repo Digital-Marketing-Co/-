@@ -1,0 +1,17 @@
+[
+  {
+    "id": "trigger-flag",
+    "input": "/GlobalReset",
+    "expected": "Begins a full improvement pass across all skills on the repository and raises version markers."
+  },
+  {
+    "id": "version-bump",
+    "input": "skill with version 1.2.3",
+    "expected": "After improvement the version becomes 1.2.4 and CHANGELOG receives a new entry."
+  },
+  {
+    "id": "no-bundled-overwrite",
+    "input": "bundled host skill present",
+    "expected": "Host-bundled skills are left untouched."
+  }
+]
