@@ -1,0 +1,17 @@
+[
+  {
+    "id": "trigger-flag",
+    "input": "/ResearchPlus",
+    "expected": "Resolves to research-unbounded and applies its rules in full."
+  },
+  {
+    "id": "lowercase",
+    "input": "/researchplus",
+    "expected": "Same resolution as /ResearchPlus."
+  },
+  {
+    "id": "no-override",
+    "input": "research-unbounded rules",
+    "expected": "Does not duplicate, override, or weaken the canonical rules."
+  }
+]

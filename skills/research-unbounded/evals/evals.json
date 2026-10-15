@@ -1,0 +1,17 @@
+[
+  {
+    "id": "no-arbitrary-caps",
+    "input": "research document",
+    "expected": "No arbitrary page, word, or citation caps are imposed."
+  },
+  {
+    "id": "source-standards",
+    "input": "citation needed",
+    "expected": "Primary scholarly or official sources are preferred; no fabricated references."
+  },
+  {
+    "id": "alias-wicca",
+    "input": "/wicca",
+    "expected": "Treated as an alias for /wca under this standard."
+  }
+]

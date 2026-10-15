@@ -1,3 +1,11 @@
+---
+name: research-unbounded
+description: Unlimited-depth research and document standard. Applies to every compatible research, atlas, textbook, WCA, Wicca, bibliography, PDF, and publication skill. Trigger on /research-unbounded or when a skill requires unlimited-depth source and publication rules.
+metadata:
+  type: workflow
+  version: "1.0.0"
+  flag: /research-unbounded
+---
 # Unlimited-Depth Research and Document Standard v1.0.0
 Applies to every compatible research, atlas, textbook, WCA, Wicca, bibliography, PDF, and publication skill.
 

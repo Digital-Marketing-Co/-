@@ -1,3 +1,11 @@
+---
+name: ResearchPlus
+description: Alias that resolves /ResearchPlus and /researchplus to the research-unbounded standard. Trigger on /ResearchPlus or /researchplus.
+metadata:
+  type: workflow
+  version: "1.0.0"
+  flag: /ResearchPlus
+---
 # ResearchPlus
 
 Alias: `/ResearchPlus` and `/researchplus` resolve to `/research-unbounded`.

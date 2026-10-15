@@ -1,0 +1,17 @@
+[
+  {
+    "id": "trigger-flag",
+    "input": "/wicca",
+    "expected": "Routes to the WCA workflow and loads research-unbounded rules."
+  },
+  {
+    "id": "alias-case",
+    "input": "/Wicca",
+    "expected": "Same route as /wicca."
+  },
+  {
+    "id": "retain-wca",
+    "input": "existing /wca behavior",
+    "expected": "All prior /wca behavior is retained."
+  }
+]
