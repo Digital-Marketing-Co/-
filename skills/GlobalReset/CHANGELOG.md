@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 — 2026-10-15
+
+- Write the complete improvement checklist into the skill.
+- Version advances only when a non-version checklist item changes.
+
 ## 1.0.1 — 2026-10-15
 
 - Add the complete improvement rule (100 percent) that requires every improvable element to be addressed before a skill is considered finished.
