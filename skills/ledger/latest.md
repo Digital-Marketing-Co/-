@@ -4,6 +4,9 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-15 | kids | grok-to-repo | 4677c8c | Add CHANGELOG under GlobalReset checklist |
+| 2026-10-15 | prompt-start | grok-to-repo | 4677c8c | Add CHANGELOG under GlobalReset checklist |
+| 2026-10-15 | proceed | grok-to-repo | 4677c8c | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-15 | wicca | grok-to-repo | de98968 | Add version, CHANGELOG, and evals under GlobalReset checklist |
 | 2026-10-15 | research-unbounded | grok-to-repo | de98968 | Add version, CHANGELOG, and evals under GlobalReset checklist |
 | 2026-10-15 | ResearchPlus | grok-to-repo | de98968 | Add version, CHANGELOG, and evals under GlobalReset checklist |
