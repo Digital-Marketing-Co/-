@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-15 | kids | repo-to-grok | 69f9fc4 | Add KIDS v1.0.0 educational rewrite and illustrated parody skill; Grok installed from repo |
 | 2026-10-14 | latex | grok-to-repo | 54e1f6b | Sync installed references/above-phd-type.md from Grok (above-PhD type scale standards) |
 | 2026-10-13 | banner | repo-to-grok | df1c905 | Prioritize modern real-world cinematic photorealism while retaining depth and gyro parallax |
 | 2026-10-13 | images | repo-to-grok | 6b2d57a | Upgrade SKILL.md to year-3629 voxel holographic gyro-parallax standard |
