@@ -26,11 +26,13 @@ def audit(root: Path) -> dict:
             if not isinstance(data, dict):
                 raise ValueError('Frontmatter must be a mapping')
             name, description = data.get('name'), data.get('description')
-            if not isinstance(name, str) or not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', name) or len(name)>64:
+            if not isinstance(name, str) or not re.fullmatch(r'[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*', name) or len(name)>64:
                 raise ValueError('Invalid canonical name')
             if name != path.parent.name or name in names:
                 raise ValueError('Name differs from directory or repeats an identity')
             names.add(name)
+            if name != name.lower():
+                warnings.append(f'{relative}: legacy mixed-case skill identity; retain alias and migrate in a separate compatibility release')
             if not isinstance(description, str) or not 1 <= len(description) <= 1024:
                 raise ValueError('Description must be 1–1024 characters')
             if len(text.splitlines()) > 500:

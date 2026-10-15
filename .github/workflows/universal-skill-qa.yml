@@ -1,0 +1,35 @@
+name: Universal Skill QA
+on:
+  pull_request:
+  push:
+    branches: [qa-universal-visual-hardening-20261015]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Parser regression tests
+        run: python -m unittest discover -s skills/qa-universal/tests -v
+      - name: Repository inventory and static scan
+        run: python skills/qa-universal/scripts/audit_repository.py . --output qa-report.json
+      - name: Summary
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open("qa-report.json"))
+          print("Files:",d["inventory"]["files"])
+          print("Skills:",d["inventory"]["skill_definitions"])
+          print("Review findings:",d["finding_count"])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: universal-skill-static-qa
+          path: qa-report.json
+          if-no-files-found: warn
