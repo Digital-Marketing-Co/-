@@ -1,0 +1,27 @@
+name: Skills synchronization validation
+on:
+  push:
+    paths:
+      - 'skills/**'
+      - 'scripts/sync-skills.sh'
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate skill definitions
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -d skills ]; then
+            find skills -name SKILL.md -type f -print
+            while IFS= read -r f; do
+              test -s "$f" || { echo "Empty skill: $f"; exit 1; }
+            done < <(find skills -name SKILL.md -type f)
+          fi
+          bash -n scripts/sync-skills.sh
