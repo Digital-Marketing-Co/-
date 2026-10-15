@@ -136,7 +136,7 @@ def is_separator(ch: str) -> bool:
     if ch in "-_•|~\\/·–—−‐‑‒―|•·":
         return True
     # Common punctuation that often acts as a word separator.
-    if ch in ",.;:!?\"'`()[]{}":
+    if ch in ",.;:?\"'`()[]{}":
         return True
     cat = unicodedata.category(ch)
     if cat.startswith("P") or (cat.startswith("S") and not is_emoji(ch)):
