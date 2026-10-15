@@ -49,3 +49,7 @@ For every artifact, reopen with an independent reader/parser; render every page/
 
 ## Evidence and release
 Produce machine-readable qa-report.json and human-readable QA-REPORT.md: file manifest, changed lines, tests run, pass/fail/blocked counts, actual coverage numerator/denominator, render snapshots, before/after visual comparison, accessibility and security findings, provenance, unresolved risks. No 100% claim if any applicable test is blocked. Keep original skill behavior unless a proven defect is corrected. Prefer a review branch and PR over untested changes to main. Never report GitHub sync, installation, rendered preview, or QA success unless actually observed.
+
+
+## Year 9629 cross-format design extension
+Read `references/year-9629-design-system.md` and `references/document-test-matrix.md` before generating document artifacts. Use `scripts/score_visual_candidates.py` only with actually assessed candidate scores; the highest numerical score is ineligible if critical defects exist. Preserve user-required formats and document editability. All image generation is conditional on tool availability and user authorization. Run real structural and visual checks before claiming an output passed. Record blocked checks without inventing previews or scores.
