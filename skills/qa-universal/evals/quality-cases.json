@@ -1,0 +1,31 @@
+{
+  "skill": "qa-universal",
+  "cases": [
+    {
+      "prompt": "Generate /images and /banner in either order",
+      "assertions": [
+        "One banner owner",
+        "Deterministic dependency ordering",
+        "No duplicated banner"
+      ],
+      "grader": "Run command planner tests and inspect plan JSON"
+    },
+    {
+      "prompt": "Evaluate three visual designs, one with a critical defect",
+      "assertions": [
+        "Critical failure rejected",
+        "Highest eligible measured score selected"
+      ],
+      "grader": "Run visual scoring tests"
+    },
+    {
+      "prompt": "Render PDF with missing glyph and overlapping text",
+      "assertions": [
+        "Missing glyph flagged",
+        "Overlap flagged or manual review required",
+        "No untested PASS"
+      ],
+      "grader": "Run PDF render QA with documented visual evidence"
+    }
+  ]
+}
