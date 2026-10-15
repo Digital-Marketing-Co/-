@@ -3,7 +3,7 @@ name: GlobalReset
 description: Perform full improvement of everything improvable across every skill in the Digital-Marketing-Co/- repository, then automatically raise version numbers. Trigger on /GlobalReset, GlobalReset, full skill improvement, or reset all skills.
 metadata:
   type: workflow
-  version: "1.0.0"
+  version: "1.0.1"
   flag: /GlobalReset
 ---
 
@@ -17,6 +17,10 @@ Raise the quality of every skill in the shared repository and advance each versi
 - User asked for a full improvement pass over all skills on the repository.
 - User asked to raise version numbers after a broad skill update.
 
+## Complete improvement rule (100 percent)
+
+Every skill touched by this workflow must receive a complete improvement of everything that can be improved. No partial pass is acceptable. Wording, triggers, required files, references, version markers, workflows, and consistency with research-unbounded and interop contracts are all in scope. The improvement is finished only when no further improvable element remains.
+
 ## Mandated first priority
 
 When any individual skill is updated on the repository, perform a complete improvement of everything that can be improved for that skill before the commit is considered finished.
@@ -26,7 +30,7 @@ When any individual skill is updated on the repository, perform a complete impro
 1. Read SKILL-SYNC.md, skills/ledger/latest.md, and list every skills/<name>/ directory on main.
 2. For each skill directory that contains a SKILL.md:
    - Read the full skill tree.
-   - Improve every improvable element: wording clarity, trigger accuracy, missing required files (CHANGELOG, evals), broken references, outdated version markers, incomplete workflows, and consistency with research-unbounded and interop contracts.
+   - Apply the complete improvement rule above to every improvable element.
    - Raise the version number in frontmatter metadata.version and in CHANGELOG.md by one patch level unless a larger bump is justified by the change set.
 3. Commit the complete improved skill directories to main.
 4. Prepend one ledger row per skill that changed: date, skill name, direction, short hash, one-line summary of the improvement.
