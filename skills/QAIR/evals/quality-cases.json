@@ -1,0 +1,14 @@
+{
+  "skill": "QAIR",
+  "cases": [
+    {
+      "prompt": "/QAIR -audit example application",
+      "assertions": [
+        "Unverified claims identified",
+        "Actionable technical acceptance criteria supplied",
+        "No deployment success claimed without evidence"
+      ],
+      "grader": "Review a controlled audit fixture and compare observed output with assertions"
+    }
+  ]
+}
