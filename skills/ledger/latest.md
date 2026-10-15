@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-15 | ResearchPlus | repo-to-grok | bcc81ab | Add ResearchPlus alias for research-unbounded; Grok installed from repo |
 | 2026-10-15 | research-unbounded | repo-to-grok | ec97a28 | Add Unlimited-Depth Research and Document Standard v1.0.0; Grok installed from repo |
 | 2026-10-15 | wicca | repo-to-grok | b57ff98 | Add Wicca alias for /wca with unlimited-depth standards; Grok installed from repo |
 | 2026-10-15 | kids | repo-to-grok | 69f9fc4 | Add KIDS v1.0.0 educational rewrite and illustrated parody skill; Grok installed from repo |
