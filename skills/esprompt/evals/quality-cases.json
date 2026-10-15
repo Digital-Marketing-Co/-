@@ -1,0 +1,14 @@
+{
+  "skill": "esprompt",
+  "cases": [
+    {
+      "prompt": "Execute /esprompt with a representative valid input",
+      "assertions": [
+        "Output preserves factual content and required structure",
+        "Unverified outcomes are not marked successful",
+        "Produced artifacts are validated before delivery"
+      ],
+      "grader": "Run the relevant skill on a controlled fixture, validate structure, inspect rendered output and record evidence"
+    }
+  ]
+}
