@@ -21,5 +21,10 @@ def _resolve_skill(name: str) -> Path:
     raise FileNotFoundError(f"Required skill not found: {name}")
 
 
+def resolve_images() -> Path:
+    """Resolve the canonical images skill without side effects."""
+    return _resolve_skill("images")
+
+
 if __name__ == "__main__":
     runpy.run_path(str(_resolve_skill("images") / "scripts/rebuild_document.py"), run_name="__main__")
