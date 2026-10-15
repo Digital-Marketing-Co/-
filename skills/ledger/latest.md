@@ -4,6 +4,9 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-15 | wicca | grok-to-repo | de98968 | Add version, CHANGELOG, and evals under GlobalReset checklist |
+| 2026-10-15 | research-unbounded | grok-to-repo | de98968 | Add version, CHANGELOG, and evals under GlobalReset checklist |
+| 2026-10-15 | ResearchPlus | grok-to-repo | de98968 | Add version, CHANGELOG, and evals under GlobalReset checklist |
 | 2026-10-15 | GlobalReset | grok-to-repo | 9579b7e | Add complete improvement checklist and bump to 1.0.2 |
 | 2026-10-15 | GlobalReset | grok-to-repo | bc6a292 | Add complete improvement rule (100 percent) and bump to 1.0.1 |
 | 2026-10-15 | GlobalReset | grok-to-repo | dbfbce6 | Add GlobalReset skill for full improvement of every skill on the repository with automatic version advance |
