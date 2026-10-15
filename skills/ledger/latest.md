@@ -4,6 +4,8 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-15 | GlobalReset | grok-to-repo | dbfbce6 | Add GlobalReset skill for full improvement of every skill on the repository with automatic version advance |
+| 2026-10-15 | skill-sync | grok-to-repo | dbfbce6 | Insert mandated first-priority improvement step for any individual skill update |
 | 2026-10-15 | wicca | grok-to-repo | 04f3899 | Remove no-religious-content restriction from /wicca alias |
 | 2026-10-15 | research-unbounded | grok-to-repo | e932da4 | Remove no-religious-content note from wicca alias description |
 | 2026-10-15 | ResearchPlus | repo-to-grok | bcc81ab | Add ResearchPlus alias for research-unbounded; Grok installed from repo |
