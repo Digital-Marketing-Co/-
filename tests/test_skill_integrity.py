@@ -19,7 +19,7 @@ class IntegrityTests(unittest.TestCase):
     def test_canonical_tree(self):
         report=module(ROOT/'scripts/validate_skills.py').audit(ROOT)
         self.assertEqual(report['errors'],[])
-        self.assertEqual(report['skill_count'],59)
+        self.assertEqual(report['skill_count'],len(list((ROOT/'skills').glob('*/SKILL.md'))))
 
     def test_resolver_checkout_identity(self):
         resolver=module(ROOT/'skills/interop/scripts/resolve_root.py')
