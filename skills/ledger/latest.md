@@ -4,6 +4,10 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-16 | banner | repo-to-hosts | 4034f12 | ChatGPT and Grok should use the repo rebuild_document.py host resolver; the installed Grok stub is the older path-only version |
+| 2026-10-16 | coffee | skip-binaries | 4034f12 | Local fonts CormorantGaramond-Italic-Variable.ttf and PlayfairDisplay-Variable.ttf exceed 200KB; skipped. Text files match |
+| 2026-10-16 | copyright | skip-binaries | 4034f12 | Local button-dmc.png and button-wdc.png exceed 200KB; skipped. Text files match |
+| 2026-10-16 | weekday-gather | checked | 4034f12 | Compared 50 shared skills; no newer Grok text to push. Only-repo skills remain repo-canonical |
 | 2026-10-15 | kids | grok-to-repo | 4677c8c | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-15 | prompt-start | grok-to-repo | 4677c8c | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-15 | proceed | grok-to-repo | 4677c8c | Add CHANGELOG under GlobalReset checklist |
