@@ -4,6 +4,10 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-17 | blink | grok-to-repo | 4fdceac | Add CHANGELOG under GlobalReset checklist |
+| 2026-10-17 | article-clip-pdf | grok-to-repo | 4fdceac | Add CHANGELOG under GlobalReset checklist |
+| 2026-10-17 | atlas | grok-to-repo | 4fdceac | Add CHANGELOG under GlobalReset checklist |
+| 2026-10-17 | book | grok-to-repo | 4fdceac | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-16 | upscale | grok-to-repo | a5a4c52 | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-16 | copysite | grok-to-repo | a5a4c52 | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-16 | compression | grok-to-repo | a5a4c52 | Add CHANGELOG under GlobalReset checklist |
