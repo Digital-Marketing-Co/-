@@ -4,6 +4,9 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-16 | upscale | grok-to-repo | a5a4c52 | Add CHANGELOG under GlobalReset checklist |
+| 2026-10-16 | copysite | grok-to-repo | a5a4c52 | Add CHANGELOG under GlobalReset checklist |
+| 2026-10-16 | compression | grok-to-repo | a5a4c52 | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-16 | ispy | grok-to-repo | 73170bb | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-16 | ringtone | grok-to-repo | 73170bb | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-16 | vector | grok-to-repo | 73170bb | Add CHANGELOG under GlobalReset checklist |
