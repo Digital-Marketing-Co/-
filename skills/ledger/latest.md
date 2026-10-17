@@ -4,6 +4,9 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-16 | ispy | grok-to-repo | 73170bb | Add CHANGELOG under GlobalReset checklist |
+| 2026-10-16 | ringtone | grok-to-repo | 73170bb | Add CHANGELOG under GlobalReset checklist |
+| 2026-10-16 | vector | grok-to-repo | 73170bb | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-16 | plain-jane | grok-to-repo | adf2cef | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-16 | debbie-downer | grok-to-repo | adf2cef | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-16 | hilarious | grok-to-repo | adf2cef | Add CHANGELOG under GlobalReset checklist |
