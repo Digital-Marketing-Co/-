@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-17 | disabled | repo-to-hosts | 3716c13 | Add accessibility-first /disabled skill; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-17 | blink | grok-to-repo | 4fdceac | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-17 | article-clip-pdf | grok-to-repo | 4fdceac | Add CHANGELOG under GlobalReset checklist |
 | 2026-10-17 | atlas | grok-to-repo | 4fdceac | Add CHANGELOG under GlobalReset checklist |
