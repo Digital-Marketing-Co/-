@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-18 | textbook | repo-to-hosts | 9154dce | Integrate universal subject-driven ATLAS-EXPAND master directive and QA into textbook; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-18 | expand | repo-to-hosts | 01d109f | Add exhaustive research /expand workflow; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-18 | images | repo-to-hosts | 82cd93a | Enforce subsection semantic relevance and evidence-grounded visuals; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-17 | disabled | repo-to-hosts | 3716c13 | Add accessibility-first /disabled skill; Grok installed from repo; ChatGPT must re-upload |
