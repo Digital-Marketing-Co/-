@@ -26,3 +26,57 @@ Use `/copyright` as the sole source of legal text, year calculation, company lin
 
 ## Completion criteria
 Require complete agreed content, verified claim-to-source mappings, real academic PDF links or explicit source exceptions, one banner per body section/subsection, distinct inline illustrations at the specified interval, compiled equations with ITQE tables, semantic styles for every text role, passing stylesheet proof, documented contrast readings, every-page visual inspection, canonical footer application, functional links and numbering, and persistent delivery. Never promise absolute visual perfection; report observed QA evidence.
+
+
+## UNIVERSAL MASTER DIRECTIVE — ATLAS–EXPAND v1.0.0
+
+**Project:** `{{PROMPT SUBJECT blob following the skill flag}}`. Parse all content after `/textbook` (or `$textbook`) as the topic and user constraints, including multiline blobs. This is a **universal subject-driven template**, not a fixed software-engineering/AI textbook. Adapt discipline-specific roles, chapters, source types, figures and economic models to the actual subject. The software engineering and AI five-volume structure below is an **example only**, activated when that is the topic. Preserve existing skill functionality and references unless directly contradicted here.
+
+**Research standard:** doctoral-level, multidisciplinary, evidence-based, publication-ready. **Goal:** the most comprehensive feasible rigorous, richly illustrated, cross-referenced, multi-volume scholarly textbook.
+
+### I. Executive mandate and dependencies
+Orchestrate `/expand /atlas /deep /iterate /textbook /banner /images /phd-ivy-monograph /wca-ivy-biblio /copyright /itqe /latex /QA` as available. Implement a supported equivalent and disclose it when a dependency is missing. No arbitrary length or volume caps, padding, invented evidence, fabricated citations, unsourced material claims, or false completion reports. Continue autonomously until a genuine blocker or execution limit, retaining resumable checkpoints. Every printed chapter, section and subsection requires a distinct relevant banner; every substantive subsection requires a visual evidence plan and rendered figure where tools permit. No publication-ready claim while mandatory QA fails.
+
+### II. Recursive /expand knowledge architecture
+Before typesetting, map corpus > volumes > parts > chapters > sections > subsections > research questions > evidence / technical explanation / derivation / observation / competing hypothesis / visualization / cross-reference / bibliography. Extract root keywords, synonyms, history, translations, prerequisites and related concepts. Build a graph of people, institutions, inventions, methods, papers, systems and events with typed links. Add Wikipedia.org links for discovery/navigation and follow references to authoritative originals. Recursively expand coverage gaps without redundancy. Stable IDs, anchors and coverage matrix are mandatory. Every node records parent, abstract, keywords, prerequisites, source IDs, Wikipedia links, cross-links, facts, statistics, uncertainty, figure/banner specification and QA state.
+
+### III. /deep research
+Triangulate primary sources, peer-reviewed literature, university publications, technical manuals, standards and archives. For historical/technical claims ask what, when, who, evidence, mechanism, predecessors, alternatives, limitations, consequences and justified conclusions. Tag FACT, DERIVATION, INTERPRETATION, HYPOTHESIS or SPECULATION. For classified-history topics separate public programs, declassified programs, incomplete reporting, unverified allegations and unknown current classified material. Never fabricate TOP SECRET access.
+
+### IV. Topic-adaptive architecture
+Derive volumes from the actual subject; add volumes where nonredundant evidence warrants. For a software engineering and AI topic, use these seed volumes, then expand recursively:
+1. Foundations of computation: ancient mathematics, logic, algorithms, Boolean algebra, probability, information theory, Church, Gödel, Turing, cryptography and early machines.
+2. Software engineering: languages, compilers, operating systems, architecture, software crisis, NATO conferences, formal verification, testing, Unix, open source, databases, web, agile, DevOps, supply chains and cloud-native systems.
+3. AI history and theory: Dartmouth, symbolic AI, search, expert systems, machine learning, neural networks, backpropagation, reinforcement learning, vision, NLP, Transformers, foundation models, agents, robotics, alignment and AGI research.
+4. Global-scale computing: distributed systems, internet, HPC, GPUs, data centers, cloud, security, defense, space, edge AI and energy.
+5. Economics and society: productivity, labor, IP, investment, education, medicine, governance, competition, safety, accessibility and human–AI collaboration.
+
+### V. /images mandatory semantic relevance
+Create a figure manifest per substantive subsection: volume/chapter/section/subsection IDs, exact title, adjacent claims, named entities and time period, medium, source IDs, prompt, caption, alt text, insertion anchor, and QA result. Depict literal subject-specific mechanisms and documented objects. Reject generic futuristic scenes, wrong-era equipment, invented specs, false figures, unreadable labels, near duplicates, false insignia and misleading historical reconstructions. Label reconstructions. For precise technical and numerical figures prefer reproducible diagrams and charts, not generated fake data. Inspect actual final-page placement against the manifest.
+
+### VI. /banner mandatory hierarchy
+Generate unique context-locked banners for corpus, every volume, part, chapter, printed section and subsection. Prefer high-resolution 16:9 cinematic composition, volumetric depth, strong hierarchy, accessible contrast and full bleed where supported. Position under the matching heading or on its opening spread. No parent-banner reuse for children. Missing/failed banners leave nodes incomplete.
+
+### VII. Scientific visualization
+Choose the best evidence-bearing timeline, chart, equation diagram, network, flowchart, architecture, comparison, map, causal model or technical illustration per subsection. Every quantitative plot needs real dataset, units, period, method, citations and uncertainty; label illustrative assumptions explicitly. Never fabricate numbers for aesthetics.
+
+### VIII. /latex mathematics
+Check subscripts, superscripts, underscores, Greek letters, sums, fractions, matrices, tensors, vectors, probability, optimization, gradients, numbering and equation references. Define variables, assumptions and units, derive steps and test examples where possible. Reject missing glyphs, black boxes and clipped or malformed expressions.
+
+### IX. /wca-ivy-biblio evidence ledger
+Record authors, titles, year, publisher/journal, DOI/ISBN/archive URL, source type, pages, claim IDs and access dates. Prefer Chicago notes/bibliography by default. Wikipedia is for navigation and discovery, not a substitute for stronger evidence on consequential claims. Verify internal links, quotes, citations and bibliographic metadata.
+
+### X. /itqe conditional economic modeling
+Where germane to the subject, model capital investment, infrastructure, energy, labor, productivity, research costs, concentration, adoption and fiscal impacts with transparent assumptions and reproducible calculations. Separate observed data, projections and scenarios. Do not force economic content into unrelated topics.
+
+### XI. /iterate improvement loop
+Discover → Structure → Research → Draft → Cite → Illustrate → Typeset → Inspect → Test → Correct → Repeat. Audit coverage, factual accuracy, citations, mathematics, cross-links, relevance, banner coverage, uniqueness, accessibility, layout, redundancy and research gaps. Maintain an iteration/defect ledger. Never claim an unexecuted test passed.
+
+### XII. Publication engineering
+Output master index, hierarchical TOC, volumes, bibliography/evidence ledger, knowledge graph, image manifest, mathematical appendix where relevant, chronology, glossary, cross-reference index and QA report. Support PDF/DOCX/Markdown/structured sources as available. For PDFs embed fonts, accessible typography, bookmarks, links, page numbers, optimized figures and inspect rendered pages. Defer to `/copyright` for canonical `© 2012–[currentYear] Web Development Corporation. All rights reserved.` and current-year calculation.
+
+### XIII. Mandatory QA gates
+Verify planned nodes exist; claims and figures are sourced; no fabricated citations/numbers; unique contextual banners for all required headings; context-specific figures for substantive subsections; charts reproducible; figures placed near claims with captions and alt text; LaTeX correct; citations and internal links resolve; no overflow, duplicate imagery or redundant prose; correct copyright and metadata; rendered artifacts visually inspected; limitations documented. On failure, correct or mark incomplete.
+
+### XIV. Autonomous execution and checkpoints
+Start from the actual prompt subject and any available prior corpus. Recover verified earlier work without assuming it exists. Plan, research, draft, illustrate, compile, inspect and QA each volume; deliver verified files and a transparent completion report. On tool or runtime limits preserve completed/pending node IDs, evidence ledger, image manifest, QA results and next steps. Never sacrifice truth or relevance for length or spectacle.
