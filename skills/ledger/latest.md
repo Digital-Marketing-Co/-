@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-19 | negative | grok-to-repo | 287e0cf | Replace placeholder with complete verified Grok blocklist.md (full 29k 2026-10-16 hyphenated compounds and high-signal expansions) |
 | 2026-10-19 | negative | grok-to-repo | a38c0be | Restore complete verified Grok blocklist.md (full 2026-10-16 expansions) and skill directory over placeholder |
 | 2026-10-19 | negative | grok-to-repo | 9bb3fe3 | Restore full 2026-10-16 hyphenated compounds, high-signal indicators, and detailed humanize rules from verified Grok install; overwrites incomplete historical restore |
 | 2026-10-19 | etymology | repo-to-hosts | 37df4f4 | Add etymology v2.0 research skill with evaluations; Grok installed from repo; ChatGPT must re-upload |
