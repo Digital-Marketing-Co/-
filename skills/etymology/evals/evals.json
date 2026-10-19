@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tests": [
+    {
+      "input": "/etymology yellow",
+      "expect": [
+        "attestation",
+        "semantic chronology",
+        "cognates",
+        "citations",
+        "confidence"
+      ]
+    },
+    {
+      "input": "/etymology lang:fr savoir-faire",
+      "expect": [
+        "French language",
+        "compound morphology",
+        "sense disambiguation",
+        "sources"
+      ]
+    },
+    {
+      "input": "/etymology *bʰer-",
+      "expect": [
+        "reconstructed root",
+        "regular correspondences",
+        "explicit uncertainty",
+        "scholarly references"
+      ]
+    },
+    {
+      "input": "/etymology",
+      "expect": [
+        "request missing lemma",
+        "no invented target"
+      ]
+    },
+    {
+      "input": "/etymology lang:xx inventedform",
+      "expect": [
+        "no fabricated attestations",
+        "uncertainty or invalid language warning"
+      ]
+    }
+  ]
+}
