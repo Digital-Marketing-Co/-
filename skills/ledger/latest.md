@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-19 | etymology | repo-to-hosts | 37df4f4 | Add new etymology v2.0 research skill with SKILL.md, CHANGELOG, and evals; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-19 | negative | grok-to-repo | 86d00d3 | Expand blocklist with hyphenated compounds and high-signal AI indicators; add humanize function to SKILL.md (v3.2) |
 | 2026-10-19 | atlas | grok-to-repo | 86d00d3 | Add hyphenated gazetteer variants and compound rule to negative-keywords.csv |
 | 2026-10-19 | banner | repo-to-hosts | 1203a86 | Repo SKILL.md and rebuild_document.py are newer (dense scholarship + host resolver); ChatGPT and Grok should use the repo copy |
