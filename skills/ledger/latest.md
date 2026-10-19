@@ -4,6 +4,8 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-19 | atlas | repo-to-hosts | 1670306 | Restore complete atlas negative-keywords.csv from verified revision; Grok and ChatGPT use repo copy |
+| 2026-10-19 | negative | repo-to-hosts | a0baa55 | Restore complete negative blocklist.md from verified historical revision; Grok and ChatGPT use repo copy |
 | 2026-10-19 | etymology | repo-to-hosts | 37df4f4 | Add etymology v2.0 research skill with evaluations; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-19 | negative | grok-to-repo | 86d00d3 | Expand blocklist with hyphenated compounds and high-signal AI indicators; add humanize function to SKILL.md (v3.2) |
 | 2026-10-19 | atlas | grok-to-repo | 86d00d3 | Add hyphenated gazetteer variants and compound rule to negative-keywords.csv |
