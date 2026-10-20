@@ -223,3 +223,19 @@ Run the single delivery gate in `interop/SKILL.md` after task-specific validatio
 - If hyperref is already loaded, configure with \hypersetup{hidelinks,pdfborder={0 0 0}} rather than loading it twice. Ensure \hypersetup or package options later in the document do not restore colored annotation borders. Explicitly audit pdfborderstyle and link annotation appearance if other PDF tooling modifies annotations.
 - QA regression: generate an example PDF containing an external URL, DOI, internal section link, TOC link and citation link; inspect PDF link annotations to confirm each URI/destination remains functional and that border width is zero or no visible border appearance exists. Render pages and confirm there are no red, green or other rectangular link outlines. Some PDF viewers may draw their own focus/hover highlight; distinguish viewer UI from borders embedded in the PDF.
 - Reject any compiled artifact with visible hyperlink rectangles, broken destinations, or missing click targets; repair source, recompile, and repeat annotation and visual checks.
+
+
+## v2.3.0 — mathematical rendering, footer integrity and exhaustive QA
+### Mathematical glyphs and indices
+- Enforce mathematical subscripts and superscripts as actual math: use x_{i}, E_{\gamma}, m_{\mathrm{eq}}, and braces for compound indices. Escape literal prose underscores as \_. Reject raw TeX markers appearing in rendered output.
+- Enforce correct Greek uppercase/lowercase symbols, partial derivatives, integrals, accents, primes, operators and fractions. pdfLaTeX must use supported math macros and Computer Modern; LuaLaTeX/XeLaTeX must use Latin Modern and unicode-math with verified Unicode coverage. Detect missing glyphs, tofu, and incorrect text-vs-math font substitutions.
+- Reflow long equations with aligned, split or multline, not illegibly small type. Verify mathematical meaning, visual baseline, superscript/subscript position, and extracted PDF text against source.
+### Single copyright and sequential footer folios
+- Use one footer authority only. Require exactly one canonical /copyright line on each required page: © 2012–CURRENTYEAR Web Development Corporation. All rights reserved. No duplicate stamps, archival PDF footer overlays or stacked copyright lines.
+- Require visible, unique, ordered footer page numbers 1 through N matching physical PDF pages, unless explicitly specified front-matter Roman numerals or intentional resets. Check title pages, appendices, imported pages and blank pages. No missing, duplicated, clipped, or overlapping page numbers.
+- Keep footer text and page number within safe margins and on consistent baselines; never collide with main content.
+### Mandatory /qa and /qa_visual iterative release gate
+- Generate a regression fixture covering nested indices, Greek letters, multiline equations, fractions, tables, references, clickable borderless links, TOC, appendix and multipage transitions.
+- Run compile-log QA, glyph/font embedding checks, raw TeX leakage checks, PDF link annotation checks, page-by-page copyright count and folio sequence checks, overflow detection, citation integrity, and equation-to-ITQE audit coverage where applicable.
+- Rasterize and visually inspect every page at readable resolution; verify glyph shapes, indices, mathematical alignment, table whitespace, footer placement, absence of link rectangles, and absence of clipping/overlap. Record page-specific failures, repair, recompile and repeat until all resolvable defects are fixed or finite resources are exhausted.
+- Release requires zero unresolved mathematical rendering defects, exactly one required copyright per page, sequential visible folios, no red link borders, and clean visual QA. Never mark an unexecuted check as PASSED. Preserve all prior /latex requirements.
