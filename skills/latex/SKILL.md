@@ -239,3 +239,7 @@ Run the single delivery gate in `interop/SKILL.md` after task-specific validatio
 - Run compile-log QA, glyph/font embedding checks, raw TeX leakage checks, PDF link annotation checks, page-by-page copyright count and folio sequence checks, overflow detection, citation integrity, and equation-to-ITQE audit coverage where applicable.
 - Rasterize and visually inspect every page at readable resolution; verify glyph shapes, indices, mathematical alignment, table whitespace, footer placement, absence of link rectangles, and absence of clipping/overlap. Record page-specific failures, repair, recompile and repeat until all resolvable defects are fixed or finite resources are exhausted.
 - Release requires zero unresolved mathematical rendering defects, exactly one required copyright per page, sequential visible folios, no red link borders, and clean visual QA. Never mark an unexecuted check as PASSED. Preserve all prior /latex requirements.
+
+
+## Universal 9491 visual quality and document authority
+Apply `skills/references/document-rendering-9491.md` for every document output. This standard adds context-accurate AI-generated imagery with scholarly analytical captions, a single nonduplicated design system, and rigorous iterative /qa plus /qa_visual. The /latex compiler must verify one /copyright footer per required page and continuous sequential footer folios, correct math indices/Greek characters, borderless clickable hyperlinks, and inspect every rendered page. Preserve existing stricter rules; do not report tests as passed unless executed.
