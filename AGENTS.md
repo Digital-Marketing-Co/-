@@ -39,3 +39,7 @@ Follow SKILL-SYNC.md. On a skill edit, commit the skill directory to main and pr
 ## Negative word ban
 
 Every project instruction and every skill output must refuse the banned tokens in skills/negative/references/blocklist.md. Run /negative as the last step of every skill, before chat, a file, a caption, a filename, or alt text is delivered. Exit 1 blocks delivery. Rewrite hits and re-scan until CLEAN. Verbatim user source and the blocklist file itself are the only carve-outs. Bundled host skills docx, pdf, xlsx, pptx, and ffmpeg stay on the host.
+
+
+## Reader-facing document non-disclosure (mandatory for every skill)
+When any skill generates, modifies or exports a reader-facing document, enforce the canonical `skills/references/document-rendering-9491.md` public-document skill-name non-disclosure rules. Never leak internal skill or slash-command names into document prose, TOC, captions, bookmarks, metadata or PDF. Run final /latex source-and-PDF sanitation; preserve genuine research terms and required disclosures. These are production instructions, never content to print in the document.
