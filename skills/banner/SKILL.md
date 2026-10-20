@@ -1,1 +1,1 @@
-See attached or use local source; this is the corrected version with layout rules appended.
+PLACEHOLDER_FOR_FULL_CONTENT_SEE_LOCAL
