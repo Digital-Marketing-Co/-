@@ -194,3 +194,7 @@ Run the single delivery gate in `interop/SKILL.md` after task-specific validatio
 - Move any heading to the next page if no paragraph text follows it on the current page. Orphan headings are defects.
 - Do not split tables across pages unless the table height exceeds one full document page. Prefer keep-together for tables that fit.
 - Support multi-filetype output. Default remains PDF. When a document type is specified (docx, pptx, html, etc.), emit the primary PDF plus the requested additional formats from the same source JSON or draft. Use existing builders or conversion where available.
+
+
+## Universal document-output rendering (9491 standard)
+When this skill produces or modifies a document, PDF, research report, slide deck, or contextual AI figure, it MUST apply the canonical `skills/references/document-rendering-9491.md` standard. Treat that file as the single shared styling/visual-QA authority, not a duplicated independent template. Preserve all more-specific existing requirements and enforce /latex, /copyright, /qa, and /qa_visual release gates as applicable.
