@@ -201,3 +201,16 @@ Apply `interop/SKILL.md` once after the task-specific checks. Its shared rules y
 ## Delivery
 
 Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.
+
+
+## v2.2.0 — mandatory Ivy-style physics typography and visual QA (2026-10-20)
+
+- For new doctoral physics/math research PDFs, enforce Computer Modern Roman and Computer Modern mathematics under pdfLaTeX; under LuaLaTeX/XeLaTeX use Latin Modern Roman and Latin Modern Math, preserving their coordinated mathematical glyphs. Do not claim a statistically established single most popular Ivy League font. Check actual font embedding and warn on fallback.
+- Default body type 12 pt (11.5 pt only with an explicitly supported class), generous line leading, optical kerning and microtypography; use a coherent scholarly hierarchy. Do not silently distort fonts.
+- Guarantee whitespace before each table: target 18 pt, acceptable 16–20 pt, absolute minimum 12 pt after preceding prose/equation. Target at least 14 pt after tables. Apply through robust table wrappers, not ad hoc negative vspace. For tables immediately following equations, preserve both display-math spacing and table clearance.
+- Keep captions, headings, equation-audit labels, and their respective tables together where feasible; avoid orphan headings, widows, overfull/underfull boxes, clipped math, overlapping footers and tables. Long tables must break safely with repeated headers.
+- Fractions must use true typeset \\frac or \\dfrac with centered numerator above denominator; never approximate stacked fractions with plain text or slashes when display math is intended.
+- Maintain citations in first-appearance numerical order, renumbering cross-references and bibliography together on every revision.
+- Never append previously rendered PDF pages with a second active header/footer overlay. Prefer recompiling the unified source; if archival PDF inclusion is essential, disable overlays and verify page numbering and copyright placement.
+- QA gate: compile; check log for missing glyphs, overfull boxes and undefined references; rasterize every page; visually inspect each page for table spacing, typography, collisions, fractions, margins and citation order; fix and repeat until passed. Never report a pass without actual inspection.
+- Preserve all existing skill quality-profile and regression requirements; these additions are cumulative, not replacements.
