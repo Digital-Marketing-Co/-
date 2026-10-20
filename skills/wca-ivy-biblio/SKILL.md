@@ -171,3 +171,16 @@ Apply `interop/SKILL.md` once after the task-specific checks. Its shared rules y
 ## Delivery
 
 Run the single delivery gate in `interop/SKILL.md` after task-specific validation. Preserve verified quotations and technical identifiers; report unresolved defects or blockers accurately.
+
+
+## Citation integrity synchronization (mandatory, v1.1.0)
+
+After EVERY insertion, deletion, reordering, expansion, or rewrite of sourced material:
+1. Extract all source references from body, notes, captions, tables, figures, and appendices, preserving immutable source IDs independent of displayed numbers.
+2. Verify factual additions against attributable sources. Never invent sources, page numbers, DOIs, URLs, quotes, or publication metadata. Mark unsupported claims for verification or removal.
+3. Traverse the final reading order and assign numeric citations sequentially by FIRST APPEARANCE, starting at 1. Repeated references to the same source reuse its original number under numbered-reference styles. In note-based Chicago styles, number notes in reading order and format repeat notes according to the selected convention.
+4. Regenerate every inline marker, cross-reference, note, and corresponding bibliography entry atomically from the same source registry. Insert newly cited works and remove unused entries, except explicitly requested further-reading sections.
+5. Validate: no forward numbering inversions on first appearances; no missing or orphaned bibliography entries; no dangling identifiers; no duplicate entries for the same source; no mismatched metadata or unresolved cross-references.
+6. Re-run validation after final pagination/typesetting and again before export. Do not report completion while citation integrity checks fail. Report unverifiable claims and unresolved source gaps.
+
+Preserve the original skill's ITQE, quality, visual, and interop requirements. Bibliography sorting must follow the selected citation style: first-citation order for numeric bibliographies, alphabetic where mandated by author-date/Chicago bibliography styles. Never confuse note numbering with bibliography alphabetical ordering.
