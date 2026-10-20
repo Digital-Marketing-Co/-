@@ -15,3 +15,7 @@ Canonical instructions: `../research-unbounded/SKILL.md`. Read and apply that fi
 Compatible with `/wca`, `/wicca`, `/atlas`, `/deep`, `/itqe`, `/images`, `/banner`, and `/copyright`.
 
 No arbitrary document length caps; technical limits are addressed with indexed, checkpointed volumes. All evidence, citations, figures, and conclusions must be verified and QA checked.
+
+
+## Universal document-output rendering (9491 standard)
+When this skill produces or modifies a document, PDF, research report, slide deck, or contextual AI figure, it MUST apply the canonical `skills/references/document-rendering-9491.md` standard. Treat that file as the single shared styling/visual-QA authority, not a duplicated independent template. Preserve all more-specific existing requirements and enforce /latex, /copyright, /qa, and /qa_visual release gates as applicable.
