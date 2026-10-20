@@ -3,7 +3,9 @@
 ## Sync log
 
 | Date | Skill | Direction | Short hash | Change |
-|---|---|---|---|---|
+|---|---|---|---|
+| 2026-10-20 | expound | repo-to-hosts | a24d6da | Add expound skill with continuous source and bibliography synchronization; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-20 | wca-ivy-biblio | repo-to-hosts | a6857fb | Enforce continuous citation renumbering and bibliography integrity; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-20 | banner images atlas | grok-to-repo | d4ae576 | Restore complete verified Grok SKILL.md with MASS v4.0 layout/pagination (orphan headings, table keep-together) and multi-filetype rules; replaces placeholders |
 | 2026-10-20 | MASS-v4.1 | repo-to-hosts | f44e218 | Add MASS v4.1 universal publishing and output standard (skills/MASS-v4.1-PUBLISHING-STANDARD.md); applies to all output skills |
 | 2026-10-20 | banner images atlas | grok-to-repo | pending | MASS v4.0 update: append layout/pagination (orphan headings, table keep-together) and multi-filetype rules to SKILL.md. Local copies are newer and complete. Repo currently has placeholders. Full content push pending large-payload handling. |
