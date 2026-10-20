@@ -214,3 +214,12 @@ Run the single delivery gate in `interop/SKILL.md` after task-specific validatio
 - Never append previously rendered PDF pages with a second active header/footer overlay. Prefer recompiling the unified source; if archival PDF inclusion is essential, disable overlays and verify page numbering and copyright placement.
 - QA gate: compile; check log for missing glyphs, overfull boxes and undefined references; rasterize every page; visually inspect each page for table spacing, typography, collisions, fractions, margins and citation order; fix and repeat until passed. Never report a pass without actual inspection.
 - Preserve all existing skill quality-profile and regression requirements; these additions are cumulative, not replacements.
+
+
+## v2.2.1 — borderless, functional PDF hyperlinks (2026-10-20)
+
+- Preserve working clickable hyperlinks, URLs, DOI links, cross-references, citations, and table-of-contents navigation in all LaTeX-produced PDFs. Never remove hyperlinks to remove their visual borders.
+- Load hyperref late in the preamble (respecting packages that must follow it) and enforce \usepackage[hidelinks]{hyperref} for a neutral, borderless default, or equivalently \hypersetup{hidelinks,pdfborder={0 0 0},colorlinks=false}. For a deliberately colored-link style, use \hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,citecolor=navy,pdfborder={0 0 0}}; do not rely on viewer-specific border behavior. Never use hyperref's default red-bordered link boxes.
+- If hyperref is already loaded, configure with \hypersetup{hidelinks,pdfborder={0 0 0}} rather than loading it twice. Ensure \hypersetup or package options later in the document do not restore colored annotation borders. Explicitly audit pdfborderstyle and link annotation appearance if other PDF tooling modifies annotations.
+- QA regression: generate an example PDF containing an external URL, DOI, internal section link, TOC link and citation link; inspect PDF link annotations to confirm each URI/destination remains functional and that border width is zero or no visible border appearance exists. Render pages and confirm there are no red, green or other rectangular link outlines. Some PDF viewers may draw their own focus/hover highlight; distinguish viewer UI from borders embedded in the PDF.
+- Reject any compiled artifact with visible hyperlink rectangles, broken destinations, or missing click targets; repair source, recompile, and repeat annotation and visual checks.
