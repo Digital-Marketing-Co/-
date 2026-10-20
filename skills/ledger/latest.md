@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-20 | banner images atlas | grok-to-repo | pending | MASS v4.0 update: append layout/pagination (orphan headings, table keep-together) and multi-filetype rules to SKILL.md. Local copies are newer. Full content push requires large-payload handling. |
 | 2026-10-20 | weekday-gather | checked | 3dd0535 | Compared 50 shared skills; no newer Grok SKILL.md, references or scripts to push (sizes match or repo newer per prior ledger and commit time). ChatGPT and Grok should use the repo copy for banner, images, textbook and other flagged skills. |
 | 2026-10-19 | negative | grok-to-repo | 287e0cf | Replace placeholder with complete verified Grok blocklist.md (full 29k 2026-10-16 hyphenated compounds and high-signal expansions) |
 | 2026-10-19 | negative | grok-to-repo | a38c0be | Restore complete verified Grok blocklist.md (full 2026-10-16 expansions) and skill directory over placeholder |
