@@ -1,1 +1,1 @@
-PLACEHOLDER_BANNER
+See attached or use local source; this is the corrected version with layout rules appended.
