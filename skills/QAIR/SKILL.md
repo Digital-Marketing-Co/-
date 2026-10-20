@@ -33,3 +33,7 @@ Mission; verified facts and uncertainties; competitive feature-gap matrix; prior
 
 ## Abacus.ai execution directive
 Inspect repository and live app first. Preserve functioning features. Implement in coherent phases. Reuse shared systems. Validate cheaply and deterministically before consuming agent credits. Never invent Abacus APIs, credentials, deployment capabilities, auditor metrics, or test results. Deliver a copy-ready imperative implementation prompt with factual caveats.
+
+
+## Universal document-output rendering (9491 standard)
+When this skill produces or modifies a document, PDF, research report, slide deck, or contextual AI figure, it MUST apply the canonical `skills/references/document-rendering-9491.md` standard. Treat that file as the single shared styling/visual-QA authority, not a duplicated independent template. Preserve all more-specific existing requirements and enforce /latex, /copyright, /qa, and /qa_visual release gates as applicable.
