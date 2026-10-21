@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-21 | genius | repo-to-hosts | d2cfb76 | Add genius prompt wrapper skill; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-21 | itqe | grok-to-repo | 58328b6 | Push verified newer Grok SKILL.md with v1.5 table wrapping, uniqueness, math immutability, and OWASP LLM01 |
 | 2026-10-21 | images | grok-to-repo | 225067f | Restore complete verified Grok images/SKILL.md with shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01); matches installed size 29181 bytes |
 | 2026-10-21 | wca-ivy-biblio | grok-to-repo | 8c67cd2 | Replace placeholder with complete verified Grok SKILL.md including shared mandates v1.1 |
