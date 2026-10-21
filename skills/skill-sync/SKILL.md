@@ -18,18 +18,24 @@ Keep Digital-Marketing-Co/- as the shared skill source for Grok and ChatGPT.
 - User asked to update the GitHub skill repo after a skill change.
 - User asked Grok and ChatGPT to stay on the same skill revision.
 
-## Workflow
 
-1. Read SKILL-SYNC.md and skills/ledger/latest.md from the repository.
-2. Inventory skills/*/SKILL.md on main and the installed Grok custom skills.
-3. Gather every update that is not yet committed: new skill folders, changed SKILL.md, references, and scripts.
-4. Decide direction from commit time and the ledger, not from a hash alone.
-5. Push verified newer Grok skill text to main, skip binaries over 200KB, skip __pycache__, and prepend one ledger row per skill.
-6. If the repo copy is newer, record that ChatGPT and Grok should use the repo copy.
-7. Do not overwrite bundled host skills.
-8. End with a short list of skills ChatGPT must re-upload, plus the commit URL.
+## Mandated first priority on any skill update
 
-Company link text is Digital Marketing Company. Plain domain text is DigitalMarketingCo.org.
+When an individual skill is updated on the repository, perform a complete improvement of everything that can be improved for that skill before the commit is considered finished. Raise the version marker if one exists.
+
+## Steps
+
+1. Read SKILL-SYNC.md and skills/ledger/latest.md on main.
+2. List skills/<name>/SKILL.md on main.
+3. Compare each with the installed copy. Decide direction from commit time and the ledger, not from a hash alone.
+4. If the installed copy is the newer verified version, commit that skill directory to main and prepend a ledger row: date, skill, direction, short hash, one-line change.
+5. If the repository copy is newer, use that copy for the current task and say which path was read.
+6. Do not overwrite bundled host skills.
+7. Report the commit URL, the skills checked, and the skills ChatGPT still has to re-upload.
+
+## ChatGPT
+
+ChatGPT cannot install from this push by itself. Tell the user to run the prompt in CHATGPT-PROMPT.md, or to re-upload only the skills named in the latest ledger.
 
 ## Delivery
 
