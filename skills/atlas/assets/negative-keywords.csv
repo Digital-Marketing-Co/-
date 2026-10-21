@@ -149,8 +149,3 @@ atlas-,symbol,prefix,(omit),prompt concatenations,Trailing-hyphen stem
 _atlas,symbol,suffix,(omit),prompt concatenations,Snake prefix
 atlas_,symbol,prefix,(omit),prompt concatenations,Snake stem
 .atlas,symbol,suffix,(omit),prompt concatenations,Extension-like stem
-
-# source,Web Development Corporation negative-keyword array
-# updated,2026-09-17
-# rule,Never copy token into a concatenated generation prompt. Invocation flags that collide with a token stay slash-prefixed and never enter the prompt body.
-# atlas_variants_added,87
