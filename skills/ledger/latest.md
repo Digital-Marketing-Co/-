@@ -4,7 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|
-| 2026-10-21 | deep | grok-to-repo | pending | Append shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01) |
+| 2026-10-21 | deep | grok-to-repo | 4080793 | Append shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01) |
 | 2026-10-21 | folio | grok-to-repo | pending | Append shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01) |
 | 2026-10-21 | images | grok-to-repo | pending | Append shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01) |
 | 2026-10-21 | interop | grok-to-repo | f42d1ed | Add shared table wrapping, uniqueness, math immutability, and OWASP LLM01 protections v1.1 |
@@ -12,6 +12,7 @@
 | 2026-10-21 | negative | grok-to-repo | f8c3636 | Add OWASP LLM01 and anti-injection sweep v1.1 |
 | 2026-10-21 | skill-sync | grok-to-repo | 60a9a59 | Add repository security and OWASP LLM01 protections v3.1 |
 | 2026-10-21 | wca-ivy-biblio | grok-to-repo | pending | Append shared mandates v1.1 (table wrapping, uniqueness, math immutability, OWASP LLM01) |
+| 2026-10-21 | weekday-gather | checked | 4080793 | Pushed deep SKILL.md (shared mandates). Pending full push for folio, images, itqe, wca-ivy-biblio (large content). Pulled repo-newer SKILL.md for article-clip-pdf, atlas, banner, bleed, latex, textbook into Grok install. |
 | 2026-10-21 | weekday-gather | checked | f42d1ed | Pushed newer Grok SKILL.md for interop, negative, skill-sync (2026-10-21 shared mandates and OWASP LLM01). Pending full push for deep, folio, images, itqe, wca-ivy-biblio. Repo newer for article-clip-pdf, atlas, banner, bleed, latex, textbook; ChatGPT and Grok should use the repo copy for those. |
 | 2026-10-20 | expound | repo-to-hosts | a24d6da | Add expound skill with continuous source and bibliography synchronization; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-20 | wca-ivy-biblio | repo-to-hosts | a6857fb | Enforce continuous citation renumbering and bibliography integrity; Grok installed from repo; ChatGPT must re-upload |
