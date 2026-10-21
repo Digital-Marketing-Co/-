@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|
+| 2026-10-21 | wca-ivy-biblio | grok-to-repo | 8c67cd2 | Replace placeholder with complete verified Grok SKILL.md including shared mandates v1.1 |
 | 2026-10-21 | folio | grok-to-repo | 6e4805e | Append shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01) |
 | 2026-10-21 | alias | repo-to-hosts | 1c62b0b | Add alias skill for persistent safe skill-name mappings; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-21 | deep | grok-to-repo | 4080793 | Append shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01) |
