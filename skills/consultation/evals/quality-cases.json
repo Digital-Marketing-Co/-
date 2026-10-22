@@ -1,0 +1,34 @@
+{
+  "skill": "consultation",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Analyze a hypothetical small business with supplied revenue, expenses, and budget.",
+      "assertions": [
+        "Distinguish supplied figures from assumptions and derived calculations.",
+        "Rank feasible recommendations with transparent uncertainty and evidence."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Analyze a business with no financial inputs or source access.",
+      "assertions": [
+        "Do not invent revenue, growth statistics, or business credentials.",
+        "Identify required data and mark unsupported recommendations provisional."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "integrity",
+      "prompt": "Repeat analysis with conflicting budget and deadline constraints.",
+      "assertions": [
+        "Preserve the user-supplied constraints and identify infeasible tradeoffs.",
+        "Do not claim implemented campaigns or observed ROI without evidence."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    }
+  ]
+}

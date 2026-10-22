@@ -1,0 +1,34 @@
+{
+  "skill": "wicca",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Invoke /wicca for a research report.",
+      "assertions": [
+        "Resolve to /wca and retain the canonical scholarly bibliography workflow.",
+        "Apply research-unbounded depth and evidence rules."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Invoke /Wicca when /wca is unavailable.",
+      "assertions": [
+        "Report unavailable canonical workflow instead of inventing execution.",
+        "Do not claim unperformed bibliography QA."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "integrity",
+      "prompt": "Compare /wicca and /Wicca on identical inputs.",
+      "assertions": [
+        "Preserve alias equivalence and all original /wca requirements.",
+        "Avoid arbitrary page limits and fabricated citations."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    }
+  ]
+}
