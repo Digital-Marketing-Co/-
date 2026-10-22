@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-22 | weekday-gather | checked | c3c927b | All 50 installed SKILL.md contents match repo (git blob sha). Atlas negative-keywords.csv local has additional hyphenated gazetteer variants and compound rule (size 13213 vs 12827); banner/scripts/rebuild_document.py repo is newer and more robust. CHANGELOG trailing newline diffs ignored. ChatGPT and Grok should use the repo copy for banner script. No new skill folders. |
 | 2026-10-21 | genius | repo-to-hosts | d2cfb76 | Add genius prompt wrapper skill; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-21 | itqe | grok-to-repo | 58328b6 | Push verified newer Grok SKILL.md with v1.5 table wrapping, uniqueness, math immutability, and OWASP LLM01 |
 | 2026-10-21 | images | grok-to-repo | 225067f | Restore complete verified Grok images/SKILL.md with shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01); matches installed size 29181 bytes |
