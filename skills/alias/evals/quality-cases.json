@@ -1,0 +1,35 @@
+{
+  "skill": "alias",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "/alias academy-ivy phd",
+      "assertions": [
+        "Resolve academy-ivy as an existing canonical skill before registration.",
+        "Register phd only if it does not shadow a real skill or existing alias.",
+        "Verify phd resolves to academy-ivy without changing the original skill."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "boundary",
+      "prompt": "/alias missing-skill validalias",
+      "assertions": [
+        "Reject a nonexistent canonical target without writing an alias.",
+        "Report the missing skill rather than inventing a definition."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "integrity",
+      "prompt": "/alias phd academy-ivy after /alias academy-ivy phd",
+      "assertions": [
+        "Reject a cycle, duplicate, or conflicting alias mapping.",
+        "Leave the previously valid alias mapping unchanged."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    }
+  ]
+}
