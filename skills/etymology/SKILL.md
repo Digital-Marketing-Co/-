@@ -1,3 +1,8 @@
+---
+name: etymology
+description: Evidence-grounded doctoral-level historical linguistic analysis of a user-supplied lemma, phrase, or reconstructed root, with attestations, cognates, phonology, and cited sources.
+---
+
 # ETYMOLOGY v2.0.0 — Research Skill
 
 ## Mission
