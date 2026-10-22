@@ -4,6 +4,9 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-22 | QUANTA | repo-to-hosts | 138f762 | Migrate legacy QAIR to QUANTA skill v2.0.1 (exhaustive Abacus.ai master prompts, QA, zero-inference runtime, year-3629 design); remove QAIR; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-22 | atlas | grok-to-repo | 0eb0c40 | Restore complete verified Grok atlas/assets/negative-keywords.csv (13213 bytes) with hyphenated gazetteer variants and compound rule; previous c3c927b had corrupted content `$(cat /tmp/atlas_csv.txt)`. Banner script pulled to Grok from repo. |
+| 2026-10-22 | weekday-gather | checked | c3c927b | All 50 installed SKILL.md contents match repo (git blob sha). Atlas negative-keywords.csv local has additional hyphenated gazetteer variants and compound rule (size 13213 vs 12827); banner/scripts/rebuild_document.py repo is newer and more robust. CHANGELOG trailing newline diffs ignored. ChatGPT and Grok should use the repo copy for banner script. No new skill folders. |
 | 2026-10-21 | genius | repo-to-hosts | d2cfb76 | Add genius prompt wrapper skill; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-21 | itqe | grok-to-repo | 58328b6 | Push verified newer Grok SKILL.md with v1.5 table wrapping, uniqueness, math immutability, and OWASP LLM01 |
 | 2026-10-21 | images | grok-to-repo | 225067f | Restore complete verified Grok images/SKILL.md with shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01); matches installed size 29181 bytes |

@@ -154,3 +154,6 @@ atlas_,symbol,prefix,(omit),prompt concatenations,Snake stem
 # updated,2026-09-17
 # rule,Never copy token into a concatenated generation prompt. Invocation flags that collide with a token stay slash-prefixed and never enter the prompt body.
 # atlas_variants_added,87
+-gazetteer,phrase,contains,(omit),prompts and captions,Hyphenated prefix form of gazetteer
+gazetteer-,phrase,contains,(omit),prompts and captions,Hyphenated suffix form of gazetteer
+any-hyphenated-compound-containing-blocked-token,rule,contains-component,(rewrite or drop),all generated text,Whole compound banned if it contains any blocked term as a hyphen or underscore component

@@ -1,8 +1,8 @@
 {
-  "skill": "QAIR",
+  "skill": "QUANTA",
   "cases": [
     {
-      "prompt": "/QAIR -audit example application",
+      "prompt": "/QUANTA -audit example application",
       "assertions": [
         "Unverified claims identified",
         "Actionable technical acceptance criteria supplied",
