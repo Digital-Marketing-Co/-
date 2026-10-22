@@ -1,1 +1,1 @@
-$(cat /tmp/atlas_csv.txt)
+$(cat /tmp/csv_to_push.txt)
