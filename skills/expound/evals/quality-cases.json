@@ -1,0 +1,34 @@
+{
+  "skill": "expound",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "/expound an evidence-grounded draft with incomplete citations",
+      "assertions": [
+        "Prioritize material gaps and verify new claims against sources.",
+        "Reconcile first-appearance citations and bibliography after each edit."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "boundary",
+      "prompt": "/expound a hypothesis claiming photons accelerate in vacuum without evidence",
+      "assertions": [
+        "Preserve the thesis as a hypothesis, not an established result.",
+        "Present contrary evidence and avoid manufactured mathematical proofs."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "integrity",
+      "prompt": "/expound a document with reordered sections and numbered references",
+      "assertions": [
+        "Renumber all affected citations and notes consistently.",
+        "Stop when material resolvable gaps are addressed or execution limits are reached."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    }
+  ]
+}
