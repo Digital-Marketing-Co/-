@@ -1,0 +1,24 @@
+{
+  "skill": "research-unbounded",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "long-research",
+      "prompt": "/research-unbounded review of energy storage",
+      "assertions": [
+        "Use source-grounded coverage without arbitrary length caps.",
+        "Organize oversized results into linked parts with an index."
+      ],
+      "grader": "Inspect actual output and references; mark PASS, FAIL, BLOCKED, or NOT TESTED with evidence."
+    },
+    {
+      "id": "source-limit",
+      "prompt": "/research-unbounded when some source documents are unavailable",
+      "assertions": [
+        "Acknowledge unavailable sources and retain accurate citations."
+      ],
+      "grader": "Do not infer success from fixture presence; default NOT TESTED."
+    }
+  ]
+}
