@@ -1,0 +1,15 @@
+{
+  "skill": "etymology",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Explain the origin of a supplied word.",
+      "assertions": [
+        "Support historical claims with references."
+      ],
+      "grader": "Check actual output and record a supported result."
+    }
+  ]
+}
