@@ -1,46 +1,76 @@
 ---
 name: expound
-description: Iteratively expand and rigorously verify a document until material resolvable gaps are closed, synchronizing verified citations and bibliography at every pass.
-version: 1.2.0
+description: Iteratively expand and rigorously verify an existing document, renumbering all citations and notes in first-appearance order after every edit, regenerating its bibliography, and preserving its design, section banners, and inline-image requirements.
 ---
 # /expound
 
-Iteratively expound and expand until exhaustive within evidence, resources, and a finite execution budget. Preserve the user's thesis as a hypothesis, never manufacture support.
+Version: 1.3.0
+
+Iteratively expound and expand until material resolvable gaps close within evidence and available resources. Preserve the user's thesis as a hypothesis; never manufacture support. Update the existing document and its complete citation and visual systems together. Changing this skill does not itself request expansion of a document.
+
+## Establish the document contract
+
+1. Resolve and read the actual document and its editable source. Preserve the original. Inspect the rendered document; do not infer its design from a filename or an earlier description.
+2. Inventory headings and subsections, claims, citations, page notes, bibliography, source registry, equations, tables, banners, inline images, captions, cross-references, and links. Retain immutable IDs for sources and document objects.
+3. Capture one design contract from the source and rendered pages: page geometry, typography and sizes, palette, backgrounds, heading hierarchy, spacing, column/grid rules, equation and table styles, caption styles, bleed and safe text insets, header/footer, pagination, and copyright/link behavior.
+4. Read applicable source-document instructions and the latest relevant citation, banner, images, copyright, ITQE, and latex skills. Apply the canonical shared document-rendering standard when available. Explicit user directions prevail. Where a source has stricter applicable visual requirements, retain them.
+5. Preserve the source's established design throughout the expanded document. Reuse its named styles, templates, tokens, and builder. Do not introduce a competing stylesheet, switch the document to a different aesthetic, or format only the new pages. Preserve existing usable artwork and its provenance. If only a PDF exists, reconstruct the design from inspected pages and disclose any fidelity limitations.
 
 ## Iterative protocol
-1. Parse document structure, claims, citations, bibliography, figures, tables, equations, and existing source registry.
-2. Detect missing relevant information: definitions, context, evidence, counterarguments, derivations, limitations, reproducibility, and source gaps. Rank by materiality.
-3. Research and add only substantiated content, explicitly distinguishing evidence, inference, conjecture, and unknowns. Attach immutable source IDs to every sourced addition; never fabricate references.
-4. After EACH addition or structural edit, invoke the /wca-ivy-biblio citation-integrity rules: traverse first appearances, renumber all affected citations, regenerate notes and bibliography, and check completeness.
-5. Verify facts, math, quotes, and source metadata; check contradictions and regressions; reassess gaps.
-6. Repeat while material resolvable gaps remain and progress is measurable, subject to explicit max iterations and resource/time constraints. Stop on convergence, no material progress, or exhausted resources; report unresolved gaps honestly.
-7. Run final citation and bibliography validation after typesetting and before export. A failed citation audit blocks successful completion.
 
-## Pseudocode
-```js
-let state = assess(document), iteration = 0;
-while (state.hasMaterialResolvableGaps && iteration < maxIterations && resourcesAvailable()) {
-  const changes = expandWithVerifiedSources(document, state.prioritizedGaps);
-  document = applyChanges(document, changes);
-  document = synchronizeCitationsAndBibliography(document); // /wca-ivy-biblio
-  assertCitationIntegrity(document);
-  const next = assessAndVerify(document);
-  if (!materialProgress(state, next)) { state = next; break; }
-  state = next; iteration++;
-}
-validateFinalTypesetCitations(document);
-return { document, iterations: iteration, unresolvedGaps: state.gaps };
-```
+1. Detect missing relevant definitions, context, evidence, counterarguments, derivations, limitations, reproducibility information, and source gaps. Rank them by materiality.
+2. Research and add only substantiated content. Distinguish evidence, inference, conjecture, and unknowns. Attach immutable source IDs; never invent references, source metadata, measurements, or successful validation.
+3. After EACH addition, deletion, replacement, move, or structural edit, rebuild the complete document citation sequence and bibliography using the citation-integrity contract below. Do not update only the inserted passage or append new numbers to an old sequence.
+4. Reconcile the full heading and image inventory. Provide required new banners and inline images immediately; update affected captions, visual references, and citations.
+5. Verify facts, mathematics, quotations, source identity, contradictions, style fidelity, visual coverage, and regressions. Reassess remaining gaps.
+6. Repeat while material resolvable gaps remain and progress is measurable. Do not introduce arbitrary content-length caps. Respect actual execution/resource constraints; checkpoint work and report unresolved gaps honestly. Never claim literal exhaustiveness or research saturation without evidence.
+7. Rebuild, paginate, and perform the final citation, equation, design, and visual audits on the actual exported file. Repair and repeat affected checks; recheck document-wide references and pagination after repairs.
 
-Compatibility: /deep, /atlas, /iterate, /latex, /copyright, /wca-ivy-biblio. Honor chosen citation style; numeric numbering by first appearance, Chicago notes numbered by appearance with bibliography order as appropriate to style.
+## Citation-integrity contract
 
+- Use stable source IDs and citation-event IDs. Treat display numbers as derived output. Normalize duplicate source records by verified DOI or other reliable identity without merging distinct editions or works accidentally.
+- Traverse the entire final reading order, including new and old prose, equations, tables, captions, figure notes, appendices, and supplementary body material. Follow the document's actual reading order rather than raw file or object-storage order.
+- For numeric reference systems, assign each distinct work its number at first appearance, keep the sequence contiguous from 1 through N, and reuse that number for later citations to the same work. Regenerate the unique-work bibliography in that first-appearance order.
+- For Chicago notes, renumber citation-note events contiguously in reading order across the whole document, including page-local footnotes and endnotes. Repeated works may have separate shortened notes. Maintain a separate unique-work registry and order its bibliography by each work's first appearance; do not confuse note numbers with bibliography entry numbers.
+- Preserve the document's chosen citation syntax and scholarly style. Honor an explicitly required alternative style, including an author-date or alphabetic bibliography, instead of inventing numeric labels for it; otherwise use the first-appearance house convention above.
+- Update every affected superscript, bracketed marker, grouped citation, page note, endnote, short note, bibliography entry, hyperlink, back-reference, and cross-reference. Deduplicate grouped work references and keep their ordering consistent with the citation style.
+- Reconcile removals and moved first appearances: eliminate gaps, resolve dangling references, and remove unused bibliography entries unless explicitly retained in a separately labeled further-reading list.
+- Run the latest /wca-ivy-biblio remapping and validation where its tooling supports the source format. For another format, use native citation fields or an equivalent deterministic whole-document rebuild. Do not claim an unavailable command ran.
+- After typesetting, verify the final PDF or other exported artifact against the source registry: contiguous first appearances, valid note sequence, correct destinations, no stale numbers, no unresolved placeholders, no uncited or duplicate bibliography records, and source-to-claim support. A source-only audit is insufficient.
 
-## v1.2.0 — equation-by-equation ITQE audits and mandatory final /latex
+## Design, banners, and inline images
 
-- Treat **every mathematical equation** as requiring its own corresponding /ITQE-generated audit table, including numbered and unnumbered display equations, aligned equation lines expressing independent claims, and mathematical equations embedded inline in prose. For repeated identical equations, maintain one canonical table and an explicit equation-to-table cross-reference for each occurrence; never leave an equation without a resolvable audit.
-- Assign stable equation IDs and matching ITQE table IDs; maintain a machine-checkable equation-to-table coverage ledger. When an equation is added, revised, moved, or removed, immediately regenerate or reconcile its ITQE table and cross-references. If a compound display contains multiple independent equations, split or provide separately identified audit rows/tables for each equation.
-- Each /ITQE table must include: equation and ID; variables and definitions; dimensional units and consistency; derivation or provenance; assumptions and domain of validity; evidence/source citations; classification (identity, established, derived conditionally, conjectural, contradicted, or unknown); limiting cases; falsifiability or verification; and ITQE stock–flow interpretation **only when relevant**. Never imply that a physics equation establishes an economic identity or that an ITQE audit empirically proves a conjecture.
-- Cite any nontrivial external evidence used in the equation or its table, and rerun /wca-ivy-biblio first-appearance citation ordering after every addition. Tables must be placed adjacent to the equation when feasible, with adequate separation and page-break controls.
-- Near the end of /expound, after substantive research, equation/table generation, and citation reconciliation but **before PDF/document output**, invoke the latest /latex skill as a mandatory preflight and typesetting/visual-QA gate. Its current requirements include scholarly serif/math fonts, true vertically stacked fractions, adequate text-to-table spacing, borderless but clickable hyperlinks, footer safety, citation integrity, and page-by-page rendered inspection.
-- Final export is blocked until (1) all equations map to ITQE tables, (2) the /latex compilation and visual QA pass, and (3) final citations and bibliography pass. On failure, repair and rerun /ITQE → /latex → citation audit until passed or report the unresolved blocker without falsely claiming completion.
-- Preserve finite execution budgets; if a requested skill is unavailable, do not claim it ran. Clearly report the missing step and provide the artifact only with explicit qualification.
+- Apply the captured design contract to every inserted paragraph, heading, table, equation, caption, note, and page. Match existing page geometry, typography, color, spacing, backgrounds, figure treatment, navigation, and footer requirements unless the user explicitly changes them.
+- Every body section AND subsection requires its own context-specific banner under /banner. Include newly inserted or subdivided nodes and appendices containing body content. A parent banner never satisfies a child's requirement.
+- Generate a distinct banner for each new required slot. Keep compliant existing banners. Revise an existing banner only when its meaning or required treatment changes; preserve asset history. Never crop, recolor, resize, or reuse another node's banner as a substitute for a new one.
+- Preserve the source's banner placement and compatible top/bottom alpha treatment. Enforce 16:9 aspect ratio and horizontal full bleed at the page trim, with zero left/right margin or padding. Keep readable text within safe insets. Do not stretch artwork or confuse digital edge-to-edge placement with printer bleed.
+- Give every new image a brief grounded in its heading and surrounding verified content. Follow the latest applicable banner/images art direction while retaining the source document's visual language. Label synthetic artwork accurately; never present it as an authentic photograph or measured scientific evidence.
+- Add distinct, relevant inline illustrations at least every 500 words of body prose, or at the source's stricter cadence. Audit the full expanded reading sequence, including insertion boundaries. Banners, page backgrounds, and equation plates do not count as inline illustrations.
+- Keep inline images independent of banners: no duplicate bytes, paths, crops, recolors, or near-duplicate compositions. Use deterministic diagrams or plots when scientific precision is necessary; do not invent data in generated imagery.
+- Maintain a heading-to-banner and passage-to-inline-image ledger with IDs, placement, caption, provenance, prompt when available, dimensions, hashes, and alt text where supported. Check exact and perceptual similarity and inspect visually; run /images uniqueness tooling when compatible.
+- Reconcile figure/table numbering, captions, in-text references, illustration lists, bookmarks, and contents after additions or moves. Citations introduced by images or captions must trigger the same global citation rebuild.
+
+## Equation-by-equation audits and final typesetting
+
+- Give every mathematical equation its own corresponding /ITQE audit, including numbered and unnumbered displays, aligned lines expressing independent claims, and equations embedded in prose. For identical repeated equations, retain a canonical audit and an explicit equation-to-table cross-reference for every occurrence.
+- Assign stable equation and audit-table IDs; maintain a machine-checkable coverage ledger. On addition, revision, movement, or removal, reconcile its table, source citations, and cross-references. Split compound displays or identify separate audit rows for independent equations.
+- Include variables, definitions, units and dimensional consistency, derivation/provenance, assumptions and validity domain, source citations, epistemic classification, limiting cases, and verification/falsifiability. Include stock–flow interpretation only when relevant. An audit does not empirically prove a conjecture.
+- Use the latest /ITQE presentation contract. Place the audit adjacent to its equation where feasible. Keep each displayed equation with its variable table; keep captions with illustrations. Prevent orphan headings and broken tables or entries that can fit on one page.
+- After substantive changes and citation reconciliation, invoke the latest /latex preflight, compilation, and visual-QA requirements before export: compiled mathematical notation, supported glyphs, scholarly typography compatible with the source, readable spacing, clickable links, footer safety, and rendered-page inspection.
+- Apply /copyright through its canonical helper and source rules. Maintain one notice per required page and preserve the source's authorized legal and brand links; do not paste a competing notice template into the document.
+
+## Release gate
+
+Require all of the following before describing the expansion as complete:
+
+1. Added claims have verified support or explicit uncertainty labels.
+2. The whole-document citation/notes sequence and bibliography pass after the last substantive or visual edit and after final pagination.
+3. Every required section/subsection has its own compliant banner, full-document inline-image cadence passes, and image uniqueness passes.
+4. Every equation resolves to its audit, and compiled math contains no raw notation, missing glyphs, or clipped symbols.
+5. Source-design comparison passes on representative original/new pages and all exported pages have been rendered and inspected for bleed, aspect ratio, contrast, spacing, clipping, overlaps, caption/table separation, and footer collisions.
+6. Figure/table references, contents, bookmarks, page numbers, bibliography links, and legal links resolve in the final export.
+7. Record PASS, FAIL, BLOCKED, or NOT TESTED with actual evidence. Repair failures and rebuild until resolved or disclose a real blocker and label any delivered partial artifact accordingly. Never count unexecuted checks as passes.
+
+Compatibility: /deep, /atlas, /iterate, /banner, /images, /latex, /copyright, /itqe, and /wca-ivy-biblio. Apply their current relevant requirements; preserve explicit user instructions.
+
+Read [acceptance scenarios](references/acceptance.md) when validating an update to this skill.
