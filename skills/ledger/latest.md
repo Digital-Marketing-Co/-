@@ -4,6 +4,8 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-23 | expound | repo-to-hosts | a067e7f | Update expound to v1.3.0 to preserve design and rebuild all citations and visuals; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-23 | expound | repo-to-hosts | e864190 | Add acceptance scenarios reference for citation and visual continuity; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-23 | weekday-gather | checked | c74ee2a | All 50 installed SKILL.md and supporting text files (references, scripts, assets under 200KB) match repo sizes. CHANGELOG trailing newline or minor diffs ignored. No new skill folders. No newer Grok content to push. ChatGPT and Grok should use the repo copy for all shared skills. |
 | 2026-10-22 | universal | repo-to-hosts | bcb866b | Add universal GDP-ranked parallel translation skill v1.0.0; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-22 | QUANTA | repo-to-hosts | 138f762 | Migrate legacy QAIR to QUANTA skill v2.0.1 (exhaustive Abacus.ai master prompts, QA, zero-inference runtime, year-3629 design); remove QAIR; Grok installed from repo; ChatGPT must re-upload |
