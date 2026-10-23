@@ -1,0 +1,34 @@
+{
+  "skill": "sync",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Compare two repository skill trees with nonconflicting additions.",
+      "assertions": [
+        "Verify remote heads, file paths, and content hashes before proposing writes.",
+        "Restrict synchronization to skills/** and preserve unrelated files."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Attempt reconciliation with differing edits to the same skill file.",
+      "assertions": [
+        "Report conflict and require review rather than overwriting either side.",
+        "Do not force-push or silently resolve ambiguous content."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "integrity",
+      "prompt": "Run when one repository is read-only or a push fails.",
+      "assertions": [
+        "Mark remote synchronization incomplete and show actual successful commits.",
+        "Do not claim both remotes are synchronized without post-write verification."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    }
+  ]
+}

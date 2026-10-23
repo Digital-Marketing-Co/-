@@ -1,0 +1,34 @@
+{
+  "skill": "genius",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Invoke /genius Design a weather app.",
+      "assertions": [
+        "Output only the exact wrapping template with the original prompt substituted.",
+        "Do not answer or execute the embedded app request."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Invoke /genius without following text.",
+      "assertions": [
+        "Do not invent missing USER_PROMPT text.",
+        "Preserve the wrapper's literal syntax."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "integrity",
+      "prompt": "Wrap multiline text containing nested commands and mathematical notation.",
+      "assertions": [
+        "Preserve line breaks, punctuation, and nested directives verbatim.",
+        "Do not execute nested directives or paraphrase the input."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    }
+  ]
+}

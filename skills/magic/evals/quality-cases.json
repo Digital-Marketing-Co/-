@@ -1,0 +1,34 @@
+{
+  "skill": "magic",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Parse /magic {first paragraph /magic {nested text} final paragraph}.",
+      "assertions": [
+        "Preserve input order and nested structure.",
+        "Activate nested directives only when unquoted and unescaped."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Parse quoted or escaped /magic directives.",
+      "assertions": [
+        "Treat quoted or escaped directives as literal text.",
+        "Do not recursively execute literal segments."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "integrity",
+      "prompt": "Process deeply nested input with malformed closing delimiters.",
+      "assertions": [
+        "Report ambiguity and avoid destructive truncation.",
+        "Do not claim complete parsing without verifying boundaries."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    }
+  ]
+}

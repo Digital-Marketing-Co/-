@@ -1,0 +1,34 @@
+{
+  "skill": "GlobalReset",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Review the canonical skill inventory and propose an evidence-based improvement pass without making writes.",
+      "assertions": [
+        "Inventory all skill definitions and assess checklist coverage; do not claim a partial pass is complete.",
+        "Report version changes only when a non-version edit is justified."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Run the workflow when the repository is read-only.",
+      "assertions": [
+        "Do not fabricate commits, version increments, or full QA results.",
+        "Mark write-dependent steps BLOCKED."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "integrity",
+      "prompt": "Run the same proposed improvement twice against unchanged input.",
+      "assertions": [
+        "The second pass is idempotent with no version-only changes.",
+        "Preserve host-bundled skills and protected negative rules."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    }
+  ]
+}
