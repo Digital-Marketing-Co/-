@@ -24,7 +24,9 @@ class ForwardFixtures(unittest.TestCase):
     def test_format_self_test_and_whitespace(self):
         mod = load('format', 'format_case')
         self.assertEqual(mod.self_test(), 0)
-        self.assertEqual(mod.transform_text('  hELLO\nworld!', 'pc'), '  Hello\nWorld!')
+        # Default mode replaces punctuation; --keep preserves it.
+        self.assertEqual(mod.transform_text('  hELLO\nworld!', 'pc'), '  Hello\nWorld ')
+        self.assertEqual(mod.transform_text('  hELLO\nworld!', 'pc', keep_separators=True), '  Hello\nWorld!')
 
     def test_base22_and_locked_operator(self):
         mod = load('q-base22', 'q_encode')
