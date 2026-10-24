@@ -4,6 +4,8 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-24 | atlas | repo-to-hosts | cf77cd9 | Repair and validate atlas/assets/negative-keywords.csv as clean six-column records (12724 bytes); archive original as inert EVIDENCE; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-24 | weekday-gather | checked | 6db25b1 | Reconciled 30 QA resources (quality-profile.md, quality-cases.json) and updated scripts for article-clip-pdf and banner; Grok synced existing skills; ChatGPT must re-upload new and changed skills |
 | 2026-10-23 | expound | repo-to-hosts | a067e7f | Update expound to v1.3.0 to preserve design and rebuild all citations and visuals; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-23 | expound | repo-to-hosts | e864190 | Add acceptance scenarios reference for citation and visual continuity; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-23 | weekday-gather | checked | c74ee2a | All 50 installed SKILL.md and supporting text files (references, scripts, assets under 200KB) match repo sizes. CHANGELOG trailing newline or minor diffs ignored. No new skill folders. No newer Grok content to push. ChatGPT and Grok should use the repo copy for all shared skills. |
