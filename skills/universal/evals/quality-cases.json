@@ -1,0 +1,35 @@
+{
+  "skill": "universal",
+  "cases": [
+    {
+      "prompt": "/universal /coffee Global Images Most Beautiful Full Bleed",
+      "assertions": [
+        "The source prompt is preserved exactly, including /coffee",
+        "The default workflow translates the literal prompt without executing /coffee or generating images",
+        "A consistent nominal-GDP dataset and reference year are cited for the top 50 economies",
+        "Country count and distinct-language count are reported separately"
+      ],
+      "grader": "Inspect ranking source and reference year, compare source tokens and translation rows, and verify no unauthorized image generation"
+    },
+    {
+      "prompt": "/universal --add Nepal Please preserve {guest_name} and https://example.com.",
+      "assertions": [
+        "Nepal is appended if not in the top 50 and its global GDP rank is identified when verified",
+        "{guest_name} and https://example.com remain unchanged",
+        "Official versus working languages are accurately labeled",
+        "Translation does not invent unverified GDP values"
+      ],
+      "grader": "Compare protected tokens byte-for-byte and audit the language/ranking evidence"
+    },
+    {
+      "prompt": "/universal --countries 60 Welcome to our waterfront exhibition.",
+      "assertions": [
+        "At least 60 distinct countries/economies are represented if the ranking dataset supports them",
+        "Rows are sorted by nominal GDP descending for one consistent year",
+        "Every translated segment aligns with the original source",
+        "Unverified translations and incomplete source coverage are disclosed"
+      ],
+      "grader": "Count distinct country entries, verify GDP ordering and year consistency, and spot-check segment alignment"
+    }
+  ]
+}

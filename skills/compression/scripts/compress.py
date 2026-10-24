@@ -177,9 +177,7 @@ def pack(tree: Path, dest: Path, container: str, profile: str) -> Path:
         return Path(str(dest))
     if container == "7z" and which("7z"):
         mx = "9" if profile == "maximum" else "7"
-        run(["7z", "a", f"-mx={mx}", str(dest), "."], timeout=300)
-        # 7z packs cwd; run from tree
-        run(["7z", "a", f"-mx={mx}", str(dest), str(tree)], timeout=300)
+        subprocess.run(["7z", "a", f"-mx={mx}", str(dest.resolve()), "."], cwd=tree, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=300, check=True)
         return dest
     if container == "tar.zst" and which("tar") and which("zstd"):
         run(["tar", "--zstd", "-cf", str(dest), "-C", str(tree), "."], timeout=300)
@@ -205,7 +203,8 @@ def main() -> int:
         return 2
 
     stamp = time.strftime("%Y%m%d-%H%M%S")
-    work = Path("/tmp") / f"compress-{stamp}"
+    workdir = tempfile.TemporaryDirectory(prefix=f"compress-{stamp}-")
+    work = Path(workdir.name)
     originals = work / "input-originals"
     working = work / "working"
     out_tree = Path(args.out)
@@ -214,8 +213,8 @@ def main() -> int:
     out_tree.mkdir(parents=True, exist_ok=True)
     payload = out_tree / "payload"
     payload.mkdir(parents=True, exist_ok=True)
-    originals.mkdir(parents=True)
-    working.mkdir(parents=True)
+    originals.mkdir(parents=True, exist_ok=True)
+    working.mkdir(parents=True, exist_ok=True)
 
     if src.is_file():
         try_copy(src, originals / src.name)
@@ -355,6 +354,7 @@ def main() -> int:
         ])
     )
     print(report.read_text())
+    workdir.cleanup()
     return 0
 
 
