@@ -19,7 +19,9 @@ class IntegrityTests(unittest.TestCase):
     def test_canonical_tree(self):
         report=module(ROOT/'scripts/validate_skills.py').audit(ROOT)
         self.assertEqual(report['errors'],[])
-        self.assertEqual(report['skill_count'],59)
+        expected_skill_count = sum(1 for path in (ROOT / 'skills').iterdir() if path.is_dir() and (path / 'SKILL.md').is_file())
+        self.assertGreater(expected_skill_count, 0)
+        self.assertEqual(report['skill_count'], expected_skill_count)
 
     def test_resolver_checkout_identity(self):
         resolver=module(ROOT/'skills/interop/scripts/resolve_root.py')

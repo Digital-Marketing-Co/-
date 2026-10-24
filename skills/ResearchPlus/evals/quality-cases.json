@@ -1,0 +1,34 @@
+{
+  "skill": "ResearchPlus",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Apply /ResearchPlus to a research question with source requirements.",
+      "assertions": [
+        "Resolve to research-unbounded without losing evidence traceability.",
+        "Use checkpointed volumes only when required by actual limits."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Apply /researchplus when the canonical target is unavailable.",
+      "assertions": [
+        "Report missing canonical dependency as BLOCKED.",
+        "Do not invent a replacement research standard."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "integrity",
+      "prompt": "Compare /ResearchPlus and /researchplus on the same inputs.",
+      "assertions": [
+        "Both aliases preserve identical source and length policies.",
+        "Do not claim unlimited physical compute or verified sources without access."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    }
+  ]
+}

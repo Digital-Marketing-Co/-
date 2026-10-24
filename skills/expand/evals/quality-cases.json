@@ -1,0 +1,34 @@
+{
+  "skill": "expand",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "/expand history of mathematical infinitesimals",
+      "assertions": [
+        "Build a logically ordered, source-grounded hierarchy with relevant evidence.",
+        "Identify gaps and create linked volumes only when practical limits require."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "boundary",
+      "prompt": "/expand a topic for which reliable sources cannot be found",
+      "assertions": [
+        "Flag unresolved claims and avoid invented citations.",
+        "Do not pad output to meet arbitrary quotas."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    },
+    {
+      "id": "integrity",
+      "prompt": "/expand a document containing contradictory dates and duplicate paragraphs",
+      "assertions": [
+        "Identify contradictions before expansion and preserve traceable corrections.",
+        "Deduplicate rather than multiplying repeated passages."
+      ],
+      "grader": "Review observed output and repository artifacts against every assertion; record PASS, FAIL, BLOCKED, or NOT TESTED with supporting evidence. Never infer PASS from the existence of this fixture."
+    }
+  ]
+}

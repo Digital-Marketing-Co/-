@@ -33,6 +33,7 @@ from reportlab.platypus import (
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from image_util import is_duplicate, upscale_to_width  # noqa: E402
+from publication_notice import notice_for  # noqa: E402
 
 INK = HexColor("#111111")
 MUTED = HexColor("#444444")
@@ -345,7 +346,7 @@ def build(article_json: Path, out_pdf: Path | None) -> Path:
         canvas.drawCentredString(
             PAGE_W / 2.0,
             0.32 * inch,
-            "Copyright \u00a9 2012\u20132026 Web Development Corporation. All rights reserved.",
+            notice_for(data),
         )
         canvas.restoreState()
 
