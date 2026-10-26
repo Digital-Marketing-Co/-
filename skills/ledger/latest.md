@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-26 | logo | repo-to-hosts | 481c61c | Add /logo brand placement and copyright deduplication skill; Grok installed from committed copy; ChatGPT must re-upload |
 | 2026-10-24 | atlas | repo-to-hosts | cf77cd9 | Repair and validate atlas/assets/negative-keywords.csv as clean six-column records (12724 bytes); archive original as inert EVIDENCE; Grok updated from repo; ChatGPT must re-upload |
 | 2026-10-24 | weekday-gather | checked | 6db25b1 | Reconciled 30 QA resources (quality-profile.md, quality-cases.json) and updated scripts for article-clip-pdf and banner; Grok synced existing skills; ChatGPT must re-upload new and changed skills |
 | 2026-10-23 | expound | repo-to-hosts | a067e7f | Update expound to v1.3.0 to preserve design and rebuild all citations and visuals; Grok installed from repo; ChatGPT must re-upload |
