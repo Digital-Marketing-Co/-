@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-25 | logo | QA repair proposal | 843bf48 | Add missing canonical YAML frontmatter and explicit QA profile/cases; structural and visual QA must be verified before merging. |
 | 2026-10-26 | logo | repo-to-hosts | 0052a78 | Integrate /logo and contrast-safe /4629 copyright workflow in logo; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-26 | 4629 | repo-to-hosts | aacd29b | Integrate /logo and contrast-safe /4629 copyright workflow in 4629; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-26 | copyright | repo-to-hosts | b0a3830 | Integrate /logo and contrast-safe /4629 copyright workflow; Grok updated from repo; ChatGPT must re-upload |
