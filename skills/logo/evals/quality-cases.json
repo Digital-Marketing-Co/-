@@ -1,0 +1,37 @@
+{
+  "skill": "logo",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "verified-asset",
+      "prompt": "Place a verified official brand logo below the single canonical copyright notice on a representative document page.",
+      "assertions": [
+        "Use only a verified committed or user-supplied official asset.",
+        "Preserve aspect ratio, clear space, text contrast, and a single copyright notice.",
+        "Keep all mandatory third-party license notices."
+      ],
+      "grader": "Inspect asset provenance and rendered pages at representative viewport and print sizes; report evidence."
+    },
+    {
+      "id": "missing-asset",
+      "prompt": "Apply /logo to a document when no verified brand image is available.",
+      "assertions": [
+        "Do not invent an asset or remote URL.",
+        "Keep the existing document and notices intact.",
+        "Report the missing prerequisite without claiming placement."
+      ],
+      "grader": "Inspect document changes and verify no fabricated logo or URL appears."
+    },
+    {
+      "id": "integration",
+      "prompt": "Use /logo together with /4629 and /copyright in a multi-page publication.",
+      "assertions": [
+        "Place logo immediately below canonical notice where appropriate.",
+        "Do not duplicate brand marks or legal notices.",
+        "Prevent clipping, overlap, and unreadable contrast across pages."
+      ],
+      "grader": "Inspect rendered output, source notice counts, and evidence from visual QA."
+    }
+  ]
+}
