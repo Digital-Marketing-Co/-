@@ -49,3 +49,7 @@ Run the single delivery gate in `interop/SKILL.md` after task-specific validatio
 
 ## Universal document-output rendering (9491 standard)
 When this skill produces or modifies a document, PDF, research report, slide deck, or contextual AI figure, it MUST apply the canonical `skills/references/document-rendering-9491.md` standard. Treat that file as the single shared styling/visual-QA authority, not a duplicated independent template. Preserve all more-specific existing requirements and enforce /latex, /copyright, /qa, and /qa_visual release gates as applicable.
+
+
+## Radial depth and copyright integration
+Offer at least six creative visual directions when style is not already selected. For cyan-to-navy radial holographic style use dimensional rings, Z-depth lighting and subtle electric-blue glows in backgrounds only. Always place text on opaque contrast-safe panels and render/inspect every page for clipping. Integrate `/logo` and `/copyright` as a single deduplicated branded copyright endplate. Preserve text extraction and original content.
