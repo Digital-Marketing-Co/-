@@ -1,3 +1,6 @@
 # /logo — Digital Marketing Co brand asset
 
 Use the user-supplied official Digital Marketing Co Earth/cyan wordmark as a single source of truth. Asset URL must be obtained from a verified committed repository file; never invent a URL. Place the brand logo immediately **below** the single prominent copyright statement in document copyright sections. Do not duplicate copyright notices or logos. Respect clear space, aspect ratio, accessibility contrast, and print-safe dimensions. If a source logo is not yet committed, request/use the provided image locally without claiming a remote URL. Integrate with /copyright, /4629, /banner, and /images. Never overwrite existing skill definitions blindly; reconcile them and validate output visually.
+
+## Verification
+The actual image asset must have a verified repository URL before claiming remote hosting. Apply copyright deduplication without removing mandatory third-party license notices.
