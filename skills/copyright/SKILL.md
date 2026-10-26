@@ -26,3 +26,7 @@ Upper legal label Web Development Corporation uses the exact target https://WebD
 Check every page for one notice, intended owner/year, readable fallback, original body preservation, and correct URI annotations. Stamp twice on a disposable fixture to prove idempotence. Verify year formatting with a future-year fixture. A field with JavaScript is not proof that an actual viewer updated it. Do not claim a notice registers rights or creates copyright that applicable law withholds.
 
 Do not copy legal text or year calculations into other skills or append repeated legal blobs. `scripts/append_prompt_appendix.py` can migrate a legacy footer section to a canonical reference with an explicit file argument; it does not rewrite global instructions. Follow `interop/SKILL.md` for the single delivery gate.
+
+
+## Canonical logo and deduplication
+Invoke `/logo` for the one canonical brand image. Place it immediately beneath the most prominent copyright block, preserving its aspect ratio and readable clear space. Render only one primary copyright block per output; preserve legally required third-party attribution and licenses separately. Do not duplicate the logo in the same copyright output. Verify text visibility and print layout.
