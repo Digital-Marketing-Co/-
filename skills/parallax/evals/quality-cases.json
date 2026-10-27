@@ -1,0 +1,37 @@
+{
+  "skill": "parallax",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Given a documented multi-depth tropical landscape and a target 9:16 wallpaper or interactive layered scene, create the requested output and record its depth-order manifest.",
+      "assertions": [
+        "Each actual exported layer has a unique contiguous integer index, farthest first.",
+        "Depth centroids and transform amplitudes are monotone except explicitly documented physical exceptions.",
+        "No duplicated source regions, missing occluders, edge halos, or invented output assets are claimed as verified."
+      ],
+      "grader": "Inspect the exported manifest and actual rendered frames or image; compare against the source and record evidence."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Given only a single still photograph, no device orientation permission, or no eligible depth segmentation, explain or implement a safe fallback.",
+      "assertions": [
+        "Do not claim gyroscope-responsive native iPhone wallpaper or Apple Spatial Scene eligibility from a still image.",
+        "Preserve original pixels when no image edit is authorized; distinguish estimated depth from measured depth.",
+        "Report unavailable assets, permissions, or hardware tests as BLOCKED or NOT TESTED."
+      ],
+      "grader": "Inspect actual output and permission fallback; verify unsupported claims are absent."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Render or review the maximum safe parallax displacement on a mobile viewport with reduced motion enabled and complex foliage/water boundaries.",
+      "assertions": [
+        "Maintain stable horizon, plausible reflections, inpainted disocclusions, and overscan coverage.",
+        "Honor reduced-motion controls and cap movement; verify real-device performance only when measured.",
+        "Present layer count, ordering, test conditions, observed failures, and unverified assumptions accurately."
+      ],
+      "grader": "Inspect representative render frames, mobile crop, accessibility behavior, and measured performance when available."
+    }
+  ]
+}
