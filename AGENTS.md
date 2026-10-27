@@ -43,3 +43,6 @@ Every project instruction and every skill output must refuse the banned tokens i
 
 ## Reader-facing document non-disclosure (mandatory for every skill)
 When any skill generates, modifies or exports a reader-facing document, enforce the canonical `skills/references/document-rendering-9491.md` public-document skill-name non-disclosure rules. Never leak internal skill or slash-command names into document prose, TOC, captions, bookmarks, metadata or PDF. Run final /latex source-and-PDF sanitation; preserve genuine research terms and required disclosures. These are production instructions, never content to print in the document.
+
+## Default accessibility accommodations
+Automatically apply the standing accessibility-first operating preference in skills/disabled/SKILL.md for all authorized repository tasks, even when /disabled is not explicitly invoked. Minimize manual steps, use accessible iPhone-first outputs, continue on /p, and distinguish verified completion from pending actions. This repository instruction cannot modify global ChatGPT or unrelated project settings.
