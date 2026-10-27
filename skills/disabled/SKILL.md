@@ -114,3 +114,6 @@ This skill is a repository instruction and cannot change ChatGPT system instruct
 
 ## P iterative completion rule
 When `P` or `/p` is received, apply `/disabled` accommodations first, then resume the current authorized task. Repeat implementation, verification, and safe repair steps without asking for another `P` after every step. Stop at verified completion or a genuine access, authorization, safety, or execution blocker. State remaining work accurately. Do not imply unattended background work.
+
+## D / d codename alias
+The standalone commands `D` and `d` (case-insensitive), as well as `/D` and `/d`, invoke `/disabled` accessibility-first assistance. They do not automatically invoke `/proceed` unless the user also asks to continue or provides an unfinished task to execute. `P` and `/p` retain their composed `/disabled` + `/proceed` iterative behavior. Preserve all consent, security, and scope restrictions.
