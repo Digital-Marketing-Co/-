@@ -27,3 +27,27 @@ description: Maximize physically plausible 3D parallax for images, iPhone spatia
 Apple Support https://support.apple.com/en-us/102638
 MDN https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation
 MDN https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40media/prefers-reduced-motion
+
+
+## Adaptive maximum-layer interpolation (mandatory)
+Replace the fixed five-layer ceiling with an adaptive, depth-ordered hierarchy. The original five semantic groups are starting anchors only; subdivide each into as many independently useful and visually coherent depth slices as image evidence and performance permit. Do not fabricate depth certainty from a single image.
+
+### Iterative layer construction
+1. Estimate a continuous normalized inverse-depth map d(x,y) in [0,1], where 0 is farthest and 1 is nearest; separately preserve instance boundaries, translucency, water/refraction, and uncertainty.
+2. Initialize the five anchor groups; split high-depth-variance groups by adaptive quantiles or edge-aware clustering. Prefer boundaries at real occlusion discontinuities. Within smoothly varying surfaces, use depth interpolation and a mesh/depth warp instead of thousands of hard-cut sprites.
+3. On each iteration, propose additional slices only where the split improves motion fidelity, silhouette quality, or perceptible depth. Maintain parent-child provenance, mask exclusivity or explicitly documented alpha compositing, and reconstruct newly exposed pixels.
+4. Assign every layer a unique integer index, contiguous and monotonically increasing from 0000 (farthest background) to N-1 (nearest foreground). Sort by physical depth before EVERY render, serialization, export, and QA pass. Higher index must be nearer to the viewer. Never rely on filesystem order or lexicographic string ordering without zero padding.
+5. For each indexed layer, record: index, semantic group, depth_min, depth_max, centroid_depth, parent_index, mask reference, alpha, occlusion relationships, transform coefficient, and QA status. Reindex atomically after splits/merges; keep stable persistent IDs distinct from display indices.
+6. Interpolate transform strength continuously with depth, using bounded monotone easing; farther layers never translate more than nearer layers for the same camera shift. Treat sky as nearly stationary, horizon as stable, and refractive water as a special physically constrained case.
+7. Enforce compositing back-to-front (ascending index); validate that occluders appear in front of occluded objects and no layer is skipped or duplicated. Export an ordered manifest and deterministic render test.
+8. Increase layer count until marginal depth-quality gain is negligible or memory, battery, framerate, edge-coverage, and artifact budgets would be exceeded. Do not assert a universal optimal count: use adaptive budgets (e.g., 8–32 useful semantic/sprite planes on capable devices as a starting experiment, with continuous depth meshes where superior), benchmark real hardware, and lower count when necessary.
+9. Iteratively /expound with split → index → interpolate → inpaint → render → measure → QA. Repeat until two consecutive complete passes produce no material gain in perceived depth or occlusion correctness and no regressions. Never claim actual tests without executing them.
+
+### Layer-order invariants
+- Indices are exactly [0, 1, ..., N-1], without gaps or duplicates.
+- depth_centroid[i] <= depth_centroid[i+1] (far-to-near convention).
+- transform_amplitude[i] <= transform_amplitude[i+1], subject to explicit physical exceptions for reflective/refractive surfaces.
+- Render order follows ascending indices; foreground covers background.
+- A split or merge MUST regenerate indices, depth ranges, masks, and manifest before the next iteration.
+- The final report includes actual layer count, indexed manifest, split/merge history, benchmark conditions, and any unverified assumptions.
+
