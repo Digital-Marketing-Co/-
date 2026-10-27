@@ -4,6 +4,12 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-27 | folio | repo-to-hosts | 9b9b32b | Enforce cross-artifact image non-duplicity; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-27 | visual-system | repo-to-hosts | 41f840b | Enforce cross-artifact image non-duplicity; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-27 | textbook | repo-to-hosts | acf3c0c | Enforce cross-artifact image non-duplicity in addition to chapter full-bleed; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-27 | banner | repo-to-hosts | 5899427 | Enforce cross-artifact image non-duplicity; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-27 | images | repo-to-hosts | 54e18d8 | Enforce cross-artifact image non-duplicity; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-27 | 4629 | repo-to-hosts | afc89fe | Enforce cross-artifact image non-duplicity; not installed on this Grok host; ChatGPT must re-upload |
 | 2026-10-26 | images | repo-to-hosts | 6099497 | Enhance /images with chapter-specific full-bleed photographic backgrounds and contextual openers for /textbook /4629; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-26 | banner | repo-to-hosts | 488d64f | Enhance /banner with chapter-specific full-bleed imagery and contextual openers for /textbook /4629; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-26 | textbook | repo-to-hosts | 37fc6b4 | Enhance /textbook with chapter-specific full-bleed photographic composition and contextual openers; Grok installed from repo; ChatGPT must re-upload |
