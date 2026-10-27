@@ -1,0 +1,37 @@
+{
+  "skill": "interface",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Present an accessible operation dashboard for an authorized repository synchronization review with verified commit hashes, one failed build, and a pending review.",
+      "assertions": [
+        "Every task has a stable ID, allowed status, last verified action, remaining work, next safe action, and evidence when available.",
+        "Summary counts equal the task records and failed or blocked tasks are not marked complete.",
+        "Measured progress is shown only with a real denominator; otherwise use stage-based progress."
+      ],
+      "grader": "Compare displayed tasks, statuses, links, and counts to actual tool responses; flag any invented completion or telemetry."
+    },
+    {
+      "id": "boundary",
+      "prompt": "The user asks for a live progress dashboard with automatic refresh, but there is no connected monitor, background worker, or refresh action.",
+      "assertions": [
+        "Do not imply continuous live monitoring or invent elapsed time, percentages, or updates.",
+        "Omit inert refresh controls and provide an accessible text fallback when interactive capabilities are absent.",
+        "Preserve required approvals and do not mark blocked actions complete."
+      ],
+      "grader": "Inspect supported tools and UI callbacks, verify no unsupported action is advertised or claimed."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Render the dashboard on a narrow iPhone viewport with VoiceOver, keyboard navigation, and reduced motion enabled.",
+      "assertions": [
+        "Semantic headings, readable contrast, focus indicators, and at least 44-by-44-pixel touch targets are present where controls exist.",
+        "Content does not overflow or require motion to convey task state.",
+        "Futuristic /4629 styling never overrides legibility or accessibility."
+      ],
+      "grader": "Inspect an actual rendered viewport and accessibility checks if available; mark device-specific behavior NOT TESTED otherwise."
+    }
+  ]
+}
