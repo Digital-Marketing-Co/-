@@ -111,3 +111,6 @@ This skill is a repository instruction and cannot change ChatGPT system instruct
 
 ## Shortcut aliases and automatic invocation
 `P`, `p`, `/p`, `/proceed`, and `Proceed` invoke the /disabled accessibility-first workflow alongside the /proceed continuation workflow. On these shortcuts, perform the task directly with minimal user effort and do not print the historical fixed phrase unless the user explicitly asks for it. `/disabled` remains an explicit invocation; existing safety and consent boundaries apply.
+
+## P iterative completion rule
+When `P` or `/p` is received, apply `/disabled` accommodations first, then resume the current authorized task. Repeat implementation, verification, and safe repair steps without asking for another `P` after every step. Stop at verified completion or a genuine access, authorization, safety, or execution blocker. State remaining work accurately. Do not imply unattended background work.
