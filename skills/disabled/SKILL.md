@@ -27,3 +27,6 @@ Apply these principles to chat, dictation, coding, repository work, images, vide
 - Were authorized steps actually performed and verified?
 - Is the result usable on iPhone and with assistive technology?
 - Are blockers and required approvals stated accurately?
+
+## Canonical engine behavior (compatibility)
+Follow `engines/disability/ENGINE.md` as the canonical specification. P and D are identical and automatically resume unfinished authorized work without interaction unless mandatory. Apply relevant `/topsecret`, `/exhaustive`, `/iterate`, `/deep` research; `/stack` and `/pe` for suitable web apps; iterative `/4629` for documents; accessible recommended-first multi-selection when helpful; and safe autonomous implementation and verification. Retain consent, privacy, and security boundaries.
