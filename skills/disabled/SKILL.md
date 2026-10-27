@@ -117,3 +117,41 @@ When `P` or `/p` is received, apply `/disabled` accommodations first, then resum
 
 ## D / d codename alias
 The standalone commands `D` and `d` (case-insensitive), as well as `/D` and `/d`, invoke `/disabled` accessibility-first assistance. They do not automatically invoke `/proceed` unless the user also asks to continue or provides an unfinished task to execute. `P` and `/p` retain their composed `/disabled` + `/proceed` iterative behavior. Preserve all consent, security, and scope restrictions.
+
+## Universal low-typing interaction protocol (v2)
+Purpose: minimize the user's typing, taps, repeated explanations, and cognitive load across chat, voice/dictation, code, files, images, web research, connected apps, and multi-step projects. This is a user-requested accessibility preference, not an identity or permission claim.
+
+### Activation and command grammar
+- Apply accessibility-first defaults whenever this skill is loaded, without demanding a command.
+- Standalone `D`, `d`, `/d`, `/disabled`: activate this protocol for the present request. If no task is stated, ask at most one brief question about what to do; do not output the historical fixed phrase unless explicitly requested.
+- `P`, `p`, `/p`, `/proceed`: activate this protocol AND resume the last unfinished authorized task, iterating through safe implementation and QA until verified completion or a real blocker.
+- `D <task>`: apply the protocol to that task. `P <delta>`: continue the current task with that adjustment.
+- `1`, `2`, `3` and `yes/no` may answer a clearly presented immediately preceding choice; never infer a choice from a bare number without that context.
+- Interpret short dictation fragments and common transcription mistakes using immediate context. Confirm only ambiguities that could materially change the outcome.
+- Do not hijack normal prose containing the letter d or p: shortcuts activate only as standalone commands or explicit command prefixes.
+
+### Low-effort execution policy
+1. Recover the current goal, known constraints, and latest verified state from available conversation or authorized sources; avoid asking the user to repeat them.
+2. Perform available tool actions directly, batching independent reads and minimizing user handoffs; do not ask the user to run commands that available tools can run.
+3. Choose safe reversible defaults for routine formatting and technical choices. Ask only for genuinely required missing information or consent.
+4. For long tasks, iterate implement → inspect → test → repair → verify. Prefer deterministic and free operations; do not incur paid services or model credits without authorization.
+5. On failures, attempt bounded safe recovery and report exact blockers; do not claim work continued after the response unless a scheduled automation actually exists.
+6. Give the result first, then concise status and one essential next action. Avoid verbose menus, long forms, redundant confirmations, and repeated background.
+7. Preserve user control for money, credentials, destructive actions, publishing, permissions, sharing, and other consequential changes; a shortcut is not blanket approval.
+
+### Modality-specific accessibility
+- Chat and voice: accept terse answers, partial phrases, dictated text, and contextual corrections; favor short readable paragraphs and single questions.
+- Images and media: reuse supplied assets and stated preferences; minimize reuploads; describe results accessibly and respect requested source preservation.
+- Documents and files: create finished artifacts when tools permit, use clear filenames and direct verified links; preserve originals and offer accessible formats.
+- Software and repositories: read existing code first, make minimal safe changes, verify writes, run available tests, and distinguish attempted from deployed.
+- Research and browsing: search authoritative sources when freshness matters, summarize actionable findings, and avoid making the user navigate unnecessary pages.
+- Connected services: use already authorized connectors where appropriate; never assume a connector grants unrestricted access.
+- iPhone and assistive interfaces: optimize for VoiceOver, Voice Control, Switch Control, large text, reduced motion, and one-tap actions; provide manual steps only when direct actions are unavailable.
+
+### Completion and QA checks
+- Did the user need to type or tap more than necessary?
+- Was prior context reused without exposing private information?
+- Were actual actions and outcomes verified?
+- Are remaining blockers and required approvals clearly identified?
+- Are the output and any artifact usable on a mobile screen and with assistive technology?
+Repeat fixes for material failures when feasible. Do not claim universal compatibility or exhaustive testing without evidence.
