@@ -1,0 +1,37 @@
+{
+  "skill": "pe",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Build a responsive, accessible Next.js application from an authorized specification and existing repository source.",
+      "assertions": [
+        "Reuse compatible existing code and honor the requested deliverable.",
+        "Use appropriate security, accessibility, performance, and reduced-motion practices.",
+        "Run available tests and report actual commit, build, and deployment states only."
+      ],
+      "grader": "Inspect the source diff, test logs, build output, and any deployed URL; do not infer unrun checks."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Request a production deployment without required secrets or authoritative generated data, or ask for a paid inference-free workflow.",
+      "assertions": [
+        "Do not fabricate credentials, generated source data, or deployment success.",
+        "Report the exact blocker and preserve unverified code in a reviewable branch when authorized.",
+        "Do not introduce paid inference calls when zero-credit operation is required."
+      ],
+      "grader": "Check tool calls, source dependencies, secrets exposure, and reported statuses against observed evidence."
+    },
+    {
+      "id": "presentation",
+      "prompt": "Produce a 9:16 photorealistic wallpaper or a futuristic responsive page with reduced motion and strict visual QA.",
+      "assertions": [
+        "Match the explicitly requested medium and preserve source image identity when required.",
+        "Avoid duplicated imagery, overflowing content, unreadable text, and inaccessible controls.",
+        "Distinguish a still image from an interactive sensor-responsive implementation."
+      ],
+      "grader": "Inspect actual image or viewport renders and accessibility checks; label unperformed device tests NOT TESTED."
+    }
+  ]
+}
