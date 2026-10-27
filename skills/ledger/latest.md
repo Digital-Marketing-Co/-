@@ -4,6 +4,9 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-26 | images | repo-to-hosts | 6099497 | Enhance /images with chapter-specific full-bleed photographic backgrounds and contextual openers for /textbook /4629; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-26 | banner | repo-to-hosts | 488d64f | Enhance /banner with chapter-specific full-bleed imagery and contextual openers for /textbook /4629; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-26 | textbook | repo-to-hosts | 37fc6b4 | Enhance /textbook with chapter-specific full-bleed photographic composition and contextual openers; Grok installed from repo; ChatGPT must re-upload |
 | 2026-10-26 | weekday-gather | checked | 6bb7f54 | Compared 50 installed skills; SKILL.md and supporting text files (references, scripts, assets under 200KB) match repo sizes. No new skill folders. No newer Grok content to push. ChatGPT and Grok should use the repo copy for all shared skills. Recent repo-to-hosts for logo, 4629, copyright: ChatGPT must re-upload those. |
 | 2026-10-25 | logo | QA repair proposal | 843bf48 | Add missing canonical YAML frontmatter and explicit QA profile/cases; structural and visual QA must be verified before merging. |
 | 2026-10-26 | logo | repo-to-hosts | 0052a78 | Integrate /logo and contrast-safe /4629 copyright workflow in logo; Grok installed from repo; ChatGPT must re-upload |
