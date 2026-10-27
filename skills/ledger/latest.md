@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-27 | interface | QA repair | 5f3745 | Restore interface quality profile and evaluation cases via PR #11; Skill Sync Guard, Universal Skill QA, and synchronization validation passed on PR; host installation not verified |
 | 2026-10-27 | parallax disabled exhaustive pe | repo-to-hosts | 9d2b8ff | Restore required quality-profile.md and quality-cases.json for parallax (bb2a530), disabled, exhaustive, pe; Grok uses committed copy; ChatGPT must re-upload |
 | 2026-10-27 | disabled proceed parallax exhaustive pe | repo-to-hosts | c160b6e | Install new skills disabled (accessibility-first), parallax, exhaustive, pe; update proceed with mandatory /disabled composition for P; Grok updated from repo; ChatGPT must re-upload |
 | 2026-10-27 | visual-system latex | grok-to-repo | 97ed7de | Update company link text from Digital Marketing Co. to Digital Marketing Company in visual-system and latex; Grok pushed to repo; ChatGPT must re-upload |
