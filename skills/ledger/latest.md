@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-27 | disabled proceed parallax exhaustive pe | repo-to-hosts | c160b6e | Install new skills disabled (accessibility-first), parallax, exhaustive, pe; update proceed with mandatory /disabled composition for P; Grok updated from repo; ChatGPT must re-upload |
 | 2026-10-27 | visual-system latex | grok-to-repo | 97ed7de | Update company link text from Digital Marketing Co. to Digital Marketing Company in visual-system and latex; Grok pushed to repo; ChatGPT must re-upload |
 | 2026-10-27 | atlas | repo-to-hosts | 64bb159 | Enforce cross-artifact image non-duplicity policy in /atlas; Grok updated from repo; ChatGPT must re-upload |
 | 2026-10-27 | deep | repo-to-hosts | 87d022e | Enforce cross-artifact image non-duplicity policy in /deep; Grok updated from repo; ChatGPT must re-upload |
