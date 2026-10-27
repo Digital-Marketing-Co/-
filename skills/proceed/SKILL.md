@@ -37,3 +37,6 @@ Resume the last incomplete job in this conversation. Do not wait for the user to
 ## If nothing prior exists
 
 Say there is no prior unfinished task in this thread and ask what to start. Do not guess a project from memory.
+
+## Mandatory /disabled composition for P
+Whenever the user sends `P` (case-insensitive), `/p`, or `/proceed`, invoke the accessibility-first operating rules of `skills/disabled/SKILL.md` BEFORE continuing the prior task. Treat this as composed behavior: /disabled accommodations + /proceed continuation, not replacement of the pending task. Do not automatically output the historical fixed quoted phrase unless explicitly requested. Preserve security, consent, and higher-priority constraints.
