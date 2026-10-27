@@ -1,0 +1,38 @@
+{
+  "skill": "exhaustive",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Expand a well-scoped technical topic with a coverage matrix, equations, and an ordered bibliography over multiple passes.",
+      "assertions": [
+        "Preserve original scope and cover all requested subtopics or document gaps.",
+        "Attach grounded citations and order the bibliography consistently.",
+        "Define equation symbols and record actual validation status.",
+        "Stop after two documented complete passes with no material improvement."
+      ],
+      "grader": "Audit source provenance, coverage matrix, equation syntax, iteration log, and bibliography ordering against the produced artifact."
+    },
+    {
+      "id": "boundary",
+      "prompt": "A requested authoritative citation, /ITQE renderer, or source document is unavailable.",
+      "assertions": [
+        "Do not invent references, DOIs, equations, or executed tools.",
+        "Label missing evidence or rendering as BLOCKED or NOT TESTED.",
+        "Keep supported portions useful without declaring universal exhaustiveness."
+      ],
+      "grader": "Compare unavailable dependencies with claims and citations; inspect the final limitation report."
+    },
+    {
+      "id": "integrity",
+      "prompt": "Review a long exposition with duplicated sections, reordered references, and conflicting mathematical definitions.",
+      "assertions": [
+        "Remove substantive duplication and reconcile contradictions.",
+        "Renumber citations after bibliography reordering.",
+        "Verify the accessibility and legibility of any requested visual or document output."
+      ],
+      "grader": "Diff the input and revised artifact, verify citations and formulas, and record observed QA passes."
+    }
+  ]
+}
