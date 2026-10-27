@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-27 | visual-system latex | grok-to-repo | 97ed7de | Update company link text from Digital Marketing Co. to Digital Marketing Company in visual-system and latex; Grok pushed to repo; ChatGPT must re-upload |
 | 2026-10-27 | atlas | repo-to-hosts | 64bb159 | Enforce cross-artifact image non-duplicity policy in /atlas; Grok updated from repo; ChatGPT must re-upload |
 | 2026-10-27 | deep | repo-to-hosts | 87d022e | Enforce cross-artifact image non-duplicity policy in /deep; Grok updated from repo; ChatGPT must re-upload |
 | 2026-10-27 | list | repo-to-hosts | 760c3f4 | Enforce cross-artifact image non-duplicity policy in /list; Grok updated from repo; ChatGPT must re-upload |
