@@ -1,10 +1,10 @@
 # Above-PhD optimal type scale for DigitalMarketingCo.org documents
 
-Locked standards for every PDF that passes this skill gate. These values produce university-press / above-PhD readability, high contrast, and clear hierarchy while representing Digital Marketing Co.
+Locked standards for every PDF that passes this skill gate. These values produce university-press / above-PhD readability, high contrast, and clear hierarchy while representing Digital Marketing Company.
 
 ## Identity (mandatory on every page)
 
-- Visible link text: Digital Marketing Co.
+- Visible link text: Digital Marketing Company
 - Title attribute matches visible text
 - Target: https://DigitalMarketingCo.org
 - Plain-text domain: DigitalMarketingCo.org (exact casing)
