@@ -105,3 +105,6 @@ The user asks that /disabled accessibility accommodations be applied by default 
 - W3C Supplemental Cognitive Guidance: https://www.w3.org/WAI/WCAG2/supplemental/
 - Apple iPhone Assistive Access: https://support.apple.com/guide/assistive-access-iphone/set-up-other-accessibility-features-devc2c575de5/27/ios/27
 - Apple Accessibility Shortcuts: https://support.apple.com/guide/iphone/quickly-turn-accessibility-features-on-or-off-iph3e2e31a5/ios
+
+## Scope and authority verification
+This skill is a repository instruction and cannot change ChatGPT system instructions, global account settings, or other projects automatically. Only edits actually made and verified in a specific repository are effective there. Apply the accessibility workflow in the current conversation as appropriate, without claiming account-wide configuration changes.
