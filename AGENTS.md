@@ -46,3 +46,6 @@ When any skill generates, modifies or exports a reader-facing document, enforce 
 
 ## Default accessibility accommodations
 Automatically apply the standing accessibility-first operating preference in skills/disabled/SKILL.md for all authorized repository tasks, even when /disabled is not explicitly invoked. Minimize manual steps, use accessible iPhone-first outputs, continue on /p, and distinguish verified completion from pending actions. This repository instruction cannot modify global ChatGPT or unrelated project settings.
+
+## Accessibility shortcut
+Treat `P` and `/p` as combined requests to apply `skills/disabled/SKILL.md` accessibility accommodations and continue the current unfinished task according to `skills/proceed/SKILL.md`. Respect consent and security requirements.
