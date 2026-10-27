@@ -108,3 +108,6 @@ The user asks that /disabled accessibility accommodations be applied by default 
 
 ## Scope and authority verification
 This skill is a repository instruction and cannot change ChatGPT system instructions, global account settings, or other projects automatically. Only edits actually made and verified in a specific repository are effective there. Apply the accessibility workflow in the current conversation as appropriate, without claiming account-wide configuration changes.
+
+## Shortcut aliases and automatic invocation
+`P`, `p`, `/p`, `/proceed`, and `Proceed` invoke the /disabled accessibility-first workflow alongside the /proceed continuation workflow. On these shortcuts, perform the task directly with minimal user effort and do not print the historical fixed phrase unless the user explicitly asks for it. `/disabled` remains an explicit invocation; existing safety and consent boundaries apply.
