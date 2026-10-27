@@ -1,6 +1,7 @@
 ---
 name: disability
-description: Unified low-effort accessibility workflow invoked identically by P or D.
+description: Compatibility alias for the Disability Engine. P and D invoke the same workflow.
 ---
-# /disability
-Both `P` and `D` invoke the same accessibility-first workflow. Follow the canonical instructions in `skills/disabled/SKILL.md`. Resume the last unfinished authorized task when no new task is supplied, minimize typing and user effort, perform safe available actions, iterate QA until verified or blocked, and respect consent and security boundaries.
+# Compatibility alias: Disability Engine
+Canonical instructions: `engines/disability/ENGINE.md`.
+For older skill loaders, execute the same behavior here: P and D both activate accessibility-first assistance, resume the most recent unfinished authorized task when none is supplied, minimize typing and manual effort, and iterate safe implementation and verification until complete or blocked. Preserve consent, privacy, and security.
