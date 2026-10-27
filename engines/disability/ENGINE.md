@@ -24,3 +24,6 @@ Applies to chat, dictation, code, repositories, images, video, documents, resear
 ## Legacy compatibility
 
 Keep `skills/disability/SKILL.md`, `skills/disabled/SKILL.md`, and `skills/proceed/SKILL.md` as compatibility entries. The former term **skill** and new term **engine** are aliases in documentation; external loaders may require their own migration. Preserve legacy paths until consumers are verified.
+
+## Automatic progress interface (/interface)
+On P, D, /disabled, or /disability, continue the last authorized task automatically without waiting for another proceed prompt. At meaningful milestones, render the /interface dashboard using the /4629 futuristic visual standard: verified completed operations, active/queued steps, outstanding tasks, blockers, and evidence links. Prefer compact accessible iPhone-first progress cards with clear text, VoiceOver-friendly labels, high contrast, reduced motion, and no fake progress percentages. When the interface cannot update live, label it a snapshot and provide a real refresh action where supported. Never claim autonomous background activity without a running automation or application. Do not interrupt safe execution solely to display status. The /interface skill is located at skills/interface/SKILL.md.
