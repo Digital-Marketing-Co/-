@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-28 | disabled | repo-to-hosts | 0093884 | Automatically continue authorized queued steps within execution limits; Grok installed from repo commit; ChatGPT must re-upload |
 | 2026-10-28 | weekday-gather | checked | f490fda | Compared 50 installed Grok custom skills against main. SKILL.md and supporting text files match repo. No new skill folders. No newer Grok content to push (binaries >200KB and __pycache__ skipped). ChatGPT and Grok should use the repo copy for all shared skills. Recent repo-to-hosts (parallax v2.1, interface QA, visual-system, latex, atlas, deep, list, book, 4629, folio, textbook, banner, images, logo, copyright, disabled, exhaustive, pe) require ChatGPT re-upload. |
 | 2026-10-27 | interface | QA repair | 5f3745 | Restore interface quality profile and evaluation cases via PR #11; Skill Sync Guard, Universal Skill QA, and synchronization validation passed on PR; host installation not verified |
 | 2026-10-27 | parallax disabled exhaustive pe | repo-to-hosts | 9d2b8ff | Restore required quality-profile.md and quality-cases.json for parallax (bb2a530), disabled, exhaustive, pe; Grok uses committed copy; ChatGPT must re-upload |
