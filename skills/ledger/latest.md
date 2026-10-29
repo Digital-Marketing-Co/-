@@ -4,6 +4,9 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-29 | phd-ivy-monograph | grok-to-repo | ab5a36e | Push verified newer Grok SKILL.md with shared mandates v3.1, image non-duplicity policy (2026-10-26), negative gate, and house interop; ChatGPT must re-upload |
+| 2026-10-29 | wca-ivy-biblio | grok-to-repo | 6d8e2d3 | Push verified newer Grok SKILL.md with primary-source maximization v1.2 (Ivy and .gov/.mil PDF preference) and citation integrity; ChatGPT must re-upload |
+| 2026-10-29 | weekday-gather | checked | 6d8e2d3 | Compared 50 installed Grok custom skills against main. Only phd-ivy-monograph and wca-ivy-biblio SKILL.md were newer on Grok (all supporting text files matched sizes). No new skill folders. Pushed those two. ChatGPT and Grok should use the repo copy for all other shared skills. ChatGPT must re-upload phd-ivy-monograph and wca-ivy-biblio. |
 | 2026-10-28 | disabled | repo-to-hosts | 0093884 | Automatically continue authorized queued steps within execution limits; Grok installed from repo commit; ChatGPT must re-upload |
 | 2026-10-28 | weekday-gather | checked | f490fda | Compared 50 installed Grok custom skills against main. SKILL.md and supporting text files match repo. No new skill folders. No newer Grok content to push (binaries >200KB and __pycache__ skipped). ChatGPT and Grok should use the repo copy for all shared skills. Recent repo-to-hosts (parallax v2.1, interface QA, visual-system, latex, atlas, deep, list, book, 4629, folio, textbook, banner, images, logo, copyright, disabled, exhaustive, pe) require ChatGPT re-upload. |
 | 2026-10-27 | interface | QA repair | 5f3745 | Restore interface quality profile and evaluation cases via PR #11; Skill Sync Guard, Universal Skill QA, and synchronization validation passed on PR; host installation not verified |
