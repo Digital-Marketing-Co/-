@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-30 | weekday-gather | checked | bc67965 | Compared 50 installed Grok custom skills against main. SKILL.md and supporting text files (references, scripts, assets under 200KB) match repo sizes except a 5-byte difference in phd-ivy-monograph (local 15688 vs repo 15683; minor trailing whitespace or newline, not verified newer behavior per commit time and ledger). No new skill folders. No newer Grok content to push (binaries >200KB and __pycache__ skipped). ChatGPT and Grok should use the repo copy for all shared skills. Recent repo-to-hosts (phd-ivy-monograph, wca-ivy-biblio, and prior) require ChatGPT re-upload. |
 | 2026-10-29 | phd-ivy-monograph | grok-to-repo | ab5a36e | Push verified newer Grok SKILL.md with shared mandates v3.1, image non-duplicity policy (2026-10-26), negative gate, and house interop; ChatGPT must re-upload |
 | 2026-10-29 | wca-ivy-biblio | grok-to-repo | 6d8e2d3 | Push verified newer Grok SKILL.md with primary-source maximization v1.2 (Ivy and .gov/.mil PDF preference) and citation integrity; ChatGPT must re-upload |
 | 2026-10-29 | weekday-gather | checked | 6d8e2d3 | Compared 50 installed Grok custom skills against main. Only phd-ivy-monograph and wca-ivy-biblio SKILL.md were newer on Grok (all supporting text files matched sizes). No new skill folders. Pushed those two. ChatGPT and Grok should use the repo copy for all other shared skills. ChatGPT must re-upload phd-ivy-monograph and wca-ivy-biblio. |
