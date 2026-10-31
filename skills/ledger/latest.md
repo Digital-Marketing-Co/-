@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-31 | pe | repo-to-hosts | 29ba058 | Integrate shared cross-skill document regression prevention and interactive 4629 into pe SKILL.md; Grok has no local pe so use committed copy; ChatGPT must re-upload pe |
 | 2026-10-31 | textbook | repo-to-hosts | c8d9b1c | Updated textbook SKILL.md, references, assets, and CHANGELOG for automatic /4629 interactive expansion with coffee-skill photorealistic parallax backgrounds, contrasting white text, HOLOVERSE zip packaging, and interactive prompt HTML; Grok installed from repo; ChatGPT must re-upload textbook |
 | 2026-10-31 | karma | repo-to-hosts | 8c08a0f | Correct regex escape handling in karma_ledger.py redaction patterns for bearer tokens and secrets; Grok has no local karma so use committed copy; ChatGPT must re-upload karma |
 | 2026-10-31 | karma pe 4629 | repo-to-hosts | 6f8e3f2 | Added karma forensic QA learning skill and wired it into pe, 4629 SKILL.md and post-artifact-itqe-latex-qa.md; Grok has no local pe/4629/karma so use committed copy; ChatGPT must re-upload karma, pe, 4629 |
