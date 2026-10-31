@@ -31,3 +31,6 @@ After delivering a validated artifact, offer a compact menu of *actionable* next
 
 ## Automatic /karma forensic learning hook
 On each QA finding, emit a sanitized structured event following `skills/karma/SKILL.md`, including category, severity, evidence, fingerprint, artifact/source hashes and test result. After a reproducible root cause is established, create a regression fixture and propose minimal rule updates; mark fixes VERIFIED only after two complete clean passes. Record nonissues and unrun tests distinctly. Never claim forensic cloud storage, external alerts or ML training are active merely because they are specified.
+
+## Cross-skill completeness and collision gate
+Apply `skills/references/document-error-prevention.md` rule IDs E01-E12. Preflight the source manifest and reconcile every section, equation, table, figure, citation and ending against final exported text and pagination. Check accidental duplication, stale exports and conflicting formatting/footer controllers. Source-only inspection never replaces full page-by-page visual QA. Send actual defect evidence to /karma. Test results without execution must remain NOT TESTED.
