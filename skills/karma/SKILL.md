@@ -69,3 +69,6 @@ For production, configure separate authorized audit-account credentials, Object 
 
 ## Historical defect learning and canonical prevention registry
 Use `skills/references/document-error-prevention.md` as the shared document error taxonomy (E01-E12). A conversation-history review is partial unless evidence demonstrates completeness; never claim to have scanned inaccessible conversations. Link each newly observed defect to stable rule ID, reproducer, regression fixture, observed outcome, severity, verified root cause and owning skill. Do not generate duplicate prevention instructions in multiple files: create a shared rule and link owners. Any adaptive model requires actual labeled training, held-out evaluation and versioned weights; deterministic rule updates are not trained ML.
+
+## Futuristic interface regression learning
+For /4629 interactive designs, use `skills/references/4629-electric-cyan-motion.md` test criteria as structured /karma evidence: frame pacing, memory use, reduced-motion fallbacks, focus handling, contrast, glow readability, responsive bounds, source preservation and duplicate imagery. Promote improvements to shared design tokens only after reproducible evidence and regression tests; deterministic feedback is not trained machine learning.
