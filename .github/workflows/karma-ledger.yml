@@ -1,0 +1,26 @@
+name: Karma forensic ledger regression
+on:
+  push:
+    paths:
+      - 'skills/karma/**'
+      - '.github/workflows/karma-ledger.yml'
+  pull_request:
+    paths:
+      - 'skills/karma/**'
+      - '.github/workflows/karma-ledger.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test ledger without paid services
+        env:
+          PYTHONPATH: skills/karma/scripts
+        run: python -m unittest discover -s skills/karma/tests -p 'test_*.py' -v
+      - name: Byte-compile
+        run: python -m py_compile skills/karma/scripts/karma_ledger.py
