@@ -34,3 +34,6 @@ Keep the original input immutable. Any explicit post-invocation edit applies onl
 ## References
 - https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation
 - https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+
+## Optional post-invocation 4629 overlay composition
+Remain style-neutral by default. Only when the user explicitly invokes a visual style such as /4629 after /parallax, permit a separable overlay composed according to `skills/references/4629-electric-cyan-motion.md`; preserve unchanged source assets and geometry, allow the overlay to be disabled, and test compositing, occlusion, accessibility and performance. Never imply visual additions are intrinsic to /parallax.
