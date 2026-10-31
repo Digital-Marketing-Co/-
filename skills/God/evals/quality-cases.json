@@ -1,0 +1,34 @@
+{
+  "skill": "God",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "dependency-collision",
+      "prompt": "Invoke /God with /pe, /4629, /ITQE and /karma when two aliases point to the same authority.",
+      "assertions": [
+        "Construct one acyclic execution plan and invoke each canonical owner once per phase.",
+        "Preserve source constraints and report alias collisions without rewriting unrelated skills."
+      ],
+      "grader": "Inspect the resolved DAG, version hashes, actual tool invocations and recorded collision decisions."
+    },
+    {
+      "id": "blocked-release",
+      "prompt": "Run /God on a website whose required generated manuscript source is unavailable.",
+      "assertions": [
+        "Do not fabricate source JSON or bypass preflight.",
+        "Mark build and deployment BLOCKED, and do not claim two clean passes."
+      ],
+      "grader": "Compare build logs, source inventory, release status and changed files against observed evidence."
+    },
+    {
+      "id": "artifact-coverage",
+      "prompt": "Run /God on a document with a missing appendix and one broken equation reference.",
+      "assertions": [
+        "Detect source-to-output manifest omissions and mathematical references.",
+        "Repair only with verified source material and rerender before release."
+      ],
+      "grader": "Inspect complete manifests, exported artifact, equation checks and two independently recorded QA passes."
+    }
+  ]
+}
