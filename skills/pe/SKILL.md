@@ -30,3 +30,6 @@ On each /pe QA pass invoke the evidence and remediation protocol in `skills/karm
 
 ## Universal cross-skill error prevention
 Before generating or editing documents load `skills/references/document-error-prevention.md`; delegate layout interaction to /4629, equations to /ITQE and /latex, citations to the canonical bibliography registry, and forensic learning to /karma. Reconcile source and export manifests and block truncation, overlap, accidental duplication, conflicting authorities and unsupported QA claims. Execute two evidence-backed complete QA passes and preserve original outputs. This rule also applies to /textbook and /expound orchestrated from /pe.
+
+## Shared adaptive futuristic design
+When an interactive futuristic design is requested, use `skills/references/4629-electric-cyan-motion.md` through /4629 and the canonical collision/QA rulebook. Reuse the same component and motion tokens across compatible skills rather than duplicate divergent animation definitions. Route tested rendering/performance/accessibility defects through /karma; describe deterministic regression improvements honestly, with no claim of ML training without actual model evaluation.
