@@ -7,7 +7,7 @@ def sha(v): return hashlib.sha256(encode(v).encode()).hexdigest()
 def clean(v):
     if isinstance(v,dict): return {k:('[REDACTED]' if re.search('password|secret|token|api.?key',k,re.I) else clean(x)) for k,x in v.items()}
     if isinstance(v,list): return [clean(x) for x in v[:100]]
-    if isinstance(v,str): return re.sub(r'(?i)(bearer\\s+\\S+|(?:password|secret|token|api.?key)\\s*[:=]\\s*\\S+)','[REDACTED]',v)[:8192]
+    if isinstance(v,str): return re.sub(r'(?i)(bearer\s+\S+|(?:password|secret|token|api.?key)\s*[:=]\s*\S+)','[REDACTED]',v)[:8192]
     return v
 def verify(path):
     previous=None; count=0
