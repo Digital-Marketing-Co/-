@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-31 | God | repo-to-hosts | 677bee2 | Connect God orchestrator to executable manifest regression QA via SKILL.md; Grok has no local God so uses committed; ChatGPT must re-upload God |
 | 2026-10-31 | parallax | repo-to-hosts | be10092 | Add optional post-invocation 4629 overlay composition to parallax SKILL.md using shared electric-cyan motion profile; Grok has no local parallax so uses committed; ChatGPT must re-upload parallax |
 | 2026-10-31 | 4629 karma | repo-to-hosts | 552fbf0 | Integrate shared electric-cyan 4629 motion with parallax and karma safeguards into 4629 and karma SKILL.md; Grok has no local copies so uses committed; ChatGPT must re-upload 4629 karma |
 | 2026-10-31 | pe | repo-to-hosts | c5b9eb6 | Integrate shared electric-cyan 4629 motion with parallax and karma safeguards into pe SKILL.md; Grok has no local pe so use committed copy; ChatGPT must re-upload pe |
