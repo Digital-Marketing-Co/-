@@ -4,6 +4,9 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-31 | 4629 | repo-to-hosts | 2dbc462 | Integrate shared electric-cyan/midnight-navy motion as default animated experience in 4629 SKILL.md referencing 4629-electric-cyan-motion.md; Grok has no local 4629 so use committed; ChatGPT must re-upload 4629 |
+| 2026-10-31 | parallax | repo-to-hosts | be10092 | Add optional post-invocation 4629 overlay composition to parallax SKILL.md using 4629-electric-cyan-motion.md without mutating source; Grok has no local parallax so use committed; ChatGPT must re-upload parallax |
+| 2026-10-31 | karma | repo-to-hosts | 552fbf0 | Add futuristic interface regression learning section to karma SKILL.md treating 4629-electric-cyan-motion.md as structured evidence; Grok has no local karma so use committed; ChatGPT must re-upload karma |
 | 2026-10-31 | pe | repo-to-hosts | c5b9eb6 | Integrate shared electric-cyan 4629 motion with parallax and karma safeguards into pe SKILL.md; Grok has no local pe so use committed copy; ChatGPT must re-upload pe |
 | 2026-10-31 | 4629 pe karma | repo-to-hosts | d4fed13 | Integrate shared document-error-prevention.md and interactive 4629 sections into 4629 pe karma SKILL.md plus post-artifact QA ref; Grok has no local copies so uses committed; ChatGPT must re-upload 4629 pe karma |
 | 2026-10-31 | pe | repo-to-hosts | 29ba058 | Integrate shared cross-skill document regression prevention and interactive 4629 into pe SKILL.md; Grok has no local pe so use committed copy; ChatGPT must re-upload pe |
