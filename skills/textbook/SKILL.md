@@ -1,6 +1,6 @@
 ---
 name: textbook
-description: Write and visually verify a doctoral-level textbook PDF about the subject following /textbook or $textbook. Produce scholarly teaching, compiled mathematics, ITQE tables, verified academic PDF citations, futuristic full-bleed artwork, semantic typography, section and subsection banners, distinct inline illustrations, canonical copyright, and documented preflight and final QA.
+description: Write and visually verify a doctoral-level textbook PDF about the subject following /textbook or $textbook. Automatically run /4629 interactive expansion with coffee-skill photorealistic parallax backgrounds, contrasting white text, recommended multi-format outputs, and HOLOVERSE holographic viewing. Produce scholarly teaching, compiled mathematics, ITQE tables, verified academic PDF citations, futuristic full-bleed artwork, semantic typography, section and subsection banners, distinct inline illustrations, canonical copyright, and documented preflight and final QA.
 ---
 # Textbook
 
@@ -116,3 +116,39 @@ When the user requests a textbook, including `/textbook /4629`, give **every cha
 
 ## Mandatory cross-artifact image non-duplicity policy (2026-10-26)
 Applies to every generated, sourced, transformed, or embedded visual in all chapters, sections, subsections, covers, banners, full-bleed backgrounds, figures, cards, slide decks, documents, PDFs, and exported derivatives. Before generation, create a persistent per-project image manifest with asset ID, prompt, intended semantic subject, target section, source/provenance, generation parameters, SHA-256, perceptual hash, and placement(s). Compare every candidate against the entire manifest and existing project outputs, including resized, cropped, recolored, rotated, filtered, and upscaled derivatives. Exact hash collisions MUST fail; near-duplicates MUST be flagged by perceptual hash plus embedding/visual comparison where supported. Cropping, recoloring, adding overlays, changing aspect ratio, or changing filenames does NOT make a duplicate unique. Require different primary subjects/compositions for each placement, not merely different prompts or seeds. Never use the same image for chapter background, banner, or inline illustration unless the user expressly asks for reuse. Reserve approved assets atomically before parallel workers place them to prevent races. On collision, regenerate or select a genuinely different contextual composition and recheck; never silently reuse or substitute a generic unrelated image. Deduplicate across sequential and parallel output stages and after PDF/DOCX/PPTX rendering, not just before generation. If an image is intentionally reused at user request, record its reuse reason in the manifest and exclude it from false uniqueness claims. Validate visual subject relevance, resolution, cropping, source attribution, accessible alt text, legibility, and no text overflow. Produce a final QA inventory of unique assets, exact duplicates, suspected near-duplicates, intentional reuse, and unresolved issues; do not claim zero duplicates unless the actual audit completed. This rule supersedes permissive reuse defaults but does not override user instructions or platform requirements.
+
+## Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31)
+
+All visual and research documents emitted by this skill set PDF as the default deliverable. AI-generated images (banners, chapter backgrounds, inline figures) are full document page width (x = 0, width = page width, zero side margin or padding), contextually relevant to the exact section or chapter they represent, and non-duplicated across the entire artifact set (exact hash and perceptual-hash fail-closed). Optimize every generated still for beauty and photographic realism while remaining literal to the adjacent claims. After the PDF is complete, an ethereal /4629-style interactive promptform recommends the most contextually relevant alternative formats (DOCX, PPTX, HTML, video pack, spreadsheet evidence matrix, and other ChatGPT-possible outputs) with simple one-action compilation from the default PDF. Every emitted file type carries the static-dynamic living copyright footer: Copyright © 2012–[current year] Web Development Corporation. All rights reserved. Visible anchor text is Digital Marketing Company linked to https://DigitalMarketingCo.org. No overlap, no inefficiency: shared non-duplicity and copyright logic is referenced, not reimplemented.
+
+## Final character integrity gate
+Before delivery run /karma (or python3 /root/.grok/server-skills/karma/scripts/scan_chars.py on the artifact). Fail closed on any mojibake, replacement character, or anomalous glyph. Repair to ASCII-safe or verified UTF-8 and re-scan.
+
+## Automatic /4629 interactive expansion with coffee-skill photorealistic parallax backgrounds (2026-10-31)
+
+After the textbook PDF passes final QA and character integrity, automatically execute the /4629 interactive expansion. Do not wait for a separate user flag. See `references/4629-interactive.md` for detailed packaging and question templates.
+
+### Coffee-skill photorealistic backgrounds with contrasting white text and /parallax
+For every chapter opener and every necessary full-page background:
+- Generate contextually relevant, natural, AI-enhanced photorealistic stills following the coffee skill geometry, beauty lock, and uniqueness rules (full-bleed, cover-crop to page ratio, no paper bars, no alpha punch-out).
+- Place perfect contrasting white text for all live body, headings, and captions over the background using subtle translucent neutral panels or gradients so text remains readable at doctoral density. Test contrast with `scripts/contrast.py`.
+- For each background, create or link /parallax source files: multi-layer depth planes (far background, midground, foreground) or a depth map plus the base still, named consistently (e.g., chapter-NN-bg.png, chapter-NN-mid.png, chapter-NN-fg.png) and recorded in the image manifest with placement and HOLOVERSE viewer instructions.
+- Maintain the cross-artifact non-duplicity policy; regenerate on hash or perceptual collision.
+
+### Interactive holographic multidimensional dataset analysis and viewing
+Package recommended best output files for further publication and interactive expansion:
+- Editable source (Markdown or LaTeX), evidence matrix (spreadsheet), image inventory with parallax layers, QA report.
+- Alternative compilations: DOCX, PPTX, HTML interactive reader, video pack of chapter openers.
+- Multidimensional dataset: structured JSON or HDF5-style inventory of claims, equations, figures, and parallax layers for holographic analysis.
+
+### Zip delivery of the interactive promptform
+Output a zip archive containing:
+- The completed PDF.
+- All /parallax source files and the image manifest.
+- An interactive HTML promptform (or promptform 3D widget compatible with pepe skill if available) that asks the user two questions with one-action choices:
+  1. Will this PDF serve as the method of inspiring publication (yes / needs revision / archive only)?
+  2. Are the best images needed for publication on a web app or within the HOLOVERSE for interactive viewing of /parallax (generate web-optimized derivatives / prepare HOLOVERSE layers / both / neither)?
+- Simple one-action compilation links or scripts for the recommended formats.
+- Living copyright in document info and the HTML: Copyright © 2012–[current year] Web Development Corporation. All rights reserved. Visible anchor text is Digital Marketing Company linked to https://DigitalMarketingCo.org. Domain text is DigitalMarketingCo.org.
+
+Record the zip path in the delivery report. If generation of interactive HTML or parallax layers is blocked, label the gap and still deliver the PDF plus available companions. Run the negative scan on all user-visible text in the zip contents before final packaging.
