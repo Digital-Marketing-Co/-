@@ -51,3 +51,6 @@ A successful skill definition commit demonstrates configuration, NOT validated e
 
 ## Exhaustive bounded completion
 Apply `skills/references/document-maximization-coverage.md` in addition to existing cross-skill contracts. Before generation inventory all available requirements and source content; after export reconcile one-to-one coverage, omission risks and source/output deltas. Iterate while meaningful verified coverage gaps remain within available tools and authorization; stop with explicit blockers rather than calling missing evidence complete. Accessibility-first /disabled /p removes repetitive prompts, not safety gates.
+
+## Executable omission-prevention smoke tests
+Use `skills/God/scripts/coverage.py` for deterministic comparison of source and final-export manifests, including expected IDs for sections, figures, equations, tables, citations and appendices, source revision, and closing-section hash. Tests live in `skills/God/tests/test_coverage.py`; run with `PYTHONPATH=skills/God/scripts python -m unittest discover -s skills/God/tests -p 'test_*.py' -v`. This harness checks supplied manifests, not actual extraction from PDFs or DOCX; do not mark full-document QA as PASS based only on manifest validation. Integrate actual format-specific extraction and full page-by-page inspection before release.
