@@ -66,3 +66,6 @@ Keep `private/` outside version control. This implementation has POSIX locking a
 
 ### External monitoring deployment prerequisites
 For production, configure separate authorized audit-account credentials, Object Lock WORM bucket retention, KMS/HSM signing, a separately managed append-only sink, replication, alerts and a monitored checkpoint job. Document recovery drill outcomes. Do not claim any are deployed until verified against actual cloud resources. Future ML requires an explicitly versioned training/evaluation dataset and measurable improvement compared with deterministic baselines; currently only rule-based/error-fingerprint learning is in scope.
+
+## Historical defect learning and canonical prevention registry
+Use `skills/references/document-error-prevention.md` as the shared document error taxonomy (E01-E12). A conversation-history review is partial unless evidence demonstrates completeness; never claim to have scanned inaccessible conversations. Link each newly observed defect to stable rule ID, reproducer, regression fixture, observed outcome, severity, verified root cause and owning skill. Do not generate duplicate prevention instructions in multiple files: create a shared rule and link owners. Any adaptive model requires actual labeled training, held-out evaluation and versioned weights; deterministic rule updates are not trained ML.
