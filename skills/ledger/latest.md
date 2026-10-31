@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-10-31 | textbook | repo-to-hosts | e57c70f | Added 4629-interactive reference, interactive prompt HTML template, and CHANGELOG for automatic /4629 interactive expansion with coffee-skill photorealistic parallax backgrounds and HOLOVERSE zip packaging; Grok updated from committed copy; ChatGPT must re-upload textbook |
 | 2026-10-31 | karma | repo-to-hosts | 8c08a0f | Correct regex escape handling in karma_ledger.py redaction patterns for bearer tokens and secrets; Grok has no local karma so use committed copy; ChatGPT must re-upload karma |
 | 2026-10-31 | karma pe 4629 | repo-to-hosts | 6f8e3f2 | Added karma forensic QA learning skill and wired it into pe, 4629 SKILL.md and post-artifact-itqe-latex-qa.md; Grok has no local pe/4629/karma so use committed copy; ChatGPT must re-upload karma, pe, 4629 |
 | 2026-10-31 | pe 4629 | repo-to-hosts | 29003d7 | Added canonical post-artifact ITQE LaTeX visual QA contract (skills/references/post-artifact-itqe-latex-qa.md) and required it in pe and 4629 SKILL.md after export; Grok has no local pe/4629 in the 50-skill set so use committed copy; ChatGPT must re-upload pe and 4629 |
