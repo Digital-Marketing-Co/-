@@ -28,3 +28,6 @@ After delivering a validated artifact, offer a compact menu of *actionable* next
 
 ## Interoperability
 /pe orchestrates and /4629 designs; /latex owns mathematical typesetting; /ITQE owns equation metadata; /qa and /visual_QA verify; /wca and /ivy or /biblio provide their domain checks and one canonical citation numbering system; /copyright controls the single footer authority. Do not duplicate the same authority or inject command names into reader-facing artifacts.
+
+## Automatic /karma forensic learning hook
+On each QA finding, emit a sanitized structured event following `skills/karma/SKILL.md`, including category, severity, evidence, fingerprint, artifact/source hashes and test result. After a reproducible root cause is established, create a regression fixture and propose minimal rule updates; mark fixes VERIFIED only after two complete clean passes. Record nonissues and unrun tests distinctly. Never claim forensic cloud storage, external alerts or ML training are active merely because they are specified.
