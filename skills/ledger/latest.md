@@ -4,7 +4,8 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
-| 2026-10-31 | 4629 pe parallax karma | repo-to-hosts | 552fbf0 | Integrate shared electric-cyan 4629 motion design system (new skills/references/4629-electric-cyan-motion.md) into 4629 pe parallax karma SKILL.md; Grok has no local copies so uses committed; ChatGPT must re-upload 4629 pe parallax karma |
+| 2026-10-31 | 4629 karma | repo-to-hosts | 552fbf0 | Integrate shared electric-cyan 4629 motion with parallax and karma safeguards into 4629 and karma SKILL.md; Grok has no local copies so uses committed; ChatGPT must re-upload 4629 karma |
+| 2026-10-31 | pe | repo-to-hosts | c5b9eb6 | Integrate shared electric-cyan 4629 motion with parallax and karma safeguards into pe SKILL.md; Grok has no local pe so use committed copy; ChatGPT must re-upload pe |
 | 2026-10-31 | 4629 pe karma | repo-to-hosts | d4fed13 | Integrate shared document-error-prevention.md and interactive 4629 sections into 4629 pe karma SKILL.md plus post-artifact QA ref; Grok has no local copies so uses committed; ChatGPT must re-upload 4629 pe karma |
 | 2026-10-31 | pe | repo-to-hosts | 29ba058 | Integrate shared cross-skill document regression prevention and interactive 4629 into pe SKILL.md; Grok has no local pe so use committed copy; ChatGPT must re-upload pe |
 | 2026-10-31 | textbook | repo-to-hosts | c8d9b1c | Updated textbook SKILL.md, references, assets, and CHANGELOG for automatic /4629 interactive expansion with coffee-skill photorealistic parallax backgrounds, contrasting white text, HOLOVERSE zip packaging, and interactive prompt HTML; Grok installed from repo; ChatGPT must re-upload textbook |
