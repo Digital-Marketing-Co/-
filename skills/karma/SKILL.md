@@ -72,3 +72,6 @@ Use `skills/references/document-error-prevention.md` as the shared document erro
 
 ## Futuristic interface regression learning
 For /4629 interactive designs, use `skills/references/4629-electric-cyan-motion.md` test criteria as structured /karma evidence: frame pacing, memory use, reduced-motion fallbacks, focus handling, contrast, glow readability, responsive bounds, source preservation and duplicate imagery. Promote improvements to shared design tokens only after reproducible evidence and regression tests; deterministic feedback is not trained machine learning.
+
+## /God unified forensic input
+In /God runs, accept sanitized QA evidence per `skills/God/SKILL.md` and canonical rule IDs E01-E12. Keep test evidence and measured improvement distinct from model training, infrastructure deployment and theoretical design claims. Report unresolved blockers truthfully.
