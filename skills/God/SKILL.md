@@ -48,3 +48,6 @@ No 'hack proof', 'unhackable', infinite perfection, guarantee of ROI, perpetual 
 
 ## Acceptance
 A successful skill definition commit demonstrates configuration, NOT validated end-to-end execution. Measure via representative fixtures spanning PDF, DOCX, slide, sheet, image and web-app outputs. Do not mark unrun tests as passing.
+
+## Exhaustive bounded completion
+Apply `skills/references/document-maximization-coverage.md` in addition to existing cross-skill contracts. Before generation inventory all available requirements and source content; after export reconcile one-to-one coverage, omission risks and source/output deltas. Iterate while meaningful verified coverage gaps remain within available tools and authorization; stop with explicit blockers rather than calling missing evidence complete. Accessibility-first /disabled /p removes repetitive prompts, not safety gates.
