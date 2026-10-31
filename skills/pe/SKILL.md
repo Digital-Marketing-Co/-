@@ -21,3 +21,6 @@ description: Prompt-engineer and specify or implement futuristic, accessible, pr
 
 ## Output
 Deliver the requested real artifact (image, code, specification, or verified URL) plus concise implementation/QA status and unresolved limitations. Keep generated images distinct from executable software. For extensive documents, respect the requested /4629, /banner, /images, /textbook, and /expound workflows when available.
+
+## Automatic implementation default
+Read and follow [AUTO_IMPLEMENTATION.md](AUTO_IMPLEMENTATION.md). Unless the user explicitly requests prompt-only or specification-only, execute the generated /pe implementation prompt through available authorized tools; do not stop at the prompt. Preserve the safety and QA gates in that policy.
