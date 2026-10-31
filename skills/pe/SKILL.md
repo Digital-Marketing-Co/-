@@ -36,3 +36,6 @@ When an interactive futuristic design is requested, use `skills/references/4629-
 
 ## /God master QA orchestration
 When /God is invoked, follow `skills/God/SKILL.md` for dependency ordering, scoped skill invocation, complete artifact manifests and evidence-backed release. /pe remains task executor; avoid cyclical calls or redundant QA layers. Never claim full completion without actual tests.
+
+## Automatic document maximization and omission-prevention
+When documents or /disabled /p exhaustive requests are in scope, execute `skills/references/document-maximization-coverage.md` as the canonical coverage-and-expansion contract. Build a requirement-to-output traceability matrix, preserve entire source and final ending, expand substantive gaps, check dependencies, and run post-export two-pass QA. The user's /p authorizes continuation of safe non-destructive stages, never unsupported claims, infinite loops or production cutovers.
