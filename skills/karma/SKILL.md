@@ -53,3 +53,16 @@ No system is guaranteed unhackable. Use a defensible, separately administered ta
 
 ## Quality gate
 Record actual tests, number of observed defects, reproduced defects, fixed/verified defects, recurrence, open security risks, missing forensic data and monitoring coverage. Do not claim immutability, hack-proof operation, machine-learning training, zero errors or continuous surveillance without independent evidence. Favor deterministic local techniques with no paid LLM inference.
+
+## Executable local ledger and CI
+Implementation: `skills/karma/scripts/karma_ledger.py`; tests: `skills/karma/tests/test_karma_ledger.py`; GitHub Actions workflow: `.github/workflows/karma-ledger.yml`.
+Usage from repository root:
+```bash
+python skills/karma/scripts/karma_ledger.py append private/qa-ledger.jsonl private/event.json
+python skills/karma/scripts/karma_ledger.py verify private/qa-ledger.jsonl
+PYTHONPATH=skills/karma/scripts python -m unittest discover -s skills/karma/tests -v
+```
+Keep `private/` outside version control. This implementation has POSIX locking and is suitable for trusted local single-host writers, not a multi-region hosted service. A hash-chain alone is not independently immutable: export head digests to an external signed/WORM checkpoint and verify continuity from the trusted checkpoint before relying on evidence in investigations. Raw QA evidence must be sanitized and access-controlled. Neither CI specification nor repo commit establishes a running datastore or independent alerting.
+
+### External monitoring deployment prerequisites
+For production, configure separate authorized audit-account credentials, Object Lock WORM bucket retention, KMS/HSM signing, a separately managed append-only sink, replication, alerts and a monitored checkpoint job. Document recovery drill outcomes. Do not claim any are deployed until verified against actual cloud resources. Future ML requires an explicitly versioned training/evaluation dataset and measurable improvement compared with deterministic baselines; currently only rule-based/error-fingerprint learning is in scope.
