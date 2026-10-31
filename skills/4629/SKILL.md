@@ -62,3 +62,6 @@ After creating or transforming every document, render and execute `skills/refere
 
 ## /karma visual and document forensic learning
 Apply `skills/karma/SKILL.md` to every document-specific visual, mathematical, accessibility, citation, image duplication and export error. Capture page/figure/equation identifiers and safe screenshots or diagnostics, create regression fixtures, verify fixes, and add prevention rules. Preserve originals, protect sensitive evidence, and record monitoring/storage as NOT DEPLOYED until configured and independently tested.
+
+## Interactive styling without regression or truncation
+Read `skills/references/document-error-prevention.md` before any new or revised document. Present the six-direction compact style plan with an optimal preselected default only when a fresh user style choice is appropriate; honor prior direction and /p or /disabled without interrupting. Preserve source manifest and complete sections through /expound iterations. Never remove substantial text to fit artwork; enforce pre/post-export completeness checks, unique figure IDs, single footer owner, and the full post-export QA gate. /karma records and reproduces observed errors; only verified fixes become prevention rules.
