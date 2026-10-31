@@ -31,3 +31,6 @@ For each encountered defect: write sanitized /karma event (fingerprint, source/v
 
 ## User-centered defaults
 iPhone-first readability, low-interaction autonomous QA, safe changes without repeated prompts, preserve original files, do not perform destructive operations or production cutovers without authorization. Never present theoretical system designs as deployed systems.
+
+## Coverage preservation linkage
+For requirement omission, unexplained content reduction and incomplete exports, apply the canonical traceability and stop criteria in `skills/references/document-maximization-coverage.md`. Maintain E01 as defect identifier and /karma as event owner; do not duplicate that contract's tests in each skill.
