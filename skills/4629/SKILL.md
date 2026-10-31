@@ -71,3 +71,28 @@ For web, interactive presentations, holographic modals and product imagery use `
 
 ## /God coordination and visual authority
 When /God is active, /4629 retains sole visual direction authority and cooperates with the canonical cross-skill DAG in `skills/God/SKILL.md`; do not overwrite equations, citation numbering, copyright, or forensic evidence. Optimize cyan/navy visuals subject to user preferences, reduced motion, performance and document readability.
+
+
+## /4269 compatibility and 20-option futuristic UX/CRO studio
+Treat explicit /4269 as an alias for /4629 unless a separate canonical skill is subsequently defined. Preserve all existing /4629 authority and requirements.
+
+On /4629, /4269, or /God invocations involving visual production, offer a **progressively disclosed** interactive design studio when selection is materially helpful; otherwise proceed using accessible recommended defaults. Do not block /p, D, or /disabled continuation on nonessential selections. Provide up to 20 distinct, meaningful options in each relevant dimension, not 20 mandatory questions. Offer more only when the interface can present them accessibly without decision overload.
+
+Dimensions and recommended first options:
+1. Visual theme: midnight-cyan, rainforest glass, orbital copper, alpine glass, underwater teal, pearl minimal, dark editorial, sunrise coral, holographic violet, botanical ivory, aurora indigo, graphite gold, terracotta cream, ocean cobalt, monochrome ink, solar amber, arctic silver, emerald obsidian, pastel prism, accessible high-contrast.
+2. Typography: responsive editorial serif, humanist sans, geometric sans, accessible slab, neo-grotesk, variable serif, variable sans, technical mono accents, classic book, modern textbook, scientific notation, bilingual-ready, dyslexia-conscious, large print, compact dashboard, high-legibility UI, luxury display, newspaper, academic journal, minimalist.
+3. Layout: narrative single column, split editorial, responsive cards, immersive chapter, dashboard grid, guided wizard, stepper, masonry gallery, interactive atlas, table-first, longform scrollytelling, paginated book, sidebar reference, comparative columns, cinematic hero, sticky contents, expandable sections, timeline, accessible reader, print-first.
+4. Visual enhancement: subtle depth, user-requested parallax, static photography, holographic overlay, light-field gradient, cinematic banner, ambient video, data visualization, interactive diagram, 3D model viewer, layered illustration, soft translucency, restrained glow, microinteraction, responsive transitions, contextual captions, tactile cards, typographic hierarchy, accessible contrast boost, reduced-motion mode.
+5. Output: PDF, accessible HTML, offline PWA, EPUB, DOCX, Markdown, plain text, PPTX, SVG, PNG, JPEG, WebP, AVIF, MP4, WebM, JSON design tokens, CSS theme, React component, ZIP source bundle, print-ready PDF.
+6. CRO objective: comprehension, trust, signup completion, qualified leads, purchase completion, donation completion, contact requests, appointment requests, reader retention, content discovery, product adoption, app installation, subscription opt-in, checkout clarity, cart recovery, newsletter signup, onboarding success, accessibility completion, repeat visits, reduced abandonment.
+
+Provide idea, deliverable and output-format selection in the /God prompt studio, with at least seven choices and up to twenty when useful. Multi-select with a clear recommended default, a no-animation option, and a no-selection automatic continuation path. Every control must be keyboard/VoiceOver usable, clearly labeled and readable on an iPhone.
+
+### Measurable optimization
+Define a primary user outcome and guardrail metrics before changes. Compare alternatives with legitimate consent-aware experiments where traffic permits; do not promise conversion gains without data. Check task completion, time to task, bounce/abandonment where measurable, Core Web Vitals, accessibility, content integrity, visual hierarchy, and interaction cost. Avoid dark patterns, misleading urgency, forced consent, manipulative defaults or inaccessible animation.
+
+### Type and color constraints
+Use fluid typography with tested minimum readable sizes, comfortable line lengths and contrast; prevent text clipping at 200% zoom and narrow viewports. Generate coherent semantic color tokens with WCAG 2.2 AA contrast verification; never assume a palette passes without measuring. Differentiate each selected palette meaningfully and preserve print-safe fallbacks. Parallax remains style-neutral: do not change source appearance or add objects, lighting, color or scenery without an explicit subsequent user request.
+
+### Quality gates
+Run deterministic checks, cross-browser and responsive visual tests, assistive technology checks, mathematics /ITQE and /latex where applicable, export rendering, and applicable canonical Free Website Auditor checks. Iterate root-cause repairs and require two consecutive clean complete QA passes before claiming verified completion. If unexecuted, report NOT TESTED. No invented CRO metrics or deployment claims.
