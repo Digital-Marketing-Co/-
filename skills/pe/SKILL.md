@@ -33,3 +33,6 @@ Before generating or editing documents load `skills/references/document-error-pr
 
 ## Shared adaptive futuristic design
 When an interactive futuristic design is requested, use `skills/references/4629-electric-cyan-motion.md` through /4629 and the canonical collision/QA rulebook. Reuse the same component and motion tokens across compatible skills rather than duplicate divergent animation definitions. Route tested rendering/performance/accessibility defects through /karma; describe deterministic regression improvements honestly, with no claim of ML training without actual model evaluation.
+
+## /God master QA orchestration
+When /God is invoked, follow `skills/God/SKILL.md` for dependency ordering, scoped skill invocation, complete artifact manifests and evidence-backed release. /pe remains task executor; avoid cyclical calls or redundant QA layers. Never claim full completion without actual tests.
