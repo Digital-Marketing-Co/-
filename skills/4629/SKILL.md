@@ -68,3 +68,6 @@ Read `skills/references/document-error-prevention.md` before any new or revised 
 
 ## Default electric cyan / midnight navy animated experience
 For web, interactive presentations, holographic modals and product imagery use `skills/references/4629-electric-cyan-motion.md` as the recommended default visual profile: electric cyan and dark navy gradients, layered aurora and light-field motion, tasteful Siri-like animated modal border, optional gyro/touch parallax, reduced-motion static fallback, measured performance and visual QA. Respect previously chosen styles and never force animation into PDF/DOCX or source imagery. The referenced external admin-modal design was not accessible for verification; treat it solely as a conceptual inspiration rather than claiming visual fidelity.
+
+## /God coordination and visual authority
+When /God is active, /4629 retains sole visual direction authority and cooperates with the canonical cross-skill DAG in `skills/God/SKILL.md`; do not overwrite equations, citation numbering, copyright, or forensic evidence. Optimize cyan/navy visuals subject to user preferences, reduced motion, performance and document readability.
