@@ -21,3 +21,6 @@ description: Prompt-engineer and specify or implement futuristic, accessible, pr
 
 ## Output
 Deliver the requested real artifact (image, code, specification, or verified URL) plus concise implementation/QA status and unresolved limitations. Keep generated images distinct from executable software. For extensive documents, respect the requested /4629, /banner, /images, /textbook, and /expound workflows when available.
+
+## Mandatory post-creation verification and optional completion menu
+For every generated or modified artifact, execute `skills/references/post-artifact-itqe-latex-qa.md` after creation/export, including automatic /ITQE and /latex verification where mathematical content exists, full visual and format-specific QA, source/output comparison, repair/re-render, and two clean evidence-backed passes. Preserve user files, distinguish NOT APPLICABLE from PASS, and report blocked tests. /pe orchestrates /4629, /textbook, /qa, /visual_QA, /expound, canonical citation and copyright skills without duplicating their authorities. After mandatory QA, show only the optional actionable post-run menu defined in the shared contract; never require menu interaction to finish safe QA.
