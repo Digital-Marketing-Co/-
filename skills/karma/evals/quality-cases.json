@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "karma-regression",
+      "input": "Record a reproducible accessibility defect",
+      "expected": "reproduction, root cause, fix and regression evidence"
+    },
+    {
+      "id": "karma-unknown",
+      "input": "External test unavailable",
+      "expected": "mark NOT TESTED rather than PASS"
+    }
+  ]
+}

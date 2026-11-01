@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "god-authority",
+      "input": "/God /expound",
+      "expected": "canonical skills/God/SKILL.md authority"
+    },
+    {
+      "id": "god-math",
+      "input": "/God derive a mathematical model",
+      "expected": "ITQE and LaTeX coverage before rendering"
+    },
+    {
+      "id": "god-blocked",
+      "input": "/God with unavailable auditor",
+      "expected": "report NOT TESTED and preserve source"
+    }
+  ]
+}
