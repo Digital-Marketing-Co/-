@@ -1,20 +1,23 @@
 {
-  "version": 1,
+  "skill": "God",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
   "cases": [
     {
-      "id": "god-authority",
-      "input": "/God /expound",
-      "expected": "canonical skills/God/SKILL.md authority"
+      "id": "authority",
+      "prompt": "Invoke /God with /expound",
+      "assertions": [
+        "Use canonical God orchestration."
+      ],
+      "grader": "Inspect the resulting trace and source references."
     },
     {
-      "id": "god-math",
-      "input": "/God derive a mathematical model",
-      "expected": "ITQE and LaTeX coverage before rendering"
-    },
-    {
-      "id": "god-blocked",
-      "input": "/God with unavailable auditor",
-      "expected": "report NOT TESTED and preserve source"
+      "id": "math",
+      "prompt": "Request mathematical derivation",
+      "assertions": [
+        "Audit equations with ITQE and LaTeX."
+      ],
+      "grader": "Inspect equation coverage evidence."
     }
   ]
 }
