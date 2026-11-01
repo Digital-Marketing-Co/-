@@ -57,3 +57,6 @@ Use `skills/God/scripts/coverage.py` for deterministic comparison of source and 
 
 ## Actual PDF/DOCX extraction prototype
 Read-only audit: `skills/God/scripts/artifact_audit.py`, tested by `skills/God/tests/test_artifact_audit.py`. Install `pymupdf` and `python-docx` in an isolated development environment. Run `python skills/God/scripts/artifact_audit.py source.docx output.pdf`. The audit compares extracted content, heading names, beginnings, endings, overall size, and blank pages; output is JSON with diagnostic flags. Treat extraction differences and legitimate reflow as REVIEW, not permission to remove or rewrite source. Run full visual inspection and scientific/math checks independently. CI execution requires dependencies and was not verified merely by committing these files.
+
+## PDF geometry and CI validation
+`skills/God/scripts/pdf_layout_audit.py` provides conservative text-boundary, very-small-text and blank-page diagnostic flags; `skills/God/tests/test_pdf_layout_audit.py` tests basic behaviors. `.github/workflows/god-document-qa.yml` runs the /God regression suite twice in CI with PyMuPDF and python-docx. Geometry flags require manual visual confirmation. The presence of CI config is not evidence that CI ran or passed; visual checks, tagged PDF accessibility, scientific and LaTeX verification remain independent gates.
