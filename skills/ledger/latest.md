@@ -4,7 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
-| 2026-11-01 | God | repo-to-hosts | e48ff09 | Add conservative PDF layout geometry diagnostics (pdf_layout_audit.py), unit tests, and CI workflow for God document QA; Grok has no local God skill so uses committed copy; ChatGPT must re-upload God |
+| 2026-11-01 | God | repo-to-hosts | e48ff09 | Wire PDF geometry diagnostics and CI into God QA guidance; Grok has no local God so uses committed copy; ChatGPT must re-upload God |
 | 2026-10-31 | God | repo-to-hosts | 0134435 | Integrate PDF DOCX content extraction into God audit protocol; Grok has no local God so uses committed copy; ChatGPT must re-upload God |
 | 2026-10-31 | expound God karma | repo-to-hosts | 19a82c2 | Updated expound SKILL.md to v1.4.0 exhaustive evidence-bounded expansion with multi-pass QA; added quality-profile.md and quality-cases.json for God and karma; Grok installed from repo commit; ChatGPT must re-upload expound God karma |
 | 2026-10-31 | God | repo-to-hosts | 677bee2 | Connect God orchestrator to executable manifest regression QA via SKILL.md; Grok has no local God so uses committed; ChatGPT must re-upload God |
