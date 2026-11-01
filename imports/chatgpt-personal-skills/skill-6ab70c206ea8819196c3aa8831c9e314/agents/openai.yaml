@@ -1,0 +1,14 @@
+interface:
+  display_name: WA
+  short_description: Audit, repair, and verify web applications
+  default_prompt: Use /WA to inspect this application, repair reproducible defects,
+    and verify its key user journeys with evidence.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

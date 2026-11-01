@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://digitalmarketingco.org/skills/interpret/equation-object.schema.json",
+  "title": "Interpret equation object",
+  "type": "object",
+  "required": [
+    "id",
+    "raw",
+    "reading",
+    "kind",
+    "symbols",
+    "data_hooks",
+    "confidence",
+    "scores"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^eq-[0-9]{3}$"
+    },
+    "raw": {
+      "type": "string",
+      "description": "What the eye sees on the board or in the prompt."
+    },
+    "reading": {
+      "type": "string",
+      "description": "Best compiled identity in plain Unicode or a short name."
+    },
+    "alt_readings": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "identity",
+        "operator",
+        "glyph",
+        "inequality",
+        "rate",
+        "definition",
+        "arrow",
+        "annotation"
+      ]
+    },
+    "symbols": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["identifier", "term"],
+        "properties": {
+          "identifier": { "type": "string" },
+          "term": { "type": "string" },
+          "quantity": { "type": "string" },
+          "explanation": { "type": "string" }
+        }
+      }
+    },
+    "data_hooks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "tex": {
+      "type": "string",
+      "description": "Rebuild sibling. Never print."
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "data_fit",
+        "structural_load",
+        "identifiability",
+        "source_warrant",
+        "score"
+      ],
+      "properties": {
+        "data_fit": { "type": "number" },
+        "structural_load": { "type": "number" },
+        "identifiability": { "type": "number" },
+        "source_warrant": { "type": "number" },
+        "score": { "type": "number" }
+      }
+    }
+  }
+}

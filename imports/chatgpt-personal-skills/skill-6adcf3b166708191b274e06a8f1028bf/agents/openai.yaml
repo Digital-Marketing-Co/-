@@ -1,0 +1,13 @@
+interface:
+  display_name: Grow — Interactive Workflow
+  short_description: Create and verify grow outputs with guided intake
+  default_prompt: Use $grow to guide this task and verify its final output.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

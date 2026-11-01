@@ -1,0 +1,13 @@
+interface:
+  display_name: Schemata
+  short_description: Build evidence-backed Schema.org document graphs
+  default_prompt: Use $schemata to index these documents and export validated JSON-LD.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,14 @@
+interface:
+  display_name: expound
+  short_description: Expand artifacts with technical and visual QA each pass
+  default_prompt: Use $expound to expand this work according to my brief, with technical
+    and visual QA after every pass.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

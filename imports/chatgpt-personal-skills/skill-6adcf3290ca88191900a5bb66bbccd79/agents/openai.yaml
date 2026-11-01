@@ -1,0 +1,13 @@
+interface:
+  display_name: Course — Interactive Workflow
+  short_description: Create and verify course outputs with guided intake
+  default_prompt: Use $course to guide this task and verify its final output.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

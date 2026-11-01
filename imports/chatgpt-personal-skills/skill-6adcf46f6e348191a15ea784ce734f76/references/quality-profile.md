@@ -1,0 +1,3 @@
+# Interactive map quality profile
+
+Verify geographic scope and dates, source data/coordinate systems, site identities, coordinates, map projections, scale and legends. Distinguish historical boundaries from current geography; never invent sites or claim complete coverage without evidence. Render and inspect every final map/atlas page for labels, collisions, text size, units, contrast, legend correctness and footer/citation placement. Share one intake and approved design across handoffs. Missing map data or rendering produces blocked/untested results, not a pass. Use the shared doc evidence gate with document or image profile as appropriate.

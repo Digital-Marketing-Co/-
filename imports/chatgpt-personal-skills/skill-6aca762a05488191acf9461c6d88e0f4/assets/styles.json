@@ -1,0 +1,281 @@
+{
+  "revision": 1,
+  "page": {
+    "width_in": 8.5,
+    "height_in": 11,
+    "artwork_bleed": "page edges",
+    "text_inset_in": 0.6
+  },
+  "palette": {
+    "background": "#071020",
+    "panel": "#0B1630",
+    "cyan": "#72ECFF",
+    "violet": "#C8AEFF"
+  },
+  "font_roles": {
+    "body": "licensed legible text font",
+    "display": "licensed geometric display font",
+    "math": "engine-compatible full math font",
+    "mono": "licensed monospace"
+  },
+  "styles": {
+    "cover-title": {
+      "class": "tb-cover-title",
+      "font_role": "display",
+      "size_pt": 36,
+      "color": "#F4F7FC"
+    },
+    "subtitle": {
+      "class": "tb-subtitle",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "author": {
+      "class": "tb-author",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "edition": {
+      "class": "tb-edition",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "part-title": {
+      "class": "tb-part-title",
+      "font_role": "display",
+      "size_pt": 28,
+      "color": "#F4F7FC"
+    },
+    "chapter-title": {
+      "class": "tb-chapter-title",
+      "font_role": "display",
+      "size_pt": 24,
+      "color": "#F4F7FC"
+    },
+    "section-title": {
+      "class": "tb-section-title",
+      "font_role": "display",
+      "size_pt": 18,
+      "color": "#F4F7FC"
+    },
+    "subsection-title": {
+      "class": "tb-subsection-title",
+      "font_role": "display",
+      "size_pt": 14,
+      "color": "#F4F7FC"
+    },
+    "heading-number": {
+      "class": "tb-heading-number",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "body": {
+      "class": "tb-body",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "lead": {
+      "class": "tb-lead",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "definition": {
+      "class": "tb-definition",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "theorem": {
+      "class": "tb-theorem",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "proof": {
+      "class": "tb-proof",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "example": {
+      "class": "tb-example",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "exercise": {
+      "class": "tb-exercise",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "solution": {
+      "class": "tb-solution",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "quote": {
+      "class": "tb-quote",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "list-item": {
+      "class": "tb-list-item",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "table-header": {
+      "class": "tb-table-header",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "table-cell": {
+      "class": "tb-table-cell",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "figure-label": {
+      "class": "tb-figure-label",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "figure-caption": {
+      "class": "tb-figure-caption",
+      "font_role": "body",
+      "size_pt": 9,
+      "color": "#F4F7FC"
+    },
+    "equation": {
+      "class": "tb-equation",
+      "font_role": "math",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "equation-number": {
+      "class": "tb-equation-number",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "itqe-header": {
+      "class": "tb-itqe-header",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "itqe-cell": {
+      "class": "tb-itqe-cell",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "citation-marker": {
+      "class": "tb-citation-marker",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "note": {
+      "class": "tb-note",
+      "font_role": "body",
+      "size_pt": 9,
+      "color": "#F4F7FC"
+    },
+    "bibliography-author": {
+      "class": "tb-bibliography-author",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "bibliography-title": {
+      "class": "tb-bibliography-title",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "bibliography-metadata": {
+      "class": "tb-bibliography-metadata",
+      "font_role": "body",
+      "size_pt": 9,
+      "color": "#F4F7FC"
+    },
+    "bibliography-link": {
+      "class": "tb-bibliography-link",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "hyperlink": {
+      "class": "tb-hyperlink",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "running-head": {
+      "class": "tb-running-head",
+      "font_role": "body",
+      "size_pt": 9,
+      "color": "#F4F7FC"
+    },
+    "footer-legal": {
+      "class": "tb-footer-legal",
+      "font_role": "body",
+      "size_pt": 9,
+      "color": "#F4F7FC"
+    },
+    "footer-link": {
+      "class": "tb-footer-link",
+      "font_role": "body",
+      "size_pt": 9,
+      "color": "#F4F7FC"
+    },
+    "page-number": {
+      "class": "tb-page-number",
+      "font_role": "body",
+      "size_pt": 9,
+      "color": "#F4F7FC"
+    },
+    "toc-entry": {
+      "class": "tb-toc-entry",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "index-entry": {
+      "class": "tb-index-entry",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "glossary-term": {
+      "class": "tb-glossary-term",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "glossary-definition": {
+      "class": "tb-glossary-definition",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    },
+    "accessibility-description": {
+      "class": "tb-accessibility-description",
+      "font_role": "body",
+      "size_pt": 11.5,
+      "color": "#F4F7FC"
+    }
+  }
+}

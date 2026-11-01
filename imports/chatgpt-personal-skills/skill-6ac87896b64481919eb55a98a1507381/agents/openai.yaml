@@ -1,0 +1,14 @@
+interface:
+  display_name: SKI Canine Communication
+  short_description: Evidence-based canine research and humane training
+  default_prompt: Use $ski to update canine communication evidence and create an individualized
+    reward-based training curriculum.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

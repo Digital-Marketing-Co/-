@@ -1,0 +1,13 @@
+interface:
+  display_name: Itqe
+  short_description: Apply the itqe workflow to user requests
+  default_prompt: Use itqe for this task.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,13 @@
+interface:
+  display_name: Map — Interactive Atlas
+  short_description: Build sourced maps and inspect every atlas page
+  default_prompt: Use $map to guide my spatial research and verify the finished atlas.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

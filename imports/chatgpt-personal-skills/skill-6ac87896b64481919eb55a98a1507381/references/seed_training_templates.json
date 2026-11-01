@@ -1,0 +1,60 @@
+{
+  "dog_profile": {
+    "dog_name": null,
+    "age": null,
+    "health_assessment": null,
+    "sensory_mobility_access": null,
+    "household": null,
+    "baseline_observation": null,
+    "antecedents": null,
+    "consequences": null,
+    "bite_history": null,
+    "goal": null,
+    "constraints": null,
+    "reinforcer_preferences": null,
+    "professional_contacts": null
+  },
+  "competency_plan": {
+    "id": null,
+    "name": null,
+    "category": null,
+    "purpose": null,
+    "prerequisites": null,
+    "success_criteria": null,
+    "environment": null,
+    "equipment": null,
+    "reinforcement": null,
+    "steps": null,
+    "progression": null,
+    "generalization": null,
+    "maintenance": null,
+    "troubleshooting": null,
+    "welfare": null,
+    "evidence_ids": null,
+    "recommendation_type": null
+  },
+  "session_record": {
+    "date": null,
+    "competency_id": null,
+    "setting": null,
+    "trigger_distance": null,
+    "intensity": null,
+    "duration": null,
+    "prompt_level": null,
+    "opportunities": null,
+    "successes": null,
+    "response_latency": null,
+    "stress_observations": null,
+    "recovery": null,
+    "reinforcer": null,
+    "decision": null,
+    "next_step": null
+  },
+  "adaptations": {
+    "puppy": "Short easy experiences; protect rest; health-aware socialization.",
+    "adolescent": "Lower criteria in distracting contexts; protect outlets and revisit foundations.",
+    "adult": "Individual baseline and household requirements govern goals.",
+    "senior": "Assess pain, sensory change, footing and fatigue; adapt cue modality.",
+    "disability": "Choose accessible cues and physically comfortable responses; never require painful positions."
+  }
+}

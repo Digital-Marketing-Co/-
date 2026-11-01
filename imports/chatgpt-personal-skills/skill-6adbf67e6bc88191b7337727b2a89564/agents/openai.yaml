@@ -1,0 +1,14 @@
+interface:
+  display_name: Universal
+  short_description: GDP-ranked parallel translations for 50+ countries
+  default_prompt: Use $universal to translate /coffee Global Images Most Beautiful
+    Full Bleed across GDP-ranked countries.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

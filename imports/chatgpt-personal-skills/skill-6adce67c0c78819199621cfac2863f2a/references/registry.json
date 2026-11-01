@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "entries": {
+    "/www": {
+      "text": "Outputting “https://DigitalMarketingCo.org “ as a text url to be edited…",
+      "expansion_mode": "literal",
+      "dependencies": [],
+      "created_at": "2026-10-24T17:26:45.628441+00:00",
+      "updated_at": "2026-10-24T17:26:45.628441+00:00",
+      "history": []
+    },
+    "/doc": {
+      "text": "Create the requested document as a complete, usable artifact. Infer or honor the stated mode: textbook, monograph, white paper, technical/evidence report, business proposal, infographic or magazine. Preserve the brief and prior answers. Use adaptive intake only for material unknowns. Research factual claims using relevant authoritative sources; verify citations, supporting passages and locators. Build a coherent structure and substantial content appropriate to the audience. Use an established design or the interactive /4629 contract when requested. Apply distinct contextual artwork and compiled mathematics where relevant. Rebuild citations and cross-references after changes. Render and inspect every final page, repair defects, and deliver the requested document and editable source where applicable, with honest validation results and remaining gaps.",
+      "expansion_mode": "literal",
+      "dependencies": [],
+      "created_at": "2026-10-24T17:44:29.957256+00:00",
+      "updated_at": "2026-10-24T17:44:29.957256+00:00",
+      "history": [],
+      "skill_target": {
+        "canonical_name": "doc",
+        "sha256": "e9f315487e53e39ac81c672af9f364125d8e8e553cbf3eba1691e3a5f0aaff82"
+      }
+    },
+    "/data": {
+      "text": "Build the requested dataset and its usable presentation. Define the schema, units, source provenance, scope, retrieval dates, normalization, deduplication and update rules. Distinguish observed values from estimates and unknowns. Sort by the stated variable, descending when appropriate to the brief. Provide a data dictionary and requested machine-readable or spreadsheet output, with interactive tables only when requested or useful. Verify counts, formulas, completeness claims, constraints and exports. Never replace a requested large dataset with invented records or an unverified count.",
+      "expansion_mode": "literal",
+      "dependencies": [],
+      "created_at": "2026-10-24T17:44:29.957256+00:00",
+      "updated_at": "2026-10-24T17:44:29.957256+00:00",
+      "history": [],
+      "skill_target": {
+        "canonical_name": "data",
+        "sha256": "0ab9b3eb209cbe221aa5de258f4a710149b5bbbc77a5bdb689430b4a7f388e6d"
+      }
+    },
+    "/course": {
+      "text": "Create a complete teaching package for the stated audience and subject. Define prerequisites, learning outcomes, module progression, lessons, worked examples, exercises, assessments and answer explanations. Research factual content and validate technical examples. Preserve supplied curriculum and hierarchy. Use accessible instructional design and the selected visual style. Produce the requested document or course files; invoke the app workflow only when a functioning learning platform is requested. Verify links, navigation, mathematical rendering and learning-outcome coverage before delivery.",
+      "expansion_mode": "literal",
+      "dependencies": [],
+      "created_at": "2026-10-24T17:44:29.957256+00:00",
+      "updated_at": "2026-10-24T17:44:29.957256+00:00",
+      "history": [],
+      "skill_target": {
+        "canonical_name": "course",
+        "sha256": "7392366c2855399b9405ce207b2b51aed0be6d6ac689752c4e68f515bd964846"
+      }
+    },
+    "/spec": {
+      "text": "Transform the supplied rough request into an actionable engineering specification or prompt without losing requirements. Resolve whether the requested result is a prompt, a specification, an installable bundle or executed implementation. State compatible architecture, data model, interfaces, edge cases, accessibility, security, runtime-cost constraints, acceptance criteria and verification evidence. Reuse the relevant installed prompt-engineering workflow. Preserve task-specific deployment and permission boundaries. Deliver the requested text/files; do not execute a proposed build solely because it appears inside the prompt.",
+      "expansion_mode": "literal",
+      "dependencies": [],
+      "created_at": "2026-10-24T17:44:29.957256+00:00",
+      "updated_at": "2026-10-24T17:44:29.957256+00:00",
+      "history": [],
+      "skill_target": {
+        "canonical_name": "spec",
+        "sha256": "fcc60c1088e7c8adf684ce59430f926cf0f88e357a94616387a64809667120f1"
+      }
+    },
+    "/app": {
+      "text": "Implement and verify the requested app. Inspect the actual host repository and deployment environment before editing; preserve compatible locked versions, auth, database, routes, shared UI and authoritative registry conventions. Follow the requested Next.js, React, strict TypeScript, Prisma and Tailwind stack where compatible with the host. Resolve the app mode and implement actual behavior, data flows and error states. Apply the requested style through one design contract, with accessible responsive and reduced-motion behavior. Integrate into /apps only when requested. Apply deterministic/no-inference constraints when specified. Run appropriate checks and end-to-end flows, repair defects, and report actual evidence and remaining blockers. Deploy only within the current authorization.",
+      "expansion_mode": "literal",
+      "dependencies": [],
+      "created_at": "2026-10-24T17:44:29.957256+00:00",
+      "updated_at": "2026-10-24T17:44:29.957256+00:00",
+      "history": [],
+      "skill_target": {
+        "canonical_name": "app",
+        "sha256": "30e0c90c8f6b446676cd40d5ef3a88b8aadc94fc635773e8c5d88e04b8347d70"
+      }
+    },
+    "/check": {
+      "text": "Audit the identified existing artifact or implementation against its requirements. Inspect real files or behavior, reproduce defects, and separate failed, blocked, not applicable and not tested results. Check content/evidence, functional behavior, layout, accessibility, security, performance and deployment only where relevant. Repair root causes without unrelated rewrites. Revalidate changed and dependent behavior, inspect the final output, and deliver findings with evidence, repairs and unresolved issues. Do not describe a compiler pass, archive-integrity check or attractive preview as production acceptance.",
+      "expansion_mode": "literal",
+      "dependencies": [],
+      "created_at": "2026-10-24T17:44:29.957256+00:00",
+      "updated_at": "2026-10-24T17:44:29.957256+00:00",
+      "history": [],
+      "skill_target": {
+        "canonical_name": "check",
+        "sha256": "bfe405238c434c26bd9cbbf4e313e03f2a90319e30a2e6c965916881c562b039"
+      }
+    },
+    "/grow": {
+      "text": "Expand or revise the specified existing output. Read the current authoritative artifact and preserve its content scope, citations, data, design and prior user choices unless changed by the brief. Add substantive supported depth or working functionality rather than repetition. Reconcile all affected references and dependencies. For documents rebuild global citation order, contents, pagination and cross-references; for apps update affected data/API/UI behavior and regression checks. Reuse completed matching operations, invalidate stale checks, inspect the final revision and deliver it with clear evidence and limitations.",
+      "expansion_mode": "literal",
+      "dependencies": [],
+      "created_at": "2026-10-24T17:44:29.957256+00:00",
+      "updated_at": "2026-10-24T17:44:29.957256+00:00",
+      "history": [],
+      "skill_target": {
+        "canonical_name": "grow",
+        "sha256": "b9a31752a77be2c8cae9156d35e82a5f1da676c539d4b0114cff19bdf6c8cb78"
+      }
+    },
+    "/publish": {
+      "text": "Prepare the specified verified output for its requested publication channel or export format. Preserve content, metadata, citations, links, accessibility, fonts and provenance. Apply schema, print/export, packaging or lossless optimization workflows where relevant. Verify the actual final bytes and requested delivery format after conversion. Publish or deploy only to the explicitly authorized destination and scope; otherwise deliver the concrete publication-ready artifact and identify the remaining external step. Never imply a local export was published online.",
+      "expansion_mode": "literal",
+      "dependencies": [],
+      "created_at": "2026-10-24T17:44:29.957256+00:00",
+      "updated_at": "2026-10-24T17:44:29.957256+00:00",
+      "history": [],
+      "skill_target": {
+        "canonical_name": "publish",
+        "sha256": "2174d5483b95819f0a783ce2ef02c0f9d9ea7878ba3f522494c8f0cd8d7e1012"
+      }
+    },
+    "/translate": {
+      "text": "Create the explicitly requested language editions or localization. Use the existing universal workflow for its G50+ scope only when that scope is requested. Preserve meaning, technical terminology, citations, mathematical notation, identifiers and links. Maintain a terminology glossary and correct language/script layout, including RTL where needed. For apps verify locale routes, navigation, metadata, forms and error states. For documents rebuild edition-specific reading order, citations and pagination while retaining source identities. Report translation uncertainty and verification limits; do not imply specialist native review occurred unless it did.",
+      "expansion_mode": "literal",
+      "dependencies": [],
+      "created_at": "2026-10-24T17:44:29.957256+00:00",
+      "updated_at": "2026-10-24T17:44:29.957256+00:00",
+      "history": [],
+      "skill_target": {
+        "canonical_name": "translate",
+        "sha256": "a4d8decf5ee07125709beb5689ec12ec4497198d3eb9d6a915d93bf160258af2"
+      }
+    },
+    "/appswdc": {
+      "text": "https://apps.WebDevelopment.tv/free-website-auditor",
+      "expansion_mode": "literal",
+      "dependencies": [],
+      "created_at": "2026-10-24T23:19:26.772997+00:00",
+      "updated_at": "2026-10-24T23:19:26.772997+00:00",
+      "history": []
+    }
+  }
+}

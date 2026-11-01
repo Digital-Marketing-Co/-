@@ -1,0 +1,13 @@
+interface:
+  display_name: Upscale
+  short_description: Apply the upscale workflow to user requests
+  default_prompt: Use upscale for this task.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

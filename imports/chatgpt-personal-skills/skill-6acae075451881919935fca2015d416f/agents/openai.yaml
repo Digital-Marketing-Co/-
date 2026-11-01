@@ -1,0 +1,14 @@
+interface:
+  display_name: ESPrompt
+  short_description: Package rigorous Abacus.ai web app prompts as ZIPs
+  default_prompt: Use $esprompt to create an Abacus.ai implementation prompt ZIP for
+    my web application.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

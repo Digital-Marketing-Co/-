@@ -1,0 +1,14 @@
+interface:
+  display_name: Images
+  short_description: Create distinct document images and audit banner uniqueness
+  default_prompt: Use the images skill to illustrate this document and verify that
+    no image duplicates a banner or another image.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

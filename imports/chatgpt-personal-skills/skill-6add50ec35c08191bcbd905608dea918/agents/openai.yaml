@@ -1,0 +1,14 @@
+interface:
+  display_name: Finish / Polish
+  short_description: Expand and refine prompts through iterative QA
+  default_prompt: Use $finish to expand and polish the preceding prompt through technical
+    and visual QA.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

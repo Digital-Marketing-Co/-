@@ -1,0 +1,14 @@
+interface:
+  display_name: Digital Marketing Co. PDF
+  short_description: Create branded PDFs and verify every page
+  default_prompt: Create a Digital Marketing Co. styled PDF from my request, verify
+    its pages, and deliver the file.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

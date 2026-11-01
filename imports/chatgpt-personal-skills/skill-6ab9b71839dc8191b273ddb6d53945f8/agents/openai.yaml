@@ -1,0 +1,14 @@
+interface:
+  display_name: Output
+  short_description: Re-present files for preview and download
+  default_prompt: Use /output to re-present the requested file with a working preview
+    and download link.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

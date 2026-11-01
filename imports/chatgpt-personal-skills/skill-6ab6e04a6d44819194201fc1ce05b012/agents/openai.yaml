@@ -1,0 +1,14 @@
+interface:
+  display_name: Generate Prompt
+  short_description: Create rigorous prompts for apps, media, marketing, and research
+  default_prompt: Use generate-prompt to show the catalog or produce a tailored, ready-to-run
+    prompt.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

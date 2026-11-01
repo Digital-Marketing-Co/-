@@ -1,0 +1,14 @@
+interface:
+  display_name: Chapter Banner
+  short_description: Unique cinematic chapter art with a transparent fade
+  default_prompt: Use $chapter-banner to create distinct 16:9 full-bleed chapter banners
+    with a bottom transparency fade.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

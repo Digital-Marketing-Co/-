@@ -1,0 +1,14 @@
+interface:
+  display_name: Exhaustive
+  short_description: Iterative expansion with ordered scholarly citations
+  default_prompt: Use $exhaustive to expand the current work through repeated expound
+    passes, rebuild WCA Ivy citations, and verify scoped completion.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

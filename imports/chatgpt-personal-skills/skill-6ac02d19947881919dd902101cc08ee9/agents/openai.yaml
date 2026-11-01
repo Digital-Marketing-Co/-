@@ -1,0 +1,14 @@
+interface:
+  display_name: 4629 Interactive Design
+  short_description: Propose a design, ask for style changes, then apply it
+  default_prompt: Use $4629 to propose my output’s style and format, ask what I want
+    changed, and apply the resulting design.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

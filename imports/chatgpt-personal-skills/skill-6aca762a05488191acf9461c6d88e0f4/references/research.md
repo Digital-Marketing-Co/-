@@ -1,0 +1,10 @@
+# Evidence and bibliography
+Use Chicago notes and bibliography with stable note IDs, full first notes, short later notes, and hanging-indent bibliography entries. Give authors, exact title, venue/institution, date, DOI when available, and clickable direct PDF URL. Add page/section locators to claims. Keep scholarly content independent from decorative bibliography styling.
+
+Search Ivy League domains and research repositories for the subject, then expand to relevant university repositories, journals, government laboratories, and disciplinary archives. Do not fabricate a university association, imply endorsement, or cite an irrelevant PDF to satisfy a visual rule. Prefer openly accessible primary papers. When a relevant direct PDF cannot be verified, use a verified DOI or landing page and mark the PDF as unavailable; record the exception rather than inventing a URL.
+
+Verify each proposed direct PDF by following redirects and reading the returned PDF, not just checking a .pdf suffix. Record final URL, HTTP/access outcome when available, PDF signature/content type, title/author match, publication version, access date, relevant pages, and claim support. A response containing login HTML is not an accessible PDF. Recheck links before delivery. Distinguish peer-reviewed articles, preprints, lecture notes, and dissertations.
+
+Evidence matrix fields: claim_id, chapter/section, claim, epistemic_status, source_id, bibliographic_identity, pdf_url, landing_url/doi, locator, support_excerpt_or_paraphrase, evidence_quality, limits, access_date, link_status. Search log fields: date, query, database/domain, result count when known, inclusion/exclusion reason. Avoid reproducing copyrighted sources at length; synthesize with citations and honor quotation limits.
+
+Use teaching examples and exercises that can be solved from stated information. Check numerical examples computationally where useful, state units and uncertainty, verify derivations, and give solutions consistent with the exercises. Cite contested claims and competing interpretations fairly.

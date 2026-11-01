@@ -1,0 +1,156 @@
+token,class,match,replacement,where_banned,notes
+plate,word,exact+plural,figure,"prompts, captions, skill body, image prompts",Never concatenate plate/plates/Plate
+plates,word,exact,figures,"prompts, captions, skill body, image prompts",Plural of banned house jargon
+Plate,word,exact,Figure,"prompts, captions",Title case variant
+Plates,word,exact,Figures,"prompts, captions",Title case plural
+plated,word,exact,printed,prompts,Derived form
+gazette,word,exact+plural,catalog,prompt concatenations,House jargon
+Gazette,word,exact,Catalog,prompt concatenations,Title case
+gazetteer,word,exact,place index,prompt concatenations,Do not use in image or model prompts
+atlas,word,exact,map catalog,prompt concatenations,Keep /atlas as an invocation flag only. Never copy the bare word into a concatenated prompt.
+Atlas,word,exact,Map catalog,prompt concatenations,Title case
+folio,word,exact,report,prompt concatenations,Keep /folio as an invocation flag only.
+Folio,word,exact,Report,prompt concatenations,Title case
+deep,word,exact,iterative,prompt concatenations,Keep /deep as an invocation flag only. Do not write deep research in concatenated prompts.
+Deep,word,exact,Iterative,prompt concatenations,Title case
+exhaustive,word,exact,complete,prompt concatenations and titles,Replace with complete or full inventory
+Exhaustive,word,exact,Complete,prompt concatenations and titles,Title case
+AI,word,exact,(omit),prompt concatenations,Do not name a model vendor or the letters AI in a concatenated generation prompt
+xAI,word,exact,(omit),prompt concatenations,Vendor token
+ChatGPT,word,exact,(omit),prompt concatenations,Vendor token
+GPT,word,exact,(omit),prompt concatenations,Vendor stem when used as a model name
+OpenAI,word,exact,(omit),prompt concatenations,Vendor token
+LLM,word,exact,(omit),prompt concatenations,Model-class jargon in image/text concatenations
+Grok,word,exact,(omit),prompt concatenations,Do not name the runtime in a concatenated generation prompt
+Real alpha one-inch fades on the top and bottom only.,phrase,exact+close,(omit the fade. Print full-opacity edge to edge.),"all skills, banners, figures",User-banned procedure. Do not run a top/bottom fade.
+one-inch fade,phrase,contains,(omit),all skills,No top or bottom fade of any inch measure
+one-inch fades,phrase,contains,(omit),all skills,Plural form
+real-alpha fade,phrase,contains,(omit),all skills,No alpha fade on any edge
+real alpha fade,phrase,contains,(omit),all skills,Spelling variant
+top and bottom fades,phrase,contains,(omit),all skills,No vertical fades
+apply_banner_fade,symbol/token,exact,copy or LANCZOS-downsize only; no fade,banner and images workflows,Do not invoke the fade script
+ITQE,word,exact,variable table,prompt concatenations,Keep /itqe as an invocation flag only
+WCA,word,exact,(omit from image prompts),prompt concatenations,"House acronym stays in legal footers, not in image prompts"
+monograph,word,soft,report,image prompts only,Allowed in skill routing copy. Banned inside concatenated image prompts.
+compendium,word,soft,catalog,image prompts only,Prompt-engineer filler
+think-tank,phrase,soft,research report,image prompts only,Prompt-engineer filler
+Ivy League,phrase,soft,(omit from image prompts),image prompts only,Do not bake prestige language into pixels
+cinematic,word,soft,sharp documentary photograph,image prompts,Overused generate jargon
+state-of-the-art,phrase,soft,(omit),image prompts,Empty intensifier
+photoreal portrait of a private person,phrase,keep-as-negative,"(keep as a forbid instruction, do not depict)",image prompts,"Safety negative, not house jargon"
+watermark,word,keep-as-negative,no watermark,image prompts,Standard generate negative
+logo,word,keep-as-negative,no logo,image prompts,Standard generate negative
+agency seal,phrase,keep-as-negative,no agency seal,image prompts,Standard generate negative
+checkerboard,word,keep-as-negative,no checkerboard,image prompts and PNG QA,Fake transparency preview
+tofu,word,keep-as-negative,(omit missing-glyph boxes),print QA,Missing glyph
+□,symbol,exact,(omit),print QA and prompts,Replacement box
+☒,symbol,exact,(omit),print QA and prompts,Ballot-box X stand-in
+© baked into image,phrase,keep-as-negative,no copyright mark in pixels,image prompts,Footer handles copyright; pixels stay clean
+emoji,word,keep-as-negative,no emoji,prompts and print,House print rule
+neon city,phrase,keep-as-negative,(omit generic skyline),image prompts,Metaphor architecture
+allegory,word,keep-as-negative,no allegory,image prompts,Must depict named objects
+metaphor architecture,phrase,keep-as-negative,no metaphor architecture,image prompts,Must depict named objects
+{{plate}},symbol,exact,(omit),templates,Legacy template token
+/plate,symbol,exact,(omit),flags,Not a skill flag
+full-bleed plate,phrase,exact,full-bleed figure,prompts,Common collocation
+section plate,phrase,exact,section banner,captions,Caption jargon
+equation plate,phrase,exact,equation figure,body copy,Math graphic
+knowledge atlas,phrase,exact,place catalog,prompts,Stacked jargon
+PhD-plus,phrase,soft,(omit from concatenated prompts),prompt concatenations,Intensifier
+genius,word,soft,(omit),prompt concatenations,Empty intensifier
+midjourney,word,exact,(omit),prompt concatenations,Vendor
+Stable Diffusion,phrase,exact,(omit),prompt concatenations,Vendor
+DALL-E,word,exact,(omit),prompt concatenations,Vendor
+DALL·E,word,exact,(omit),prompt concatenations,Vendor glyph
+ATLAS,word,exact,map catalog,prompt concatenations,All-caps variant. Keep /atlas as an invocation flag only.
+atlases,word,exact,map catalogs,prompt concatenations,Plural
+Atlases,word,exact,Map catalogs,prompt concatenations,Title-case plural
+ATLASES,word,exact,map catalogs,prompt concatenations,All-caps plural
+atlas's,word,exact,catalog's,prompt concatenations,Possessive ascii apostrophe
+Atlas's,word,exact,Catalog's,prompt concatenations,Title-case possessive
+ATLAS's,word,exact,catalog's,prompt concatenations,All-caps possessive
+atlas’,word,exact,catalog’s,prompt concatenations,Possessive curly apostrophe U+2019
+Atlas’,word,exact,Catalog’s,prompt concatenations,Title-case curly possessive
+atlasing,word,exact,mapping,prompt concatenations,Present participle
+Atlasing,word,exact,Mapping,prompt concatenations,Title-case participle
+atlased,word,exact,mapped,prompt concatenations,Past participle
+Atlased,word,exact,Mapped,prompt concatenations,Title-case past
+atlas-like,word,exact,catalog-like,prompt concatenations,Hyphenated adjective
+atlaslike,word,exact,catalog-like,prompt concatenations,Closed adjective
+mini-atlas,word,exact,short catalog,prompt concatenations,Hyphen prefix
+mini atlas,phrase,exact,short catalog,prompt concatenations,Open prefix
+pre-atlas,word,exact,(omit),prompt concatenations,Hyphen prefix
+post-atlas,word,exact,(omit),prompt concatenations,Hyphen prefix
+mega-atlas,word,exact,(omit),prompt concatenations,Hyphen prefix
+wca-atlas,word,exact,place catalog filename stem,filenames in prompts,House filename token. Do not copy into a generate prompt.
+WCA atlas,phrase,exact,place catalog,prompt concatenations,House collocation
+WCA-Atlas,word,exact,place catalog,prompt concatenations,House hyphen title case
+knowledge-atlas,word,exact,place catalog,prompt concatenations,Hyphen of existing knowledge atlas ban
+Knowledge Atlas,phrase,exact,place catalog,prompt concatenations,Title case
+KNOWLEDGE ATLAS,phrase,exact,place catalog,prompt concatenations,All caps
+academic atlas,phrase,exact,academic catalog,prompt concatenations,Skill-description collocation
+Academic Atlas,phrase,exact,academic catalog,prompt concatenations,Title case
+institutional atlas,phrase,exact,institutional catalog,prompt concatenations,Skill-description collocation
+Institutional Atlas,phrase,exact,institutional catalog,prompt concatenations,Title case
+spatial atlas,phrase,exact,spatial catalog,prompt concatenations,House collocation
+place atlas,phrase,exact,place catalog,prompt concatenations,House collocation
+map atlas,phrase,exact,map catalog,prompt concatenations,Open compound
+map-atlas,word,exact,map catalog,prompt concatenations,Hyphen compound
+figure-and-gazetteer academic atlas,phrase,exact,place catalog,prompt concatenations,Legacy skill-description string
+world atlas,phrase,exact,world map catalog,prompt concatenations,Common collocation
+World Atlas,phrase,exact,world map catalog,prompt concatenations,Title case
+WORLD ATLAS,phrase,exact,world map catalog,prompt concatenations,All caps
+school atlas,phrase,exact,school map catalog,prompt concatenations,Common collocation
+pocket atlas,phrase,exact,pocket map catalog,prompt concatenations,Common collocation
+road atlas,phrase,exact,road map catalog,prompt concatenations,Common collocation
+street atlas,phrase,exact,street map catalog,prompt concatenations,Common collocation
+national atlas,phrase,exact,national map catalog,prompt concatenations,Common collocation
+historical atlas,phrase,exact,historical map catalog,prompt concatenations,Common collocation
+linguistic atlas,phrase,exact,linguistic map catalog,prompt concatenations,Common collocation
+star atlas,phrase,exact,star catalog,prompt concatenations,Common collocation
+celestial atlas,phrase,exact,celestial catalog,prompt concatenations,Common collocation
+anatomical atlas,phrase,exact,anatomical catalog,prompt concatenations,Common collocation
+surgical atlas,phrase,exact,surgical catalog,prompt concatenations,Common collocation
+photo atlas,phrase,exact,photo catalog,prompt concatenations,Common collocation
+photographic atlas,phrase,exact,photographic catalog,prompt concatenations,Common collocation
+color atlas,phrase,exact,color catalog,prompt concatenations,US spelling
+colour atlas,phrase,exact,colour catalog,prompt concatenations,UK spelling
+field atlas,phrase,exact,field catalog,prompt concatenations,Common collocation
+soil atlas,phrase,exact,soil catalog,prompt concatenations,Common collocation
+climate atlas,phrase,exact,climate catalog,prompt concatenations,Common collocation
+cancer atlas,phrase,exact,cancer catalog,prompt concatenations,Common collocation
+genome atlas,phrase,exact,genome catalog,prompt concatenations,Common collocation
+The Cancer Genome Atlas,phrase,exact,(omit from concatenated generate prompts),prompt concatenations,Proper-name collocation containing Atlas
+atlas of,phrase,contains,catalog of,prompt concatenations,Leading collocation
+Atlas of,phrase,contains,Catalog of,prompt concatenations,Title-case leading collocation
+an atlas of,phrase,exact,a catalog of,prompt concatenations,Indefinite collocation
+An Atlas of,phrase,exact,A catalog of,prompt concatenations,Title-case indefinite
+the atlas,phrase,exact,the catalog,prompt concatenations,Definite collocation
+The Atlas,phrase,exact,The catalog,prompt concatenations,Title-case definite
+atlas.json,symbol/token,exact,catalog.json,paths in prompts,On-disk name may stay as a file path. Do not copy the token into a generate prompt.
+atlas.md,symbol/token,exact,(omit from generate prompts),paths in prompts,Docs token
+atlas PDF,phrase,exact,catalog PDF,prompt concatenations,Output collocation
+atlas pdf,phrase,exact,catalog pdf,prompt concatenations,Lowercase output collocation
+atlas figure,phrase,exact,map figure,prompt concatenations,House collocation
+atlas banner,phrase,exact,section banner,prompt concatenations,House collocation
+atlas catalog,phrase,exact,place catalog,prompt concatenations,Redundant house collocation
+gazetteer-atlas,word,exact,place index,prompt concatenations,Hyphen pair
+atlas-gazetteer,word,exact,place index,prompt concatenations,Hyphen pair reversed
+@atlas,symbol,exact,(omit),prompt concatenations,Mention form
+#atlas,symbol,exact,(omit),prompt concatenations,Hashtag form
+`atlas`,symbol,exact,(omit),prompt concatenations,Code-span form
+"""atlas""",symbol,exact,(omit),prompt concatenations,Quoted lowercase
+"""Atlas""",symbol,exact,(omit),prompt concatenations,Quoted title case
+(atlas),symbol,exact,(omit),prompt concatenations,Parenthetical
+[atlas],symbol,exact,(omit),prompt concatenations,Bracketed
+{atlas},symbol,exact,(omit),prompt concatenations,Braced
+atlas-,symbol,prefix,(omit),prompt concatenations,Trailing-hyphen stem
+-atlas,symbol,suffix,(omit),prompt concatenations,Leading-hyphen stem
+_atlas,symbol,suffix,(omit),prompt concatenations,Snake prefix
+atlas_,symbol,prefix,(omit),prompt concatenations,Snake stem
+.atlas,symbol,suffix,(omit),prompt concatenations,Extension-like stem
+
+# source,Web Development Corporation negative-keyword array
+# updated,2026-09-17
+# rule,Never copy token into a concatenated generation prompt. Invocation flags that collide with a token stay slash-prefixed and never enter the prompt body.
+# atlas_variants_added,87

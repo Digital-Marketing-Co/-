@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "entrypoints": [
+    {
+      "name": "doc",
+      "skill_directory": "skill-6adcf29cb410819194ee5818edfa4af6",
+      "interactive": true,
+      "quality_contract": "doc/references/output-contract.md"
+    },
+    {
+      "name": "book",
+      "skill_directory": "skill-6adbf64e4a488191a8732b1a1b864b3c",
+      "interactive": true,
+      "quality_contract": "doc/references/output-contract.md"
+    },
+    {
+      "name": "map",
+      "skill_directory": "skill-6adcf46f6e348191a15ea784ce734f76",
+      "interactive": true,
+      "quality_contract": "doc/references/output-contract.md"
+    },
+    {
+      "name": "data",
+      "skill_directory": "skill-6adcf30170588191b6a45053b822e387",
+      "interactive": true,
+      "quality_contract": "doc/references/output-contract.md"
+    },
+    {
+      "name": "course",
+      "skill_directory": "skill-6adcf3290ca88191900a5bb66bbccd79",
+      "interactive": true,
+      "quality_contract": "doc/references/output-contract.md"
+    },
+    {
+      "name": "spec",
+      "skill_directory": "skill-6adcf353c538819197b03d0f8f5e5809",
+      "interactive": true,
+      "quality_contract": "doc/references/output-contract.md"
+    },
+    {
+      "name": "app",
+      "skill_directory": "skill-6adcf36c2f588191a8b01401df7a3e2e",
+      "interactive": true,
+      "quality_contract": "doc/references/output-contract.md"
+    },
+    {
+      "name": "check",
+      "skill_directory": "skill-6adcf38c2d708191a4555918d674d2e3",
+      "interactive": true,
+      "quality_contract": "doc/references/output-contract.md"
+    },
+    {
+      "name": "grow",
+      "skill_directory": "skill-6adcf3b166708191b274e06a8f1028bf",
+      "interactive": true,
+      "quality_contract": "doc/references/output-contract.md"
+    },
+    {
+      "name": "publish",
+      "skill_directory": "skill-6adcf3d7528c819194f8805a64f7683f",
+      "interactive": true,
+      "quality_contract": "doc/references/output-contract.md"
+    },
+    {
+      "name": "translate",
+      "skill_directory": "skill-6adcf3fb780881919b98c5d40665096b",
+      "interactive": true,
+      "quality_contract": "doc/references/output-contract.md"
+    },
+    {
+      "name": "4629",
+      "skill_directory": "skill-6ac02d19947881919dd902101cc08ee9",
+      "interactive": true,
+      "quality_contract": "doc/references/output-contract.md"
+    }
+  ]
+}

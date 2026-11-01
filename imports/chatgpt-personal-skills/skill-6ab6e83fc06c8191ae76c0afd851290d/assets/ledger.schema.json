@@ -1,0 +1,14 @@
+{
+  "$comment": "Minimal shape for /iterate ledger.json. Not a folio schema.",
+  "type": "object",
+  "required": ["topic", "created", "iteration", "status", "emit_target"],
+  "properties": {
+    "topic": { "type": "string" },
+    "created": { "type": "string" },
+    "iteration": { "type": "integer", "minimum": 0 },
+    "status": { "type": "string" },
+    "emit_target": { "enum": ["folio", "deep"] },
+    "open_questions": { "type": "array", "items": { "type": "string" } },
+    "iterations": { "type": "array" }
+  }
+}

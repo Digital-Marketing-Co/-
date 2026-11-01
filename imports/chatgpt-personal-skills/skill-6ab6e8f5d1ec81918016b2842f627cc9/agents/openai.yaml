@@ -1,0 +1,13 @@
+interface:
+  display_name: Prompt Start
+  short_description: Apply the prompt-start workflow to user requests
+  default_prompt: Use prompt-start for this task.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

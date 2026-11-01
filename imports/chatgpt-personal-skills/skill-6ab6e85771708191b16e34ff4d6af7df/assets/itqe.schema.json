@@ -1,0 +1,35 @@
+{
+  "$comment": "Interactive Table of Quantitative Elements. Accepted by /itqe and by inject_itqe.py.",
+  "type": "equation",
+  "id": "eq-1",
+  "plate": "equations/eq-01.png",
+  "svg": "equations/eq-01.svg",
+  "tex": "rebuild sibling only",
+  "unicode": "e₀ = Σ survival from age 0 (plate preferred)",
+  "caption": "Equation 1. Life expectancy at birth as the sum of survival.",
+  "symbols": [
+    {
+      "identifier": "e_0",
+      "term": "life expectancy at birth",
+      "quantity": "years"
+    }
+  ],
+  "itqe": [
+    {
+      "identifier": "e₀",
+      "term": "life expectancy at birth",
+      "quantity": "years",
+      "explanation": "mean years lived by a synthetic cohort under current rates"
+    }
+  ],
+  "legend": [
+    {
+      "glyph": "ω",
+      "name": "omega",
+      "case": "lowercase",
+      "role": "terminal age of the life table on this plate",
+      "operators": "upper limit of the survival sum",
+      "spoken": "omega lowercase, terminal age"
+    }
+  ]
+}

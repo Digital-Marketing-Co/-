@@ -1,0 +1,14 @@
+interface:
+  display_name: Skill Error Learning
+  short_description: Learn from verified failures and route corrective rules
+  default_prompt: Use $error-learning to record a verified failure, rank relevant
+    skills, and apply a tested corrective rule.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

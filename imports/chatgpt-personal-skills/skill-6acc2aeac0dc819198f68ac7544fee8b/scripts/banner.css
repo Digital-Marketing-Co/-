@@ -1,0 +1,10 @@
+.chapter-banner {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 0;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 40%, rgba(0,0,0,.896) 51.8%, rgba(0,0,0,.648) 63.6%, rgba(0,0,0,.352) 75.4%, rgba(0,0,0,.104) 87.2%, transparent 99%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 40%, rgba(0,0,0,.896) 51.8%, rgba(0,0,0,.648) 63.6%, rgba(0,0,0,.352) 75.4%, rgba(0,0,0,.104) 87.2%, transparent 99%, transparent 100%);
+}
+@media print { .chapter-banner { break-after: avoid; } }

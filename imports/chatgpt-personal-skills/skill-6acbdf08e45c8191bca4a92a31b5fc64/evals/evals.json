@@ -1,0 +1,76 @@
+{
+  "skill": "pepe",
+  "test_cases": [
+    {
+      "name": "build_embed",
+      "input": "/pepe a promptform pulse deck I can drop into an existing dashboard",
+      "assertions": [
+        "writes PROMPT.md",
+        "writes pepe-promptform.js with Shadow DOM",
+        "runs qa_pepe.py until PASS",
+        "host index.html installs the custom element"
+      ]
+    },
+    {
+      "name": "prompt_only",
+      "input": "/pepe prompt slug:pulse-note a compact note promptform for a docs site",
+      "assertions": [
+        "mode is prompt",
+        "does not invent a second product",
+        "expansion includes mount API and reduced motion"
+      ]
+    },
+    {
+      "name": "qa_fix_loop",
+      "input": "/pepe qa slug:pepe-promptform",
+      "assertions": [
+        "runs scripts/qa_pepe.py",
+        "applies fixes for any failed id",
+        "does not weaken a check to force PASS"
+      ]
+    },
+    {
+      "name": "environment_prompt",
+      "input": "/pepe -geo \"Abacus.AI Next.js Agent\" \"Fix signatures and enforce auditor publishing checks\"",
+      "assertions": [
+        "mode is prompt",
+        "environment is Abacus.AI Next.js Agent",
+        "retains signature and auditor requirements",
+        "does not create an unrelated widget or run the application"
+      ]
+    },
+    {
+      "name": "explicit_mode",
+      "input": "/pepe build -geo \"Browser JavaScript\" a billing widget",
+      "assertions": [
+        "mode stays build",
+        "environment is Browser JavaScript",
+        "retains embed workflow"
+      ]
+    },
+    {
+      "name": "missing_environment",
+      "input": "/pepe -geo",
+      "assertions": [
+        "reports missing environment",
+        "does not invent task or environment"
+      ]
+    },
+    {
+      "name": "literal_selector",
+      "input": "/pepe prompt Explain the literal string -geo",
+      "assertions": [
+        "environment is absent",
+        "remainder keeps literal -geo"
+      ]
+    },
+    {
+      "name": "invalid_selectors",
+      "input": "/pepe -geo Abacus.AI -geo Browser fix forms",
+      "assertions": [
+        "reports repeated environment selector",
+        "does not silently override"
+      ]
+    }
+  ]
+}

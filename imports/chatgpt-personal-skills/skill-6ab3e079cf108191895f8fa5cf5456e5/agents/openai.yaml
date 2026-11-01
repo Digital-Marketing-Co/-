@@ -1,0 +1,13 @@
+interface:
+  display_name: Hilarious
+  short_description: Turn any topic into a funny original story
+  default_prompt: /hilarious A routine trip to the grocery store
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,13 @@
+interface:
+  display_name: Global
+  short_description: Apply the global workflow to user requests
+  default_prompt: Use global for this task.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
