@@ -50,3 +50,7 @@ For database export or migration, identify whether the source is an application 
 
 ## Work-mode handoff for browser tasks
 When a task requires an interactive browser and no authorized browser/computer tool is available in the current session, prefer an immediate Work-mode handoff. If the host provides an action that actually opens Work, invoke it; otherwise explicitly state that the skill cannot switch ChatGPT modes or open a VM on its own. Provide a concise ready-to-submit Work task with project, URL, safety constraints, and next steps, plus one simple instruction for switching to Work. Never claim the handoff was launched or that stored login credentials are accessible without evidence. Continue any safe connector-based work available in the current session. Preserve user control over login, MFA, permissions, and irreversible database merges.
+
+
+## Mandatory remaining-blocker continuation
+On D/d/P/p or /disabled, automatically invoke /p and consume any prior Remaining, Pending, Blocked, or failed-check queue. Work version by version: inventory authoritative state; repair reproducible root causes; verify writes; run applicable CI, math, accessibility, security, performance and visual QA; iterate until two consecutive complete clean passes or a genuine blocker. Preserve user work and existing authorities; do not overwrite with placeholders, bypass integrity gates, merge unverified changes, or claim unattended execution without an automation. Provide compact iPhone-readable verified status.
