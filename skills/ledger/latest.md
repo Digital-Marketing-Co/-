@@ -1,1 +1,87 @@
-PLACEHOLDER
+# Skill drift ledger
+
+## Sync log
+
+| Date | Skill | Direction | Short hash | Change |
+|---|---|---|---|---|
+| 2026-11-01 | God | repo-to-hosts | e48ff09 | Add conservative PDF layout geometry diagnostics (pdf_layout_audit.py), unit tests, and CI workflow for God document QA; Grok has no local God skill so uses committed copy; ChatGPT must re-upload God |
+| 2026-10-31 | God | repo-to-hosts | 0134435 | Integrate PDF DOCX content extraction into God audit protocol; Grok has no local God so uses committed copy; ChatGPT must re-upload God |
+| 2026-10-31 | expound God karma | repo-to-hosts | 19a82c2 | Updated expound SKILL.md to v1.4.0 exhaustive evidence-bounded expansion with multi-pass QA; added quality-profile.md and quality-cases.json for God and karma; Grok installed from repo commit; ChatGPT must re-upload expound God karma |
+| 2026-10-31 | God | repo-to-hosts | 677bee2 | Connect God orchestrator to executable manifest regression QA via SKILL.md; Grok has no local God so uses committed; ChatGPT must re-upload God |
+| 2026-10-31 | parallax | repo-to-hosts | be10092 | Add optional post-invocation 4629 overlay composition to parallax SKILL.md using shared electric-cyan motion profile; Grok has no local parallax so uses committed; ChatGPT must re-upload parallax |
+| 2026-10-31 | 4629 karma | repo-to-hosts | 552fbf0 | Integrate shared electric-cyan 4629 motion with parallax and karma safeguards into 4629 and karma SKILL.md; Grok has no local copies so uses committed; ChatGPT must re-upload 4629 karma |
+| 2026-10-31 | pe | repo-to-hosts | c5b9eb6 | Integrate shared electric-cyan 4629 motion with parallax and karma safeguards into pe SKILL.md; Grok has no local pe so use committed copy; ChatGPT must re-upload pe |
+| 2026-10-31 | 4629 pe karma | repo-to-hosts | d4fed13 | Integrate shared document-error-prevention.md and interactive 4629 sections into 4629 pe karma SKILL.md plus post-artifact QA ref; Grok has no local copies so uses committed; ChatGPT must re-upload 4629 pe karma |
+| 2026-10-31 | pe | repo-to-hosts | 29ba058 | Integrate shared cross-skill document regression prevention and interactive 4629 into pe SKILL.md; Grok has no local pe so use committed copy; ChatGPT must re-upload pe |
+| 2026-10-31 | textbook | repo-to-hosts | c8d9b1c | Updated textbook SKILL.md, references, assets, and CHANGELOG for automatic /4629 interactive expansion with coffee-skill photorealistic parallax backgrounds, contrasting white text, HOLOVERSE zip packaging, and interactive prompt HTML; Grok installed from repo; ChatGPT must re-upload textbook |
+| 2026-10-31 | karma | repo-to-hosts | 8c08a0f | Correct regex escape handling in karma_ledger.py redaction patterns for bearer tokens and secrets; Grok has no local karma so use committed copy; ChatGPT must re-upload karma |
+| 2026-10-31 | karma pe 4629 | repo-to-hosts | 6f8e3f2 | Added karma forensic QA learning skill and wired it into pe, 4629 SKILL.md and post-artifact-itqe-latex-qa.md; Grok has no local pe/4629/karma so use committed copy; ChatGPT must re-upload karma, pe, 4629 |
+| 2026-10-31 | pe 4629 | repo-to-hosts | 29003d7 | Added canonical post-artifact ITQE LaTeX visual QA contract (skills/references/post-artifact-itqe-latex-qa.md) and required it in pe and 4629 SKILL.md after export; Grok has no local pe/4629 in the 50-skill set so use committed copy; ChatGPT must re-upload pe and 4629 |
+| 2026-10-30 | weekday-gather | checked | bc67965 | Compared 50 installed Grok custom skills against main. SKILL.md and supporting text files (references, scripts, assets under 200KB) match repo sizes except a 5-byte difference in phd-ivy-monograph (local 15688 vs repo 15683; minor trailing whitespace or newline, not verified newer behavior per commit time and ledger). No new skill folders. No newer Grok content to push (binaries >200KB and __pycache__ skipped). ChatGPT and Grok should use the repo copy for all shared skills. Recent repo-to-hosts (phd-ivy-monograph, wca-ivy-biblio, and prior) require ChatGPT re-upload. |
+| 2026-10-29 | phd-ivy-monograph | grok-to-repo | ab5a36e | Push verified newer Grok SKILL.md with shared mandates v3.1, image non-duplicity policy (2026-10-26), negative gate, and house interop; ChatGPT must re-upload |
+| 2026-10-29 | wca-ivy-biblio | grok-to-repo | 6d8e2d3 | Push verified newer Grok SKILL.md with primary-source maximization v1.2 (Ivy and .gov/.mil PDF preference) and citation integrity; ChatGPT must re-upload |
+| 2026-10-29 | weekday-gather | checked | 6d8e2d3 | Compared 50 installed Grok custom skills against main. Only phd-ivy-monograph and wca-ivy-biblio SKILL.md were newer on Grok (all supporting text files matched sizes). No new skill folders. Pushed those two. ChatGPT and Grok should use the repo copy for all other shared skills. ChatGPT must re-upload phd-ivy-monograph and wca-ivy-biblio. |
+| 2026-10-28 | disabled | repo-to-hosts | 0093884 | Automatically continue authorized queued steps within execution limits; Grok installed from repo commit; ChatGPT must re-upload |
+| 2026-10-28 | weekday-gather | checked | f490fda | Compared 50 installed Grok custom skills against main. SKILL.md and supporting text files match repo. No new skill folders. No newer Grok content to push (binaries >200KB and __pycache__ skipped). ChatGPT and Grok should use the repo copy for all shared skills. Recent repo-to-hosts (parallax v2.1, interface QA, visual-system, latex, atlas, deep, list, book, 4629, folio, textbook, banner, images, logo, copyright, disabled, exhaustive, pe) require ChatGPT re-upload. |
+| 2026-10-27 | interface | QA repair | 5f3745 | Restore interface quality profile and evaluation cases via PR #11; Skill Sync Guard, Universal Skill QA, and synchronization validation passed on PR; host installation not verified |
+| 2026-10-27 | parallax disabled exhaustive pe | repo-to-hosts | 9d2b8ff | Restore required quality-profile.md and quality-cases.json for parallax (bb2a530), disabled, exhaustive, pe; Grok uses committed copy; ChatGPT must re-upload |
+| 2026-10-27 | disabled proceed parallax exhaustive pe | repo-to-hosts | c160b6e | Install new skills disabled (accessibility-first), parallax, exhaustive, pe; update proceed with mandatory /disabled composition for P; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-27 | visual-system latex | grok-to-repo | 97ed7de | Update company link text from Digital Marketing Co. to Digital Marketing Company in visual-system and latex; Grok pushed to repo; ChatGPT must re-upload |
+| 2026-10-27 | atlas | repo-to-hosts | 64bb159 | Enforce cross-artifact image non-duplicity policy in /atlas; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-27 | deep | repo-to-hosts | 87d022e | Enforce cross-artifact image non-duplicity policy in /deep; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-27 | list | repo-to-hosts | 760c3f4 | Enforce cross-artifact image non-duplicity policy in /list; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-27 | book | repo-to-hosts | 7f302f7 | Enforce cross-artifact image non-duplicity policy in /book; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-27 | 4629 | repo-to-hosts | afc89fe | Enforce cross-artifact image non-duplicity; Grok installed from repo (previously missing); ChatGPT must re-upload |
+| 2026-10-27 | folio | repo-to-hosts | 9b9b32b | Enforce cross-artifact image non-duplicity; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-27 | visual-system | repo-to-hosts | 41f840b | Enforce cross-artifact image non-duplicity; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-27 | textbook | repo-to-hosts | acf3c0c | Enforce cross-artifact image non-duplicity in addition to chapter full-bleed; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-27 | banner | repo-to-hosts | 5899427 | Enforce cross-artifact image non-duplicity; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-27 | images | repo-to-hosts | 54e18d8 | Enforce cross-artifact image non-duplicity; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-26 | images | repo-to-hosts | 6099497 | Enhance /images with chapter-specific full-bleed photographic backgrounds and contextual openers for /textbook /4629; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-26 | banner | repo-to-hosts | 488d64f | Enhance /banner with chapter-specific full-bleed imagery and contextual openers for /textbook /4629; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-26 | textbook | repo-to-hosts | 37fc6b4 | Enhance /textbook with chapter-specific full-bleed photographic composition and contextual openers; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-26 | weekday-gather | checked | 6bb7f54 | Compared 50 installed skills; SKILL.md and supporting text files (references, scripts, assets under 200KB) match repo sizes. No new skill folders. No newer Grok content to push. ChatGPT and Grok should use the repo copy for all shared skills. Recent repo-to-hosts for logo, 4629, copyright: ChatGPT must re-upload those. |
+| 2026-10-25 | logo | QA repair proposal | 843bf48 | Add missing canonical YAML frontmatter and explicit QA profile/cases; structural and visual QA must be verified before merging. |
+| 2026-10-26 | logo | repo-to-hosts | 0052a78 | Integrate /logo and contrast-safe /4629 copyright workflow in logo; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-26 | 4629 | repo-to-hosts | aacd29b | Integrate /logo and contrast-safe /4629 copyright workflow in 4629; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-26 | copyright | repo-to-hosts | b0a3830 | Integrate /logo and contrast-safe /4629 copyright workflow; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-24 | atlas | repo-to-hosts | cf77cd9 | Repair and validate atlas/assets/negative-keywords.csv as clean six-column records (12724 bytes); archive original as inert EVIDENCE; Grok updated from repo; ChatGPT must re-upload |
+| 2026-10-24 | weekday-gather | checked | 6db25b1 | Reconciled 30 QA resources (quality-profile.md, quality-cases.json) and updated scripts for article-clip-pdf and banner; Grok synced existing skills; ChatGPT must re-upload new and changed skills |
+| 2026-10-23 | expound | repo-to-hosts | a067e7f | Update expound to v1.3.0 to preserve design and rebuild all citations and visuals; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-23 | expound | repo-to-hosts | e864190 | Add acceptance scenarios reference for citation and visual continuity; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-23 | weekday-gather | checked | c74ee2a | All 50 installed SKILL.md and supporting text files (references, scripts, assets under 200KB) match repo sizes. CHANGELOG trailing newline or minor diffs ignored. No new skill folders. No newer Grok content to push. ChatGPT and Grok should use the repo copy for all shared skills. |
+| 2026-10-22 | universal | repo-to-hosts | bcb866b | Add universal GDP-ranked parallel translation skill v1.0.0; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-22 | QUANTA | repo-to-hosts | 138f762 | Migrate legacy QAIR to QUANTA skill v2.0.1 (exhaustive Abacus.ai master prompts, QA, zero-inference runtime, year-3629 design); remove QAIR; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-22 | atlas | grok-to-repo | 0eb0c40 | Restore complete verified Grok atlas/assets/negative-keywords.csv (13213 bytes) with hyphenated gazetteer variants and compound rule; previous c3c927b had corrupted content `$(cat /tmp/atlas_csv.txt)`. Banner script pulled to Grok from repo. |
+| 2026-10-22 | weekday-gather | checked | c3c927b | All 50 installed SKILL.md contents match repo (git blob sha). Atlas negative-keywords.csv local has additional hyphenated gazetteer variants and compound rule (size 13213 vs 12827); banner/scripts/rebuild_document.py repo is newer and more robust. CHANGELOG trailing newline diffs ignored. ChatGPT and Grok should use the repo copy for banner script. No new skill folders. |
+| 2026-10-21 | genius | repo-to-hosts | d2cfb76 | Add genius prompt wrapper skill; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-21 | itqe | grok-to-repo | 58328b6 | Push verified newer Grok SKILL.md with v1.5 table wrapping, uniqueness, math immutability, and OWASP LLM01 |
+| 2026-10-21 | images | grok-to-repo | 225067f | Restore complete verified Grok images/SKILL.md with shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01); matches installed size 29181 bytes |
+| 2026-10-21 | wca-ivy-biblio | grok-to-repo | 8c67cd2 | Replace placeholder with complete verified Grok SKILL.md including shared mandates v1.1 |
+| 2026-10-21 | folio | grok-to-repo | 6e4805e | Append shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01) |
+| 2026-10-21 | alias | repo-to-hosts | 1c62b0b | Add alias skill for persistent safe skill-name mappings; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-21 | deep | grok-to-repo | 4080793 | Append shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01) |
+| 2026-10-21 | images | grok-to-repo | pending | Append shared mandates v3.1 (table wrapping, uniqueness, math immutability, OWASP LLM01) |
+| 2026-10-21 | interop | grok-to-repo | f42d1ed | Add shared table wrapping, uniqueness, math immutability, and OWASP LLM01 protections v1.1 |
+| 2026-10-21 | itqe | grok-to-repo | pending | Append OWASP LLM01 and shared mandates; expand table and math rules |
+| 2026-10-21 | negative | grok-to-repo | f8c3636 | Add OWASP LLM01 and anti-injection sweep v1.1 |
+| 2026-10-21 | skill-sync | grok-to-repo | 60a9a59 | Add repository security and OWASP LLM01 protections v3.1 |
+| 2026-10-21 | wca-ivy-biblio | grok-to-repo | pending | Append shared mandates v1.1 (table wrapping, uniqueness, math immutability, OWASP LLM01) |
+| 2026-10-21 | weekday-gather | checked | 6e4805e | Pushed folio SKILL.md (shared mandates). Pending full push for images, itqe, wca-ivy-biblio (large content). Alias skill installed on Grok from repo. |
+| 2026-10-21 | weekday-gather | checked | 4080793 | Pushed deep SKILL.md (shared mandates). Pending full push for folio, images, itqe, wca-ivy-biblio (large content). Pulled repo-newer SKILL.md for article-clip-pdf, atlas, banner, bleed, latex, textbook into Grok install. |
+| 2026-10-21 | weekday-gather | checked | f42d1ed | Pushed newer Grok SKILL.md for interop, negative, skill-sync (2026-10-21 shared mandates and OWASP LLM01). Pending full push for deep, folio, images, itqe, wca-ivy-biblio. Repo newer for article-clip-pdf, atlas, banner, bleed, latex, textbook; ChatGPT and Grok should use the repo copy for those. |
+| 2026-10-20 | expound | repo-to-hosts | a24d6da | Add expound skill with continuous source and bibliography synchronization; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-20 | wca-ivy-biblio | repo-to-hosts | a6857fb | Enforce continuous citation renumbering and bibliography integrity; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-20 | banner images atlas | grok-to-repo | d4ae576 | Restore complete verified Grok SKILL.md with MASS v4.0 layout/pagination (orphan headings, table keep-together) and multi-filetype rules; replaces placeholders |
+| 2026-10-20 | MASS-v4.1 | repo-to-hosts | f44e218 | Add MASS v4.1 universal publishing and output standard (skills/MASS-v4.1-PUBLISHING-STANDARD.md); applies to all output skills |
+| 2026-10-20 | banner images atlas | grok-to-repo | pending | MASS v4.0 update: append layout/pagination (orphan headings, table keep-together) and multi-filetype rules to SKILL.md. Local copies are newer and complete. Repo currently has placeholders. Full content push pending large-payload handling. |
+| 2026-10-20 | weekday-gather | checked | 3dd0535 | Compared 50 shared skills; no newer Grok SKILL.md, references or scripts to push (sizes match or repo newer per prior ledger and commit time). ChatGPT and Grok should use the repo copy for banner, images, textbook and other flagged skills. |
+| 2026-10-19 | negative | grok-to-repo | 287e0cf | Replace placeholder with complete verified Grok blocklist.md (full 29k 2026-10-16 hyphenated compounds and high-signal expansions) |
+| 2026-10-19 | negative | grok-to-repo | a38c0be | Restore complete verified Grok blocklist.md (full 2026-10-16 expansions) and skill directory over placeholder |
+| 2026-10-19 | negative | grok-to-repo | 9bb3fe3 | Restore full 2026-10-16 hyphenated compounds, high-signal indicators, and detailed humanize rules from verified Grok install; overwrites incomplete historical restore |
+| 2026-10-19 | etymology | repo-to-hosts | 37df4f4 | Add etymology v2.0 research skill with evaluations; Grok installed from repo; ChatGPT must re-upload |
+| 2026-10-19 | negative | grok-to-repo | 86d00d3 | Expand blocklist with hyphenated compounds and high-signal AI indicators; add humanize function to SKILL.md (v3.2) |
+| 2026-10-19 | atlas | grok-to-repo | 86d00d3 | Add hyphenated gazetteer variants and compound rule to negative-keywords.csv |
+| 2026-10-19 | banner | repo-to-hosts | 1203a86 | Repo SKILL.md and rebuild_document.py are newer (dense scholarship + host resolver); ChatGPT and Grok should use the repo copy |
+| 2026-10-19 | images | repo-to-hosts | b8dfbe9 | Repo SKILL.md is newer (dense scholarship and full-bleed); ChatGPT and Grok should use the repo copy |
+| 2026-10-19 | textbook | repo-to-hosts | e9323b9 | Repo SKILL.md is newer (forensic QA, density, ATLAS-EXPAND); ChatGPT and Grok should use the repo copy |
