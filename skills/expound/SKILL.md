@@ -4,7 +4,7 @@ description: Iteratively expand and rigorously verify an existing document, renu
 ---
 # /expound
 
-Version: 1.3.0
+Version: 1.4.0
 
 Iteratively expound and expand until material resolvable gaps close within evidence and available resources. Preserve the user's thesis as a hypothesis; never manufacture support. Update the existing document and its complete citation and visual systems together. Changing this skill does not itself request expansion of a document.
 
@@ -74,3 +74,27 @@ Require all of the following before describing the expansion as complete:
 Compatibility: /deep, /atlas, /iterate, /banner, /images, /latex, /copyright, /itqe, and /wca-ivy-biblio. Apply their current relevant requirements; preserve explicit user instructions.
 
 Read [acceptance scenarios](references/acceptance.md) when validating an update to this skill.
+
+
+## Version 1.4.0 — exhaustive, evidence-bounded expansion engine
+
+### Invocation and continuation
+Interpret /expound [subject or artifact] as a request to expand the named material, not merely explain the skill. When /expound skill is explicitly requested, improve this canonical skill itself. Honor D/d/P/p and /disabled as authorization to continue safe, non-destructive operations without routine confirmations. Convert every Remaining, Pending, Blocked, FAIL, or NOT TESTED entry into a prioritized follow-up queue; resume while tools and permissions permit. Do not confuse a declared workflow with actual asynchronous execution.
+
+### Deterministic requirement-to-output traceability
+Create a stable requirement ledger before writing. Each requirement gets an ID, source, priority, target section or artifact, acceptance test, status, and evidence reference. Include all user-supplied materials, previously accepted content, formats, languages, accessibility constraints, source licenses, citations, mathematical objects, illustrations, appendices, and requested deliverables. Detect omitted material, unsupported assertions, contradiction, duplicated content, untracked deletions, stale exports and broken dependencies. Never reduce source coverage merely to fit an arbitrary page limit.
+
+### Multi-pass expansion with explicit stopping rules
+Pass A: completeness inventory and missing-topic graph. Pass B: factual sourcing and claim classification. Pass C: definitions, mechanisms, mathematical derivations, counterexamples, alternative explanations and scope limits. Pass D: pedagogical accessibility and layperson explanations where appropriate. Pass E: design/figure/table planning and original-artwork provenance. Pass F: full citation reconciliation and equation ITQE coverage. Pass G: actual render/export and visual, structural, link and assistive-technology checks. Repeat the smallest necessary passes after changes, then run two consecutive complete clean end-to-end passes before marking verified. Stop only when all material resolvable gaps close, progress plateaus with documented rationale, or genuine external constraints prevent completion. No unsupported claims of perfection.
+
+### Scientific and forensic rigor
+Separate empirical observation, theoretical prediction, mathematical theorem, simulation, analogy, proposal and speculation. For proofs, list axioms, assumptions, derivation steps, edge cases and counterexamples; test dimensional consistency and sensitivity. For causal claims, distinguish correlation, identification assumptions, confounding and alternative mechanisms. For quantitative claims, report units, uncertainty, data provenance, reproducibility and limitations. Do not invent scientific validation, citations, experimental measurements or originality.
+
+### Accessibility and visual systems
+Honor existing /4629 design authority and source style. Where the user explicitly asks for fresh visual directions, offer progressive, iPhone- and screen-reader-friendly options, with recommended defaults and up to 20 meaningful choices per relevant category, without imposing twenty questions. Ensure contrast, readable responsive type, semantic headings, alt text, reduced-motion alternatives, safe-area and 200%-zoom checks. Apply /parallax only for geometric depth unless a later explicit user instruction authorizes appearance changes. For static documents, prioritize text legibility over visual effects. Never assume a render passed without inspecting actual output.
+
+### Web and conversion-oriented outputs
+For websites and PWAs, inventory canonical routes, navigation states, localized variants, interactive controls, accessibility states, mobile breakpoints, and analytics consent. When conversion optimization is requested, specify the primary conversion, guardrails and measurable hypotheses; do not claim lift without valid experimental evidence. Use current canonical Free Website Auditor API checks where actually available and appropriate; supplement with functional, security, performance, responsive and accessibility tests. Never substitute generic scores for verified per-route evidence.
+
+### Versioned correction ledger and no-silent-blockers rule
+For each iteration record version, changed object IDs, reproducible defect, root cause, minimal safe fix, test command or method, observed result, regression coverage and remaining dependency. Preserve originals and source provenance. Never disable CI guards, fabricate missing source assets, overwrite production, merge unverified branches or perform destructive cutovers without required authorization. Where a tool is unavailable, mark NOT TESTED or BLOCKED and continue with other safe work. The final response must distinguish committed source updates, test results, deployed behavior and unresolved tasks.
