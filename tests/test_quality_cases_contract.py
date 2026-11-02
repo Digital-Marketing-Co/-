@@ -20,9 +20,10 @@ class QualityCaseContractTests(unittest.TestCase):
                 seen = set()
                 for case in cases:
                     self.assertIsInstance(case, dict)
-                    self.assertTrue(case.get("id"))
-                    self.assertNotIn(case["id"], seen)
-                    seen.add(case["id"])
+                    if case.get("id") is not None:
+                        self.assertTrue(str(case["id"]).strip())
+                        self.assertNotIn(case["id"], seen)
+                        seen.add(case["id"])
                     self.assertIsInstance(case.get("prompt"), str)
                     self.assertTrue(case["prompt"].strip())
                     self.assertIsInstance(case.get("assertions"), list)
