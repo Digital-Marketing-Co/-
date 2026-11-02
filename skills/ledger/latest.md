@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-02 | expound | repo-to-hosts | e65263d | Updated expound SKILL.md to v2.0.0 with anti-truncation and mandatory /karma pre-output gate; Grok installed from repo commit; ChatGPT must re-upload expound |
 | 2026-11-01 | God | repo-to-hosts | e48ff09 | Wire PDF geometry diagnostics and CI into God QA guidance; Grok has no local God so uses committed copy; ChatGPT must re-upload God |
 | 2026-10-31 | God | repo-to-hosts | 0134435 | Integrate PDF DOCX content extraction into God audit protocol; Grok has no local God so uses committed copy; ChatGPT must re-upload God |
 | 2026-10-31 | expound God karma | repo-to-hosts | 19a82c2 | Updated expound SKILL.md to v1.4.0 exhaustive evidence-bounded expansion with multi-pass QA; added quality-profile.md and quality-cases.json for God and karma; Grok installed from repo commit; ChatGPT must re-upload expound God karma |
