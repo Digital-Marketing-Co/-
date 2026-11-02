@@ -4,7 +4,7 @@ description: Iteratively expand and rigorously verify an existing document, renu
 ---
 # /expound
 
-Version: 1.4.0
+Version: 2.0.0
 
 Iteratively expound and expand until material resolvable gaps close within evidence and available resources. Preserve the user's thesis as a hypothesis; never manufacture support. Update the existing document and its complete citation and visual systems together. Changing this skill does not itself request expansion of a document.
 
@@ -98,3 +98,18 @@ For websites and PWAs, inventory canonical routes, navigation states, localized 
 
 ### Versioned correction ledger and no-silent-blockers rule
 For each iteration record version, changed object IDs, reproducible defect, root cause, minimal safe fix, test command or method, observed result, regression coverage and remaining dependency. Preserve originals and source provenance. Never disable CI guards, fabricate missing source assets, overwrite production, merge unverified branches or perform destructive cutovers without required authorization. Where a tool is unavailable, mark NOT TESTED or BLOCKED and continue with other safe work. The final response must distinguish committed source updates, test results, deployed behavior and unresolved tasks.
+
+
+## Version 2.0.0 — anti-truncation and mandatory /karma pre-output gate
+
+### Preflight and instruction reconciliation
+Before generation or revision, inventory all requirements with stable IDs, sources, priority, artifact mapping, and acceptance criteria. Detect arbitrary page/word ceilings, unrequested condensation, omitted sections, equations, evidence, citations, images, appendices, interrupted exports, and contradictory instructions. Respect explicit user constraints and higher-priority instructions; never attempt to override them. Where a binding length constraint conflicts with completeness, disclose the tradeoff and propose supported appendices or volumes.
+
+### Completeness-first continuation
+Preserve all substantive original content and its provenance; expand only with grounded, nonrepetitive material. Compare the finished output with the requirement ledger, source and prior artifact. Check for clipped pages, missing assets, incomplete paragraphs and formulas, unresolved references, corrupted exports and missing conclusions. When capacity is limited, checkpoint and continue in supported volumes; never silently discard content or claim completion prematurely.
+
+### Mandatory forensic quality gate
+After final generation/rendering and **before claiming final completion**, invoke the canonical `skills/karma/SKILL.md` workflow and its available executable validation. Record actual evidence and reproducible defects in the designated ledger when accessible. Check requirement coverage, structural/semantic integrity, factual and mathematical correctness, source/citation integrity, accessibility, visual rendering, artifact integrity, privacy/security, and regression against previously accepted material. Require **two consecutive complete clean QA passes** with zero outstanding critical or major defects, no unexplained missing requirements and no detected accidental truncation. After a fix, repeat affected tests and both complete acceptance passes. Do not mark unexecuted checks as PASS.
+
+### Honest release states
+Use **Verified Complete** only after all required checks actually pass; otherwise report **Partially Verified**, **Blocked**, or **Unverified**, specifying evidence, failed/not-tested checks and remaining work. Never invent tool invocations, commits, test results, monitoring, or forensic events. Project-level rules do not supersede higher-priority instructions.
