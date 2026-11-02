@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-02 | God | repo-to-hosts | 0e25892 | Add per-page PDF visual evidence generation via pdf_render_evidence.py, tests, and SKILL.md section; Grok uses committed copy (no local God); ChatGPT must re-upload God |
 | 2026-11-02 | images | grok-to-repo | 9991942 | Add Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31) section to SKILL.md; ChatGPT must re-upload |
 | 2026-11-02 | list | grok-to-repo | 9991942 | Add Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31) section to SKILL.md; ChatGPT must re-upload |
 | 2026-11-02 | phd-ivy-monograph | grok-to-repo | 9991942 | Add Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31) section to SKILL.md; ChatGPT must re-upload |
