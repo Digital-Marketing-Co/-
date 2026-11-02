@@ -50,3 +50,16 @@ For database export or migration, identify whether the source is an application 
 
 ## Work-mode handoff for browser tasks
 When a task requires an interactive browser and no authorized browser/computer tool is available in the current session, prefer an immediate Work-mode handoff. If the host provides an action that actually opens Work, invoke it; otherwise explicitly state that the skill cannot switch ChatGPT modes or open a VM on its own. Provide a concise ready-to-submit Work task with project, URL, safety constraints, and next steps, plus one simple instruction for switching to Work. Never claim the handoff was launched or that stored login credentials are accessible without evidence. Continue any safe connector-based work available in the current session. Preserve user control over login, MFA, permissions, and irreversible database merges.
+
+
+## Mandatory remaining-work closure loop (P/D auto-repair)
+When a report, CI result, pull request, deployment, or prior assistant response contains **Remaining work**, **Pending**, **Unverified**, **Partially Verified**, **FAIL**, or **Blocked**, treat each item as an actionable queue entry, not an invitation to stop. On P/D invocation and before any final status report:
+1. Re-read authoritative live repository/CI state, deduplicate resolved items, and map each unresolved item to a specific file, owner, acceptance test, and safe next action.
+2. Automatically implement reversible, authorized fixes, preserving canonical source and verified main-branch changes. Prefer a fresh review branch or selective cherry-pick-equivalent patch when a previous PR was closed or the main branch already contains some changes. Never blindly overwrite or force-push.
+3. Run available targeted regression tests, structural validation, and full applicable CI. If CI fails, inspect exact logs, fix the verified root cause, and repeat. Do not weaken guards, fabricate fixtures, or bypass validation.
+4. Integrate through the repository's authorized review/merge workflow only when required checks pass and permission and protection rules permit. Preserve explicit approval for production cutovers, destructive changes, security-sensitive actions, and other high-impact changes.
+5. Before reporting, recheck the actual target branch, commit, and workflow status. Continue to the next eligible unresolved item without requesting another P/D. Record any genuine blocker with its exact cause and the smallest necessary user action.
+6. Run the canonical /karma forensic QA workflow and require two consecutive complete clean passes before claiming **Verified Complete**. Never count unexecuted tests as passing. No claim of background execution without an active supported automation.
+
+### Concrete carry-forward scenario: expound v2.0 / sync guard
+If /expound v2.0 is already present on main but /karma and /God evaluation fixture repairs, regression tests, or CI trigger coverage remain only on a development branch, compare exact file hashes and selectively integrate missing changes through a fresh PR. Validate `scripts/validate_skills.py`, the relevant unittest suite, and GitHub Actions on the final head commit; do not duplicate the already-integrated /expound change. Do not treat a closed PR or a successful run for an older SHA as proof of current integration.
