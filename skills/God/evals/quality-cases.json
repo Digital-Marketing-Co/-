@@ -3,18 +3,29 @@
   "cases": [
     {
       "id": "god-authority",
-      "input": "/God /expound",
-      "expected": "canonical skills/God/SKILL.md authority"
+      "prompt": "/God /expound",
+      "assertions": [
+        "canonical skills/God/SKILL.md authority"
+      ],
+      "grader": "Check observed output against the assertion and record evidence-backed PASS, FAIL, BLOCKED, or NOT TESTED."
     },
     {
       "id": "god-math",
-      "input": "/God derive a mathematical model",
-      "expected": "ITQE and LaTeX coverage before rendering"
+      "prompt": "/God derive a mathematical model",
+      "assertions": [
+        "ITQE and LaTeX coverage before rendering"
+      ],
+      "grader": "Check observed output against the assertion and record evidence-backed PASS, FAIL, BLOCKED, or NOT TESTED."
     },
     {
       "id": "god-blocked",
-      "input": "/God with unavailable auditor",
-      "expected": "report NOT TESTED and preserve source"
+      "prompt": "/God with unavailable auditor",
+      "assertions": [
+        "report NOT TESTED and preserve source"
+      ],
+      "grader": "Check observed output against the assertion and record evidence-backed PASS, FAIL, BLOCKED, or NOT TESTED."
     }
-  ]
+  ],
+  "skill": "God",
+  "schema_version": 1
 }
