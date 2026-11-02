@@ -3,13 +3,21 @@
   "cases": [
     {
       "id": "karma-regression",
-      "input": "Record a reproducible accessibility defect",
-      "expected": "reproduction, root cause, fix and regression evidence"
+      "prompt": "Record a reproducible accessibility defect",
+      "assertions": [
+        "reproduction, root cause, fix and regression evidence"
+      ],
+      "grader": "Check observed output against the assertion and record evidence-backed PASS, FAIL, BLOCKED, or NOT TESTED."
     },
     {
       "id": "karma-unknown",
-      "input": "External test unavailable",
-      "expected": "mark NOT TESTED rather than PASS"
+      "prompt": "External test unavailable",
+      "assertions": [
+        "mark NOT TESTED rather than PASS"
+      ],
+      "grader": "Check observed output against the assertion and record evidence-backed PASS, FAIL, BLOCKED, or NOT TESTED."
     }
-  ]
+  ],
+  "skill": "karma",
+  "schema_version": 1
 }

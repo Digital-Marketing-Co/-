@@ -5,12 +5,16 @@ on:
     branches: [main]
     paths:
       - "skills/**"
+      - "tests/**"
+      - "scripts/validate_skills.py"
       - "AGENTS.md"
       - "SKILL-SYNC.md"
       - ".skill-sync/**"
   pull_request:
     paths:
       - "skills/**"
+      - "tests/**"
+      - "scripts/validate_skills.py"
       - "AGENTS.md"
       - "SKILL-SYNC.md"
       - ".skill-sync/**"
