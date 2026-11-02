@@ -3,7 +3,7 @@ name: ispy
 description: Exhaustive I-Spy object inventory of an attached or referenced image, then one stacked book-iterate-deep PDF with per-element breakdown, corpus decode, 16-9 full-bleed banners and figures, WCA Ivy notes, and a living copyright footer. Trigger on /ispy, /I-Spy, ispy this, identify every object, window inventory, hidden-object catalog, or a request to name placement color and meaning of every object in a photo.
 metadata:
   type: workflow
-  version: "3.0"
+  version: "3.1"
   flag: /ispy
   owner: Web Development Corporation
   stacks: book, iterate, deep, breakdown, decode, banner, images, wca-ivy-biblio, copyright
@@ -99,6 +99,8 @@ Do not diagnose the occupant. Do not claim military, assassination, or intellige
 
 Print the pane catalog and the H0/H1 section in chat so the inventory is readable before the book build finishes.
 
+Also embed or reference the locked source image (and any pane crops or enhancement snapshots written under the work directory) so the reader can see the pixels that were inventoried. Use the view_image or render_searched_image pattern for the source and for any high-value crops that clarify occluded text or adjacent objects. Do not invent detail.
+
 ### 8. Stacked PDF
 
 Follow `references/pdf-stack.md` in this order
@@ -113,7 +115,7 @@ Follow `references/pdf-stack.md` in this order
 8. `/wca-ivy-biblio` first-appearance notes and ITQE tables
 9. `/copyright` living footer
 
-One public PDF. Unique rasters. 16-9 full bleed left and right. Real alpha ramps on the top and bottom only after generate. No private-person portrait in a generated banner.
+The public PDF must include the locked source raster (or a full-bleed reproduction of it) on an early page and any pane crops or enhancement snapshots that were written during the inventory. These are evidence plates, not generative banners. Place them under the spatial-frame or pane-catalog section. Unique rasters otherwise. 16-9 full bleed left and right for generated plates. Real alpha ramps on the top and bottom only after generate. No private-person portrait in a generated banner.
 
 ### 9. Chat mathematics
 

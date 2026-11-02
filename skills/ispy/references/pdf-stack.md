@@ -10,12 +10,15 @@ Public PDF is `/home/workdir/artifacts/ispy-<slug>/<Title_Slug>.pdf`.
 The closed corpus is
 
 - `source` plus extension
+- any pane crops or enhancement snapshots written under the work directory
 - `inventory.json`
 - the pane catalog
 - the readable-text list in reading order
 - H0 and the fail-closed H1 test
 
 Do not add objects the pixels do not support. Do not diagnose the occupant.
+
+The public PDF must reproduce the locked source image (full-bleed or near full-bleed on an early page) and any crops that clarify occluded text or adjacent objects. These evidence plates sit under the spatial-frame or pane-catalog section. They are not generative banners.
 
 ## Skill order
 
