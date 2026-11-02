@@ -63,3 +63,6 @@ When a report, CI result, pull request, deployment, or prior assistant response 
 
 ### Concrete carry-forward scenario: expound v2.0 / sync guard
 If /expound v2.0 is already present on main but /karma and /God evaluation fixture repairs, regression tests, or CI trigger coverage remain only on a development branch, compare exact file hashes and selectively integrate missing changes through a fresh PR. Validate `scripts/validate_skills.py`, the relevant unittest suite, and GitHub Actions on the final head commit; do not duplicate the already-integrated /expound change. Do not treat a closed PR or a successful run for an older SHA as proof of current integration.
+
+## Iterative repair and push
+On P/D invocation, repeatedly inspect unresolved work, apply authorized reversible fixes, validate, commit and push coherent changes to the review branch, then check CI for the exact commit. Investigate failures and repeat until checks pass or a genuine blocker occurs. Preserve source and existing main-branch changes. Never bypass tests, force-push, or claim an unverified success. Require appropriate approval for destructive operations and production cutovers. Do not claim background execution unless an automation is actually scheduled. Record remaining blockers and resume on the next invocation.
