@@ -1,5 +1,4 @@
 
-
 # /ispy
 
 Treat one attached or referenced raster as a closed visual corpus. Name every distinguishable object. Record pane or grid cell, relative placement inside the cell, dominant color, material guess, and readable text. Then test whether the arrangement could encode a second message. After the catalog exists, compile one letter-size PDF by running the stack in `references/pdf-stack.md`. Do not invent objects the pixels do not support. Do not claim a hidden code unless a concrete reconstruction exists.
@@ -89,6 +88,8 @@ Do not diagnose the occupant. Do not claim military, assassination, or intellige
 
 Print the pane catalog and the H0/H1 section in chat so the inventory is readable before the book build finishes.
 
+Also embed or reference the locked source image (and any pane crops or enhancement snapshots written under the work directory) so the reader can see the pixels that were inventoried. Use the view_image or render_searched_image pattern for the source and for any high-value crops that clarify occluded text or adjacent objects. Do not invent detail.
+
 ### 8. Stacked PDF
 
 Follow `references/pdf-stack.md` in this order
@@ -103,7 +104,7 @@ Follow `references/pdf-stack.md` in this order
 8. `/wca-ivy-biblio` first-appearance notes and ITQE tables
 9. `/copyright` living footer
 
-One public PDF. Unique rasters. 16-9 full bleed left and right. Real alpha ramps on the top and bottom only after generate. No private-person portrait in a generated banner.
+The public PDF must include the locked source raster (or a full-bleed reproduction of it) on an early page and any pane crops or enhancement snapshots that were written during the inventory. These are evidence plates, not generative banners. Place them under the spatial-frame or pane-catalog section. Unique rasters otherwise. 16-9 full bleed left and right for generated plates. Real alpha ramps on the top and bottom only after generate. No private-person portrait in a generated banner.
 
 ### 9. Chat mathematics
 
