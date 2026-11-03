@@ -1,6 +1,6 @@
 ---
 name: textbook
-description: Write and visually verify a doctoral-level textbook PDF about the subject following /textbook or $textbook. Automatically run /4629 interactive expansion with coffee-skill photorealistic parallax backgrounds, contrasting white text, recommended multi-format outputs, and HOLOVERSE holographic viewing. Produce scholarly teaching, compiled mathematics, ITQE tables, verified academic PDF citations, futuristic full-bleed artwork, semantic typography, section and subsection banners, distinct inline illustrations, canonical copyright, and documented preflight and final QA.
+description: Write and visually verify a doctoral-level textbook PDF about the subject following /textbook or $textbook. First build an exhaustive hierarchical outline, then iteratively expand every section and subsection. Maximize relevant verified academic PDF citations and always reorder notes and bibliography so first-appearance numbering stays contiguous. Automatically run /4629 interactive expansion with coffee-skill photorealistic parallax backgrounds, contrasting white text, recommended multi-format outputs, and HOLOVERSE holographic viewing. Produce scholarly teaching, compiled mathematics, ITQE tables, full-bleed AI-regenerated real-life photorealistic and volumetric futuristic artwork, semantic typography, section and subsection banners, distinct inline illustrations, canonical copyright, and documented preflight and final QA.
 ---
 # Textbook
 
@@ -151,4 +151,36 @@ Output a zip archive containing:
 - Simple one-action compilation links or scripts for the recommended formats.
 - Living copyright in document info and the HTML: Copyright © 2012–[current year] Web Development Corporation. All rights reserved. Visible anchor text is Digital Marketing Company linked to https://DigitalMarketingCo.org. Domain text is DigitalMarketingCo.org.
 
-Record the zip path in the delivery report. If generation of interactive HTML or parallax layers is blocked, label the gap and still deliver the PDF plus available companions. Run the negative scan on all user-visible text in the zip contents before final packaging.
+## High-fidelity visual and structural upgrade (2026-11-02)
+
+Observed quality gap: recent short monographs produced under this skill were plain reportlab layouts, while earlier textbook + 4629 outputs (Kinsey continuum synthesis, OmniReality Kodex atlas, structured decoding dossiers) used dark scholarly themes, full-bleed photorealistic and volumetric futuristic imagery, high-contrast white text, cinematic chapter openers, and dense visual hierarchy.
+
+**Mandatory structural sequence**
+1. Build the most exhaustive hierarchical outline first (corpus → volumes → parts → chapters → sections → subsections → claims → evidence nodes). Record it as a machine-readable tree before drafting any prose.
+2. For every section and every subsection, run an iterative expansion pass that develops definitions, derivations, competing evidence, worked examples, limitations, and open questions. Do not stop at a single paragraph.
+3. After the outline and expansion passes, generate a unique 16:9 full-bleed banner for every section and every subsection, and a distinct contextual inline figure (or scientific diagram) for every subsection.
+4. Prefer the visual language of the higher-quality prior outputs: dark scholarly palette, volumetric lighting, photorealistic or clearly labeled scientific stills, cinematic composition, and full-bleed chapter openers with translucent contrast panels so white text remains readable.
+
+**Imagery rules (strengthened)**
+- Every chapter opener is a unique full-bleed photorealistic or volumetric still, context-locked to the chapter subject.
+- Every section and subsection receives its own banner; no parent reuse.
+- Inline figures appear at least once per subsection and are never generic.
+- Full bleed means artwork touches left, right, and top edges; text stays inside a safe inset with measured contrast ≥ 4.5:1.
+- Maintain the existing non-duplicity policy; regenerate on exact or perceptual collision.
+- When tools allow, produce /parallax layers for chapter backgrounds as specified in the 4629 section.
+
+**4629 integration**
+After final QA, automatically package the completed PDF with the interactive promptform, image manifest, evidence matrix, and any available parallax layers exactly as described in the Automatic /4629 section. Prefer the visual density and design language of the higher-quality prior documents when generating the stills that enter that package.
+
+## Citation maximization, logical enumeration, and photorealistic-futuristic style (2026-11-02)
+
+**Above-Genius and above-PhD exhaustive relevant citations**
+Maximize the number of relevant, verified academic PDF citations that support substantive claims. Prefer primary sources, peer-reviewed papers, institutional repositories, and original research. Every nontrivial claim receives a traceable source or an explicit uncertainty label. Do not invent citations. Record each source in the evidence ledger with author, title, year, DOI or stable URL, and pinpoint where available. Prefer sources available as downloadable PDFs.
+
+**Mandatory logical citation enumeration**
+Citations must remain in logical order throughout the textbook. After any addition, deletion, expansion, or reordering pass, renumber all in-text notes and sort the bibliography so that first-appearance numbering stays contiguous and sequential from 1. Subsequent references to the same source use the shortened form. Never leave gaps, duplicates, or out-of-order numbers in the final PDF. Cross-check the evidence ledger against the printed notes before delivery. This reordering is mandatory on every finalization pass.
+
+**Exhaustive maximization of beauty and realistic photorealistic AI imagery with full bleed**
+Generate AI-regenerated real-life photorealistic stills that are beautiful and futuristic. Prefer documentary-real subjects with volumetric lighting, cinematic composition, and clear context lock to the exact section or chapter. Every chapter opener, every section banner, and every subsection banner is a unique full-bleed still (artwork touches left, right, and top edges; text remains inside a safe inset with measured contrast ≥ 4.5:1). Inline figures follow the same beauty and realism standard. Label scientific visualizations as such. Maintain uniqueness, the non-duplicity policy, and measured contrast. Optimize every generated still for photographic realism and visual inspiration while remaining literal to the adjacent claims.
+
+These requirements apply to every textbook run. They are additive to existing research, math, and QA gates.
