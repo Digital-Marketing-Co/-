@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-03 | textbook | grok-to-repo | 24f5de1 | Sync CHANGELOG.md with verified 2026-11-02 citation, structure, and visual upgrades; ChatGPT must re-upload textbook |
 | 2026-11-03 | textbook | grok-to-repo | ae5cec8 | Add Citation maximization, logical enumeration, and photorealistic-futuristic style (2026-11-02) plus High-fidelity visual and structural upgrade sections to SKILL.md; ChatGPT must re-upload textbook |
 | 2026-11-03 | weekday-gather | checked | ae5cec8 | Compared 50 installed Grok custom skills against main. Found textbook SKILL.md newer with verified 2026-11-02 sections. Pushed to main. All other shared skills match. ChatGPT must re-upload textbook. |
 | 2026-11-02 | ispy | repo-to-hosts | f4fbcaf | Update workflow.md to embed source image and pane crops as evidence plates in chat catalog and PDF; Grok uses committed copy; ChatGPT must re-upload ispy |
