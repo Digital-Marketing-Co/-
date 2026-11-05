@@ -1,1 +1,27 @@
-PLACEHOLDER
+# Skill drift ledger
+
+## Sync log
+
+| Date | Skill | Direction | Short hash | Change |
+|---|---|---|---|---|
+| 2026-11-05 | weekday-gather | checked | 2fa07c4 | Compared 50 installed Grok custom skills against main. 48 SKILL.md blob hashes match exactly. Folio has minor wording (Exit 1 vs Exit code 1) and textbook has trailing newline; byte differences only, no verified newer behavior. No new skill folders. ChatGPT and Grok should use the repo copy for all shared skills. No ChatGPT re-uploads required. |
+| 2026-11-04 | weekday-gather | checked | 1bd8a78 | Compared 50 installed Grok custom skills against main. 48 SKILL.md blob hashes match exactly. Folio has minor wording (Exit 1 vs Exit code 1) and textbook has trailing newline; byte differences only, no verified newer behavior. No new skill folders. ChatGPT and Grok should use the repo copy for all shared skills. No ChatGPT re-uploads required. |
+| 2026-11-03 | textbook | grok-to-repo | 3f033a3 | Sync CHANGELOG.md with 2026-11-02 citation, imagery, and structural mandate updates matching the verified SKILL.md; ChatGPT must re-upload textbook |
+| 2026-11-03 | textbook | grok-to-repo | ae5cec8 | Add Citation maximization, logical enumeration, and photorealistic-futuristic style (2026-11-02) plus High-fidelity visual and structural upgrade sections to SKILL.md; ChatGPT must re-upload textbook |
+| 2026-11-03 | weekday-gather | checked | ae5cec8 | Compared 50 installed Grok custom skills against main. Found textbook SKILL.md newer with verified 2026-11-02 sections. Pushed to main. All other shared skills match. ChatGPT must re-upload textbook. |
+| 2026-11-02 | ispy | repo-to-hosts | f4fbcaf | Update workflow.md to embed source image and pane crops as evidence plates in chat catalog and PDF; Grok uses committed copy; ChatGPT must re-upload ispy |
+| 2026-11-02 | God | repo-to-hosts | 0e25892 | Add per-page PDF visual evidence generation via pdf_render_evidence.py, tests, and SKILL.md section; Grok uses committed copy (no local God); ChatGPT must re-upload God |
+| 2026-11-02 | images | grok-to-repo | 9991942 | Add Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31) section to SKILL.md; ChatGPT must re-upload |
+| 2026-11-02 | list | grok-to-repo | 9991942 | Add Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31) section to SKILL.md; ChatGPT must re-upload |
+| 2026-11-02 | phd-ivy-monograph | grok-to-repo | 9991942 | Add Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31) section to SKILL.md; ChatGPT must re-upload |
+| 2026-11-02 | weekday-gather-final | checked | 9991942 | Pushed remaining skills images, list, phd-ivy-monograph with verified newer Grok SKILL.md (2026-10-31 Default PDF section). Folio and textbook already had it. All shared skills now in sync. ChatGPT must re-upload images, list, phd-ivy-monograph. |
+| 2026-11-02 | weekday-gather-cont | checked | 6bec541 | Continued compare: pushed deep, global, print with verified newer Grok SKILL.md (2026-10-31 Default PDF section). Remaining (folio, images, list, phd-ivy-monograph, textbook) have the same section. ChatGPT must re-upload the listed skills. |
+| 2026-11-02 | global | grok-to-repo | 6bec541 | Add Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31) section to SKILL.md; ChatGPT must re-upload |
+| 2026-11-02 | deep | grok-to-repo | ecd5f8d | Add Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31) section to SKILL.md; ChatGPT must re-upload |
+| 2026-11-02 | print | grok-to-repo | 60457eb | Add Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31) section to SKILL.md; ChatGPT must re-upload |
+| 2026-11-02 | weekday-gather | checked | 47411ea | Compared 50 installed Grok custom skills against main. Found 11 skills with newer verified Grok SKILL.md (added Default PDF output, beauty/realism optimization, and ethereal multi-format compilation section dated 2026-10-31). Supporting text files match. No new skill folders. Pushed atlas, banner, book. Remaining similar (deep, folio, global, images, list, phd-ivy-monograph, print, textbook) have the same verified newer section. ChatGPT and Grok should use the repo copy for all shared skills after this. ChatGPT must re-upload the listed skills. |
+| 2026-11-02 | atlas | grok-to-repo | 5c3f12a | Add Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31) section to SKILL.md; ChatGPT must re-upload |
+| 2026-11-02 | banner | grok-to-repo | f4d365d | Add Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31) section to SKILL.md; ChatGPT must re-upload |
+| 2026-11-02 | book | grok-to-repo | 47411ea | Add Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31) section to SKILL.md; ChatGPT must re-upload |
+| 2026-11-02 | expound | repo-to-hosts | e65263d | Updated expound SKILL.md to v2.0.0 with anti-truncation and mandatory /karma pre-output gate; Grok installed from repo commit; ChatGPT must re-upload expound |
+| 2026-11-01 | God | repo-to-hosts | e48ff09 | Wire PDF geometry diagnostics and CI into God QA guidance; Grok has no local God so uses committed copy; ChatGPT must re-upload God |
