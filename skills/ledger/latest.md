@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-06 | weekday-gather | checked | PENDING | Compared 50 installed Grok custom skills against main. 48 SKILL.md blob hashes match exactly. Folio has minor wording (Exit 1 vs Exit code 1) and textbook has trailing newline; byte differences only, no verified newer behavior. No new skill folders. ChatGPT and Grok should use the repo copy for all shared skills. No ChatGPT re-uploads required. |
 | 2026-11-05 | weekday-gather | checked | 2fa07c4 | Compared 50 installed Grok custom skills against main. 48 SKILL.md blob hashes match exactly. Folio has minor wording (Exit 1 vs Exit code 1) and textbook has trailing newline; byte differences only, no verified newer behavior. No new skill folders. ChatGPT and Grok should use the repo copy for all shared skills. No ChatGPT re-uploads required. |
 | 2026-11-04 | weekday-gather | checked | 1bd8a78 | Compared 50 installed Grok custom skills against main. 48 SKILL.md blob hashes match exactly. Folio has minor wording (Exit 1 vs Exit code 1) and textbook has trailing newline; byte differences only, no verified newer behavior. No new skill folders. ChatGPT and Grok should use the repo copy for all shared skills. No ChatGPT re-uploads required. |
 | 2026-11-03 | textbook | grok-to-repo | 3f033a3 | Sync CHANGELOG.md with 2026-11-02 citation, imagery, and structural mandate updates matching the verified SKILL.md; ChatGPT must re-upload textbook |
