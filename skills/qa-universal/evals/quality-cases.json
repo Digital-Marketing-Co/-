@@ -8,7 +8,8 @@
         "Deterministic dependency ordering",
         "No duplicated banner"
       ],
-      "grader": "Run command planner tests and inspect plan JSON"
+      "grader": "Run command planner tests and inspect plan JSON",
+      "id": "legacy-case-01"
     },
     {
       "prompt": "Evaluate three visual designs, one with a critical defect",
@@ -16,7 +17,8 @@
         "Critical failure rejected",
         "Highest eligible measured score selected"
       ],
-      "grader": "Run visual scoring tests"
+      "grader": "Run visual scoring tests",
+      "id": "legacy-case-02"
     },
     {
       "prompt": "Render PDF with missing glyph and overlapping text",
@@ -25,7 +27,8 @@
         "Overlap flagged or manual review required",
         "No untested PASS"
       ],
-      "grader": "Run PDF render QA with documented visual evidence"
+      "grader": "Run PDF render QA with documented visual evidence",
+      "id": "legacy-case-03"
     }
   ]
 }
