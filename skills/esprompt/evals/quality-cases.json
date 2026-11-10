@@ -8,7 +8,8 @@
         "Unverified outcomes are not marked successful",
         "Produced artifacts are validated before delivery"
       ],
-      "grader": "Run the relevant skill on a controlled fixture, validate structure, inspect rendered output and record evidence"
+      "grader": "Run the relevant skill on a controlled fixture, validate structure, inspect rendered output and record evidence",
+      "id": "legacy-case-01"
     }
   ]
 }
