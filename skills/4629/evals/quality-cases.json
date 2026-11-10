@@ -29,6 +29,39 @@
         "Preserve exact data, executable syntax, and source provenance."
       ],
       "grader": "Inspect rendered output when visual; inspect textual or data output otherwise."
+    },
+    {
+      "id": "banner-169-bleed-feather",
+      "prompt": "Render a document page with a 16:9 banner and top/bottom feathering into its actual background.",
+      "assertions": [
+        "Measure source and rendered image geometry at 16:9 within 0.1%; reject stretching.",
+        "Check left/right physical trim edge coordinates within 1 pt; verify requested print bleed.",
+        "Raster-inspect top/bottom feathering for visible seams, halos, white bands and abrupt color jumps.",
+        "Fail the release if any mandatory visual gate fails."
+      ],
+      "grader": "Use actual rendered page geometry and pixel evidence; record hashes and measurements."
+    },
+    {
+      "id": "itqe-latex-two-pass",
+      "prompt": "Generate a mathematical textbook page and run the complete post-artifact verification lifecycle.",
+      "assertions": [
+        "Every significant equation has a registry entry with assumptions, units, source LaTeX and provenance.",
+        "Validate LaTeX rendering, mathematical glyphs, overflow and limitations of scientific checks.",
+        "Inspect all pages and document two consecutive clean complete QA passes.",
+        "Report any unrun check as NOT TESTED rather than PASS."
+      ],
+      "grader": "Inspect equation registry, rendered output and two distinct run logs."
+    },
+    {
+      "id": "engine-parity-and-best-output",
+      "prompt": "Compare canonical 4629 skill and legacy engine and rank multiple rendered candidate designs.",
+      "assertions": [
+        "Mandatory QA and visual rules match across canonical skill and engine.",
+        "Reject any candidate with a critical or major gate failure before weighted scoring.",
+        "Choose highest-scoring passing variant; preserve user-selected design and source content.",
+        "If only one candidate exists, do not claim comparative optimization."
+      ],
+      "grader": "Compare source revisions, scorecards, candidate hashes and acceptance evidence."
     }
   ]
 }
