@@ -9,7 +9,8 @@
         "A consistent nominal-GDP dataset and reference year are cited for the top 50 economies",
         "Country count and distinct-language count are reported separately"
       ],
-      "grader": "Inspect ranking source and reference year, compare source tokens and translation rows, and verify no unauthorized image generation"
+      "grader": "Inspect ranking source and reference year, compare source tokens and translation rows, and verify no unauthorized image generation",
+      "id": "legacy-case-01"
     },
     {
       "prompt": "/universal --add Nepal Please preserve {guest_name} and https://example.com.",
@@ -19,7 +20,8 @@
         "Official versus working languages are accurately labeled",
         "Translation does not invent unverified GDP values"
       ],
-      "grader": "Compare protected tokens byte-for-byte and audit the language/ranking evidence"
+      "grader": "Compare protected tokens byte-for-byte and audit the language/ranking evidence",
+      "id": "legacy-case-02"
     },
     {
       "prompt": "/universal --countries 60 Welcome to our waterfront exhibition.",
@@ -29,7 +31,8 @@
         "Every translated segment aligns with the original source",
         "Unverified translations and incomplete source coverage are disclosed"
       ],
-      "grader": "Count distinct country entries, verify GDP ordering and year consistency, and spot-check segment alignment"
+      "grader": "Count distinct country entries, verify GDP ordering and year consistency, and spot-check segment alignment",
+      "id": "legacy-case-03"
     }
   ]
 }
