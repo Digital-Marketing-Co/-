@@ -22,6 +22,11 @@ Read the existing skills inventory and invoke *only* available skills relevant t
 - /karma: evidence capture, reproducible errors, regression fixtures and tested prevention.
 The root document standards are skills/references/document-rendering-9491.md, skills/references/document-error-prevention.md, skills/references/post-artifact-itqe-latex-qa.md, skills/references/4629-electric-cyan-motion.md (only as appropriate). Missing skills are NOT AVAILABLE, not silently simulated.
 
+## Mandatory /copyright delivery gate
+For every applicable authored or modified artifact, invoke the canonical `skills/copyright/SKILL.md` and its `interop/SKILL.md` as a required dependency, not an optional decoration. Apply it during planning, artifact construction, and post-export verification. The copyright skill alone owns notice text, current-year logic, brand labels, canonical logo and legal-link behavior; never duplicate those rules here. Respect third-party rights and licenses, preserve existing content, and mark non-applicable outputs explicitly N/A with a reason.
+
+Before release, verify every applicable page, slide, screen, or export surface for the required single non-obscuring notice, correct owner and year, link targets, footer placement, accessibility, and no duplication. Include copyright checks in both complete QA passes and /karma evidence. If verification fails, repair and rerender, then rerun affected checks; if blocked, report BLOCKED and do not claim verified compliance. Do not claim that a skill-definition change alone validates generated artifacts.
+
 ## Execute deterministically
 1. INVENTORY: inspect skill paths, aliases and version hashes; classify ownership, cycles, duplicate formatting and collision risks. /list emits a grounded inventory, not fabricated completeness.
 2. SCOPE: define explicit output, audience, constraints, accepted baselines, security and scientific evidence requirements; snapshot source hashes and expected content manifest.
