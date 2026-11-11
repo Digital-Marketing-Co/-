@@ -60,3 +60,18 @@ Applies to every generated, sourced, transformed, or embedded visual in all chap
 
 ## Engine naming compatibility
 This engine is the canonical renamed counterpart of `skills/4629/SKILL.md`. The legacy SKILL.md path remains available to existing loaders. The terms skill and engine are accepted as aliases; do not break old invocations or references. Preserve original instructions and safety constraints.
+
+## Automatic post-document ITQE, LaTeX, and domain QA
+After creating or transforming every document, render and execute `skills/references/post-artifact-itqe-latex-qa.md` alongside the preexisting `skills/references/document-rendering-9491.md` standard. This is mandatory, not an optional design check: enumerate and verify every significant equation, run post-creation /ITQE and /latex, inspect all exported pages/slides (including all mathematics), apply format-specific QA, fix defects, re-render, and require two complete clean evidence-backed passes before claiming verification. Record unexecuted checks as NOT TESTED and blockers explicitly. Preserve design precedence, image uniqueness, citations, single copyright authority, and accessibility. Present the optional post-run menu only after automatic QA and artifact delivery, never as a substitute for validation.
+
+## /karma visual and document forensic learning
+Apply `skills/karma/SKILL.md` to every document-specific visual, mathematical, accessibility, citation, image duplication and export error. Capture page/figure/equation identifiers and safe screenshots or diagnostics, create regression fixtures, verify fixes, and add prevention rules. Preserve originals, protect sensitive evidence, and record monitoring/storage as NOT DEPLOYED until configured and independently tested.
+
+## Interactive styling without regression or truncation
+Read `skills/references/document-error-prevention.md` before any new or revised document. Present the six-direction compact style plan with an optimal preselected default only when a fresh user style choice is appropriate; honor prior direction and /p or /disabled without interrupting. Preserve source manifest and complete sections through /expound iterations. Never remove substantial text to fit artwork; enforce pre/post-export completeness checks, unique figure IDs, single footer owner, and the full post-export QA gate. /karma records and reproduces observed errors; only verified fixes become prevention rules.
+
+## Default electric cyan / midnight navy animated experience
+For web, interactive presentations, holographic modals and product imagery use `skills/references/4629-electric-cyan-motion.md` as the recommended default visual profile: electric cyan and dark navy gradients, layered aurora and light-field motion, tasteful Siri-like animated modal border, optional gyro/touch parallax, reduced-motion static fallback, measured performance and visual QA. Respect previously chosen styles and never force animation into PDF/DOCX or source imagery. The referenced external admin-modal design was not accessible for verification; treat it solely as a conceptual inspiration rather than claiming visual fidelity.
+
+## /God coordination and visual authority
+When /God is active, /4629 retains sole visual direction authority and cooperates with the canonical cross-skill DAG in `skills/God/SKILL.md`; do not overwrite equations, citation numbering, copyright, or forensic evidence. Optimize cyan/navy visuals subject to user preferences, reduced motion, performance and document readability.
