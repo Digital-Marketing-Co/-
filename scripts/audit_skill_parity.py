@@ -45,9 +45,13 @@ def audit(root: Path) -> dict:
                 return {m.group(1).strip(): value[m.end():matches[i+1].start() if i+1<len(matches) else len(value)].strip()
                         for i,m in enumerate(matches)}
             canonical, legacy = sections(text), sections(etext)
+            duplicate_canonical = len(re.findall(r"(?m)^## (.+)$", text)) != len(canonical)
+            duplicate_legacy = len(re.findall(r"(?m)^## (.+)$", etext)) != len(legacy)
             missing = sorted(set(canonical) - set(legacy))
             differing = sorted(k for k in canonical.keys() & legacy.keys() if canonical[k] != legacy[k])
-            checks["engine_parity"] = "FAIL" if missing or differing else "PASS"
+            checks["engine_parity"] = "FAIL" if missing or differing or duplicate_canonical or duplicate_legacy else "PASS"
+            if duplicate_canonical or duplicate_legacy:
+                findings.append("Duplicate level-two section headings in canonical skill or engine")
             if missing:
                 findings.append("Engine missing canonical sections: " + ", ".join(missing))
             if differing:
@@ -68,8 +72,9 @@ def audit(root: Path) -> dict:
                     findings.append("Invalid or empty evaluation cases")
                     checks["evaluation_schema"] = "FAIL"
                 else:
-                    ids = [case.get("id") for case in cases]
-                    checks["evaluation_schema"] = "FAIL" if len(ids) != len(set(ids)) or any(not x for x in ids) else "PASS"
+                    ids = [case.get("id") if isinstance(case, dict) else None for case in cases]
+                    valid_ids = all(isinstance(x, str) and x.strip() for x in ids)
+                    checks["evaluation_schema"] = "FAIL" if not valid_ids or len(ids) != len(set(ids)) else "PASS"
                     if checks["evaluation_schema"] == "FAIL":
                         findings.append("Missing or duplicate evaluation case IDs")
                 checks["evaluation_execution"] = declared if declared in STATUS else "BLOCKED"
