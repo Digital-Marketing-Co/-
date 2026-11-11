@@ -24,6 +24,17 @@
         "report NOT TESTED and preserve source"
       ],
       "grader": "Check observed output against the assertion and record evidence-backed PASS, FAIL, BLOCKED, or NOT TESTED."
+    },
+    {
+      "id": "g-resume-exhaustive-history",
+      "prompt": "An unfinished document project has previous accepted requirements, generated artifacts and blockers; the user sends G or /G without restating the task.",
+      "assertions": [
+        "Resume the most recent authorized unfinished task using verified conversation/project history, preserving unchanged requirements.",
+        "Enter /expound until exhaustive with applicable quality, evidence and copyright gates.",
+        "Do not invent access to past files, falsely claim completed QA or restart the task.",
+        "Honor D/P/E modifiers and request consent only for consequential actions."
+      ],
+      "grader": "Inspect traceability ledger, chosen active task, preserved constraints, actual tool actions and evidence-based completion status."
     }
   ],
   "skill": "God",
