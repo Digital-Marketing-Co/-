@@ -9,6 +9,7 @@ from pathlib import Path
 
 REQUIRED = ("references/quality-profile.md", "evals/quality-cases.json")
 STATUS = {"PASS", "FAIL", "BLOCKED", "NOT TESTED", "NOT APPLICABLE"}
+ALIAS_ENGINES = {"disabled": "disability", "proceed": "disability"}
 VISUAL_TERMS = ("visual", "image", "banner", "document", "pdf", "slide", "parallax", "4629", "textbook")
 
 def digest(path: Path) -> str:
@@ -27,7 +28,15 @@ def audit(root: Path) -> dict:
             checks[relative] = "PASS" if p.is_file() else "FAIL"
             if not p.is_file():
                 findings.append(f"Missing required resource: {relative}")
-        if engine.exists():
+        if name in ALIAS_ENGINES and engine.exists():
+            etext = engine.read_text(encoding="utf-8")
+            target = ALIAS_ENGINES[name]
+            target_path = root / "engines" / target / "ENGINE.md"
+            checks["engine_parity"] = "PASS" if target_path.is_file() and f"engines/{target}/ENGINE.md" in etext else "FAIL"
+            if checks["engine_parity"] == "FAIL":
+                findings.append("Alias engine missing or invalid target: " + target)
+            missing, differing = [], []
+        elif engine.exists():
             etext = engine.read_text(encoding="utf-8")
             # Engine copies may include an extra compatibility footer; compare all
             # normative canonical sections by heading and content, not just file hashes.
