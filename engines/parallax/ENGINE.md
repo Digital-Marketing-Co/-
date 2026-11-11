@@ -5,7 +5,7 @@ description: Maximize physically plausible 3D parallax for images, iPhone spatia
 # /parallax — Immersive Depth Engineering
 
 ## Invocation
-/ parallax [source image or scene] [target: iOS Spatial Scene | interactive web | video | layered assets]. Aliases: /parallax /depth /gyro-parallax. Default to the last supplied image and iPhone 9:16 wallpaper when context indicates it. Never claim a still image is gyroscope-responsive.
+/parallax [source] [target: interactive web | layered assets | iOS wallpaper | video] [depth_layers: up to 256] [gyro sensitivity]. Default to the most recent user-supplied image. Never claim a static image is sensor-responsive.
 
 ## Prompt-engineering pipeline
 1. Identify the original image and preserve photographic identity and geometry; do not substitute a newly imagined image unless explicitly requested. Determine target aspect ratio, output pixel dimensions, cropping safety, and clock/widget safe area.
@@ -24,9 +24,8 @@ description: Maximize physically plausible 3D parallax for images, iPhone spatia
 - Do not claim generated depth maps, layers, real-device QA, commits, or deployments without producing/verifying them.
 
 ## References
-Apple Support https://support.apple.com/en-us/102638
-MDN https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation
-MDN https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/%40media/prefers-reduced-motion
+- https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation
+- https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
 
 
 ## Adaptive maximum-layer interpolation (mandatory)
