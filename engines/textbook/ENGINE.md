@@ -120,3 +120,71 @@ Applies to every generated, sourced, transformed, or embedded visual in all chap
 
 ## ENGINE compatibility
 Canonical engine counterpart: `engines/textbook/ENGINE.md`. Preserve `skills/textbook/SKILL.md` for legacy consumers. The old skill name and new engine name invoke the same behavior wherever the relevant loader supports both paths.
+
+## Default PDF output, beauty/realism optimization, and ethereal multi-format compilation (2026-10-31)
+
+All visual and research documents emitted by this skill set PDF as the default deliverable. AI-generated images (banners, chapter backgrounds, inline figures) are full document page width (x = 0, width = page width, zero side margin or padding), contextually relevant to the exact section or chapter they represent, and non-duplicated across the entire artifact set (exact hash and perceptual-hash fail-closed). Optimize every generated still for beauty and photographic realism while remaining literal to the adjacent claims. After the PDF is complete, an ethereal /4629-style interactive promptform recommends the most contextually relevant alternative formats (DOCX, PPTX, HTML, video pack, spreadsheet evidence matrix, and other ChatGPT-possible outputs) with simple one-action compilation from the default PDF. Every emitted file type carries the static-dynamic living copyright footer: Copyright © 2012–[current year] Web Development Corporation. All rights reserved. Visible anchor text is Digital Marketing Company linked to https://DigitalMarketingCo.org. No overlap, no inefficiency: shared non-duplicity and copyright logic is referenced, not reimplemented.
+
+## Final character integrity gate
+Before delivery run /karma (or python3 /root/.grok/server-skills/karma/scripts/scan_chars.py on the artifact). Fail closed on any mojibake, replacement character, or anomalous glyph. Repair to ASCII-safe or verified UTF-8 and re-scan.
+
+## Automatic /4629 interactive expansion with coffee-skill photorealistic parallax backgrounds (2026-10-31)
+
+After the textbook PDF passes final QA and character integrity, automatically execute the /4629 interactive expansion. Do not wait for a separate user flag. See `references/4629-interactive.md` for detailed packaging and question templates.
+
+### Coffee-skill photorealistic backgrounds with contrasting white text and /parallax
+For every chapter opener and every necessary full-page background:
+- Generate contextually relevant, natural, AI-enhanced photorealistic stills following the coffee skill geometry, beauty lock, and uniqueness rules (full-bleed, cover-crop to page ratio, no paper bars, no alpha punch-out).
+- Place perfect contrasting white text for all live body, headings, and captions over the background using subtle translucent neutral panels or gradients so text remains readable at doctoral density. Test contrast with `scripts/contrast.py`.
+- For each background, create or link /parallax source files: multi-layer depth planes (far background, midground, foreground) or a depth map plus the base still, named consistently (e.g., chapter-NN-bg.png, chapter-NN-mid.png, chapter-NN-fg.png) and recorded in the image manifest with placement and HOLOVERSE viewer instructions.
+- Maintain the cross-artifact non-duplicity policy; regenerate on hash or perceptual collision.
+
+### Interactive holographic multidimensional dataset analysis and viewing
+Package recommended best output files for further publication and interactive expansion:
+- Editable source (Markdown or LaTeX), evidence matrix (spreadsheet), image inventory with parallax layers, QA report.
+- Alternative compilations: DOCX, PPTX, HTML interactive reader, video pack of chapter openers.
+- Multidimensional dataset: structured JSON or HDF5-style inventory of claims, equations, figures, and parallax layers for holographic analysis.
+
+### Zip delivery of the interactive promptform
+Output a zip archive containing:
+- The completed PDF.
+- All /parallax source files and the image manifest.
+- An interactive HTML promptform (or promptform 3D widget compatible with pepe skill if available) that asks the user two questions with one-action choices:
+  1. Will this PDF serve as the method of inspiring publication (yes / needs revision / archive only)?
+  2. Are the best images needed for publication on a web app or within the HOLOVERSE for interactive viewing of /parallax (generate web-optimized derivatives / prepare HOLOVERSE layers / both / neither)?
+- Simple one-action compilation links or scripts for the recommended formats.
+- Living copyright in document info and the HTML: Copyright © 2012–[current year] Web Development Corporation. All rights reserved. Visible anchor text is Digital Marketing Company linked to https://DigitalMarketingCo.org. Domain text is DigitalMarketingCo.org.
+
+## High-fidelity visual and structural upgrade (2026-11-02)
+
+Observed quality gap: recent short monographs produced under this skill were plain reportlab layouts, while earlier textbook + 4629 outputs (Kinsey continuum synthesis, OmniReality Kodex atlas, structured decoding dossiers) used dark scholarly themes, full-bleed photorealistic and volumetric futuristic imagery, high-contrast white text, cinematic chapter openers, and dense visual hierarchy.
+
+**Mandatory structural sequence**
+1. Build the most exhaustive hierarchical outline first (corpus → volumes → parts → chapters → sections → subsections → claims → evidence nodes). Record it as a machine-readable tree before drafting any prose.
+2. For every section and every subsection, run an iterative expansion pass that develops definitions, derivations, competing evidence, worked examples, limitations, and open questions. Do not stop at a single paragraph.
+3. After the outline and expansion passes, generate a unique 16:9 full-bleed banner for every section and every subsection, and a distinct contextual inline figure (or scientific diagram) for every subsection.
+4. Prefer the visual language of the higher-quality prior outputs: dark scholarly palette, volumetric lighting, photorealistic or clearly labeled scientific stills, cinematic composition, and full-bleed chapter openers with translucent contrast panels so white text remains readable.
+
+**Imagery rules (strengthened)**
+- Every chapter opener is a unique full-bleed photorealistic or volumetric still, context-locked to the chapter subject.
+- Every section and subsection receives its own banner; no parent reuse.
+- Inline figures appear at least once per subsection and are never generic.
+- Full bleed means artwork touches left, right, and top edges; text stays inside a safe inset with measured contrast ≥ 4.5:1.
+- Maintain the existing non-duplicity policy; regenerate on exact or perceptual collision.
+- When tools allow, produce /parallax layers for chapter backgrounds as specified in the 4629 section.
+
+**4629 integration**
+After final QA, automatically package the completed PDF with the interactive promptform, image manifest, evidence matrix, and any available parallax layers exactly as described in the Automatic /4629 section. Prefer the visual density and design language of the higher-quality prior documents when generating the stills that enter that package.
+
+## Citation maximization, logical enumeration, and photorealistic-futuristic style (2026-11-02)
+
+**Above-Genius and above-PhD exhaustive relevant citations**
+Maximize the number of relevant, verified academic PDF citations that support substantive claims. Prefer primary sources, peer-reviewed papers, institutional repositories, and original research. Every nontrivial claim receives a traceable source or an explicit uncertainty label. Do not invent citations. Record each source in the evidence ledger with author, title, year, DOI or stable URL, and pinpoint where available. Prefer sources available as downloadable PDFs.
+
+**Mandatory logical citation enumeration**
+Citations must remain in logical order throughout the textbook. After any addition, deletion, expansion, or reordering pass, renumber all in-text notes and sort the bibliography so that first-appearance numbering stays contiguous and sequential from 1. Subsequent references to the same source use the shortened form. Never leave gaps, duplicates, or out-of-order numbers in the final PDF. Cross-check the evidence ledger against the printed notes before delivery. This reordering is mandatory on every finalization pass.
+
+**Exhaustive maximization of beauty and realistic photorealistic AI imagery with full bleed**
+Generate AI-regenerated real-life photorealistic stills that are beautiful and futuristic. Prefer documentary-real subjects with volumetric lighting, cinematic composition, and clear context lock to the exact section or chapter. Every chapter opener, every section banner, and every subsection banner is a unique full-bleed still (artwork touches left, right, and top edges; text remains inside a safe inset with measured contrast ≥ 4.5:1). Inline figures follow the same beauty and realism standard. Label scientific visualizations as such. Maintain uniqueness, the non-duplicity policy, and measured contrast. Optimize every generated still for photographic realism and visual inspiration while remaining literal to the adjacent claims.
+
+These requirements apply to every textbook run. They are additive to existing research, math, and QA gates.
