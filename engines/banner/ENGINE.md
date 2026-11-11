@@ -68,7 +68,7 @@ Naked PDF with no JSON — write `stamp-manifest.json` and pass `--manifest`. Re
 
 ### 1. Inventory sections
 
-From `list.json`, `deep.json`, `folio.json`, `atlas.json`, or the user list collect every body node. A body node is any section **or subsection** with `kind` equal to `body`, or with `level` 1 or 2 that is not front matter. One banner per node. A subsection does not inherit the parent banner.
+From `list.json`, `deep.json`, `folio.json`, `atlas.json`, or the user list collect every body node. A body node is any section **or subsection** with `kind` equal to `body`, or with `level` 1 or 2 that is not front matter. One banner per node. A subsection does not inherit the parent section banner.
 
 Skip title leaf, contents, Notes, Bibliography, and colophon. New sections or subsections added after a first pass still need their own banner.
 
