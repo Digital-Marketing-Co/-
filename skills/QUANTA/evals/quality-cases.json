@@ -8,7 +8,8 @@
         "Actionable technical acceptance criteria supplied",
         "No deployment success claimed without evidence"
       ],
-      "grader": "Review a controlled audit fixture and compare observed output with assertions"
+      "grader": "Review a controlled audit fixture and compare observed output with assertions",
+      "id": "legacy-case-01"
     }
   ]
 }

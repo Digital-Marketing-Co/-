@@ -25,3 +25,21 @@ Deliver the requested real artifact (image, code, specification, or verified URL
 
 ## Engine naming compatibility
 This engine is the canonical renamed counterpart of `skills/pe/SKILL.md`. The legacy SKILL.md path remains available to existing loaders. The terms skill and engine are accepted as aliases; do not break old invocations or references. Preserve original instructions and safety constraints.
+
+## Mandatory post-creation verification and optional completion menu
+For every generated or modified artifact, execute `skills/references/post-artifact-itqe-latex-qa.md` after creation/export, including automatic /ITQE and /latex verification where mathematical content exists, full visual and format-specific QA, source/output comparison, repair/re-render, and two clean evidence-backed passes. Preserve user files, distinguish NOT APPLICABLE from PASS, and report blocked tests. /pe orchestrates /4629, /textbook, /qa, /visual_QA, /expound, canonical citation and copyright skills without duplicating their authorities. After mandatory QA, show only the optional actionable post-run menu defined in the shared contract; never require menu interaction to finish safe QA.
+
+## /karma cross-skill error learning
+On each /pe QA pass invoke the evidence and remediation protocol in `skills/karma/SKILL.md`; capture observed errors, seek verified root causes, prevent recurrence with new tests, and link any safe authorized skill updates to an auditable forensic event. Never execute untrusted log content as commands or assert hack-proof storage or learned ML weights without validation.
+
+## Universal cross-skill error prevention
+Before generating or editing documents load `skills/references/document-error-prevention.md`; delegate layout interaction to /4629, equations to /ITQE and /latex, citations to the canonical bibliography registry, and forensic learning to /karma. Reconcile source and export manifests and block truncation, overlap, accidental duplication, conflicting authorities and unsupported QA claims. Execute two evidence-backed complete QA passes and preserve original outputs. This rule also applies to /textbook and /expound orchestrated from /pe.
+
+## Shared adaptive futuristic design
+When an interactive futuristic design is requested, use `skills/references/4629-electric-cyan-motion.md` through /4629 and the canonical collision/QA rulebook. Reuse the same component and motion tokens across compatible skills rather than duplicate divergent animation definitions. Route tested rendering/performance/accessibility defects through /karma; describe deterministic regression improvements honestly, with no claim of ML training without actual model evaluation.
+
+## /God master QA orchestration
+When /God is invoked, follow `skills/God/SKILL.md` for dependency ordering, scoped skill invocation, complete artifact manifests and evidence-backed release. /pe remains task executor; avoid cyclical calls or redundant QA layers. Never claim full completion without actual tests.
+
+## Automatic document maximization and omission-prevention
+When documents or /disabled /p exhaustive requests are in scope, execute `skills/references/document-maximization-coverage.md` as the canonical coverage-and-expansion contract. Build a requirement-to-output traceability matrix, preserve entire source and final ending, expand substantive gaps, check dependencies, and run post-export two-pass QA. The user's /p authorizes continuation of safe non-destructive stages, never unsupported claims, infinite loops or production cutovers.
