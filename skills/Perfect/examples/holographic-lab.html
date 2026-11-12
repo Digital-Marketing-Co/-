@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Perfect — Holographic Effects Laboratory</title>
+<style>
+:root{color-scheme:dark;--cyan:#72f7ff;--violet:#b99cff;--glow:0 0 26px #4ceaff55;--body:16px}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font:var(--body)/1.55 system-ui,-apple-system,sans-serif;color:#effaff;background:radial-gradient(ellipse at 50% 5%,#172c5d 0,#090f26 48%,#050817 100%)}
+main{width:min(1100px,94vw);margin:auto;padding:28px 0 70px}h1{font-size:clamp(2rem,5vw,4rem);margin:0;letter-spacing:-.045em;background:linear-gradient(105deg,#fff,var(--cyan),var(--violet));background-clip:text;color:transparent}
+p{color:#c8d7ed}.subtitle{max-width:67ch}.layout{display:grid;grid-template-columns:minmax(270px,1fr) minmax(300px,1.25fr);gap:22px;margin-top:25px}
+.panel{border:1px solid #77e5ff55;background:#0d1934d9;border-radius:24px;padding:24px;box-shadow:inset 0 1px #ffffff30,0 15px 55px #0006}
+fieldset{border:0;padding:0;margin:0 0 22px}legend{font-weight:750;margin-bottom:12px}.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tile{min-height:55px;padding:11px;border:1px solid #7aadd466;border-radius:13px;background:linear-gradient(130deg,#193253,#10172f);color:#eefcff;font:inherit;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.tile[aria-pressed=true]{border-color:var(--cyan);background:linear-gradient(130deg,#20596e,#222d63);box-shadow:var(--glow)}.tile:hover{transform:translateY(-2px)}:focus-visible{outline:3px solid #ffdb76;outline-offset:3px}
+label{display:block;margin:10px 0 5px}select,input{width:100%;background:#101f3c;color:#fff;border:1px solid #80b5d7;border-radius:10px;padding:10px;font:inherit}
+small{color:#b7cee2}.preview{display:grid;place-items:center;min-height:440px;overflow:hidden;perspective:900px;position:relative}
+.preview::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 28px,#63ddff14 29px 30px),repeating-linear-gradient(90deg,transparent 0 28px,#63ddff14 29px 30px);transform:perspective(400px) rotateX(48deg) scale(1.6);opacity:.45;pointer-events:none}
+.holo{--tiltX:0deg;--tiltY:0deg;position:relative;width:min(300px,80%);aspect-ratio:1;display:grid;place-items:center;border-radius:28%;border:2px solid #8af6ffb0;background:radial-gradient(circle at 30% 25%,#8cddff6b,transparent 55%),linear-gradient(135deg,#214f8d9c,#4a277c91);transform:rotateX(var(--tiltX)) rotateY(var(--tiltY));transition:transform .2s,filter .2s;isolation:isolate}
+.holo::before,.holo::after{content:"";position:absolute;inset:12%;border:2px solid #8efaffb8;border-radius:50%;transform:rotateX(70deg) rotate(-30deg);pointer-events:none}
+.holo::after{inset:21%;border-color:#c8a3ff;transform:rotateY(65deg) rotate(30deg)}
+.holo strong{font-size:clamp(2.5rem,7vw,5rem);text-shadow:0 0 20px #77efff;z-index:1}.holo[data-glow=true]{box-shadow:0 0 45px #57ecff66,inset 0 0 38px #81eaff77}.holo[data-prism=true]{filter:hue-rotate(30deg) saturate(1.4)}
+.holo[data-orbit=true]::before{animation:orbit 6s linear infinite}.holo[data-aurora=true]{animation:aurora 7s ease-in-out infinite alternate}
+@keyframes orbit{to{transform:rotateX(70deg) rotate(330deg)}}@keyframes aurora{to{background-position:100% 100%;filter:hue-rotate(45deg)}}.status{margin-top:14px;font-size:.88rem;color:#c7e8f4}
+@media(max-width:740px){.layout{grid-template-columns:1fr}.preview{min-height:340px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.tile:hover{transform:none}}
+</style></head><body><main><h1>Perfect <span aria-hidden="true">✧</span></h1><p class="subtitle">Interactive holographic design laboratory. Optical appearance is simulated on a conventional display; it is not a physical hologram.</p>
+<div class="layout"><section class="panel" aria-label="Holographic controls"><fieldset><legend>Holographic effects</legend><div class="tiles">
+<button class="tile" type="button" data-effect="glow" aria-pressed="true">Neon field</button>
+<button class="tile" type="button" data-effect="prism" aria-pressed="false">Prismatic color</button>
+<button class="tile" type="button" data-effect="orbit" aria-pressed="true">Orbital ring</button>
+<button class="tile" type="button" data-effect="aurora" aria-pressed="false">Aurora pulse</button>
+</div></fieldset>
+<label for="font">Preview font</label><select id="font"><option value="system-ui">System UI</option><option value="Georgia,serif" style="font-family:Georgia,serif">Georgia</option><option value="Arial,sans-serif" style="font-family:Arial,sans-serif">Arial</option><option value="monospace" style="font-family:monospace">Monospace</option></select>
+<label for="size">Paragraph baseline size: <output id="sizeOut">16 px</output></label><input id="size" type="range" min="14" max="24" value="16"><button class="tile" id="editSize" type="button" style="margin-top:8px">Enter exact font size</button>
+<label for="color">Glow color</label><input id="color" type="color" value="#72f7ff">
+<label for="tilt">Depth tilt: <output id="tiltOut">0°</output></label><input id="tilt" type="range" min="-25" max="25" value="0">
+<p><small>All controls support touch and keyboard. Motion is disabled automatically when reduced motion is requested. Double-click or double-tap the numeric slider to enter an exact value.</small></p>
+</section><section class="panel"><div class="preview" aria-label="Live holographic effect preview"><div class="holo" id="holo" data-glow="true" data-prism="false" data-orbit="true" data-aurora="false"><strong>✦</strong></div></div><p class="status" id="status" role="status">2 effects enabled. Screen-based simulation.</p></section></div></main>
+<script>
+"use strict";
+const root=document.documentElement,holo=document.getElementById("holo"),status=document.getElementById("status");
+const buttons=[...document.querySelectorAll("[data-effect]")];
+function updateStatus(){const count=buttons.filter(b=>b.getAttribute("aria-pressed")==="true").length;status.textContent=count+" effects enabled. Screen-based simulation."}
+buttons.forEach(b=>b.addEventListener("click",()=>{const active=b.getAttribute("aria-pressed")!=="true";b.setAttribute("aria-pressed",String(active));holo.dataset[b.dataset.effect]=String(active);updateStatus()}));
+document.getElementById("font").addEventListener("change",e=>{root.style.fontFamily=e.target.value});
+const size=document.getElementById("size"),out=document.getElementById("sizeOut");
+function setSize(v){const n=Math.max(14,Math.min(24,Math.round(Number(v))));if(!Number.isFinite(n))return;size.value=n;out.textContent=n+" px";root.style.setProperty("--body",n+"px")}
+size.addEventListener("input",()=>setSize(size.value));
+function editSize(){const v=prompt("Paragraph baseline font size (14–24 px)",size.value);if(v!==null&&v.trim()!==""&&Number.isFinite(Number(v)))setSize(v)}
+size.addEventListener("dblclick",editSize);document.getElementById("editSize").addEventListener("click",editSize);
+let lastTap=0;size.addEventListener("touchend",()=>{const now=Date.now();if(now-lastTap<350)editSize();lastTap=now},{passive:true});
+document.getElementById("color").addEventListener("input",e=>root.style.setProperty("--cyan",e.target.value));
+const tilt=document.getElementById("tilt");tilt.addEventListener("input",()=>{holo.style.setProperty("--tiltY",tilt.value+"deg");document.getElementById("tiltOut").textContent=tilt.value+"°"});
+</script></body></html>
