@@ -47,3 +47,8 @@ CSS/SVG/Canvas/WebGL/WebGPU may emulate optical appearances on a screen. Actual 
 
 ## Completion and disclosure
 "Until Exhaustive" means bounded, evidence-based coverage of the defined scope, not an infinite loop or a guarantee that all future optics discoveries have been captured. Report proposed, implemented, tested, and deployed statuses separately. Do not claim tests or exports were performed unless there are verifiable results.
+
+## Runnable reference prototype
+- `skills/Perfect/examples/holographic-lab.html` is a dependency-free browser demonstration of four selectable CSS holographic appearances, typography baseline, color and tilt controls. It is a **prototype**, not proof that the full proposed catalog is implemented.
+- Review accessible keyboard and touch behavior, browser compatibility, reduced motion, color contrast, and performance before production use.
+- Do not infer QA/VQA completion from existence of the example file.
