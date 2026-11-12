@@ -6,6 +6,7 @@
 import { test, expect } from '@playwright/test';
 import { pathToFileURL } from 'node:url';
 import { resolve } from 'node:path';
+import { mkdir } from 'node:fs/promises';
 const url=pathToFileURL(resolve('skills/Perfect/examples/holographic-lab-v4.html')).href;
 test('keyboard toggles are operable and report state',async({page})=>{
  await page.goto(url);
@@ -37,5 +38,6 @@ test('screenshots captured for review',async({page})=>{
  await page.setViewportSize({width:390,height:844});
  await page.goto(url);
  await expect(page.locator('#holo')).toBeVisible();
+ await mkdir('skills/Perfect/test-results',{recursive:true});
  await page.screenshot({path:'skills/Perfect/test-results/accessibility-mobile.png',fullPage:true,animations:'disabled'});
 });
