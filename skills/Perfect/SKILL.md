@@ -64,3 +64,7 @@ CSS/SVG/Canvas/WebGL/WebGPU may emulate optical appearances on a screen. Actual 
 ## Engine 16 visual prototype
 - `skills/Perfect/examples/holographic-lab-v4.html` adds eight more CSS appearance controls to v3, reaching 24 proposed browser-renderable treatments: halo, diffraction-style grating, moiré, plasma-style filaments, crystal facets, light lattice, radar sweep, and vortex-style pattern. These are visual approximations, not calibrated optical models.
 - Run browser, accessibility, performance and visual QA before describing v4 as verified working or deploying it. The v1–v3 files remain available for regression comparisons.
+
+## Browser regression verification
+- Run `skills/Perfect/tests/holographic-lab-v4.spec.mjs` using Playwright Chromium after installing its runtime. It checks 24 toggles, state binding, numeric controls, RGB color, reduced motion, viewport overflow and JavaScript errors.
+- Do not report the suite as passed unless an actual run provides logs. Add browser screenshots and manual assistive-technology checks for both mandatory QA/VQA passes.
