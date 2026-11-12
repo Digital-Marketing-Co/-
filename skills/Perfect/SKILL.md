@@ -14,6 +14,7 @@ Read and reconcile these proposed registries before selecting effects:
 - `skills/Perfect/references/engine-8-gap-candidates.md` (24 entries)
 - `skills/Perfect/references/engine-9-hardware-wavefront-candidates.md` (16 entries)
 - `skills/Perfect/references/engine-10-optical-gap-candidates.md` (12 entries)
+- `skills/Perfect/references/engine-12-fidelity-safety-candidates.md` (12 entries)
 
 Earlier Engines 2–6 were described in prior conversations but are not established here as a verified machine-readable registry. **Do not infer that 508 names are unique or implemented.** Recover their authoritative definitions and provenance before claiming exhaustive deduplication.
 
