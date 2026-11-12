@@ -36,7 +36,9 @@ jobs:
           ln -s /tmp/perfect-qa/node_modules/playwright-core node_modules/playwright-core
           ln -s /tmp/perfect-qa/node_modules/@playwright node_modules/@playwright
       - name: Execute browser regression tests
-        run: node skills/Perfect/tests/holographic-lab-v4.spec.mjs
+        run: |
+          node skills/Perfect/tests/holographic-lab-v4.spec.mjs
+          node skills/Perfect/tests/holographic-lab-v8.spec.mjs
       - name: Execute keyboard and accessibility regression tests
         run: node node_modules/@playwright/test/cli.js test skills/Perfect/tests/accessibility-v4.spec.mjs --workers=1
       - name: Capture mobile and desktop visual evidence
