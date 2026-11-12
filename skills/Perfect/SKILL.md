@@ -68,3 +68,7 @@ CSS/SVG/Canvas/WebGL/WebGPU may emulate optical appearances on a screen. Actual 
 ## Browser regression verification
 - Run `skills/Perfect/tests/holographic-lab-v4.spec.mjs` using Playwright Chromium after installing its runtime. It checks 24 toggles, state binding, numeric controls, RGB color, reduced motion, viewport overflow and JavaScript errors.
 - Do not report the suite as passed unless an actual run provides logs. Add browser screenshots and manual assistive-technology checks for both mandatory QA/VQA passes.
+
+## Capability truthfulness and exhaustive mapping
+- Read `skills/Perfect/references/capability-coverage.md` before describing holographic features as available. It distinguishes 24 coded but runtime-unverified screen-based effects from hardware-dependent, research-only and unmapped catalog proposals.
+- Do not equate the 541 proposed entries with 541 functioning effects. Complete semantic deduplication, execution evidence and two documented QA/VQA passes before production claims.
