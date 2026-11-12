@@ -77,3 +77,8 @@ CSS/SVG/Canvas/WebGL/WebGPU may emulate optical appearances on a screen. Actual 
 - `skills/Perfect/examples/holographic-lab-v5.html` retains 24 CSS visual effects and adds 100 curated multilingual font choices to the four existing selector options. Each option has an ordinal discovery index and a Latin-letter A1–Z26 code (A=1 through Z=26).
 - The font list is not a verified worldwide usage-frequency ranking: no country-by-country font usage dataset was established. Browser rendering uses installed fonts or fallbacks; listing a font does not bundle, license, download or guarantee it.
 - Validate actual font coverage, local script shaping, readability, color contrast, mobile dropdown behavior and browser execution before production claims.
+
+## 618-family popularity selector (conditional live data)
+- `skills/Perfect/examples/holographic-lab-v6.html` requests Google Fonts public metadata and attempts to populate exactly 618 distinct font families using an exposed numeric popularity rank. It preserves the earlier offline fallback and A1–Z26 labels.
+- The target is conditional: if the metadata is blocked by CORS, has no reliable popularity field, or provides fewer than 618 families, the interface explicitly reports the smaller fallback rather than inventing ranks or families.
+- Google Fonts popularity is a provider-specific web usage proxy, **not** worldwide usage frequency across all countries or all installed fonts. Do not claim global accuracy or guaranteed 618 availability without successful runtime verification. Selected families are requested from Google Fonts CSS when online; check licensing, network accessibility, glyph coverage and iPhone option styling before release.
