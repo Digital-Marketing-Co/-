@@ -45,12 +45,14 @@ jobs:
         run: node node_modules/@playwright/test/cli.js test skills/Perfect/tests/accessibility-v4.spec.mjs --workers=1
       - name: Capture mobile and desktop visual evidence
         if: always()
-        run: node skills/Perfect/tests/capture-v4.mjs
+        run: |
+          node skills/Perfect/tests/capture-v4.mjs
+          node skills/Perfect/tests/capture-v10.mjs
       - name: Upload screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: perfect-v4-visual-evidence
+          name: perfect-v4-v10-visual-evidence
           path: skills/Perfect/test-results/
           if-no-files-found: warn
           retention-days: 14
