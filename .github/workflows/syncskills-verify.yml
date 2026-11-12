@@ -1,0 +1,33 @@
+name: SyncSkills read-only verification
+on:
+  pull_request:
+    paths:
+      - 'skills/**'
+      - '.github/workflows/syncskills-verify.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '17 8 * * *'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Two independent unit-test passes
+        run: |
+          python -m unittest discover -s skills/syncskills/tests -v
+          python -m unittest discover -s skills/syncskills/tests -v
+      - name: Deterministic inventory verification
+        run: |
+          python skills/syncskills/scripts/syncskills.py verify --root . --output /tmp/ss-first.json
+          python skills/syncskills/scripts/syncskills.py verify --root . --output /tmp/ss-second.json
+          cmp /tmp/ss-first.json /tmp/ss-second.json
+      - name: No production changes
+        run: echo "Read-only validation; external adapters and signed releases are not configured."
