@@ -56,3 +56,7 @@ CSS/SVG/Canvas/WebGL/WebGPU may emulate optical appearances on a screen. Actual 
 ## Expanded browser demonstration
 - `skills/Perfect/examples/holographic-lab-v2.html` adds eight independently selectable CSS appearances, synchronized numeric range and manual controls, accent color RGB propagation, font baseline, and reduced-motion CSS. It remains a review-branch prototype, not a physical hologram or production deployment.
 - Prior v1 example remains available for regression comparison. Verify on actual devices and with assistive technology before release.
+
+## Engine 15 runnable visual prototype
+- `skills/Perfect/examples/holographic-lab-v3.html` extends the v2 screen-based demonstration to 16 independently selectable CSS treatments, including caustics, haze, chromatic edge separation, interference fringes, particles, grid, glass reflection, and energy rings.
+- This is a prototype, not an assertion of 541 operational effects or a physical hologram. Confirm real-browser rendering, iPhone accessibility, reduced motion and two QA/VQA passes before deployment.
