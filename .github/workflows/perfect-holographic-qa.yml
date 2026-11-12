@@ -29,14 +29,15 @@ jobs:
           npm init -y
           npm install --no-audit --no-fund playwright@1.58.2
           npx playwright install --with-deps chromium
+      - name: Link isolated runner for ESM module resolution
+        run: |
+          mkdir -p node_modules
+          ln -s /tmp/perfect-qa/node_modules/playwright node_modules/playwright
+          ln -s /tmp/perfect-qa/node_modules/playwright-core node_modules/playwright-core
       - name: Execute browser regression tests
-        env:
-          NODE_PATH: /tmp/perfect-qa/node_modules
         run: node skills/Perfect/tests/holographic-lab-v4.spec.mjs
       - name: Capture mobile and desktop visual evidence
         if: always()
-        env:
-          NODE_PATH: /tmp/perfect-qa/node_modules
         run: node skills/Perfect/tests/capture-v4.mjs
       - name: Upload screenshots
         if: always()
