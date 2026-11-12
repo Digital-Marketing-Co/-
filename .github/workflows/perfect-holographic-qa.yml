@@ -1,0 +1,48 @@
+name: Perfect holographic browser QA
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/perfect-engine7-registry-20261112
+    paths:
+      - 'skills/Perfect/**'
+      - '.github/workflows/perfect-holographic-qa.yml'
+  pull_request:
+    paths:
+      - 'skills/Perfect/**'
+      - '.github/workflows/perfect-holographic-qa.yml'
+permissions:
+  contents: read
+jobs:
+  chromium-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install isolated Playwright runner
+        run: |
+          mkdir -p /tmp/perfect-qa
+          cd /tmp/perfect-qa
+          npm init -y
+          npm install --no-audit --no-fund playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: Execute browser regression tests
+        env:
+          NODE_PATH: /tmp/perfect-qa/node_modules
+        run: node skills/Perfect/tests/holographic-lab-v4.spec.mjs
+      - name: Capture mobile and desktop visual evidence
+        if: always()
+        env:
+          NODE_PATH: /tmp/perfect-qa/node_modules
+        run: node skills/Perfect/tests/capture-v4.mjs
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: perfect-v4-visual-evidence
+          path: skills/Perfect/test-results/
+          if-no-files-found: warn
+          retention-days: 14
