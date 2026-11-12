@@ -103,3 +103,7 @@ CSS/SVG/Canvas/WebGL/WebGPU may emulate optical appearances on a screen. Actual 
 ## Engine 23 spatial effects
 - `skills/Perfect/examples/holographic-lab-v11.html` extends the prototype to 64 CSS-selectable effects with depth slices, wavefront rings, perspective grid, volumetric-looking beams, orbital arcs, translucent layers, spectral shadows, and light curtains.
 - `skills/Perfect/tests/holographic-lab-v11.spec.mjs` covers 64 toggles and is configured in CI. Browser execution and two visual QA passes are still required. No physical holographic projection is implied.
+
+## Engine 24 composited light effects
+- `skills/Perfect/examples/holographic-lab-v12.html` extends the prototype to 72 selectable CSS visual effects with holographic foil, light trails, lens styling, crystal highlights, atmospheric rays, interference lattice, luminous typography and depth shimmer.
+- `skills/Perfect/tests/holographic-lab-v12.spec.mjs` adds browser regression coverage in CI. These additions are source-level only until runtime and two visual QA passes succeed.
