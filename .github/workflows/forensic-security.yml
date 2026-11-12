@@ -19,9 +19,9 @@ jobs:
           python-version: '3.11'
       - name: Unit tests
         run: python3 -m unittest discover -s security -p 'test_*.py' -v
-      - name: Forensic scan (report only)
+      - name: Forensic scan (fail closed)
         run: |
-          python3 security/forensic_scan.py skills/MAGIC/SKILL.md skills/Z/SKILL.md security/FORENSIC_SECURITY_CONTRACT.md > forensic-findings.json || true
+          python3 security/forensic_scan.py skills/MAGIC/SKILL.md skills/Z/SKILL.md security/FORENSIC_SECURITY_CONTRACT.md > forensic-findings.json
           cat forensic-findings.json
       - name: Upload scan evidence
         if: always()
