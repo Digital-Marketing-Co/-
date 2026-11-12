@@ -60,3 +60,7 @@ CSS/SVG/Canvas/WebGL/WebGPU may emulate optical appearances on a screen. Actual 
 ## Engine 15 runnable visual prototype
 - `skills/Perfect/examples/holographic-lab-v3.html` extends the v2 screen-based demonstration to 16 independently selectable CSS treatments, including caustics, haze, chromatic edge separation, interference fringes, particles, grid, glass reflection, and energy rings.
 - This is a prototype, not an assertion of 541 operational effects or a physical hologram. Confirm real-browser rendering, iPhone accessibility, reduced motion and two QA/VQA passes before deployment.
+
+## Engine 16 visual prototype
+- `skills/Perfect/examples/holographic-lab-v4.html` adds eight more CSS appearance controls to v3, reaching 24 proposed browser-renderable treatments: halo, diffraction-style grating, moiré, plasma-style filaments, crystal facets, light lattice, radar sweep, and vortex-style pattern. These are visual approximations, not calibrated optical models.
+- Run browser, accessibility, performance and visual QA before describing v4 as verified working or deploying it. The v1–v3 files remain available for regression comparisons.
