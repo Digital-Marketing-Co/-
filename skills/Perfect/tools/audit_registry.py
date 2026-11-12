@@ -11,7 +11,7 @@ import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 REFS = ROOT / "references"
-PATTERN = re.compile(r"^[-]\\s+(?:`([a-z0-9_]+)`\\s*[—:]|([a-z0-9_]+):)\\s*(.*?)\\s*(?:\\[proposed\\]|\\(proposed\\))\\s*$")
+PATTERN = re.compile(r"^[-]\s+(?:`([a-z0-9_]+)`\s*[—:]|([a-z0-9_]+):)\s*(.*?)\s*(?:\[proposed\]|\(proposed\))\s*$")
 def norm(s):
     s = unicodedata.normalize("NFKD", s).casefold()
     return re.sub(r"[^a-z0-9]+", "_", "".join(c for c in s if not unicodedata.combining(c))).strip("_")
