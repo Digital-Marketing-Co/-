@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-12 | syncskills | repo-to-hosts | fae4f64 | Add verified SyncSkills /SS controller (v1.0.0) with Python inventory/diff engine, tests, threat model, and CI workflow; Grok installed from committed copy (no prior local); ChatGPT must re-upload syncskills |
 | 2026-11-12 | weekday-gather | checked | a6b4f00 | Compared 50 installed Grok custom skills against main. 48 SKILL.md blob hashes match exactly. Folio has minor wording (Exit 1 vs Exit code 1) and textbook has trailing newline; byte differences only, no verified newer behavior. No new skill folders. ChatGPT and Grok should use the repo copy for all shared skills. No ChatGPT re-uploads required. |
 | 2026-11-11 | weekday-gather | checked | f81bac2 | Compared 50 installed Grok custom skills against main. 48 SKILL.md blob hashes match exactly. Folio has minor wording (Exit 1 vs Exit code 1) and textbook has trailing newline; byte differences only, no verified newer behavior. No new skill folders. ChatGPT and Grok should use the repo copy for all shared skills. No ChatGPT re-uploads required. |
 | 2026-11-10 | weekday-gather | checked | b6cd3cd | Compared 50 installed Grok custom skills against main. 48 SKILL.md blob hashes match exactly. Folio has minor wording (Exit 1 vs Exit code 1) and textbook has trailing newline; byte differences only, no verified newer behavior. No new skill folders. ChatGPT and Grok should use the repo copy for all shared skills. No ChatGPT re-uploads required. |
