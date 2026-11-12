@@ -1,0 +1,32 @@
+name: Forensic security checks
+on:
+  pull_request:
+  push:
+    branches:
+      - security/z-karma-forensic-20261112
+permissions:
+  contents: read
+jobs:
+  forensic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit tests
+        run: python3 -m unittest discover -s security -p 'test_*.py' -v
+      - name: Forensic scan (report only)
+        run: |
+          python3 security/forensic_scan.py skills/MAGIC/SKILL.md skills/Z/SKILL.md security/FORENSIC_SECURITY_CONTRACT.md > forensic-findings.json || true
+          cat forensic-findings.json
+      - name: Upload scan evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: forensic-findings
+          path: forensic-findings.json
+          if-no-files-found: warn
