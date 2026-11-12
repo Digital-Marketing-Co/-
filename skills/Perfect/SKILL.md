@@ -72,3 +72,8 @@ CSS/SVG/Canvas/WebGL/WebGPU may emulate optical appearances on a screen. Actual 
 ## Capability truthfulness and exhaustive mapping
 - Read `skills/Perfect/references/capability-coverage.md` before describing holographic features as available. It distinguishes 24 coded but runtime-unverified screen-based effects from hardware-dependent, research-only and unmapped catalog proposals.
 - Do not equate the 541 proposed entries with 541 functioning effects. Complete semantic deduplication, execution evidence and two documented QA/VQA passes before production claims.
+
+## Expanded multilingual font selector
+- `skills/Perfect/examples/holographic-lab-v5.html` retains 24 CSS visual effects and adds 100 curated multilingual font choices to the four existing selector options. Each option has an ordinal discovery index and a Latin-letter A1–Z26 code (A=1 through Z=26).
+- The font list is not a verified worldwide usage-frequency ranking: no country-by-country font usage dataset was established. Browser rendering uses installed fonts or fallbacks; listing a font does not bundle, license, download or guarantee it.
+- Validate actual font coverage, local script shaping, readability, color contrast, mobile dropdown behavior and browser execution before production claims.
