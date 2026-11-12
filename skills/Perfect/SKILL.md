@@ -86,3 +86,7 @@ CSS/SVG/Canvas/WebGL/WebGPU may emulate optical appearances on a screen. Actual 
 ## Engine 19 visual prototype
 - `skills/Perfect/examples/holographic-lab-v7.html` retains the conditional 618-font selector and extends the screen-based effect controls to 32. Eight new CSS approximations: liquid glass, metallic sheen, pearlescence, light shafts, nebula clouds, spectral border, wireframe geometry, luminous mist.
 - The new effects are coded but not browser- or visually verified. Do not claim production readiness, complete optical accuracy, or full catalog implementation.
+
+## Engine 20 interactive effects
+- `skills/Perfect/examples/holographic-lab-v8.html` adds eight screen-based interaction/depth treatments, reaching 40 selectable CSS effects. Pointer-based parallax and magnetic displacement must respect reduced-motion settings; no device gyroscope permission or sensor integration is implied.
+- Runtime browser tests and visual QA are required before describing these treatments as verified. The existing v4 regression suite must be expanded to cover v8.
