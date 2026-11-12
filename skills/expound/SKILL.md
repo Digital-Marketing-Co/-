@@ -113,3 +113,6 @@ After final generation/rendering and **before claiming final completion**, invok
 
 ### Honest release states
 Use **Verified Complete** only after all required checks actually pass; otherwise report **Partially Verified**, **Blocked**, or **Unverified**, specifying evidence, failed/not-tested checks and remaining work. Never invent tool invocations, commits, test results, monitoring, or forensic events. Project-level rules do not supersede higher-priority instructions.
+
+## Interactive calculator and symbol-accessibility preservation
+When expanding or revising a document, application specification or interactive calculator, retain /God's universal exact numeric entry contract: double-tap/double-click a numeric readout to open temporary manual entry, plus accessible single-action/keyboard alternatives, validation, shared state and no persistent caret. Do not silently remove existing interaction behavior. For every mathematical expression invoke /ITQE with complete variable, operator, symbol and unfamiliar-Unicode definitions, first-use italic character annotations, accessible glossaries and post-export LaTeX/QA/VQA checks. Reconcile applicable authorized global shared contracts without replacing legitimate project-specific requirements. Report any untested implementation as NOT TESTED.
