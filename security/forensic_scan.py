@@ -16,8 +16,13 @@ def run(paths):
     out={}
     for path in paths:
         p=pathlib.Path(path)
-        if p.is_file():
+        if not p.is_file():
+            out[str(p)]=[{"line":0,"kind":"missing-or-not-file"}]
+            continue
+        try:
             out[str(p)]=inspect(str(p),p.read_text(encoding="utf-8"))
+        except (OSError,UnicodeError) as exc:
+            out[str(p)]=[{"line":0,"kind":"unreadable-file","error_type":type(exc).__name__}]
     return out
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("paths",nargs="+");args=ap.parse_args()
