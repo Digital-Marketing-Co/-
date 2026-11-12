@@ -71,3 +71,6 @@ For web, interactive presentations, holographic modals and product imagery use `
 
 ## /God coordination and visual authority
 When /God is active, /4629 retains sole visual direction authority and cooperates with the canonical cross-skill DAG in `skills/God/SKILL.md`; do not overwrite equations, citation numbering, copyright, or forensic evidence. Optimize cyan/navy visuals subject to user preferences, reduced motion, performance and document readability.
+
+## Interactive calculator direct numeric entry
+For interactive calculators or numeric controls generated as part of /4629 experiences, inherit the canonical /God universal numeric-control contract: double-tap/double-click the visible numeric readout to temporarily edit an exact value, with no persistent input cursor in read mode. Offer a discoverable single-action edit button and accessible keyboard/screen-reader alternative; do not rely solely on double-tap. Validate units, limits, precision and locale, and synchronize slider, typed value and computed results. Keep original visual style, preserve /parallax style neutrality and apply /ITQE explanations to all mathematical notation. Require two actual QA/VQA passes; do not infer application behavior from prompt text alone.
