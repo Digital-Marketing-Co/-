@@ -27,15 +27,18 @@ jobs:
           mkdir -p /tmp/perfect-qa
           cd /tmp/perfect-qa
           npm init -y
-          npm install --no-audit --no-fund playwright@1.58.2
+          npm install --no-audit --no-fund playwright@1.58.2 @playwright/test@1.58.2
           npx playwright install --with-deps chromium
       - name: Link isolated runner for ESM module resolution
         run: |
           mkdir -p node_modules
           ln -s /tmp/perfect-qa/node_modules/playwright node_modules/playwright
           ln -s /tmp/perfect-qa/node_modules/playwright-core node_modules/playwright-core
+          ln -s /tmp/perfect-qa/node_modules/@playwright node_modules/@playwright
       - name: Execute browser regression tests
         run: node skills/Perfect/tests/holographic-lab-v4.spec.mjs
+      - name: Execute keyboard and accessibility regression tests
+        run: node node_modules/@playwright/test/cli.js test skills/Perfect/tests/accessibility-v4.spec.mjs --workers=1
       - name: Capture mobile and desktop visual evidence
         if: always()
         run: node skills/Perfect/tests/capture-v4.mjs
