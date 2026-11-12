@@ -82,3 +82,7 @@ CSS/SVG/Canvas/WebGL/WebGPU may emulate optical appearances on a screen. Actual 
 - `skills/Perfect/examples/holographic-lab-v6.html` requests Google Fonts public metadata and attempts to populate exactly 618 distinct font families using an exposed numeric popularity rank. It preserves the earlier offline fallback and A1–Z26 labels.
 - The target is conditional: if the metadata is blocked by CORS, has no reliable popularity field, or provides fewer than 618 families, the interface explicitly reports the smaller fallback rather than inventing ranks or families.
 - Google Fonts popularity is a provider-specific web usage proxy, **not** worldwide usage frequency across all countries or all installed fonts. Do not claim global accuracy or guaranteed 618 availability without successful runtime verification. Selected families are requested from Google Fonts CSS when online; check licensing, network accessibility, glyph coverage and iPhone option styling before release.
+
+## Engine 19 visual prototype
+- `skills/Perfect/examples/holographic-lab-v7.html` retains the conditional 618-font selector and extends the screen-based effect controls to 32. Eight new CSS approximations: liquid glass, metallic sheen, pearlescence, light shafts, nebula clouds, spectral border, wireframe geometry, luminous mist.
+- The new effects are coded but not browser- or visually verified. Do not claim production readiness, complete optical accuracy, or full catalog implementation.
