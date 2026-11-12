@@ -99,3 +99,7 @@ CSS/SVG/Canvas/WebGL/WebGPU may emulate optical appearances on a screen. Actual 
 ## Engine 22 light-field-inspired effects
 - `skills/Perfect/examples/holographic-lab-v10.html` extends the prototype to 56 selectable effects with anamorphic flare, bokeh, luminous ribbons, polarized color bands, animated refraction, holographic noise, diffraction stars, and depth halo.
 - `skills/Perfect/tests/holographic-lab-v10.spec.mjs` is included in CI. Source presence is not browser verification. Perform actual browser tests and two QA/VQA passes before production or completion claims.
+
+## Engine 23 spatial effects
+- `skills/Perfect/examples/holographic-lab-v11.html` extends the prototype to 64 CSS-selectable effects with depth slices, wavefront rings, perspective grid, volumetric-looking beams, orbital arcs, translucent layers, spectral shadows, and light curtains.
+- `skills/Perfect/tests/holographic-lab-v11.spec.mjs` covers 64 toggles and is configured in CI. Browser execution and two visual QA passes are still required. No physical holographic projection is implied.
