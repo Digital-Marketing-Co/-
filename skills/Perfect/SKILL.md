@@ -90,3 +90,8 @@ CSS/SVG/Canvas/WebGL/WebGPU may emulate optical appearances on a screen. Actual 
 ## Engine 20 interactive effects
 - `skills/Perfect/examples/holographic-lab-v8.html` adds eight screen-based interaction/depth treatments, reaching 40 selectable CSS effects. Pointer-based parallax and magnetic displacement must respect reduced-motion settings; no device gyroscope permission or sensor integration is implied.
 - Runtime browser tests and visual QA are required before describing these treatments as verified. The existing v4 regression suite must be expanded to cover v8.
+
+## Engine 21 optical surface simulations
+- `skills/Perfect/examples/holographic-lab-v9.html` adds thin-film iridescence, polarized-light styling, embossing, edge illumination, scattering, interference rings, luminous contours and spectral waves. Total: 48 coded selectable screen-based effects.
+- `skills/Perfect/tests/holographic-lab-v9.spec.mjs` adds regression coverage, included in the CI workflow. These tests and two visual QA passes remain unverified until executed successfully.
+- These are CSS artistic approximations, not scientific optical calculations or hardware holograms.
