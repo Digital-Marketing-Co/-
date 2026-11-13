@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-12 | article-clip-pdf | repo-to-hosts | 1dc2030 | Rename Article Clip PDF to ACPDF and add verified PDF workflow aliases; Grok installed from committed copy; ChatGPT must re-upload article-clip-pdf |
 | 2026-11-12 | expound | repo-to-hosts | 3a04e30 | Propagate exact numeric entry and ITQE accessibility contracts; Grok installed from committed copy (no prior local); ChatGPT must re-upload expound |
 | 2026-11-12 | pe | repo-to-hosts | 6ec0652 | Propagate exact numeric entry and ITQE accessibility contracts; Grok installed from committed copy (no prior local); ChatGPT must re-upload pe |
 | 2026-11-12 | God | repo-to-hosts | b5360bd | Require double-tap exact numeric entry and shared instruction integrity; Grok installed from committed copy; ChatGPT must re-upload God |
