@@ -4,6 +4,8 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-13 | weekday-gather | checked | e8ea8db | Compared 50 installed Grok custom skills against main. SKILL.md match for 47; article-clip-pdf repo newer (ACPDF rename and workflow); folio and textbook minor byte diffs only. Supporting files: pushed consistent 420-word cadence.md and plan_image_slots.py for images to match verified SKILL.md. No new skill folders. ChatGPT must re-upload images. For article-clip-pdf, folio, and textbook, ChatGPT and Grok should use the repo copy. |
+| 2026-11-13 | images | grok-to-repo | e8ea8db | Align cadence.md and plan_image_slots.py to verified 420-word slot math matching the 2026-11-02 SKILL.md update; ChatGPT must re-upload images |
 | 2026-11-12 | article-clip-pdf | repo-to-hosts | 1dc2030 | Rename Article Clip PDF to ACPDF and add verified PDF workflow aliases; Grok installed from committed copy; ChatGPT must re-upload article-clip-pdf |
 | 2026-11-12 | expound | repo-to-hosts | 3a04e30 | Propagate exact numeric entry and ITQE accessibility contracts; Grok installed from committed copy (no prior local); ChatGPT must re-upload expound |
 | 2026-11-12 | pe | repo-to-hosts | 6ec0652 | Propagate exact numeric entry and ITQE accessibility contracts; Grok installed from committed copy (no prior local); ChatGPT must re-upload pe |
