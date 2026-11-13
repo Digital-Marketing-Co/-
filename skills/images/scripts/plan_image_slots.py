@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Plan /images banners and 500-word mid-section figure slots.
+"""Plan /images banners and 420-word mid-section figure slots.
 
 Usage:
   python3 plan_image_slots.py path/to/atlas.json
@@ -78,12 +78,12 @@ def plan_section(section: dict) -> dict:
     n_blurb = sum(word_count(p) for p in blurb)
     counts = [word_count(p) for p in rest]
     n_after = sum(counts)
-    slots = n_after // 500
-    if slots == 0 and n_after >= 350:
+    slots = n_after // 420
+    if slots == 0 and n_after >= 300:
         slots = 1
     anchors = []
     running = 0
-    needed = min(500, n_after)
+    needed = min(420, n_after)
     k = 1
     for i, c in enumerate(counts):
         running += c
@@ -96,7 +96,7 @@ def plan_section(section: dict) -> dict:
                 }
             )
             k += 1
-            needed = k * 500
+            needed = k * 420
     banner = section.get("banner") or {}
     return {
         "id": sid,

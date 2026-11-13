@@ -1,4 +1,4 @@
-# Cadence — 500-word mid-section figures
+# Cadence — 420-word mid-section figures
 
 ## Blurb
 
@@ -10,22 +10,22 @@ Count words in the remaining body paragraphs of that section or subsection only.
 
 - Include ordinary paragraphs and list items.
 - Exclude the heading, the banner caption, footnotes printed on the page, running headers, and the living copyright line.
-- Exclude `type=equation` figures and ITQE tables from the 500-word tally (they already occupy visual space).
+- Exclude `type=equation` figures and ITQE tables from the 420-word tally (they already occupy visual space).
 - Strip HTML/JSON tags before counting.
 
 Slot count
 
 ```
-slots = floor(words_after_blurb / 500)
+slots = floor(words_after_blurb / 420)
 ```
 
-If `slots == 0` and `words_after_blurb >= 350`, grant one figure so a short-but-real chapter is not bare under the banner.
+If `slots == 0` and `words_after_blurb >= 300`, grant one figure so a short-but-real chapter is not bare under the banner.
 
-If `words_after_blurb < 350`, banner only.
+If `words_after_blurb < 300`, banner only.
 
 ## Placement
 
-For slot k in 1..slots, walk the remaining paragraphs in order until the cumulative word count first meets or exceeds `k * 500`. Insert the figure after that paragraph.
+For slot k in 1..slots, walk the remaining paragraphs in order until the cumulative word count first meets or exceeds `k * 420`. Insert the figure after that paragraph.
 
 Never insert inside Notes or Bibliography. Never insert between a display equation and its ITQE table. Never insert on the title leaf.
 
