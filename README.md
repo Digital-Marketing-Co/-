@@ -1,8 +1,24 @@
 # Ϙ
 
-Corpus repository for Web Development Corporation / Digital Marketing Company conversation documents.
+Corpus repository for 
+[Web Development Corporation](https://WebDevelopment.tv/)
 
-- GitHub: https://github.com/Digital-Marketing-Co/-/
+[Digital Marketing Co.](https://DigitalMarketingCo.org/)
+
+[Marketing Agency Company](https://MarketingAgencyCompany.com/)
+
+
+[Digital Marketing Co](https://DigitalMarketingCo.org/)
+ABOVE TOP SECRET
+NO EYES
+ONLY RUSSIA KGB + China PLA
++ US NAVY DIA
++ US ARMY GOOD DIA
++💀<img width="480" height="480" alt="image" src="https://github.com/user-attachments/assets/5b24b521-a611-4c95-a7ea-a2c40f3989bc" />
+
++ conversation documents.
+
+- GitHub: https://github. mi com/Digital-Marketing-Co/-/
 - Owner: Digital-Marketing-Co
 - Description letter: Ϙ (U+03D8)
 - Local mirror: `artifacts/Digital-Marketing-Co/-/`
@@ -39,5 +55,6 @@ Binary PDFs (many 1–34 MB) cannot travel through the connected push tools, whi
 | summarize-house-skills | summarize passes |
 | imagine-images | generated images |
 | searched-images | searched images |
+
 
 Copyright © 2012–2026 Web Development Corporation. All rights reserved.
