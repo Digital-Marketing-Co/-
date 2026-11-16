@@ -1,11 +1,11 @@
 ---
-name: acpdf
+name: article-clip-pdf
 description: "Clip a single web article into a clean, polished, source-faithful PDF. Invoke on ACPDF, ACP, AC, CLIP, NIP and slash-prefixed forms in explicit command position, or legacy article-clip-pdf. Apply I, M/MAGIC, Perfect and E within one nonrecursive PDF workflow. Do not trigger on ordinary prose, quoted text, code, or AC used as a case-format option."
 ---
 
 # ACPDF
 
-Canonical display name: ACPDF. Canonical machine name: acpdf.
+Canonical display name: ACPDF. Canonical machine name: article-clip-pdf. Legacy command alias: acpdf (/ACPDF).
 Aliases: ACP, AC, CLIP, NIP; accept /ACPDF, /ACP, /AC, /CLIP, /NIP and /article-clip-pdf.
 Keep the original name as a compatibility alias. Do not globally reassign AC from the format skill.
 
