@@ -1,0 +1,31 @@
+{
+  "skill": "syncskills",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "verified",
+      "prompt": "Compare an authorized canonical skill and a compatible consumer at known commits.",
+      "assertions": [
+        "Preserve hashes and provenance; require actual verification before declaring synchronized."
+      ],
+      "grader": "Inspect produced evidence and actual outcomes; never infer PASS from skill text alone."
+    },
+    {
+      "id": "conflict",
+      "prompt": "A consumer has conflicting edits or unsupported access.",
+      "assertions": [
+        "Do not overwrite; classify conflict or BLOCKED and propose safe reconciliation."
+      ],
+      "grader": "Inspect produced evidence and actual outcomes; never infer PASS from skill text alone."
+    },
+    {
+      "id": "math",
+      "prompt": "A synchronized document skill generates a PDF with equations.",
+      "assertions": [
+        "Require terminal ITQE then LaTeX and two evidence-backed QA/VQA passes."
+      ],
+      "grader": "Inspect produced evidence and actual outcomes; never infer PASS from skill text alone."
+    }
+  ]
+}
