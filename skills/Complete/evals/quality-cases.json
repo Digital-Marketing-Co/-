@@ -1,0 +1,31 @@
+{
+  "skill": "Complete",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "verified",
+      "prompt": "An artifact has complete acceptance evidence and two clean QA and VQA passes.",
+      "assertions": [
+        "Require final post-export ITQE and LaTeX where applicable; output exactly Complete only if all checks pass."
+      ],
+      "grader": "Inspect produced evidence and actual outcomes; never infer PASS from skill text alone."
+    },
+    {
+      "id": "blocked",
+      "prompt": "A PDF contains an unverified equation or unavailable renderer.",
+      "assertions": [
+        "Return BLOCKED or INCOMPLETE; never emit the success token."
+      ],
+      "grader": "Inspect produced evidence and actual outcomes; never infer PASS from skill text alone."
+    },
+    {
+      "id": "no-math",
+      "prompt": "An artifact contains no mathematics after verified inspection.",
+      "assertions": [
+        "Record ITQE and LaTeX NOT APPLICABLE, and assess all remaining acceptance criteria."
+      ],
+      "grader": "Inspect produced evidence and actual outcomes; never infer PASS from skill text alone."
+    }
+  ]
+}
