@@ -3,10 +3,38 @@ on:
   push:
     paths:
       - 'skills/God/**'
+      - 'skills/latex/**'
+      - 'skills/ITQE/**'
+      - 'skills/@itqe/**'
+      - 'skills/pe/**'
+      - 'skills/4629/**'
+      - 'skills/Complete/**'
+      - 'skills/expound/**'
+      - 'skills/exhaustive/**'
+      - 'skills/textbook/**'
+      - 'skills/book/**'
+      - 'skills/iterate/**'
+      - 'skills/disabled/**'
+      - 'skills/karma/**'
+      - 'skills/references/post-artifact-itqe-latex-qa.md'
       - '.github/workflows/god-document-qa.yml'
   pull_request:
     paths:
       - 'skills/God/**'
+      - 'skills/latex/**'
+      - 'skills/ITQE/**'
+      - 'skills/@itqe/**'
+      - 'skills/pe/**'
+      - 'skills/4629/**'
+      - 'skills/Complete/**'
+      - 'skills/expound/**'
+      - 'skills/exhaustive/**'
+      - 'skills/textbook/**'
+      - 'skills/book/**'
+      - 'skills/iterate/**'
+      - 'skills/disabled/**'
+      - 'skills/karma/**'
+      - 'skills/references/post-artifact-itqe-latex-qa.md'
       - '.github/workflows/god-document-qa.yml'
 permissions:
   contents: read
