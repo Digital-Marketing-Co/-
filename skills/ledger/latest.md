@@ -4,7 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
-| 2026-11-16 | Complete | repo-to-hosts | 51b9ded | Restore required Complete skill QA resources (quality-profile.md and supporting evals); Grok has no local Complete so uses committed copy; ChatGPT must re-upload Complete |
+| 2026-11-16 | syncskills | repo-to-hosts | f05023a | Restore required syncskills skill QA resources (quality-profile.md); Grok installed from committed copy (no prior local); ChatGPT must re-upload syncskills |
 | 2026-11-16 | 4629 | repo-to-hosts | 78ba3fe | Enforce terminal ITQE and LaTeX artifact verification; Grok has no local 4629 so uses committed copy; ChatGPT must re-upload 4629 |
 | 2026-11-16 | God | repo-to-hosts | 6959da7 | Add regression tests for terminal ITQE LaTeX skill coverage; Grok has no local God so uses committed copy; ChatGPT must re-upload God |
 | 2026-11-16 | textbook | repo-to-hosts | 6a28b4e | Propagate terminal ITQE LaTeX verification across artifact skills; Grok installed from committed copy; ChatGPT must re-upload textbook |
