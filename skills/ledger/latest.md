@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-16 | Complete | repo-to-hosts | 8a9da43 | Define Complete terminal verifier with ITQE and LaTeX gate; Grok installed from committed copy (no prior local); ChatGPT must re-upload Complete |
 | 2026-11-15 | God | repo-to-hosts | c20e10c | Enforce terminal ITQE and LaTeX artifact verification; Grok has no local God so uses committed copy; ChatGPT must re-upload God |
 | 2026-11-15 | weekday-gather | checked | e8ea8db | Compared 50 installed Grok custom skills against main. SKILL.md blob hashes match for 47. Diffs remain article-clip-pdf (repo newer with ACPDF rename and workflow), folio and textbook (minor byte diffs only, no verified newer local behavior). No local newer verified skills to push. No new skill folders on Grok. 42 skills exist only on the repository. ChatGPT and Grok should use the repository copy for all shared skills. ChatGPT must re-upload images (2026-11-13), article-clip-pdf, and other skills listed as changed in recent ledger rows. |
 | 2026-11-13 | weekday-gather | checked | e8ea8db | Compared 50 installed Grok custom skills against main. SKILL.md match for 47; article-clip-pdf repo newer (ACPDF rename and workflow); folio and textbook minor byte diffs only. Supporting files: pushed consistent 420-word cadence.md and plan_image_slots.py for images to match verified SKILL.md. No new skill folders. ChatGPT must re-upload images. For article-clip-pdf, folio, and textbook, ChatGPT and Grok should use the repo copy. |
