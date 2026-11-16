@@ -4,7 +4,7 @@ on:
     paths:
       - 'skills/God/**'
       - 'skills/latex/**'
-      - 'skills/ITQE/**'
+      - 'skills/itqe/**'
       - 'skills/@itqe/**'
       - 'skills/pe/**'
       - 'skills/4629/**'
@@ -22,7 +22,7 @@ on:
     paths:
       - 'skills/God/**'
       - 'skills/latex/**'
-      - 'skills/ITQE/**'
+      - 'skills/itqe/**'
       - 'skills/@itqe/**'
       - 'skills/pe/**'
       - 'skills/4629/**'
