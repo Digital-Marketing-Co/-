@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-16 | EX | repo-to-hosts | 5d065d9 | Add new EX Expand & Expound skill (v1.0.0) for super-admin UI optimization; Grok installed from committed copy (no prior local); ChatGPT must re-upload EX |
 | 2026-11-16 | syncskills | repo-to-hosts | f05023a | Restore required syncskills skill QA resources (quality-profile.md); Grok installed from committed copy (no prior local); ChatGPT must re-upload syncskills |
 | 2026-11-16 | 4629 | repo-to-hosts | 78ba3fe | Enforce terminal ITQE and LaTeX artifact verification; Grok has no local 4629 so uses committed copy; ChatGPT must re-upload 4629 |
 | 2026-11-16 | God | repo-to-hosts | 6959da7 | Add regression tests for terminal ITQE LaTeX skill coverage; Grok has no local God so uses committed copy; ChatGPT must re-upload God |
