@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-16 | textbook | repo-to-hosts | 6a28b4e | Propagate terminal ITQE LaTeX verification across artifact skills; Grok installed from committed copy; ChatGPT must re-upload textbook |
 | 2026-11-16 | disabled | repo-to-hosts | 96d113b | Enforce terminal ITQE and LaTeX artifact verification; Grok installed from committed copy (no prior local); ChatGPT must re-upload disabled |
 | 2026-11-16 | sync | repo-to-hosts | ea593dd | Propagate terminal ITQE LaTeX verification across artifact skills; Grok has no local sync so uses committed copy; ChatGPT must re-upload sync |
 | 2026-11-15 | God | repo-to-hosts | c20e10c | Enforce terminal ITQE and LaTeX artifact verification; Grok has no local God so uses committed copy; ChatGPT must re-upload God |
