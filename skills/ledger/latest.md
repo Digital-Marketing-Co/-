@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-16 | weekday-gather | checked | 5a0b93a | Compared 50 installed Grok custom skills against main. SKILL.md match for most shared skills. Repo newer on article-clip-pdf, folio, textbook, deep (recent commits). No new skill folders on Grok. No verified newer local skill text to push. ChatGPT and Grok should use the repository copy for all shared skills. |
 | 2026-11-16 | EX | repo-to-hosts | 5d065d9 | Add new EX Expand & Expound skill (v1.0.0) for super-admin UI optimization; Grok installed from committed copy (no prior local); ChatGPT must re-upload EX |
 | 2026-11-16 | syncskills | repo-to-hosts | f05023a | Restore required syncskills skill QA resources (quality-profile.md); Grok installed from committed copy (no prior local); ChatGPT must re-upload syncskills |
 | 2026-11-16 | 4629 | repo-to-hosts | 78ba3fe | Enforce terminal ITQE and LaTeX artifact verification; Grok has no local 4629 so uses committed copy; ChatGPT must re-upload 4629 |
