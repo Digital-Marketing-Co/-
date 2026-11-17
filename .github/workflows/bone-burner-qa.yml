@@ -1,0 +1,21 @@
+name: Bone Burner contract QA
+on:
+  pull_request:
+    paths:
+      - 'skills/bone-burner/**'
+      - '.github/workflows/bone-burner-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: First independent test invocation
+        run: python -m unittest discover -s skills/bone-burner/tests -v
+      - name: Second independent test invocation
+        run: python -m unittest discover -s skills/bone-burner/tests -v
