@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-17 | bone-burner | repo-to-hosts | 2032cf5 | Add new bone-burner defensive GitHub security triage skill (v1.0.0) with contract tests and QA workflow; Grok installed from committed copy (no prior local); ChatGPT must re-upload bone-burner |
 | 2026-11-17 | weekday-gather | checked | 7633627 | Compared 50 installed Grok custom skills against main. SKILL.md match for most shared skills. Repo newer on article-clip-pdf, folio, textbook, deep. No new skill folders on Grok. No verified newer local skill text to push. ChatGPT and Grok should use the repository copy for all shared skills. |
 | 2026-11-16 | weekday-gather | checked | 5a0b93a | Compared 50 installed Grok custom skills against main. SKILL.md match for most shared skills. Repo newer on article-clip-pdf, folio, textbook, deep (recent commits). No new skill folders on Grok. No verified newer local skill text to push. ChatGPT and Grok should use the repository copy for all shared skills. |
 | 2026-11-16 | EX | repo-to-hosts | 5d065d9 | Add new EX Expand & Expound skill (v1.0.0) for super-admin UI optimization; Grok installed from committed copy (no prior local); ChatGPT must re-upload EX |
