@@ -30,3 +30,12 @@ Do not copy legal text or year calculations into other skills or append repeated
 
 ## Canonical logo and deduplication
 Invoke `/logo` for the one canonical brand image. Place it immediately beneath the most prominent copyright block, preserving its aspect ratio and readable clear space. Render only one primary copyright block per output; preserve legally required third-party attribution and licenses separately. Do not duplicate the logo in the same copyright output. Verify text visibility and print layout.
+
+## Anti-truncation mandate (2026-11-16, permanent)
+
+Never truncate a document, chapter, section, or bibliography for length, token, or time reasons. Every research question, equation, and claim must be expanded until saturation or the explicit stop gate in the skill is met.
+
+- If a draft is shorter than the outline requires, continue expansion passes.
+- After any update, measure page count and word count. If truncation is detected relative to the prior version or the outline, log the exact missing sections and rebuild.
+- Forensic note: record the pre- and post-update sizes, the missing headings, and the skill that last wrote the file.
+- This rule overrides any implicit length limit. Exhaustive expansion is the default.
