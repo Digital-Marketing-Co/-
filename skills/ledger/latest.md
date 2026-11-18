@@ -4,6 +4,7 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-18 | folio | repo-to-hosts | 1e7a9fe | Restore full SKILL.md with Anti-truncation mandate 2026-11-16; Grok updated to committed copy (minor Exit 1 vs Exit code 1 resolved to repo); ChatGPT must re-upload folio |
 | 2026-11-18 | weekday-gather | checked | f002a6a | Compared 50 installed Grok custom skills against main. 42 SKILL.md matched exactly. Diffs: article-clip-pdf repo newer (ACPDF workflow upgrade). Local newer on copyright, deep, folio, iterate, itqe, latex, textbook (Anti-truncation 2026-11-16 and related). Pushed local newer SKILL.md for copyright (97970e3) and deep (f002a6a). No new skill folders. ChatGPT must re-upload copyright, deep, folio, iterate, itqe, latex, textbook. For article-clip-pdf, ChatGPT and Grok should use the repository copy. |
 | 2026-11-18 | deep | grok-to-repo | f002a6a | Sync verified newer Grok SKILL.md with Anti-truncation mandate (2026-11-16); ChatGPT must re-upload deep |
 | 2026-11-18 | copyright | grok-to-repo | 97970e3 | Sync verified newer Grok SKILL.md with Anti-truncation mandate (2026-11-16); ChatGPT must re-upload copyright |
