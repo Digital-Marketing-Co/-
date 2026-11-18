@@ -203,3 +203,12 @@ All visual and research documents emitted by this skill set PDF as the default d
 
 ## Final character integrity gate
 Before delivery run /karma (or python3 /root/.grok/server-skills/karma/scripts/scan_chars.py on the artifact). Fail closed on any mojibake, replacement character, or anomalous glyph. Repair to ASCII-safe or verified UTF-8 and re-scan.
+
+## Anti-truncation mandate (2026-11-16, permanent)
+
+Never truncate a document, chapter, section, or bibliography for length, token, or time reasons. Every research question, equation, and claim must be expanded until saturation or the explicit stop gate in the skill is met.
+
+- If a draft is shorter than the outline requires, continue expansion passes.
+- After any update, measure page count and word count. If truncation is detected relative to the prior version or the outline, log the exact missing sections and rebuild.
+- Forensic note: record the pre- and post-update sizes, the missing headings, and the skill that last wrote the file.
+- This rule overrides any implicit length limit. Exhaustive expansion is the default.
