@@ -4,6 +4,9 @@
 
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
+| 2026-11-18 | weekday-gather | checked | f002a6a | Compared 50 installed Grok custom skills against main. 42 SKILL.md matched exactly. Diffs: article-clip-pdf repo newer (ACPDF workflow upgrade). Local newer on copyright, deep, folio, iterate, itqe, latex, textbook (Anti-truncation 2026-11-16 and related). Pushed local newer SKILL.md for copyright (97970e3) and deep (f002a6a). No new skill folders. ChatGPT must re-upload copyright, deep, folio, iterate, itqe, latex, textbook. For article-clip-pdf, ChatGPT and Grok should use the repository copy. |
+| 2026-11-18 | deep | grok-to-repo | f002a6a | Sync verified newer Grok SKILL.md with Anti-truncation mandate (2026-11-16); ChatGPT must re-upload deep |
+| 2026-11-18 | copyright | grok-to-repo | 97970e3 | Sync verified newer Grok SKILL.md with Anti-truncation mandate (2026-11-16); ChatGPT must re-upload copyright |
 | 2026-11-17 | bone-burner | repo-to-hosts | 2032cf5 | Add new bone-burner defensive GitHub security triage skill (v1.0.0) with contract tests and QA workflow; Grok installed from committed copy (no prior local); ChatGPT must re-upload bone-burner |
 | 2026-11-17 | weekday-gather | checked | 7633627 | Compared 50 installed Grok custom skills against main. SKILL.md match for most shared skills. Repo newer on article-clip-pdf, folio, textbook, deep. No new skill folders on Grok. No verified newer local skill text to push. ChatGPT and Grok should use the repository copy for all shared skills. |
 | 2026-11-16 | weekday-gather | checked | 5a0b93a | Compared 50 installed Grok custom skills against main. SKILL.md match for most shared skills. Repo newer on article-clip-pdf, folio, textbook, deep (recent commits). No new skill folders on Grok. No verified newer local skill text to push. ChatGPT and Grok should use the repository copy for all shared skills. |
