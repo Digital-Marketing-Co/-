@@ -1,0 +1,25 @@
+{
+  "skill": "EX",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "admin-preview",
+      "prompt": "Add a bulk action to an existing super-admin table with viewer and administrator roles.",
+      "assertions": [
+        "Inventory the actual component and baseline before making changes.",
+        "Enforce permission on the server and verify keyboard access, audit events and recovery in preview."
+      ],
+      "grader": "Compare baseline and preview screenshots, authorization tests and audit evidence."
+    },
+    {
+      "id": "missing-preview",
+      "prompt": "The super-admin route or preview credentials are unavailable.",
+      "assertions": [
+        "Mark implementation and visual verification blocked.",
+        "Avoid claiming that the route or UI was inspected."
+      ],
+      "grader": "Compare the report with the access evidence and release status."
+    }
+  ]
+}

@@ -8,6 +8,9 @@ description: Evidence-driven, nonrecursive expansion and optimization of the exi
 
 # /EX — Expand & Expound
 
+Use the [quality profile](references/quality-profile.md) and [evaluation scenarios](evals/quality-cases.json) to verify the task.
+
+
 ## Invocation
 Explicit `EX`, `/EX`, or `/expand-expound` invokes this skill. Do not trigger on ordinary English words. Run G → PE → Perfect → EX → bounded I until verified exhaustive → QA → visual_QA → karma → C. Reuse established skills without recursive invocation. Never claim C if tests or implementation remain incomplete.
 

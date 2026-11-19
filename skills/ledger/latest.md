@@ -2,6 +2,8 @@
 
 ## Sync log
 
+| 2026-11-19 | EX, article-clip-pdf, bone-burner, stack | codex-to-repo | same commit | Restore mandatory quality resources and the archived ACPDF definition. Preserve existing mixed-case identities through an explicit compatibility policy. |
+
 | 2026-11-19 | stack | repo-to-hosts | fedd4f2 | Add new /stack skill for daily Next.js compatibility and convention reviews; Grok installed from committed copy (no prior local); ChatGPT must re-upload stack |
 | 2026-11-19 | itqe | grok-to-repo | 2d6df9b | Sync verified newer Grok SKILL.md with Element uniqueness, Immutable TeX, OWASP LLM01, and full Anti-truncation mandates; ChatGPT must re-upload itqe |
 | 2026-11-19 | textbook | grok-to-repo | e2a6de4 | Sync verified newer Grok SKILL.md with full Anti-truncation, UNIVERSAL MASTER DIRECTIVE, and prior 2026-10/11 mandates; ChatGPT must re-upload textbook |
