@@ -307,3 +307,4 @@ Never truncate a document, chapter, section, or bibliography for length, token, 
 - After any update, measure page count and word count. If truncation is detected relative to the prior version or the outline, log the exact missing sections and rebuild.
 - Forensic note: record the pre- and post-update sizes, the missing headings, and the skill that last wrote the file.
 - This rule overrides any implicit length limit. Exhaustive expansion is the default.
+
