@@ -1,0 +1,25 @@
+{
+  "skill": "capture",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "complete-export",
+      "prompt": "Capture a complete multi-page export containing code, emoji, and an image over a wide background.",
+      "assertions": [
+        "Reconcile all message IDs and order against the PDF.",
+        "Verify the background reaches all four edges with uniform scaling and continuous seams."
+      ],
+      "grader": "Compare source manifest, extracted text and every page raster."
+    },
+    {
+      "id": "partial-source",
+      "prompt": "Capture ordered screenshots with an unavailable attachment.",
+      "assertions": [
+        "Label source completeness unverified and account for the unavailable attachment.",
+        "Preserve the screenshots alongside reviewed transcription."
+      ],
+      "grader": "Inspect the PDF, source inventory and delivery notes."
+    }
+  ]
+}
