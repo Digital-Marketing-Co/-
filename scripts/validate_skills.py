@@ -9,6 +9,10 @@ from pathlib import Path
 import yaml
 
 
+# Published directory names retained for existing host and workflow integrations.
+LEGACY_SKILL_NAMES = frozenset({"Complete", "EX", "GlobalReset", "God", "QUANTA", "ResearchPlus"})
+
+
 def audit(root: Path) -> dict:
     errors, warnings, entries = [], [], []
     skills = root / 'skills'
@@ -31,8 +35,8 @@ def audit(root: Path) -> dict:
             if name != path.parent.name or name in names:
                 raise ValueError('Name differs from directory or repeats an identity')
             names.add(name)
-            if name != name.lower():
-                warnings.append(f'{relative}: legacy mixed-case skill identity; retain alias and migrate in a separate compatibility release')
+            if name != name.lower() and name not in LEGACY_SKILL_NAMES:
+                errors.append(f'{relative}: new canonical skill identities must use lowercase')
             if not isinstance(description, str) or not 1 <= len(description) <= 1024:
                 raise ValueError('Description must be 1–1024 characters')
             if len(text.splitlines()) > 500:

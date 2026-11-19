@@ -7,8 +7,8 @@ import re
 from pathlib import Path
 
 def scaffold(root: Path, name: str, description: str) -> list[Path]:
-    if not re.fullmatch(r'[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*', name) or len(name) > 64:
-        raise ValueError('Invalid canonical skill name')
+    if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', name) or len(name) > 64:
+        raise ValueError('Use a lowercase canonical skill name')
     if not 1 <= len(description) <= 1024 or '\n' in description:
         raise ValueError('Description must be one line of 1–1024 characters')
     base = root / 'skills' / name

@@ -5,6 +5,9 @@ description: Resolve the current compatible Next.js stack and architecture for a
 
 # /stack
 
+Use the [quality profile](references/quality-profile.md) and [evaluation scenarios](evals/quality-cases.json) to verify the task.
+
+
 Use /stack <app or repo> for a project stack and /stack update <app or repo> for a refresh and a reviewable upgrade. When no target is supplied, work from the active project or produce the reference inventory with project versions marked unknown. Use this for Quantum Global Radio and Universal File Viewer when they move into Next.js.
 
 ## Resolve the stack
