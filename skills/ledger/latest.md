@@ -2,6 +2,7 @@
 
 ## Sync log
 
+| 2026-11-19 | images | grok-to-repo | a442d41 | Sync verified newer Grok SKILL.md preferring real terrestrial photo basis via search_images + edit_image for photorealistic extrapolation; ChatGPT must re-upload images |
 | 2026-11-19 | EX, article-clip-pdf, bone-burner, stack | codex-to-repo | same commit | Restore mandatory quality resources and the archived ACPDF definition. Preserve existing mixed-case identities through an explicit compatibility policy. |
 
 | 2026-11-19 | stack | repo-to-hosts | fedd4f2 | Add new /stack skill for daily Next.js compatibility and convention reviews; Grok installed from committed copy (no prior local); ChatGPT must re-upload stack |

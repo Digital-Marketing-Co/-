@@ -14,7 +14,7 @@ Read [the task-specific quality profile](references/quality-profile.md) before e
 ## Visual stack
 
 Documents this skill emits follow `@visual-system/SKILL.md`.
-Pick a genre palette with `@visual-system/scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner and mid-text prompts append the volumetric clause in `visual-system/references/depth.md` and the beauty lock in `references/beauty-lock.md`. Every published raster is a fresh house generate — awe-inspiring, stunningly perfected, futuristic cinematic still — never a downloaded stock file, never a reused path, prompt, SHA-256, or perceptual hash. Read `visual-system/references/prompt-engineering.md` before every generate.
+Pick a genre palette with `@visual-system/scripts/pick_palette.py`. Paint covers, banners, rules, table headers, and figure frames. Do not change this skill's locked body font or point sizes. Banner and mid-text prompts append the volumetric clause in `visual-system/references/depth.md` and the beauty lock in `references/beauty-lock.md`. Every published raster is an AI-enhanced, perfected, and improved photo-realistic extrapolation and interpretation based on actual terrestrial real-life images of real scenes searched in real time. The basis is a real photograph; the published file is the AI-transformed version that is absolutely beautiful, futuristic, and inspiring while remaining photorealistic. Never a pure synthetic without real basis, never a reused path, prompt, SHA-256, or perceptual hash. Read `visual-system/references/prompt-engineering.md` before every generate. I Enhance and Perfect and Improve u C
 Put one context-locked `/banner` image at the start of every body section **and every subsection**, then generate additional figures about every 420 words after that node's opening blurb. Print each figure at the maximum size that stays sharp. Do not squash or letterbox. If the bitmap is narrower than the page-width floor, Lanczos-upscale and repeat until the width meets the floor. Keep the source aspect ratio. Generate 16-9 at or above the page-width pixel floor (2550 px wide on letter, prefer 3300 x 1856). If it does not meet the floor, regenerate rather than stretching. After generate, run `scripts/apply_tb_alpha_blend.py`. Left and right stay opaque. Top and bottom blend into the page.
 
 Work on an attached PDF, a path the user named, the newest project PDF under `/workspace/artifacts/`, or the `list.json` / `deep.json` / `atlas.json` / `folio.json` that built that PDF.
@@ -149,11 +149,13 @@ On JSON documents attach a figure object with path, caption, prompt, after_parag
 
 ### 5. Generate
 
-Use the house image generate tool for both banners (landscape) and mid-section figures. Do not reuse a figure from another section. Do not copy, crop, fade, or resize one published file into another slot. Do not search-stock a photograph and drop it into a published path. Reference stills may inform the prompt only; the published file is always a fresh generate of stunning editorial stock-photo quality, locked to that section (banner) or to the surrounding 420-word window (mid-text). Each generate call serves exactly one published path. Append the beauty-lock clause. Do not write AI, xAI, or ChatGPT into the prompt.
+Search for actual terrestrial images of real life in real time using the search_images tool, matching the exact semantic subject of the section or 420-word window. Select the most suitable real photograph as the basis. Then use the edit_image tool (or generate_image with strong real-basis prompting if edit is not suitable) to extrapolate, interpret, enhance, perfect, and improve the real image into an absolutely beautiful, futuristic, inspiring, photo-realistic still. The result must look like a superb real-world photograph that has been artistically elevated, not CGI or fantasy. Do not reuse a figure from another section. Do not copy, crop, fade, or resize one published file into another slot. Each transformation serves exactly one published path. Append the beauty-lock clause. Do not write AI, xAI, or ChatGPT into the prompt. Maintain photorealism at all costs while making it futuristic and inspiring.
 
-After each generate, confirm the file exists, is a PNG, and is not a baked checkerboard preview. Open it and run the inspect pass.
+After each transformation, confirm the file exists, is a PNG, and is not a baked checkerboard preview. Open it and run the inspect pass.
 
-Do not put fade words in generate prompts. After each banner or mid-section generate, run `scripts/apply_tb_alpha_blend.py`. Left and right stay opaque. Top and bottom receive the alpha ramp.
+Do not put fade words in prompts. After each banner or mid-section image, run `scripts/apply_tb_alpha_blend.py`. Left and right stay opaque. Top and bottom receive the alpha ramp.
+
+I Enhance and Perfect and Improve u C
 
 ### 6. Rebuild or restamp
 
