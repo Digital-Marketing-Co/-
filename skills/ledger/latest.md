@@ -2,6 +2,7 @@
 
 ## Sync log
 
+| 2026-11-19 | itqe | grok-to-repo | 2d6df9b | Sync verified newer Grok SKILL.md with Element uniqueness, Immutable TeX, OWASP LLM01, and full Anti-truncation mandates; ChatGPT must re-upload itqe |
 | 2026-11-19 | textbook | grok-to-repo | e2a6de4 | Sync verified newer Grok SKILL.md with full Anti-truncation, UNIVERSAL MASTER DIRECTIVE, and prior 2026-10/11 mandates; ChatGPT must re-upload textbook |
 | 2026-11-19 | latex | grok-to-repo | e2a6de4 | Sync verified newer Grok SKILL.md with full Anti-truncation, perfect rendering, and additional QA gates; ChatGPT must re-upload latex |
 | 2026-11-19 | itqe | grok-to-repo | e2a6de4 | Sync verified newer Grok SKILL.md with full Anti-truncation, element uniqueness, and OWASP protections; ChatGPT must re-upload itqe |
