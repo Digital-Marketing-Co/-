@@ -51,3 +51,11 @@ Digital-Marketing-Co/agent-skills is the private installer name for hosts that e
 ## Negative word ban
 
 Every project instruction and every skill output must refuse the banned tokens in skills/negative/references/blocklist.md. Run /negative as the last step of every skill, before chat, a file, a caption, a filename, or alt text is delivered. Exit 1 blocks delivery. Rewrite hits and re-scan until CLEAN. Verbatim user source and the blocklist file itself are the only carve-outs. Bundled host skills docx, pdf, xlsx, pptx, and ffmpeg stay on the host.
+
+## GitHub repository synchronization
+
+Run `bash scripts/sync-skills.sh --repositories` from the canonical checkout to plan. Add `--apply` to push and verify. The runner requires GitHub CLI authentication with access to the entire account, Git write access to the branches in scope, a configured Git author, and the repository's Python validation dependencies. Use a trusted checkout. The local directory installer remains available without the repository flag.
+
+The runner fetches every discoverable default branch before choosing any winners. For each `skills/<name>/SKILL.md` directory and the shared references directory, it selects a complete Git tree using the last path-changing commit's committer timestamp. Ties prefer the canonical repository and then sort by repository name. It records transferred timestamps and tree IDs in commit messages so a distribution commit does not become a newer edit. The canonical branch goes first and consumers follow in name order. It preserves paths outside the selected trees.
+
+A private source cannot supply a public destination. The runner reports unavailable repositories, validation failures, unsafe entries, private versions withheld from public branches, and branch changes detected during execution. If a repository lacks a default branch or is archived, the report lists the exception. Validation runs before any remote writes. Successful writes are ordinary fast-forwards, and the runner checks each resulting remote head against its validated commit. A failure may leave earlier verified updates in place. Rerun against fresh heads to resume.

@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # Synchronize canonical skills while retaining backups of replaced local files.
 set -euo pipefail
+if [[ "${1:-}" == --repositories ]]; then
+  shift
+  exec python3 "$(dirname -- "${BASH_SOURCE[0]}")/sync-skill-repositories.py" "$@"
+fi
 REPO_URL="${SKILLS_REPO_URL:-https://github.com/Digital-Marketing-Co/-.git}"
 CACHE_DIR="${SKILLS_CACHE_DIR:-$HOME/.cache/dmc-skills-repo}"
 TARGET_DIR="${SKILLS_TARGET_DIR:-$HOME/.local/share/dmc-skills}"
