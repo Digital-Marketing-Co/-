@@ -1,0 +1,14 @@
+interface:
+  display_name: Capture
+  short_description: Export full conversations as full-bleed PDFs
+  default_prompt: Use $capture to turn the supplied conversation into a full-bleed
+    PDF.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
