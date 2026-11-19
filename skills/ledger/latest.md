@@ -2,6 +2,11 @@
 
 ## Sync log
 
+| 2026-11-19 | textbook | grok-to-repo | e2a6de4 | Sync verified newer Grok SKILL.md with full Anti-truncation, UNIVERSAL MASTER DIRECTIVE, and prior 2026-10/11 mandates; ChatGPT must re-upload textbook |
+| 2026-11-19 | latex | grok-to-repo | e2a6de4 | Sync verified newer Grok SKILL.md with full Anti-truncation, perfect rendering, and additional QA gates; ChatGPT must re-upload latex |
+| 2026-11-19 | itqe | grok-to-repo | e2a6de4 | Sync verified newer Grok SKILL.md with full Anti-truncation, element uniqueness, and OWASP protections; ChatGPT must re-upload itqe |
+| 2026-11-19 | weekday-gather | checked | e2a6de4 | Compared installed Grok skills against main after prior ledger commit. Local verified newer complete SKILL.md on itqe, latex, textbook (missing sections restored). Pushed full copies. iterate differs by trailing newline only. No new folders. ChatGPT must re-upload itqe, latex, textbook. For article-clip-pdf use repository copy. |
+
 | Date | Skill | Direction | Short hash | Change |
 |---|---|---|---|---|
 | 2026-11-19 | weekday-gather | checked | 08a6e88 | Compared 50 installed Grok custom skills against main. 43 SKILL.md matched exactly. Diffs: article-clip-pdf repo newer (ACPDF workflow upgrade). Local verified newer on iterate, itqe, latex, textbook (Anti-truncation mandate 2026-11-16 and related). copyright and deep differ by trailing whitespace only. No new skill folders. Pushed local newer SKILL.md for iterate (08a6e88), itqe (2da526a), latex (50f1099). For article-clip-pdf, ChatGPT and Grok should use the repository copy. ChatGPT must re-upload iterate, itqe, latex, textbook. |
