@@ -1,9 +1,11 @@
 {
-  "version": "2.0.0",
+  "version": "3.0.0",
+  "execution_status": "NOT TESTED",
   "tests": [
     {
       "input": "/etymology yellow",
       "expect": [
+        "definitions first",
         "attestation",
         "semantic chronology",
         "cognates",
@@ -15,8 +17,8 @@
       "input": "/etymology lang:fr savoir-faire",
       "expect": [
         "French language",
-        "compound morphology",
-        "sense disambiguation",
+        "separate constituent histories",
+        "whole phrase attestation",
         "sources"
       ]
     },
@@ -27,6 +29,22 @@
         "regular correspondences",
         "explicit uncertainty",
         "scholarly references"
+      ]
+    },
+    {
+      "input": "/etymology bank",
+      "expect": [
+        "homograph disambiguation",
+        "separate ancestry paths"
+      ]
+    },
+    {
+      "input": "/etymology hot dog",
+      "expect": [
+        "hot history",
+        "dog history",
+        "idiom history",
+        "evidence graph"
       ]
     },
     {
