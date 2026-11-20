@@ -3,7 +3,7 @@ name: etymology
 description: Evidence-grounded doctoral-level historical linguistic analysis of a user-supplied lemma, phrase, or reconstructed root, with attestations, cognates, phonology, and cited sources.
 ---
 
-# ETYMOLOGY v2.0.0 — Research Skill
+# ETYMOLOGY v2.1.0 — Research Skill
 
 ## Mission
 Produce evidence-grounded, doctoral-level historical linguistic analysis of exactly the user-supplied lemma, phrase, or reconstructed root. Never invent a target when omitted.
@@ -47,3 +47,14 @@ Embed or use fonts with Unicode coverage for IPA, combining diacritics, superscr
 
 ## ENGINE compatibility
 This is the ENGINE counterpart of `skills/etymology/SKILL.md`. Keep the legacy path available. Old skill terminology and new engine terminology refer to the same instructions wherever supported.
+
+## Required definitions and word-by-word evolution (v2.1.0)
+For every invocation, present definitions **before** historical analysis. Enumerate current primary and secondary senses, historical/obsolete senses, literal and figurative meanings, domain-specific meanings, grammatical categories, and regional distinctions where evidenced. Date and cite senses where possible; distinguish definitions of the full expression from those of its constituents.
+
+For multiword phrases, idioms, compounds, and hyphenated forms, first tokenize into meaningful lexical constituents (including affixes when relevant), preserving original spelling and order. For **each constituent**, provide its own earliest securely attested form, language and family, gloss, dated intermediate forms and languages, inheritance/borrowing/derivation routes, phonological and orthographic changes, grammatical and semantic shifts, and modern form. Then trace the **whole phrase** separately: earliest verified occurrence as an expression, its composition or borrowing, idiomatic shift, and current senses. Do not falsely assign the phrase's date to its constituent words.
+
+Produce a chronological, word-by-word evolution map with one node per evidenced historical form and edges labeled inherited, borrowed, calqued, compounded, derived, or uncertain. Each node records language, approximate date or date range, original script/transliteration, form, gloss, source, and confidence. Where multiple paths are plausible, show branching alternatives rather than a fabricated linear chain. Mark unattested reconstructions with an asterisk and distinguish proposed prehistoric ancestry from the earliest written attestation. When evidence is missing, explicitly show a gap, not an invented bridge.
+
+Required output order: (1) headword/phrase and scope, (2) definitions and sense inventory, (3) pronunciation and grammar, (4) morpheme-by-morpheme breakdown, (5) earliest recoverable origin and attestation, (6) independently traced history of **every constituent word**, (7) chronological language-evolution tree for the full expression, (8) phonetic/orthographic/grammatical shifts, (9) semantic evolution, (10) cognates and false cognates, (11) competing hypotheses and evidence gaps, (12) inline notes and bibliography, (13) visual and accessibility QA. Prefer three independent authoritative dictionaries or specialist linguistic sources where available; disclose when fewer are accessible. Never confuse a reconstructed form, cognate, or speculative etymology with a proven direct ancestor.
+
+Aliases: `ET`, `/ET`, and `/etymology` invoke this same research contract wherever the command router supports aliases. Preserve optional `/banner` and `/images` workflows for relevant, clearly illustrative imagery.
