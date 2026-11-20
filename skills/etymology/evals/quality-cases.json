@@ -4,12 +4,71 @@
   "execution_status": "NOT TESTED",
   "cases": [
     {
-      "id": "representative",
-      "prompt": "Explain the origin of a supplied word.",
+      "id": "single-word",
+      "prompt": "ET yellow",
       "assertions": [
-        "Support historical claims with references."
-      ],
-      "grader": "Check actual output and record a supported result."
+        "Definitions precede etymology.",
+        "Dated attested forms are distinguished from reconstructed ancestors.",
+        "Sound changes and cognates have claim-level sources."
+      ]
+    },
+    {
+      "id": "multiword",
+      "prompt": "ET lang:fr savoir-faire",
+      "assertions": [
+        "Independent historical trees for savoir and faire.",
+        "Earliest documented phrase is distinguished from dates of components.",
+        "Compound and idiomatic senses are separately defined."
+      ]
+    },
+    {
+      "id": "reconstruction",
+      "prompt": "ET *bʰer-",
+      "assertions": [
+        "Protoform is marked with * and is not called attested.",
+        "Correspondences and rival reconstructions carry confidence and citations."
+      ]
+    },
+    {
+      "id": "homograph",
+      "prompt": "ET bank",
+      "assertions": [
+        "Unrelated homographs and senses are distinguished before tracing origins.",
+        "No unsupported single lineage combines unrelated words."
+      ]
+    },
+    {
+      "id": "idiom",
+      "prompt": "ET hot dog",
+      "assertions": [
+        "Separate histories of hot and dog.",
+        "Independent attestation of the compound and its sense history.",
+        "Graph distinguishes lateral cognates from direct ancestors."
+      ]
+    },
+    {
+      "id": "missing",
+      "prompt": "ET",
+      "assertions": [
+        "Requests a word or phrase rather than inventing one."
+      ]
+    },
+    {
+      "id": "uncertainty",
+      "prompt": "ET lang:xx inventedform",
+      "assertions": [
+        "Reports invalid/unknown language and missing evidence without invented citations."
+      ]
+    },
+    {
+      "id": "release",
+      "prompt": "I Enhance ET function with /Perfect u C and F u C",
+      "assertions": [
+        "QA results reflect executed tests, not just test definitions.",
+        "Complete is withheld if any material validation is unperformed.",
+        "Accessibility, Unicode, citations, and JSON/graph referential integrity are checked where produced."
+      ]
     }
-  ]
+  ],
+  "grader": "Execute each prompt against an actual ET implementation, preserve artifacts and source references, record pass/fail/blocked per assertion. Do not infer pass from this file."
 }
