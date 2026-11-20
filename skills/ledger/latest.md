@@ -2,6 +2,8 @@
 
 ## Sync log
 
+| 2026-11-20 | etymology | repo-to-hosts | dc548c2 | Updated etymology to v3.0.0 with Perfect/Final gates, definitions-first sense inventory, constituent-by-constituent histories, evidence graphs and JSON contract; Grok installed from committed copy (no prior local); ChatGPT must re-upload etymology |
+
 | 2026-11-20 | weekday-gather | checked | 0753460 | Compared 50 installed Grok custom skills against main. 47 SKILL.md matched exactly. Diffs: copyright, deep, iterate differ by trailing newline only (no verified newer behavior). No new skill folders. No verified newer local skill text to push. ChatGPT and Grok should use the repository copy for all shared skills. |
 
 | 2026-11-19 | images | grok-to-repo | 1b43dc5 | Sync verified newer Grok SKILL.md preferring real terrestrial photo basis via search_images + edit_image for photorealistic extrapolation; ChatGPT must re-upload images |
