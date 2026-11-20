@@ -10,7 +10,8 @@
         "Definitions precede etymology.",
         "Dated attested forms are distinguished from reconstructed ancestors.",
         "Sound changes and cognates have claim-level sources."
-      ]
+      ],
+      "grader": "Execute this prompt against the ET implementation; inspect and cite actual output artifacts; record PASS, FAIL, or BLOCKED for each assertion."
     },
     {
       "id": "multiword",
@@ -19,7 +20,8 @@
         "Independent historical trees for savoir and faire.",
         "Earliest documented phrase is distinguished from dates of components.",
         "Compound and idiomatic senses are separately defined."
-      ]
+      ],
+      "grader": "Execute this prompt against the ET implementation; inspect and cite actual output artifacts; record PASS, FAIL, or BLOCKED for each assertion."
     },
     {
       "id": "reconstruction",
@@ -27,7 +29,8 @@
       "assertions": [
         "Protoform is marked with * and is not called attested.",
         "Correspondences and rival reconstructions carry confidence and citations."
-      ]
+      ],
+      "grader": "Execute this prompt against the ET implementation; inspect and cite actual output artifacts; record PASS, FAIL, or BLOCKED for each assertion."
     },
     {
       "id": "homograph",
@@ -35,7 +38,8 @@
       "assertions": [
         "Unrelated homographs and senses are distinguished before tracing origins.",
         "No unsupported single lineage combines unrelated words."
-      ]
+      ],
+      "grader": "Execute this prompt against the ET implementation; inspect and cite actual output artifacts; record PASS, FAIL, or BLOCKED for each assertion."
     },
     {
       "id": "idiom",
@@ -44,21 +48,24 @@
         "Separate histories of hot and dog.",
         "Independent attestation of the compound and its sense history.",
         "Graph distinguishes lateral cognates from direct ancestors."
-      ]
+      ],
+      "grader": "Execute this prompt against the ET implementation; inspect and cite actual output artifacts; record PASS, FAIL, or BLOCKED for each assertion."
     },
     {
       "id": "missing",
       "prompt": "ET",
       "assertions": [
         "Requests a word or phrase rather than inventing one."
-      ]
+      ],
+      "grader": "Execute this prompt against the ET implementation; inspect and cite actual output artifacts; record PASS, FAIL, or BLOCKED for each assertion."
     },
     {
       "id": "uncertainty",
       "prompt": "ET lang:xx inventedform",
       "assertions": [
         "Reports invalid/unknown language and missing evidence without invented citations."
-      ]
+      ],
+      "grader": "Execute this prompt against the ET implementation; inspect and cite actual output artifacts; record PASS, FAIL, or BLOCKED for each assertion."
     },
     {
       "id": "release",
@@ -67,7 +74,8 @@
         "QA results reflect executed tests, not just test definitions.",
         "Complete is withheld if any material validation is unperformed.",
         "Accessibility, Unicode, citations, and JSON/graph referential integrity are checked where produced."
-      ]
+      ],
+      "grader": "Execute this prompt against the ET implementation; inspect and cite actual output artifacts; record PASS, FAIL, or BLOCKED for each assertion."
     }
   ],
   "grader": "Execute each prompt against an actual ET implementation, preserve artifacts and source references, record pass/fail/blocked per assertion. Do not infer pass from this file."
