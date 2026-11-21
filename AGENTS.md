@@ -49,3 +49,9 @@ Automatically apply the standing accessibility-first operating preference in ski
 
 ## Accessibility shortcut
 Treat `P` and `/p` as combined requests to apply `skills/disabled/SKILL.md` accessibility accommodations and continue the current unfinished task according to `skills/proceed/SKILL.md`. Respect consent and security requirements.
+
+## Website audit requirements
+
+For every new or materially updated page, run the project Website Auditor against the rendered page and aim for the maximum applicable score. Review every metric, fix applicable failures, and record before and after scores, failed checks, and any environment constraints. Recheck WCAG 2.2 AA behavior with keyboard, reduced motion and mobile Safari layouts, along with Lighthouse performance, crawlability and internal navigation. Verify real rendered output, and report unverified metrics explicitly.
+
+Review semantic HTML, accessible names, headings and image alternatives on every edit. Refresh affected titles, descriptions, canonical URLs, Open Graph and Twitter metadata, JSON-LD, locale alternates, dates, sitemap and search discovery records whenever the page content changes what those fields describe. Keep structured data consistent with visible content and use direct answers, readable server-rendered text and attributed research links for SEO, AIO, GEO and AEO. Verify all updated anchors and references. Respect indexability and access controls for private routes.
