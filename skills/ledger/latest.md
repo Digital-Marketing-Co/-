@@ -2,6 +2,8 @@
 
 ## Sync log
 
+| 2026-11-21 | 4629 | repo-to-hosts | d9f938f | Expand /Perfect holographic hierarchy and infrastructure contract; Grok installed from committed copy (no prior local); ChatGPT must re-upload 4629 |
+
 | 2026-11-20 | etymology | repo-to-hosts | 4791907 | Added v3 regression cases to quality-cases.json (single-word, multiword, reconstruction, homograph, idiom, missing, uncertainty, release); SKILL.md unchanged at v3.0.0; no local Grok copy; ChatGPT must re-upload etymology |
 
 | 2026-11-20 | etymology | repo-to-hosts | dc548c2 | Updated etymology to v3.0.0 with Perfect/Final gates, definitions-first sense inventory, constituent-by-constituent histories, evidence graphs and JSON contract; Grok installed from committed copy (no prior local); ChatGPT must re-upload etymology |
