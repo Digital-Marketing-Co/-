@@ -1,0 +1,11 @@
+{
+  "skill": "conversation-sync",
+  "test_cases": [
+    {"input": "/ConversationSync setup", "should_trigger": true},
+    {"input": "sync my Grok conversations to ChatGPT", "should_trigger": true},
+    {"input": "backfill project chats after inactivity", "should_trigger": true},
+    {"input": "generate export prompt for Claude", "should_trigger": true},
+    {"input": "write a blog post about AI", "should_trigger": false},
+    {"input": "create a PDF report", "should_trigger": false}
+  ]
+}

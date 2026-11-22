@@ -1,0 +1,30 @@
+{
+  "skill": "conversation-sync",
+  "test_cases": [
+    {
+      "name": "deadline_boundary",
+      "input": "Calculate eligibility for a conversation with last activity 5999 seconds ago",
+      "assertions": ["Reports ineligible", "Eligible exactly at 6000 seconds"]
+    },
+    {
+      "name": "export_prompt_generation",
+      "input": "Generate the ConversationSync export prompt for Grok",
+      "assertions": ["Includes the full standardized prompt with {PROVIDER} substituted", "Instructs to distinguish current-thread from full export"]
+    },
+    {
+      "name": "project_instruction_precedence",
+      "input": "A source project has instructions and the destination ChatGPT project already has local instructions. How to proceed?",
+      "assertions": ["Does not wipe destination settings", "Stages proposed change for conflict resolution", "Uses conditional writes where supported"]
+    },
+    {
+      "name": "independent_destinations",
+      "input": "ChatGPT is unavailable but the conversation is eligible. What happens to the GitHub push?",
+      "assertions": ["GitHub push proceeds independently", "ChatGPT job remains pending", "Receipts stay separate"]
+    },
+    {
+      "name": "dry_run_safety",
+      "input": "Run a dry run on authorized sources",
+      "assertions": ["No writes to GitHub or ChatGPT", "No production cursor advancement", "No consumption of live queue events"]
+    }
+  ]
+}
