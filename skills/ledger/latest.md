@@ -2,8 +2,9 @@
 
 ## Sync log
 
-| 2026-11-22 | skill-sync | repo-to-hosts | 95d8935 | Add standing multi-repo push rule (D P u C then F); Grok uses committed copy (matched installed); ChatGPT must re-upload skill-sync |
-| 2026-11-21 | article-clip-pdf | repo-to-hosts | 08d161f | Standing rule for case-insensitive slash-prefixed aliases on ACPDF aliases; Grok uses committed copy (matched installed); ChatGPT must re-upload article-clip-pdf |
+| 2026-11-22 | skill-sync | repo-to-hosts | 95d8935 | Add standing multi-repo push rule (D P u C then F); Grok installed matches committed copy; ChatGPT must re-upload skill-sync |
+
+| 2026-11-22 | article-clip-pdf | repo-to-hosts | 08d161f | Standing rule for case-insensitive slash-prefixed aliases; Grok installed matches committed copy; ChatGPT must re-upload article-clip-pdf |
 
 | 2026-11-21 | 4629 | repo-to-hosts | d9f938f | Expand /Perfect holographic hierarchy and infrastructure contract; Grok installed from committed copy (no prior local); ChatGPT must re-upload 4629 |
 
