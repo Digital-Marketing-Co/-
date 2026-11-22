@@ -1,0 +1,4 @@
+interface:
+  display_name: "ConversationSync"
+  short_description: "Stage and archive authorized AI conversations"
+  default_prompt: "Use $conversation-sync to inspect and stage an authorized AI conversation export."

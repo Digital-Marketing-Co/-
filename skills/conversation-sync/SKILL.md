@@ -11,6 +11,10 @@ Make ChatGPT the default receiver of all authorized, recoverable conversations c
 
 Routine sync requires zero paid LLM inference credits. Use deterministic collection, parsing, scheduling, and delivery.
 
+## Bundled snapshot runtime
+
+Read [operating instructions](references/operations.md) to use the tested snapshot runtime and [the implementation contract](references/contract.md) for full acceptance criteria. The bundled script implements manual snapshot ingest, a durable inactivity ledger, an encrypted private GitHub writer, and ChatGPT upload staging. Live provider polling, native ChatGPT delivery, project instruction writes, and release activation require separately verified integrations. Run the bundled synthetic checks from this directory with `python3 -B -m unittest discover -s scripts -p 'test_*.py'`.
+
 ## Setup and Operating Contract
 
 1. Confirm the canonical skills repository (`Digital-Marketing-Co/-`) and approved branch.
