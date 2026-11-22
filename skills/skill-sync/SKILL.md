@@ -23,6 +23,8 @@ Keep Digital-Marketing-Co/- as the shared skill source for Grok and ChatGPT.
 
 When an individual skill is updated on the repository, perform a complete improvement of everything that can be improved for that skill before the commit is considered finished. Raise the version marker if one exists.
 
+Standing rule for multi-repo push (2026-11-21): After committing to Digital-Marketing-Co/- (primary), also push the same skill update to the other designated skill repositories in order: D, P, u, C, then F. Apply this for all future skill updates.
+
 ## Steps
 
 1. Read SKILL-SYNC.md and skills/ledger/latest.md on main.
