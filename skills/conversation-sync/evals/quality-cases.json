@@ -1,0 +1,34 @@
+{
+  "skill": "conversation-sync",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "deadline-boundary",
+      "prompt": "Use a synthetic conversation at 5,999 seconds of inactivity, then at 6,000 seconds. Repeat after a content edit and with a response in progress.",
+      "assertions": [
+        "The first revision is ineligible at 5,999 seconds and eligible at 6,000.",
+        "A qualifying edit resets the deadline and an in-progress response blocks delivery."
+      ],
+      "grader": "Inspect eligibility decisions and stored activity timestamps using a fixed clock."
+    },
+    {
+      "id": "independent-destinations",
+      "prompt": "Use an eligible synthetic conversation and simulate verified GitHub delivery with ChatGPT native delivery unavailable.",
+      "assertions": [
+        "Destination states and receipts stay independent.",
+        "A staged ChatGPT package does not count as native delivery."
+      ],
+      "grader": "Inspect persisted destination state and receipts for the same revision."
+    },
+    {
+      "id": "dry-run-safety",
+      "prompt": "Dry-run an authorized synthetic snapshot with project instructions and an unavailable attachment.",
+      "assertions": [
+        "No remote write, production cursor advance, or live queue consumption occurs.",
+        "Project instructions remain source data and missing attachment bytes are reported."
+      ],
+      "grader": "Compare destination and queue state before and after. Inspect the preview and attachment status."
+    }
+  ]
+}

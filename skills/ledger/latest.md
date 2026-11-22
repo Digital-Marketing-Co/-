@@ -2,6 +2,8 @@
 
 ## Sync log
 
+| 2026-11-22 | conversation-sync | codex-to-repo | same commit | Add the required quality profile and evaluation cases to resolve Skill Sync Guard validation failures. |
+
 | 2026-11-22 | conversation-sync | codex-to-repo | same commit | Add validated snapshot runtime, encrypted private GitHub delivery and ChatGPT package staging. Live integrations remain pending. |
 
 | 2026-11-22 | skill-sync | repo-to-hosts | 95d8935 | Add standing multi-repo push rule (D P u C then F); Grok installed matches committed copy; ChatGPT must re-upload skill-sync |
