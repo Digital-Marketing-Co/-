@@ -3,7 +3,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from conversation_sync import eligible, ingest, instant, ledger, normalize, push, stage_chatgpt
+from conversation_sync import chatgpt_export, eligible, ingest, instant, ledger, normalize, push, stage_chatgpt
 
 
 class GitHubFixture:
@@ -74,6 +74,28 @@ class SnapshotTest(unittest.TestCase):
         projects, rows = normalize(self.snapshot, self.due)
         self.assertEqual(ingest(self.db, projects, rows)["conflict"], 1)
         self.assertEqual(eligible(self.db, self.revision, self.due)["id"], self.revision)
+
+    def test_chatgpt_export_preserves_alternate_branch(self):
+        records = [{"id": "original", "current_node": "second", "mapping": {
+            "first": {"parent": None, "message": {"id": "first", "create_time": 1}},
+            "second": {"parent": "first", "message": {"id": "second", "create_time": 2}},
+            "alternate": {"parent": "first", "message": {"id": "alternate", "create_time": 3}},
+        }}]
+        record = chatgpt_export(records, "scope")["conversations"][0]
+        self.assertEqual([message["id"] for message in record["messages"]], ["first", "second"])
+        self.assertEqual(record["last_activity_at"], "1970-01-01T00:00:03+00:00")
+        self.assertEqual(record["source_record"], records[0])
+        self.assertEqual(record["project_ids"], [])
+
+    def test_chatgpt_export_rejects_cycle_and_preserves_unknown_clock(self):
+        record = {"id": "original", "current_node": "first", "mapping": {
+            "first": {"parent": "first", "message": {"id": "first"}},
+        }}
+        with self.assertRaises(ValueError):
+            chatgpt_export([record], "scope")
+        record["mapping"]["first"]["parent"] = None
+        result = chatgpt_export([record], "scope")["conversations"][0]
+        self.assertIsNone(result["last_activity_at"])
 
     def test_in_progress_blocks_write(self):
         self.snapshot["conversations"][0]["in_progress"] = True

@@ -10,6 +10,7 @@ import re
 import secrets
 import sqlite3
 from datetime import datetime, timezone
+from decimal import Decimal, InvalidOperation
 from urllib.error import HTTPError
 from urllib.parse import quote, urlencode
 from urllib.request import Request, HTTPRedirectHandler, build_opener
@@ -106,6 +107,63 @@ def normalize(envelope, now):
         rows[identity] = (revision, identity, observed,
                           None if observed is None else observed + IDLE_US, active, body)
     return projects, rows.values()
+
+
+def chatgpt_export(records, scope):
+    """Read one supported export shape without inferring live state or project membership."""
+    if not isinstance(records, list):
+        raise ValueError("expected a ChatGPT conversation JSON array")
+    conversations = []
+    for record in records:
+        if not isinstance(record, dict) or not isinstance(record.get("mapping"), dict):
+            raise ValueError("unsupported ChatGPT conversation record")
+        mapping = record["mapping"]
+        node_id = record.get("current_node")
+        messages = []
+        visited = set()
+        while node_id is not None:
+            if not isinstance(node_id, str) or node_id in visited or node_id not in mapping:
+                raise ValueError("invalid ChatGPT conversation branch")
+            visited.add(node_id)
+            node = mapping[node_id]
+            if not isinstance(node, dict):
+                raise ValueError("invalid ChatGPT conversation node")
+            if isinstance(node.get("message"), dict):
+                messages.append(node["message"])
+            node_id = node.get("parent")
+        timestamps = []
+        for node in mapping.values():
+            if not isinstance(node, dict):
+                raise ValueError("invalid ChatGPT conversation node")
+            message = node.get("message")
+            if not isinstance(message, dict):
+                continue
+            for field in ("create_time", "update_time"):
+                value = message.get(field)
+                if not isinstance(value, (int, float)) or isinstance(value, bool):
+                    continue
+                try:
+                    timestamp = Decimal(str(value))
+                    if timestamp.is_finite() and timestamp >= 0:
+                        timestamps.append(timestamp)
+                except InvalidOperation:
+                    continue
+        activity = None
+        if timestamps:
+            try:
+                activity = datetime.fromtimestamp(float(max(timestamps)), timezone.utc).isoformat()
+            except (OverflowError, OSError, ValueError):
+                raise ValueError("invalid ChatGPT message timestamp") from None
+        conversations.append({
+            "id": require_id(record.get("conversation_id") or record.get("id")),
+            "last_activity_at": activity,
+            "activity_evidence": "snapshot_message_timestamps" if activity else "unavailable",
+            "messages": list(reversed(messages)),
+            "project_ids": [],
+            "project_discovery": "unsupported_in_this_export_adapter",
+            "source_record": record,
+        })
+    return {"provider": "chatgpt-export", "scope": require_id(scope), "conversations": conversations}
 
 
 def ledger(path):
@@ -291,6 +349,7 @@ def main():
     load = commands.add_parser("ingest")
     load.add_argument("export", type=Path)
     load.add_argument("--dry-run", action="store_true")
+    load.add_argument("--chatgpt-export-scope", help="operator-confirmed account or workspace for ChatGPT conversation JSON")
     commands.add_parser("status")
     for verb in ("stage-chatgpt", "push-github"):
         sub = commands.add_parser(verb)
@@ -306,7 +365,10 @@ def main():
     args = parser.parse_args()
     now = instant(datetime.now(timezone.utc).isoformat())
     if args.command == "ingest":
-        projects, rows = normalize(json.loads(args.export.read_bytes()), now)
+        source = json.loads(args.export.read_bytes())
+        if args.chatgpt_export_scope is not None:
+            source = chatgpt_export(source, args.chatgpt_export_scope)
+        projects, rows = normalize(source, now)
         result = {"projects": len(projects), "conversations": len(rows), "snapshot_only": True}
         if not args.dry_run:
             result.update(ingest(ledger(args.db), projects, rows))

@@ -2,6 +2,8 @@
 
 ## Sync log
 
+| 2026-11-22 | conversation-sync | codex-to-repo | same commit | Add direct ChatGPT conversation JSON snapshot ingest and regression tests. |
+
 | 2026-11-22 | conversation-sync | codex-to-repo | same commit | Register CS, cs, and Cs as explicit command aliases. |
 
 | 2026-11-22 | conversation-sync | codex-to-repo | same commit | Add the required quality profile and evaluation cases to resolve Skill Sync Guard validation failures. |

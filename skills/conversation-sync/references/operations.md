@@ -27,6 +27,16 @@ Use an official export or selected local export. Normalize it into this envelope
 
 Use one assembled record per conversation with all memberships. Keep branches, artifact references and source metadata as additional fields. The runtime preserves these fields. Standalone attachment bytes remain in the authorized source or staging store. Include the original filename, MIME type, size, checksum and private reference in each artifact record when known. Use no signed URLs or credentials in records. Resolve conflicting project settings exports manually. Omit an unverified activity timestamp or use null.
 
+## Read ChatGPT conversation JSON directly
+
+For an authorized ChatGPT export, select the conversation JSON array from the extracted export. Run a private, read-only preview with the operator-confirmed source account or workspace label:
+
+```sh
+python3 scripts/conversation_sync.py --db /private/state.db ingest /private/conversations.json --chatgpt-export-scope CONFIRMED-SOURCE --dry-run
+```
+
+The importer handles records with a node mapping. It preserves the source graph and orders the selected branch by its parent links. It uses available message times as snapshot evidence, including messages on alternate branches. An absent activity time leaves the revision ineligible. Project mapping, instruction fields, attachment bytes, and other export formats require separate verification or the normalized envelope above.
+
 ## Run locally
 
 Run from the skill directory. Use Python 3.11 or later. Install the Python cryptography dependency where supported for GitHub encryption. Point state and output paths to a private directory. Keep the generated key in an approved secret store and retain it for recovery. Configure a GitHub credential with write access to the approved private repository and read access for verification.
