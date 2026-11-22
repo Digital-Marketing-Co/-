@@ -1,6 +1,11 @@
 {
   "skill": "conversation-sync",
   "test_cases": [
+    {"input": "CS", "should_trigger": true},
+    {"input": "cs setup", "should_trigger": true},
+    {"input": "Cs status", "should_trigger": true},
+    {"input": "/cS status", "should_trigger": true},
+    {"input": "I am studying CS.", "should_trigger": false},
     {"input": "/ConversationSync setup", "should_trigger": true},
     {"input": "sync my Grok conversations to ChatGPT", "should_trigger": true},
     {"input": "backfill project chats after inactivity", "should_trigger": true},

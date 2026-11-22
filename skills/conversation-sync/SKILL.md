@@ -1,11 +1,13 @@
 ---
 name: conversation-sync
-description: "Sync authorized conversations from Grok, ChatGPT, Abacus.AI, Claude, Copilot, Codex, Cursor, and other AI providers to a default ChatGPT receiver and private GitHub archive after 6000s inactivity. Use for setup, backfill, incremental sync, project instructions, and dual-destination delivery."
+description: "Sync authorized conversations from Grok, ChatGPT, Abacus.AI, Claude, Copilot, Codex, Cursor, and other AI providers to a default ChatGPT receiver and private GitHub archive after 6000s inactivity. Use for setup, backfill, incremental sync, project instructions, and dual-destination delivery. Use CS, cs, or Cs as explicit commands."
 type: workflow
 lifecycle: active
 ---
 
 # ConversationSync — Default ChatGPT Receiver for Recoverable AI Conversations
+
+**Codenames** — `CS`, `cs`, and `Cs` invoke ConversationSync when used alone or as explicit command prefixes. Slash-prefixed forms are case-insensitive. Ignore incidental mentions in prose.
 
 Make ChatGPT the default receiver of all authorized, recoverable conversations created in other generative AI software. Handle new conversations, revisions, standalone chats, project chats, and agent sessions. Preserve original messages, branches, project membership, project instructions, files, and recoverable generated outputs.
 
