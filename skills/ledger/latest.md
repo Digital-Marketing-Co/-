@@ -2,6 +2,7 @@
 
 ## Sync log
 
+| 2026-11-26 | 🎨 | repo-to-hosts | d67a217 | Add new /🎨 alias to /God for visual QA orchestration without second authority; Grok installed from committed copy (no prior local); ChatGPT must re-upload 🎨 |
 | 2026-11-26 | GENIUS | repo-to-hosts | d5e0732 | Add new GENIUS v4.1 adaptive interactive improvement skill (distinct from lowercase /genius wrapper); Grok installed from committed copy (no prior local); ChatGPT must re-upload GENIUS |
 | 2026-11-26 | chapter | repo-to-hosts | d5e0732 | Add new /chapter v2.1 document-native full-bleed chapter opening skill (PDF default); Grok installed from committed copy (no prior local); ChatGPT must re-upload chapter |
 
