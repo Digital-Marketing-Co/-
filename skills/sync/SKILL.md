@@ -3,8 +3,9 @@ name: sync
 description: Safely pull, reconcile, and push skills bidirectionally between Digital-Marketing-Co/- and Digital-Marketing-Co/Digital-Marketing-Co, verifying both remote heads.
 metadata:
   type: workflow
-  version: "2.0.0"
-  flag: /sync
+  version: "2.1.0"
+  flag: /Sync
+  aliases: [Sync, /sync, sync]
 ---
 # /sync — Bidirectional skills synchronization
 
@@ -36,3 +37,6 @@ metadata:
 
 ## Terminal mathematical integrity enforcement — 2026-11-16
 For every applicable generated or modified artifact, invoke the canonical shared `skills/references/post-artifact-itqe-latex-qa.md` gate AFTER the last content edit and final export: inventory all math including figures/tables; run /itqe first (equation IDs, every symbol/operator/constant/index, units, assumptions, dimensional consistency, Unicode names and accessible glossary), then /latex (source parsing, rendering, superscripts/subscripts, font/glyph integrity, exported-page verification). If defects are repaired, re-export and repeat the terminal /itqe → /latex sequence on the new final output. Then require two independent complete evidence-backed QA and visual-QA passes; /karma records actual defects and prevention fixtures. A math-free artifact may mark both NOT APPLICABLE only after a verified inventory. Never treat missing tools, incomplete inspection, commits, or self-reported status as PASS. Use bounded, nonrecursive orchestration; /C can output exactly Complete only after all applicable acceptance criteria are verified. This addition preserves all prior skill-specific responsibilities and safety constraints.
+
+## GENIUS GOD PERFECT canonical quality orchestration
+Before bidirectional reconciliation, inventory the authoritative skill tree and construct a canonical registry and dependency graph. Normalize internal references, preserve legacy aliases (including /FixAll and FixAll for /FA), and resolve conflicts only with evidence. Apply functional, semantic, syntax, security, regression and applicable visual/accessibility checks. Re-run failed checks after repair and rediscover changed paths. Preserve the existing bidirectional contract above. Use bounded iterations and record untested checks, conflicts and blockers; never claim perfection from a commit alone. Zero paid inference credits. /Sync status and /Sync dry-run remain read-only.
