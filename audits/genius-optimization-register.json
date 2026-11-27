@@ -1,0 +1,566 @@
+{
+  "baseline": "fc52f313b8824e8bbe4b6f247b7da753c427f427",
+  "policy": "Preserve metadata, aliases, dependencies, order, intentional repetition, safety and acceptance. Require structural and behavioral evidence before marking verified. Reconcile changed baseline blobs each run.",
+  "skills": [
+    {
+      "path": "skills/4629/SKILL.md",
+      "baseline_blob": "4e0a7571ee5273104299b29c75e2a0fdfd88456f",
+      "status": "pending"
+    },
+    {
+      "path": "skills/Complete/SKILL.md",
+      "baseline_blob": "23af55917a516fb6ece6f35b7ca950ea2064fd16",
+      "status": "pending"
+    },
+    {
+      "path": "skills/EX/SKILL.md",
+      "baseline_blob": "42ff18a0880d1b7fc0663b9a50e95d8c5aede9a7",
+      "status": "pending"
+    },
+    {
+      "path": "skills/Final/SKILL.md",
+      "baseline_blob": "02ae8a9ad43cc17589327204c7ea7d8379095209",
+      "status": "pending"
+    },
+    {
+      "path": "skills/GENIUS/SKILL.md",
+      "baseline_blob": "a6df59113b1dd3fc182628c8b0ae983ddec6bbbc",
+      "status": "pending"
+    },
+    {
+      "path": "skills/GlobalReset/SKILL.md",
+      "baseline_blob": "ce5c3b5363a5623ac8934551a13248abd5adac14",
+      "status": "pending"
+    },
+    {
+      "path": "skills/GoOn/SKILL.md",
+      "baseline_blob": "2f772d2028d8dc2487997893c9f8720a4efc52e9",
+      "status": "pending"
+    },
+    {
+      "path": "skills/God/SKILL.md",
+      "baseline_blob": "bf6185f0fe71c72ff05fd07af1d163459efa6e74",
+      "status": "pending"
+    },
+    {
+      "path": "skills/QAIR/SKILL.md",
+      "baseline_blob": "32cbe4602303cf5243183ecb691d829809288936",
+      "status": "pending"
+    },
+    {
+      "path": "skills/QUANTA/SKILL.md",
+      "baseline_blob": "f328e74b909f795ec7dcfc1a0e53a68fc3346921",
+      "status": "pending"
+    },
+    {
+      "path": "skills/ResearchPlus/SKILL.md",
+      "baseline_blob": "a7c9c80b239161f8ed9ed3ed2bcc55289d5b4dc8",
+      "status": "pending"
+    },
+    {
+      "path": "skills/academy-ivy-biblio/SKILL.md",
+      "baseline_blob": "6d237f22f8d064b873b84aee82ebbdbc5f2a29bc",
+      "status": "pending"
+    },
+    {
+      "path": "skills/academy-ivy/SKILL.md",
+      "baseline_blob": "af4dd01f2dcdee59c4d54f205551985bc49da337",
+      "status": "pending"
+    },
+    {
+      "path": "skills/alias/SKILL.md",
+      "baseline_blob": "51d5d418268aedf19ca53bf64408cca0d3ffe3a6",
+      "status": "pending"
+    },
+    {
+      "path": "skills/appideas/SKILL.md",
+      "baseline_blob": "c09bf8a46ee8b7a84e1b45e4a687df01e4796b62",
+      "status": "pending"
+    },
+    {
+      "path": "skills/article-clip-pdf/SKILL.md",
+      "baseline_blob": "8f1c09b420bac21df9dd05f322e35d91a680085f",
+      "status": "pending"
+    },
+    {
+      "path": "skills/atlas/SKILL.md",
+      "baseline_blob": "2eaca00c54bdcea753eab614ca60e62e9226a5ed",
+      "status": "pending"
+    },
+    {
+      "path": "skills/aura/SKILL.md",
+      "baseline_blob": "78e39eebe731a1f98c7a0974f7ce58635cf5f891",
+      "status": "pending"
+    },
+    {
+      "path": "skills/banner/SKILL.md",
+      "baseline_blob": "c6cbf605794174b614056050f7c7f0a7bb967832",
+      "status": "pending"
+    },
+    {
+      "path": "skills/bleed/SKILL.md",
+      "baseline_blob": "aab58439137f1e250d49420875ee339dff68784c",
+      "status": "pending"
+    },
+    {
+      "path": "skills/blink/SKILL.md",
+      "baseline_blob": "f499f97f10f5363aa0377920d149694b9443ea03",
+      "status": "pending"
+    },
+    {
+      "path": "skills/bone-burner/SKILL.md",
+      "baseline_blob": "ee7c21bc7540f8e20e2c22251e920666cea963c1",
+      "status": "pending"
+    },
+    {
+      "path": "skills/book/SKILL.md",
+      "baseline_blob": "a59e7d0ae8a76d38a8c36edf098c66fdd1a8c6fc",
+      "status": "pending"
+    },
+    {
+      "path": "skills/breakdown/SKILL.md",
+      "baseline_blob": "2325cfd63fb08396a10b940451b7516d74e6c37c",
+      "status": "pending"
+    },
+    {
+      "path": "skills/brkdwn/SKILL.md",
+      "baseline_blob": "15deaeba4ffd305612a8852dcdb680ab2eea34e3",
+      "status": "pending"
+    },
+    {
+      "path": "skills/build/SKILL.md",
+      "baseline_blob": "9192ec3dbc3e2d9820ad1e5e93170a1bddd4050a",
+      "status": "pending"
+    },
+    {
+      "path": "skills/capture/SKILL.md",
+      "baseline_blob": "615c54aa010e8770bb852005d730137c009ad3aa",
+      "status": "pending"
+    },
+    {
+      "path": "skills/chapter/SKILL.md",
+      "baseline_blob": "02243be6e546525491a9f9ed86ab45cdecdb4390",
+      "status": "pending"
+    },
+    {
+      "path": "skills/clone/SKILL.md",
+      "baseline_blob": "e892ca91cd8636e953cc7d73a860583b8ff3471f",
+      "status": "pending"
+    },
+    {
+      "path": "skills/coffee/SKILL.md",
+      "baseline_blob": "f6dbfb5b600277632cabc8b0b6ec8e8f88a25c7d",
+      "status": "pending"
+    },
+    {
+      "path": "skills/compression/SKILL.md",
+      "baseline_blob": "0381e25cbf047d30823c8a7285908d27482be818",
+      "status": "pending"
+    },
+    {
+      "path": "skills/consultation/SKILL.md",
+      "baseline_blob": "4dbd633efefab5c9bc193e92380a68318eb3e9ab",
+      "status": "pending"
+    },
+    {
+      "path": "skills/conversation-sync/SKILL.md",
+      "baseline_blob": "d3973f652757f1a6c1137e1a05e041cfdc334c50",
+      "status": "pending"
+    },
+    {
+      "path": "skills/copyright/SKILL.md",
+      "baseline_blob": "8271d5f62b1578cdfed70c899437ff578faf4d50",
+      "status": "pending"
+    },
+    {
+      "path": "skills/copysite/SKILL.md",
+      "baseline_blob": "6397339d160b0768ebb227b2319cbea813532f32",
+      "status": "pending"
+    },
+    {
+      "path": "skills/corpus/SKILL.md",
+      "baseline_blob": "54e4f8c9008ee54b77f549fa13d097f608161d51",
+      "status": "pending"
+    },
+    {
+      "path": "skills/debbie-downer/SKILL.md",
+      "baseline_blob": "c6968f5ebeb9f0b6ec0a05713c47d46b22ccb2af",
+      "status": "pending"
+    },
+    {
+      "path": "skills/decode/SKILL.md",
+      "baseline_blob": "4e3191f88c8e9107465d4e1941925252eb0db255",
+      "status": "pending"
+    },
+    {
+      "path": "skills/deep/SKILL.md",
+      "baseline_blob": "365a7e9f576a495fd4f14fd1fcc2578ebea120a7",
+      "status": "pending"
+    },
+    {
+      "path": "skills/disability/SKILL.md",
+      "baseline_blob": "8ce96914957d324a71cacef6d133b0dd186e87a1",
+      "status": "pending"
+    },
+    {
+      "path": "skills/disabled/SKILL.md",
+      "baseline_blob": "2eb8bb1336674a54d4d318c8a3d9fc670a72b398",
+      "status": "pending"
+    },
+    {
+      "path": "skills/esprompt/SKILL.md",
+      "baseline_blob": "78c185368e549091b070e07d491f19622c387a2d",
+      "status": "pending"
+    },
+    {
+      "path": "skills/etymology/SKILL.md",
+      "baseline_blob": "de1928d308415e92e56bd5214ad4bc4662eb28a0",
+      "status": "pending"
+    },
+    {
+      "path": "skills/exhaustive/SKILL.md",
+      "baseline_blob": "682c8ee293236d220050858dd746c6f0a6f14394",
+      "status": "pending"
+    },
+    {
+      "path": "skills/expand/SKILL.md",
+      "baseline_blob": "18841fb1d741e7a23299a60da4ad4abcb59c1159",
+      "status": "pending"
+    },
+    {
+      "path": "skills/expound/SKILL.md",
+      "baseline_blob": "1fbc5a389506186155514d3d01d208fd97fa747d",
+      "status": "pending"
+    },
+    {
+      "path": "skills/extract-dir/SKILL.md",
+      "baseline_blob": "93698d8d55a3479c8076e62a8c0bfa9f969e6066",
+      "status": "pending"
+    },
+    {
+      "path": "skills/fa/SKILL.md",
+      "baseline_blob": "85a056235f10101cc5cc35a2faf20eacb6f921e0",
+      "status": "pending"
+    },
+    {
+      "path": "skills/final/SKILL.md",
+      "baseline_blob": "58c0f4a13a51a1f87b0e955da304fbfaeb10a31b",
+      "status": "pending"
+    },
+    {
+      "path": "skills/folio/SKILL.md",
+      "baseline_blob": "b2665fca9b78128d2820a2d8c51014da59622ae1",
+      "status": "pending"
+    },
+    {
+      "path": "skills/format/SKILL.md",
+      "baseline_blob": "dc196bdcd16e79e318111ab1fec9cf9124552a7e",
+      "status": "pending"
+    },
+    {
+      "path": "skills/generate-prompt/SKILL.md",
+      "baseline_blob": "412c95d04af6ae6d4ae7db1183900be424fc9f77",
+      "status": "pending"
+    },
+    {
+      "path": "skills/generate/SKILL.md",
+      "baseline_blob": "38d2fab8b445433be74e81bb850d1cab899e6a15",
+      "status": "pending"
+    },
+    {
+      "path": "skills/genius/SKILL.md",
+      "baseline_blob": "6b8b9c88a5d63fa2739ab74c88c4b9db57d3d16a",
+      "status": "pending"
+    },
+    {
+      "path": "skills/gg/SKILL.md",
+      "baseline_blob": "e0f8d3ec358faf8d0950c3d2f3c029d437ec1d49",
+      "status": "pending"
+    },
+    {
+      "path": "skills/global/SKILL.md",
+      "baseline_blob": "9a9e69039cc72d50cc0f06d001f227146ce6e0d3",
+      "status": "pending"
+    },
+    {
+      "path": "skills/god/SKILL.md",
+      "baseline_blob": "0fb06b2515d3b20887bf1dce0d6a04a875450ddd",
+      "status": "pending"
+    },
+    {
+      "path": "skills/hilarious/SKILL.md",
+      "baseline_blob": "c9d7238c967c0270b45efb061b36c1fa799b8faa",
+      "status": "pending"
+    },
+    {
+      "path": "skills/holoverse/SKILL.md",
+      "baseline_blob": "c735ea197d5c83e400797bab01670c40712e3f2a",
+      "status": "pending"
+    },
+    {
+      "path": "skills/images/SKILL.md",
+      "baseline_blob": "31d23b749013524926dc7abad89f5ddc154a3d95",
+      "status": "pending"
+    },
+    {
+      "path": "skills/interface/SKILL.md",
+      "baseline_blob": "fe7af13bcf9d9926b431f99a034fff69710c7b01",
+      "status": "pending"
+    },
+    {
+      "path": "skills/interop/SKILL.md",
+      "baseline_blob": "d60759be50964b87e1f2ad4cc2c8f4fd07a117b0",
+      "status": "pending"
+    },
+    {
+      "path": "skills/interpret/SKILL.md",
+      "baseline_blob": "6dd5fb8ddf151885963b63c7057b6a67349f60c6",
+      "status": "pending"
+    },
+    {
+      "path": "skills/ispy/SKILL.md",
+      "baseline_blob": "7bae26be5734a2fce10be7f446c565f97409af39",
+      "status": "pending"
+    },
+    {
+      "path": "skills/iterate/SKILL.md",
+      "baseline_blob": "b430fd8ff8f161b7f9b82728c62214e5a04fb987",
+      "status": "pending"
+    },
+    {
+      "path": "skills/itqe/SKILL.md",
+      "baseline_blob": "10839950b7d00e5615293dd5b341cfad2bf6b282",
+      "status": "pending"
+    },
+    {
+      "path": "skills/karma/SKILL.md",
+      "baseline_blob": "7937c2e77e2a8a13f4146bda1483d5e67bc26158",
+      "status": "pending"
+    },
+    {
+      "path": "skills/kids/SKILL.md",
+      "baseline_blob": "6eb30c0de908c8a6371d004ecb1129bceeeac14d",
+      "status": "pending"
+    },
+    {
+      "path": "skills/latex/SKILL.md",
+      "baseline_blob": "8aa92daf9438e10d33a5606e03ff30645aceccea",
+      "status": "pending"
+    },
+    {
+      "path": "skills/list/SKILL.md",
+      "baseline_blob": "66effc765f7bf186a595f637253b06997e1b4118",
+      "status": "pending"
+    },
+    {
+      "path": "skills/logo/SKILL.md",
+      "baseline_blob": "dc23701cbf1fffe15308f749d7d3eea463ebd79d",
+      "status": "pending"
+    },
+    {
+      "path": "skills/magic/SKILL.md",
+      "baseline_blob": "c49f9bb25dcaa053eaa15b87dce7cc90ec61bccb",
+      "status": "pending"
+    },
+    {
+      "path": "skills/negative/SKILL.md",
+      "baseline_blob": "b435d208373aa5056f8d3a38ad41e9bed12f0fa4",
+      "status": "pending"
+    },
+    {
+      "path": "skills/output/SKILL.md",
+      "baseline_blob": "2bd686311424ee3407916e78b459752e3770b68a",
+      "status": "pending"
+    },
+    {
+      "path": "skills/parallax/SKILL.md",
+      "baseline_blob": "46b394687eaad44b43ce02f775be42cd0a125a7a",
+      "status": "pending"
+    },
+    {
+      "path": "skills/pdf/SKILL.md",
+      "baseline_blob": "a6b10eb0fe7582439cfec4b49148177451d7234e",
+      "status": "pending"
+    },
+    {
+      "path": "skills/pe/SKILL.md",
+      "baseline_blob": "763d882a5b5207827a9322f0687b7dbce4332187",
+      "status": "pending"
+    },
+    {
+      "path": "skills/pepe/SKILL.md",
+      "baseline_blob": "7ce1c0d83549e92a3d6daa6ab54d5e9966990422",
+      "status": "pending"
+    },
+    {
+      "path": "skills/phd-ivy-monograph/SKILL.md",
+      "baseline_blob": "1925d922cd3a8c4841b9055cf9e073a5373baefc",
+      "status": "pending"
+    },
+    {
+      "path": "skills/plain-jane/SKILL.md",
+      "baseline_blob": "071f40e753a7cc8d38d057a1edc5c2594ce89a28",
+      "status": "pending"
+    },
+    {
+      "path": "skills/pp/SKILL.md",
+      "baseline_blob": "4b94de7145cb0603953407152bee71b939e05430",
+      "status": "pending"
+    },
+    {
+      "path": "skills/print/SKILL.md",
+      "baseline_blob": "88056cf0ac40e8f3fac6ea414af134383cf1fc9e",
+      "status": "pending"
+    },
+    {
+      "path": "skills/proceed/SKILL.md",
+      "baseline_blob": "ff553f6a266d23294e7a8378c505a3abf90297a7",
+      "status": "pending"
+    },
+    {
+      "path": "skills/profound/SKILL.md",
+      "baseline_blob": "272130272221964f2588055493ba7b8fb998a37e",
+      "status": "pending"
+    },
+    {
+      "path": "skills/prompt-engineer/SKILL.md",
+      "baseline_blob": "b95b1eb5f49035d134de11a93602e2ee155fc0ac",
+      "status": "pending"
+    },
+    {
+      "path": "skills/prompt-start/SKILL.md",
+      "baseline_blob": "828fb9722e9088c5c081633fe2b29b508ae57857",
+      "status": "pending"
+    },
+    {
+      "path": "skills/psychoanalyze/SKILL.md",
+      "baseline_blob": "b2cfeadc175cd8810ab9d1e8e40cf7147bdc2dd5",
+      "status": "pending"
+    },
+    {
+      "path": "skills/q-base22/SKILL.md",
+      "baseline_blob": "5224326fea748fa41eb5ac834aa70dbe1e843c4e",
+      "status": "pending"
+    },
+    {
+      "path": "skills/qa-universal/SKILL.md",
+      "baseline_blob": "ddfff25ded84354d85ab1373ffdf2d885753ca7d",
+      "status": "pending"
+    },
+    {
+      "path": "skills/research-unbounded/SKILL.md",
+      "baseline_blob": "0b1ba1f37b0e6582c615be536464f637a68ba304",
+      "status": "pending"
+    },
+    {
+      "path": "skills/ringtone/SKILL.md",
+      "baseline_blob": "a06884c74135737f484b1edaafec218c11314df3",
+      "status": "pending"
+    },
+    {
+      "path": "skills/schemata/SKILL.md",
+      "baseline_blob": "82f54f709d2f9852f9463ff4acf386dd77dbdc1e",
+      "status": "pending"
+    },
+    {
+      "path": "skills/ski/SKILL.md",
+      "baseline_blob": "a49d91723c004e5406586744de47a5d12592150e",
+      "status": "pending"
+    },
+    {
+      "path": "skills/skill-sync/SKILL.md",
+      "baseline_blob": "312f08af7533f62687003d26d20cce4df0938249",
+      "status": "pending"
+    },
+    {
+      "path": "skills/stack/SKILL.md",
+      "baseline_blob": "bbaa7f161d96a7e895e2817b7544e9b748786059",
+      "status": "pending"
+    },
+    {
+      "path": "skills/summarize/SKILL.md",
+      "baseline_blob": "de86ee03b5facca9711b75f5db6283b4a36e4983",
+      "status": "pending"
+    },
+    {
+      "path": "skills/sync/SKILL.md",
+      "baseline_blob": "d917ce7a49f1a974f2c79ac31730af5a36f6d0f8",
+      "status": "pending"
+    },
+    {
+      "path": "skills/syncskills/SKILL.md",
+      "baseline_blob": "2acc46c292f6036421d62f342ee1af25c10b893a",
+      "status": "pending"
+    },
+    {
+      "path": "skills/textbook/SKILL.md",
+      "baseline_blob": "40c70e517f18bde0783c1142dec8fd9806ce0677",
+      "status": "pending"
+    },
+    {
+      "path": "skills/topsecret/SKILL.md",
+      "baseline_blob": "8841d26b2f37e0702b502a4b4e754cc734b2c79a",
+      "status": "pending"
+    },
+    {
+      "path": "skills/tpmorpedo/SKILL.md",
+      "baseline_blob": "519d52f2f7f2d715ba07194f98e09c5bff5b343c",
+      "status": "pending"
+    },
+    {
+      "path": "skills/transcribe/SKILL.md",
+      "baseline_blob": "af265a2060529c6ad564da4a6a30b49a7d5bc73b",
+      "status": "pending"
+    },
+    {
+      "path": "skills/universal/SKILL.md",
+      "baseline_blob": "9d837b5b6761c1e1d1aee49ddbc7cc69cb6d7776",
+      "status": "pending"
+    },
+    {
+      "path": "skills/upscale/SKILL.md",
+      "baseline_blob": "79e461c78a69519bd2053dab4c210476c2f5f8e3",
+      "status": "pending"
+    },
+    {
+      "path": "skills/ve/SKILL.md",
+      "baseline_blob": "5f0cd3eb7c8b491409c1f70f204ad6da4b26b483",
+      "status": "pending"
+    },
+    {
+      "path": "skills/vector/SKILL.md",
+      "baseline_blob": "ddbbaa420154db8569f6ccc56825533143908ada",
+      "status": "pending"
+    },
+    {
+      "path": "skills/visual-system/SKILL.md",
+      "baseline_blob": "dc2330c99bfb255c78756773e6c3d3c24520ff55",
+      "status": "pending"
+    },
+    {
+      "path": "skills/wa/SKILL.md",
+      "baseline_blob": "70cb891252976c01592c0f20a11f4b77364ef746",
+      "status": "pending"
+    },
+    {
+      "path": "skills/wca-ivy-biblio/SKILL.md",
+      "baseline_blob": "1bc4454eab944fbcf930468af9540348769ceb7a",
+      "status": "pending"
+    },
+    {
+      "path": "skills/wicca/SKILL.md",
+      "baseline_blob": "6c5632fadb0e9982006e79dfb00db87fea5454e8",
+      "status": "pending"
+    },
+    {
+      "path": "skills/work/SKILL.md",
+      "baseline_blob": "c3b1847054954b07aa0a1f284469e038907993b5",
+      "status": "pending"
+    },
+    {
+      "path": "skills/🎨/SKILL.md",
+      "baseline_blob": "51a3b686e07cc8ddf950666fcdc896aceb0597a0",
+      "status": "pending"
+    }
+  ]
+}
