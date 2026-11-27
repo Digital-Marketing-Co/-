@@ -10,7 +10,7 @@ import yaml
 
 
 # Published directory names retained for existing host and workflow integrations.
-LEGACY_SKILL_NAMES = frozenset({"Complete", "EX", "GlobalReset", "God", "QUANTA", "ResearchPlus", "Final", "GENIUS", "GoOn", "🎨"})
+LEGACY_SKILL_NAMES = frozenset({"Complete", "EX", "GlobalReset", "God", "QUANTA", "ResearchPlus", "Final", "GENIUS", "GoOn", "🎨", "QAIR"})
 
 
 def audit(root: Path) -> dict:
