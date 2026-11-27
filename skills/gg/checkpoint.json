@@ -1,17 +1,14 @@
 {
-  "baseline": "31fe1573298b7914fd56941804eb2f94df29813a",
-  "retrieved": 50,
+  "baseline": "90ebc625f5eec3011c22da0529761e15c07abebc",
+  "retrieved": 112,
   "total_at_baseline": 112,
-  "next_offset": 50,
-  "stage": "source_retrieval",
+  "next_offset": 112,
+  "stage": "semantic_QA_pending",
   "acceptance": "UNVERIFIED",
-  "new_skill_requires_inventory": true,
   "findings": [
     "FA legacy alias intentional",
-    "Final/final overlapping aliases require reconciliation"
+    "Final/final overlapping aliases require reconciliation",
+    "Historical retrieval counts require blob-level revalidation"
   ],
-  "latest_batches": [
-    "compression through disability",
-    "disabled through folio"
-  ]
+  "source_retrieval_complete": true
 }
