@@ -1,0 +1,24 @@
+{
+  "skill": "fa",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Invoke fa on a representative authorized task.",
+      "assertions": [
+        "Reproduce defects and independently verify repairs"
+      ],
+      "grader": "Inspect actual output and execution evidence."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Invoke fa with a missing prerequisite.",
+      "assertions": [
+        "Report blocker without false completion",
+        "Preserve existing data"
+      ],
+      "grader": "Inspect output and side effects."
+    }
+  ]
+}

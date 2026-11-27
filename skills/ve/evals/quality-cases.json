@@ -1,0 +1,24 @@
+{
+  "skill": "ve",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Invoke ve on a representative authorized task.",
+      "assertions": [
+        "Check dependency compatibility and preserve rollback"
+      ],
+      "grader": "Inspect actual output and execution evidence."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Invoke ve with a missing prerequisite.",
+      "assertions": [
+        "Report blocker without false completion",
+        "Preserve existing data"
+      ],
+      "grader": "Inspect output and side effects."
+    }
+  ]
+}

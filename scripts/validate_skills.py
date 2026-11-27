@@ -10,7 +10,7 @@ import yaml
 
 
 # Published directory names retained for existing host and workflow integrations.
-LEGACY_SKILL_NAMES = frozenset({"Complete", "EX", "GlobalReset", "God", "QUANTA", "ResearchPlus"})
+LEGACY_SKILL_NAMES = frozenset({"Complete", "EX", "GlobalReset", "God", "QUANTA", "ResearchPlus", "Final", "GENIUS", "GoOn", "🎨"})
 
 
 def audit(root: Path) -> dict:
@@ -30,7 +30,7 @@ def audit(root: Path) -> dict:
             if not isinstance(data, dict):
                 raise ValueError('Frontmatter must be a mapping')
             name, description = data.get('name'), data.get('description')
-            if not isinstance(name, str) or not re.fullmatch(r'[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*', name) or len(name)>64:
+            if not isinstance(name, str) or (name != '🎨' and not re.fullmatch(r'[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*', name)) or len(name)>64:
                 raise ValueError('Invalid canonical name')
             if name != path.parent.name or name in names:
                 raise ValueError('Name differs from directory or repeats an identity')

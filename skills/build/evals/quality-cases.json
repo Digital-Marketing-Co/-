@@ -1,0 +1,24 @@
+{
+  "skill": "build",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Invoke build on a representative authorized task.",
+      "assertions": [
+        "Verify build and preview before production promotion"
+      ],
+      "grader": "Inspect actual output and execution evidence."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Invoke build with a missing prerequisite.",
+      "assertions": [
+        "Report blocker without false completion",
+        "Preserve existing data"
+      ],
+      "grader": "Inspect output and side effects."
+    }
+  ]
+}

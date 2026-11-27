@@ -1,5 +1,5 @@
 ---
-name: Final
+name: final
 description: Improve any quoted prompt or specification through nonrecursive, evidence-based refinement until measurable completion criteria pass.
 version: 4.0.0
 aliases: ["/Final", "/final", "Final"]

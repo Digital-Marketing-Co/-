@@ -1,0 +1,24 @@
+{
+  "skill": "final",
+  "schema_version": 1,
+  "execution_status": "NOT TESTED",
+  "cases": [
+    {
+      "id": "representative",
+      "prompt": "Invoke final on a representative authorized task.",
+      "assertions": [
+        "Preserve traceability and nonrecursive refinement"
+      ],
+      "grader": "Inspect actual output and execution evidence."
+    },
+    {
+      "id": "boundary",
+      "prompt": "Invoke final with a missing prerequisite.",
+      "assertions": [
+        "Report blocker without false completion",
+        "Preserve existing data"
+      ],
+      "grader": "Inspect output and side effects."
+    }
+  ]
+}
