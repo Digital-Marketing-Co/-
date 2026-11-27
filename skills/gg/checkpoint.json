@@ -1,9 +1,17 @@
 {
-  "baseline": "41606a83727876ff1a4b9163838bc160abdc15e0",
-  "retrieved": 30,
-  "total_at_baseline": 111,
-  "next_offset": 30,
+  "baseline": "31fe1573298b7914fd56941804eb2f94df29813a",
+  "retrieved": 50,
+  "total_at_baseline": 112,
+  "next_offset": 50,
   "stage": "source_retrieval",
   "acceptance": "UNVERIFIED",
-  "new_skill_requires_inventory": true
+  "new_skill_requires_inventory": true,
+  "findings": [
+    "FA legacy alias intentional",
+    "Final/final overlapping aliases require reconciliation"
+  ],
+  "latest_batches": [
+    "compression through disability",
+    "disabled through folio"
+  ]
 }
