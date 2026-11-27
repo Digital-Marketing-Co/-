@@ -1,0 +1,9 @@
+{
+  "baseline": "41606a83727876ff1a4b9163838bc160abdc15e0",
+  "retrieved": 30,
+  "total_at_baseline": 111,
+  "next_offset": 30,
+  "stage": "source_retrieval",
+  "acceptance": "UNVERIFIED",
+  "new_skill_requires_inventory": true
+}
