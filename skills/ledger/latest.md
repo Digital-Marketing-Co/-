@@ -2,6 +2,8 @@
 
 ## Sync log
 
+| 2026-11-27 | gg | repo-to-hosts | 90ebc62 | Upgrade GG to automatically resolve remaining limitations (v1.2.0); Grok installed from committed copy (no prior local); ChatGPT must re-upload gg |
+
 | 2026-11-27 | gg | repo-to-hosts | e4e5ba6 | Upgrade GeniusGod to dynamic full-scope batches with safe operational chunking (v1.1.0); Grok installed from committed copy (no prior local); ChatGPT must re-upload gg |
 
 | 2026-11-27 | gg | repo-to-hosts | ec924a2 | Register new /GG GeniusGod checkpointed orchestration skill; Grok installed from committed copy (no prior local); ChatGPT must re-upload gg |
@@ -104,6 +106,5 @@
 | 2026-11-03 | textbook | grok-to-repo | 3f033a3 | Sync CHANGELOG.md with 2026-11-02 citation, imagery, and structural mandate updates matching the verified SKILL.md; ChatGPT must re-upload textbook |
 | 2026-11-03 | textbook | grok-to-repo | ae5cec8 | Add Citation maximization, logical enumeration, and photorealistic-futuristic style (2026-11-02) plus High-fidelity visual and structural upgrade sections to SKILL.md; ChatGPT must re-upload textbook |
 | 2026-11-03 | weekday-gather | checked | ae5cec8 | Compared 50 installed Grok custom skills against main. Found textbook SKILL.md newer with verified 2026-11-02 sections. Pushed to main. All other shared skills match. ChatGPT must re-upload textbook. |
-| 2026-11-02 | ispy | repo-to-hosts | f4fbcaf | Update workflow.md to embed source image and pane crops as evidence plates in chat catalog and PDF; Grok uses committed copy; ChatGPT must re-upload ispy |
-| 2026-11-02 | God | repo-to-hosts | 0e25892 | Add per-page PDF visual evidence generation via pdf_render_evidence.py, tests, and SKILL.md section; Grok uses committed copy (no local God); ChatGPT must re-upload God |
+| 2026-11-02 | ispy | repo-to-hosts | f4fbcaf | Update workflow.md to embed images and captions; Grok installed from committed copy; ChatGPT must re-upload ispy |
 | 2026-11-02 | images | grok-to-repo | 9991942 | Add Default photorealistic terrestrial basis preference for plate generation; ChatGPT must re-upload images |
