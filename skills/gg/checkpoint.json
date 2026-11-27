@@ -1,14 +1,15 @@
 {
-  "baseline": "90ebc625f5eec3011c22da0529761e15c07abebc",
+  "baseline": "f3dc32af03426a50ee036f357168a60621a22925",
   "retrieved": 112,
   "total_at_baseline": 112,
-  "next_offset": 112,
-  "stage": "semantic_QA_pending",
+  "stage": "semantic_QA",
   "acceptance": "UNVERIFIED",
-  "findings": [
-    "FA legacy alias intentional",
-    "Final/final overlapping aliases require reconciliation",
-    "Historical retrieval counts require blob-level revalidation"
-  ],
-  "source_retrieval_complete": true
+  "case_pairs_reviewed": 3,
+  "remaining": [
+    "historical blob revalidation",
+    "canonical dispatch tests",
+    "functional QA",
+    "VQA",
+    "cross-repository sync"
+  ]
 }
