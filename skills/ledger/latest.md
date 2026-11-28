@@ -2,6 +2,8 @@
 
 ## Sync log
 
+| 2026-11-28 | zed | repo-to-hosts | 35ccd5a | Add new /ZED v2.0 checkpointed autonomous reconciliation skill (aliases Z, ZZZ, emojis; engine at engines/zed/ENGINE.md); Grok uses committed copy (no prior local); ChatGPT must re-upload zed |
+
 | 2026-11-27 | Final, GENIUS, GoOn, appideas, build, chapter, fa, final, gg, god, ve, work, 🎨 | repo-to-hosts | fb8dfa2 | Restore missing skill QA resources (evals/quality-cases.json and references/quality-profile.md) and preserve published legacy identities; Grok installed from committed copy (no prior local for these); ChatGPT must re-upload the listed skills |
 
 | 2026-11-27 | gg | repo-to-hosts | 3c468bb | Record GG compatibility decisions and semantic QA checkpoint; Grok installed from committed copy (no prior local); ChatGPT must re-upload gg |
