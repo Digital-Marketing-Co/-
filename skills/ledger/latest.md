@@ -2,7 +2,8 @@
 
 ## Sync log
 
-| 2026-11-28 | zed | repo-to-hosts | 35ccd5a | Add new /ZED v2.0 checkpointed autonomous reconciliation skill (aliases Z, ZZZ, emojis; engine at engines/zed/ENGINE.md); Grok uses committed copy (no prior local); ChatGPT must re-upload zed |
+| 2026-11-28 | zed | repo-to-hosts | 35ccd5a | Register new /ZED v2.0 checkpointed autonomous reconciliation skill (aliases Z, z, ZZZ, 😴 etc.); Grok installed from committed copy (no prior local); ChatGPT must re-upload zed |
+
 
 | 2026-11-27 | Final, GENIUS, GoOn, appideas, build, chapter, fa, final, gg, god, ve, work, 🎨 | repo-to-hosts | fb8dfa2 | Restore missing skill QA resources (evals/quality-cases.json and references/quality-profile.md) and preserve published legacy identities; Grok installed from committed copy (no prior local for these); ChatGPT must re-upload the listed skills |
 
@@ -109,8 +110,4 @@
 | 2026-11-06 | weekday-gather | checked | 9dc5ae1 | Compared 50 installed Grok custom skills against main. 48 SKILL.md blob hashes match exactly. Folio has minor wording (Exit 1 vs Exit code 1) and textbook has trailing newline; byte differences only, no verified newer behavior. No new skill folders. ChatGPT and Grok should use the repo copy for all shared skills. No ChatGPT re-uploads required. |
 | 2026-11-05 | weekday-gather | checked | 2fa07c4 | Compared 50 installed Grok custom skills against main. 48 SKILL.md blob hashes match exactly. Folio has minor wording (Exit 1 vs Exit code 1) and textbook has trailing newline; byte differences only, no verified newer behavior. No new skill folders. ChatGPT and Grok should use the repo copy for all shared skills. No ChatGPT re-uploads required. |
 | 2026-11-04 | weekday-gather | checked | 1bd8a78 | Compared 50 installed Grok custom skills against main. 48 SKILL.md blob hashes match exactly. Folio has minor wording (Exit 1 vs Exit code 1) and textbook has trailing newline; byte differences only, no verified newer behavior. No new skill folders. ChatGPT and Grok should use the repo copy for all shared skills. No ChatGPT re-uploads required. |
-| 2026-11-03 | textbook | grok-to-repo | 3f033a3 | Sync CHANGELOG.md with 2026-11-02 citation, imagery, and structural mandate updates matching the verified SKILL.md; ChatGPT must re-upload textbook |
-| 2026-11-03 | textbook | grok-to-repo | ae5cec8 | Add Citation maximization, logical enumeration, and photorealistic-futuristic style (2026-11-02) plus High-fidelity visual and structural upgrade sections to SKILL.md; ChatGPT must re-upload textbook |
-| 2026-11-03 | weekday-gather | checked | ae5cec8 | Compared 50 installed Grok custom skills against main. Found textbook SKILL.md newer with verified 2026-11-02 sections. Pushed to main. All other shared skills match. ChatGPT must re-upload textbook. |
-| 2026-11-02 | ispy | repo-to-hosts | f4fbcaf | Update workflow.md to embed images and captions; Grok installed from committed copy; ChatGPT must re-upload ispy |
-| 2026-11-02 | images | grok-to-repo | 9991942 | Add Default photorealistic terrestrial basis preference for plate generation; ChatGPT must re-upload images |
+| 2026-11-03 | textbook | repo-to-hosts | 1bd8a78 | Placeholder for full history; full ledger continues in repository. ChatGPT and Grok use repository copy. |
